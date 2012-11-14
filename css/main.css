@@ -35,7 +35,7 @@
 	z-index: -1;
 }
 
-h1, h2, h3, h4, ul.nav a {
+h1, h2, h3, h4, .nav a {
 	font-family:'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, sans-serif;
 	font-weight:normal
 }
@@ -266,15 +266,15 @@ hr {
 	color:#333;
 }
 
-.more-info .cv span, .more-info .cv small {
+.cv span, .cv small {
 	left:22px;
 }
 
-.more-info .foaf span, .more-info .foaf small {
+.foaf span, .foaf small {
 	left:32px;
 }
 
-.more-info .setapp span, .more-info .setapp small {
+.setapp span, .setapp small {
 	left:35px;
 }
 
