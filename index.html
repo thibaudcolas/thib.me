@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="fr" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="//ajax.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+  <title>Thibaud Colas</title>
+  <!-- Oh, look ! – http://goo.gl/EQJf4 -->
+
+  <meta name="description" content="Thibaud Colas, 21 ans, étudiant en dernière année de master Informatique AIGLE (Architecture et ingénierie du logiciel et du Web) à l'Université Montpellier 2.">
+  <meta name="keywords" content="thibaud colas etudiant informatique web genie logiciel psychologie aigle um2 montpellier paris8 ied TOD développeur projet">
+  <meta name="author" content="Thibaud Colas">
+
+  <meta name="revisit-after" content="7 days">
+  <meta name="robots" content="all">
+
+  <!-- Facebook OpenGraph. -->
+  <meta property="og:title" content="Thibaud Colas">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://thibaudcolas.fr">
+  <meta property="og:image" content="http://thibaudcolas.fr/img/site.png">
+  <meta property="og:site_name" content="thibaudcolas.fr">
+  <meta property="og:description" content="Thibaud Colas, étudiant en M2 Informatique spé. Web @UM2 et en L3 Psychologie @Paris8. Web lover, code ninja wannabe.">
+  
+  <!-- Display on phones. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />  
+
+  <link rel="shortcut icon" href="favicon.png">
+
+  <!-- In order : iPad3+, iPhone4+, iPad1/2/Mini, iPhone3/iPod/Android. -->
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="shortlink" href="http://thib.me">
+  <link rel="author" href="humans.txt">
+  <link rel="meta" type="application/rdf+xml" title="FOAF" href="foaf.rdf"> 
+  <link rel="canonical" href="http://thibaudcolas.fr">
+
+  <!-- Google and Bing analytics tools. -->
+  <meta name="google-site-verification" content="63H5gElNytDYw1cwlqT6ZCLGWGxzGOTlhrKXLmGtFrY">
+  <meta name="msvalidate.01" content="27DEF13C8913080737327588A59E816F">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/plugins.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/vendor/modernizr.min.js"></script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" role="document">
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+  <![endif]-->
+
+  <div id="meny" role="navigation">
+    <div class="container well">
+      <ul class="nav nav-list" role="menu">
+        <li role="menuitem" class="active"><a href="#top"><span class="icon-user" aria-hidden="true"></span> Thibaud Colas</a></li>
+        <li role="menuitem" class="divider"></li>
+        <li role="menuitem"><a href="#apropos">À propos</a></li>
+        <li role="menuitem"><a href="#projets">Projets</a></li>
+        <li role="menuitem"><a href="#contact">Contact</a></li>
+      </ul>
+
+      <img width="150" height="150" title="Tails" alt="Tails" src="data:image/png;base64,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"/>
+    </div>
+  </div>
+
+  <div id="meny-arrow">&#x25BA;</div>
+
+  <div id="content" role="main" data-spy="scroll" data-target="#meny" data-offset="150">
+
+    <div id="top" class="container">
+
+      <section class="page-header sky" role="banner">
+        <div class="ribbon"><a href="https://github.com/ThibWeb">Sources sur GitHub</a></div>
+
+        <div class="cloud x1 visible-desktop"></div>
+        <div class="cloud x2"></div>
+        <div class="cloud x3 visible-desktop"></div>
+
+        <div class="row-fluid">
+          <div class="span6">
+            <h1><span>Thibaud</span> <span>Colas</span></h1>
+          </div>
+          <div class="span6">
+            <ul class="social unstyled">
+              <li><a href="https://twitter.com/ThibWeb" title="Mon profil Twitter" role="link" itemprop="significantLink"><span class="ico icon-twitter" aria-hidden="true"></span><span>@ThibWeb</span></a></li>
+              <li><a href="https://github.com/ThibWeb" title="Mon compte GitHub" role="link" itemprop="significantLink"><span class="ico icon-github" aria-hidden="true"></span><span>ThibWeb</span></a></li>
+              <li><a href="http://fr.linkedin.com/in/thibaudcolas" title="Mon profil LinkedIn" role="link" itemprop="significantLink"><span class="ico icon-linkedin" aria-hidden="true"></span><span>Thibaud&nbsp;Colas</span></a></li>
+              <li><a href="mailto:&#x6a;&#x75;&#x73;&#x74;&#x65;&#x74;&#x68;&#x69;&#x62;@&#x74;&#x68;&#x69;&#x62;" class="remplacement" title="Mon adresse mail" role="link"><span class="ico icon-mail" aria-hidden="true"></span> <span class="remplacement">&#x6a;&#x75;&#x73;&#x74;&#x65;&#x74;&#x68;&#x69;&#x62;&#xfe6b;&#x74;&#x68;&#x69;&#x62;&#xfe52;&#x6d;&#x65;</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <span class="body-separator" role="separator"></span>
+
+      <section class="apropos" itemscope itemtype="http://schema.org/Person" itemprop="author">
+        <h2 id="apropos" class="well">À propos</h2>
+        <div class="clearfix"></div>
+
+        <div class="row-fluid">
+          <div class="span12">
+            <h3 class="lead" itemprop="description"><strong id="thibaudcolas" itemprop="name" title="/ti.bo/ /ko.la/"><span itemprop="givenName">Thibaud</span> <span itemprop="familyName">Colas</span></strong>, 21 ans, <span itemprop="jobTitle">étudiant</span> en dernière année de <strong>master Informatique <abbr title="Architecture et InGénierie du Logiciel et du wEb">AIGLE</abbr></strong> <em>(Architecture et ingénierie du logiciel et du Web)</em> à l'<span itemscope itemtype="http://schema.org/CollegeOrUniversity" itemprop="affiliation worksFor"><span itemprop="name">Université Montpellier 2.</span></span></h3>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span5">
+            <div class="about-me">
+              <p>En dehors des cours, j'explore les technologies et les possibilités offertes par Internet et le Web. Je vois l'informatique comme une boîte de Legos géante&nbsp;; un ensemble de pièces et une infinité de combinaisons pour obtenir une création qu'on aime améliorer et parfaire.</p>
+              <p>Mon credo&nbsp;: du code performant, lisible, maintenable. <em><abbr title="Keep It Simple, Stupid">KISS</abbr> & <abbr title="Don't Repeat Yourself">DRY</abbr></em>.</p>
+              <hr/>
+              <p>Outre l'informatique, j'étudie en parallèle la psychologie à l'<span itemscope itemtype="http://schema.org/CollegeOrUniversity" itemprop="affiliation"><a href="http://www.iedparis8.net" title="Site de l'IED Paris 8" itemprop="url"><span itemprop="name">Université Paris 8</span></a></span>&nbsp;: deux domaines pouvant sembler bien éloignés, mais qui se retrouvent quand on voit la place décisive qu'occupe l'informatique dans notre quotidien.</p>
+              <p>Les questions d'ergonomie, d'accessibilité et d'expérience utilisateur sont donc au cœur de mes préoccupations.</p>
+            </div>
+          </div>
+          <div class="span7">
+            <h4>Mon parcours</h4>
+            <p>Bac en poche, je me suis dirigé vers un <abbr title="Diplôme Universitaire Technologie, Bac +2">DUT</abbr> Informatique à l'<span itemscope itemtype="http://schema.org/CollegeOrUniversity" itemprop="alumniOf"><a href="http://www.u-psud.fr" title="Université Paris Sud" itemprop="url"><span itemprop="name">Université Paris 11</span></a></span>, conclu par un stage comme Webmaster. Mes études se poursuivent ensuite en <abbr title="Troisième année de licence, Bac +3">L3</abbr>, puis dans le nouveau <abbr title="Bac +5">Master</abbr> AIGLE de l'<a href="http://www.univ-montp2.fr" title="Site de l'UM2">UM2</a>. Ce cursus est complété par un stage au sein du projet <a href="http://datalift.org" title="Datalift, plateforme de publication de données">Datalift</a> et par des projets personnels, et se finira par un stage de six mois.</p>
+            
+            <h4>Mes compétences</h4>
+            <p>Je me vois comme un ingénieur / développeur polyvalent, c'est-à-dire <em>à même de comprendre</em> et <em>prêt à apprendre</em>. Mes compétences techniques vont du développement front-end au Web sémantique en passant par les bases de données, le génie logiciel et le développement back-end. J'ai également un bagage en gestion de projet, en géomatique, en économie, en droit et en marketing, ainsi qu'en ergonomie et en statistiques.</p>
+            
+            <h4>En savoir plus</h4>
+            <ul class="more-info unstyled">
+              <li><a href="cv_thibaudcolas.pdf" class="cv"><span class="icon-file-pdf" aria-hidden="true"></span><h5>Mon CV PDF</h5> <small>(160 Ko)</small></a></li>
+              <li><a href="foaf.rdf" class="foaf"><span class="icon-file-xml" aria-hidden="true"></span><h5>Mon profil <abbr title="Friend Of A Friend">FOAF</abbr></h5> <small>(10 Ko)</small></a></li>
+              <li><a href="http://setapp.me/users/thibweb" class="setapp"><span class="icon-laptop" aria-hidden="true"></span><h5>Mon profil SetApp</h5> <small>&nbsp;</small></a></li>
+            </ul>
+         </div>
+        </div>
+      </section>
+
+      <span class="body-separator" role="separator"></span>
+
+      <section class="projets">
+        <h2 id="projets" class="well">Projets</h2>
+        <div class="clearfix"></div>
+
+        <div class="row-fluid">
+          <div class="span6">
+            <h3><a href="http://thib.me/stu" title="Site de StringToURI" itemprop="significantLink">StringToURI</a></h3>
+            <a href="http://thib.me/stu" title="Site de StringToURI"><img class="pull-left" src="img/stringtouri.png" alt="Rubik's cube sémantique" width="120" height="120"/></a>
+            <p><strong>StringToURI</strong> est un framework d'interconnexion de jeux de données. Réalisé en <span itemscope itemtype="http://schema.org/Language"><span itemprop="name">Java</span></span> à l'aide de l'<a href="http://www.openrdf.org" title="OpenRDF Sesame">API Sesame</a>, StringToURI permet de remplacer des valeurs par les <abbr title="Uniform Resource Identifier">URIs</abbr> des entités correspondantes.</p>
+            <p>Les sources de données peuvent être des triple-store Sesame, des <span itemscope itemtype="http://schema.org/Language"><span itemprop="name">SPARQL</span></span> endpoints ou bien des fichiers <abbr title="Resource Description Framework" itemscope itemtype="http://schema.org/Language"><span itemprop="name">RDF</span></abbr> (RDFXML, N3, Turtle).</p>
+            <div class="clearfix"></div>
+            <p><strong>StringToURI</strong> est le fruit d'un <abbr title="Travail Expérimental de Recherche">TER</abbr> de deux mois et est actuellement utilisé en production dans l'un des modules d'interconnexion de Datalift. Le framework est également fourni avec une interface légère par ligne de commande.</p>
+          </div>
+          <div class="span6">
+            <h3><a href="http://thibweb.github.com/linked-lifted/" title="Site des modules pour Datalift" itemprop="significantLink">Modules pour Datalift</a></h3>
+            <a href="http://thibweb.github.com/linked-lifted/" title="Site des modules pour Datalift"><img class="pull-left" src="img/datalift.png" alt="Logo de Datalift" width="120" height="150"/></a>
+            <p><a href="http://datalift.org" title="Site de Datalift"><strong>Datalift</strong></a> est une plateforme de publication et d'interconnexion de données sur le <a href="http://linkeddata.org" title="Linked Data">Web de données</a>. Le projet a été initié par sept partenaires universitaires, industriels et institutionnels français.</p>
+            <p>Dans le cadre d'un stage de deux mois au <span itemscope itemtype="http://schema.org/Organization"><a href="http://www.lirmm.fr" title="Site du LIRMM" itemprop="url"><span itemprop="name">LIRMM</span></a></span>, j'ai conçu et développé deux modules pour Datalift&nbsp;: deux interfaces web riches pour les framework d'interconnexion <a href="http://thib.me/stu" title="Site de StringToURI">StringToURI</a> et <a href="http://www4.wiwiss.fu-berlin.de/bizer/silk/" title="Site de Silk">Silk</a>.</p>
+            <div class="clearfix"></div>
+            <p>Ces interfaces sont réalisées en <span itemscope itemtype="http://schema.org/Language"><span itemprop="name">HTML</span></span> / <span itemscope itemtype="http://schema.org/Language"><span itemprop="name">CSS</span></span> / <span itemscope itemtype="http://schema.org/Language"><span itemprop="name">Javascript</span></span> avec un templating <a href="https://velocity.apache.org" title="Site de Apache Velocity">Velocity</a>, un back-end <span itemscope itemtype="http://schema.org/Language"><span itemprop="name">Java EE</span></span> / Jersey et les librairies front-end <a href="http://jquery.com">jQuery</a> et <a href="http://jqueryui.com">jQuery UI</a>.</p>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span6">
+            <h3><a href="https://github.com/ThibWeb/php-url-shortener" title="Site de Thib.me">Thib.me</a></h3>
+            <p><strong>Thib.me</strong> est un raccourcisseur d'URLs&nbsp;: il transforme n'importe quel lien en une version courte, facile à écrire et à échanger. Thib.me est réalisé en <span itemscope itemtype="http://schema.org/Language"><span itemprop="name">PHP</span></span> depuis des sources existantes avec la simplicité et la concision à l'esprit.</p>
+            <p>Le service dispose de petits plus par rapport à ses concurrents&nbsp;:</p>
+            <ul>
+              <li>Les liens ne sont composés que de lettres.</li>
+              <li>Création de <a href="http://thib.me/love">liens personnalisés</a>.</li>
+              <li>Liens automatiques vers les <a href="http://thib.me/244363762902122496">tweets</a> d'un compte donné.</li>
+              <li>Redirection automatique vers le <a href="http://thib.me/img/stringtouri.png">site parent</a>.</li>
+              <li>Réutilisation des raccourcissements demandés plusieurs fois.</li>
+              <li>Nom de domaine personnalisé !</li>
+            </ul>
+          </div>
+          <div class="span6">
+            <h3><a href="https://github.com/ThibWeb/clisp-compiler-vm" title="Site du compilateur Lisp">Compilateur LISP</a></h3>
+            <p>Réalisé dans le cadre de ma formation, ce compilateur accompagné d'une machine virtuelle convertit du code <span itemscope itemtype="http://schema.org/Language"><span itemprop="name">LISP</span></span> en assembleur pour ensuite exécuter le code ainsi compilé. L'accent a été mis sur la clarté du code et les performances du code généré.</p>
+            <p>Le compilateur gère les mots-clef suivants&nbsp;:</p>
+            <ul>
+              <li>Opérations arithmétiques et de comparaison.</li>
+              <li>Structures de condition, opérateurs booléens&nbsp;:<code>if</code>, <code>cond</code>, <code>and</code>,<code>or</code>.</li>
+              <li>Déclaration de fonctions, lambda-expressions&nbsp;:<code>defun</code>,<code>lambda</code>.</li>
+              <li>Déclaration de variables&nbsp;:<code>setf</code>,<code>let</code>.</li>
+              <li>Structures de contrôle&nbsp;:<code>while</code>,<code>until</code>,<code>progn</code>.</li>
+              <li>Récursivité&nbsp;: simple, double, terminale.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <span class="body-separator" role="separator"></span>
+
+      <section class="contact">
+        <h2 id="contact" class="well">Contact</h2>
+        <div class="clearfix"></div>
+
+        <div class="row-fluid">
+          <div class="span6">
+            <!-- Official Twitter widget for @ThibWeb. -->
+            <h3><a class="twitter-timeline" height="400" data-dnt=true href="https://twitter.com/ThibWeb" data-widget-id="244197425814835200">Mes tweets @ThibWeb</a></h3>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+          <div class="span6">
+            <!-- Contact form using  -->
+            <form id="contact-js" class="well container-fluid" accept-charset="UTF-8" action="http://example.org" method="post">
+              <h3>Déposer un message</h3>
+              <input type="hidden" name="redirect_to" value="http://thibaudcolas.fr"/>
+
+              <div class="control-group">
+                <label class="control-label" for="mail">Votre mail</label>
+                <div class="controls">
+                  <div class="input-prepend">
+                    <span class="add-on" aria-hidden="true" data-icon="c"></span>
+                    <input type="email" class="span11" id="mail" name="mail" placeholder="mail@example.com" tabindex="1" required autocomplete="on"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="message">Votre message</label>
+                <div class="controls">
+                  <div class="input-prepend">
+                    <span class="add-on" aria-hidden="true" data-icon="b"></span>
+                    <textarea class="span11" id="message" name="message" placeholder="Hi !" rows="7" tabindex="2"></textarea>
+                  </div>
+                    <span class="char-counter">0</span>
+                </div>
+              </div>
+                  
+              <input type="submit" role="button" class="btn btn-primary" value="Envoyer">
+            </form>
+          </div>
+        </div>
+
+      </section>
+
+    </div> <!-- /container -->
+
+    <footer role="contentinfo">
+
+      <span class="f1 pull-left" role="img"></span>
+      <span class="f2 pull-left" role="img"></span>
+      <span class="f3 pull-left" role="img"></span>
+      <span class="f4 pull-left" role="img"></span>
+      <span class="f5 pull-left" role="img"></span>
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span4">
+            <h5>thibaudcolas.fr v1.1 &copy; 2012 <a href="http://thibaudcolas.fr" rel="author">Thibaud Colas</a></h5>
+            <p>Ce site web et son contenu sont mis à disposition selon les termes de la licence <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.fr">Creative Commons Attribution 3.0</a>.</p>
+            <p class="logos-wrapper"><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.fr"><img width="88" height="31" title="CC BY 3.0" alt="CC BY 3.0 Logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAABblBMVEX///////////8AAABAQEAQEBDf39/Q08/BxcDLzsrGysXO0c3Mz8vIzMfR1ND///9gYGDM0MyAgIBQUFAwMDCvta7v7++/v79wcHAoKSjT1tKfn5/Lz8q8wbsNDg23vLYpKSl5fHkbGxvEyMNDREMgICC9wryRk5HJzci5vrjDx8LJzcnM0Mu1urSts6yxt7C4vbeyt7Gssquvr69QUVCTmJO6v7m0ubOwtq+2u7XPz8/S1dEODg7Axb/DyMOus63S1dLLz8u7wLo+Pz7FycSEhoS/w76RlJHP08+/xL6vtK7N0c18f3yyuLG5vrm0urPEx8PO0s7KzcnHy8fEycS+wr3AxL+zuLLQ1NCEhYS+w77R1NGJjIlwcm+8wLxdXl2eoJ2utK19f3yWmZaxtrDIzMjGysaPj4+fo57AxcC7wLvW1dWChYLN0cy9wr01NjW6v7qrsaqwta8yMzGvsq+ws6/Cx8K8wbzN0MzFycXhaneiAAAAA3RSTlMADgqEIABOAAACy0lEQVR4XrWV5Y/jQAzFe+cgQ5GZYZmZmZnhmBn/+/Oku1XTbhtdq32K5HyIfnp5Y3scT+BR5HAAlKP58Bk3JchFXtJ1KbQnC0luKbwVLR93f7vt6ur7+v9CMnKHMkcFIRcSWWUmEJg5Z8XZnFCYzAwRsvu2q68tsgOQ+za5z4vKaSoCqEhqUdkNyQfcJyRvjrinGy3HY4CKxVuD88iVS2w2AVUlllk9t8BltqLDvSMNlgf9AJTPRwH4B1uBw0dJWVcGkEdrhtdraDSiB3Y+5g4mw/lRDKPO8psJcDIqinHCxGAL8Flhv0S4tOFRKwoi2r+jy4WluZ4yWraC/aAhFYB8CP4WYE7gWeS6GLUqjws9syGBy6DlF2uWLOLgfH8PVp0Qbw6eeilmkYt2reTl3VxydS663euergXHoMYBA7HmYCGkJIAeUy3y0JBQZgXud768ac0CKELUADRSKWgOltdPAQy1TkGARVEuHA5hFlawjwABRaqvBbi4kgIag/A6KcqolNdIpiHF7pEshrvX2gPzSgQ0BAIR1W8Wjfxs5Dy0MPmuZ7vb3V4U0jgAWnRBmvGmgy5sj/500MxiRhK4MDYcghsOD8D28EoBAK+qmjlXi/kHAf1VIxjbTbW0W+fgxgHxmQNiH4VnLG1gFKTUR9F8pG0P7+7U7gpxE1H4xsMjZD+AS/O57JZQcWUAaLXabv2UWdQ0tlsxufql0m7trE15PYtZPDwgvw63Ro/J5LWz6P+aI83YjrS9GpfQzUNLKCvmppZw8MgSagsMGzx7jeSaNcSYa5P/AB0IwXApndQueo9BA3xWShvQKRie6SfXdVeT8ud5U0BlPsiLDRjJEntTe5lm2VJzLqiVB6stGC55UcneX//LishjDq0dm3B7MHz/EVpfUcYDgXGFFWd/zgPYOLYH32v+4oqXSiWJv7og2M4dP5IcTx+J+w+Cru2omf6OhAAAAABJRU5ErkJggg=="/></a> 
+              &nbsp; <span class="html5-css3 well" title="Créé avec HTML5 et CSS3" role="img"><span aria-hidden="true" class="icon-html5"></span><span aria-hidden="true" class="icon-css3"></span></span></p>
+          </div>
+          <div class="span3" role="note">
+            <div>
+            <h5>Réalisé avec&nbsp;:</h5>
+              <ul>
+                <li><a href="http://html5boilerplate.com" class="h5bp">HTML5 <span class="star">★</span> Boilerplate</a></li>
+                <li><a href="http://modernizr.com" class="mdrnzr">Modernizr</a></li>
+                <li><a href="http://twitter.github.com/bootstrap/">Twitter <span class="icon-twitter" aria-hidden="true"></span> <span class="btstrp">Bootstrap</span></a></li>
+                <li><a href="http://jquery.com/" class="jqy">jQuery</a></li>
+                <li><a href="http://getsimpleform.com/" class="smplform">simple form</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="span5" role="note">
+            <div class="pull-left">
+              <h5>Et aussi&nbsp;:</h5>
+              <ul>
+                <li><a href="http://lab.hakim.se/meny/" class="mny">Meny</a></li>
+                <li><a href="http://fittextjs.com" class="fittxt">FitText</a></li>
+                <li><a href="https://www.google.com/webfonts" class="googlewf"><span class="google">G<span class="red">o</span><span class="yellow">o</span>g<span class="green">l</span><span class="red">e</span></span> Web Fonts</a></li>
+                <li><a href="https://www.google.com/webfonts/specimen/Open+Sans" class="osans">Open Sans</a></li>
+                <li><a href="http://icomoon.io" class="icomn"><span class="icon-IcoMoon" aria-hidden="true"></span> IcoMoon</a></li>
+              </ul>
+            </div>
+            <div class="circle" role="button">
+              <a class="to-top" href="#top" title="Remonter">&#x25C4;</a>
+            </div>
+         </div>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+
+  <!-- Google CDN's / Protocole-relative link / Local fallback. -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+
+  <script src="js/vendor/fittext.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/meny.min.js"></script>
+  <script src="js/script.min.js"></script>
+
+  <!-- I'm watching you. --> 
+  <script>
+    var _gaq=[['_setAccount','UA-34692999-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>

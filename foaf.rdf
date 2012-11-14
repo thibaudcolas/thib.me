@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+	    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	    xmlns:owl="http://www.w3.org/2002/07/owl#"
+	    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	    xmlns:cert="http://www.w3.org/ns/auth/cert#"
+	    xmlns:dc="http://purl.org/dc/elements/1.1/"
+	    xmlns:rss="http://purl.org/rss/1.0/">
+
+	<foaf:PersonalProfileDocument rdf:about="#me">
+		<rdfs:label>Thibaud Colas's FOAF File</rdfs:label>
+		<foaf:maker rdf:nodeID="#me"/>
+		<foaf:primaryTopic rdf:nodeID="#me"/>
+		<foaf:maker rdf:resource="#me"/>
+		<foaf:primaryTopic rdf:resource="#me"/>
+	</foaf:PersonalProfileDocument>
+
+	<foaf:Person rdf:about="me">
+		<foaf:name>Thibaud Colas</foaf:name>
+	    <foaf:title>Mr</foaf:title>
+	    <foaf:givenname>Thibaud</foaf:givenname>
+	    <foaf:family_name>Colas</foaf:family_name>
+	    <foaf:nick>ThibWeb</foaf:nick>
+	    <foaf:mbox_sha1sum>7b6865dfe03fc198ed3d6346afbca5136745fbb7</foaf:mbox_sha1sum>
+	    <foaf:homepage rdf:resource="http://thibaudcolas.fr"/>
+    	<foaf:depiction rdf:resource="http://thibaudcolas.fr/img/me-large.jpg"/>
+    	<foaf:img rdf:resource="http://thibaudcolas.fr/img/me-large.jpg"/>
+    	<dc:description xml:lang="en">I'm a french software engineer / web developer student who loves to create great things, and discover even greater ones. I also study psychology and am interested in all things Web.</dc:description>
+        <dc:description xml:lang="fr">Je suis un étudiant français en ingénierie logicielle / développement web aimant créer de grandes choses, en découvrir d'encore plus grandes. J'étudie également la psychologie et suis intéressé par tout ce qui touche au Web.</dc:description>
+
+
+    	<foaf:workInfoHomepage rdf:resource="http://www.lirmm.fr" rdfs:label="LIRMM Research Laboratory"/>
+    	<foaf:schoolHomepage rdf:resource="http://www.univ-montp2.fr" rdfs:label="Montpellier 2 University"/>
+    	<foaf:schoolHomepage rdf:resource="http://www.iedparis8.net" rdfs:label="Paris 8 University IED"/>
+
+    	<foaf:based_near rdf:resource="http://dbpedia.org/resource/Montpellier" rdfs:label="Montpellier"/>
+
+    	<foaf:interest rdfs:label="Mac" dc:title="Mac" rdf:resource="http://dbpedia.org/resource/Macintosh"/>
+  		<foaf:interest rdfs:label="Music" dc:title="Music" rdf:resource="http://dbpedia.org/resource/Music"/>
+    	<foaf:interest rdfs:label="RDF" dc:title="RDF" rdf:resource="http://dbpedia.org/resource/Resource_Description_Framework"/>
+    	<foaf:interest rdfs:label="Cycling" dc:title="Cycling" rdf:resource="http://dbpedia.org/resource/Cycling"/>
+    	<foaf:interest rdfs:label="Literature" dc:title="Literature" rdf:resource="http://dbpedia.org/resource/Literature"/>
+    	<foaf:interest rdfs:label="World_Wide_Web" dc:title="World_Wide_Web" rdf:resource="http://dbpedia.org/resource/World_Wide_Web"/>
+    	<foaf:interest rdfs:label="Painting" dc:title="Painting" rdf:resource="http://dbpedia.org/resource/Painting"/>
+    	<foaf:interest rdfs:label="OCaml" dc:title="OCaml" rdf:resource="http://dbpedia.org/resource/OCaml"/>
+    	<foaf:interest rdfs:label="JavaScript" dc:title="JavaScript" rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+    	<foaf:interest rdfs:label="Psychology" dc:title="Psychology" rdf:resource="http://dbpedia.org/resource/Psychology"/>
+    	<foaf:interest rdfs:label="Ergonomics" dc:title="Ergonomics" rdf:resource="http://dbpedia.org/resource/Ergonomics"/>
+
+    	<foaf:account>
+    		<foaf:OnlineAccount rdf:about="http://thibaudcolas.fr/foaf.rdf#me-github">
+    			<foaf:name>GitHub</foaf:name>
+    			<foaf:accountServiceHomepage rdf:resource="http://github.com/"/>    	
+    			<foaf:page rdf:resource="http://github.com/thibweb"/>    	
+    			<foaf:accountName>ThibWeb</foaf:accountName>
+    		</foaf:OnlineAccount>
+    	</foaf:account>
+
+    	<foaf:account>
+    		<foaf:OnlineAccount rdf:about="http://thibaudcolas.fr/foaf.rdf#me-linkedin">
+    			<foaf:name>LinkedIn</foaf:name>
+    			<foaf:accountServiceHomepage rdf:resource="http://www.linkedin.com/"/>    	
+    			<foaf:page rdf:resource="http://www.linkedin.com/in/thibaudcolas"/>    	
+    			<foaf:accountName>thibaudcolas</foaf:accountName>
+    		</foaf:OnlineAccount>
+    	</foaf:account>
+
+    	<foaf:account>
+    		<foaf:OnlineAccount rdf:about="http://thibaudcolas.fr/foaf.rdf#me-twitter">
+    			<foaf:name>Twitter</foaf:name>
+    			<foaf:accountServiceHomepage rdf:resource="http://twitter.com/"/>    	
+    			<foaf:page rdf:resource="http://twitter.com/thibweb"/>    	
+    			<foaf:accountName>ThibWeb</foaf:accountName>
+    		</foaf:OnlineAccount>
+    	</foaf:account>
+
+    	<foaf:account>
+    		<foaf:OnlineAccount rdf:about="http://thibaudcolas.fr/foaf.rdf#me-appdotnet">
+    			<foaf:name>App.net</foaf:name>
+    			<foaf:accountServiceHomepage rdf:resource="https://alpha.app.net/"/>    	
+    			<foaf:page rdf:resource="https://alpha.app.net/ThibWeb"/>    	
+    			<foaf:accountName>ThibWeb</foaf:accountName>
+    		</foaf:OnlineAccount>
+    	</foaf:account>
+
+	<foaf:knows>
+	  <foaf:Person>
+	    <foaf:name>Francois Scharffe</foaf:name>
+	    <foaf:mbox_sha1sum>c97eff23dff98add7b642c67eb982ee655071b43</foaf:mbox_sha1sum>
+	    <rdfs:seeAlso rdf:resource="http://scharffe.fr/foaf.rdff"/>
+	  </foaf:Person>
+	</foaf:knows>
+
+	<foaf:knows>
+	  <foaf:Person>
+	    <foaf:name>Julien Plu</foaf:name>
+	    <rdfs:seeAlso rdf:resource="http://jplu.developpez.com/julien.html"/>
+	  </foaf:Person>
+	</foaf:knows>
+	
+	<foaf:knows>
+	  <foaf:Person>
+	    <foaf:name>Luca Costabello</foaf:name>
+	    <foaf:mbox_sha1sum>18004aecd48f272f2232c70c0fe60c476e3bf133</foaf:mbox_sha1sum>
+	    <rdfs:seeAlso rdf:resource="http://www-sop.inria.fr/members/Luca.Costabello/foaf.rdf"/>
+	  </foaf:Person>
+	</foaf:knows>
+
+	<foaf:knows>
+	  <foaf:Person>
+	    <foaf:name>Fabien Gandon</foaf:name>
+	    <foaf:mbox_sha1sum>ec48328fdad40f2ec20d994df1d9ed32cd96b879</foaf:mbox_sha1sum>
+	    <rdfs:seeAlso rdf:resource="http://ns.inria.fr/fabien.gandon/foaf.rdf"/>
+	  </foaf:Person>
+	</foaf:knows>
+
+    	<foaf:currentProject>
+    		<foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#linked-lifted">
+    			<foaf:name>Datalift RIA creation</foaf:name>
+    			<foaf:homepage rdf:resource="http://thibweb.github.com/linked-lifted"/>    	
+    			<dc:description xml:lang="en">Creation, enhancement and development of Rich Internet Applications on the Datalift platform</dc:description>
+                <dc:description xml:lang="fr">Création, amélioration et développement d'applications en ligne riches sur la plateforme Datalift</dc:description>
+    		</foaf:Project>
+    	</foaf:currentProject>
+
+    	<foaf:currentProject>
+    		<foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#php-url-shortener">
+    			<foaf:name>URL Shortener</foaf:name>
+    			<foaf:homepage rdf:resource="https://github.com/ThibWeb/php-url-shortener"/>    	
+    			<dc:description xml:lang="en">A simple PHP URL Shortener which tries to stay as DRY as possible while adding neat little features</dc:description>
+                <dc:description xml:lang="fr">Un simple raccourcisseur d'URLs en PHP essayant de rester aussi léger que possible tout en ajoutant de petites choses</dc:description>
+    		</foaf:Project>
+    	</foaf:currentProject>
+
+    	<foaf:currentProject>
+    		<foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#stringtouri">
+    			<foaf:name>StringToURI</foaf:name>
+    			<foaf:homepage rdf:resource="http://stringtouri.assembla.me"/>    	
+    			<dc:description xml:lang="en">StringToURI is a simple interlink generation framework written in Java with Sesame</dc:description>
+                <dc:description xml:lang="fr">StringToURI est un framework simple de génération d'interconnexions écrit en Java avec Sesame</dc:description>
+    		</foaf:Project>
+    	</foaf:currentProject>
+
+    	<foaf:pastProject>
+    		<foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#botanique">
+    			<foaf:name>Botanique</foaf:name>
+    			<foaf:homepage rdf:resource="http://bda.cartman34.fr"/>    	
+    			<dc:description xml:lang="en">Botanique is a thesaurus built upon an object oriented database with PostgreSQL</dc:description>
+                <dc:description xml:lang="fr">Botanique est un thésaurus construit avec une base de données orientée objet et PostgreSQL</dc:description>
+    		</foaf:Project>
+    	</foaf:pastProject>
+
+    	<foaf:pastProject>
+    		<foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#zeppelin">
+    			<foaf:name>Zeppelin</foaf:name>
+    			<foaf:homepage rdf:resource="http://www.trgdy.com/zeppelin/www"/>    	
+    			<dc:description xml:lang="en">Zeppelin, a eZpublish-based ORM / CMS / MVC based blog engine</dc:description>
+                <dc:description xml:lang="fr">Zeppelin, un moteur de blog basé sur eZpublish (ORM, CMS, MVC)</dc:description>
+    		</foaf:Project>
+    	</foaf:pastProject>
+
+        <foaf:pastProject>
+            <foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#clisp-vm">
+                <foaf:name>CLISP compiler and VM</foaf:name>
+                <foaf:homepage rdf:resource="https://github.com/ThibWeb/clisp-compiler-vm"/>      
+                <dc:description xml:lang="en">A LISP to ASM compiler and virtual machine</dc:description>
+                <dc:description xml:lang="fr">Un compilateur LISP vers ASM et une machine virtuelle</dc:description>
+            </foaf:Project>
+        </foaf:pastProject>
+
+	</foaf:Person>
+</rdf:RDF>

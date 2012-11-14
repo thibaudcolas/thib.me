@@ -1,0 +1,6 @@
+# www.robotstxt.org/
+# http://code.google.com/web/controlcrawlindex/
+
+# Tell the bots where the sitemap is located.
+User-agent: *
+Sitemap: http://thibaudcolas.fr/sitemap.xml  

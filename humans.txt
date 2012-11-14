@@ -1,0 +1,72 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+  Webmaster: Thibaud Colas
+  Site: http://thibaudcolas.fr/
+  Twitter: @ThibWeb
+
+/* THANKS */
+  Name: Jacques Bodin-Hullin 
+  Site: http://jacques.sh/
+  Twitter: @jacquesbh
+
+  Name: Kévin Rocher 
+  Site: http://www.kevin-rocher.fr/
+  Twitter: @Darklg
+  
+/* SITE */
+  Last update 2012/11/01
+  Standards: HTML5, CSS3, CoffeeScript
+  Components: Boilerplate, Modernizr, jQuery, Bootstrap, Meny, Simple Form, FitText, Google Web Fonts, Open Sans, IcoMoon
+  Software: Mac OS X, Sublime Text 2, Git, Cake, Google Closure Compiler, IcoMoon, ImageOptim
+
+
+                                                
+                                                
+                   '                            
+                  ''                            
+                 `#:                            
+                 @,:                            
+                 @::                            
+                 +.'                            
+                ,,`@                            
+                ;. @                            
+                :. @                            
+                .; .#                           
+          @@@#'. @  @:                          
+          #  `,#@@,  @:             `,::        
+          @   +@@#;   @@#'     `+@@@#''+;       
+          `@@#`        ,,;@@##@+,,,,,,,';       
+          ##            `,,,:,,,,,'#@@,@        
+         @ `@#    ;#      `,,,,#@+,,,@,@        
+       `@`@#@   #@;         .,+;,,,,@,@`        
+      `#@+ @` +@,            .,#,,,#;'@         
+     `@@` ,+ @@ `':    `+@#+. ,,@,;+,@         '
+    `@,   @ @;.;#@:#  @' `@@;@:,++#,@`         @
+    #    :,@ # @ @`+ +:   @@  @,,@;@.          '
+         @@  @#` +@@:@    :@@@@+:@@             
+        `@`  #@   '@+.     :@@@@,+           +' 
+        #,   '#    :#`       #@@:+          +@' 
+        #   .:;    @+`         @;'         .'++ 
+            ,:.    @+`        ,++:         @.;' 
+            ,;,`   @',        #,@         #`,;,@
+        .'#@@@@@@@#@+@++;`    @.@;+#@#   `# .##,
+      +@'     @@@@@.````.'@@##@@+:,,'.   ',  @@@
+         +@   #@@@@'+###+#';;,    ,@     @   #+@
+      .@#:    @#@#';::::::;''+#@ `''+#@@;@   ;,`
+     #'         @,,,,,,,,,,,,,,#`,,,,,,.;@@  +` 
+   `@  `.,,     ':,,,,,,,,,,,,:@   `,+@@@@@@ ;: 
+   @:@@#'@+     `#,,,,,,,,;@@#+@  `,,;@  #   .# 
+  @:`   @`       @,,,,,,+@;,,,:# ,,,,,.@ @    @ 
+       @         #:,,,,@;,,,,,@ ,@@@@@@@#@,   @ 
+      @@@@@@@+   `@,,,@,,,,,,@,:@        `@   @ 
+      `      #,   @;,;;,,,,'@,`@          @   @ 
+              +# :@@+@+#@@@' :@@          ':  @ 
+               .@. .:,,`  `'@' ::         :; `# 
+                 :#@@@@@@@'`   `@         #. +, 
+                       .'.,    .@         @  @  
+                       @'`.#:  @'        `@ ,+  
+                      .+    @  @,'       @: @`  
+                      #     +. #`#       @ `@   
+                      @     ;, #`#      @` @  
