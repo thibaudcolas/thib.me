@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="fr" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="fr" class="no-js" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <link rel="dns-prefetch" href="//ajax.googleapis.com">
@@ -18,6 +18,14 @@
   <meta name="revisit-after" content="7 days">
   <meta name="robots" content="all">
 
+  <!-- Twitter Cards. -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="http://thibaudcolas.fr">
+  <meta name="twitter:title" content="Thibaud Colas">
+  <meta name="twitter:description" content="Thibaud Colas, étudiant en M2 Informatique spé. Web @UM2 et en L3 Psychologie @Paris8. Web lover, code ninja wannabe.">
+  <meta name="twitter:image" content="http://thibaudcolas.fr/img/site.png">
+  <meta name="twitter:site" content="@ThibWeb">
+
   <!-- Facebook OpenGraph. -->
   <meta property="og:title" content="Thibaud Colas">
   <meta property="og:type" content="website">
@@ -25,10 +33,10 @@
   <meta property="og:image" content="http://thibaudcolas.fr/img/site.png">
   <meta property="og:site_name" content="thibaudcolas.fr">
   <meta property="og:description" content="Thibaud Colas, étudiant en M2 Informatique spé. Web @UM2 et en L3 Psychologie @Paris8. Web lover, code ninja wannabe.">
-  
+
   <!-- Display on phones. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="apple-mobile-web-app-capable" content="yes" />  
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
   <link rel="shortcut icon" href="favicon.png">
 
@@ -40,7 +48,7 @@
 
   <link rel="shortlink" href="http://thib.me">
   <link rel="author" href="humans.txt">
-  <link rel="meta" type="application/rdf+xml" title="FOAF" href="foaf.rdf"> 
+  <link rel="meta" type="application/rdf+xml" title="FOAF" href="foaf.rdf">
   <link rel="canonical" href="http://thibaudcolas.fr">
 
   <!-- Google and Bing analytics tools. -->
@@ -126,10 +134,10 @@
           <div class="span7">
             <h4>Mon parcours</h4>
             <p>Bac en poche, je me suis dirigé vers un <abbr title="Diplôme Universitaire Technologie, Bac +2">DUT</abbr> Informatique à l'<span itemscope itemtype="http://schema.org/CollegeOrUniversity" itemprop="alumniOf"><a href="http://www.u-psud.fr" title="Université Paris Sud" itemprop="url"><span itemprop="name">Université Paris 11</span></a></span>, conclu par un stage comme Webmaster. Mes études se poursuivent ensuite en <abbr title="Troisième année de licence, Bac +3">L3</abbr>, puis dans le nouveau <abbr title="Bac +5">Master</abbr> AIGLE de l'<a href="http://www.univ-montp2.fr" title="Site de l'UM2">UM2</a>. Ce cursus est complété par un stage au sein du projet <a href="http://datalift.org" title="Datalift, plateforme de publication de données">Datalift</a> et par des projets personnels, et se finira par un stage de six mois.</p>
-            
+
             <h4>Mes compétences</h4>
             <p>Je me vois comme un ingénieur / développeur polyvalent, c'est-à-dire <em>à même de comprendre</em> et <em>prêt à apprendre</em>. Mes compétences techniques vont du développement front-end au Web sémantique en passant par les bases de données, le génie logiciel et le développement back-end. J'ai également un bagage en gestion de projet, en géomatique, en économie, en droit et en marketing, ainsi qu'en ergonomie et en statistiques.</p>
-            
+
             <h4>En savoir plus</h4>
             <ul class="more-info unstyled">
               <li><a href="cv_thibaudcolas.pdf" class="cv"><span class="icon-file-pdf" aria-hidden="true"></span><h5>Mon CV PDF</h5> <small>(160 Ko)</small></a></li>
@@ -233,7 +241,7 @@
                     <span class="char-counter">0</span>
                 </div>
               </div>
-                  
+
               <input type="submit" role="button" class="btn btn-primary" value="Envoyer">
             </form>
           </div>
@@ -256,7 +264,7 @@
           <div class="span4">
             <h5>thibaudcolas.fr v1.1 &copy; 2012 <a href="http://thibaudcolas.fr" rel="author">Thibaud Colas</a></h5>
             <p>Ce site web et son contenu sont mis à disposition selon les termes de la licence <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.fr">Creative Commons Attribution 3.0</a>.</p>
-            <p class="logos-wrapper"><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.fr"><img width="88" height="31" title="CC BY 3.0" alt="CC BY 3.0 Logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAABblBMVEX///////////8AAABAQEAQEBDf39/Q08/BxcDLzsrGysXO0c3Mz8vIzMfR1ND///9gYGDM0MyAgIBQUFAwMDCvta7v7++/v79wcHAoKSjT1tKfn5/Lz8q8wbsNDg23vLYpKSl5fHkbGxvEyMNDREMgICC9wryRk5HJzci5vrjDx8LJzcnM0Mu1urSts6yxt7C4vbeyt7Gssquvr69QUVCTmJO6v7m0ubOwtq+2u7XPz8/S1dEODg7Axb/DyMOus63S1dLLz8u7wLo+Pz7FycSEhoS/w76RlJHP08+/xL6vtK7N0c18f3yyuLG5vrm0urPEx8PO0s7KzcnHy8fEycS+wr3AxL+zuLLQ1NCEhYS+w77R1NGJjIlwcm+8wLxdXl2eoJ2utK19f3yWmZaxtrDIzMjGysaPj4+fo57AxcC7wLvW1dWChYLN0cy9wr01NjW6v7qrsaqwta8yMzGvsq+ws6/Cx8K8wbzN0MzFycXhaneiAAAAA3RSTlMADgqEIABOAAACy0lEQVR4XrWV5Y/jQAzFe+cgQ5GZYZmZmZnhmBn/+/Oku1XTbhtdq32K5HyIfnp5Y3scT+BR5HAAlKP58Bk3JchFXtJ1KbQnC0luKbwVLR93f7vt6ur7+v9CMnKHMkcFIRcSWWUmEJg5Z8XZnFCYzAwRsvu2q68tsgOQ+za5z4vKaSoCqEhqUdkNyQfcJyRvjrinGy3HY4CKxVuD88iVS2w2AVUlllk9t8BltqLDvSMNlgf9AJTPRwH4B1uBw0dJWVcGkEdrhtdraDSiB3Y+5g4mw/lRDKPO8psJcDIqinHCxGAL8Flhv0S4tOFRKwoi2r+jy4WluZ4yWraC/aAhFYB8CP4WYE7gWeS6GLUqjws9syGBy6DlF2uWLOLgfH8PVp0Qbw6eeilmkYt2reTl3VxydS663euergXHoMYBA7HmYCGkJIAeUy3y0JBQZgXud768ac0CKELUADRSKWgOltdPAQy1TkGARVEuHA5hFlawjwABRaqvBbi4kgIag/A6KcqolNdIpiHF7pEshrvX2gPzSgQ0BAIR1W8Wjfxs5Dy0MPmuZ7vb3V4U0jgAWnRBmvGmgy5sj/500MxiRhK4MDYcghsOD8D28EoBAK+qmjlXi/kHAf1VIxjbTbW0W+fgxgHxmQNiH4VnLG1gFKTUR9F8pG0P7+7U7gpxE1H4xsMjZD+AS/O57JZQcWUAaLXabv2UWdQ0tlsxufql0m7trE15PYtZPDwgvw63Ro/J5LWz6P+aI83YjrS9GpfQzUNLKCvmppZw8MgSagsMGzx7jeSaNcSYa5P/AB0IwXApndQueo9BA3xWShvQKRie6SfXdVeT8ud5U0BlPsiLDRjJEntTe5lm2VJzLqiVB6stGC55UcneX//LishjDq0dm3B7MHz/EVpfUcYDgXGFFWd/zgPYOLYH32v+4oqXSiWJv7og2M4dP5IcTx+J+w+Cru2omf6OhAAAAABJRU5ErkJggg=="/></a> 
+            <p class="logos-wrapper"><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.fr"><img width="88" height="31" title="CC BY 3.0" alt="CC BY 3.0 Logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAABblBMVEX///////////8AAABAQEAQEBDf39/Q08/BxcDLzsrGysXO0c3Mz8vIzMfR1ND///9gYGDM0MyAgIBQUFAwMDCvta7v7++/v79wcHAoKSjT1tKfn5/Lz8q8wbsNDg23vLYpKSl5fHkbGxvEyMNDREMgICC9wryRk5HJzci5vrjDx8LJzcnM0Mu1urSts6yxt7C4vbeyt7Gssquvr69QUVCTmJO6v7m0ubOwtq+2u7XPz8/S1dEODg7Axb/DyMOus63S1dLLz8u7wLo+Pz7FycSEhoS/w76RlJHP08+/xL6vtK7N0c18f3yyuLG5vrm0urPEx8PO0s7KzcnHy8fEycS+wr3AxL+zuLLQ1NCEhYS+w77R1NGJjIlwcm+8wLxdXl2eoJ2utK19f3yWmZaxtrDIzMjGysaPj4+fo57AxcC7wLvW1dWChYLN0cy9wr01NjW6v7qrsaqwta8yMzGvsq+ws6/Cx8K8wbzN0MzFycXhaneiAAAAA3RSTlMADgqEIABOAAACy0lEQVR4XrWV5Y/jQAzFe+cgQ5GZYZmZmZnhmBn/+/Oku1XTbhtdq32K5HyIfnp5Y3scT+BR5HAAlKP58Bk3JchFXtJ1KbQnC0luKbwVLR93f7vt6ur7+v9CMnKHMkcFIRcSWWUmEJg5Z8XZnFCYzAwRsvu2q68tsgOQ+za5z4vKaSoCqEhqUdkNyQfcJyRvjrinGy3HY4CKxVuD88iVS2w2AVUlllk9t8BltqLDvSMNlgf9AJTPRwH4B1uBw0dJWVcGkEdrhtdraDSiB3Y+5g4mw/lRDKPO8psJcDIqinHCxGAL8Flhv0S4tOFRKwoi2r+jy4WluZ4yWraC/aAhFYB8CP4WYE7gWeS6GLUqjws9syGBy6DlF2uWLOLgfH8PVp0Qbw6eeilmkYt2reTl3VxydS663euergXHoMYBA7HmYCGkJIAeUy3y0JBQZgXud768ac0CKELUADRSKWgOltdPAQy1TkGARVEuHA5hFlawjwABRaqvBbi4kgIag/A6KcqolNdIpiHF7pEshrvX2gPzSgQ0BAIR1W8Wjfxs5Dy0MPmuZ7vb3V4U0jgAWnRBmvGmgy5sj/500MxiRhK4MDYcghsOD8D28EoBAK+qmjlXi/kHAf1VIxjbTbW0W+fgxgHxmQNiH4VnLG1gFKTUR9F8pG0P7+7U7gpxE1H4xsMjZD+AS/O57JZQcWUAaLXabv2UWdQ0tlsxufql0m7trE15PYtZPDwgvw63Ro/J5LWz6P+aI83YjrS9GpfQzUNLKCvmppZw8MgSagsMGzx7jeSaNcSYa5P/AB0IwXApndQueo9BA3xWShvQKRie6SfXdVeT8ud5U0BlPsiLDRjJEntTe5lm2VJzLqiVB6stGC55UcneX//LishjDq0dm3B7MHz/EVpfUcYDgXGFFWd/zgPYOLYH32v+4oqXSiWJv7og2M4dP5IcTx+J+w+Cru2omf6OhAAAAABJRU5ErkJggg=="/></a>
               &nbsp; <span class="html5-css3 well" title="Créé avec HTML5 et CSS3" role="img"><span aria-hidden="true" class="icon-html5"></span><span aria-hidden="true" class="icon-css3"></span></span></p>
           </div>
           <div class="span3" role="note">
@@ -301,7 +309,7 @@
   <script src="js/vendor/meny.min.js"></script>
   <script src="js/script.min.js"></script>
 
-  <!-- I'm watching you. --> 
+  <!-- I'm watching you. -->
   <script>
     var _gaq=[['_setAccount','UA-34692999-1'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
