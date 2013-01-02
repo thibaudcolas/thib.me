@@ -1,7 +1,19 @@
 $ ->
 	$content = $ '#content'
 
-	### 
+	###
+	# Initializing
+	###
+
+	$('h1').fitText 0.7
+
+	meny = Meny.create()
+	api = TwitterAPI()
+
+	$('abbr').tooltip()
+	$('#thibaudcolas').tooltip()
+
+	###
 	# Contact form manager.
 	###
 
@@ -30,7 +42,7 @@ $ ->
 		input = $message.val()
 		address isnt '' and input isnt '' and mailCheck.test address
 
-	### 
+	###
 	# Scrolling with anchor links.
 	###
 
@@ -40,7 +52,7 @@ $ ->
 		destination = $($(@).attr 'href').offset().top
 		$content.stop().animate {scrollTop: destination}, 500
 
-	### 
+	###
 	# Information hiding for spam bots.
 	###
 
@@ -57,12 +69,4 @@ $ ->
 	token_txt = [54,103,54,101,60,58,54,64,106,57,110,66,69,114,64,70,118,117,68,117,75,122,71,75,123,76,74,126,128,86,79,82]
 	$contact.attr 'action', "http://getsimpleform.com/messages?form_api_token=" + decode token_txt;
 
-	###
-	# Initializing
-	###
-
-	meny = Meny.create()
-
-	$('h1').fitText 0.7
-	$('abbr').tooltip()
-	$('#thibaudcolas').tooltip()
+	console.log 'Ready For Action !'

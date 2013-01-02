@@ -1,10 +1,10 @@
-fs     = require 'fs'               
+fs     = require 'fs'
 {exec} = require 'child_process'
-util   = require 'util'           
+util   = require 'util'
 
 # Folders of interest.
 coffeeFolder     = 'coffee'
-libFolder 			 = 'vendor'
+libFolder 			 = 'lib'
 jsFolder         = 'js'
 
 # File names during build process.
@@ -15,13 +15,15 @@ jsFinalFile      = "#{jsFolder}/#{targetFile}.min.js"
 
 # CoffeeScript files to compile.
 coffeeFiles  		 = [
-										'plugins'
+										'plugins',
+										'twitter',
 										'main'
-									] 
+									]
 
 # Libraries to concatenate.
 libFiles				 = [
 										'fittext',
+										'pretty',
 										'bootstrap',
 										'meny'
 									]
@@ -37,13 +39,13 @@ task 'build', 'Builds a single JavaScript file from CoffeeScript files', ->
 			util.log "[#{i + 1}] #{file}.coffee"
 			process() if --remaining is 0
 	# Ran only after all files have been read.
-	process = -> 
+	process = ->
 		fs.writeFile coffeeTargetFile, appContents.join('\n\n'), 'utf8', (err) ->
 			util.log err if err
 			exec "coffee --bare --lint --output #{jsFolder} --compile #{coffeeTargetFile}", (err, stdout, stderr) ->
 				util.log err if err
 				util.log "> #{jsTargetFile}"
-				fs.unlink coffeeTargetFile, (err) -> util.log err if err 
+				fs.unlink coffeeTargetFile, (err) -> util.log err if err
 
 
 
@@ -51,7 +53,7 @@ task 'watch', 'Watch CoffeeScript source files and build changes', ->
 	for file in coffeeFiles then do (file) ->
 		fs.watchFile "#{coffeeFolder}/#{file}.coffee", (curr, prev) ->
 			if +curr.mtime isnt +prev.mtime
-				invoke 'build' 
+				invoke 'build'
 
 
 

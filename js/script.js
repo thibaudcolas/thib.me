@@ -3,6 +3,8 @@
 # Console-lacking browsers.
 */
 
+var TwitterAPI;
+
 if (!(window.console && console.log)) {
   (function() {
     var console, method, methods, noop, _i, _len;
@@ -16,10 +18,106 @@ if (!(window.console && console.log)) {
   })();
 }
 
+/*
+# Twitter API calls inspired by Chirp.js.
+*/
+
+
+TwitterAPI = function() {
+  var apiURL, containerID;
+  apiURL = 'http://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&count=7&include_rts=true&exclude_replies=true&screen_name=ThibWeb';
+  containerID = 'tweet-container';
+  this.textToHTML = function(text, entities) {
+    var e, elt, hashtags_fun, htmlOutput, i, indices, key, linkProcessing, linkWrap, media_fun, urls_fun, user_mentions_fun, _i, _j, _ref, _ref1;
+    linkWrap = function(url, display) {
+      return "<a href=\"" + url + "\">" + display + "</a>";
+    };
+    urls_fun = function(elt) {
+      return linkWrap(elt.expanded_url, elt.display_url);
+    };
+    hashtags_fun = function(elt) {
+      return linkWrap('http://twitter.com/search/%23' + elt.text, elt.text);
+    };
+    user_mentions_fun = function(elt) {
+      return linkWrap('http://twitter.com/' + elt.screen_name, '@' + elt.screen_name);
+    };
+    media_fun = function(elt) {
+      return linkWrap(elt.expanded_url, elt.display_url);
+    };
+    linkProcessing = {
+      urls: urls_fun,
+      hashtags: hashtags_fun,
+      user_mentions: user_mentions_fun,
+      media: media_fun
+    };
+    indices = [];
+    for (key in entities) {
+      elt = entities[key];
+      if (elt.length > 0) {
+        for (i = _i = 0, _ref = elt.length; 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
+          if (!(elt[i] != null)) {
+            continue;
+          }
+          e = elt[i];
+          indices[e.indices[0]] = {
+            start: e.indices[0],
+            end: e.indices[1],
+            link: linkProcessing[key](e)
+          };
+        }
+      }
+    }
+    htmlOutput = text;
+    for (i = _j = _ref1 = indices.length - 1; _ref1 <= 0 ? _j < 0 : _j > 0; i = _ref1 <= 0 ? ++_j : --_j) {
+      if (!(indices[i] != null)) {
+        continue;
+      }
+      elt = indices[i];
+      htmlOutput = (htmlOutput.substr(0, elt.start)) + elt.link + (htmlOutput.substr(elt.end, htmlOutput.length - 1));
+    }
+    return htmlOutput;
+  };
+  this.jsonToHTML = function(json) {
+    var htmlOutput, tweet, _i, _len;
+    htmlOutput = '';
+    for (_i = 0, _len = json.length; _i < _len; _i++) {
+      tweet = json[_i];
+      htmlOutput += "<p class=\"tweet\">\n  " + (textToHTML(tweet.text, tweet.entities)) + "\n  <a href=\"http://thib.me/" + tweet.id_str + "\" class=\"tweet-link pull-right\">\n    <time>" + (prettyDate(tweet.created_at)) + "</time>\n  </a>\n</p>";
+    }
+    return "<div class=\"tweets\">" + htmlOutput + "</div>";
+  };
+  this.retrieveTweets = function() {
+    var callKey, get, _ref;
+    TwitterAPI.requests = ((_ref = TwitterAPI.requests) != null ? _ref : 0) + 1;
+    callKey = 'callback' + TwitterAPI.requests;
+    TwitterAPI[callKey] = function(json) {
+      var _ref1;
+      json = (_ref1 = json.results) != null ? _ref1 : json;
+      return (document.getElementById(containerID)).innerHTML = jsonToHTML(json);
+    };
+    get = document.createElement('script');
+    get.src = apiURL + '&callback=TwitterAPI.' + callKey;
+    $('head').append(get);
+    return console.log('Retrieving Tweets ...');
+  };
+  if (this.constructor !== TwitterAPI) {
+    return new TwitterAPI().retrieveTweets();
+  }
+};
+
 $(function() {
-  var $contact, $content, $counter, $mail, $message, charCount, correctMail, decode, mailCheck, meny, spam_txt, token_txt;
+  var $contact, $content, $counter, $mail, $message, api, charCount, correctMail, decode, mailCheck, meny, spam_txt, token_txt;
   $content = $('#content');
-  /* 
+  /*
+  	# Initializing
+  */
+
+  $('h1').fitText(0.7);
+  meny = Meny.create();
+  api = TwitterAPI();
+  $('abbr').tooltip();
+  $('#thibaudcolas').tooltip();
+  /*
   	# Contact form manager.
   */
 
@@ -45,7 +143,7 @@ $(function() {
     input = $message.val();
     return address !== '' && input !== '' && mailCheck.test(address);
   });
-  /* 
+  /*
   	# Scrolling with anchor links.
   */
 
@@ -57,7 +155,7 @@ $(function() {
       scrollTop: destination
     }, 500);
   });
-  /* 
+  /*
   	# Information hiding for spam bots.
   */
 
@@ -75,12 +173,5 @@ $(function() {
   $('span.remplacement').html(correctMail);
   token_txt = [54, 103, 54, 101, 60, 58, 54, 64, 106, 57, 110, 66, 69, 114, 64, 70, 118, 117, 68, 117, 75, 122, 71, 75, 123, 76, 74, 126, 128, 86, 79, 82];
   $contact.attr('action', "http://getsimpleform.com/messages?form_api_token=" + decode(token_txt));
-  /*
-  	# Initializing
-  */
-
-  meny = Meny.create();
-  $('h1').fitText(0.7);
-  $('abbr').tooltip();
-  return $('#thibaudcolas').tooltip();
+  return console.log('Ready For Action !');
 });
