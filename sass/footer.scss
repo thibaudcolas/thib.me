@@ -1,0 +1,117 @@
+/*******************/
+/*** Foooooooter ***/
+/*******************/
+
+footer {
+
+  > span {
+    width:20%;
+    height:5px;
+    background:none repeat scroll 0 0 white;
+  }
+
+  .f1 {
+    background-color:tomato;
+  }
+
+  .f2 {
+    background-color:crimson;
+  }
+
+  .f3 {
+    background-color:teal;
+  }
+
+  .f4 {
+    background-color:dodgerblue;
+  }
+
+  .f5 {
+    background-color:navy;
+  }
+
+}
+
+/** Credits **/
+
+.h5bp {
+    color:#eee;
+    font-weight:700;
+    text-shadow:2px 2px 0 #000000;
+    text-transform:uppercase;
+}
+
+.star {
+    color:#E08524;
+}
+
+.mdrnzr {
+  font-family:sans-serif;
+  font-weight:700;
+  color:rgb(217, 30, 118);
+  text-shadow:0 1px 0 rgb(0, 0, 0);
+}
+
+.btstrp {
+  color:#fff;
+  line-height:1;
+  text-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.mny {
+  font-family:Helvetica, sans-serif;
+  color:rgb(194,87,91);
+}
+
+.jqy {
+  color:#f2f2f2;
+  display:inline-block;
+
+  :first-letter {
+    color:#4082ae;
+  }
+}
+
+.fittxt {
+  color:#f4f1dE;
+  font-weight: bold;
+  text-shadow:0 0 1px #f4f1dE;
+}
+
+.icomn {
+  color:#b35047;
+  opacity:0.8;
+}
+
+.osans {
+  color:#eee;
+  font-family:'Open Sans', sans-serif;
+}
+
+.googlewf {
+  color:#3d79d0;
+  text-shadow:0 0 1px #111;
+}
+
+.google {
+
+  color:#215cfb;
+
+  .red {
+    color:#f02e35;
+  }
+
+  .green {
+    color:#01a616;
+  }
+
+  .yellow {
+    color:#ffbd20;
+  }
+}
+
+.smplform {
+  text-transform:lowercase;
+  color:#aaa;
+  text-shadow:0 0 1px #111;
+}
