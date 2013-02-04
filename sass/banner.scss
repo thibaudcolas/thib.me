@@ -1,0 +1,82 @@
+/*******************/
+/*** Tooooooooop ***/
+/*******************/
+
+@import "globals";
+
+.page-header {
+  margin : -60px 0 0;
+  padding-bottom : 30px;
+  background-color : #eee;
+}
+
+@mixin hovering-banner {
+  position : relative;
+  z-index : 3;
+  padding : 20px 0;
+  float : left;
+}
+
+h1 {
+  @include hovering-banner;
+}
+
+.social {
+  @include hovering-banner;
+  width : 100%;
+  top : 20px;
+
+  li {
+    display : inline-block;
+    margin : 10px 10px 10px 0;
+    min-width : 70px;
+  }
+
+  span {
+    display : block;
+  }
+
+  .ico {
+    font-size : 300%;
+    float : left;
+    position : relative;
+    top : -10px;
+    color : #333;
+  }
+
+  .icon-twitter {
+    @include left-offset(15px);
+  }
+
+  .icon-github {
+    @include left-offset(5px);
+  }
+
+  .icon-linkedin {
+    @include left-offset(25px);
+  }
+
+  .icon-mail {
+    @include left-offset(15px);
+  }
+
+  a:hover {
+    text-decoration : none;
+
+    span {
+      color : #aaa;
+    }
+  }
+}
+
+// Reduce the place occupied by the banner when the screen is really small.
+@media (max-width : 360px) {
+  .social li {
+    margin : 20px;
+  }
+
+  h1 {
+    padding : 0;
+    margin : 0;
+  }
+}

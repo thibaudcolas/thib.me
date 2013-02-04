@@ -1,0 +1,84 @@
+/*******************/
+/*** A proooopos ***/
+/*******************/
+
+@import "globals";
+
+.apropos {
+  background-color : wheat;
+  background-image : -webkit-linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), -webkit-linear-gradient(0deg, rgba(255,255,255,.07) 50%, transparent 50%), -webkit-linear-gradient(0deg, rgba(255,255,255,.13) 50%, transparent 50%), -webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.17) 50%), -webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.19) 50%);
+  background-image :    -moz-linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), -moz-linear-gradient(0deg, rgba(255,255,255,.07) 50%, transparent 50%), -moz-linear-gradient(0deg, rgba(255,255,255,.13) 50%, transparent 50%), -moz-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.17) 50%), -moz-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.19) 50%);
+  background-image :      -o-linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), -o-linear-gradient(0deg, rgba(255,255,255,.07) 50%, transparent 50%), -o-linear-gradient(0deg, rgba(255,255,255,.13) 50%, transparent 50%), -o-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.17) 50%), -o-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.19) 50%);
+  background-image :     -ms-linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), -ms-linear-gradient(0deg, rgba(255,255,255,.07) 50%, transparent 50%), -ms-linear-gradient(0deg, rgba(255,255,255,.13) 50%, transparent 50%), -ms-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.17) 50%), -ms-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.19) 50%);
+  background-image :         linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255,255,255,.07) 50%, transparent 50%), linear-gradient(to right, rgba(255,255,255,.13) 50%, transparent 50%), linear-gradient(to right, transparent 50%, rgba(255,255,255,.17) 50%), linear-gradient(to right, transparent 50%, rgba(255,255,255,.19) 50%);
+  @include background-size(cover, 13px, 29px, 37px, 53px);
+
+  .lead {
+    margin-top : 10px;
+  }
+}
+
+.about-me {
+  $border : 2px dashed rgba(0, 0, 0, 0.1);
+  border-left : $border;
+  border-right : $border;
+  padding : 0 25px;
+}
+
+.more-info {
+  width : 100%;
+
+  li {
+    display : inline-block;
+    margin : 20px 10px 0;
+
+    &:last-of-type {
+      margin-right : 0;
+    }
+
+    &:first-of-type {
+      margin-left : 0;
+    }
+  }
+
+  span, small {
+    position : relative;
+    color : #333;
+  }
+
+  span {
+    font-size : 300%;
+  }
+
+  small {
+    top : -15px;
+  }
+
+  a:hover {
+    text-decoration : none;
+
+    span {
+      color : #aaa;
+    }
+  }
+
+}
+
+@mixin icon-offset($offset) {
+  span, small {
+    @include left-offset($offset);
+  }
+}
+
+.cv {
+  @include icon-offset(22px);
+}
+
+.foaf {
+  @include icon-offset(32px);
+}
+
+.setapp {
+  @include icon-offset(35px);
+}
+

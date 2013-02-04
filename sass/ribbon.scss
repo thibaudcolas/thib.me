@@ -1,0 +1,50 @@
+/*******************/
+/** (S)CSS Ribbon **/
+/*******************/
+
+@import "globals";
+
+.ribbon {
+  height : 150px;
+  width : 150px;
+  overflow : hidden;
+  z-index : 1;
+  float : right;
+  position : relative;
+  top : 50px;
+  right : -30px;
+
+  a {
+    display : block;
+    width : 190px;
+    font-size : 14px;
+    font-family : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color : #eee;
+    word-spacing : 2px;
+    text-decoration : none;
+    padding : 5px 15px 6px 25px;
+
+    position : relative;
+    left : 20px;
+    top : -37px;
+    text-align : center;
+    line-height : 1.2em;
+
+    @include transform(rotate(45deg));
+    @include transform-origin(0 0);
+
+    @include box-shadow(1px 1px 5px 1px #666, inset 0 0 1px rgba(255, 255, 255, 0.30), inset 0 0 2px rgba(255, 255, 255, 0.20), inset 0 0 3px rgba(255, 255, 255, 0.10), inset 0 0 5px rgba(255, 255, 255, 0.30));
+
+    /* Set the base colour */
+    background-color : #a00;
+
+    /* Set a gradient : transparent black at the top to almost-transparent black at the bottom */
+    background-image : -webkit-linear-gradient(top, rgba(255, 255, 255, 0.30) 1px, transparent 3px), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+    background-image :    -moz-linear-gradient(top, rgba(255, 255, 255, 0.30) 1px, transparent 3px), -moz-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+    background-image :      -o-linear-gradient(top, rgba(255, 255, 255, 0.30) 1px, transparent 3px), -o-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+    background-image :     -ms-linear-gradient(top, rgba(255, 255, 255, 0.30) 1px, transparent 3px), -ms-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+    background-image :         linear-gradient(top, rgba(255, 255, 255, 0.30) 1px, transparent 3px), linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+
+    border : 1px dotted rgba(255,255,255,0.2);
+  }
+}
