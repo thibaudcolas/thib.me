@@ -1,0 +1,16 @@
+/**
+ * This is the main stylesheet, which imports (concatenates) every other one.
+ */
+
+@import "globals";
+@import "apropos";
+@import "banner";
+@import "circle";
+@import "clouds";
+@import "contact";
+@import "footer";
+@import "icomoon";
+@import "main";
+@import "meny";
+@import "projets";
+@import "ribbon";
