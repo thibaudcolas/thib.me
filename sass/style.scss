@@ -2,15 +2,18 @@
  * This is the main stylesheet, which imports (concatenates) every other one.
  */
 
+// Sass structures reused throughout the styles.
 @import "globals";
-@import "apropos";
+// General design elements.
+@import "meny";
 @import "banner";
-@import "circle";
+@import "ribbon";
+@import "icomoon";
 @import "clouds";
+// Content styling.
+@import "main";
+@import "apropos";
+@import "projets";
 @import "contact";
 @import "footer";
-@import "icomoon";
-@import "main";
-@import "meny";
-@import "projets";
-@import "ribbon";
+@import "circle";
