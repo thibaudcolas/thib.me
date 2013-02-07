@@ -27,23 +27,6 @@
   }
 }
 
-// @mixin cloud-variance($width, $height, $left, $opacity, $length) {
-//   width : $width;
-//   height : $height;
-//   left : $left;
-//   opacity : $opacity;
-
-//   @include animation(moveclouds $length linear 2);
-
-//   &:before {}
-
-//   &:after {}
-// }
-
-// @for $i from 1 through 3 {
-
-// }
-
 .x1 {
   width : 120px;
   height : 50px;
