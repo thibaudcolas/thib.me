@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-	<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+	<rdf:RDF 
+	    xml:base="http://thibaudcolas.fr"
 	    xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -11,16 +12,14 @@
 	    xmlns:rss="http://purl.org/rss/1.0/">
 
 	<foaf:PersonalProfileDocument rdf:about="#me">
-		<rdfs:label>Thibaud Colas's FOAF File</rdfs:label>
-		<foaf:maker rdf:nodeID="#me"/>
+		<rdfs:label>Thibaud Colas' FOAF profile</rdfs:label>
 		<foaf:primaryTopic rdf:nodeID="#me"/>
 		<foaf:maker rdf:resource="#me"/>
 		<foaf:primaryTopic rdf:resource="#me"/>
 	</foaf:PersonalProfileDocument>
 
-	<foaf:Person rdf:about="me">
+	<foaf:Person rdf:about="#me">
 		<foaf:name>Thibaud Colas</foaf:name>
-	    <foaf:title>Mr</foaf:title>
 	    <foaf:givenname>Thibaud</foaf:givenname>
 	    <foaf:family_name>Colas</foaf:family_name>
 	    <foaf:nick>ThibWeb</foaf:nick>
@@ -31,7 +30,7 @@
     	<dc:description xml:lang="en">I'm a french software engineer / web developer student who loves to create great things, and discover even greater ones. I also study psychology and am interested in all things Web.</dc:description>
         <dc:description xml:lang="fr">Je suis un étudiant français en ingénierie logicielle / développement web aimant créer de grandes choses, en découvrir d'encore plus grandes. J'étudie également la psychologie et suis intéressé par tout ce qui touche au Web.</dc:description>
 
-
+        <foaf:workInfoHomepage rdf:resource="http://www.cgi.com/ rdfs:label="CGI Montpellier"/>
     	<foaf:workInfoHomepage rdf:resource="http://www.lirmm.fr" rdfs:label="LIRMM Research Laboratory"/>
     	<foaf:schoolHomepage rdf:resource="http://www.univ-montp2.fr" rdfs:label="Montpellier 2 University"/>
     	<foaf:schoolHomepage rdf:resource="http://www.iedparis8.net" rdfs:label="Paris 8 University IED"/>
