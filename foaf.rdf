@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-	<rdf:RDF 
+	<rdf:RDF
 	    xml:base="http://thibaudcolas.fr"
 	    xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -25,14 +25,15 @@
 	    <foaf:nick>ThibWeb</foaf:nick>
 	    <foaf:mbox_sha1sum>7b6865dfe03fc198ed3d6346afbca5136745fbb7</foaf:mbox_sha1sum>
 	    <foaf:homepage rdf:resource="http://thibaudcolas.fr"/>
-    	<foaf:depiction rdf:resource="http://thibaudcolas.fr/img/me-large.jpg"/>
-    	<foaf:img rdf:resource="http://thibaudcolas.fr/img/me-large.jpg"/>
-    	<dc:description xml:lang="en">I'm a french software engineer / web developer student who loves to create great things, and discover even greater ones. I also study psychology and am interested in all things Web.</dc:description>
-        <dc:description xml:lang="fr">Je suis un étudiant français en ingénierie logicielle / développement web aimant créer de grandes choses, en découvrir d'encore plus grandes. J'étudie également la psychologie et suis intéressé par tout ce qui touche au Web.</dc:description>
+    	<foaf:depiction rdf:resource="http://thibaudcolas.fr/img/me-small.jpg"/>
+    	<foaf:img rdf:resource="http://thibaudcolas.fr/img/me-small.jpg"/>
+    	<dc:description xml:lang="en">I'm a french software engineer / web developer who loves to create great things, and discover even greater ones. I also study psychology and am interested in all things Web.</dc:description>
+        <dc:description xml:lang="fr">Je suis un ingénieur analyste / développeur web aimant créer de grandes choses, en découvrir d'encore plus grandes. J'étudie également la psychologie et suis intéressé par tout ce qui touche au Web.</dc:description>
 
-        <foaf:workInfoHomepage rdf:resource="http://www.cgi.com/ rdfs:label="CGI Montpellier"/>
+        <foaf:workInfoHomepage rdf:resource="http://www.cgi.com/" rdfs:label="CGI Montpellier"/>
     	<foaf:workInfoHomepage rdf:resource="http://www.lirmm.fr" rdfs:label="LIRMM Research Laboratory"/>
     	<foaf:schoolHomepage rdf:resource="http://www.univ-montp2.fr" rdfs:label="Montpellier 2 University"/>
+        <foaf:schoolHomepage rdf:resource="http://www.u-psud.fr" rdfs:label="Paris 11 University"/>
     	<foaf:schoolHomepage rdf:resource="http://www.iedparis8.net" rdfs:label="Paris 8 University IED"/>
 
     	<foaf:based_near rdf:resource="http://dbpedia.org/resource/Montpellier" rdfs:label="Montpellier"/>
@@ -135,15 +136,6 @@
         </foaf:currentProject>
 
     	<foaf:currentProject>
-    		<foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#linked-lifted">
-    			<foaf:name>Datalift RIA creation</foaf:name>
-    			<foaf:homepage rdf:resource="http://thibweb.github.com/linked-lifted"/>
-    			<dc:description xml:lang="en">Creation, enhancement and development of Rich Internet Applications on the Datalift platform</dc:description>
-                <dc:description xml:lang="fr">Création, amélioration et développement d'applications en ligne riches sur la plateforme Datalift</dc:description>
-    		</foaf:Project>
-    	</foaf:currentProject>
-
-    	<foaf:currentProject>
     		<foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#php-url-shortener">
     			<foaf:name>URL Shortener</foaf:name>
     			<foaf:homepage rdf:resource="https://github.com/ThibWeb/php-url-shortener"/>
@@ -151,6 +143,15 @@
                 <dc:description xml:lang="fr">Un simple raccourcisseur d'URLs en PHP essayant de rester aussi léger que possible tout en ajoutant de petites choses</dc:description>
     		</foaf:Project>
     	</foaf:currentProject>
+
+        <foaf:pastProject>
+            <foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#linked-lifted">
+                <foaf:name>Datalift RIA creation</foaf:name>
+                <foaf:homepage rdf:resource="http://thibweb.github.com/linked-lifted"/>
+                <dc:description xml:lang="en">Creation, enhancement and development of Rich Internet Applications on the Datalift platform</dc:description>
+                <dc:description xml:lang="fr">Création, amélioration et développement d'applications en ligne riches sur la plateforme Datalift</dc:description>
+            </foaf:Project>
+        </foaf:pastProject>
 
     	<foaf:pastProject>
     		<foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#stringtouri">
