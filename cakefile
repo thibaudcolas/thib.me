@@ -16,14 +16,12 @@ jsFinalFile      = "#{jsFolder}/#{targetFile}.min.js"
 # CoffeeScript files to compile.
 coffeeFiles  		 = [
 										'plugins',
-										'twitter',
 										'main'
 									]
 
 # Libraries to concatenate.
 libFiles				 = [
 										'fittext',
-										'pretty',
 										'bootstrap',
 										'meny'
 									]

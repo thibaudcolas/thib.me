@@ -8,7 +8,6 @@ $ ->
 	$('h1').fitText 0.7
 
 	meny = Meny.create()
-	api = TwitterAPI()
 
 	$('abbr').tooltip()
 	$('#thibaudcolas').tooltip()
