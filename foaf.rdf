@@ -78,49 +78,40 @@
     		</foaf:OnlineAccount>
     	</foaf:account>
 
-    	<foaf:account>
-    		<foaf:OnlineAccount rdf:about="http://thibaudcolas.fr/foaf.rdf#me-appdotnet">
-    			<foaf:name>App.net</foaf:name>
-    			<foaf:accountServiceHomepage rdf:resource="https://alpha.app.net/"/>
-    			<foaf:page rdf:resource="https://alpha.app.net/ThibWeb"/>
-    			<foaf:accountName>ThibWeb</foaf:accountName>
-    		</foaf:OnlineAccount>
-    	</foaf:account>
+    	<foaf:knows>
+    	  <foaf:Person>
+    	    <foaf:name>Francois Scharffe</foaf:name>
+    	    <foaf:mbox_sha1sum>c97eff23dff98add7b642c67eb982ee655071b43</foaf:mbox_sha1sum>
+    	    <rdfs:seeAlso rdf:resource="http://scharffe.fr/foaf.rdff"/>
+    	  </foaf:Person>
+    	</foaf:knows>
 
-	<foaf:knows>
-	  <foaf:Person>
-	    <foaf:name>Francois Scharffe</foaf:name>
-	    <foaf:mbox_sha1sum>c97eff23dff98add7b642c67eb982ee655071b43</foaf:mbox_sha1sum>
-	    <rdfs:seeAlso rdf:resource="http://scharffe.fr/foaf.rdff"/>
-	  </foaf:Person>
-	</foaf:knows>
+    	<foaf:knows>
+    	  <foaf:Person>
+    	    <foaf:name>Julien Plu</foaf:name>
+    	    <rdfs:seeAlso rdf:resource="http://jplu.developpez.com/julien.html"/>
+    	  </foaf:Person>
+    	</foaf:knows>
 
-	<foaf:knows>
-	  <foaf:Person>
-	    <foaf:name>Julien Plu</foaf:name>
-	    <rdfs:seeAlso rdf:resource="http://jplu.developpez.com/julien.html"/>
-	  </foaf:Person>
-	</foaf:knows>
+    	<foaf:knows>
+    	  <foaf:Person>
+    	    <foaf:name>Luca Costabello</foaf:name>
+    	    <foaf:mbox_sha1sum>18004aecd48f272f2232c70c0fe60c476e3bf133</foaf:mbox_sha1sum>
+    	    <rdfs:seeAlso rdf:resource="http://www-sop.inria.fr/members/Luca.Costabello/foaf.rdf"/>
+    	  </foaf:Person>
+    	</foaf:knows>
 
-	<foaf:knows>
-	  <foaf:Person>
-	    <foaf:name>Luca Costabello</foaf:name>
-	    <foaf:mbox_sha1sum>18004aecd48f272f2232c70c0fe60c476e3bf133</foaf:mbox_sha1sum>
-	    <rdfs:seeAlso rdf:resource="http://www-sop.inria.fr/members/Luca.Costabello/foaf.rdf"/>
-	  </foaf:Person>
-	</foaf:knows>
-
-	<foaf:knows>
-	  <foaf:Person>
-	    <foaf:name>Fabien Gandon</foaf:name>
-	    <foaf:mbox_sha1sum>ec48328fdad40f2ec20d994df1d9ed32cd96b879</foaf:mbox_sha1sum>
-	    <rdfs:seeAlso rdf:resource="http://ns.inria.fr/fabien.gandon/foaf.rdf"/>
-	  </foaf:Person>
-	</foaf:knows>
+    	<foaf:knows>
+    	  <foaf:Person>
+    	    <foaf:name>Fabien Gandon</foaf:name>
+    	    <foaf:mbox_sha1sum>ec48328fdad40f2ec20d994df1d9ed32cd96b879</foaf:mbox_sha1sum>
+    	    <rdfs:seeAlso rdf:resource="http://ns.inria.fr/fabien.gandon/foaf.rdf"/>
+    	  </foaf:Person>
+    	</foaf:knows>
 
         <foaf:currentProject>
             <foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#icopter">
-                <foaf:name>iOS game : iCopter</foaf:name>
+                <foaf:name>iCopter</foaf:name>
                 <foaf:homepage rdf:resource="http://github.com/ThibWeb/icopter"/>
                 <dc:description xml:lang="en">An iPhone game built with Open GL and FMOD Designer</dc:description>
                 <dc:description xml:lang="fr">Un jeu pour iPhone construit avec Open GL et FMOD Designer</dc:description>
