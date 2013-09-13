@@ -67,5 +67,3 @@ $ ->
 	# Simpleform token hiding.
 	token_txt = [54,103,54,101,60,58,54,64,106,57,110,66,69,114,64,70,118,117,68,117,75,122,71,75,123,76,74,126,128,86,79,82]
 	$contact.attr 'action', "http://getsimpleform.com/messages?form_api_token=" + decode token_txt;
-
-	console.log 'Ready For Action !'
