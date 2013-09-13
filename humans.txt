@@ -16,9 +16,9 @@
   Twitter: @Darklg
   
 /* SITE */
-  Last update 2013-08-01
+  Last update 2013-09-01
   Standards: HTML5, Sass, CoffeeScript
-  Components: Boilerplate, Modernizr, jQuery, Bootstrap, Meny, Simple Form, FitText, Google Web Fonts, Open Sans, IcoMoon
+  Components: Boilerplate, jQuery, Bootstrap, Meny, Simple Form, FitText, Google Web Fonts, Open Sans, IcoMoon
   Software: Mac OS X, Sublime Text 2, Git, Cake, Google Closure Compiler, IcoMoon, ImageOptim
 
 
