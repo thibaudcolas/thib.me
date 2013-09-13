@@ -43,6 +43,7 @@
     	<foaf:interest rdfs:label="RDF" dc:title="RDF" rdf:resource="http://dbpedia.org/resource/Resource_Description_Framework"/>
     	<foaf:interest rdfs:label="Cycling" dc:title="Cycling" rdf:resource="http://dbpedia.org/resource/Cycling"/>
     	<foaf:interest rdfs:label="Literature" dc:title="Literature" rdf:resource="http://dbpedia.org/resource/Literature"/>
+        <foaf:interest rdfs:label="Roller Skating" dc:title="Roller Skating" rdf:resource="http://dbpedia.org/resource/Roller_skating"/>
     	<foaf:interest rdfs:label="World_Wide_Web" dc:title="World_Wide_Web" rdf:resource="http://dbpedia.org/resource/World_Wide_Web"/>
     	<foaf:interest rdfs:label="Painting" dc:title="Painting" rdf:resource="http://dbpedia.org/resource/Painting"/>
     	<foaf:interest rdfs:label="OCaml" dc:title="OCaml" rdf:resource="http://dbpedia.org/resource/OCaml"/>
@@ -135,6 +136,15 @@
             </foaf:Project>
         </foaf:currentProject>
 
+        <foaf:currentProject>
+            <foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#browser-games">
+                <foaf:name>Browser Games</foaf:name>
+                <foaf:homepage rdf:resource="http://github.com/ThibWeb/browser-games"/>
+                <dc:description xml:lang="en">Little HTML5 / Canvas / WebGL game experiments</dc:description>
+                <dc:description xml:lang="fr">Jeux expérimentaux réalisés avec HTML5 / Canvas / WebGL</dc:description>
+            </foaf:Project>
+        </foaf:currentProject>
+
     	<foaf:currentProject>
     		<foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#php-url-shortener">
     			<foaf:name>URL Shortener</foaf:name>
@@ -156,7 +166,7 @@
     	<foaf:pastProject>
     		<foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#stringtouri">
     			<foaf:name>StringToURI</foaf:name>
-    			<foaf:homepage rdf:resource="http://stringtouri.assembla.me"/>
+    			<foaf:homepage rdf:resource="https://github.com/ThibWeb/stringtouri"/>
     			<dc:description xml:lang="en">StringToURI is a simple interlink generation framework written in Java with Sesame</dc:description>
                 <dc:description xml:lang="fr">StringToURI est un framework simple de génération d'interconnexions écrit en Java avec Sesame</dc:description>
     		</foaf:Project>
@@ -186,6 +196,24 @@
                 <foaf:homepage rdf:resource="https://github.com/ThibWeb/clisp-compiler-vm"/>
                 <dc:description xml:lang="en">A LISP to ASM compiler and virtual machine</dc:description>
                 <dc:description xml:lang="fr">Un compilateur LISP vers ASM et une machine virtuelle</dc:description>
+            </foaf:Project>
+        </foaf:pastProject>
+
+        <foaf:pastProject>
+            <foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#metaprogramming">
+                <foaf:name>Metaprogramming</foaf:name>
+                <foaf:homepage rdf:resource="https://github.com/ThibWeb/metaprogramming"/>
+                <dc:description xml:lang="en">Experiments around metaprogramming in multiple programming languages</dc:description>
+                <dc:description xml:lang="fr">Une série d'expériences de métaprogrammation de plusieurs langages</dc:description>
+            </foaf:Project>
+        </foaf:pastProject>
+
+        <foaf:pastProject>
+            <foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#uri-encoder">
+                <foaf:name>URI Encoder</foaf:name>
+                <foaf:homepage rdf:resource="https://github.com/ThibWeb/uriencoder"/>
+                <dc:description xml:lang="en">A simple Mac OS X Dashboard widget which URI-encodes/decodes text</dc:description>
+                <dc:description xml:lang="fr">Un simple widget pour le dashboard de Mac OS X pour encoder/décoder des URIs</dc:description>
             </foaf:Project>
         </foaf:pastProject>
 
