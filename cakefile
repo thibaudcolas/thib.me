@@ -15,7 +15,6 @@ jsFinalFile      = "#{jsFolder}/#{targetFile}.min.js"
 
 # CoffeeScript files to compile.
 coffeeFiles  		 = [
-										'plugins',
 										'main'
 									]
 
