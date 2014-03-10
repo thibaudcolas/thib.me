@@ -1,14 +1,12 @@
-thibaudcolas
+[thibaudcolas](http://thibaudcolas.fr)
 ============
 
 My personal website's repository.
 
-Contains the whole source code, assets and attachments (foaf.rdf file, resume, etc).
+Contains the whole source code, assets and attachments.
 
-## Built with
+Built with HTML, CSS and JavaScript. Content available under [https://creativecommons.org/publicdomain/zero/1.0/](CC0). Hosted on [http://pages.github.com/](GitHub Pages).
 
-- Standards: HTML5, Sass, CoffeeScript
-- Components: Boilerplate, Modernizr, jQuery, Bootstrap, Meny, Simple Form, FitText, Google Web Fonts, Open Sans, IcoMoon
-- Software: Mac OS X, Sublime Text 2, Git, Cake, Google Closure Compiler, IcoMoon, ImageOptim
+
 
 

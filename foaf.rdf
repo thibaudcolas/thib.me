@@ -25,18 +25,13 @@
 	    <foaf:nick>ThibWeb</foaf:nick>
 	    <foaf:mbox_sha1sum>7b6865dfe03fc198ed3d6346afbca5136745fbb7</foaf:mbox_sha1sum>
 	    <foaf:homepage rdf:resource="http://thibaudcolas.fr"/>
-    	<foaf:depiction rdf:resource="http://thibaudcolas.fr/img/me-small.jpg"/>
-    	<foaf:img rdf:resource="http://thibaudcolas.fr/img/me-small.jpg"/>
-    	<dc:description xml:lang="en">I'm a french software engineer / web developer who loves to create great things, and discover even greater ones. I also study psychology and am interested in all things Web.</dc:description>
-        <dc:description xml:lang="fr">Je suis un ingénieur analyste / développeur web aimant créer de grandes choses, en découvrir d'encore plus grandes. J'étudie également la psychologie et suis intéressé par tout ce qui touche au Web.</dc:description>
+    	<dc:description xml:lang="en">I'm a Full-Stack Web Developer who loves to create great things. I also study psychology and am interested in all things Web.</dc:description>
 
         <foaf:workInfoHomepage rdf:resource="http://www.cgi.com/" rdfs:label="CGI Montpellier"/>
     	<foaf:workInfoHomepage rdf:resource="http://www.lirmm.fr" rdfs:label="LIRMM Research Laboratory"/>
     	<foaf:schoolHomepage rdf:resource="http://www.univ-montp2.fr" rdfs:label="Montpellier 2 University"/>
         <foaf:schoolHomepage rdf:resource="http://www.u-psud.fr" rdfs:label="Paris 11 University"/>
     	<foaf:schoolHomepage rdf:resource="http://www.iedparis8.net" rdfs:label="Paris 8 University IED"/>
-
-    	<foaf:based_near rdf:resource="http://dbpedia.org/resource/Montpellier" rdfs:label="Montpellier"/>
 
     	<foaf:interest rdfs:label="Mac" dc:title="Mac" rdf:resource="http://dbpedia.org/resource/Macintosh"/>
   		<foaf:interest rdfs:label="Music" dc:title="Music" rdf:resource="http://dbpedia.org/resource/Music"/>
@@ -148,7 +143,7 @@
         <foaf:pastProject>
             <foaf:Project rdf:about="http://thibaudcolas.fr/foaf.rdf#linked-lifted">
                 <foaf:name>Datalift RIA creation</foaf:name>
-                <foaf:homepage rdf:resource="http://thibweb.github.com/linked-lifted"/>
+                <foaf:homepage rdf:resource="http://thibweb.github.io/linked-lifted"/>
                 <dc:description xml:lang="en">Creation, enhancement and development of Rich Internet Applications on the Datalift platform</dc:description>
                 <dc:description xml:lang="fr">Création, amélioration et développement d'applications en ligne riches sur la plateforme Datalift</dc:description>
             </foaf:Project>
