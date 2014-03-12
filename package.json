@@ -10,7 +10,7 @@
   "keywords": [
     "thibaudcolas",
     "portfolio",
-    "personal",
+    "personal"
   ],
   "author": "ThibWeb",
   "license": "MIT",
@@ -18,5 +18,8 @@
     "url": "https://github.com/ThibWeb/thibaudcolas/issues"
   },
   "devDependencies": {
+    "gulp": "~3.5.5",
+    "express": "~3.4.8",
+    "open": "0.0.4"
   }
 }
