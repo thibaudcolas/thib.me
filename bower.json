@@ -12,7 +12,7 @@
     "portfolio",
     "personal"
   ],
-  "license": "MIT",
+  "license": "CC0",
   "ignore": [
     "**/.*",
     "node_modules",
