@@ -10,8 +10,8 @@ if [ "$TRAVIS_REPO_SLUG" == "ThibWeb/thibaudcolas" ] && [ "$TRAVIS_BRANCH" == "m
   cd build
   git init .
   git add -f .
-  git commit -m "Lastest deploy on successful travis build $TRAVIS_BUILD_NUMBER auto-pushed to gh-pages"
-  git push -fq "https://${GH_TOKEN}@github.com/ThibWeb/thibaudcolas" "master:gh-pages" > /dev/null
+  git commit -m "Travis deploy $TRAVIS_BUILD_NUMBER to gh-pages"
+  git push -fq "https://${GH_TOKEN}@github.com/ThibWeb/thibaudcolas" "master:gh-pages"
 
   echo -e "Finished deploy to GitHub Pages...\n"
 
