@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var open = require('open');
 var express = require('express');
+var es = require('event-stream');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 
@@ -19,6 +20,16 @@ gulp.task('serve', function() {
   app.use(express.static(APP_ROOT));
   app.listen(APP_PORT);
   console.log('Listening on port ' + APP_PORT);
+});
+
+// Builds the project before deployment.
+gulp.task('build', function() {
+  return es.concat(
+    gulp.src(['source/index.html'])
+      .pipe(gulp.dest('build')),
+    gulp.src(['source/assets/root/*'])
+      .pipe(gulp.dest('build'))
+  );
 });
 
 // Asserts code quality with various static code analysis tools.
