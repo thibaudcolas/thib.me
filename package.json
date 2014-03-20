@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git://github.com/ThibWeb/thibaudcolas"
   },
+  "scripts": {
+    "test": "echo RAS"
+  },
   "keywords": [
     "thibaudcolas",
     "portfolio",
