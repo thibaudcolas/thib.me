@@ -20,5 +20,6 @@
     "tests"
   ],
   "dependencies": {
+    "bootstrap-css-only": "~3.1.1"
   }
 }
