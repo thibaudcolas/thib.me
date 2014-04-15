@@ -4,6 +4,7 @@ var express = require('express');
 var es = require('event-stream');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
+var deploy = require('gulp-gh-pages');
 
 var app = express();
 
@@ -37,6 +38,12 @@ gulp.task('lint', function() {
   return gulp.src('source/js/**/*.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter(stylish));
+});
+
+// Deploys to GitHub Pages.
+gulp.task('deploy', function () {
+    gulp.src('build/**/*')
+        .pipe(deploy('git@github.com:ThibWeb/thibaudcolas.git', 'origin'));
 });
 
 gulp.task('default', ['open']);
