@@ -1,3 +1,7 @@
-.global-footer {
-  background-color: #aaa;
+header {
+  background-color: ivory;
+}
+
+footer {
+  background-color: teal;
 }
