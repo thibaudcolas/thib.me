@@ -41,14 +41,15 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
   <![endif]-->
 </head>
-<body itemscope itemtype="http://schema.org/WebPage" role="document">
-  <header id="top" class="global-header container-fluid vcard" role="banner">
+<body class="container-fluid" itemscope itemtype="http://schema.org/WebPage" role="document">
+
+  <header id="top" class="global-header vcard" role="banner">
     <h1 class="fn"><a href="http://thibaudcolas.fr" rel="me">Thibaud Colas</a></h1>
     <p class="role">Software Engineer @ CGI</p>
     <p class="status status-booked"></p>
   </header>
 
-  <section id="about" class="container-fluid" itemscope itemtype="http://schema.org/Person" itemprop="author">
+  <section id="about" class="" itemscope itemtype="http://schema.org/Person" itemprop="author">
     <h2>About</h2>
 
     <p>Hi! I'm a 24 years old Software engineer interested in all things Web and JavaScript. I read The Pragmatic Programmer and commit on GitHub.</p>
@@ -101,67 +102,86 @@
     </ul>
   </section>
 
-  <section id="projects" class="container-fluid">
+  <section id="projects">
     <h2>Personal Projects</h2>
 
     <ul class="project-list">
       <li class="project-item">
         <a href="#">
           <h3>Smoov</h3>
-          <p>Smoov is an intelligent public transportation app, which fully uses all smooth transportation means in <a href="#">Montpellier</a>. Built with Sencha Touch and Node.js during the first <a href="#">Hackathon Opendata Montpellier</a>, secund prize.</p>
+        </a>
+        <p>Smoov is an intelligent public transportation app, which fully uses all smooth transportation means in <a href="#">Montpellier</a>. Built with Sencha Touch and Node.js during the first <a href="#">Hackathon Opendata Montpellier</a>, secund prize.</p>
+        <a href="#">
           <img src="" alt="Depiction">
         </a>
       </li>
+
       <li class="project-item">
         <a href="#">
           <h3>Zori</h3>
-          <p>The best real-time music link sharer ever built. Uses <a href="#">Firebase</a> as its backend and <a href="#">AngularJS</a> on the frontend.</p>
+        </a>
+        <p>The best real-time music link sharer ever built. Uses <a href="#">Firebase</a> as its backend and <a href="#">AngularJS</a> on the frontend.</p>
+        <a href="#">
           <img src="" alt="Depiction">
         </a>
       </li>
+
       <li class="project-item">
         <a href="#">
           <h3>JS1K Dragonsnake</h3>
-          <p>My entry into the <a href="#">JS1K 2014</a> contest. Dragonsnake is a cross between Fruit Ninja and Snake, made in less than 1K of JavaScript.</p>
+        </a>
+        <p>My entry into the <a href="#">JS1K 2014</a> contest. Dragonsnake is a cross between Fruit Ninja and Snake, made in less than 1K of JavaScript.</p>
+        <a href="#">
           <img src="" alt="Dragonsnake Gameplay">
         </a>
       </li>
+
       <li class="project-item">
         <a href="#">
           <h3>Panoramanode</h3>
-          <p>A series of self-guided workshops to discover Node.js, in French. Built with <a href="#">Workshopper</a>, inspired by <a href="#">Nodeschool</a>.</p>
+        </a>
+        <p>A series of self-guided workshops to discover Node.js, in French. Built with <a href="#">Workshopper</a>, inspired by <a href="#">Nodeschool</a>.</p>
+        <a href="#">
           <img src="" alt="Panoramanode's Menu">
         </a>
       </li>
+
       <li class="project-item">
         <a href="#">
           <h3>iCopter</h3>
-          <p>A classic arcade shooter on iPhone, with a multi-level autoscrolling background and an awesome sound design. Built for iOS with Open GL ES and FMOD Designer.</p>
+        </a>
+        <p>A classic arcade shooter on iPhone, with a multi-level autoscrolling background and an awesome sound design. Built for iOS with Open GL ES and FMOD Designer.</p>
+        <a href="#">
           <img src="" alt="Depiction">
         </a>
       </li>
+
       <li class="project-item">
         <a href="#">
           <h3>SDMXDataCube</h3>
-          <p>SDMX2DataCube is a <a href="http://datalift.org/">Datalift</a> module which converts <a href="http://sdmx.org/">SDMX</a> data to RDF using the <a href="http://www.w3.org/TR/vocab-data-cube/">DataCube</a> ontology. Built in JEE with <a href="#">KnockoutJS</a>.</p>
+        </a>
+        <p>SDMX2DataCube is a <a href="http://datalift.org/">Datalift</a> module which converts <a href="http://sdmx.org/">SDMX</a> data to RDF using the <a href="http://www.w3.org/TR/vocab-data-cube/">DataCube</a> ontology. Built in JEE with <a href="#">KnockoutJS</a>.</p>
+        <a href="#">
           <img src="" alt="Main converter form">
         </a>
       </li>
+
     </ul>
   </section>
 
-  <footer class="global-footer container-fluid" role="contentinfo">
+  <footer class="global-footer row" role="contentinfo">
+    <div class="col-xs-12">
+      <p>thibaudcolas.fr v2.0.0 &copy; 2014 <a href="http://thibaudcolas.fr" rel="author">Thibaud Colas</a></p>
+      <p>Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
+      <p>Source code available on <a href="https://github.com/ThibWeb/thibaudcolas">GitHub</a>.</p>
 
-    <p>thibaudcolas.fr v2.0.0 &copy; 2014 <a href="http://thibaudcolas.fr" rel="author">Thibaud Colas</a></p>
-    <p>Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
-    <p>Source code available on <a href="https://github.com/ThibWeb/thibaudcolas">GitHub</a>.</p>
-
-    <ul class="list-inline">
-      <li><a href="https://twitter.com/ThibWeb" title="Twitter profile" role="link" itemprop="significantLink" rel="me">Twitter</a></li>
-      <li><a href="https://github.com/ThibWeb" title="GitHub profile" role="link" itemprop="significantLink" rel="me">GitHub</a></li>
-      <li><a href="http://fr.linkedin.com/in/thibaudcolas" title="GitHub profile" role="link" itemprop="significantLink" rel="me">LinkedIn</a></li>
-      <li><a href="#" title="Email address" role="link" itemprop="significantLink" rel="me">Email</a></li>
-    </ul>
+      <ul class="list-inline">
+        <li><a href="https://twitter.com/ThibWeb" title="Twitter profile" role="link" itemprop="significantLink" rel="me">Twitter</a></li>
+        <li><a href="https://github.com/ThibWeb" title="GitHub profile" role="link" itemprop="significantLink" rel="me">GitHub</a></li>
+        <li><a href="http://fr.linkedin.com/in/thibaudcolas" title="GitHub profile" role="link" itemprop="significantLink" rel="me">LinkedIn</a></li>
+        <li><a href="#" title="Email address" role="link" itemprop="significantLink" rel="me">Email</a></li>
+      </ul>
+    </div>
   </footer>
 
   <script>
