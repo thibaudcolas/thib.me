@@ -42,23 +42,13 @@
   <![endif]-->
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" role="document">
-  <section class="global-header" role="banner">
-    <header id="top" class="vcard">
-      <h1 class="fn"><a href="http://thibaudcolas.fr" rel="me">Thibaud Colas</a></h1>
-      <p class="role">Software Engineer @ CGI</p>
-      <p class="status status-booked"></p>
-    </header>
+  <header id="top" class="global-header container-fluid vcard" role="banner">
+    <h1 class="fn"><a href="http://thibaudcolas.fr" rel="me">Thibaud Colas</a></h1>
+    <p class="role">Software Engineer @ CGI</p>
+    <p class="status status-booked"></p>
+  </header>
 
-    <nav class="global-nav" role="navigation">
-      <ul>
-        <li role="menuitem"><a href=""></a></li>
-        <li role="menuitem"><a href=""><a></li>
-        <li role="menuitem"><a href=""></a></li>
-      </ul>
-    </nav>
-  </section>
-
-  <section id="about">
+  <section id="about" class="container-fluid" itemscope itemtype="http://schema.org/Person" itemprop="author">
     <h2>About</h2>
 
     <p>Hi! I'm a 24 years old Software engineer interested in all things Web and JavaScript. I read The Pragmatic Programmer and commit on GitHub.</p>
@@ -111,7 +101,7 @@
     </ul>
   </section>
 
-  <section id="personal-projects">
+  <section id="projects" class="container-fluid">
     <h2>Personal Projects</h2>
 
     <ul class="project-list">
@@ -160,7 +150,7 @@
     </ul>
   </section>
 
-  <footer class="global-footer">
+  <footer class="global-footer container-fluid" role="contentinfo">
 
     <p>thibaudcolas.fr v2.0.0 &copy; 2014 <a href="http://thibaudcolas.fr" rel="author">Thibaud Colas</a></p>
     <p>Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
