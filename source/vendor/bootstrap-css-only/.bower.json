@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-css-only",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "keywords": [
     "twitter",
     "bootstrap",
@@ -18,14 +18,14 @@
     "type": "git",
     "url": "git://github.com/fyockm/bootstrap-css-only.git"
   },
-  "_release": "3.1.1",
+  "_release": "3.2.0",
   "_resolution": {
     "type": "version",
-    "tag": "3.1.1",
-    "commit": "c9edeb2e9df442f4aad9551ab9f5c598112ca45e"
+    "tag": "3.2.0",
+    "commit": "d188941913d98e32cd46ec340279ec2bc296d670"
   },
   "_source": "git://github.com/fyockm/bootstrap-css-only.git",
-  "_target": "~3.1.1",
+  "_target": "3.2.0",
   "_originalSource": "bootstrap-css-only",
   "_direct": true
 }
