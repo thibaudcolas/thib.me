@@ -9,3 +9,7 @@ header {
 footer {
   background-color: teal;
 }
+
+.project-item {
+  overflow: hidden;
+}
