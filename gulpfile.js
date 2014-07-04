@@ -73,4 +73,4 @@ gulp.task('deploy', function () {
 // Default developer working task.
 gulp.task('work', ['watch', 'open']);
 
-gulp.task('default', ['open']);
+gulp.task('default', ['work']);
