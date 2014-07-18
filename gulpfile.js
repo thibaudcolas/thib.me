@@ -53,7 +53,11 @@ gulp.task('build', function() {
     gulp.src(['source/index.html'])
       .pipe(gulp.dest('build')),
     gulp.src(['source/assets/root/*'])
-      .pipe(gulp.dest('build'))
+      .pipe(gulp.dest('build')),
+    gulp.src(['source/assets/css/*'])
+      .pipe(gulp.dest('build/assets/css')),
+    gulp.src(['source/assets/img/**/*'])
+      .pipe(gulp.dest('build/assets/img'))
   );
 });
 
