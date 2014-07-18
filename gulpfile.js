@@ -56,6 +56,8 @@ gulp.task('build', function() {
       .pipe(gulp.dest('build')),
     gulp.src(['source/assets/css/*'])
       .pipe(gulp.dest('build/assets/css')),
+    gulp.src(['source/vendor/**/*'])
+      .pipe(gulp.dest('build/vendor')),
     gulp.src(['source/assets/img/**/*'])
       .pipe(gulp.dest('build/assets/img'))
   );
