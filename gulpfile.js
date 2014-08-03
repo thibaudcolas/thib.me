@@ -1,82 +1,178 @@
+'use strict';
+
+// Include Gulp & Tools We'll Use
 var gulp = require('gulp');
-var path = require('path');
-var open = require('open');
-var lr = require('tiny-lr');
-var express = require('express');
-var es = require('event-stream');
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var deploy = require('gulp-gh-pages');
+var $ = require('gulp-load-plugins')();
+var del = require('del');
+var runSequence = require('run-sequence');
+var browserSync = require('browser-sync');
+var pagespeed = require('psi');
+var reload = browserSync.reload;
 
-var server = lr();
-var app = express();
+var AUTOPREFIXER_BROWSERS = [
+  'ie >= 10',
+  'ie_mob >= 10',
+  'ff >= 30',
+  'chrome >= 34',
+  'safari >= 7',
+  'opera >= 23',
+  'ios >= 7',
+  'android >= 4.4',
+  'bb >= 10'
+];
 
-var APP_ROOT = __dirname + '/source';
-var APP_PORT = 4000;
-
-// Opens a browser with the application path.
-gulp.task('open', ['serve'], function() {
-  open('http://localhost:' + APP_PORT);
+// Lint JavaScript
+gulp.task('jshint', function () {
+  return gulp.src('app/scripts/**/*.js')
+    .pipe(reload({stream: true, once: true}))
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
-// Statically serves files and adds the LiveReload script.
-gulp.task('serve', function() {
-  app.use(require('connect-livereload')());
-  app.use(express.static(APP_ROOT));
-  app.listen(APP_PORT);
+// Optimize Images
+gulp.task('images', function () {
+  return gulp.src('app/images/**/*')
+    .pipe($.cache($.imagemin({
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('dist/images'))
+    .pipe($.size({title: 'images'}));
 });
 
-// Watches for file changes and reloads browser pages.
-gulp.task('watch', function() {
-  server.listen(35729, function(err) {
-    if (err) {
-      return console.log(err);
+// Copy All Files At The Root Level (app)
+gulp.task('copy', function () {
+  return gulp.src(['app/*','!app/*.html'])
+    .pipe(gulp.dest('dist'))
+    .pipe($.size({title: 'copy'}));
+});
+
+// Copy Web Fonts To Dist
+gulp.task('fonts', function () {
+  return gulp.src(['app/fonts/**'])
+    .pipe(gulp.dest('dist/fonts'))
+    .pipe($.size({title: 'fonts'}));
+});
+
+
+// Automatically Prefix CSS
+gulp.task('styles:css', function () {
+  return gulp.src('app/styles/**/*.css')
+    .pipe($.changed('app/styles'))
+    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+    .pipe(gulp.dest('app/styles'))
+    .pipe($.size({title: 'styles:css'}));
+});
+
+// Compile Sass For Style Guide Components (app/styles/components)
+gulp.task('styles:components', function () {
+  return gulp.src('app/styles/components/components.scss')
+    .pipe($.rubySass({
+      style: 'expanded',
+      precision: 10,
+      loadPath: ['app/styles/components']
+    }))
+    .on('error', console.error.bind(console))
+    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+    .pipe(gulp.dest('app/styles/components'))
+    .pipe($.size({title: 'styles:components'}));
+});
+
+// Compile Any Other Sass Files You Added (app/styles)
+gulp.task('styles:scss', function () {
+  return gulp.src(['app/styles/**/*.scss', '!app/styles/components/components.scss'])
+    .pipe($.rubySass({
+      style: 'expanded',
+      precision: 10,
+      loadPath: ['app/styles']
+    }))
+    .on('error', console.error.bind(console))
+    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+    .pipe(gulp.dest('.tmp/styles'))
+    .pipe($.size({title: 'styles:scss'}));
+});
+
+// Output Final CSS Styles
+gulp.task('styles', ['styles:components', 'styles:scss', 'styles:css']);
+
+// Scan Your HTML For Assets & Optimize Them
+gulp.task('html', function () {
+  return gulp.src('app/**/*.html')
+    .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
+    // Concatenate And Minify JavaScript
+    .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
+    // Remove Any Unused CSS
+    // Note: If not using the Style Guide, you can delete it from
+    // the next line to only include styles your project uses.
+    .pipe($.if('*.css', $.uncss({
+      html: [
+        'app/index.html',
+        'app/styleguide/index.html'
+      ],
+      // CSS Selectors for UnCSS to ignore
+      ignore: [
+        '.navdrawer-container.open',
+        /.app-bar.open/
+      ]
+    })))
+    // Concatenate And Minify Styles
+    .pipe($.if('*.css', $.csso()))
+    .pipe($.useref.restore())
+    .pipe($.useref())
+    // Update Production Style Guide Paths
+    .pipe($.replace('components/components.css', 'components/main.min.css'))
+    // Minify Any HTML
+    .pipe($.if('*.html', $.minifyHtml()))
+    // Output Files
+    .pipe(gulp.dest('dist'))
+    .pipe($.size({title: 'html'}));
+});
+
+// Clean Output Directory
+gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+
+// Watch Files For Changes & Reload
+gulp.task('serve', function () {
+  browserSync({
+    notify: false,
+    server: {
+      baseDir: ['.tmp', 'app']
     }
+  });
 
-    gulp.watch([
-      'source/index.html',
-      'source/assets/**/*',
-      'source/js/**/*'
-      ], function(evt) {
-        server.changed({
-          body: {
-            files: [path.relative(APP_ROOT, evt.path)]
-          }
-        });
-      });
+  gulp.watch(['app/**/*.html'], reload);
+  gulp.watch(['app/styles/**/*.scss'], ['styles:components', 'styles:scss']);
+  gulp.watch(['{.tmp,app}/styles/**/*.css'], ['styles:css', reload]);
+  gulp.watch(['app/scripts/**/*.js'], ['jshint']);
+  gulp.watch(['app/images/**/*'], reload);
+});
+
+// Build and serve the output from the dist build
+gulp.task('serve:dist', ['default'], function () {
+  browserSync({
+    notify: false,
+    server: {
+      baseDir: 'dist'
+    }
   });
 });
 
-// Builds the project before deployment.
-gulp.task('build', function() {
-  return es.concat(
-    gulp.src(['source/index.html'])
-      .pipe(gulp.dest('build')),
-    gulp.src(['source/assets/root/*'])
-      .pipe(gulp.dest('build')),
-    gulp.src(['source/assets/css/*'])
-      .pipe(gulp.dest('build/assets/css')),
-    gulp.src(['source/vendor/**/*'])
-      .pipe(gulp.dest('build/vendor')),
-    gulp.src(['source/assets/img/**/*'])
-      .pipe(gulp.dest('build/assets/img'))
-  );
+// Build Production Files, the Default Task
+gulp.task('default', ['clean'], function (cb) {
+  runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'copy'], cb);
 });
 
-// Asserts code quality with various static code analysis tools.
-gulp.task('lint', function() {
-  return gulp.src('source/js/**/*.js')
-    .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter(stylish));
-});
+// Run PageSpeed Insights
+// Update `url` below to the public URL for your site
+gulp.task('pagespeed', pagespeed.bind(null, {
+  // By default, we use the PageSpeed Insights
+  // free (no API key) tier. You can use a Google
+  // Developer API key if you have one. See
+  // http://goo.gl/RkN0vE for info key: 'YOUR_API_KEY'
+  url: 'https://example.com',
+  strategy: 'mobile'
+}));
 
-// Deploys to GitHub Pages.
-gulp.task('deploy', function () {
-    gulp.src('build/**/*')
-        .pipe(deploy('git@github.com:ThibWeb/thibaudcolas.git', 'origin'));
-});
-
-// Default developer working task.
-gulp.task('work', ['watch', 'open']);
-
-gulp.task('default', ['work']);
+// Load custom tasks from the `tasks` directory
+try { require('require-dir')('tasks'); } catch (err) {}
