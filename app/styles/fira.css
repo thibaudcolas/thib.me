@@ -195,27 +195,3 @@
     font-weight: 900;
     font-style: italic;
 }
-
-
-@font-face{
-    font-family: 'Fira Mono';
-    src: url('/fonts/FiraSans3111/FiraMono-Regular.eot');
-    src: local('Fira Mono'),
-         url('/fonts/FiraSans3111/FiraMono-Regular.eot') format('embedded-opentype'),
-         url('/fonts/FiraSans3111/FiraMono-Regular.woff') format('woff'),
-         url('/fonts/FiraSans3111/FiraMono-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Mono';
-    src: url('/fonts/FiraSans3111/FiraMono-Bold.eot');
-    src: local('Fira Mono Bold'),
-         url('/fonts/FiraSans3111/FiraMono-Bold.eot') format('embedded-opentype'),
-         url('/fonts/FiraSans3111/FiraMono-Bold.woff') format('woff'),
-         url('/fonts/FiraSans3111/FiraMono-Bold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
