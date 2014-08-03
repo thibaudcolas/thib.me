@@ -7,7 +7,7 @@ if [ "$TRAVIS_REPO_SLUG" == "ThibWeb/thibaudcolas" ] && [ "$TRAVIS_BRANCH" == "m
   git config --global user.email "travis@travis-ci.org"
   git config --global user.name "travis-ci"
 
-  cd build
+  cd dist
   git init .
   git add -f .
   git commit -m "Travis deploy $TRAVIS_BUILD_NUMBER to gh-pages"
