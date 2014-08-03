@@ -15,15 +15,15 @@ footer {
   background-color: teal;
 }
 
-.project-item {
+.project {
   overflow: hidden;
   background-color: #eee;
 }
 
-.project-description {
+.project__description {
   min-height: 60px;
 }
 
-.activity-item {
+.activity__item {
   background-color: #eee;
 }

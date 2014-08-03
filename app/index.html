@@ -6,7 +6,7 @@
   <title>Thibaud Colas</title>
 
   <!-- build:css styles/components/main.min.css -->
-  <link rel="stylesheet" href="vendor/bootstrap-css-only/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-css-only/css/bootstrap.css">
   <link rel="stylesheet" href="styles/fira.css">
   <link rel="stylesheet" href="styles/roboto.css">
   <link rel="stylesheet" href="styles/main.css">
@@ -79,7 +79,7 @@
     <div class="col-xs-12">
       <h1 class="fn"><a href="http://thibaudcolas.fr" rel="me">Thibaud Colas</a></h1>
       <p class="role">Software Engineer @ CGI</p>
-      <p class="status status-booked"></p>
+      <p class="status status--booked"></p>
     </div>
   </header>
 
@@ -143,12 +143,12 @@
       <h2>What I do</h2>
       <div class="row">
         <div class="col-sm-6 col-md-4">
-          <div class="activity-item">
-            <h3 class="activity-title">Technical lead</h3>
-            <p class="activity-description">
+          <div class="activity">
+            <h3 class="activity__title">Technical lead</h3>
+            <p class="activity__description">
 
             </p>
-            <ul class="activity-detail">
+            <ul class="activity__detail">
               <li>JavaScript</li>
               <li>AngularJS</li>
               <li>Drupal</li>
@@ -157,12 +157,12 @@
         </div>
 
         <div class="col-sm-6 col-md-4">
-          <div class="activity-item">
-            <h3 class="activity-title">Consulting</h3>
-            <p class="activity-description">
+          <div class="activity">
+            <h3 class="activity__title">Consulting</h3>
+            <p class="activity__description">
 
             </p>
-            <ul class="activity-detail">
+            <ul class="activity__detail">
               <li></li>
               <li></li>
               <li></li>
@@ -173,12 +173,12 @@
         <div class="clearfix visible-sm-block"></div>
 
         <div class="col-sm-6 col-md-4">
-          <div class="activity-item">
-            <h3 class="activity-title">Teaching</h3>
-            <p class="activity-description">
+          <div class="activity">
+            <h3 class="activity__title">Teaching</h3>
+            <p class="activity__description">
 
             </p>
-            <ul class="activity-detail">
+            <ul class="activity__detail">
               <li>JavaScript</li>
               <li>HTML/CSS basics</li>
               <li>Drupal</li>
@@ -189,12 +189,12 @@
         <div class="clearfix visible-md-block visible-lg-block"></div>
 
         <div class="col-sm-6 col-md-4">
-          <div class="activity-item">
-            <h3 class="activity-title">Side projects</h3>
-            <p class="activity-description">
+          <div class="activity">
+            <h3 class="activity__title">Side projects</h3>
+            <p class="activity__description">
 
             </p>
-            <ul class="activity-detail">
+            <ul class="activity__detail">
               <li>FlipFlop</li>
               <li>Zori</li>
               <li>Skimbo</li>
@@ -205,12 +205,12 @@
         <div class="clearfix visible-sm-block"></div>
 
         <div class="col-sm-6 col-md-4">
-          <div class="activity-item">
-            <h3 class="activity-title">Blogging</h3>
-            <p class="activity-description">
+          <div class="activity">
+            <h3 class="activity__title">Blogging</h3>
+            <p class="activity__description">
 
             </p>
-            <ul class="activity-detail">
+            <ul class="activity__detail">
               <li>Thoughts</li>
               <li>Research</li>
               <li>Curation</li>
@@ -219,12 +219,12 @@
         </div>
 
         <div class="col-sm-6 col-md-4">
-          <div class="activity-item">
-            <h3 class="activity-title">Talking</h3>
-            <p class="activity-description">
+          <div class="activity">
+            <h3 class="activity__title">Talking</h3>
+            <p class="activity__description">
 
             </p>
-            <ul class="activity-detail">
+            <ul class="activity__detail">
               <li>ES6</li>
               <li>Node</li>
               <li>Performance</li>
@@ -240,25 +240,25 @@
       <h2>Personal Projects</h2>
       <div class="row">
         <div class="col-sm-6 col-md-4">
-          <div class="project-item" itemscope itemtype="http://schema.org/WebApplication">
-            <a class="project-title-wrapper" href="http://zori.trgdy.com/" itemprop="url">
-              <h3 class="project-title" itemprop="name">Zori</h3>
+          <div class="project" itemscope itemtype="http://schema.org/WebApplication">
+            <a class="project__title__wrapper" href="http://zori.trgdy.com/" itemprop="url">
+              <h3 class="project__title" itemprop="name">Zori</h3>
             </a>
-            <p class="project-description" itemprop="description">Zori is the best real-time music sharer ever built. Uses <a href="http://firebase.com/">Firebase</a> as its backend and <a href="http://angularjs.org/">AngularJS</a> on the frontend. Sources on <a href="https://github.com/FlipFlopWeekly/zori">GitHub.</a></p>
-            <a class="project-depiction-wrapper" href="http://zori.trgdy.com/">
-              <img class="project-depiction" itemprop="screenshot" src="images/projects/zori-links.png" alt="Links in Zori" title="Links in Zori">
+            <p class="project__description" itemprop="description">Zori is the best real-time music sharer ever built. Uses <a href="http://firebase.com/">Firebase</a> as its backend and <a href="http://angularjs.org/">AngularJS</a> on the frontend. Sources on <a href="https://github.com/FlipFlopWeekly/zori">GitHub.</a></p>
+            <a class="project__depiction__wrapper" href="http://zori.trgdy.com/">
+              <img class="project__depiction" itemprop="screenshot" src="images/projects/zori-links.png" alt="Links in Zori" title="Links in Zori">
             </a>
           </div>
         </div>
 
         <div class="col-sm-6 col-md-4">
-          <div class="project-item" itemscope itemtype="http://schema.org/WebApplication">
-            <a class="project-title-wrapper" href="http://js1k.com/2014-dragons/demo/1972" itemprop="url">
-              <h3 class="project-title" itemprop="name">JS1K Dragonsnake</h3>
+          <div class="project" itemscope itemtype="http://schema.org/WebApplication">
+            <a class="project__title__wrapper" href="http://js1k.com/2014-dragons/demo/1972" itemprop="url">
+              <h3 class="project__title" itemprop="name">JS1K Dragonsnake</h3>
             </a>
-            <p class="project-description" itemprop="description">My entry into the <a href="http://js1k.com/">JS1K 2014</a> contest. Dragonsnake is a cross of Fruit Ninja and Snake, made in <a href="https://github.com/ThibWeb/js1k-2014">less than 1K of JavaScript</a>.</p>
-            <a class="project-depiction-wrapper" href="http://js1k.com/2014-dragons/demo/1972">
-              <img class="project-depiction" itemprop="screenshot" src="images/projects/js1k-dragonsnake.png" alt="Dragonsnake Gameplay" title="Dragonsnake Gameplay">
+            <p class="project__description" itemprop="description">My entry into the <a href="http://js1k.com/">JS1K 2014</a> contest. Dragonsnake is a cross of Fruit Ninja and Snake, made in <a href="https://github.com/ThibWeb/js1k-2014">less than 1K of JavaScript</a>.</p>
+            <a class="project__depiction__wrapper" href="http://js1k.com/2014-dragons/demo/1972">
+              <img class="project__depiction" itemprop="screenshot" src="images/projects/js1k-dragonsnake.png" alt="Dragonsnake Gameplay" title="Dragonsnake Gameplay">
             </a>
           </div>
         </div>
@@ -266,13 +266,13 @@
         <div class="clearfix visible-sm-block"></div>
 
         <div class="col-sm-6 col-md-4">
-          <div class="project-item" itemscope itemtype="http://schema.org/MobileApplication">
-            <a class="project-title-wrapper" href="https://github.com/lastminutemtp" itemprop="url">
-              <h3 class="project-title" itemprop="name">Smoov</h3>
+          <div class="project" itemscope itemtype="http://schema.org/MobileApplication">
+            <a class="project__title__wrapper" href="https://github.com/lastminutemtp" itemprop="url">
+              <h3 class="project__title" itemprop="name">Smoov</h3>
             </a>
-            <p class="project-description" itemprop="description">A public transportation app for <a href="http://data.montpellier-agglo.com/">Montpellier</a>. Built with Sencha Touch and Node.js during the first <a href="http://www.montpellier-agglo.com/actualite/1er-hackathon-de-montpellier-agglom%C3%A9ration-des-applications-concr%C3%A8tes-et-innovantes">Hackathon Opendata</a>, 2nd prize.</p>
-            <a class="project-depiction-wrapper" href="https://github.com/lastminutemtp">
-              <img class="project-depiction" itemprop="screenshot" src="images/projects/smoov-screens.png" alt="Screenshots of Smoov iOS" title="Screenshots of Smoov iOS">
+            <p class="project__description" itemprop="description">A public transportation app for <a href="http://data.montpellier-agglo.com/">Montpellier</a>. Built with Sencha Touch and Node.js during the first <a href="http://www.montpellier-agglo.com/actualite/1er-hackathon-de-montpellier-agglom%C3%A9ration-des-applications-concr%C3%A8tes-et-innovantes">Hackathon Opendata</a>, 2nd prize.</p>
+            <a class="project__depiction__wrapper" href="https://github.com/lastminutemtp">
+              <img class="project__depiction" itemprop="screenshot" src="images/projects/smoov-screens.png" alt="Screenshots of Smoov iOS" title="Screenshots of Smoov iOS">
             </a>
           </div>
         </div>
@@ -280,13 +280,13 @@
         <div class="clearfix visible-md-block visible-lg-block"></div>
 
         <div class="col-sm-6 col-md-4">
-          <div class="project-item" itemscope itemtype="http://schema.org/SoftwareApplication">
-            <a class="project-title-wrapper" href="https://github.com/ThibWeb/panoramanode" itemprop="url">
-              <h3 class="project-title" itemprop="name">Panoramanode</h3>
+          <div class="project" itemscope itemtype="http://schema.org/SoftwareApplication">
+            <a class="project__title__wrapper" href="https://github.com/ThibWeb/panoramanode" itemprop="url">
+              <h3 class="project__title" itemprop="name">Panoramanode</h3>
             </a>
-            <p class="project-description" itemprop="description">A series of self-guided workshops to discover JavaScript and Node.js, in French. Built with <a href="https://github.com/rvagg/workshopper">Workshopper</a>, inspired by <a href="http://nodeschool.io/">Nodeschool</a>.</p>
-            <a class="project-depiction-wrapper" href="https://github.com/ThibWeb/panoramanode">
-              <img class="project-depiction" itemprop="screenshot" src="images/projects/panoramanode.png" alt="Panoramanode's Menu" title="Panoramanode's Menu">
+            <p class="project__description" itemprop="description">A series of self-guided workshops to discover JavaScript and Node.js, in French. Built with <a href="https://github.com/rvagg/workshopper">Workshopper</a>, inspired by <a href="http://nodeschool.io/">Nodeschool</a>.</p>
+            <a class="project__depiction__wrapper" href="https://github.com/ThibWeb/panoramanode">
+              <img class="project__depiction" itemprop="screenshot" src="images/projects/panoramanode.png" alt="Panoramanode's Menu" title="Panoramanode's Menu">
             </a>
           </div>
         </div>
@@ -294,25 +294,25 @@
         <div class="clearfix visible-sm-block"></div>
 
         <div class="col-sm-6 col-md-4">
-          <div class="project-item" itemscope itemtype="http://schema.org/WebApplication">
-            <a class="project-title-wrapper" href="https://github.com/ThibWeb/d4" itemprop="url">
-              <h3 class="project-title" itemprop="name">D4</h3>
+          <div class="project" itemscope itemtype="http://schema.org/WebApplication">
+            <a class="project__title__wrapper" href="https://github.com/ThibWeb/d4" itemprop="url">
+              <h3 class="project__title" itemprop="name">D4</h3>
             </a>
-            <p class="project-description" itemprop="description">A data visualization experiment. Built with <a href="http://d3js.org/">d3.js</a>, it helps visualizing <abbr title="Resource Description Framework">RDF</abbr>g <a href="http://www.w3.org/TR/vocab-data-cube/">Data Cube</a> statistical datasets and their metadata.</p>
-            <a class="project-depiction-wrapper" href="https://github.com/ThibWeb/d4">
-              <img class="project-depiction" itemprop="screenshot" src="images/projects/d4-metadata.png" alt="D4's metadata view" title="D4's metadata view">
+            <p class="project__description" itemprop="description">A data visualization experiment. Built with <a href="http://d3js.org/">d3.js</a>, it helps visualizing <abbr title="Resource Description Framework">RDF</abbr>g <a href="http://www.w3.org/TR/vocab-data-cube/">Data Cube</a> statistical datasets and their metadata.</p>
+            <a class="project__depiction__wrapper" href="https://github.com/ThibWeb/d4">
+              <img class="project__depiction" itemprop="screenshot" src="images/projects/d4-metadata.png" alt="D4's metadata view" title="D4's metadata view">
             </a>
           </div>
         </div>
 
         <div class="col-sm-6 col-md-4">
-          <div class="project-item" itemscope itemtype="http://schema.org/WebApplication">
-            <a class="project-title-wrapper" href="https://github.com/Thibau/datalift-sdmxdatacube/" itemprop="url">
-              <h3 class="project-title" itemprop="name">SDMX2DataCube</h3>
+          <div class="project" itemscope itemtype="http://schema.org/WebApplication">
+            <a class="project__title__wrapper" href="https://github.com/Thibau/datalift-sdmxdatacube/" itemprop="url">
+              <h3 class="project__title" itemprop="name">SDMX2DataCube</h3>
             </a>
-            <p class="project-description" itemprop="description">SDMX2DataCube is a <a href="http://datalift.org/">Datalift</a> module which converts <abbr title="Statistical Data and Metadata Exchange">SDMX</abbr> data to RDF using the Data Cube ontology. Built in JEE with <a href="http://knockoutjs.com/">KnockoutJS</a>.</p>
-            <a class="project-depiction-wrapper" href="https://github.com/Thibau/datalift-sdmxdatacube/">
-              <img class="project-depiction" itemprop="screenshot" src="images/projects/sdmxdatacube-form.png" alt="SDMX2DataCube's Main converter form" title="SDMX2DataCube's Main converter form">
+            <p class="project__description" itemprop="description">SDMX2DataCube is a <a href="http://datalift.org/">Datalift</a> module which converts <abbr title="Statistical Data and Metadata Exchange">SDMX</abbr> data to RDF using the Data Cube ontology. Built in JEE with <a href="http://knockoutjs.com/">KnockoutJS</a>.</p>
+            <a class="project__depiction__wrapper" href="https://github.com/Thibau/datalift-sdmxdatacube/">
+              <img class="project__depiction" itemprop="screenshot" src="images/projects/sdmxdatacube-form.png" alt="SDMX2DataCube's Main converter form" title="SDMX2DataCube's Main converter form">
             </a>
           </div>
         </div>
