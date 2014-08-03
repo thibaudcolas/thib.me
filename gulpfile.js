@@ -8,6 +8,7 @@ var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
 var reload = browserSync.reload;
+var deploy = require('gulp-gh-pages');
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -169,9 +170,15 @@ gulp.task('pagespeed', pagespeed.bind(null, {
   // free (no API key) tier. You can use a Google
   // Developer API key if you have one. See
   // http://goo.gl/RkN0vE for info key: 'YOUR_API_KEY'
-  url: 'https://example.com',
+  url: 'https://thibweb.github.io/thibaudcolas/',
   strategy: 'mobile'
 }));
+
+// Deploy to GitHub Pages.
+gulp.task('deploy', function () {
+  gulp.src('dist/**/*')
+    .pipe(deploy('git@github.com:ThibWeb/thibaudcolas.git', 'origin'));
+});
 
 // Load custom tasks from the `tasks` directory
 try { require('require-dir')('tasks'); } catch (err) {}
