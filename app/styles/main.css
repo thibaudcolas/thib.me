@@ -27,3 +27,17 @@ footer {
 .activity__item {
   background-color: #eee;
 }
+
+.global-footer {
+  background-color: #333;
+  color: #eee;
+}
+
+.global-footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+.global-footer a:hover {
+  color: #aaa;
+}
