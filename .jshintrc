@@ -63,5 +63,7 @@
       "require",
       "module"
   ],
+  "unused": "vars",
+  "quotmark": "single",
   "indent"        : 2
 }
