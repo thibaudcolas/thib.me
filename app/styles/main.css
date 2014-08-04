@@ -3,16 +3,12 @@ body {
   font-weight: 300;
 }
 
-header {
-  background-color: gray;
+.global-header {
+  background-color: #234182;
 }
 
 .global-section {
   background-color: ivory;
-}
-
-footer {
-  background-color: teal;
 }
 
 .project {
@@ -40,4 +36,8 @@ footer {
 
 .global-footer a:hover {
   color: #aaa;
+}
+
+.activity__title {
+  border-bottom: 1px solid #CDCAA2;
 }
