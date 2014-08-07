@@ -4,16 +4,16 @@ body {
 }
 
 .global-header {
-  background-color: #234182;
+  background-color: #046380;
 }
 
 .global-section {
-  background-color: ivory;
+  background-color: #e6e2af;
 }
 
 .project {
   overflow: hidden;
-  background-color: #eee;
+  background-color: #efecca;
 }
 
 .project__description {
@@ -21,11 +21,11 @@ body {
 }
 
 .activity__item {
-  background-color: #eee;
+  background-color: #efecca;
 }
 
 .global-footer {
-  background-color: #333;
+  background-color: #002f2f;
   color: #eee;
 }
 
