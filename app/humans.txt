@@ -1,28 +1,21 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
+# humanstxt.org/
+# The humans responsible & technology colophon
 
-/* TEAM */
-  Webmaster: Thibaud Colas
-  Site: http://thibaudcolas.fr/
-  Twitter: @ThibWeb
+# TEAM
 
-/* THANKS */
-  Name: Jacques Bodin-Hullin
-  Site: http://jacques.sh/
-  Twitter: @jacquesbh
+- Thibaud Colas -- @ThibWeb
 
-  Name: Kévin Rocher
-  Site: http://www.kevin-rocher.fr/
-  Twitter: @Darklg
+# THANKS
 
-/* SITE */
+- Jacques Bodin-Hullin -- @jacquesbh
+- Kévin Rocher -- @Darklg
+
+# TECHNOLOGY COLOPHON
+
   Last update 2014-07-01
   Standards: HTML, CSS, JavaScript
   Components: Bootstrap, Gulp
   Software: Mac OS X, Sublime Text, Git
-
-
-
 
                    '
                   ''
