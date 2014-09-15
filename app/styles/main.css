@@ -11,9 +11,30 @@ body {
   background-color: #e6e2af;
 }
 
+#projects {
+  padding-bottom: 15px;
+}
+
 .project {
   overflow: hidden;
   background-color: #efecca;
+  margin: 15px 0;
+}
+
+.project__title, .project__description {
+  padding: 10px;
+}
+
+.project__title {
+  margin: 0;
+}
+
+.project__depiction__wrapper:hover {
+  opacity: 0.8;
+}
+
+.project__depiction__wrapper:active {
+  opacity: 1;
 }
 
 .project__description {
