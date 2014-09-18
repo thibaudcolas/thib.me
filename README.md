@@ -1,4 +1,4 @@
-[thibaudcolas](http://thibaudcolas.fr) [![Build Status](https://travis-ci.org/ThibWeb/thibaudcolas.svg?branch=master)](https://travis-ci.org/ThibWeb/thibaudcolas)
+[thibaudcolas](http://thibaudcolas.fr) [![Build Status](https://travis-ci.org/ThibWeb/thibaudcolas.svg?branch=master)](https://travis-ci.org/ThibWeb/thibaudcolas) [![devDependency Status](https://david-dm.org/ThibWeb/thibaudcolas/dev-status.svg)](https://david-dm.org/ThibWeb/thibaudcolas#info=devDependencies)
 ============
 
 My personal website's repository.
