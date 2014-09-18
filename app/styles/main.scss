@@ -66,14 +66,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .activity {
   background-color: #efecca;
-}
-
-.activity__title, .activity__description {
-  padding: 10px 10px 0;
+  margin: 15px 0;
 }
 
 .activity__title {
+  padding: 10px;
+  margin-bottom: 0;
   border-bottom: 1px solid #CDCAA2;
+}
+
+.activity__description {
+  padding: 10px 10px 0;
+}
+
+.activity__detail {
+  padding-bottom: 10px;
 }
 
 .global-footer {
