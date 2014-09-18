@@ -11,14 +11,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-  box-shadow:0 1px 2px #aaa;
+  box-shadow:0 1px 2px #CDCAA2;
   border-radius:3px;
+  transform: scale(1.0);
+  transform-origin: center center;
+  transition: transform .1s, background-color .1s;
 }
 
 .card:hover {
   transform: scale(1.05);
   transform-origin: center center;
-  transition: transform .3s;
+  transition: transform .2s, background-color .2s;
+  background-color: #eee;
 }
 
 .global-header {
@@ -64,6 +68,14 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #efecca;
 }
 
+.activity__title, .activity__description {
+  padding: 10px 10px 0;
+}
+
+.activity__title {
+  border-bottom: 1px solid #CDCAA2;
+}
+
 .global-footer {
   background-color: #002f2f;
   color: #eee;
@@ -76,8 +88,4 @@ h1, h2, h3, h4, h5, h6 {
 
 .global-footer a:hover {
   color: #aaa;
-}
-
-.activity__title {
-  border-bottom: 1px solid #CDCAA2;
 }
