@@ -1,7 +1,20 @@
 /*==========  Header  ==========*/
 
 .global-header {
-  background-color: #046380;
+  background-color: #292f33;
+}
+
+.title-link {
+  color: #f5f8fa;
+}
+
+.title-link:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+h1 {
+  height: 40px;
 }
 
 .navbar-nav {
@@ -13,7 +26,17 @@
 }
 
 .navbar-nav li a {
-  padding: 10px
+  padding: 6px;
+  height: 70px;
+  font-size: 12px;
+  color: #e1e8ed;
+  border: 3px solid #e1e8ed;
+  transition: color .2s, background-color .2s, border-color .2s;
+
+  &:hover {
+    background-color: #e1e8ed;
+    transition: color .3s, background-color .3s, border-color .3s;
+  }
 }
 
 .navbar-nav a span {
@@ -28,5 +51,61 @@
   left: 50%;
   margin-left: -16px;
   float: left;
-  color: #333;
+}
+
+.navbar-nav .twitter-link {
+  background-color: #55acee;
+  border-color: #55acee;
+
+
+  &:hover {
+    color: #55acee;
+    border-color: #55acee;
+  }
+}
+
+.navbar-nav .github-link {
+  background-color: #333;
+  border-color: #333;
+
+  &:hover {
+    color: #333;
+    border-color: #333;
+  }
+}
+
+.navbar-nav .linkedin-link {
+  background-color: #4875B4;
+  border-color: #4875B4;
+
+  padding: 6px 8px;
+
+  &:hover {
+    color: #4875B4;
+    border-color: #4875B4;
+  }
+}
+
+.navbar-nav .blog-link {
+  background-color: #263347;
+  border-color: #263347;
+
+  padding: 6px 17px;
+
+  &:hover {
+    color: #263347;
+    border-color: #263347;
+  }
+}
+
+.navbar-nav .talks-link {
+  background-color: #333;
+  border-color: #333;
+
+  padding: 6px 16px;
+
+  &:hover {
+    color: #333;
+    border-color: #333;
+  }
 }
