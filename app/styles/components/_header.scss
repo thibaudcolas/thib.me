@@ -18,15 +18,25 @@
 
 
 .title-link {
+  display: inline-block;
+  width: 100%;
   color: #f5f8fa;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2);
 }
 
-.title-link:hover {
-  color: blue;
+.title-link:hover, .title-link:focus {
+  color: #f5f8fa;
   text-decoration: none;
 }
 
 h1 {
+  font-size: 250%;
+  font-weight: 400;
   height: 40px;
 }
 
@@ -49,6 +59,7 @@ h1 {
   &:hover, &:focus {
     background-color: #e1e8ed;
     transition: color .3s, background-color .3s, border-color .3s;
+    outline: none;
   }
 
   &:active {
