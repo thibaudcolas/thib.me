@@ -2,6 +2,7 @@
 @import "components/icomoon.css";
 @import "components/_variables";
 @import "components/_mixins";
+@import "components/_card";
 
 html, body, button {
   -webkit-font-smoothing: antialiased;
@@ -16,21 +17,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $fontHighlight;
   font-weight: 300;
-}
-
-.card {
-  box-shadow:0 1px 2px #CDCAA2;
-  border-radius:3px;
-  transform: scale(1.0);
-  transform-origin: center center;
-  transition: transform .1s, background-color .1s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  transform-origin: center center;
-  transition: transform .2s, background-color .2s;
-  background-color: #eee;
 }
 
 .global-header {
@@ -70,52 +56,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .global-section:last-of-type {
   padding-bottom: 15px;
-}
-
-.project {
-  overflow: hidden;
-  background-color: #efecca;
-  margin: 15px 0;
-}
-
-.project__title, .project__description {
-  padding: 10px 10px 0;
-}
-
-.project__title {
-  margin: 0;
-  padding-bottom: 0;
-}
-
-.project__depiction__wrapper:hover {
-  opacity: 0.8;
-}
-
-.project__depiction__wrapper:active {
-  opacity: 1;
-}
-
-.project__description {
-  min-height: 80px;
-}
-
-.activity {
-  background-color: #efecca;
-  margin: 15px 0;
-}
-
-.activity__title {
-  padding: 10px;
-  margin-bottom: 0;
-  border-bottom: 1px solid #CDCAA2;
-}
-
-.activity__description {
-  padding: 10px 10px 0;
-}
-
-.activity__detail {
-  padding-bottom: 10px;
 }
 
 .global-footer {

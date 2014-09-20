@@ -1,0 +1,76 @@
+/*==========  Card  ==========*/
+
+.card {
+  background-color: #efecca;
+  margin: 15px 0;
+  box-shadow:0 1px 2px #CDCAA2;
+  border-radius:3px;
+  transform: scale(1.0);
+  transform-origin: center center;
+  transition: transform .1s, background-color .1s;
+
+  &:hover {
+    transform: scale(1.05);
+    transform-origin: center center;
+    transition: transform .2s, background-color .2s;
+    background-color: lighten(#cdcaa2, 20%);
+  }
+}
+
+.card__title__wrapper {
+}
+
+.card__title {
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.card__description {
+  padding: 10px 10px 0;
+}
+
+.card__detail {
+  padding-bottom: 10px;
+}
+
+.card__depiction__wrapper:hover {
+  opacity: 0.8;
+}
+
+.card__depiction__wrapper:active {
+  opacity: 1;
+}
+
+.card__depiction {
+
+}
+
+/*==========  Activity variation  ==========*/
+
+.activity {
+
+  .card__title {
+    border-bottom: 1px solid #CDCAA2;
+  }
+}
+
+/*==========  Project variation  ==========*/
+
+.project {
+  overflow: hidden;
+
+  .card_title {
+    padding-bottom: 0;
+  }
+
+  .card__description {
+    min-height: 80px;
+  }
+}
+
+/*==========  Experience variation  ==========*/
+
+.experience {
+
+}
+
