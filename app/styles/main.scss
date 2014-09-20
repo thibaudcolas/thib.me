@@ -1,11 +1,11 @@
-@import "components/fira";
-@import "components/icomoon";
+@import "_fira-font";
+@import "_icomoon-font";
 
-@import "components/_variables";
-@import "components/_mixins";
+@import "_variables";
+@import "_mixins";
 
-@import "components/_global";
-@import "components/_header";
-@import "components/_footer";
-@import "components/_card";
-@import "components/_html5-css3";
+@import "_global";
+@import "_header";
+@import "_footer";
+@import "_card";
+@import "_html5-css3";
