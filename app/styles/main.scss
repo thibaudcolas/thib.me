@@ -1,13 +1,20 @@
 @import "components/fira.css";
 @import "components/icomoon.css";
+@import "components/_variables";
+@import "components/_mixins";
+
+html, body, button {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
 
 body {
-  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
   font-weight: 300;
+  color: $colorText;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fira Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-family: $fontHighlight;
   font-weight: 300;
 }
 
