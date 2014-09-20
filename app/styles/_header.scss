@@ -1,7 +1,7 @@
 /*==========  Header  ==========*/
 
 .global-header {
-  background-color: #292f33;
+  background-color: $colorGray6;
 }
 
 @media only screen and (min-width:600px) and (max-width: 767px) {
@@ -19,8 +19,8 @@
 .title-link {
   display: inline-block;
   width: 100%;
-  color: #f5f8fa;
-  text-shadow: 0 1px 0 #ccc,
+  color: $colorGray1;
+  text-shadow: 0 1px 0 $colorGray3,
                0 6px 1px rgba(0,0,0,.1),
                0 0 5px rgba(0,0,0,.1),
                0 1px 3px rgba(0,0,0,.3),
@@ -28,7 +28,7 @@
 }
 
 .title-link:hover, .title-link:focus {
-  color: #f5f8fa;
+  color: $colorGray1;
   text-decoration: none;
 }
 
@@ -36,6 +36,8 @@ h1 {
   font-size: 250%;
   font-weight: 400;
   height: 40px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .navbar-nav {
@@ -47,15 +49,15 @@ h1 {
 }
 
 .navbar-nav li a {
-  padding: 6px;
-  height: 70px;
+  padding: 5px;
+  height: 62px;
   font-size: 12px;
-  color: #e1e8ed;
-  border: 3px solid #e1e8ed;
+  color: $colorGray2;
+  border: 3px solid $colorGray2;
   transition: color .2s, background-color .2s, border-color .2s;
 
   &:hover, &:focus {
-    background-color: #e1e8ed;
+    background-color: $colorGray2;
     transition: color .3s, background-color .3s, border-color .3s;
     outline: none;
   }
@@ -102,7 +104,7 @@ h1 {
   background-color: #4875B4;
   border-color: #4875B4;
 
-  padding: 6px 8px;
+  padding: 6px 7px;
 
   &:hover, &:focus {
     color: #4875B4;
@@ -113,7 +115,7 @@ h1 {
   background-color: #263347;
   border-color: #263347;
 
-  padding: 6px 17px;
+  padding: 6px 16px;
 
   &:hover, &:focus {
     color: #263347;
@@ -124,7 +126,7 @@ h1 {
   background-color: #333;
   border-color: #333;
 
-  padding: 6px 16px;
+  padding: 6px 15px;
 
   &:hover, &:focus {
     color: #333;
