@@ -1,39 +1,14 @@
 /*==========  VARIABLES  ==========*/
 
   // Defining colors
-  $colorBlue: #3372df !default;
-  $colorBlueSecondary: lighten($colorBlue, 30%) !default;
-  $colorGreen: #0f9d58 !default;
-  $colorGreenSecondary: lighten($colorGreen, 30%) !default;
-  $colorRed: #cb4437 !default;
-  $colorRedSecondary: lighten($colorRed, 30%) !default;
-  $colorYellow: #f4b400 !default;
-  $colorYellowSecondary: lighten($colorYellow, 20%) !default;
+  $colorGray1: #f5f8fa !default;
+  $colorGray2: #e1e8ed !default;
+  $colorGray3: #ccd6dd !default;
+  $colorGray4: #8899a6 !default;
+  $colorGray5: #66757f !default;
+  $colorGray6: #292f33 !default;
 
-  $colorRemember: #09829a !default;
-  $colorLearning: #da2e75 !default;
-
-  $colorGrayBackground: #f5f8fa !default;
-  $colorGrayKeyline: #e1e8ed !default;
-  $colorGray: #8899a6 !default;
-  $colorGrayLight: #ccd6dd !default;
-  $colorGrayDark: #66757f !default;
-  $colorGrayDarkest: #292f33 !default;
-
-  $colorText: $colorGrayDarkest !default;
-  $colorHighlight: $colorBlue !default;
-  $colorWarning: $colorYellowSecondary !default;
-  $colorMuted: $colorGray !default;
-  $colorDanger: $colorRed !default;
-
-  $colorLayouts: #297ea9 !default;
-  $colorLayoutsSecondary: lighten($colorLayouts, 30%) !default;
-  $colorUser: #2c8566 !default;
-  $colorUserSecondary: lighten($colorUser, 30%) !default;
-  $colorMedia: #cf423a !default;
-  $colorMediaSecondary: lighten($colorMedia, 30%) !default;
-  $colorPerformance: #7b5294 !default;
-  $colorPerformanceSecondary: lighten($colorPerformance, 30%) !default;
+  $colorText: $colorGray6 !default;
 
   // Defining font family
   $fontDefault: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;

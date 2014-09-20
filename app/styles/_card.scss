@@ -1,20 +1,20 @@
 /*==========  Card  ==========*/
 
 .card {
-  background-color: #f5f8fa;
+  background-color: $colorGray2;
   margin: 15px 0;
-  box-shadow:0 1px 2px #8899a6;
+  box-shadow:0 1px 2px $colorGray4;
   border-radius:3px;
   transform: scale(1.0);
   transform-origin: center center;
-  transition: transform .1s, background-color .1s;
+  transition: transform .1s, background-color .1s, box-shadow .1s;
 
   &:hover {
     transform: scale(1.05);
     transform-origin: center center;
-    transition: transform .2s, background-color .2s;
-    background-color: lighten(#ccd6dd, 20%);
-    box-shadow:0 2px 5px #66757f;
+    transition: transform .2s, background-color .2s, box-shadow .2s;
+    background-color: $colorGray1;
+    box-shadow:0 2px 5px $colorGray5;
   }
 }
 
@@ -51,7 +51,7 @@
 .activity {
 
   .card__title {
-    border-bottom: 1px solid #8899a6;
+    border-bottom: 1px solid $colorGray4;
   }
 }
 
