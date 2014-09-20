@@ -14,23 +14,26 @@
   color: #aaa;
 }
 
+.footer__border {
+  margin-bottom: 20px;
+}
+
 .footer__border > span {
   width: 20%;
   height: 5px;
-  background: none repeat scroll 0px 0px #FFF;
 }
 
 .footer__border .border-1 {
-  background-color: #FF6347;
+  background-color: #ff6347;
 }
 .footer__border .border-2 {
-  background-color: #DC143C;
+  background-color: #dc143c;
 }
 .footer__border .border-3 {
   background-color: #008080;
 }
 .footer__border .border-4 {
-  background-color: #1E90FF;
+  background-color: #1e90ff;
 }
 .footer__border .border-5 {
   background-color: #000080;
