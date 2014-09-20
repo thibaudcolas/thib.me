@@ -23,12 +23,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-newspaper:before {
+  content: "\e603";
+}
+.icon-bullhorn:before {
+  content: "\e604";
+}
+.icon-envelope:before {
+  content: "\e605";
+}
+.icon-laptop:before {
+  content: "\e60b";
+}
 .icon-twitter:before {
   content: "\e600";
 }
 .icon-github:before {
   content: "\e601";
 }
+.icon-soundcloud:before {
+  content: "\e606";
+}
 .icon-linkedin:before {
   content: "\e602";
+}
+.icon-file-pdf:before {
+  content: "\e607";
+}
+.icon-file-xml:before {
+  content: "\e608";
+}
+.icon-html5:before {
+  content: "\e609";
+}
+.icon-css3:before {
+  content: "\e60a";
 }
