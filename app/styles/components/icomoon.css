@@ -1,10 +1,10 @@
 @font-face {
   font-family : 'icomoon-thibaudcolas';
-  src : url('fonts/icomoon-thibaudcolas.eot');
-  src : url('fonts/icomoon-thibaudcolas.eot?#iefix') format('embedded-opentype'),
-    url('fonts/icomoon-thibaudcolas.svg#icomoon-thibaudcolas') format('svg'),
-    url('fonts/icomoon-thibaudcolas.woff') format('woff'),
-    url('fonts/icomoon-thibaudcolas.ttf') format('truetype');
+  src : url('/fonts/IcoMoon/icomoon-thibaudcolas.eot');
+  src : url('/fonts/IcoMoon/icomoon-thibaudcolas.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/IcoMoon/icomoon-thibaudcolas.svg#icomoon-thibaudcolas') format('svg'),
+    url('/fonts/IcoMoon/icomoon-thibaudcolas.woff') format('woff'),
+    url('/fonts/IcoMoon/icomoon-thibaudcolas.ttf') format('truetype');
   font-weight : normal;
   font-style : normal;
 }

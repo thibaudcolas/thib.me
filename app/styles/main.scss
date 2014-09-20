@@ -1,4 +1,5 @@
 @import "components/fira.css";
+@import "components/icomoon-thibaudcolas-v2.css";
 
 body {
   font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
@@ -39,6 +40,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-nav a {
   min-height: 70px;
+}
+
+.navbar-nav a span {
+  display: block;
+}
+
+.navbar-nav .icon {
+  font-size: 32px;
+  float: left;
+  position: relative;
+  top: -10px;
+  color: #333;
 }
 
 .global-section {
