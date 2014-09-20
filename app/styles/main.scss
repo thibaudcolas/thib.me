@@ -1,91 +1,11 @@
 @import "components/fira.css";
 @import "components/icomoon.css";
+
 @import "components/_variables";
 @import "components/_mixins";
+
+@import "components/_global";
+@import "components/_header";
+@import "components/_footer";
 @import "components/_card";
-
-html, body, button {
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
-
-body {
-  font-weight: 300;
-  color: $colorText;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $fontHighlight;
-  font-weight: 300;
-}
-
-.global-header {
-  background-color: #046380;
-}
-
-.navbar-nav {
-  margin: 0 -15px;
-}
-
-.navbar-nav li {
-  float: left;
-}
-
-.navbar-nav li a {
-  padding: 10px
-}
-
-.navbar-nav a span {
-  display: block;
-}
-
-.navbar-nav .icon {
-  font-size: 32px;
-  width: 32px;
-  height: 32px;
-  position: relative;
-  left: 50%;
-  margin-left: -16px;
-  float: left;
-  color: #333;
-}
-
-.global-section {
-  background-color: #e6e2af;
-}
-
-.global-section:last-of-type {
-  padding-bottom: 15px;
-}
-
-.global-footer {
-  background-color: #002f2f;
-  color: #eee;
-}
-
-.global-footer a {
-  color: #ccc;
-  text-decoration: underline;
-}
-
-.global-footer a:hover {
-  color: #aaa;
-}
-
-.html5-css3 {
-    padding: 2px 2px 2px 0px;
-}
-
-.html5-css3 span:first-child {
-  position: relative;
-  font-size: 32px;
-  top: 10px;
-  color: #F06529;
-}
-
-.html5-css3 span:last-child {
-  position: relative;
-  font-size: 16px;
-  top: 3px;
-  color: #666;
-}
+@import "components/_html5-css3";

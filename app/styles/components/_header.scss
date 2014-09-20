@@ -1,0 +1,32 @@
+/*==========  Header  ==========*/
+
+.global-header {
+  background-color: #046380;
+}
+
+.navbar-nav {
+  margin: 0 -15px;
+}
+
+.navbar-nav li {
+  float: left;
+}
+
+.navbar-nav li a {
+  padding: 10px
+}
+
+.navbar-nav a span {
+  display: block;
+}
+
+.navbar-nav .icon {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  left: 50%;
+  margin-left: -16px;
+  float: left;
+  color: #333;
+}

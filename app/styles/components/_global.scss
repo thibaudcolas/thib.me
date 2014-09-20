@@ -1,0 +1,24 @@
+/*==========  Global  ==========*/
+
+html, body, button {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+body {
+  font-weight: 300;
+  color: $colorText;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontHighlight;
+  font-weight: 300;
+}
+
+.global-section {
+  background-color: #e6e2af;
+}
+
+.global-section:last-of-type {
+  padding-bottom: 15px;
+}
