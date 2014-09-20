@@ -1,17 +1,13 @@
-(function (console) {
+(function (console, document) {
   'use strict';
 
-  var decode = function(arr) {
+  function decode (arr) {
     return arr.reduce(function(acc, car, i) {
-      if (!!acc) {
-        acc = '';
-      }
       return acc + String.fromCharCode(car - i);
     }, '');
-  };
-  var spam_txt = [116, 105, 107, 101, 68, 121, 110, 112, 106, 55, 119, 112];
-  var correctMail = decode(spam_txt);
-  console.log(correctMail);
-  // $('a.remplacement').attr('href', "mailto:" + correctMail);
-  // $('span.remplacement').html(correctMail);
-})(window.console);
+  }
+
+  var correctMail = decode([116, 105, 107, 101, 68, 121, 110, 112, 106, 55, 119, 112]);
+  document.getElementsByClassName('js-email-replace')[0].href = 'mailto:' + correctMail;
+
+})(window.console, document);
