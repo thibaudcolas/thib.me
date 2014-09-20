@@ -1,20 +1,5 @@
 /*==========  VARIABLES  ==========*/
 
-  // Defining breakpoints
-  $medium: 620px !default;
-  $wide: 800px !default;
-  $huge: 1600px !default;
-  $mediumContainer: 688px !default;
-  $wideContainer: 864px !default;
-
-  // Defining grid sizes
-  $mediumColCount: 3 !default;
-  $mediumColWidth: 30.3% !default;
-  $mediumGutterWidth: 4.5% !default;
-  $wideColCount: 4 !default;
-  $wideColWidth: 22.2% !default;
-  $wideGutterWidth: 3.7% !default;
-
   // Defining colors
   $colorBlue: #3372df !default;
   $colorBlueSecondary: lighten($colorBlue, 30%) !default;
@@ -28,13 +13,14 @@
   $colorRemember: #09829a !default;
   $colorLearning: #da2e75 !default;
 
-  $colorGrayBackground: #f0f0f0 !default;
-  $colorGrayKeyline: #e0e0e0 !default;
-  $colorGray: #737373 !default;
-  $colorGrayLight: #eeeeee !default;
-  $colorGrayDark: #404040 !default;
+  $colorGrayBackground: #f5f8fa !default;
+  $colorGrayKeyline: #e1e8ed !default;
+  $colorGray: #8899a6 !default;
+  $colorGrayLight: #ccd6dd !default;
+  $colorGrayDark: #66757f !default;
+  $colorGrayDarkest: #292f33 !default;
 
-  $colorText: $colorGrayDark !default;
+  $colorText: $colorGrayDarkest !default;
   $colorHighlight: $colorBlue !default;
   $colorWarning: $colorYellowSecondary !default;
   $colorMuted: $colorGray !default;
@@ -52,22 +38,6 @@
   // Defining font family
   $fontDefault: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
   $fontHighlight: 'Fira Sans', 'Helvetica Neue', Helvetica, sans-serif !default;
-  $fontIcon: "icons" !default;
-
-  // Defining font sizes
-  $fontSmall: 13px !default;
-  $fontBase: 16px  !default;
-  $fontMedium: 20px !default;
-  $fontLarge: 26px !default;
-  $fontXLarge: 42px !default;
-  $fontXXLarge: 68px !default;
-  $fontHuge: 110px !default;
-
-  // Defining baseline line height
-  $lineHeight: 26px !default;
 
   // Defining animation easings
   $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
-
-  // Defining sidebar stuff
-  $sidebarWidth: 280px !default;
