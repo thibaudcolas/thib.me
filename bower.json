@@ -4,6 +4,7 @@
   "homepage": "https://github.com/ThibWeb/thibaudcolas",
   "description": "My personal website's repository",
   "dependencies": {
-    "bootstrap-css-only": "~3.2.0"
+    "bootstrap-css-only": "~3.2.0",
+    "fittext": "*"
   }
 }
