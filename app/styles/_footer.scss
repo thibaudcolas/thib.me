@@ -7,7 +7,7 @@
 
 .global-footer a {
   color: $colorGray3;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .global-footer a:hover {
@@ -45,6 +45,37 @@
   padding-left: 0;
 }
 
-.footer-links a {
-  text-decoration: none;
+.author-link, .license-link, .fork-link {
+  display: block;
+}
+
+.author-link {
+  margin-bottom: 15px;
+}
+
+.author-link:hover .html5-css3, .author-link:focus .html5-css3 {
+  opacity: 0.8;
+}
+
+.author-link:active .html5-css3 {
+  opacity: 1;
+}
+
+.license-logo {
+  position: relative;
+  top: -1px;
+}
+
+.license-link:hover img, .license-link:focus img {
+  opacity: 0.8;
+}
+
+.license-link:active img {
+  opacity: 1;
+}
+
+.fork-link .icon-github {
+  font-size: 32px;
+  position: relative;
+  top: 8px;
 }
