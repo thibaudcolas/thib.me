@@ -24,19 +24,19 @@
   float: left;
 }
 
-.footer__border .border-1 {
+.footer__border span:nth-child(1) {
   background-color: #ff6347;
 }
-.footer__border .border-2 {
+.footer__border span:nth-child(2) {
   background-color: #dc143c;
 }
-.footer__border .border-3 {
+.footer__border span:nth-child(3) {
   background-color: #008080;
 }
-.footer__border .border-4 {
+.footer__border span:nth-child(4) {
   background-color: #1e90ff;
 }
-.footer__border .border-5 {
+.footer__border span:nth-child(5) {
   background-color: #000080;
 }
 
