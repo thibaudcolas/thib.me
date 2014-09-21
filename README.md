@@ -7,11 +7,9 @@ My personal website's repository.
 
 Tooling taken from Google's [Web Starter Kit](https://developers.google.com/web/starter-kit/).
 
-### Node
-
-### Ruby
-
-### Sass
+- Node
+- Ruby
+- Sass
 
 ### Gulp
 
@@ -47,6 +45,10 @@ $ gulp pagespeed
 
 Favicons generated with [http://realfavicongenerator.net/](http://realfavicongenerator.net/).
 
+### Icon font
+
+Custom font built with [IcoMoon](http://icomoon.io).
+
 ## Browser Support
 
 * IE10, IE11, IE Mobile 10
@@ -61,6 +63,6 @@ Favicons generated with [http://realfavicongenerator.net/](http://realfavicongen
 
 ## License
 
-Content available under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Source code under MIT license.
+Site content available under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Source code under MIT license.
 
 Copyright 2014 Thibaud Colas
