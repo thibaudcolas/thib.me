@@ -1,17 +1,16 @@
 /*==========  Footer  ==========*/
 
 .global-footer {
-  background-color: #292f33;
-  color: #eee;
+  background-color: $colorGray6;
+  color: $colorGray2;
 }
 
 .global-footer a {
-  color: #ccc;
-  text-decoration: underline;
+  color: $colorGray3;
 }
 
 .global-footer a:hover {
-  color: #aaa;
+  color: $colorGray4;
 }
 
 .footer__border {
@@ -37,4 +36,13 @@
 }
 .footer__border .border-5 {
   background-color: #000080;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
 }
