@@ -1,54 +1,11 @@
 @font-face{
     font-family: 'Fira Sans';
-    src: url('../fonts/FiraSans3111/FiraSans-Light.eot');
-    src: local('Fira Sans Light'),
-         url('../fonts/FiraSans3111/FiraSans-Light.eot') format('embedded-opentype'),
-         url('../fonts/FiraSans3111/FiraSans-Light.woff') format('woff'),
-         url('../fonts/FiraSans3111/FiraSans-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('../fonts/FiraSans3111/FiraSans-Regular.eot');
+    src: url('../fonts/firasans/FiraSans-Regular.eot');
     src: local('Fira Sans Regular'),
-         url('../fonts/FiraSans3111/FiraSans-Regular.eot') format('embedded-opentype'),
-         url('../fonts/FiraSans3111/FiraSans-Regular.woff') format('woff'),
-         url('../fonts/FiraSans3111/FiraSans-Regular.ttf') format('truetype');
+         local('Fira Sans'),
+         url('../fonts/firasans/FiraSans-Regular.eot') format('embedded-opentype'),
+         url('../fonts/firasans/FiraSans-Regular.woff') format('woff'),
+         url('../fonts/firasans/FiraSans-Regular.woff2') format('woff2');
     font-weight: 400;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('../fonts/FiraSans3111/FiraSans-Medium.eot');
-    src: local('Fira Sans Medium'),
-         url('../fonts/FiraSans3111/FiraSans-Medium.eot') format('embedded-opentype'),
-         url('../fonts/FiraSans3111/FiraSans-Medium.woff') format('woff'),
-         url('../fonts/FiraSans3111/FiraSans-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('../fonts/FiraSans3111/FiraSans-SemiBold.eot');
-    src: local('Fira Sans SemiBold'),
-         url('../fonts/FiraSans3111/FiraSans-SemiBold.eot') format('embedded-opentype'),
-         url('../fonts/FiraSans3111/FiraSans-SemiBold.woff') format('woff'),
-         url('../fonts/FiraSans3111/FiraSans-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('../fonts/FiraSans3111/FiraSans-Bold.eot');
-    src: local('Fira Sans Bold'),
-         url('../fonts/FiraSans3111/FiraSans-Bold.eot') format('embedded-opentype'),
-         url('../fonts/FiraSans3111/FiraSans-Bold.woff') format('woff'),
-         url('../fonts/FiraSans3111/FiraSans-Bold.ttf') format('truetype');
-    font-weight: 700;
     font-style: normal;
 }
