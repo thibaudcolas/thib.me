@@ -7,6 +7,7 @@
 
 .global-footer a {
   color: $colorGray3;
+  text-decoration: underline;
 }
 
 .global-footer a:hover {
@@ -17,9 +18,10 @@
   margin-bottom: 20px;
 }
 
-.footer__border > span {
+.footer__border span {
   width: 20%;
   height: 5px;
+  float: left;
 }
 
 .footer__border .border-1 {
