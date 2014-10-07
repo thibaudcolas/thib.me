@@ -142,7 +142,7 @@ gulp.task('serve:dist', ['default'], function () {
 });
 
 // Build Production Files, the Default Task
-gulp.task('default', ['clean'], function (cb) {
+gulp.task('build', ['clean'], function (cb) {
   runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'copy'], cb);
 });
 
@@ -162,6 +162,9 @@ gulp.task('deploy', function () {
   gulp.src('dist/**/*')
     .pipe(deploy('git@github.com:ThibWeb/thibaudcolas.git', 'origin'));
 });
+
+// Build Production Files, the Default Task
+gulp.task('default', ['build']);
 
 // Load custom tasks from the `tasks` directory
 try { require('require-dir')('tasks'); } catch (err) {}
