@@ -66,8 +66,7 @@ gulp.task('styles', function () {
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
     'app/styles/*.scss',
-    'app/styles/**/*.css',
-    'app/styles/components/components.scss'
+    'app/styles/**/*.css'
   ])
     .pipe($.changed('styles', {extension: '.scss'}))
     .pipe($.rubySass({
@@ -108,8 +107,6 @@ gulp.task('html', function () {
     .pipe($.if('*.css', $.csso()))
     .pipe(assets.restore())
     .pipe($.useref())
-    // Update Production Style Guide Paths
-    .pipe($.replace('components/components.css', 'components/main.min.css'))
     // Minify Any HTML
     .pipe($.if('*.html', $.minifyHtml()))
     // Output Files
@@ -127,7 +124,7 @@ gulp.task('serve', ['styles'], function () {
     server: ['.tmp', 'app']
   });
 
-  gulp.watch(['app/**/*.html'], reload);
+  gulp.watch(['app/index.html'], reload);
   gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
   gulp.watch(['app/scripts/**/*.js'], ['jshint']);
   gulp.watch(['app/images/**/*'], reload);
