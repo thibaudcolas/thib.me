@@ -8,12 +8,12 @@
   border-radius:3px;
   transform: scale(1.0);
   transform-origin: center center;
-  transition: transform .1s, background-color .1s, box-shadow .1s;
+  transition: all .1s ease-out;
 
   &:hover, &:focus {
     transform: scale(1.05);
     transform-origin: center center;
-    transition: transform .2s, background-color .2s, box-shadow .2s;
+    transition: all .2s ease-out;
     background-color: $colorGray1;
     box-shadow:0 2px 5px $colorGray5;
   }

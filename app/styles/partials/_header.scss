@@ -54,17 +54,17 @@ h1 {
   font-size: 12px;
   color: $colorGray2;
   border: 3px solid $colorGray2;
-  transition: color .2s, background-color .2s, border-color .2s;
+  transition: all .2s ease-out;
 
   &:hover, &:focus {
     background-color: $colorGray2;
-    transition: color .3s, background-color .3s, border-color .3s;
+    transition: all .3s ease-out;
     outline: none;
   }
 
   &:active {
     transform: scale(0.9);
-    transition: transform .1s;
+    transition: all .1s ease-out;
   }
 }
 
