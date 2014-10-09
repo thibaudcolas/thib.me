@@ -1,7 +1,7 @@
 /*==========  Card  ==========*/
 
 .card {
-  overflow: hidden;
+  display: block;
   background-color: $colorGray2;
   margin: 15px 0;
   box-shadow:0 1px 2px $colorGray4;
@@ -10,7 +10,7 @@
   transform-origin: center center;
   transition: transform .1s, background-color .1s, box-shadow .1s;
 
-  &:hover {
+  &:hover, &:focus {
     transform: scale(1.05);
     transform-origin: center center;
     transition: transform .2s, background-color .2s, box-shadow .2s;
@@ -35,12 +35,17 @@
   padding-bottom: 10px;
 }
 
-.card__depiction__wrapper:hover, .card__depiction__wrapper:focus {
+.card__depiction__wrapper {
+  display: block;
+  overflow: hidden;
 
-}
+  &:hover, &:focus {
 
-.card__depiction__wrapper:active {
+  }
 
+  &:active {
+
+  }
 }
 
 .card__depiction {
