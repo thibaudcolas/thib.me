@@ -22,3 +22,17 @@ h1, h2, h3, h4, h5, h6 {
 .global-section:last-of-type {
   padding-bottom: 15px;
 }
+
+.section-title {
+  &:hover .anchor-link, &:focus .anchor-link {
+    display: inline;
+  }
+}
+
+.section-title .anchor-link {
+  display: none;
+  position: relative;
+  top: -3px;
+  font-size: 50%;
+  color: $colorGray5;
+}
