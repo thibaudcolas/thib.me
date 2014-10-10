@@ -1,7 +1,7 @@
 /*==========  Card  ==========*/
 
 .card {
-  display: block;
+  overflow: hidden;
   background-color: $colorGray2;
   margin: 15px 0;
   box-shadow:0 1px 2px $colorGray4;
@@ -37,7 +37,6 @@
 
 .card__depiction__wrapper {
   display: block;
-  overflow: hidden;
 
   &:hover, &:focus {
 
