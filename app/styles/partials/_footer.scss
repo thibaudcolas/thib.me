@@ -46,6 +46,12 @@
   padding-left: 0;
 }
 
+.top-link {
+  &:before {
+    content: '▲';
+  }
+}
+
 .author-link, .license-link, .fork-link {
   display: block;
 }
