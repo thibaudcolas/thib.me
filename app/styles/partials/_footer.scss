@@ -62,6 +62,12 @@
   opacity: 1;
 }
 
+.copyright-icon {
+  &:before {
+    content: '©';
+  }
+}
+
 .license-logo {
   position: relative;
   top: -1px;
