@@ -23,7 +23,7 @@
 }
 
 .card__title {
-  padding: 10px;
+  padding: 10px 10px 0;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -55,18 +55,11 @@
 
 .activity {
 
-  .card__title {
-    border-bottom: 1px solid $colorGray4;
-  }
 }
 
 /*==========  Project variation  ==========*/
 
 .project {
-
-  .card_title {
-    padding-bottom: 0;
-  }
 
   .card__description {
     min-height: 80px;
