@@ -89,10 +89,8 @@ gulp.task('html', function () {
   return gulp.src('app/index.html')
     .pipe(assets)
     // Concatenate And Minify JavaScript
-    .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
+    .pipe($.if('*.js', $.uglify()))
     // Remove Any Unused CSS
-    // Note: If not using the Style Guide, you can delete it from
-    // the next line to only include styles your project uses.
     .pipe($.if('*.css', $.uncss({
       html: [
         'app/index.html'
