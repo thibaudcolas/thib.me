@@ -29,7 +29,6 @@
 }
 .card__description {
   padding: 10px 10px 0;
-  min-height: 80px;
 }
 
 .card__detail {
@@ -52,21 +51,23 @@
 
 }
 
-/*==========  Activity variation  ==========*/
+/*==========  Card variations  ==========*/
 
-.activity {
+@media (min-width: 768px) {
+	.activity {
 
+	  .card__description {
+	    min-height: 100px;
+	  }
+	}
+
+	.project {
+
+	  .card__description {
+	    min-height: 80px;
+	  }
+	}
 }
-
-/*==========  Project variation  ==========*/
-
-.project {
-
-  .card__description {
-  }
-}
-
-/*==========  Experience variation  ==========*/
 
 .experience {
 

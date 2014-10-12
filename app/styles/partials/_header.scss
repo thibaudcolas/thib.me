@@ -4,7 +4,7 @@
   background-color: $colorGray6;
 }
 
-@media only screen and (min-width:600px) and (max-width: 767px) {
+@media (min-width: 600px) and (max-width: 767px) {
   .col-custom-5 {
     width: 43%;
     float: left;
