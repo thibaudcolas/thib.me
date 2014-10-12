@@ -61,6 +61,22 @@ Custom font built with [IcoMoon](http://icomoon.io).
 * Android / Chrome 4.4, 4.4.3
 * BlackBerry 10
 
+## TODO
+
+- GitHub repos integration
+- GitHub card integration https://github.com/lepture/github-cards
+- Stackoverflow flair integration
+- Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
+- Side projects: use GitHub contributions view
+- Links for What I do section
+- Block-level links
+- Images on top
+- Section-specific colors
+- Good "active card" effect
+- Footer border colors
+- SoundCloud line break fix
+- First section content and layout
+
 ## License
 
 Site content available under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Source code under MIT license.
