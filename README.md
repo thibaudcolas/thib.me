@@ -76,6 +76,8 @@ Custom font built with [IcoMoon](http://icomoon.io).
 - Footer border colors
 - SoundCloud line break fix
 - First section content and layout
+- Twitter integration
+- Kudos counter
 
 ## License
 
