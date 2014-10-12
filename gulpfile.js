@@ -78,6 +78,7 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('.tmp/styles'))
     // Concatenate And Minify Styles
     .pipe($.if('*.css', $.csso()))
+    .pipe($.if('*.css', $.minifyCss({keepSpecialComments : 0})))
     .pipe(gulp.dest('dist/styles'))
     .pipe($.size({title: 'styles'}));
 });
@@ -103,6 +104,7 @@ gulp.task('html', function () {
     })))
     // Concatenate And Minify Styles
     .pipe($.if('*.css', $.csso()))
+    .pipe($.if('*.css', $.minifyCss({keepSpecialComments : 0})))
     .pipe(assets.restore())
     .pipe($.useref())
     // Minify Any HTML
