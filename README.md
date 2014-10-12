@@ -68,16 +68,17 @@ Custom font built with [IcoMoon](http://icomoon.io).
 - Stackoverflow flair integration
 - Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
 - Side projects: use GitHub contributions view
-- Links for What I do section
+- (*) Links for What I do section
 - Block-level links
 - Images on top
-- Section-specific colors
-- Good "active card" effect
-- Footer border colors
-- SoundCloud line break fix
-- First section content and layout
+- (*) Section-specific colors
+- (*) Good "active card" effect
+- (*) Footer border colors
+- (*) SoundCloud line break fix
+- (*) First section content and layout
 - Twitter integration
 - Kudos counter
+- Beautiful resume picture
 
 ## License
 
