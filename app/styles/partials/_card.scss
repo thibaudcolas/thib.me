@@ -29,6 +29,7 @@
 }
 .card__description {
   padding: 10px 10px 0;
+  min-height: 80px;
 }
 
 .card__detail {
@@ -62,7 +63,6 @@
 .project {
 
   .card__description {
-    min-height: 80px;
   }
 }
 
