@@ -5,7 +5,13 @@ html, body, button {
   font-smoothing: antialiased;
 }
 
+html {
+	background-color: $colorGray6;
+}
+
 body {
+  min-width: 320px;
+  max-width: 2400px;
   font-weight: 300;
   color: $colorText;
 }
