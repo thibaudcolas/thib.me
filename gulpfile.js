@@ -109,6 +109,7 @@ gulp.task('html', function () {
     .pipe($.useref())
     // Minify Any HTML
     .pipe($.if('*.html', $.minifyHtml()))
+    .pipe($.if('*.html', $.replace('<script src', '<script async defer src')))
     // Output Files
     .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'html'}));
