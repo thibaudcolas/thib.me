@@ -5,6 +5,7 @@
   "description": "My personal website's repository",
   "dependencies": {
     "bootstrap-css-only": "~3.2.0",
-    "fittext": "*"
+    "fittext": "*",
+    "domready": "~1.0.7"
   }
 }

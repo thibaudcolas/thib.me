@@ -74,7 +74,6 @@ Custom font built with [IcoMoon](http://icomoon.io).
 - (*) Section-specific colors
 - (*) Good "active card" effect
 - (*) Footer border colors
-- (*) SoundCloud line break fix
 - (*) First section content and layout
 - Twitter integration
 - Kudos counter
