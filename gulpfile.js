@@ -10,7 +10,7 @@ var pagespeed = require('psi');
 var reload = browserSync.reload;
 var deploy = require('gulp-gh-pages');
 
-const AUTOPREFIXER_BROWSERS = [
+var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
   'ie_mob >= 10',
   'ff >= 30',
@@ -23,11 +23,12 @@ const AUTOPREFIXER_BROWSERS = [
 ];
 
 // Lint JavaScript
-gulp.task('jshint', function () {
+gulp.task('lint', function () {
   return gulp.src('app/scripts/**/*.js')
     .pipe(reload({stream: true, once: true}))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe($.jscs())
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
@@ -123,7 +124,7 @@ gulp.task('serve', ['styles'], function () {
 
   gulp.watch(['app/index.html'], reload);
   gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['jshint']);
+  gulp.watch(['app/scripts/**/*.js'], ['lint']);
   gulp.watch(['app/images/**/*'], reload);
 });
 
@@ -137,7 +138,7 @@ gulp.task('serve:dist', ['default'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('build', ['clean'], function (cb) {
-  runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'copy'], cb);
+  runSequence('styles', ['lint', 'html', 'images', 'fonts', 'copy'], cb);
 });
 
 // Run PageSpeed Insights
