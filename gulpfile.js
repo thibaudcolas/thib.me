@@ -10,7 +10,7 @@ var pagespeed = require('psi');
 var reload = browserSync.reload;
 var deploy = require('gulp-gh-pages');
 
-var AUTOPREFIXER_BROWSERS = [
+const AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
   'ie_mob >= 10',
   'ff >= 30',
@@ -95,8 +95,7 @@ gulp.task('html', function () {
       ],
       // CSS Selectors for UnCSS to ignore
       ignore: [
-        '.navdrawer-container.open',
-        /.app-bar.open/
+        /.js-email-replace/
       ]
     })))
     // Concatenate And Minify Styles
