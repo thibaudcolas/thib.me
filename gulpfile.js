@@ -69,10 +69,7 @@ gulp.task('styles', function () {
     'app/styles/**/*.css'
   ])
     .pipe($.changed('styles', {extension: '.scss'}))
-    .pipe($.rubySass({
-      style: 'expanded',
-      precision: 10
-    }))
+    .pipe($.sass({precision: 10}))
     .on('error', console.error.bind(console))
     .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     .pipe(gulp.dest('.tmp/styles'))
