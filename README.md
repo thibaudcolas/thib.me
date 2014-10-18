@@ -78,6 +78,7 @@ Custom font built with [IcoMoon](http://icomoon.io).
 - Twitter integration
 - Kudos counter
 - Beautiful resume picture
+- Print display
 
 ## License
 
