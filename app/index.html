@@ -82,8 +82,8 @@
 
   <header id="top" class="global-header row" role="banner">
     <div class="col-sm-5 col-custom-5">
-      <a class="title-link" href="http://thibaudcolas.fr" rel="me">
-        <h1 id="main-title">Thibaud Colas</h1>
+      <a class="title-link" href="http://thibaudcolas.fr" rel="me" itemprop="url">
+        <h1 id="main-title" itemprop="name"><span itemprop="givenName">Thibaud</span> <span itemprop="familyName">Colas</span></h1>
       </a>
     </div>
     <div class="col-sm-offset-2 col-sm-5 col-custom-7">
@@ -102,7 +102,7 @@
   <section id="about" class="global-section row">
     <div class="col-lg-10">
       <h2 class="global-catchphrase">
-      Hi! I'm Thibaud, a Software Engineer specialized in Web technologies.
+      Hi! <span itemprop="description">I'm Thibaud, a <span itemprop="jobTitle">Software Engineer</span> specialized in Web technologies</span>.
       </h2>
       <p>I do Full Stack development and consulting work on. You can </p>
     </div>
@@ -399,7 +399,7 @@
         <li>&nbsp;</li>
         <li><a href="http://blog.thib.me" title="Personal blog" role="link" rel="author"><span class="icon icon-newspaper" aria-hidden="true"></span> Blog</a></li>
         <li><a href="http://talks.thib.me" title="Talks" role="link" rel="author"><span class="icon icon-bullhorn" aria-hidden="true"></span> Talks</a></li>
-        <li><a class="js-email-replace" href="#" title="Email address" role="link" rel="me"><span class="icon icon-envelope" aria-hidden="true"></span> Email</a></li>
+        <li><a class="js-email-replace" itemprop="email" href="#" title="Email address" role="link" rel="me"><span class="icon icon-envelope" aria-hidden="true"></span> Email</a></li>
       </ul>
     </div>
   </footer>
