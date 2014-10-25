@@ -75,6 +75,7 @@ Custom font built with [IcoMoon](http://icomoon.io).
 - New resume
 - Beautiful resume picture
 - Print display
+- http://www.html5tricks.com/demo/pure-css3-weather-icon/index.html
 
 ## License
 
