@@ -6,6 +6,7 @@
   "dependencies": {
     "bootstrap-css-only": "~3.2.0",
     "fittext": "*",
-    "domready": "~1.0.7"
+    "domready": "~1.0.7",
+    "fastclick": "~1.0.3"
   }
 }

@@ -12,5 +12,7 @@
     window.fitText(document.getElementById('main-title'), 0.7, {minFontSize: '35px', maxFontSize: '45px'});
 
     document.getElementsByClassName('js-email-replace')[0].href = 'mailto:' + correctMail;
+
+    window.FastClick.attach(document.body);
   });
 })();
