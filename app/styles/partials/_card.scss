@@ -6,13 +6,9 @@
   margin: 15px 0;
   box-shadow:0 1px 2px $colorGray4;
   border-radius:3px;
-  transform: scale(1.0);
-  transform-origin: center center;
   transition: all .1s ease-out;
 
   &:hover, &:focus {
-    transform: scale(1.05);
-    transform-origin: center center;
     transition: all .2s ease-out;
     background-color: $colorGray1;
     box-shadow:0 2px 5px $colorGray5;
