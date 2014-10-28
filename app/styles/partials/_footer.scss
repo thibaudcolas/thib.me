@@ -74,7 +74,10 @@
   margin-bottom: 15px;
 }
 
-
+.resume-link {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 .copyright-icon {
   &:before {
@@ -87,7 +90,7 @@
   top: -1px;
 }
 
-.fork-link .icon-github {
+.meta-links .big-icon {
   font-size: 32px;
   position: relative;
   top: 8px;
