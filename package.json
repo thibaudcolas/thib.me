@@ -42,6 +42,9 @@
   },
   "private": true,
   "scripts": {
-    "test": "echo 'npm test not implemented'"
+    "start": "gulp serve",
+    "test": "echo 'npm test not implemented'",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
   }
 }
