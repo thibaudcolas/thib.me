@@ -41,7 +41,7 @@
   background-color: #046380;
 }
 
-.footer-links {
+.last-links {
   list-style-type: none;
   padding-left: 0;
   user-select: none;
@@ -53,21 +53,28 @@
   }
 }
 
-.author-link, .license-link, .fork-link {
+.meta-links {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.meta-links a {
   display: block;
+
+  &:hover span, &:focus span {
+    opacity: 0.8;
+  }
+
+  &:active span {
+    opacity: 1;
+  }
 }
 
 .author-link {
   margin-bottom: 15px;
 }
 
-.author-link:hover .html5-css3, .author-link:focus .html5-css3 {
-  opacity: 0.8;
-}
 
-.author-link:active .html5-css3 {
-  opacity: 1;
-}
 
 .copyright-icon {
   &:before {
@@ -78,14 +85,6 @@
 .license-logo {
   position: relative;
   top: -1px;
-}
-
-.license-link:hover img, .license-link:focus img {
-  opacity: 0.8;
-}
-
-.license-link:active img {
-  opacity: 1;
 }
 
 .fork-link .icon-github {
