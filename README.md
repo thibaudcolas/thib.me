@@ -67,9 +67,7 @@ Custom font built with [IcoMoon](http://icomoon.io).
 - Block-level links
 - Images on top
 - (*) Section-specific colors
-- (*) Good "active card" effect
 - (*) Footer border colors
-- (*) First section layout
 - Twitter integration
 - Kudos counter
 - New resume
