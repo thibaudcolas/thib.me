@@ -46,3 +46,17 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 50%;
   color: $colorGray5;
 }
+
+.global-section__border span {
+  height: 5px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.global-footer .global-section__border span {
+  width: 20%;
+}
+
+#about .global-section__border span {
+  width: 100%;
+}
