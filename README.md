@@ -59,20 +59,19 @@ Custom font built with [IcoMoon](http://icomoon.io).
 
 ## TODO
 
+- (*) Card active effect
+- (*) Section-specific colors
+- (*) Footer border colors
+- (*) Print display
 - GitHub repos integration
 - GitHub card integration https://github.com/lepture/github-cards
 - Stackoverflow flair integration
 - Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
-- Side projects: use GitHub contributions view
 - Images on top
-- (*) Section-specific colors
-- (*) Footer border colors
 - Twitter integration
 - Kudos counter
 - New resume
 - Beautiful resume picture
-- Print display
-- Bootstrap 3.3.0
 - http://www.html5tricks.com/demo/pure-css3-weather-icon/index.html
 
 ## License
