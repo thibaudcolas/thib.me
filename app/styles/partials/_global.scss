@@ -70,7 +70,8 @@ a {
 }
 
 #about .lead a {
-  color: black;
+  color: inherit;
+  text-decoration: underline;
 }
 
 #activities {
