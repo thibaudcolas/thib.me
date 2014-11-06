@@ -2,16 +2,12 @@
 
 .card {
   overflow: hidden;
-  background-color: $colorGray2;
+  background-color: rgba(255, 255, 255, 0.6);
   margin: 15px 0;
-  box-shadow:0 1px 2px $colorGray4;
-  border-radius:3px;
-  transition: all .1s ease-out;
+  transition: background-color .2s $animationEasing;
 
   &:hover, &:focus {
-    transition: all .2s ease-out;
-    background-color: $colorGray1;
-    box-shadow:0 2px 5px $colorGray5;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 }
 
