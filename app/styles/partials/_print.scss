@@ -1,0 +1,9 @@
+@media print {
+  abbr[title]:after {
+    content: '';
+  }
+
+  .card:after {
+    content: '' !important;
+  }
+}
