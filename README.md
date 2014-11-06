@@ -70,6 +70,7 @@ Custom font built with [IcoMoon](http://icomoon.io).
 - Images on top
 - Twitter integration
 - Kudos counter
+- "More cards" button
 - New resume
 - Beautiful resume picture
 - http://www.html5tricks.com/demo/pure-css3-weather-icon/index.html
