@@ -9,7 +9,6 @@
     "commit": "27c6102325036312600faa7ec313bf9de8d5c104"
   },
   "_source": "git://github.com/ded/domready.git",
-  "_target": "~1.0.7",
-  "_originalSource": "domready",
-  "_direct": true
+  "_target": "*",
+  "_originalSource": "domready"
 }
