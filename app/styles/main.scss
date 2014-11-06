@@ -9,15 +9,3 @@
 @import "partials/_footer";
 @import "partials/_card";
 @import "partials/_html5-css3";
-
-#activities {
-  background-color: #77C4D3;
-}
-
-#activities .card {
-  background-color: rgba(255, 255, 255, 0.8);
-
-  &:hover {
-    background-color: white;
-  }
-}
