@@ -7,5 +7,5 @@ env:
   global:
     secure: TCho+s61OgenfIuQFoTZLBrl/IfVEv8JUX5XhsGn71strwsDCdy4Y5hrsyfogFrXEemDd60z/igCL9yUSIjatWgmGtEUziVxy24awEwokKE1LOh01Qi3RxCxXDpLY8T2eR1xGEDFrUq0dIWzmtx/LHDPr7i/rUmXnc7aVU3atLQ=
 install: npm install
-before_script: gulp
+before_script: npm run-script build
 after_success: ./deploy.sh
