@@ -41,6 +41,10 @@ $ gulp pagespeed
 
 Favicons generated with [http://realfavicongenerator.net/](http://realfavicongenerator.net/).
 
+### Color theme
+
+Built with [Adobe Kuler](https://color.adobe.com/create/color-wheel/?base=2&rule=Analogous&selected=1&name=Personal%20website%20redesign&mode=rgb&rgbvalues=0.424328350620377,0.42591677272328,1,0.91,0.36734648096474953,0.3946467367365962,1,0.85364851751096,0.4536774516096149,0.42998257207678636,0.91,0.43710821456245713,0.43015095296512473,0.6857355094330078,1&swatchOrder=0,1,2,3,4).
+
 ### Icon font
 
 Custom font built with [IcoMoon](http://icomoon.io).

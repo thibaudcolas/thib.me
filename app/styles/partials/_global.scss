@@ -30,10 +30,6 @@ a {
 }
 
 .global-section {
-  background-color: $colorGray3;
-}
-
-.global-section:last-of-type {
   padding-bottom: 15px;
 }
 
@@ -68,3 +64,22 @@ a {
   width: 20%;
 }
 
+#about {
+  background-color: #FFDA74;
+}
+
+#about .lead a {
+  color: black;
+}
+
+#activities {
+  background-color: #6EAFFF;
+}
+
+#projects {
+  background-color: #E85E65;
+}
+
+// #experiences {
+//   background-color: #6EE86F; // #6C6DFF
+// }
