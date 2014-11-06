@@ -59,10 +59,8 @@ Custom font built with [IcoMoon](http://icomoon.io).
 
 ## TODO
 
-- (*) Card active effect
 - (*) Section-specific colors
 - (*) Footer border colors
-- (*) Print display
 - GitHub repos integration
 - GitHub card integration https://github.com/lepture/github-cards
 - Stackoverflow flair integration
