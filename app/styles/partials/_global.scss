@@ -38,17 +38,24 @@ a {
 }
 
 .global-section__title {
+  .anchor-link {
+    display: none;
+    text-decoration: none;
+    position: relative;
+    top: -3px;
+    font-size: 50%;
+    color: rgba(0, 0, 0, 0.5);
+
+    &:before {
+      content: '◄';
+    }
+  }
+
   &:hover .anchor-link, &:focus .anchor-link {
     display: inline;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
   }
-}
-
-.global-section__title .anchor-link {
-  display: none;
-  position: relative;
-  top: -3px;
-  font-size: 50%;
-  color: rgba(0, 0, 0, 0.5);
 }
 
 .global-section__border span {
