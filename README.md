@@ -63,8 +63,6 @@ Custom font built with [IcoMoon](http://icomoon.io).
 
 ## TODO
 
-- (*) Section-specific colors
-- (*) Footer border colors
 - GitHub repos integration
 - GitHub card integration https://github.com/lepture/github-cards
 - Stackoverflow flair integration
