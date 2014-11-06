@@ -64,7 +64,6 @@ Custom font built with [IcoMoon](http://icomoon.io).
 - Stackoverflow flair integration
 - Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
 - Side projects: use GitHub contributions view
-- Block-level links
 - Images on top
 - (*) Section-specific colors
 - (*) Footer border colors
@@ -73,6 +72,7 @@ Custom font built with [IcoMoon](http://icomoon.io).
 - New resume
 - Beautiful resume picture
 - Print display
+- Bootstrap 3.3.0
 - http://www.html5tricks.com/demo/pure-css3-weather-icon/index.html
 
 ## License
