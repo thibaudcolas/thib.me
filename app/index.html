@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
+  <script async defer>
+    // build:loadCSS=function(e,a,g){function f(){for(var a,c=0;c<d.length;c++)d[c].href&&-1<d[c].href.indexOf(e)&&(a=!0);a?b.media=g||"all":setTimeout(f,0)}var b=window.document.createElement("link");a=a||window.document.getElementsByTagName("script")[0];var d=window.document.styleSheets;b.rel="stylesheet";b.href=e;b.media="only x";a.parentNode.insertBefore(b,a);f();return b};
+    // build:loadCSS('styles/main.min.css');
+  </script>
+
   <!-- build:js scripts/main.min.js -->
   <script src="vendor/domready/ready.js"></script>
   <script src="vendor/fittext/fittext.js"></script>
