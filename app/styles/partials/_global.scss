@@ -25,8 +25,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 
-a {
-  color: $colorLink;
+.lead {
+  line-height: 1.6;
+  font-family: $fontHighlight;
+}
+
+.lead a {
+  color: inherit;
+  text-decoration: underline;
+  padding: 8px 0;
 }
 
 .global-section:nth-of-type(n+2) {
@@ -67,16 +74,6 @@ a {
 
 #about {
   background-color: #FFDA74;
-}
-
-.global-section .lead {
-  line-height: 1.6;
-}
-
-.global-section .lead a {
-  color: inherit;
-  text-decoration: underline;
-  padding: 8px 0;
 }
 
 #activities {
