@@ -70,7 +70,10 @@ gulp.task('styles', function() {
     'app/styles/**/*.css'
   ])
     .pipe($.changed('styles', {extension: '.scss'}))
-    .pipe($.sass({precision: 10}))
+    .pipe($.sass({
+      errLogToConsole: true,
+      precision: 10
+    }))
     .on('error', console.error.bind(console))
     .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     .pipe(gulp.dest('.tmp/styles'))
