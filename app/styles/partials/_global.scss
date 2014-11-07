@@ -69,9 +69,14 @@ a {
   background-color: #FFDA74;
 }
 
-#about .lead a {
+.global-section .lead {
+  line-height: 1.6;
+}
+
+.global-section .lead a {
   color: inherit;
   text-decoration: underline;
+  padding: 8px 0;
 }
 
 #activities {
