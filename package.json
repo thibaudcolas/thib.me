@@ -10,6 +10,7 @@
   "devDependencies": {
     "apache-server-configs": "^2.11.0",
     "browser-sync": "^1.6.3",
+    "critical": "^0.4.0",
     "del": "^0.1.2",
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^1.0.1",

@@ -7,6 +7,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
+var critical = require('critical');
 var reload = browserSync.reload;
 var deploy = require('gulp-gh-pages');
 
@@ -105,13 +106,24 @@ gulp.task('html', function() {
     .pipe(assets.restore())
     .pipe($.useref())
     // Minify Any HTML
-    .pipe($.if('*.html', $.replace('<script src', '<script async defer src')))
-    .pipe($.if('*.html', $.replace('<link rel="stylesheet" href="styles/main.min.css">', '<noscript><link rel="stylesheet" href="styles/main.min.css"></noscript>')))
-    .pipe($.if('*.html', $.replace('// build:', '')))
     .pipe($.if('*.html', $.minifyHtml()))
+    .pipe($.if('*.html', $.replace('<script src', '<script async defer src')))
     // Output Files
     .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'html'}));
+});
+
+// Inline critical path CSS
+gulp.task('critical', function() {
+  critical.generateInline({
+    base: 'dist/',
+    src: 'index.html',
+    styleTarget: 'styles/main.min.css',
+    htmlTarget: 'index.html',
+    width: 1024,
+    height: 768,
+    minify: false
+  });
 });
 
 // Clean Output Directory
@@ -140,7 +152,8 @@ gulp.task('serve:dist', ['default'], function() {
 
 // Build Production Files, the Default Task
 gulp.task('build', ['clean'], function(cb) {
-  runSequence('styles', ['lint', 'html', 'images', 'fonts', 'copy'], cb);
+  // runSequence('styles', ['lint', 'html', 'images', 'fonts', 'copy'], cb);
+  runSequence('styles', ['html', 'copy'], ['lint', 'critical', 'images', 'fonts'], cb);
 });
 
 // Run PageSpeed Insights
