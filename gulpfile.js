@@ -105,10 +105,8 @@ gulp.task('html', function() {
     .pipe(assets.restore())
     .pipe($.useref())
     // Minify Any HTML
-    .pipe($.if('*.html', $.replace('<script src', '<script async defer src')))
-    .pipe($.if('*.html', $.replace('<link rel="stylesheet" href="styles/main.min.css">', '<noscript><link rel="stylesheet" href="styles/main.min.css"></noscript>')))
-    .pipe($.if('*.html', $.replace('// build:', '')))
     .pipe($.if('*.html', $.minifyHtml()))
+    .pipe($.if('*.html', $.replace('<script src', '<script async defer src')))
     // Output Files
     .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'html'}));

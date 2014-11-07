@@ -7,7 +7,6 @@
     "bootstrap-css-only": "*",
     "fittext": "*",
     "domready": "*",
-    "fastclick": "*",
-    "loadcss": "~0.1.2"
+    "fastclick": "*"
   }
 }
