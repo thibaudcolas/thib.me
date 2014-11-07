@@ -6,4 +6,4 @@ User-agent: *
 Disallow:
 
 # Tell the bots where the sitemap is located.
-Sitemap: http://thibaudcolas.fr/sitemap.xml
+Sitemap: http://thib.me/sitemap.xml

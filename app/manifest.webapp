@@ -2,7 +2,7 @@
   "version": "0.3.0",
   "name": "Thibaud Colas",
   "launch_path": "/index.html",
-  "description": "Thibaud Colas | Software Engineer interested in all things Web. I read The Pragmatic Programmer and commit on GitHub.",
+  "description": "Thibaud Colas, a Software Engineer specialized in Web technologies",
   "icons": {
     "128": "/icon-128x128.png",
     "256": "/icon-256x256.png",
@@ -10,7 +10,7 @@
   },
   "developer": {
     "name": "Thibaud Colas",
-    "url": "http://thibaudcolas.fr"
+    "url": "http://thib.me"
   },
   "installs_allowed_from": [
     "*"
@@ -21,7 +21,7 @@
   "locales": {
     "en": {
       "name": "Thibaud Colas",
-      "description": "Thibaud Colas | Software Engineer interested in all things Web. I read The Pragmatic Programmer and commit on GitHub."
+      "description": "Thibaud Colas, a Software Engineer specialized in Web technologies"
     }
   }
 }
