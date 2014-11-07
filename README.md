@@ -7,28 +7,25 @@ My personal website's repository.
 
 Tooling taken from Google's [Web Starter Kit](https://developers.google.com/web/starter-kit/).
 
-### Gulp
+### Install
 
 ```sh
 $ npm install --global gulp
-```
-
-```sh
 $ npm install
 ```
 
-### Gulp Commands
+### Build commands
 
 #### Watch For Changes & Automatically Refresh Across Devices
 
 ```sh
-$ gulp serve
+$ npm start
 ```
 
 ### Build & Optimize
 
 ```sh
-$ gulp
+$ npm run-script build
 ```
 
 #### Performance Insights
@@ -48,6 +45,10 @@ Built with [Adobe Kuler](https://color.adobe.com/create/color-wheel/?base=2&rule
 ### Icon font
 
 Custom font built with [IcoMoon](http://icomoon.io).
+
+### Highlight font
+
+I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 
 ## Browser Support
 
@@ -70,6 +71,9 @@ Custom font built with [IcoMoon](http://icomoon.io).
 - Images on top
 - Twitter integration
 - Kudos counter
+- Browserify
+- Test cases
+- Blog article
 - "More cards" button
 - New resume
 - Beautiful resume picture
@@ -79,4 +83,4 @@ Custom font built with [IcoMoon](http://icomoon.io).
 
 Site content available under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Source code under MIT license.
 
-Copyright 2014 Thibaud Colas
+Copyright © 2014 Thibaud Colas
