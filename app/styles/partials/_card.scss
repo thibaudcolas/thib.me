@@ -9,7 +9,7 @@
   margin: 15px 0;
   transition: background-color .3s $animationEasing, box-shadow .3s $animationEasing;
 
-  &:hover, &:focus, &:active {
+  &:hover, &:focus {
     color: inherit;
     text-decoration: none;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
@@ -18,6 +18,7 @@
   }
 
   &:active {
+    background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
   }
 }
