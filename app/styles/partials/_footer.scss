@@ -20,6 +20,13 @@
   user-select: none;
 }
 
+.last-links a {
+  display: block;
+  width: 200px;
+  text-align: right;
+  padding: 2px 0;
+}
+
 .top-link {
   &:before {
     content: '▲';
