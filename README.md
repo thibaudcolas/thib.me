@@ -16,21 +16,12 @@ $ npm install
 
 ### Build commands
 
-#### Watch For Changes & Automatically Refresh Across Devices
-
 ```sh
+$ # Watch For Changes & Automatically Refresh Across Devices
 $ npm start
-```
-
-### Build & Optimize
-
-```sh
+$ # Build & Optimize
 $ npm run-script build
-```
-
-#### Performance Insights
-
-```sh
+$ # Performance Insights
 $ gulp pagespeed
 ```
 
@@ -73,6 +64,13 @@ I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 - Kudos counter
 - Browserify
 - Test cases
+- ES6
+- Twilight SPARQL?
+- CloudFlare configuration
+- Full HTTPS
+- 404 fix
+- Redirect fix
+- HTTPS on other sites
 - Blog article
 - "More cards" button
 - New resume
