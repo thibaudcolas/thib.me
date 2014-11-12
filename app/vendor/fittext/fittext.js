@@ -21,7 +21,7 @@
   };
 
   var extend = function(obj,ext){
-    for(key in ext)
+    for(var key in ext)
       if(ext.hasOwnProperty(key))
         obj[key] = ext[key];
     return obj;

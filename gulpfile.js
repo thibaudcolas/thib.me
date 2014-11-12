@@ -9,6 +9,9 @@ var browserSync = require('browser-sync');
 var pagespeed = require('psi');
 var reload = browserSync.reload;
 var deploy = require('gulp-gh-pages');
+var browserify = require('browserify');
+var es6ify = require('es6ify');
+var source = require('vinyl-source-stream');
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -81,14 +84,25 @@ gulp.task('styles', function() {
     .pipe($.size({title: 'styles'}));
 });
 
+// Process JS with Browserify
+gulp.task('browserify', function() {
+  return browserify({debug: true})
+    .transform(es6ify)
+    .require(require.resolve('./app/scripts/main.js'), {entry: true})
+    .bundle()
+    // Pass desired output filename to vinyl-source-stream
+    .pipe(source('bundle.js'))
+    // Start piping stream to tasks!
+    .pipe(gulp.dest('.tmp/scripts'));
+});
+
 // Scan Your HTML For Assets & Optimize Them
-gulp.task('html', function() {
+gulp.task('html', ['browserify'], function() {
   var assets = $.useref.assets({searchPath: '{.tmp,app}'});
 
   return gulp.src('app/index.html')
     .pipe(assets)
     // Concatenate And Minify JavaScript
-    .pipe($.if('*.js', $.traceur({sourceMaps: true})))
     .pipe($.if('*.js', $.uglify()))
     // Remove Any Unused CSS
     .pipe($.if('*.css', $.uncss({
@@ -117,7 +131,7 @@ gulp.task('html', function() {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 // Watch Files For Changes & Reload
-gulp.task('serve', ['styles'], function() {
+gulp.task('serve', ['styles', 'browserify'], function() {
   browserSync({
     notify: false,
     server: ['.tmp', 'app']
@@ -125,7 +139,7 @@ gulp.task('serve', ['styles'], function() {
 
   gulp.watch(['app/index.html'], reload);
   gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['lint']);
+  gulp.watch(['app/scripts/**/*.js'], ['lint', 'browserify']);
   gulp.watch(['app/images/**/*'], reload);
 });
 

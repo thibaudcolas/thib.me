@@ -10,7 +10,10 @@
   "devDependencies": {
     "apache-server-configs": "^2.11.0",
     "browser-sync": "^1.6.3",
+    "browserify": "^6.3.2",
+    "browserify-shim": "^3.8.0",
     "del": "^0.1.2",
+    "es6ify": "^1.5.1",
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^1.0.1",
     "gulp-cache": "^0.2.4",
@@ -36,12 +39,22 @@
     "opn": "^1.0.0",
     "psi": "^0.1.5",
     "require-dir": "^0.1.0",
-    "run-sequence": "^1.0.1"
+    "run-sequence": "^1.0.1",
+    "vinyl-source-stream": "^1.0.0"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "private": true,
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "./app/vendor/fittext/fittext.js": "fitText",
+    "./app/vendor/fastclick/lib/fastclick.js": "FastClick"
+  },
   "scripts": {
     "start": "gulp serve",
     "test": "echo 'npm test not implemented'",
