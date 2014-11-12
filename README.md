@@ -65,12 +65,8 @@ I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 - Browserify
 - Test cases
 - ES6
+- Webmaster Tools
 - Twilight SPARQL?
-- CloudFlare configuration
-- Full HTTPS
-- 404 fix
-- Redirect fix
-- HTTPS on other sites
 - Blog article
 - "More cards" button
 - New resume
