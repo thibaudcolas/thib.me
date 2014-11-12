@@ -64,7 +64,6 @@ I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 - Kudos counter
 - Browserify
 - Test cases
-- ES6
 - Webmaster Tools
 - Twilight SPARQL?
 - Blog article

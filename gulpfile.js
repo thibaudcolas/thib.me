@@ -28,7 +28,7 @@ gulp.task('lint', function() {
     .pipe(reload({stream: true, once: true}))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
-    .pipe($.jscs())
+    .pipe($.jscs({esnext: true}))
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
@@ -88,6 +88,7 @@ gulp.task('html', function() {
   return gulp.src('app/index.html')
     .pipe(assets)
     // Concatenate And Minify JavaScript
+    .pipe($.if('*.js', $.traceur({sourceMaps: true})))
     .pipe($.if('*.js', $.uglify()))
     // Remove Any Unused CSS
     .pipe($.if('*.css', $.uncss({
