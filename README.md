@@ -55,21 +55,23 @@ I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 
 ## TODO
 
-- GitHub repos integration
-- GitHub card integration https://github.com/lepture/github-cards
-- Stackoverflow flair integration
-- Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
-- Images on top
-- Twitter integration
-- Critical path
-- Kudos counter
-- Webmaster Tools
-- Twilight SPARQL?
-- Blog article
-- "More cards" button
-- New resume
-- Beautiful resume picture
-- http://www.html5tricks.com/demo/pure-css3-weather-icon/index.html
+- 1) New resume
+- 1) Beautiful resume picture
+- 2) GitHub repos integration
+- 2) GitHub card integration https://github.com/lepture/github-cards
+- 2) French content
+- 2) Critical path
+- 2) Kudos counter
+- 2) Webmaster Tools
+- 2) Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
+- 3) Stackoverflow flair integration
+- 3) Images on top
+- 3) Twitter integration
+- 3) ES6 modules
+- 3) Twilight SPARQL?
+- 3) "More cards" button
+- 3) Work experience section
+- 3) http://www.html5tricks.com/demo/pure-css3-weather-icon/index.html
 
 ## License
 
