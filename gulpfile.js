@@ -12,6 +12,7 @@ var deploy = require('gulp-gh-pages');
 var browserify = require('browserify');
 var es6ify = require('es6ify');
 var source = require('vinyl-source-stream');
+var karma = require('karma').server;
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -33,6 +34,13 @@ gulp.task('lint', function() {
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.jscs({esnext: true}))
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+});
+
+gulp.task('test', ['lint'], function(cb) {
+  karma.start({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, cb);
 });
 
 // Optimize Images

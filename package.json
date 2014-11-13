@@ -1,6 +1,6 @@
 {
   "name": "thibaudcolas",
-  "version": "0.3.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/ThibWeb/thibaudcolas",
   "description": "My personal website's repository",
   "repository": {
@@ -61,7 +61,7 @@
   },
   "scripts": {
     "start": "gulp serve",
-    "test": "echo 'npm test not implemented'",
+    "test": "gulp test",
     "build": "gulp build",
     "deploy": "gulp build && gulp deploy"
   }
