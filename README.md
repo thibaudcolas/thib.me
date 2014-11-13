@@ -61,6 +61,7 @@ I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 - Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
 - Images on top
 - Twitter integration
+- Critical path
 - Kudos counter
 - Webmaster Tools
 - Twilight SPARQL?
