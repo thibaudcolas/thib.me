@@ -12,6 +12,6 @@ describe('the decoder function', function() {
   });
 
   it('transforms input into my mail address', function() {
-    expect(decode([116, 105, 107, 101, 68, 121, 110, 112, 106, 55, 119, 112])).toEqual('thib@thib.me');
+    expect(decode([116, 105, 107, 101, 68, 121, 110, 112, 106])).toEqual('thib@thib');
   });
 });
