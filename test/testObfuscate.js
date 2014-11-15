@@ -1,17 +1,23 @@
 'use strict';
 
-const decode = require('../app/scripts/obfuscate').default.decode;
+const {decode, encode} = require('../app/scripts/obfuscate').default;
 
-describe('the decoder function', function() {
-  it('returns nothing if nothing is entered', function () {
+describe('the encode function', function() {
+  it('outputs nothing if nothing is entered', function () {
+    expect(encode('')).toEqual([]);
+  });
+});
+
+describe('the decode function', function() {
+  it('outputs nothing if nothing is entered', function () {
     expect(decode([])).toEqual('');
   });
 
-  it('more or less converts integers to chars', function () {
+  it('converts integers to chars', function () {
     expect(decode([97])).toEqual('a');
   });
 
-  it('transforms input into my mail address', function() {
+  it('can hide my mail address', function() {
     expect(decode([116, 105, 107, 101, 68, 121, 110, 112, 106])).toEqual('thib@thib');
   });
 });

@@ -1,7 +1,12 @@
 export default {
-  decode(array) {
+  encode(str) {
     'use strict';
 
-    return array.reduce((acc, char, i) => acc + String.fromCharCode(char - i), '');
+    return [];
+  },
+  decode(arr) {
+    'use strict';
+
+    return arr.reduce((acc, char, i) => acc + String.fromCharCode(char - i), '');
   }
 };
