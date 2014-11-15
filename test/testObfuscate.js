@@ -29,3 +29,9 @@ describe('the decode function', function() {
     expect(decode([116, 105, 107, 101, 68, 121, 110, 112, 106])).toEqual('thib@thib');
   });
 });
+
+describe('obfuscation functions can be chained', function() {
+  it('looks fun', function () {
+    expect(decode(encode(decode(encode('Rhinoceros!'))))).toEqual('Rhinoceros!');
+  });
+});
