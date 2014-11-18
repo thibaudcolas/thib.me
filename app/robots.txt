@@ -6,4 +6,4 @@ User-agent: *
 Disallow:
 
 # Tell the bots where the sitemap is located.
-Sitemap: http://thib.me/sitemap.xml
+Sitemap: https://thib.me/sitemap.xml
