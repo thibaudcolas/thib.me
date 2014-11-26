@@ -53,6 +53,30 @@ I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 * Android / Chrome 4.4, 4.4.3
 * BlackBerry 10
 
+### Tests
+
+Static code analysis:
+
+- http://www.jshint.com/
+- https://github.com/jscs-dev/node-jscs
+
+Unit testing:
+
+- https://jasmine.github.io/
+- https://karma-runner.github.io/
+- http://phantomjs.org/
+
+Performance:
+
+- http://gtmetrix.com/
+- http://webpagetest.org/
+- https://developers.google.com/speed/pagespeed/insights/
+
+Accessibility:
+
+- http://tenon.io/
+- https://leaverou.github.io/contrast-ratio/
+
 ## TODO
 
 - 1) New resume
