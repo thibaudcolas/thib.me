@@ -49,15 +49,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .global-section__title {
   .anchor-link {
-    display: none;
+    display: block;
     text-decoration: none;
+    color: $colorText;
+  }
+
+  .anchor-icon {
+    display: none;
     position: relative;
     top: -3px;
     font-size: 50%;
     color: rgba(0, 0, 0, 0.5);
   }
 
-  &:hover .anchor-link, &:focus .anchor-link {
+  &:hover .anchor-icon, &:focus .anchor-icon {
     display: inline;
     color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
