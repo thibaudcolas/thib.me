@@ -20,7 +20,7 @@ $ npm install
 $ # Watch For Changes & Automatically Refresh Across Devices
 $ npm start
 $ # Build & Optimize
-$ npm run-script build
+$ npm run build
 $ # Performance Insights
 $ gulp pagespeed
 ```
@@ -91,7 +91,6 @@ Accessibility:
 - 3) Stackoverflow flair integration
 - 3) Images on top
 - 3) Twitter integration
-- 3) ES6 modules
 - 3) Twilight SPARQL?
 - 3) "More cards" button
 - 3) Work experience section
