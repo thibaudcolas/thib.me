@@ -41,6 +41,12 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 15px;
 }
 
+.anchor-icon {
+  &:before {
+    content: '◄';
+  }
+}
+
 .global-section__title {
   .anchor-link {
     display: none;
@@ -49,10 +55,6 @@ h1, h2, h3, h4, h5, h6 {
     top: -3px;
     font-size: 50%;
     color: rgba(0, 0, 0, 0.5);
-
-    &:before {
-      content: '◄';
-    }
   }
 
   &:hover .anchor-link, &:focus .anchor-link {
