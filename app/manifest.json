@@ -1,0 +1,24 @@
+{
+  "name": "Thibaud Colas",
+  "short_name": "Thib.me",
+  "icons": [
+    {
+      "src": "icon-128x128.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "apple-touch-icon-152x152.png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "mstile-144x144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone"
+}
