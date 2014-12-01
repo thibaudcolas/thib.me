@@ -20,6 +20,14 @@ body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+::selection {
+  background: $colorSelection;
+}
+
+::-moz-selection {
+  background: $colorSelection;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $fontHighlight;
   font-weight: 300;
@@ -34,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
   text-decoration: underline;
   padding: 8px 0;
-  @include smart-underline(#FFDA74, $colorText, #f00);
+  @include smart-underline(#FFDA74, $colorText, $colorSelection);
 }
 
 .global-section:nth-of-type(n+2) {
