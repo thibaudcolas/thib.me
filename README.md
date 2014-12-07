@@ -1,4 +1,4 @@
-[thibaudcolas](http://thib.me) [![Build Status](https://travis-ci.org/ThibWeb/thibaudcolas.svg?branch=master)](https://travis-ci.org/ThibWeb/thibaudcolas) [![devDependency Status](https://david-dm.org/ThibWeb/thibaudcolas/dev-status.svg)](https://david-dm.org/ThibWeb/thibaudcolas#info=devDependencies)
+su[thibaudcolas](http://thib.me) [![Build Status](https://travis-ci.org/ThibWeb/thibaudcolas.svg?branch=master)](https://travis-ci.org/ThibWeb/thibaudcolas) [![devDependency Status](https://david-dm.org/ThibWeb/thibaudcolas/dev-status.svg)](https://david-dm.org/ThibWeb/thibaudcolas#info=devDependencies)
 ============
 
 My personal website's repository.
@@ -98,6 +98,6 @@ Accessibility:
 
 ## License
 
-Site content available under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Source code under MIT license.
+Site content available under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Source code under ISC license.
 
 Copyright © 2014 Thibaud Colas
