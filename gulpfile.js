@@ -161,7 +161,7 @@ gulp.task('serve:dist', ['default'], function() {
 
 // Build Production Files, the Default Task
 gulp.task('build', ['clean'], function(cb) {
-  runSequence('styles', ['lint', 'html', 'images', 'fonts', 'copy'], cb);
+  runSequence('styles', ['test', 'html', 'images', 'fonts', 'copy'], cb);
 });
 
 // Run PageSpeed Insights
