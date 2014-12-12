@@ -6,6 +6,7 @@
   const domready = require('../vendor/domready/ready');
   const fitText = require('../vendor/fittext/fittext');
   const FastClick = require('../vendor/fastclick/lib/fastclick');
+  const smoothScroll = require('../vendor/smooth-scroll.js/dist/js/smooth-scroll');
   const decode = require('./obfuscate').default.decode;
 
   const encodedMail = [116, 105, 107, 101, 68, 121, 110, 112, 106, 55, 119, 112];
@@ -16,5 +17,9 @@
     document.getElementsByClassName('js-email-replace')[0].href = 'mailto:' + decode(encodedMail);
 
     FastClick.attach(document.body);
+
+    smoothScroll.init({
+      speed: 300
+    });
   });
 })();

@@ -7,6 +7,7 @@
     "bootstrap-css-only": "*",
     "fittext": "*",
     "domready": "*",
-    "fastclick": "*"
+    "fastclick": "*",
+    "smooth-scroll.js": "*"
   }
 }
