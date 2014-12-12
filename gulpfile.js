@@ -10,7 +10,7 @@ var pagespeed = require('psi');
 var reload = browserSync.reload;
 var deploy = require('gulp-gh-pages');
 var browserify = require('browserify');
-var es6ify = require('es6ify');
+var to5Browserify = require("6to5-browserify");
 var source = require('vinyl-source-stream');
 var karma = require('karma').server;
 
@@ -95,7 +95,7 @@ gulp.task('styles', function() {
 // Process JS with Browserify
 gulp.task('browserify', function() {
   return browserify({debug: true})
-    .transform(es6ify)
+    .transform(to5Browserify)
     .require(require.resolve('./app/scripts/main.js'), {entry: true})
     .bundle()
     // Pass desired output filename to vinyl-source-stream

@@ -41,7 +41,7 @@ module.exports = function(karma) {
     singleRun: true,
     // Browserify config (all optional)
     browserify: {
-      transform: ['es6ify'],
+      transform: ['6to5-browserify'],
       watch: false,
       debug: false
     },
