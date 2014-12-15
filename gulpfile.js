@@ -10,7 +10,7 @@ var pagespeed = require('psi');
 var reload = browserSync.reload;
 var deploy = require('gulp-gh-pages');
 var browserify = require('browserify');
-var to5Browserify = require("6to5-browserify");
+var to5Browserify = require('6to5-browserify');
 var source = require('vinyl-source-stream');
 var karma = require('karma').server;
 

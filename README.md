@@ -99,6 +99,9 @@ Monitoring:
 - 3) "More cards" button
 - 3) Work experience section
 - 3) http://www.html5tricks.com/demo/pure-css3-weather-icon/index.html
+- 4) Error monitoring with Sentry https://www.getsentry.com/
+- 4) Add js-complexity report via https://www.npmjs.com/package/gulp-complexity
+- 4) Code coverage for the tests
 
 ## Monitoring
 
