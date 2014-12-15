@@ -77,6 +77,10 @@ Accessibility:
 - http://tenon.io/
 - https://leaverou.github.io/contrast-ratio/
 
+Monitoring:
+
+- http://www.pingdom.com
+
 ## TODO
 
 - 1) New resume
@@ -95,6 +99,12 @@ Accessibility:
 - 3) "More cards" button
 - 3) Work experience section
 - 3) http://www.html5tricks.com/demo/pure-css3-weather-icon/index.html
+
+## Monitoring
+
+Site uptime and response time checked with Pingdom:
+
+[![Response time Report for thib.me: Last 30 days](https://share.pingdom.com/banners/5f5f5fc1)](http://stats.pingdom.com/22u60my6ll2k/1451905)
 
 ## License
 
