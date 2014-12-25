@@ -38,6 +38,10 @@
   padding-left: 0;
 }
 
+.meta-links li {
+  margin-bottom: 10px;
+}
+
 .meta-links a {
   display: block;
 
@@ -50,14 +54,11 @@
   }
 }
 
-.author-link {
-  margin-bottom: 15px;
-}
-
 .fork-link .icon-github {
   color: #eee;
 }
 
+/*
 .resume-link {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -66,6 +67,7 @@
 .resume-link .icon-file-pdf {
   color: #a00000;
 }
+*/
 
 .copyright-icon {
   &:before {
@@ -73,10 +75,12 @@
   }
 }
 
+/*
 .license-logo {
   position: relative;
   top: -1px;
 }
+*/
 
 .meta-links .big-icon {
   font-size: 32px;
