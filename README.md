@@ -84,23 +84,20 @@ Monitoring:
 ## TODO
 
 - 1) New resume
-- 1) Beautiful resume picture
 - 2) GitHub repos integration
 - 2) GitHub card integration https://github.com/lepture/github-cards
-- 2) French content
 - 2) Critical path
 - 2) Kudos counter
-- 2) Webmaster Tools
 - 2) Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
 - 3) Stackoverflow flair integration
 - 3) Images on top
 - 3) Twitter integration
-- 3) Twilight SPARQL?
-- 3) "More cards" button
+- 3) "More cards" button (Twilight SPARQL, Skimbo, Koans, iCopter) https://www.youtube.com/watch?v=lR7QnU34BGs
 - 3) Work experience section
 - 3) http://www.html5tricks.com/demo/pure-css3-weather-icon/index.html
 - 4) Error monitoring with Sentry https://www.getsentry.com/
 - 4) Add js-complexity report via https://www.npmjs.com/package/gulp-complexity
+- 4) Add scss-lint via gulp-scss-lint
 - 4) Code coverage for the tests
 
 ## Monitoring
