@@ -54,10 +54,13 @@ gulp.task('images', function() {
     .pipe($.size({title: 'images'}));
 });
 
-// Copy All Files At The Root Level (app)
+// Copy all static files
 gulp.task('copy', function() {
   return gulp.src([
     'app/**',
+    '!app/vendor/**',
+    '!app/styles/**',
+    '!app/scripts/**',
     '!app/index.html',
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
@@ -166,10 +169,6 @@ gulp.task('build', ['clean'], function(cb) {
 // Run PageSpeed Insights
 // Update `url` below to the public URL for your site
 gulp.task('pagespeed', pagespeed.bind(null, {
-  // By default, we use the PageSpeed Insights
-  // free (no API key) tier. You can use a Google
-  // Developer API key if you have one. See
-  // http://goo.gl/RkN0vE for info key: 'YOUR_API_KEY'
   url: 'https://thibweb.github.io/thibaudcolas/',
   strategy: 'mobile'
 }));
