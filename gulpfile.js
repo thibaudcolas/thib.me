@@ -50,14 +50,14 @@ gulp.task('images', function() {
       progressive: true,
       interlaced: true
     })))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('app/images'))
     .pipe($.size({title: 'images'}));
 });
 
 // Copy All Files At The Root Level (app)
 gulp.task('copy', function() {
   return gulp.src([
-    'app/*',
+    'app/**',
     '!app/index.html',
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
@@ -68,7 +68,7 @@ gulp.task('copy', function() {
 
 // Copy Web Fonts To Dist
 gulp.task('fonts', function() {
-  return gulp.src(['app/fonts/**'])
+  return gulp.src(['app/fonts/**/*'])
     .pipe(gulp.dest('dist/fonts'))
     .pipe($.size({title: 'fonts'}));
 });
@@ -151,7 +151,7 @@ gulp.task('serve', ['styles', 'browserify'], function() {
 });
 
 // Build and serve the output from the dist build
-gulp.task('serve:dist', ['default'], function() {
+gulp.task('serve:dist', ['build'], function() {
   browserSync({
     notify: false,
     server: 'dist'
@@ -160,7 +160,7 @@ gulp.task('serve:dist', ['default'], function() {
 
 // Build Production Files, the Default Task
 gulp.task('build', ['clean'], function(cb) {
-  runSequence('styles', ['test', 'html', 'images', 'fonts', 'copy'], cb);
+  runSequence('styles', ['test', 'html', 'copy'], cb);
 });
 
 // Run PageSpeed Insights
@@ -182,6 +182,3 @@ gulp.task('deploy', function() {
 
 // Build Production Files, the Default Task
 gulp.task('default', ['build']);
-
-// Load custom tasks from the `tasks` directory
-try { require('require-dir')('tasks'); } catch (err) {}
