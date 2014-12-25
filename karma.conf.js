@@ -47,7 +47,5 @@ module.exports = function(karma) {
     },
     // Add browserify to preprocessors
     preprocessors: {'test/*': ['browserify']}
-    // Not required if you've installed karma-browserify via npm.
-    //plugins: ['karma-*', require('../')]
   });
 };
