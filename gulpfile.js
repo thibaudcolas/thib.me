@@ -2,6 +2,7 @@
 
 // Include Gulp & Tools We'll Use
 var gulp = require('gulp');
+var fs = require('fs');
 var $ = require('gulp-load-plugins')();
 var del = require('del');
 var runSequence = require('run-sequence');
@@ -107,7 +108,7 @@ gulp.task('browserify', function() {
 });
 
 // Scan Your HTML For Assets & Optimize Them
-gulp.task('html', ['browserify'], function() {
+gulp.task('assets', ['styles', 'browserify'], function() {
   var assets = $.useref.assets({searchPath: '{.tmp,app}'});
 
   return gulp.src('app/index.html')
@@ -129,9 +130,17 @@ gulp.task('html', ['browserify'], function() {
     .pipe($.if('*.css', $.minifyCss({keepSpecialComments : 0})))
     .pipe(assets.restore())
     .pipe($.useref())
-    // Minify Any HTML
-    .pipe($.if('*.html', $.minifyHtml()))
-    .pipe($.if('*.html', $.replace('<script src', '<script async defer src')))
+    // Output Files
+    .pipe(gulp.dest('dist'))
+    .pipe($.size({title: 'assets'}));
+});
+
+// Transform main html.
+gulp.task('html', ['assets'], function() {
+  return gulp.src('dist/index.html')
+    .pipe($.minifyHtml())
+    .pipe($.replace('<script src=scripts/main.min.js></script>', '<script async defer>' + fs.readFileSync('dist/scripts/main.min.js', 'utf8') + '</script>'))
+    .pipe($.replace('<link rel=stylesheet href=styles/main.min.css>', '<style>' + fs.readFileSync('dist/styles/main.min.css', 'utf8') + '</style>'))
     // Output Files
     .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'html'}));
@@ -163,7 +172,7 @@ gulp.task('serve:dist', ['build'], function() {
 
 // Build Production Files, the Default Task
 gulp.task('build', ['clean'], function(cb) {
-  runSequence('styles', ['test', 'html', 'copy'], cb);
+  runSequence(['test', 'html', 'copy'], cb);
 });
 
 // Run PageSpeed Insights
