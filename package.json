@@ -8,7 +8,7 @@
     "url": "git://github.com/ThibWeb/thibaudcolas"
   },
   "devDependencies": {
-    "6to5-browserify": "^1.4.0",
+    "6to5ify": "^2.0.0",
     "apache-server-configs": "^2.11.0",
     "browser-sync": "^1.6.3",
     "browserify": "^6.3.2",

@@ -41,9 +41,9 @@ module.exports = function(karma) {
     singleRun: true,
     // Browserify config (all optional)
     browserify: {
-      transform: ['6to5-browserify'],
+      transform: ['6to5ify'],
       watch: false,
-      debug: false
+      debug: true
     },
     // Add browserify to preprocessors
     preprocessors: {'test/*': ['browserify']}
