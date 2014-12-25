@@ -1,5 +1,7 @@
 'use strict';
 
+var path = require('path');
+
 // Include Gulp & Tools We'll Use
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
@@ -38,7 +40,7 @@ gulp.task('lint', function() {
 
 gulp.task('test', ['lint'], function(cb) {
   karma.start({
-    configFile: __dirname + '/karma.conf.js',
+    configFile: path.join(__dirname, '/karma.conf.js'),
     singleRun: true
   }, cb);
 });
