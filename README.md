@@ -86,7 +86,6 @@ Monitoring:
 - 1) New resume
 - 2) GitHub repos integration
 - 2) GitHub card integration https://github.com/lepture/github-cards
-- 2) Critical path
 - 2) Kudos counter
 - 2) Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
 - 3) Stackoverflow flair integration
