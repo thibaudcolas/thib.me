@@ -24,11 +24,12 @@
         <foaf:family_name>Colas</foaf:family_name>
         <foaf:nick>ThibWeb</foaf:nick>
         <foaf:mbox_sha1sum>7b6865dfe03fc198ed3d6346afbca5136745fbb7</foaf:mbox_sha1sum>
-        <foaf:homepage rdf:resource="http://thib.me/"/>
+        <foaf:homepage rdf:resource="http://thib.me"/>
         <dc:description xml:lang="en">I'm a Full-Stack Web Developer who loves to create great things.</dc:description>
 
         <foaf:workInfoHomepage rdf:resource="http://www.cgi.com/" rdfs:label="CGI Montpellier"/>
         <foaf:workInfoHomepage rdf:resource="http://www.lirmm.fr" rdfs:label="LIRMM Research Laboratory"/>
+        <foaf:workInfoHomepage rdf:resource="http://www.cornelius-communication.com" rdfs:label="Cornelius Communication"/>
         <foaf:schoolHomepage rdf:resource="http://www.univ-montp2.fr" rdfs:label="Montpellier 2 University"/>
         <foaf:schoolHomepage rdf:resource="http://www.u-psud.fr" rdfs:label="Paris 11 University"/>
         <foaf:schoolHomepage rdf:resource="http://www.iedparis8.net" rdfs:label="Paris 8 University IED"/>
@@ -57,8 +58,8 @@
         <foaf:account>
             <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-linkedin">
                 <foaf:name>LinkedIn</foaf:name>
-                <foaf:accountServiceHomepage rdf:resource="http://www.linkedin.com/"/>
-                <foaf:page rdf:resource="http://www.linkedin.com/in/thibaudcolas"/>
+                <foaf:accountServiceHomepage rdf:resource="https://www.linkedin.com/"/>
+                <foaf:page rdf:resource="https://www.linkedin.com/in/thibaudcolas"/>
                 <foaf:accountName>thibaudcolas</foaf:accountName>
             </foaf:OnlineAccount>
         </foaf:account>
@@ -66,11 +67,31 @@
         <foaf:account>
             <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-twitter">
                 <foaf:name>Twitter</foaf:name>
-                <foaf:accountServiceHomepage rdf:resource="http://twitter.com/"/>
-                <foaf:page rdf:resource="http://twitter.com/thibweb"/>
+                <foaf:accountServiceHomepage rdf:resource="https://twitter.com/"/>
+                <foaf:page rdf:resource="https://twitter.com/thibweb"/>
                 <foaf:accountName>ThibWeb</foaf:accountName>
             </foaf:OnlineAccount>
         </foaf:account>
+
+        <foaf:account>
+            <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-soundcloud">
+                <foaf:name>SoundCloud</foaf:name>
+                <foaf:accountServiceHomepage rdf:resource="https://soundcloud.com/"/>
+                <foaf:page rdf:resource="https://soundcloud.com/thibweb"/>
+                <foaf:accountName>ThibWeb</foaf:accountName>
+            </foaf:OnlineAccount>
+        </foaf:account>
+
+        <foaf:account>
+            <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-npm">
+                <foaf:name>npm</foaf:name>
+                <foaf:accountServiceHomepage rdf:resource="https://www.npmjs.com/"/>
+                <foaf:page rdf:resource="https://www.npmjs.com/~thibweb"/>
+                <foaf:accountName>ThibWeb</foaf:accountName>
+            </foaf:OnlineAccount>
+        </foaf:account>
+
+
 
         <foaf:knows>
           <foaf:Person>
