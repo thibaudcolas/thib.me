@@ -1,0 +1,18 @@
+{
+  "defaultMealPerDay": 2,
+  "defaultPeoplePerMeal": 2,
+  "singleMealBudget": 5,
+  "unit": "$",
+  "expenses": [
+    {
+      "date": "",
+      "amount": 0
+    }
+  ],
+  "meals": [
+    {
+      "date": "",
+      "number": 0
+    }
+  ]
+}
