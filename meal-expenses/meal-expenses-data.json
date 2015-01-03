@@ -1,14 +1,11 @@
 {
-  "defaultMealPerDay": 2,
-  "defaultPeoplePerMeal": 2,
+  "mealPerDay": 4,
   "singleMealBudget": 5,
   "unit": "$",
-  "expenses": [
-    {
-      "date": "",
-      "amount": 0
-    }
-  ],
+  "expenses": {
+    "2015-01-02": 200,
+    "2015-01-30": 100
+  },
   "meals": [
     {
       "date": "",

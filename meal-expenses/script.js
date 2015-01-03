@@ -7,12 +7,7 @@
 
   var day = d3.time.format("%w"),
       week = d3.time.format("%U"),
-      percent = d3.format(".1%"),
       format = d3.time.format("%Y-%m-%d");
-
-  var color = d3.scale.quantize()
-      .domain([-0.05, 0.05])
-      .range(d3.range(11).map(function(d) { return 'q' + d + '-11'; }));
 
   var svg = d3.select('body').selectAll('svg')
       .data(d3.range(2015, 2016))
@@ -62,9 +57,20 @@
   }
 
   d3.json('meal-expenses-data.json', function(error, json) {
-    console.log(json);
-  });
+    var days = d3.time.days(new Date(2015, 0, 1), new Date(2016, 0, 1));
+    var data = {};
+    days.forEach(function (d) {
+      data[format(d)] = 20;
+    });
 
-  d3.select(self.frameElement).style("height", "2910px");
+    var color = d3.scale.quantize()
+      .domain([0, json.mealPerDay * json.singleMealBudget * 2])
+      .range(d3.range(11).map(function(d) { return 'q' + d + '-11'; }));
+
+    rect.filter(function(d) { console.log(d); return d in data; })
+        .attr('class', function(d) { return 'day ' + color(data[d]); })
+      .select('title')
+        .text(function(d) { return d + ": " + json.unit + data[d]; });
+  });
 
 })(window.d3);
