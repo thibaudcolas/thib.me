@@ -21,7 +21,7 @@
   svg.append('text')
     .attr('transform', 'translate(-10,' + cellSize * 3.5 + ') rotate(-90)')
     .style('text-anchor', 'middle')
-    .attr('class', 'month-label')
+    .attr('class', 'year-label')
     .text(function(d) { return d; });
 
   var rect = svg.selectAll('.day')
@@ -57,17 +57,41 @@
   }
 
   d3.json('meal-expenses-data.json', function(error, json) {
-    var days = d3.time.days(new Date(2015, 0, 1), new Date(2016, 0, 1));
+    // var days = d3.time.days(new Date(2015, 0, 1), new Date(2016, 0, 1));
     var data = {};
-    days.forEach(function (d) {
-      data[format(d)] = 20;
-    });
+
+    var budgetPerDay = json.mealPerDay * json.singleMealBudget;
+    var expenses = d3.map(json.expenses)
+      .forEach(function (date, amount) {
+        var start = format.parse(date);
+        var end = d3.time.format('%j').parse('' + (d3.time.dayOfYear(start) + 1 + (amount / budgetPerDay)));
+        end.setFullYear(start.getFullYear());
+        console.log(date, amount, end);
+        d3.time.days(start, end).forEach(function (d) {
+          d = format(d);
+          data[d] = (data[d] || 0) + budgetPerDay;
+        });
+      });
+
+    // days.forEach(function (d) {
+    //   d = format(d);
+    //   var dailyExpense = 0;
+    //   if (json.expenses[d]) {
+    //     dailyExpense += Math.min(budgetPerDay, json.expenses[d]);
+    //   }
+    //   data[d] = dailyExpense;
+    // });
+
+    // console.log(d3.range(0, json.expenses['2015-01-02'] / budgetPerDay).map(function (d) {
+    //   return budgetPerDay;
+    // }));
+
 
     var color = d3.scale.quantize()
-      .domain([0, json.mealPerDay * json.singleMealBudget * 2])
+      .domain([0, budgetPerDay * 4])
       .range(d3.range(11).map(function(d) { return 'q' + d + '-11'; }));
 
-    rect.filter(function(d) { console.log(d); return d in data; })
+    rect.filter(function(d) { return d in data; })
         .attr('class', function(d) { return 'day ' + color(data[d]); })
       .select('title')
         .text(function(d) { return d + ": " + json.unit + data[d]; });
