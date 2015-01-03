@@ -10,7 +10,7 @@
       week = d3.time.format("%U"),
       format = d3.time.format("%Y-%m-%d");
 
-  var svg = d3.select('body').selectAll('svg')
+  var svg = d3.select('#viz').selectAll('svg')
       .data(d3.range(2015, 2016))
     .enter().append('svg')
       .attr('width', width)
@@ -20,7 +20,7 @@
       .attr('transform', 'translate(' + ((width - cellSize * 53) / 2) + ',' + (height - cellSize * 7 - 1) + ')');
 
   svg.append('text')
-    .attr('transform', 'translate(-10,' + cellSize * 3.5 + ') rotate(-90)')
+    .attr('transform', 'translate(-20,' + cellSize * 3.5 + ') rotate(-90)')
     .style('text-anchor', 'middle')
     .attr('class', 'year-label')
     .text(function(d) { return d; });
@@ -61,7 +61,7 @@
         + 'H' + ((w0 + 1) * cellSize - (w0 === 0 ? margin3 : 0)) + 'Z';
   }
 
-  d3.json('meal-expenses-data.json', function(error, json) {
+  d3.json('meal-expenses.json', function(error, json) {
     // var days = d3.time.days(new Date(2015, 0, 1), new Date(2016, 0, 1));
     var data = {};
 

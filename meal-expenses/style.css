@@ -1,10 +1,10 @@
 body {
-  font: 10px sans-serif;
+  font: 16px sans-serif;
   shape-rendering: crispEdges;
 }
 
 .day {
-  fill: #eee;
+  fill: rgba(0, 0, 0, 0.03);
 }
 
 .day.today, .day:hover {
@@ -21,14 +21,14 @@ body {
 }
 
 /* Read Yellow Green */
-.RdYlGn .q0-11{fill:rgb(0,104,55);}
-.RdYlGn .q1-11{fill:rgb(26,152,80);}
-.RdYlGn .q2-11{fill:rgb(102,189,99);}
-.RdYlGn .q3-11{fill:rgb(166,217,106);}
-.RdYlGn .q4-11{fill:rgb(217,239,139);}
-.RdYlGn .q5-11{fill:rgb(255,255,191);}
-.RdYlGn .q6-11{fill:rgb(254,224,139);}
-.RdYlGn .q7-11{fill:rgb(253,174,97);}
-.RdYlGn .q8-11{fill:rgb(244,109,67);}
-.RdYlGn .q9-11{fill:rgb(215,48,39);}
-.RdYlGn .q10-11{fill:rgb(165,0,38);}
+.RdYlGn .q0-11{fill:rgba(0,104,55, 0.8);}
+.RdYlGn .q1-11{fill:rgba(26,152,80, 0.8);}
+.RdYlGn .q2-11{fill:rgba(102,189,99, 0.8);}
+.RdYlGn .q3-11{fill:rgba(166,217,106, 0.8);}
+.RdYlGn .q4-11{fill:rgba(217,239,139, 0.8);}
+.RdYlGn .q5-11{fill:rgba(255,255,191, 0.8);}
+.RdYlGn .q6-11{fill:rgba(254,224,139, 0.8);}
+.RdYlGn .q7-11{fill:rgba(253,174,97, 0.8);}
+.RdYlGn .q8-11{fill:rgba(244,109,67, 0.8);}
+.RdYlGn .q9-11{fill:rgba(215,48,39, 0.8);}
+.RdYlGn .q10-11{fill:rgba(165,0,38, 0.8);}
