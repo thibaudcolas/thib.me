@@ -14,6 +14,10 @@ body {
   stroke-width: 2px;
 }
 
+.month-label {
+  font-size: 2em;
+}
+
 /* Read Yellow Green */
 .RdYlGn .q0-11{fill:rgb(165,0,38)}
 .RdYlGn .q1-11{fill:rgb(215,48,39)}
