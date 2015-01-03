@@ -3,6 +3,7 @@
 
   var width = 960,
       height = 136,
+      cellSizeInner = 15,
       cellSize = 17;
 
   var day = d3.time.format("%w"),
@@ -28,8 +29,8 @@
       .data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
     .enter().append('rect')
       .attr('class', 'day')
-      .attr('width', cellSize)
-      .attr('height', cellSize)
+      .attr('width', cellSizeInner)
+      .attr('height', cellSizeInner)
       .attr('x', function(d) { return week(d) * cellSize; })
       .attr('y', function(d) { return day(d) * cellSize; })
       .datum(format);
@@ -66,33 +67,22 @@
         var start = format.parse(date);
         var end = d3.time.format('%j').parse('' + (d3.time.dayOfYear(start) + 1 + (amount / budgetPerDay)));
         end.setFullYear(start.getFullYear());
-        console.log(date, amount, end);
+
         d3.time.days(start, end).forEach(function (d) {
           d = format(d);
           data[d] = (data[d] || 0) + budgetPerDay;
         });
       });
 
-    // days.forEach(function (d) {
-    //   d = format(d);
-    //   var dailyExpense = 0;
-    //   if (json.expenses[d]) {
-    //     dailyExpense += Math.min(budgetPerDay, json.expenses[d]);
-    //   }
-    //   data[d] = dailyExpense;
-    // });
-
-    // console.log(d3.range(0, json.expenses['2015-01-02'] / budgetPerDay).map(function (d) {
-    //   return budgetPerDay;
-    // }));
-
-
     var color = d3.scale.quantize()
       .domain([0, budgetPerDay * 4])
       .range(d3.range(11).map(function(d) { return 'q' + d + '-11'; }));
 
     rect.filter(function(d) { return d in data; })
-        .attr('class', function(d) { return 'day ' + color(data[d]); })
+        .attr('class', function(d) {
+          var isToday = d === format((new Date()));
+          return 'day ' + color(data[d]) + (isToday ? ' today' : '');
+        })
       .select('title')
         .text(function(d) { return d + ": " + json.unit + data[d]; });
   });

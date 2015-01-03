@@ -4,14 +4,16 @@ body {
 }
 
 .day {
-  fill: #fff;
-  stroke: #ccc;
+  fill: #eee;
+}
+
+.day.today, .day:hover {
+  stroke: #333;
 }
 
 .month {
   fill: none;
   stroke: #000;
-  stroke-width: 2px;
 }
 
 .year-label {
