@@ -1,10 +1,10 @@
 (function (d3) {
   'use strict';
 
-  var width = 960,
-      height = 136,
-      cellSizeInner = 15,
-      cellSize = 17;
+  var width = 1200,
+      height = 150,
+      cellSizeInner = 17,
+      cellSize = 20;
 
   var day = d3.time.format("%w"),
       week = d3.time.format("%U"),
@@ -45,16 +45,20 @@
       .attr('d', monthPath);
 
   function monthPath(t0) {
-    var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+    var margin1 = 1,
+        margin2 = 2,
+        margin3 = 3,
+        t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
         d0 = +day(t0),
         w0 = +week(t0),
         d1 = +day(t1),
         w1 = +week(t1);
-    return 'M' + (w0 + 1) * cellSize + ',' + d0 * cellSize
-        + 'H' + w0 * cellSize + 'V' + 7 * cellSize
-        + 'H' + w1 * cellSize + 'V' + (d1 + 1) * cellSize
-        + 'H' + (w1 + 1) * cellSize + 'V' + 0
-        + 'H' + (w0 + 1) * cellSize + 'Z';
+
+    return 'M' + ((w0 + 1) * cellSize - (w0 === 0 ? margin3 : 0)) + ',' + (d0 * cellSize - (d0 === 0 ? margin2 : 0))
+        + 'H' + (w0 * cellSize - (w0 === 0 ? margin3 : 0)) + 'V' + (7 * cellSize + 0)
+        + 'H' + (w1 * cellSize - (w1 === 52 ? margin1 : 0)) + 'V' + ((d1 + 1) * cellSize - 0)
+        + 'H' + ((w1 + 1) * cellSize - (w1 === 52 ? margin1 : 0)) + 'V' + (0 - margin2)
+        + 'H' + ((w0 + 1) * cellSize - (w0 === 0 ? margin3 : 0)) + 'Z';
   }
 
   d3.json('meal-expenses-data.json', function(error, json) {
