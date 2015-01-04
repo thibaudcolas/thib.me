@@ -83,7 +83,6 @@ Monitoring:
 
 ## TODO
 
-- 1) New resume
 - 2) GitHub repos integration
 - 2) GitHub card integration https://github.com/lepture/github-cards
 - 2) Kudos counter
