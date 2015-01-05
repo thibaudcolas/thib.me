@@ -170,11 +170,5 @@ gulp.task('pagespeed', pagespeed.bind(null, {
   strategy: 'mobile'
 }));
 
-// Deploy to GitHub Pages.
-gulp.task('deploy', function() {
-  gulp.src('dist/**/*')
-    .pipe(deploy('git@github.com:ThibWeb/thibaudcolas.git', 'origin'));
-});
-
 // Build Production Files, the Default Task
 gulp.task('default', ['build']);
