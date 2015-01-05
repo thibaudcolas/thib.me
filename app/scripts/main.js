@@ -1,13 +1,13 @@
 (function() {
   'use strict';
 
-  require('./analytics').default.init();
+  require('./analytics')();
 
   const domready = require('../vendor/domready/ready');
   const fitText = require('../vendor/fittext/fittext');
   const FastClick = require('../vendor/fastclick/lib/fastclick');
   const smoothScroll = require('../vendor/smooth-scroll.js/dist/js/smooth-scroll');
-  const decode = require('./obfuscate').default.decode;
+  const decode = require('./obfuscate').decode;
 
   const encodedMail = [116, 105, 107, 101, 68, 121, 110, 112, 106, 55, 119, 112];
 

@@ -44,17 +44,6 @@ gulp.task('test', ['lint'], function(cb) {
   }, cb);
 });
 
-// Optimize Images
-gulp.task('images', function() {
-  return gulp.src('app/images/**/*')
-    .pipe($.cache($.imagemin({
-      progressive: true,
-      interlaced: true
-    })))
-    .pipe(gulp.dest('app/images'))
-    .pipe($.size({title: 'images'}));
-});
-
 // Copy all static files
 gulp.task('copy', function() {
   return gulp.src([
@@ -62,8 +51,7 @@ gulp.task('copy', function() {
     '!app/vendor/**',
     '!app/styles/**',
     '!app/scripts/**',
-    '!app/index.html',
-    'node_modules/apache-server-configs/dist/.htaccess'
+    '!app/index.html'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'))

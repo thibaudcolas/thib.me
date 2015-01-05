@@ -1,6 +1,6 @@
 'use strict';
 
-const {decode, encode} = require('../app/scripts/obfuscate').default;
+const {decode, encode} = require('../app/scripts/obfuscate');
 
 describe('the encode function', function() {
   it('outputs nothing if nothing is entered', function () {

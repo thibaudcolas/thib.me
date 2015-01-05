@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - '0.10'
-after_success: npm run deploy:ci
+after_success: npm run deploy
 env:
   global:
     secure: TCho+s61OgenfIuQFoTZLBrl/IfVEv8JUX5XhsGn71strwsDCdy4Y5hrsyfogFrXEemDd60z/igCL9yUSIjatWgmGtEUziVxy24awEwokKE1LOh01Qi3RxCxXDpLY8T2eR1xGEDFrUq0dIWzmtx/LHDPr7i/rUmXnc7aVU3atLQ=
