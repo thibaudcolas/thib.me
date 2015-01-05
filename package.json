@@ -53,8 +53,7 @@
     ]
   },
   "browserify-shim": {
-    "./app/vendor/fittext/fittext.js": "fitText",
-    "./app/vendor/fastclick/lib/fastclick.js": "FastClick"
+    "./app/vendor/fittext/fittext.js": "fitText"
   },
   "scripts": {
     "start": "gulp serve",
