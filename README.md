@@ -27,7 +27,7 @@ $ gulp pagespeed
 
 ### Favicons
 
-Favicons generated with [http://realfavicongenerator.net/](http://realfavicongenerator.net/).
+Favicons generated with [http://realfavicongenerator.net/](http://realfavicongenerator.net/) and [http://www.xiconeditor.com/](http://www.xiconeditor.com/)
 
 ### Color theme
 
