@@ -59,10 +59,10 @@
             w1 = +week(t1);
 
         return 'M' + ((w0 + 1) * cellSize - (w0 === 0 ? margin3 : 0)) + ',' + (d0 * cellSize - (d0 === 0 ? margin2 : 0))
-            + 'H' + (w0 * cellSize - (w0 === 0 ? margin3 : 0)) + 'V' + (7 * cellSize + 0)
-            + 'H' + (w1 * cellSize - (w1 === 52 ? margin1 : 0)) + 'V' + ((d1 + 1) * cellSize - 0)
-            + 'H' + ((w1 + 1) * cellSize - (w1 === 52 ? margin1 : 0)) + 'V' + (0 - margin2)
-            + 'H' + ((w0 + 1) * cellSize - (w0 === 0 ? margin3 : 0)) + 'Z';
+          + 'H' + (w0 * cellSize - (w0 === 0 ? margin3 : 0)) + 'V' + (7 * cellSize + 0)
+          + 'H' + (w1 * cellSize - (w1 === 52 ? margin1 : 0)) + 'V' + ((d1 + 1) * cellSize - 0)
+          + 'H' + ((w1 + 1) * cellSize - (w1 === 52 ? margin1 : 0)) + 'V' + (0 - margin2)
+          + 'H' + ((w0 + 1) * cellSize - (w0 === 0 ? margin3 : 0)) + 'Z';
       });
 
   var xAxis = d3.svg.axis()
