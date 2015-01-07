@@ -9,7 +9,6 @@ var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
 var reload = browserSync.reload;
-var deploy = require('gulp-gh-pages');
 var browserify = require('browserify');
 var to5ify = require('6to5ify');
 var source = require('vinyl-source-stream');
@@ -29,7 +28,10 @@ var AUTOPREFIXER_BROWSERS = [
 
 // Lint JavaScript
 gulp.task('lint', function() {
-  return gulp.src('app/scripts/**/*.js', 'test/**/*.js')
+  return gulp.src([
+      'app/scripts/**/*.js',
+      'test/**/*.js'
+    ])
     .pipe(reload({stream: true, once: true}))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
