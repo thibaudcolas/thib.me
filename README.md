@@ -5,24 +5,15 @@ My personal website's repository.
 
 ## Tooling
 
-Tooling taken from Google's [Web Starter Kit](https://developers.google.com/web/starter-kit/).
-
-### Install
-
 ```sh
-$ npm install --global gulp
+$ # Install all development tools
 $ npm install
-```
-
-### Build commands
-
-```sh
 $ # Watch For Changes & Automatically Refresh Across Devices
 $ npm start
 $ # Build & Optimize
 $ npm run build
-$ # Performance Insights
-$ gulp pagespeed
+$ # Run tests & linting
+$ npm test
 ```
 
 ### Favicons
@@ -37,7 +28,7 @@ Built with [Adobe Kuler](https://color.adobe.com/create/color-wheel/?base=2&rule
 
 Custom font built with [IcoMoon](http://icomoon.io).
 
-### Highlight font
+### Web font
 
 I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 
