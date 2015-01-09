@@ -2,13 +2,20 @@
   'use strict';
 
   var width = 1200,
-      height = 200,
+      height = 250,
       cellSizeInner = 17,
       cellSize = 20;
 
   var day = d3.time.format("%w"),
       week = d3.time.format("%U"),
       format = d3.time.format("%Y-%m-%d");
+
+  var data = {};
+  var input = {
+    budgetPerDay: 0,
+    unit: '',
+    raw: {}
+  };
 
   var range = [2015, 2016];
 
@@ -23,7 +30,7 @@
       .attr('height', height)
       .attr('class', 'RdYlGn')
     .append('g')
-      .attr('transform', 'translate(' + ((width - cellSize * 53) / 2) + ',' + (height - cellSize * 7 - 1) + ')');
+      .attr('transform', 'translate(' + ((width - cellSize * 53) / 2) + ',' + 40 + ')');
 
   svg.append('text')
     .attr('transform', 'translate(-20,' + cellSize * 3.5 + ') rotate(-90)')
@@ -80,24 +87,27 @@
     .style('text-anchor', 'start');
 
   d3.json('meal-expenses.json', function(error, json) {
-    // var days = d3.time.days(new Date(2015, 0, 1), new Date(2016, 0, 1));
-    var data = {};
+    input.raw = json;
+    input.unit = json.unit;
+    input.mealPerDay = json.mealPerDay;
+    input.singleMealBudget = json.singleMealBudget;
+    input.budgetPerDay = input.mealPerDay * input.singleMealBudget;
 
-    var budgetPerDay = json.mealPerDay * json.singleMealBudget;
-    var expenses = d3.map(json.expenses)
-      .forEach(function (date, amount) {
+    // Parse raw input expenses data.
+    d3.map(input.raw.expenses).forEach(function (date, amount) {
         var start = format.parse(date);
-        var end = d3.time.format('%j').parse('' + (d3.time.dayOfYear(start) + 1 + (amount / budgetPerDay)));
+        console.log((amount / input.budgetPerDay));
+        var end = d3.time.format('%j').parse('' + (d3.time.dayOfYear(start) + 1 + (amount / input.budgetPerDay)));
         end.setFullYear(start.getFullYear());
 
         d3.time.days(start, end).forEach(function (d) {
           d = format(d);
-          data[d] = (data[d] || 0) + budgetPerDay;
+          data[d] = (data[d] || 0) + input.budgetPerDay;
         });
       });
 
     var color = d3.scale.quantize()
-      .domain([0, budgetPerDay * 4])
+      .domain([0, input.budgetPerDay * 4])
       .range(d3.range(11).map(function(d) { return 'q' + d + '-11'; }));
 
     rect.filter(function(d) { return d in data; })
@@ -106,7 +116,7 @@
           return 'day ' + color(data[d]) + (isToday ? ' today' : '');
         })
       .select('title')
-        .text(function(d) { return d + ": " + json.unit + data[d]; });
+        .text(function(d) { return d + ": " + input.unit + data[d]; });
   });
 
 })(window.d3);
