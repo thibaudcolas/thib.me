@@ -77,6 +77,7 @@ Monitoring:
 - 2) GitHub repos integration
 - 2) GitHub card integration https://github.com/lepture/github-cards
 - 2) Kudos counter
+- 2) Fix the font loading experience
 - 2) Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
 - 3) Stackoverflow flair integration
 - 3) Images on top
