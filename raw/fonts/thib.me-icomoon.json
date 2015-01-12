@@ -1,7 +1,7 @@
 {
 	"metadata": {
 		"name": "thib.me",
-		"lastOpened": 1419901544762,
+		"lastOpened": 1420612969722,
 		"created": 1381083457739
 	},
 	"iconSets": [
@@ -197,7 +197,7 @@
 						"graphic"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 13,
@@ -211,7 +211,7 @@
 						"graphic"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 14,
@@ -225,7 +225,7 @@
 						"graphics"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 15,
@@ -778,7 +778,7 @@
 						"store"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 54,
@@ -795,7 +795,7 @@
 						"store"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 55,
@@ -812,7 +812,7 @@
 						"store"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 56,
@@ -1517,7 +1517,7 @@
 						"talk"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 107,
@@ -1532,7 +1532,7 @@
 						"talk"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 108,
@@ -1547,7 +1547,7 @@
 						"talk"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 109,
@@ -1561,7 +1561,7 @@
 						"talk"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 110,
@@ -1576,7 +1576,7 @@
 						"talk"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 111,
@@ -1591,7 +1591,7 @@
 						"talk"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 112,
@@ -2158,7 +2158,7 @@
 						"graph"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 150,
@@ -2173,7 +2173,7 @@
 						"chart"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 151,
@@ -2188,7 +2188,7 @@
 						"graph"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 152,
@@ -2203,7 +2203,7 @@
 						"graph"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 153,
@@ -2794,7 +2794,7 @@
 						"anchor"
 					],
 					"grid": 16,
-					"matchesSearch": true
+					"matchesSearch": false
 				},
 				{
 					"id": 196,
@@ -4875,7 +4875,7 @@
 						"blank"
 					],
 					"grid": 16,
-					"matchesSearch": true
+					"matchesSearch": false
 				},
 				{
 					"id": 347,
@@ -6431,7 +6431,7 @@
 				},
 				{
 					"id": 60,
-					"order": 13,
+					"order": 0,
 					"prevSize": 32,
 					"code": 58892,
 					"name": "phone",
@@ -6455,7 +6455,7 @@
 					"prevSize": 32,
 					"code": 58885,
 					"name": "envelope",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -6532,7 +6532,7 @@
 				},
 				{
 					"id": 83,
-					"order": 12,
+					"order": 0,
 					"prevSize": 32,
 					"code": 58891,
 					"name": "laptop",
@@ -6805,7 +6805,11 @@
 				},
 				{
 					"id": 150,
-					"order": 0
+					"order": 15,
+					"prevSize": 32,
+					"code": 58886,
+					"name": "stats",
+					"tempChar": ""
 				},
 				{
 					"id": 151,
@@ -6985,7 +6989,7 @@
 				},
 				{
 					"id": 195,
-					"order": 14,
+					"order": 0,
 					"prevSize": 32,
 					"code": 58893,
 					"name": "link",
@@ -7673,7 +7677,7 @@
 					"prevSize": 32,
 					"code": 58880,
 					"name": "twitter",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -7794,7 +7798,7 @@
 					"prevSize": 32,
 					"code": 58881,
 					"name": "github",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -7867,7 +7871,7 @@
 				},
 				{
 					"id": 412,
-					"order": 11,
+					"order": 0,
 					"prevSize": 32,
 					"code": 58886,
 					"name": "soundcloud",
@@ -7888,7 +7892,7 @@
 					"prevSize": 32,
 					"code": 58882,
 					"name": "linkedin",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -7965,7 +7969,7 @@
 				},
 				{
 					"id": 434,
-					"order": 7,
+					"order": 0,
 					"prevSize": 32,
 					"code": 58887,
 					"name": "file-pdf",
@@ -7994,11 +7998,11 @@
 				},
 				{
 					"id": 440,
-					"order": 8,
+					"order": 16,
 					"prevSize": 32,
 					"code": 58888,
 					"name": "file-xml",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -8011,7 +8015,7 @@
 					"prevSize": 32,
 					"code": 58889,
 					"name": "html5",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -8020,7 +8024,7 @@
 				},
 				{
 					"id": 444,
-					"order": 10,
+					"order": 0,
 					"prevSize": 32,
 					"code": 58890,
 					"name": "css3",
@@ -8337,7 +8341,7 @@
 						"talk"
 					],
 					"grid": 32,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 21,
@@ -9004,7 +9008,7 @@
 						"link"
 					],
 					"grid": 16,
-					"matchesSearch": true
+					"matchesSearch": false
 				},
 				{
 					"id": 7,
@@ -9434,7 +9438,7 @@
 						"chain"
 					],
 					"grid": 16,
-					"matchesSearch": true
+					"matchesSearch": false
 				},
 				{
 					"id": 40,
@@ -9688,7 +9692,7 @@
 						"talk"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 59,
@@ -9702,7 +9706,7 @@
 						"bubble"
 					],
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 60,
@@ -10742,7 +10746,7 @@
 						"discussion"
 					],
 					"grid": 20,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 32,
@@ -10758,7 +10762,7 @@
 						"conversation"
 					],
 					"grid": 20,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 33,
@@ -10860,7 +10864,7 @@
 						"chain"
 					],
 					"grid": 20,
-					"matchesSearch": true
+					"matchesSearch": false
 				},
 				{
 					"id": 41,
@@ -11093,7 +11097,7 @@
 						"purchase"
 					],
 					"grid": 20,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 58,
@@ -11709,7 +11713,7 @@
 						"ecommerce"
 					],
 					"grid": 20,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 104,
@@ -11805,7 +11809,7 @@
 						"plot"
 					],
 					"grid": 20,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 112,
@@ -11819,7 +11823,7 @@
 						"statistics"
 					],
 					"grid": 20,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 113,
@@ -11832,7 +11836,7 @@
 						"graph"
 					],
 					"grid": 20,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 114,
@@ -11846,7 +11850,7 @@
 						"plot"
 					],
 					"grid": 20,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 115,

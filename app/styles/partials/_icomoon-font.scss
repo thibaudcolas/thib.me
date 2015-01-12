@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-.icon {
+[class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon-thibaudcolas-v2';
   speak: none;
   font-style: normal;
@@ -23,36 +23,35 @@
 .icon-newspaper:before {
   content: "\e603";
 }
+
 .icon-bullhorn:before {
   content: "\e604";
 }
+
 .icon-envelope:before {
   content: "\e605";
 }
-.icon-laptop:before {
-  content: "\e60b";
+
+.icon-stats:before {
+  content: "\e606";
 }
+
 .icon-twitter:before {
   content: "\e600";
 }
+
 .icon-github:before {
   content: "\e601";
 }
-.icon-soundcloud:before {
-  content: "\e606";
-}
+
 .icon-linkedin:before {
   content: "\e602";
 }
-.icon-file-pdf:before {
-  content: "\e607";
-}
+
 .icon-file-xml:before {
   content: "\e608";
 }
+
 .icon-html5:before {
   content: "\e609";
-}
-.icon-css3:before {
-  content: "\e60a";
 }

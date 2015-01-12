@@ -74,7 +74,7 @@ h1 {
   display: block;
 }
 
-.navbar-nav .icon {
+.navbar-nav [class^="icon-"], .navbar-nav [class*=" icon-"] {
   font-size: 32px;
   width: 32px;
   height: 32px;
