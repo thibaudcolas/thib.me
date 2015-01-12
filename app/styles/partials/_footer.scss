@@ -60,7 +60,7 @@
   }
 }
 
-.meta-links .big-icon {
+.meta-links [class^="icon-"], .meta-links [class*=" icon-"] {
   font-size: 32px;
   position: relative;
   top: 8px;
