@@ -40,22 +40,22 @@ h1 {
   margin-bottom: 10px;
 }
 
-.navbar-nav {
+.nav {
+  width: 100%;
   margin: 0 -15px;
   user-select: none;
 }
 
-.navbar-nav li {
-  float: left;
+.nav li {
   max-width: 20%;
+  float: left;
 }
 
-.navbar-nav li a {
-  padding: 5px;
+.nav li a {
   height: 62px;
+  padding: 5px;
   font-size: 12px;
   color: $colorGray2;
-  border: 3px solid $colorGray2;
   transition: all .2s ease-out;
 
   &:hover, &:focus {
@@ -70,11 +70,11 @@ h1 {
   }
 }
 
-.navbar-nav a span {
+.nav a span {
   display: block;
 }
 
-.navbar-nav [class^="icon-"], .navbar-nav [class*=" icon-"] {
+.nav [class^="icon-"], .nav [class*=" icon-"] {
   font-size: 32px;
   width: 32px;
   height: 32px;
@@ -84,38 +84,24 @@ h1 {
   float: left;
 }
 
-.navbar-nav .twitter-link {
+.nav .twitter-link {
   background-color: #55acee;
-  border-color: #55acee;
 
   &:hover, &:focus {
     color: #55acee;
   }
 }
 
-.navbar-nav .github-link {
+.nav .github-link {
   background-color: #333;
-  border-color: #333;
 
   &:hover, &:focus {
     color: #333;
   }
 }
 
-.navbar-nav .linkedin-link {
-  background-color: #4875B4;
-  border-color: #4875B4;
-
-  padding: 6px 7px;
-
-  &:hover, &:focus {
-    color: #4875B4;
-  }
-}
-
-.navbar-nav .blog-link {
+.nav .blog-link {
   background-color: #263347;
-  border-color: #263347;
 
   padding: 6px 16px;
 
@@ -124,13 +110,22 @@ h1 {
   }
 }
 
-.navbar-nav .talks-link {
+.nav .talks-link {
   background-color: #333;
-  border-color: #333;
 
   padding: 6px 15px;
 
   &:hover, &:focus {
     color: #333;
+  }
+}
+
+.nav .viz-link {
+  background-color: #4875B4;
+
+  padding: 6px 20px;
+
+  &:hover, &:focus {
+    color: #4875B4;
   }
 }
