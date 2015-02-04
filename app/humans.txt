@@ -12,10 +12,10 @@
 
 # TECHNOLOGY COLOPHON
 
-  Last update 2014-07-01
+  Last update 2015-02-01
   Standards: HTML, CSS, JavaScript
   Components: Bootstrap, Gulp
-  Software: Mac OS X, Sublime Text, Git
+  Software: OSX, Atom, Git
 
                    '
                   ''
