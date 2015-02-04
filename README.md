@@ -18,7 +18,7 @@ $ npm test
 
 ### Favicons
 
-Favicons generated with [http://realfavicongenerator.net/](http://realfavicongenerator.net/) and [http://www.xiconeditor.com/](http://www.xiconeditor.com/)
+Generated with [http://realfavicongenerator.net/](http://realfavicongenerator.net/) and [http://www.xiconeditor.com/](http://www.xiconeditor.com/)
 
 ### Color theme
 
@@ -50,6 +50,7 @@ Static code analysis:
 
 - http://www.jshint.com/
 - https://github.com/jscs-dev/node-jscs
+- https://github.com/causes/scss-lint
 
 Unit testing:
 
@@ -85,9 +86,7 @@ Monitoring:
 - 3) "More cards" button (Twilight SPARQL, Skimbo, Koans, iCopter) https://www.youtube.com/watch?v=lR7QnU34BGs
 - 3) Work experience section
 - 3) http://www.html5tricks.com/demo/pure-css3-weather-icon/index.html
-- 4) Error monitoring with Sentry https://www.getsentry.com/
 - 4) Add js-complexity report via https://www.npmjs.com/package/gulp-complexity
-- 4) Add scss-lint via gulp-scss-lint
 - 4) Code coverage for the tests
 
 ## Monitoring
@@ -95,9 +94,3 @@ Monitoring:
 Site uptime and response time checked with Pingdom:
 
 [![Response time Report for thib.me: Last 30 days](https://share.pingdom.com/banners/5f5f5fc1)](http://stats.pingdom.com/22u60my6ll2k/1451905)
-
-## License
-
-Site content available under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Source code under ISC license.
-
-Copyright © 2014 Thibaud Colas
