@@ -1,11 +1,11 @@
-@import "partials/_fira-font";
-@import "partials/_icomoon-font";
+@import 'partials/_fira-font.scss';
+@import 'partials/_icomoon-font.scss';
 
-@import "partials/_variables";
-@import "partials/_mixins";
+@import 'partials/_variables.scss';
+@import 'partials/_mixins.scss';
 
-@import "partials/_global";
-@import "partials/_header";
-@import "partials/_footer";
-@import "partials/_card";
-@import "partials/_print";
+@import 'partials/_global.scss';
+@import 'partials/_header.scss';
+@import 'partials/_footer.scss';
+@import 'partials/_card.scss';
+@import 'partials/_print.scss';

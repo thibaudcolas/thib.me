@@ -3,7 +3,7 @@
 html, body, button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-          font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 html {
@@ -19,7 +19,7 @@ body {
 
 a[href], button {
   touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 ::selection {
@@ -96,15 +96,15 @@ h1, h2, h3, h4, h5, h6 {
   width: 20%;
 }
 
-#about {
+.global-section:nth-of-type(1) {
   background-color: #ffda74;
 }
 
-#activities {
+.global-section:nth-of-type(2) {
   background-color: #6eafff;
 }
 
-#projects {
+.global-section:nth-of-type(3) {
   background-color: #e85e65;
 }
 

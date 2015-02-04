@@ -5,7 +5,7 @@ linters:
   BangFormat:
     enabled: true
     space_before_bang: true
-    space_after_bang: true
+    space_after_bang: false
 
   BorderZero:
     enabled: true
@@ -69,7 +69,7 @@ linters:
     style: include_zero
 
   MergeableSelector:
-    enabled: true
+    enabled: false
 
   NameFormat:
     enabled: false
@@ -83,7 +83,7 @@ linters:
     enabled: true
 
   PropertySortOrder:
-    enabled: true
+    enabled: false
 
   PropertySpelling:
     enabled: true
@@ -101,8 +101,7 @@ linters:
 
   SelectorFormat:
     enabled: true
-    convention: hyphenated_lowercase
-    class_convention: hyphenated_lowercase
+    convention: BEM
 
   Shorthand:
     enabled: true
@@ -112,7 +111,7 @@ linters:
     allow_single_line_rule_sets: true
 
   SingleLinePerSelector:
-    enabled: true
+    enabled: false
 
   SpaceAfterComma:
     enabled: true
@@ -156,7 +155,7 @@ linters:
     enabled: true
 
   VendorPrefixes:
-    enabled: true
+    enabled: false
     identifier_list: base
     include: []
     exclude: []
