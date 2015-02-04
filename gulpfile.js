@@ -27,7 +27,7 @@ var AUTOPREFIXER_BROWSERS = [
 ];
 
 // Lint JavaScript
-gulp.task('lint', function() {
+gulp.task('lint-js', function() {
   return gulp.src([
       'app/scripts/**/*.js',
       'test/**/*.js'
@@ -39,7 +39,13 @@ gulp.task('lint', function() {
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
-gulp.task('test', ['lint'], function(cb) {
+gulp.task('lint-css', function() {
+  return gulp.src(['app/styles/**/*.scss'])
+    .pipe($.scssLint())
+    .pipe($.if(!browserSync.active, $.scssLint.failReporter()));
+});
+
+gulp.task('test', ['lint-js'], function(cb) {
   karma.start({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
@@ -148,8 +154,8 @@ gulp.task('serve', ['styles', 'browserify'], function() {
   });
 
   gulp.watch(['app/index.html'], reload);
-  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['lint', 'browserify']);
+  gulp.watch(['app/styles/**/*.{scss,css}'], ['lint-css', 'styles', reload]);
+  gulp.watch(['app/scripts/**/*.js'], ['lint-js', 'browserify']);
   gulp.watch(['app/images/**/*'], reload);
 });
 
