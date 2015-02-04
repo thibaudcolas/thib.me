@@ -49,14 +49,15 @@ gulp.task('test', ['lint'], function(cb) {
 // Copy all static files
 gulp.task('copy', function() {
   return gulp.src([
-    'app/**',
-    '!app/vendor/**',
-    '!app/styles/**',
-    '!app/scripts/**',
-    '!app/index.html'
-  ], {
-    dot: true
-  }).pipe(gulp.dest('dist'))
+      'app/**',
+      '!app/vendor/**',
+      '!app/styles/**',
+      '!app/scripts/**',
+      '!app/index.html'
+    ], {
+      dot: true
+    })
+    .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'copy'}));
 });
 
@@ -71,9 +72,9 @@ gulp.task('fonts', function() {
 gulp.task('styles', function() {
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
-    'app/styles/*.scss',
-    'app/styles/**/*.css'
-  ])
+      'app/styles/*.scss',
+      'app/styles/**/*.css'
+    ])
     .pipe($.changed('styles', {extension: '.scss'}))
     .pipe($.sass({
       errLogToConsole: true,
