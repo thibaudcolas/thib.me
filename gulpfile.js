@@ -134,10 +134,13 @@ gulp.task('assets', ['styles', 'browserify'], function() {
 
 // Transform main html.
 gulp.task('html', ['assets'], function() {
+  var scriptToken = '<script src=scripts/main.min.js></script>';
+  var styleToken = '<link rel=stylesheet href=styles/main.min.css>';
+
   return gulp.src('dist/index.html')
     .pipe($.minifyHtml())
-    .pipe($.replace('<script src=scripts/main.min.js></script>', '<script async defer>' + fs.readFileSync('dist/scripts/main.min.js', 'utf8') + '</script>'))
-    .pipe($.replace('<link rel=stylesheet href=styles/main.min.css>', '<style>' + fs.readFileSync('dist/styles/main.min.css', 'utf8') + '</style>'))
+    .pipe($.replace(scriptToken, '<script async defer>' + fs.readFileSync('dist/scripts/main.min.js') + '</script>'))
+    .pipe($.replace(styleToken, '<style>' + fs.readFileSync('dist/styles/main.min.css') + '</style>'))
     // Output Files
     .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'html'}));

@@ -58,6 +58,17 @@ Unit testing:
 - https://karma-runner.github.io/
 - http://phantomjs.org/
 
+Visual regression:
+
+- https://github.com/garris/BackstopJS
+
+~~~sh
+# Generate reference screenshots:
+cd backstopjs && gulp reference
+# Test new UI against references:
+cd backstopjs && gulp test
+~~~
+
 Performance:
 
 - http://gtmetrix.com/

@@ -6,3 +6,4 @@ errors.log
 dist
 .tmp
 npm-debug.log
+backstopjs
