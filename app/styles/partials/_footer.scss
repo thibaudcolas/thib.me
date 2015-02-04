@@ -15,16 +15,17 @@
 }
 
 .last-links {
-  list-style-type: none;
   padding-left: 0;
+  list-style-type: none;
+
   user-select: none;
 }
 
 .last-links a {
   display: block;
+  padding: 2px 0;
   width: 100%;
   text-align: right;
-  padding: 2px 0;
 }
 
 .top-icon {
@@ -34,8 +35,8 @@
 }
 
 .meta-links {
-  list-style-type: none;
   padding-left: 0;
+  list-style-type: none;
 }
 
 .meta-links li {
@@ -60,8 +61,8 @@
   }
 }
 
-.meta-links [class^="icon-"], .meta-links [class*=" icon-"] {
-  font-size: 32px;
+.meta-links [class^='icon-'], .meta-links [class*=' icon-'] {
   position: relative;
   top: 8px;
+  font-size: 32px;
 }

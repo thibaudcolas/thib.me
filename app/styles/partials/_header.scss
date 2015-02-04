@@ -6,13 +6,13 @@
 
 @media (min-width: 600px) and (max-width: 767px) {
   .col-custom-5 {
-    width: 43%;
     float: left;
+    width: 43%;
   }
 
   .col-custom-7 {
-    width: 54%;
     float: right;
+    width: 54%;
   }
 }
 
@@ -21,10 +21,10 @@
   width: 100%;
   color: $colorGray1;
   text-shadow: 0 1px 0 $colorGray3,
-               0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2);
+  0 6px 1px rgba(0,0,0,0.1),
+  0 0 5px rgba(0,0,0,0.1),
+  0 1px 3px rgba(0,0,0,0.3),
+  0 3px 5px rgba(0,0,0,0.2);
 }
 
 .title-link:hover, .title-link:focus {
@@ -33,40 +33,41 @@
 }
 
 h1 {
-  font-size: 250%;
-  font-weight: 400;
-  height: 40px;
   margin-top: 10px;
   margin-bottom: 10px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 250%;
 }
 
 .nav {
-  width: 100%;
   margin: 0 -15px;
+  width: 100%;
+
   user-select: none;
 }
 
 .nav li {
-  max-width: 20%;
   float: left;
+  max-width: 20%;
 }
 
 .nav li a {
-  height: 62px;
   padding: 5px;
-  font-size: 12px;
+  height: 62px;
   color: $colorGray2;
-  transition: all .2s ease-out;
+  font-size: 12px;
+  transition: all 0.2s ease-out;
 
   &:hover, &:focus {
-    background-color: $colorGray2;
-    transition: all .3s ease-out;
     outline: none;
+    background-color: $colorGray2;
+    transition: all 0.3s ease-out;
   }
 
   &:active {
+    transition: all 0.1s ease-out;
     transform: scale(0.9);
-    transition: all .1s ease-out;
   }
 }
 
@@ -74,14 +75,14 @@ h1 {
   display: block;
 }
 
-.nav [class^="icon-"], .nav [class*=" icon-"] {
-  font-size: 32px;
-  width: 32px;
-  height: 32px;
+.nav [class^='icon-'], .nav [class*=' icon-'] {
   position: relative;
   left: 50%;
-  margin-left: -16px;
   float: left;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
 }
 
 .nav .twitter-link {
@@ -93,17 +94,16 @@ h1 {
 }
 
 .nav .github-link {
-  background-color: #333;
+  background-color: #333333;
 
   &:hover, &:focus {
-    color: #333;
+    color: #333333;
   }
 }
 
 .nav .blog-link {
-  background-color: #263347;
-
   padding: 6px 16px;
+  background-color: #263347;
 
   &:hover, &:focus {
     color: #263347;
@@ -111,21 +111,19 @@ h1 {
 }
 
 .nav .talks-link {
-  background-color: #333;
-
   padding: 6px 15px;
+  background-color: #333333;
 
   &:hover, &:focus {
-    color: #333;
+    color: #333333;
   }
 }
 
 .nav .viz-link {
-  background-color: #4875B4;
-
   padding: 6px 20px;
+  background-color: #4875b4;
 
   &:hover, &:focus {
-    color: #4875B4;
+    color: #4875b4;
   }
 }

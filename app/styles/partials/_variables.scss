@@ -1,95 +1,93 @@
 /*==========  VARIABLES  ==========*/
 
-  // Color themes.
+// Color themes.
 
-  // Popular.
+// Popular.
 
-  $popular1: #ff6347 !default;
-  $popular2: #dc143c !default;
-  $popular3: #008080 !default;
-  $popular4: #1e90ff !default;
-  $popular5: #000080 !default;
+$popular1: #ff6347 !default;
+$popular2: #dc143c !default;
+$popular3: #008080 !default;
+$popular4: #1e90ff !default;
+$popular5: #000080 !default;
 
-  // Sandy stone.
+// Sandy stone.
 
-  $sandy1: #E6E2AF !default;
-  $sandy2: #A7A37E !default;
-  $sandy3: #EFECCA !default;
-  $sandy4: #1e90ff !default;
-  $sandy5: #046380 !default;
+$sandy1: #e6e2af !default;
+$sandy2: #a7a37e !default;
+$sandy3: #efecca !default;
+$sandy4: #1e90ff !default;
+$sandy5: #046380 !default;
 
-  // Firenze.
+// Firenze.
 
-  $firenze1: #468966 !default;
-  $firenze2: #FFF0A5 !default;
-  $firenze3: #FFB03B !default;
-  $firenze4: #B64926 !default;
-  $firenze5: #8E2800 !default;
+$firenze1: #468966 !default;
+$firenze2: #fff0a5 !default;
+$firenze3: #ffb03b !default;
+$firenze4: #b64926 !default;
+$firenze5: #8e2800 !default;
 
-  // Mustang.
+// Mustang.
 
-  $mustang1: #000000 !default;
-  $mustang2: #263248 !default;
-  $mustang3: #7e8aa2 !default;
-  $mustang4: #ffffff !default;
-  $mustang5: #ff9800 !default;
+$mustang1: #000000 !default;
+$mustang2: #263248 !default;
+$mustang3: #7e8aa2 !default;
+$mustang4: #ffffff !default;
+$mustang5: #ff9800 !default;
 
-  // Cote azur.
+// Cote azur.
 
-  $cote1: #00585f !default;
-  $cote2: #009393 !default;
-  $cote3: #fffcc4 !default;
-  $cote4: #f0edbb !default;
-  $cote5: #ff3800 !default;
+$cote1: #00585f !default;
+$cote2: #009393 !default;
+$cote3: #fffcc4 !default;
+$cote4: #f0edbb !default;
+$cote5: #ff3800 !default;
 
-  // Ventana azul.
+// Ventana azul.
 
-  $ventana1: #F2385A !default;
-  $ventana2: #F5A503 !default;
-  $ventana3: #E9F1DF !default;
-  $ventana4: #4AD9D9 !default;
-  $ventana5: #36B1BF !default;
+$ventana1: #f2385a !default;
+$ventana2: #f5a503 !default;
+$ventana3: #e9f1df !default;
+$ventana4: #4ad9d9 !default;
+$ventana5: #36b1bf !default;
 
-  // Corporate orange blue.
+// Corporate orange blue.
 
-  $corporate1: #304269 !default;
-  $corporate2: #91BED4 !default;
-  $corporate3: #D9E8F5 !default;
-  $corporate4: #FFFFFF !default;
-  $corporate5: #F26101 !default;
+$corporate1: #304269 !default;
+$corporate2: #91bed4 !default;
+$corporate3: #d9e8f5 !default;
+$corporate4: #ffffff !default;
+$corporate5: #f26101 !default;
 
-  // Neutral blue.
+// Neutral blue.
 
-  $neutral1: #fcfff5 !default;
-  $neutral2: #d1dbbd !default;
-  $neutral3: #91aa9d !default;
-  $neutral4: #3e606f !default;
-  $neutral5: #193441 !default;
+$neutral1: #fcfff5 !default;
+$neutral2: #d1dbbd !default;
+$neutral3: #91aa9d !default;
+$neutral4: #3e606f !default;
+$neutral5: #193441 !default;
 
-  // Zen and tea.
+// Zen and tea.
 
-  $zen1: #10222b !default;
-  $zen2: #95ab63 !default;
-  $zen3: #bdd684 !default;
-  $zen4: #e2f0d6 !default;
-  $zen5: #f6ffe0 !default;
+$zen1: #10222b !default;
+$zen2: #95ab63 !default;
+$zen3: #bdd684 !default;
+$zen4: #e2f0d6 !default;
+$zen5: #f6ffe0 !default;
 
-  // Defining colors.
-  $colorGray1: #f5f8fa !default;
-  $colorGray2: #e1e8ed !default;
-  $colorGray3: #ccd6dd !default;
-  $colorGray4: #8899a6 !default;
-  $colorGray5: #66757f !default;
-  $colorGray6: #292f33 !default;
+// Defining colors.
+$colorGray1: #f5f8fa !default;
+$colorGray2: #e1e8ed !default;
+$colorGray3: #ccd6dd !default;
+$colorGray4: #8899a6 !default;
+$colorGray5: #66757f !default;
+$colorGray6: #292f33 !default;
+$colorLink: blue !default;
+$colorText: $colorGray6 !default;
+$colorSelection: #c2f990 !default;
 
-  $colorLink: blue !default;
-  $colorText: $colorGray6 !default;
+// Defining font family
+$fontDefault: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$fontHighlight: 'Fira Sans', 'Helvetica Neue', Helvetica, sans-serif !default;
 
-  $colorSelection: #c2f990 !default;
-
-  // Defining font family
-  $fontDefault: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
-  $fontHighlight: 'Fira Sans', 'Helvetica Neue', Helvetica, sans-serif !default;
-
-  // Defining animation easings
-  $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
+// Defining animation easings
+$animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;

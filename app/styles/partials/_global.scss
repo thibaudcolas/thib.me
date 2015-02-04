@@ -3,18 +3,18 @@
 html, body, button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased;
+          font-smoothing: antialiased;
 }
 
 html {
-	background-color: $colorGray6;
+  background-color: $colorGray6;
 }
 
 body {
   min-width: 320px;
   max-width: 2400px;
-  font-weight: 300;
   color: $colorText;
+  font-weight: 300;
 }
 
 a[href], button {
@@ -31,20 +31,20 @@ a[href], button {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $fontHighlight;
   font-weight: 300;
+  font-family: $fontHighlight;
 }
 
 .lead {
-  line-height: 1.6;
   font-family: $fontHighlight;
+  line-height: 1.6;
 }
 
 .lead a {
+  @include smart-underline(#ffda74, $colorText, $colorSelection);
+  padding: 8px 0;
   color: inherit;
   text-decoration: underline;
-  padding: 8px 0;
-  @include smart-underline(#FFDA74, $colorText, $colorSelection);
 }
 
 .circled-icon {
@@ -67,16 +67,16 @@ h1, h2, h3, h4, h5, h6 {
 .global-section__title {
   .anchor-link {
     display: block;
-    text-decoration: none;
     color: $colorText;
+    text-decoration: none;
   }
 
   .anchor-icon {
-    display: none;
     position: relative;
     top: -3px;
-    font-size: 50%;
+    display: none;
     color: rgba(0, 0, 0, 0.5);
+    font-size: 50%;
   }
 
   &:hover .anchor-icon, &:focus .anchor-icon {
@@ -87,9 +87,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .global-section__border span {
-  height: 6px;
   float: left;
   margin-bottom: 20px;
+  height: 6px;
 }
 
 .global-footer .global-section__border span {
@@ -97,15 +97,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about {
-  background-color: #FFDA74;
+  background-color: #ffda74;
 }
 
 #activities {
-  background-color: #6EAFFF;
+  background-color: #6eafff;
 }
 
 #projects {
-  background-color: #E85E65;
+  background-color: #e85e65;
 }
 
 // #experiences {

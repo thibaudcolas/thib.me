@@ -1,9 +1,9 @@
-@font-face{
-    font-family: 'Fira Sans';
-    src: local('Fira Sans Regular'),
-         local('Fira Sans'),
-         url('/fonts/firasans/FiraSans-Regular.woff') format('woff'),
-         url('/fonts/firasans/FiraSans-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Fira Sans';
+  src: local('Fira Sans Regular'),
+  local('Fira Sans'),
+  url('/fonts/firasans/FiraSans-Regular.woff') format('woff'),
+  url('/fonts/firasans/FiraSans-Regular.woff2') format('woff2');
 }
