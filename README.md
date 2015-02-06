@@ -91,12 +91,11 @@ Monitoring:
 - 2) Kudos counter
 - 2) Fix the font loading experience
 - 2) Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
-- 3) Stackoverflow flair integration
+- 3) StackOverflow flair integration
 - 3) Images on top
 - 3) Twitter integration
 - 3) "More cards" button (Twilight SPARQL, Skimbo, Koans, iCopter) https://www.youtube.com/watch?v=lR7QnU34BGs
 - 3) Work experience section
-- 3) http://www.html5tricks.com/demo/pure-css3-weather-icon/index.html
 - 4) Add js-complexity report via https://www.npmjs.com/package/gulp-complexity
 - 4) Code coverage for the tests
 
