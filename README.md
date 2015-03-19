@@ -34,14 +34,14 @@ I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 
 ## Browser Support
 
-* IE10, IE11, IE Mobile 10
-* FF 30, 31
-* Chrome 34, 35
-* Safari 7, 8
-* Opera 23, 24
-* iOS Safari 7, 8
-* Opera Coast
-* Android / Chrome 4.4, 4.4.3
+* IE10+
+* IE Mobile 10+
+* FF 30+
+* Chrome 34+
+* Safari 7+
+* Opera 23+
+* iOS Safari 7+
+* Android / Chrome 4.4+
 * BlackBerry 10
 
 ### Tests
@@ -90,12 +90,12 @@ Monitoring:
 - 2) GitHub card integration https://github.com/lepture/github-cards
 - 2) Kudos counter
 - 2) Fix the font loading experience
-- 2) Open Source Report Card integration https://osrc.dfm.io/ThibWeb/
 - 3) StackOverflow flair integration
 - 3) Images on top
 - 3) Twitter integration
 - 3) "More cards" button (Twilight SPARQL, Skimbo, Koans, iCopter) https://www.youtube.com/watch?v=lR7QnU34BGs
 - 3) Work experience section
+- 3) Add HTML5 AppCache for offline viewing
 - 4) Add js-complexity report via https://www.npmjs.com/package/gulp-complexity
 - 4) Code coverage for the tests
 
