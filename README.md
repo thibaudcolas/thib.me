@@ -69,6 +69,10 @@ cd backstopjs && gulp reference
 cd backstopjs && gulp test
 ~~~
 
+SEO analysis:
+
+- https://github.com/Munter/hyperlink
+
 Performance:
 
 - http://gtmetrix.com/
