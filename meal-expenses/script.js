@@ -97,7 +97,8 @@
     d3.map(input.raw.expenses).forEach(function (date, amount) {
         var start = format.parse(date);
         console.log((amount / input.budgetPerDay));
-        var end = d3.time.format('%j').parse('' + (d3.time.dayOfYear(start) + 1 + (amount / input.budgetPerDay)));
+        // TODO Replace this by properly accounting for remainder.
+        var end = d3.time.format('%j').parse('' + (d3.time.dayOfYear(start) + 1 + (Math.floor(amount / input.budgetPerDay))));
         end.setFullYear(start.getFullYear());
 
         d3.time.days(start, end).forEach(function (d) {
