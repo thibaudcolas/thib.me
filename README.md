@@ -90,7 +90,7 @@ Monitoring:
 
 ## TODO
 
-- 2) GitHub repos integration
+- 2) GitHub repos integration https://akshaykumar6.github.io/github-js/
 - 2) GitHub card integration https://github.com/lepture/github-cards
 - 2) Kudos counter
 - 2) Fix the font loading experience
