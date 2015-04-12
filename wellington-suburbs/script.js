@@ -1,4 +1,4 @@
-(function (L, C2CData) {
+(function (L, StationsData) {
   'use strict';
 
   var map = L.map('map');
@@ -9,8 +9,8 @@
   L.tileLayer(osmTiles, {minZoom: 8, maxZoom: 16, attribution: osmAttrib}).addTo(map);
 
   // Centered on Mount Eden.
-  map.setView([-36.875988, 174.764864], 12);
+  map.setView([-41.286, 174.767], 12);
 
-  L.geoJson(C2CData).addTo(map);
+  L.geoJson(StationsData).addTo(map);
 
-})(window.L, window.C2CData);
+})(window.L, window.StationsData);

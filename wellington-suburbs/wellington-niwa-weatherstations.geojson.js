@@ -1,4 +1,4 @@
-{
+window.StationsData = {
     "type": "FeatureCollection",
     "features": [
         {
@@ -106,21 +106,4 @@
             }
         }
     ]
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
