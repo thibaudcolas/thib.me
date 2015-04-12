@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
+
+  <title>Coast to Coast walk</title>
+
+  <link rel="stylesheet" href="leaflet/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+  <h1>Coast to Coast walk</h1>
+  <p>The Coast to Coast walk is a 16km hike across Auckland, from the Waitemata Harbour to the Manukau.</p>
+
+  <div id="map-wrapper">
+    <div id="map"></div>
+  </div>
+
+  <p>Built with GeoJSON, Leaflet, OpenStreetMap. Data from Auckland Transport.</p>
+  <h2>Related</h2>
+  <ul>
+    <li><a href="http://www.aucklandcouncil.govt.nz/en/parksfacilities/walkingtracks/pages/coasttocoast.aspx">http://www.aucklandcouncil.govt.nz/en/parksfacilities/walkingtracks/pages/coasttocoast.aspx</a></li>
+    <li><a href="https://at.govt.nz/cycling-walking/auckland-cycle-run-walkway-maps/coast-to-coast-walk/">https://at.govt.nz/cycling-walking/auckland-cycle-run-walkway-maps/coast-to-coast-walk/</a></li>
+  </ul>
+  <script src="leaflet/leaflet.js"></script>
+  <script src="coast2coast-walk.geojson.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
