@@ -4,7 +4,7 @@
         {
             "geometry": {
                 "type": "Point",
-                "coordinates": [ -40.650, 175.269 ]
+                "coordinates": [ 175.269, -40.650 ]
             },
             "type": "Feature",
             "properties": {
@@ -17,7 +17,7 @@
         {
             "geometry": {
                 "type": "Point",
-                "coordinates": [ -40.907, 174.984 ]
+                "coordinates": [ 174.984, -40.907 ]
             },
             "type": "Feature",
             "properties": {
@@ -30,7 +30,7 @@
         {
             "geometry": {
                 "type": "Point",
-                "coordinates": [ -40.907, 174.984 ]
+                "coordinates": [ 174.984, -40.907 ]
             },
             "type": "Feature",
             "properties": {
@@ -43,7 +43,7 @@
         {
             "geometry": {
                 "type": "Point",
-                "coordinates": [ -41.135, 175.052 ]
+                "coordinates": [ 175.052, -41.135 ]
             },
             "type": "Feature",
             "properties": {
@@ -56,7 +56,7 @@
         {
             "geometry": {
                 "type": "Point",
-                "coordinates": [ -41.13540, 175.05275 ]
+                "coordinates": [ 175.05275, -41.13540 ]
             },
             "type": "Feature",
             "properties": {
@@ -69,7 +69,7 @@
         {
             "geometry": {
                 "type": "Point",
-                "coordinates": [ -41.14027, 175.04283 ]
+                "coordinates": [ 175.04283, -41.14027 ]
             },
             "type": "Feature",
             "properties": {
@@ -82,7 +82,7 @@
         {
             "geometry": {
                 "type": "Point",
-                "coordinates": [ -41.25231, 175.38985 ]
+                "coordinates": [ 175.38985, -41.25231 ]
             },
             "type": "Feature",
             "properties": {
@@ -95,7 +95,7 @@
         {
             "geometry": {
                 "type": "Point",
-                "coordinates": [ -41.286, 174.767 ]
+                "coordinates": [ 174.767, -41.286 ]
             },
             "type": "Feature",
             "properties": {
