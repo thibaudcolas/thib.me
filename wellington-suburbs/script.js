@@ -1,4 +1,4 @@
-(function (L, StationsData) {
+(function (L, StationsData, SuburbsData) {
   'use strict';
 
   var map = L.map('map');
@@ -12,5 +12,6 @@
   map.setView([-41.286, 174.767], 12);
 
   L.geoJson(StationsData).addTo(map);
+  L.geoJson(SuburbsData).addTo(map);
 
-})(window.L, window.StationsData);
+})(window.L, window.StationsData, window.SuburbsData);
