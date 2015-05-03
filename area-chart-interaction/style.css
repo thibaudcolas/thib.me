@@ -13,8 +13,12 @@ body {
     stroke-width: 0;
 }
 
+.area-reality {
+  fill: crimson;
+}
+
 svg {
-    background: hsl(181, 100%, 94%);
+    background: azure;
 }
 
 .line {
@@ -31,8 +35,4 @@ p {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
-}
-
-.area {
-  fill: steelblue;
 }
