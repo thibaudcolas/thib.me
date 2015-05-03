@@ -1,11 +1,20 @@
-(function (d3, data) {
+(function (d3, stubData) {
     'use strict';
 
     var margin = {top: 20, right: 20, bottom: 30, left: 80},
         width = 680 - margin.left - margin.right,
         height = 230 - margin.top - margin.bottom;
 
-    data.forEach(function(entry, index) {
+    var data = stubData(0);
+
+    d3.select('#update')
+    .on("click", function() {
+        var data = stubData(Math.random() * 10);
+
+        data.forEach(renderChart);
+    });
+
+    function renderChart(entry, index) {
         var lineData = entry.computed.Savings;
 
         var x = d3.scale.linear()
@@ -28,7 +37,17 @@
             .x(function(d) { return x(d.age); })
             .y(function(d) { return y(d.savings); });
 
+        var gigaTickFunction = d3.svg.line()
+            .x(function(d) { return x(entry.RetirementAge - 1); })
+            .y(function(d) {
+                if (d.age < entry.RetirementAge) {
+                    return y(d.savings);
+                }
+            });
+
         var interpolation = d3.svg.area().interpolate('linear').x(function(d)  {  return x(d.age); }).y0(height).y1(function(d) {  return y(d.savings); });
+
+        d3.select("#entry" + index + ' svg').remove();
 
         var svg = d3.select("#entry" + index).append("svg")
             .attr("width", width + margin.left + margin.right)
@@ -40,9 +59,14 @@
             .attr("class", "area")
             .attr("d", interpolation(lineData));
 
-        var linegraph = svg.append("path")
+        svg.append("path")
             .attr("class", "line")
             .attr("d", lineFunction(lineData))
+            .attr("fill", "none");
+
+        svg.append("path")
+            .attr("class", "line")
+            .attr("d", gigaTickFunction(lineData))
             .attr("fill", "none");
 
         svg.append("g")
@@ -59,17 +83,19 @@
               .attr("dy", ".71em")
               .style("text-anchor", "end")
               .text("Savings ($)");
-    });
+    }
 
-})(window.d3, stubData());
+    data.forEach(renderChart);
 
-function stubData() {
+})(window.d3, stubData);
+
+function stubData(retirementOffset) {
     var raw = window.rawData;
 
     var lineData = raw.map(function(entry, index) {
         var savings = [];
 
-        for (var i = 0; i < entry.computed.DurationUntilRetirement; i++) {
+        for (var i = 0; i < entry.computed.DurationUntilRetirement + retirementOffset; i++) {
             savings.push({
                 age: entry.computed.UserAge + i,
                 savings: futureValue(entry.AccountBalance + entry.computed.YearlyContribution * (i + 1), 1, entry.RateOfReturn, i + 1)
