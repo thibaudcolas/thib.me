@@ -1,0 +1,27 @@
+body {
+  font: 16px sans-serif;
+  shape-rendering: crispEdges;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.area {
+  fill: steelblue;
+    stroke-width: 0;
+}
+
+svg {
+    background: hsl(181, 100%, 94%);
+}
+
+.line {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+p {
+  margin-top: 30px;
+}
