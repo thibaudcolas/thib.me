@@ -2376,6 +2376,8 @@ function stubData() {
         var balance = parseFloat(entry.AccountBalance);
         var rate = parseInt(entry.RateOfReturn, 10);
 
+        var contribution = parseFloat(entry.GrossIncome) * parseInt(entry.ContributionRate, 10) / 100;
+
         var age = (currentYear - dobYear);
 
         entry.UserAge = age;
@@ -2386,7 +2388,7 @@ function stubData() {
         for (var i = 0; i < entry.untilRetirement; i++) {
             entry.data.push({
                 age: age + i,
-                savings: futureValue(balance, 1, rate, i + 1)
+                savings: futureValue(balance + contribution * (i + 1), 1, rate, i + 1)
             });
         }
 
