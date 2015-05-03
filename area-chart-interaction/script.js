@@ -5,16 +5,20 @@
         width = 680 - margin.left - margin.right,
         height = 230 - margin.top - margin.bottom;
 
-    var data = stubData(0);
+    var offset = 0;
+    var data = stubData(offset);
 
     d3.select('#update')
     .on("click", function() {
-        var data = stubData(Math.random() * 10);
+        offset++;
+        var data = stubData(offset);
 
-        data.forEach(renderChart);
+        data.forEach(function(entry, index) {
+            renderChart(entry, index, offset);
+        });
     });
 
-    function renderChart(entry, index) {
+    function renderChart(entry, index, offset) {
         var lineData = entry.computed.Savings;
 
         var x = d3.scale.linear()
@@ -38,54 +42,80 @@
             .y(function(d) { return y(d.savings); });
 
         var gigaTickFunction = d3.svg.line()
-            .x(function(d) { return x(entry.RetirementAge - 1); })
+            .x(function(d) { return x(entry.RetirementAge + offset - 1); })
             .y(function(d) {
-                if (d.age < entry.RetirementAge) {
+                if (d.age < entry.RetirementAge + offset) {
                     return y(d.savings);
                 }
             });
 
         var interpolation = d3.svg.area().interpolate('linear').x(function(d)  {  return x(d.age); }).y0(height).y1(function(d) {  return y(d.savings); });
 
-        d3.select("#entry" + index + ' svg').remove();
+        //d3.select("#entry" + index + ' svg').remove();
 
-        var svg = d3.select("#entry" + index).append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-          .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        if (d3.select("#entry" + index + ' svg') < 1 ){
+            var svg = d3.select("#entry" + index).append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        } else {
+            var svg = d3.select("#entry" + index + ' svg');
+        }
 
-        svg.append("path")
-            .attr("class", "area")
-            .attr("d", interpolation(lineData));
+        if (svg.selectAll(".area")[0].length < 1 ){
+            svg.append("path")
+                .attr("class", "area")
+                .attr("d", interpolation(lineData));
+        } else {
+          svg.selectAll(".area").transition().duration(1000).attr("d", interpolation(lineData));
+        }
 
-        svg.append("path")
-            .attr("class", "line")
-            .attr("d", lineFunction(lineData))
-            .attr("fill", "none");
+        if (svg.selectAll(".line.savings")[0].length < 1 ){
+            svg.append("path")
+                .attr("class", "line savings")
+                .attr("d", lineFunction(lineData))
+                .attr("fill", "none");
+        } else {
+          svg.selectAll(".line.savings").transition().duration(1000).attr("d", lineFunction(lineData));
+        }
 
-        svg.append("path")
-            .attr("class", "line")
-            .attr("d", gigaTickFunction(lineData))
-            .attr("fill", "none");
+        if (svg.selectAll(".line.gigatick")[0].length < 1 ){
+            svg.append("g")
+                .attr("class", "line gigatick")
+                .attr("d", gigaTickFunction(lineData))
+                .attr("fill", "none");
+        } else {
+          svg.selectAll(".line.gigatick").transition().duration(1000).attr("d", gigaTickFunction(lineData));
+        }
 
-        svg.append("g")
-              .attr("class", "x axis")
-              .attr("transform", "translate(0," + height + ")")
-              .call(xAxis);
+        if (svg.selectAll(".x.axis")[0].length < 1 ){
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+        } else {
+          svg.selectAll(".x.axis").transition().duration(1000).call(xAxis)
+        }
 
-          svg.append("g")
-              .attr("class", "y axis")
-              .call(yAxis)
-            .append("text")
-              .attr("transform", "rotate(-90)")
-              .attr("y", 6)
-              .attr("dy", ".71em")
-              .style("text-anchor", "end")
-              .text("Savings ($)");
+        if (svg.selectAll(".y.axis")[0].length < 1 ){
+            svg.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+              .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", ".71em")
+                .style("text-anchor", "end")
+                .text("Savings ($)");
+        } else {
+          svg.selectAll(".y.axis").transition().duration(1000).call(yAxis)
+        }
     }
 
-    data.forEach(renderChart);
+    data.forEach(function(entry, index) {
+        renderChart(entry, index, offset);
+    });
 
 })(window.d3, stubData);
 
