@@ -2393,12 +2393,13 @@ function stubData() {
         var savingsSum = entry.data[entry.data.length - 1] ? entry.data[entry.data.length - 1].savings : 0;
         var yearSavings;
         var annuity = savingsSum / postRetirement;
+        var desiredAnnuity = parseFloat(entry.AnnualIncomeGoal);
 
         for (var j = 0; j < postRetirement; j++) {
             yearSavings = entry.data[i + j - 1] ? entry.data[i + j - 1].savings : 0;
             entry.data.push({
                 age: age + i + j,
-                savings: futureValue(yearSavings - annuity, 1, rate, 1)
+                savings: Math.max(0, futureValue(yearSavings - desiredAnnuity, 1, rate, 1))
             });
         }
 
