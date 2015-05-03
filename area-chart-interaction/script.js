@@ -5,20 +5,51 @@
         width = 680 - margin.left - margin.right,
         height = 230 - margin.top - margin.bottom;
 
-    var offset = 0;
-    var data = stubData(offset);
+    var retirementOffset = 0;
+    var contributionOffset = 0;
+    var data = stubData(retirementOffset, contributionOffset);
 
-    d3.select('#update')
+    d3.select('#later')
     .on("click", function() {
-        offset++;
-        var data = stubData(offset);
+        retirementOffset += 3;
+        var data = stubData(retirementOffset, contributionOffset);
 
         data.forEach(function(entry, index) {
-            renderChart(entry, index, offset);
+            renderChart(entry, index, retirementOffset, contributionOffset);
         });
     });
 
-    function renderChart(entry, index, offset) {
+    d3.select('#sooner')
+    .on("click", function() {
+        retirementOffset -= 3;
+        var data = stubData(retirementOffset, contributionOffset);
+
+        data.forEach(function(entry, index) {
+            renderChart(entry, index, retirementOffset, contributionOffset);
+        });
+    });
+
+    d3.select('#more')
+    .on("click", function() {
+        contributionOffset += 3;
+        var data = stubData(retirementOffset, contributionOffset);
+
+        data.forEach(function(entry, index) {
+            renderChart(entry, index, retirementOffset, contributionOffset);
+        });
+    });
+
+    d3.select('#less')
+    .on("click", function() {
+        contributionOffset -= 3;
+        var data = stubData(retirementOffset, contributionOffset);
+
+        data.forEach(function(entry, index) {
+            renderChart(entry, index, retirementOffset, contributionOffset);
+        });
+    });
+
+    function renderChart(entry, index, retirementOffset, contributionOffset) {
         var lineData = entry.computed.Savings;
 
         var x = d3.scale.linear()
@@ -42,9 +73,9 @@
             .y(function(d) { return y(d.savings); });
 
         var gigaTickFunction = d3.svg.line()
-            .x(function(d) { return x(entry.RetirementAge + offset - 1); })
+            .x(function(d) { return x(entry.RetirementAge + retirementOffset - 1); })
             .y(function(d) {
-                if (d.age < entry.RetirementAge + offset) {
+                if (d.age < entry.RetirementAge + retirementOffset) {
                     return y(d.savings);
                 }
             });
@@ -68,7 +99,7 @@
                 .attr("class", "area")
                 .attr("d", interpolation(lineData));
         } else {
-          svg.selectAll(".area").transition().duration(1000).attr("d", interpolation(lineData));
+          svg.selectAll(".area").transition().duration(500).attr("d", interpolation(lineData));
         }
 
         if (svg.selectAll(".line.savings")[0].length < 1 ){
@@ -77,7 +108,7 @@
                 .attr("d", lineFunction(lineData))
                 .attr("fill", "none");
         } else {
-          svg.selectAll(".line.savings").transition().duration(1000).attr("d", lineFunction(lineData));
+          svg.selectAll(".line.savings").transition().duration(500).attr("d", lineFunction(lineData));
         }
 
         if (svg.selectAll(".line.gigatick")[0].length < 1 ){
@@ -86,7 +117,7 @@
                 .attr("d", gigaTickFunction(lineData))
                 .attr("fill", "none");
         } else {
-          svg.selectAll(".line.gigatick").transition().duration(1000).attr("d", gigaTickFunction(lineData));
+          svg.selectAll(".line.gigatick").transition().duration(500).attr("d", gigaTickFunction(lineData));
         }
 
         if (svg.selectAll(".x.axis")[0].length < 1 ){
@@ -95,7 +126,7 @@
                 .attr("transform", "translate(0," + height + ")")
                 .call(xAxis);
         } else {
-          svg.selectAll(".x.axis").transition().duration(1000).call(xAxis)
+          svg.selectAll(".x.axis").transition().duration(500).call(xAxis)
         }
 
         if (svg.selectAll(".y.axis")[0].length < 1 ){
@@ -109,21 +140,23 @@
                 .style("text-anchor", "end")
                 .text("Savings ($)");
         } else {
-          svg.selectAll(".y.axis").transition().duration(1000).call(yAxis)
+          svg.selectAll(".y.axis").transition().duration(500).call(yAxis)
         }
     }
 
     data.forEach(function(entry, index) {
-        renderChart(entry, index, offset);
+        renderChart(entry, index, retirementOffset, contributionOffset);
     });
 
 })(window.d3, stubData);
 
-function stubData(retirementOffset) {
+function stubData(retirementOffset, contributionOffset) {
     var raw = window.rawData;
 
     var lineData = raw.map(function(entry, index) {
         var savings = [];
+
+        entry.computed.YearlyContribution = (entry.GrossIncome / 100) * Math.max(0, entry.ContributionRate + contributionOffset);
 
         for (var i = 0; i < entry.computed.DurationUntilRetirement + retirementOffset; i++) {
             savings.push({

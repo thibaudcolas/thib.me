@@ -2303,7 +2303,9 @@ var raw = [
 
 var currentYear = (new Date()).getFullYear();
 
-window.rawData = raw.map(function(entry) {
+window.rawData = raw.filter(function(entry, index) {
+    return index > 8 && index < 20;
+}).map(function(entry) {
     entry = {
         UserName: entry.UserName, // "Ivor",
         UserGender: entry.UserGender, // "Female",
