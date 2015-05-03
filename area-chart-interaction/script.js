@@ -8,10 +8,6 @@
     data.forEach(function(entry, index) {
         var lineData = entry.data;
 
-        var lineFunction = d3.svg.line()
-            .x(function(d) { return d.age; })
-            .y(function(d) { return d.savings; });
-
         var x = d3.scale.linear()
             .range([0, width])
             .domain(d3.extent(lineData,  function(d) { return d.age; }));
@@ -27,6 +23,10 @@
         var yAxis = d3.svg.axis()
             .scale(y)
             .orient("left");
+
+        var lineFunction = d3.svg.line()
+            .x(function(d) { return x(d.age); })
+            .y(function(d) { return y(d.savings); });
 
         var interpolation = d3.svg.area().interpolate('linear').x(function(d)  {  return x(d.age); }).y0(height).y1(function(d) {  return y(d.savings); });
 
