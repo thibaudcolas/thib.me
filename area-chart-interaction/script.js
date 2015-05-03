@@ -1,50 +1,36 @@
-(function (d3, lineData) {
+(function (d3, data) {
     'use strict';
 
-    console.log(lineData);
-
     var margin = {top: 20, right: 20, bottom: 30, left: 80},
-    width = 680 - margin.left - margin.right,
-    height = 230 - margin.top - margin.bottom;
+        width = 680 - margin.left - margin.right,
+        height = 230 - margin.top - margin.bottom;
 
-    var lineFunction = d3.svg.line()
-        .x(function(d) { return d.year; })
-        .y(function(d) { return d.savings; });
+    data.forEach(function(entry, index) {
+        var lineData = entry.data;
 
-    var x = d3.scale.linear()
-        .range([0, width])
-        .domain(d3.extent(lineData,  function(d) { return d.year; }));
+        var lineFunction = d3.svg.line()
+            .x(function(d) { return d.age; })
+            .y(function(d) { return d.savings; });
 
-    var y = d3.scale.linear()
-        .range([height, 0])
-        .domain([0, d3.max(lineData, function(d) { return d.savings; })]);
+        var x = d3.scale.linear()
+            .range([0, width])
+            .domain(d3.extent(lineData,  function(d) { return d.age; }));
 
-    var xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("bottom");
+        var y = d3.scale.linear()
+            .range([height, 0])
+            .domain([0, d3.max(lineData, function(d) { return d.savings; })]);
 
-    var yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left");
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
 
-    var interpolations = {
-        'linear': d3.svg.area().interpolate('linear').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'linear-closed': d3.svg.area().interpolate('linear-closed').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'step': d3.svg.area().interpolate('step').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'step-before': d3.svg.area().interpolate('step-before').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'step-after': d3.svg.area().interpolate('step-after').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'basis': d3.svg.area().interpolate('basis').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'basis-open': d3.svg.area().interpolate('basis-open').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'basis-closed': d3.svg.area().interpolate('basis-closed').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'bundle': d3.svg.area().interpolate('bundle').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'cardinal': d3.svg.area().interpolate('cardinal').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'cardinal-open': d3.svg.area().interpolate('cardinal-open').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'cardinal-closed': d3.svg.area().interpolate('cardinal-closed').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); }),
-        'monotone': d3.svg.area().interpolate('monotone').x(function(d)  {  return x(d.year); }).y0(height).y1(function(d) {  return y(d.savings); })
-    };
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left");
 
-    Object.keys(interpolations).forEach(function (id) {
-        var svg = d3.select("#" + id).append("svg")
+        var interpolation = d3.svg.area().interpolate('linear').x(function(d)  {  return x(d.age); }).y0(height).y1(function(d) {  return y(d.savings); });
+
+        var svg = d3.select("#entry" + index).append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
           .append("g")
@@ -52,7 +38,7 @@
 
         svg.append("path")
             .attr("class", "area")
-            .attr("d", interpolations[id](lineData));
+            .attr("d", interpolation(lineData));
 
         var linegraph = svg.append("path")
             .attr("class", "line")
@@ -75,7 +61,7 @@
               .text("Savings ($)");
     });
 
-})(window.d3, stubData()[0].data);
+})(window.d3, stubData());
 
 function stubData() {
     var raw = [
@@ -2387,18 +2373,32 @@ function stubData() {
         var dobYear = (new Date(entry.UserDOB)).getFullYear();
         var preRetirement = Math.floor(parseFloat(entry.RetirementAge));
         var postRetirement = Math.floor(parseFloat(entry.RetirementDuration));
+        var balance = parseFloat(entry.AccountBalance);
+        var rate = parseInt(entry.RateOfReturn, 10);
 
         var age = (currentYear - dobYear);
 
         entry.UserAge = age;
-        entry.lengthToChart = preRetirement + postRetirement - age;
+        entry.untilRetirement = preRetirement - age;
 
         entry.data = [];
 
-        for (var i = 0; i < entry.lengthToChart; i++) {
+        for (var i = 0; i < entry.untilRetirement; i++) {
             entry.data.push({
-                year: currentYear + i,
-                savings: futureValue(parseFloat(entry.AccountBalance), 1, 3, i + 1)
+                age: age + i,
+                savings: futureValue(balance, 1, rate, i + 1)
+            });
+        }
+
+        var savingsSum = entry.data[entry.data.length - 1] ? entry.data[entry.data.length - 1].savings : 0;
+        var yearSavings;
+        var annuity = savingsSum / postRetirement;
+
+        for (var j = 0; j < postRetirement; j++) {
+            yearSavings = entry.data[i + j - 1] ? entry.data[i + j - 1].savings : 0;
+            entry.data.push({
+                age: age + i + j,
+                savings: futureValue(yearSavings - annuity, 1, rate, 1)
             });
         }
 
