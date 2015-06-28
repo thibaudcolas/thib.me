@@ -7,3 +7,4 @@ dist
 .tmp
 npm-debug.log
 backstopjs
+vorlonjs.log
