@@ -37,6 +37,7 @@
         area: false,
         y_axis: false,
         x_axis: false,
+        aggregate_rollover: true,
         target: '#chart2',
         x_accessor: 'year',
         y_accessor: ['arrivals', 'departures'],
