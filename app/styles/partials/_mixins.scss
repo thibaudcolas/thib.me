@@ -1,24 +1,2 @@
 /*==========  MIXINS  ==========*/
 
-@mixin smart-underline($background, $text, $selection: #ffffcc) {
-  background: linear-gradient($text, $text);
-  background-position: 0 75%;
-  background-size: 1px 1px;
-  background-repeat: repeat-x;
-  color: inherit;
-  text-decoration: none;
-  text-shadow: 0.03em 0 $background, -0.03em 0 $background, 0 0.03em $background, 0 -0.03em $background, 0.06em 0 $background, -0.06em 0 $background, 0.09em 0 $background, -0.09em 0 $background, 0.12em 0 $background, -0.12em 0 $background, 0.15em 0 $background, -0.15em 0 $background;
-
-  &::selection, &::-moz-selection {
-    background: $selection;
-    text-shadow: 0.03em 0 $selection, -0.03em 0 $selection, 0 0.03em $selection, 0 -0.03em $selection, 0.06em 0 $selection, -0.06em 0 $selection, 0.09em 0 $selection, -0.09em 0 $selection, 0.12em 0 $selection, -0.12em 0 $selection, 0.15em 0 $selection, -0.15em 0 $selection;
-  }
-
-  &:before, &:after, *, *:before, *:after {
-    text-shadow: none;
-  }
-
-  &:visited {
-    color: inherit;
-  }
-}
