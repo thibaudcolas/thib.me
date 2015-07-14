@@ -2,6 +2,7 @@
   'use strict';
 
   require('./analytics')();
+  require('./hotjar')();
 
   const domready = require('../vendor/domready/ready');
   const fitText = require('../vendor/fittext/fittext');
