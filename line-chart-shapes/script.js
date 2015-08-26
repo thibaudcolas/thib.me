@@ -11,8 +11,8 @@
 
     var props = {
         margin: margin,
-        width: 480 - margin.left - margin.right,
-        height: 320 - margin.top - margin.bottom
+        width: 768 - margin.left - margin.right,
+        height: 480 - margin.top - margin.bottom
     };
 
     var x = d3.time.scale()
@@ -25,11 +25,15 @@
 
     var xAxis = d3.svg.axis()
         .scale(x)
-        .orient("bottom");
+        .orient("bottom")
+        .tickValues(data.map(function(d) { return d.date; }))
+        .tickFormat(d3.time.format("%b-%y"))
+        .outerTickSize(0);
 
     var yAxis = d3.svg.axis()
         .scale(y)
-        .orient("left");
+        .orient("left")
+        .outerTickSize(0);
 
     var line = d3.svg.line()
         .x(function(d) { return x(d.date); })
@@ -48,13 +52,15 @@
 
     svg.append("g")
       .attr("class", "y axis")
-      .call(yAxis)
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("Price ($)");
+      .call(yAxis);
+
+    svg.append("g")
+        .attr("class", "grid")
+        .attr("transform", "translate(0," + props.height + ")")
+        .call(xAxis
+            .tickSize(-props.height, 0, 0)
+            .tickFormat("")
+        )
 
     svg.append("path")
       .datum(data)

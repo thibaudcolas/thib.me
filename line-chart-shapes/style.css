@@ -16,3 +16,9 @@ svg {
     fill: none;
     stroke: blue;
 }
+
+.domain,
+.tick line {
+    fill: none;
+    stroke: grey;
+}
