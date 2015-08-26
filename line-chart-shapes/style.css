@@ -1,0 +1,18 @@
+body {
+  font: 12px sans-serif;
+  shape-rendering: crispEdges;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    background: azure;
+}
+
+.line {
+    fill: none;
+    stroke: blue;
+}
