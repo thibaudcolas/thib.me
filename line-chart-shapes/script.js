@@ -67,4 +67,10 @@
       .attr("class", "line")
       .attr("d", line);
 
+    svg.append("path")
+      .datum(data)
+      .attr("class", "interact")
+      .attr("d", line)
+      .on('click', function(d) { console.log('click'); });
+
 })(window.d3, window.data);

@@ -17,6 +17,12 @@ svg {
     stroke: blue;
 }
 
+.interact {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.1);
+    stroke-width: 40px;
+}
+
 .domain,
 .tick line {
     fill: none;
