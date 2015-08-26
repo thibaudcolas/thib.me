@@ -21,6 +21,7 @@ svg {
     fill: none;
     stroke: rgba(0, 0, 0, 0.1);
     stroke-width: 40px;
+    stroke-linecap: round;
 }
 
 .domain,
