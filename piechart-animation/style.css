@@ -7,13 +7,3 @@ body {
     margin: 0;
     padding: 0;
 }
-
-svg {
-    background: azure;
-}
-
-#update {
-  position: fixed;
-  top: 50px;
-  right: 30px;
-}
