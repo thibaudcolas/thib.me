@@ -1,41 +1,76 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Area Chart</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Area Chart interpolation</h1>
+---
+layout: default
+title: Area Chart interpolation
+---
 
-  <p>linear - piecewise linear segments, as in a polyline.</p>
-  <div id="linear"></div>
-  <p>linear-closed - close the linear segments to form a polygon.</p>
-  <div id="linear-closed"></div>
-  <p>step - alternate between horizontal and vertical segments, as in a step function.</p>
-  <div id="step"></div>
-  <p>step-before - alternate between vertical and horizontal segments, as in a step function.</p>
-  <div id="step-before"></div>
-  <p>step-after - alternate between horizontal and vertical segments, as in a step function.</p>
-  <div id="step-after"></div>
-  <p>basis - a B-spline, with control point duplication on the ends.</p>
-  <div id="basis"></div>
-  <p>basis-open - an open B-spline; may not intersect the start or end.</p>
-  <div id="basis-open"></div>
-  <p>basis-closed - a closed B-spline, as in a loop.</p>
-  <div id="basis-closed"></div>
-  <p>bundle - equivalent to basis, except the tension parameter is used to straighten the spline.</p>
-  <div id="bundle"></div>
-  <p>cardinal - a Cardinal spline, with control point duplication on the ends.</p>
-  <div id="cardinal"></div>
-  <p>cardinal-open - an open Cardinal spline; may not intersect the start or end, but will intersect other control points.</p>
-  <div id="cardinal-open"></div>
-  <p>cardinal-closed - a closed Cardinal spline, as in a loop.</p>
-  <div id="cardinal-closed"></div>
-  <p>monotone - cubic interpolation that preserves monotonicity in y.</p>
-  <div id="monotone"></div>
+<style>
+.area {
+    fill: tomato;
+    stroke-width: 0;
+}
 
-  <script src="d3.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+.viz svg {
+    background: hsl(181, 100%, 94%);
+}
+
+.line {
+    stroke: crimson;
+    stroke-width: 2px;
+}
+</style>
+
+
+<div id="linear" class="viz"></div>
+<p><strong>linear</strong> - piecewise linear segments, as in a polyline.</p>
+<hr />
+
+<div id="linear-closed" class="viz"></div>
+<p><strong>linear-closed</strong> - close the linear segments to form a polygon.</p>
+<hr />
+
+<div id="step" class="viz"></div>
+<p><strong>step</strong> - alternate between horizontal and vertical segments, as in a step function.</p>
+<hr />
+
+<div id="step-before" class="viz"></div>
+<p><strong>step-before</strong> - alternate between vertical and horizontal segments, as in a step function.</p>
+<hr />
+
+<div id="step-after" class="viz"></div>
+<p><strong>step-after</strong> - alternate between horizontal and vertical segments, as in a step function.</p>
+<hr />
+
+<div id="basis" class="viz"></div>
+<p><strong>basis</strong> - a B-spline, with control point duplication on the ends.</p>
+<hr />
+
+<div id="basis-open" class="viz"></div>
+<p><strong>basis-open</strong> - an open B-spline; may not intersect the start or end.</p>
+<hr />
+
+<div id="basis-closed" class="viz"></div>
+<p><strong>basis-closed</strong> - a closed B-spline, as in a loop.</p>
+<hr />
+
+<div id="bundle" class="viz"></div>
+<p><strong>bundle</strong> - equivalent to basis, except the tension parameter is used to straighten the spline.</p>
+<hr />
+
+<div id="cardinal" class="viz"></div>
+<p><strong>cardinal</strong> - a Cardinal spline, with control point duplication on the ends.</p>
+<hr />
+
+<div id="cardinal-open" class="viz"></div>
+<p><strong>cardinal-open</strong> - an open Cardinal spline; may not intersect the start or end, but will intersect other control points.</p>
+<hr />
+
+<div id="cardinal-closed" class="viz"></div>
+<p><strong>cardinal-closed</strong> - a closed Cardinal spline, as in a loop.</p>
+<hr />
+
+<div id="monotone" class="viz"></div>
+<p><strong>monotone</strong> - cubic interpolation that preserves monotonicity in y.</p>
+<hr />
+
+<script src="d3.min.js"></script>
+<script src="script.js"></script>

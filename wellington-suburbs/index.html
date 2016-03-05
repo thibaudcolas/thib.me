@@ -1,32 +1,25 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
+---
+layout: default
+title: Wellington suburbs and weather stations
+---
+<link rel="stylesheet" href="leaflet/leaflet.css">
+<style>
+#map-wrapper {
+  padding: 10px;
+}
 
-  <title>Wellington suburbs and weather stations</title>
+#map {
+  min-height: 90vh;
+}
+</style>
 
-  <link rel="stylesheet" href="leaflet/leaflet.css">
-  <link rel="stylesheet" href="style.css">
-
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-</head>
-<body>
-  <div id="map-wrapper">
+<div id="map-wrapper">
     <div id="map"></div>
-  </div>
+</div>
 
-  <p>Built with GeoJSON, Leaflet, OpenStreetMap.</p>
+<p>Built with GeoJSON, Leaflet, OpenStreetMap.</p>
 
-  <script src="leaflet/leaflet.js"></script>
-  <script src="wellington-niwa-weatherstations.geojson.js"></script>
-  <script src="wellington-suburbs.geojson.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+<script src="leaflet/leaflet.js"></script>
+<script src="wellington-niwa-weatherstations.geojson.js"></script>
+<script src="wellington-suburbs.geojson.js"></script>
+<script src="script.js"></script>
