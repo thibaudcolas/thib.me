@@ -69,7 +69,7 @@
                 <foaf:name>Twitter</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://twitter.com/"/>
                 <foaf:page rdf:resource="https://twitter.com/thibweb"/>
-                <foaf:accountName>ThibWeb</foaf:accountName>
+                <foaf:accountName>thibaud_colas</foaf:accountName>
             </foaf:OnlineAccount>
         </foaf:account>
 
@@ -78,7 +78,7 @@
                 <foaf:name>SoundCloud</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://soundcloud.com/"/>
                 <foaf:page rdf:resource="https://soundcloud.com/thibweb"/>
-                <foaf:accountName>ThibWeb</foaf:accountName>
+                <foaf:accountName>thibaudcolas</foaf:accountName>
             </foaf:OnlineAccount>
         </foaf:account>
 
