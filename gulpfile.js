@@ -178,7 +178,7 @@ gulp.task('build', ['clean'], function(cb) {
 // Run PageSpeed Insights
 // Update `url` below to the public URL for your site
 gulp.task('pagespeed', pagespeed.bind(null, {
-  url: 'https://thibweb.github.io/thibaudcolas/',
+  url: 'https://thibaudcolas.github.io/thibaudcolas/',
   strategy: 'mobile'
 }));
 

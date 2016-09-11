@@ -22,7 +22,7 @@
         <foaf:name>Thibaud Colas</foaf:name>
         <foaf:givenname>Thibaud</foaf:givenname>
         <foaf:family_name>Colas</foaf:family_name>
-        <foaf:nick>ThibWeb</foaf:nick>
+        <foaf:nick>thibaudcolas</foaf:nick>
         <foaf:mbox_sha1sum>7b6865dfe03fc198ed3d6346afbca5136745fbb7</foaf:mbox_sha1sum>
         <foaf:homepage rdf:resource="http://thib.me"/>
         <dc:description xml:lang="en">I'm a Full-Stack Web Developer who loves to create great things.</dc:description>
@@ -50,8 +50,8 @@
             <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-github">
                 <foaf:name>GitHub</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://github.com/"/>
-                <foaf:page rdf:resource="https://github.com/thibweb"/>
-                <foaf:accountName>ThibWeb</foaf:accountName>
+                <foaf:page rdf:resource="https://github.com/thibaudcolas"/>
+                <foaf:accountName>thibaudcolas</foaf:accountName>
             </foaf:OnlineAccount>
         </foaf:account>
 
@@ -68,7 +68,7 @@
             <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-twitter">
                 <foaf:name>Twitter</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://twitter.com/"/>
-                <foaf:page rdf:resource="https://twitter.com/thibweb"/>
+                <foaf:page rdf:resource="https://twitter.com/thibaudcolas"/>
                 <foaf:accountName>thibaud_colas</foaf:accountName>
             </foaf:OnlineAccount>
         </foaf:account>
@@ -77,7 +77,7 @@
             <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-soundcloud">
                 <foaf:name>SoundCloud</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://soundcloud.com/"/>
-                <foaf:page rdf:resource="https://soundcloud.com/thibweb"/>
+                <foaf:page rdf:resource="https://soundcloud.com/thibaudcolas"/>
                 <foaf:accountName>thibaudcolas</foaf:accountName>
             </foaf:OnlineAccount>
         </foaf:account>
@@ -86,8 +86,8 @@
             <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-npm">
                 <foaf:name>npm</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://www.npmjs.com/"/>
-                <foaf:page rdf:resource="https://www.npmjs.com/~thibweb"/>
-                <foaf:accountName>ThibWeb</foaf:accountName>
+                <foaf:page rdf:resource="https://www.npmjs.com/~thibaudcolas"/>
+                <foaf:accountName>thibaudcolas</foaf:accountName>
             </foaf:OnlineAccount>
         </foaf:account>
 
@@ -136,7 +136,7 @@
         <foaf:currentProject>
             <foaf:Project rdf:about="http://thib.me/foaf.rdf#octoblog">
                 <foaf:name>Octoblog</foaf:name>
-                <foaf:homepage rdf:resource="https://github.com/ThibWeb/octoblog"/>
+                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/octoblog"/>
                 <dc:description xml:lang="en">My personal blog. Contains notes, Thoughts and Open-source software. Built with Octopress.</dc:description>
                 <dc:description xml:lang="fr">Mon blog personnel. Contient mes notes, pensées et contributions open-source. Construit avec Octopress.</dc:description>
             </foaf:Project>
@@ -145,7 +145,7 @@
         <foaf:currentProject>
             <foaf:Project rdf:about="http://thib.me/foaf.rdf#browser-games">
                 <foaf:name>Browser Games</foaf:name>
-                <foaf:homepage rdf:resource="https://github.com/ThibWeb/browser-games"/>
+                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/browser-games"/>
                 <dc:description xml:lang="en">Little HTML5 / Canvas / WebGL game experiments</dc:description>
                 <dc:description xml:lang="fr">Jeux expérimentaux réalisés avec HTML5 / Canvas / WebGL</dc:description>
             </foaf:Project>
@@ -154,7 +154,7 @@
         <foaf:currentProject>
             <foaf:Project rdf:about="http://thib.me/foaf.rdf#php-url-shortener">
                 <foaf:name>URL Shortener</foaf:name>
-                <foaf:homepage rdf:resource="https://github.com/ThibWeb/php-url-shortener"/>
+                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/php-url-shortener"/>
                 <dc:description xml:lang="en">A simple PHP URL Shortener which tries to stay as DRY as possible while adding neat little features</dc:description>
                 <dc:description xml:lang="fr">Un simple raccourcisseur d'URLs en PHP essayant de rester aussi léger que possible tout en ajoutant de petites choses</dc:description>
             </foaf:Project>
@@ -163,7 +163,7 @@
         <foaf:currentProject>
             <foaf:Project rdf:about="http://thib.me/foaf.rdf#thibaudcolas">
                 <foaf:name>Personal Website</foaf:name>
-                <foaf:homepage rdf:resource="https://github.com/ThibWeb/thibaudcolas"/>
+                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/thibaudcolas"/>
                 <dc:description xml:lang="en">Personal website</dc:description>
                 <dc:description xml:lang="fr">Site personnel</dc:description>
             </foaf:Project>
@@ -172,7 +172,7 @@
         <foaf:pastProject>
             <foaf:Project rdf:about="http://thib.me/foaf.rdf#bitstarter">
                 <foaf:name>BitStarter</foaf:name>
-                <foaf:homepage rdf:resource="https://github.com/ThibWeb/bitstarter"/>
+                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/bitstarter"/>
                 <dc:description xml:lang="en">A Kickstarter clone built in Node.js and Express using Bitcoin (Coinbase API), hosted on Amazon EC2</dc:description>
                 <dc:description xml:lang="fr">Un clône de Kickstarter fait avec Node.js et Express utilisant Bitcoin (API Coinbase), hébergé sur Amazon EC2</dc:description>
             </foaf:Project>
@@ -181,7 +181,7 @@
         <foaf:pastProject>
             <foaf:Project rdf:about="http://thib.me/foaf.rdf#icopter">
                 <foaf:name>iCopter</foaf:name>
-                <foaf:homepage rdf:resource="https://github.com/ThibWeb/icopter"/>
+                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/icopter"/>
                 <dc:description xml:lang="en">An iPhone game built with Open GL and FMOD Designer</dc:description>
                 <dc:description xml:lang="fr">Un jeu pour iPhone construit avec Open GL et FMOD Designer</dc:description>
             </foaf:Project>
@@ -199,7 +199,7 @@
         <foaf:pastProject>
             <foaf:Project rdf:about="http://thib.me/foaf.rdf#linked-lifted">
                 <foaf:name>Datalift RIA creation</foaf:name>
-                <foaf:homepage rdf:resource="http://thibweb.github.io/linked-lifted"/>
+                <foaf:homepage rdf:resource="http://thibaudcolas.github.io/linked-lifted"/>
                 <dc:description xml:lang="en">Creation, enhancement and development of Rich Internet Applications on the Datalift platform</dc:description>
                 <dc:description xml:lang="fr">Création, amélioration et développement d'applications en ligne riches sur la plateforme Datalift</dc:description>
             </foaf:Project>
@@ -208,7 +208,7 @@
         <foaf:pastProject>
             <foaf:Project rdf:about="http://thib.me/foaf.rdf#stringtouri">
                 <foaf:name>StringToURI</foaf:name>
-                <foaf:homepage rdf:resource="https://github.com/ThibWeb/stringtouri"/>
+                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/stringtouri"/>
                 <dc:description xml:lang="en">StringToURI is a simple interlink generation framework written in Java with Sesame</dc:description>
                 <dc:description xml:lang="fr">StringToURI est un framework simple de génération d'interconnexions écrit en Java avec Sesame</dc:description>
             </foaf:Project>
@@ -235,7 +235,7 @@
         <foaf:pastProject>
             <foaf:Project rdf:about="http://thib.me/foaf.rdf#clisp-vm">
                 <foaf:name>CLISP compiler and VM</foaf:name>
-                <foaf:homepage rdf:resource="https://github.com/ThibWeb/clisp-compiler-vm"/>
+                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/clisp-compiler-vm"/>
                 <dc:description xml:lang="en">A LISP to ASM compiler and virtual machine</dc:description>
                 <dc:description xml:lang="fr">Un compilateur LISP vers ASM et une machine virtuelle</dc:description>
             </foaf:Project>
@@ -244,7 +244,7 @@
         <foaf:pastProject>
             <foaf:Project rdf:about="http://thib.me/foaf.rdf#metaprogramming">
                 <foaf:name>Metaprogramming</foaf:name>
-                <foaf:homepage rdf:resource="https://github.com/ThibWeb/metaprogramming"/>
+                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/metaprogramming"/>
                 <dc:description xml:lang="en">Experiments around metaprogramming in multiple programming languages</dc:description>
                 <dc:description xml:lang="fr">Une série d'expériences de métaprogrammation de plusieurs langages</dc:description>
             </foaf:Project>
@@ -253,7 +253,7 @@
         <foaf:pastProject>
             <foaf:Project rdf:about="http://thib.me/foaf.rdf#uri-encoder">
                 <foaf:name>URI Encoder</foaf:name>
-                <foaf:homepage rdf:resource="https://github.com/ThibWeb/uriencoder"/>
+                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/uriencoder"/>
                 <dc:description xml:lang="en">A simple Mac OS X Dashboard widget which URI-encodes/decodes text</dc:description>
                 <dc:description xml:lang="fr">Un simple widget pour le dashboard de Mac OS X pour encoder/décoder des URIs</dc:description>
             </foaf:Project>
