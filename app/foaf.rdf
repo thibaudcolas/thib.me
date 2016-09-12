@@ -12,7 +12,7 @@
         xmlns:rss="http://purl.org/rss/1.0/">
 
     <foaf:PersonalProfileDocument rdf:about="#me">
-        <rdfs:label>Thibaud Colas' FOAF profile</rdfs:label>
+        <rdfs:label>Thibaud Colas’ FOAF profile</rdfs:label>
         <foaf:primaryTopic rdf:nodeID="#me"/>
         <foaf:maker rdf:resource="#me"/>
         <foaf:primaryTopic rdf:resource="#me"/>
@@ -68,7 +68,7 @@
             <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-twitter">
                 <foaf:name>Twitter</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://twitter.com/"/>
-                <foaf:page rdf:resource="https://twitter.com/thibaudcolas"/>
+                <foaf:page rdf:resource="https://twitter.com/thibaud_colas"/>
                 <foaf:accountName>thibaud_colas</foaf:accountName>
             </foaf:OnlineAccount>
         </foaf:account>
