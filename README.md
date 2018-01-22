@@ -1,5 +1,4 @@
-[thib.me](http://thib.me) [![Build Status](https://travis-ci.org/thibaudcolas/thibaudcolas.svg?branch=master)](https://travis-ci.org/thibaudcolas/thibaudcolas) [![devDependency Status](https://david-dm.org/thibaudcolas/thibaudcolas/dev-status.svg)](https://david-dm.org/thibaudcolas/thibaudcolas#info=devDependencies)
-============
+# [thib.me](http://thib.me) [![Build Status](https://travis-ci.org/thibaudcolas/thibaudcolas.svg?branch=master)](https://travis-ci.org/thibaudcolas/thibaudcolas) [![devDependency Status](https://david-dm.org/thibaudcolas/thibaudcolas/dev-status.svg)](https://david-dm.org/thibaudcolas/thibaudcolas#info=devDependencies)
 
 My personal website's repository.
 
@@ -48,60 +47,58 @@ I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 
 Static code analysis:
 
-- http://www.jshint.com/
-- https://github.com/jscs-dev/node-jscs
-- https://github.com/causes/scss-lint
+* http://www.jshint.com/
+* https://github.com/jscs-dev/node-jscs
+* https://github.com/causes/scss-lint
 
 Unit testing:
 
-- https://jasmine.github.io/
-- https://karma-runner.github.io/
-- http://phantomjs.org/
+* https://jasmine.github.io/
 
 Visual regression:
 
-- https://github.com/garris/BackstopJS
+* https://github.com/garris/BackstopJS
 
-~~~sh
+```sh
 # Generate reference screenshots:
 cd backstopjs && gulp reference
 # Test new UI against references:
 cd backstopjs && gulp test
-~~~
+```
 
 SEO analysis:
 
-- https://github.com/Munter/hyperlink
+* https://github.com/Munter/hyperlink
 
 Performance:
 
-- http://gtmetrix.com/
-- http://webpagetest.org/
-- https://developers.google.com/speed/pagespeed/insights/
+* http://gtmetrix.com/
+* http://webpagetest.org/
+* https://developers.google.com/speed/pagespeed/insights/
 
 Accessibility:
 
-- http://tenon.io/
-- https://leaverou.github.io/contrast-ratio/
+* http://tenon.io/
+* https://leaverou.github.io/contrast-ratio/
 
 Monitoring:
 
-- http://www.pingdom.com
+* http://www.pingdom.com
 
 ## TODO
 
-- 2) GitHub repos integration https://akshaykumar6.github.io/github-js/
-- 2) GitHub card integration https://github.com/lepture/github-cards
-- 2) Kudos counter
-- 2) Fix the font loading experience
-- 3) StackOverflow flair integration
-- 3) Images on top
-- 3) Twitter integration
-- 3) "More cards" button (Twilight SPARQL, Skimbo, Koans, iCopter) https://www.youtube.com/watch?v=lR7QnU34BGs
-- 3) Work experience section
-- 3) Add HTML5 AppCache for offline viewing
-- 4) Add js-complexity report via https://www.npmjs.com/package/gulp-complexity
-- 4) Code coverage for the tests
+* 2. GitHub repos integration https://akshaykumar6.github.io/github-js/
+* 2. GitHub card integration https://github.com/lepture/github-cards
+* 2. Kudos counter
+* 2. Fix the font loading experience
+* 3. StackOverflow flair integration
+* 3. Images on top
+* 3. Twitter integration
+* 3. "More cards" button (Twilight SPARQL, Skimbo, Koans, iCopter) https://www.youtube.com/watch?v=lR7QnU34BGs
+* 3. Work experience section
+* 3. Add HTML5 AppCache for offline viewing
+* 4. Add js-complexity report via https://www.npmjs.com/package/gulp-complexity
+* 4. Code coverage for the tests
 
 ## Monitoring
 
