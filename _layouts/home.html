@@ -41,6 +41,8 @@
 
   <link rel="meta" title="FOAF" type="application/rdf+xml" href="foaf.rdf">
   <link rel="canonical" href="{{ site.url }}">
+
+  {% include google_analytics.html %}
 </head>
 <body class="container-fluid" itemscope itemtype="http://schema.org/Person" role="document">
 
@@ -57,7 +59,7 @@
           <li><a class="github-link" href="https://github.com/thibaudcolas" title="GitHub profile" rel="me"><span class="icon-github" aria-hidden="true"></span><span>GitHub</span></a></li>
           <li><a class="blog-link" href="http://blog.thib.me" title="Personal blog" rel="author"><span class="icon-newspaper" aria-hidden="true"></span><span>Blog</span></a></li>
           <li><a class="talks-link" href="http://talks.thib.me" title="Personal talks" rel="author"><span class="icon-bullhorn" aria-hidden="true"></span><span>Talks</span></a></li>
-          <li><a class="viz-link" href="http://viz.thib.me" title="DataViz experiments" rel="me"><span class="icon-stats" aria-hidden="true"></span><span>Viz</span></a></li>
+          <li><a class="viz-link" href="/viz" title="DataViz experiments" rel="me"><span class="icon-stats" aria-hidden="true"></span><span>Viz</span></a></li>
         </ul>
       </nav>
     </div>
@@ -346,14 +348,11 @@
         <li>&nbsp;</li>
         <li><a href="http://blog.thib.me" rel="author">Blog <span class="icon-newspaper" aria-hidden="true"></span></a></li>
         <li><a href="http://talks.thib.me" rel="author">Talks <span class="icon-bullhorn" aria-hidden="true"></span></a></li>
-        <li><a href="http://viz.thib.me" rel="author">Viz <span class="icon-stats" aria-hidden="true"></span></a></li>
+        <li><a href="http://thib.me/viz/" rel="author">Viz <span class="icon-stats" aria-hidden="true"></span></a></li>
       </ul>
     </div>
   </footer>
 
   <script src="{{ 'main.js' | prepend: 'assets/' | prepend: site.baseurl }}"></script>
-
-  "<script>window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;ga('create', 'UA-34692999-4','auto');ga('send','pageview');</script>
-  <script src='https://www.google-analytics.com/analytics.js' async defer></script>"
 </body>
 </html>
