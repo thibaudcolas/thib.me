@@ -1,7 +1,5 @@
 'use strict';
 
-require('./analytics')();
-
 const fitText = require('./vendor/fittext');
 const decode = require('./obfuscate').decode;
 
