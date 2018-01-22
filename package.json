@@ -21,16 +21,10 @@
     "arrowParens": "always",
     "proseWrap": "preserve"
   },
-  "dependencies": {
-    "bootstrap-css-only": "3.3.5"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "psi": "^0.1.6"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "start": "gulp serve",
-    "build": "gulp build",
-    "test:ci": "npm run build -s"
+    "dist": "bundle exec jekyll build",
+    "test:ci": "npm run dist -s"
   }
 }
