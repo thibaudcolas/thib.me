@@ -56,7 +56,7 @@ gulp.task('copy', function() {
       ],
       {
         dot: true,
-      },
+      }
     )
     .pipe(gulp.dest('dist'))
     .pipe($.size({ title: 'copy' }));
@@ -80,7 +80,7 @@ gulp.task('styles', function() {
       $.sass({
         errLogToConsole: true,
         precision: 10,
-      }),
+      })
     )
     .on('error', console.error.bind(console))
     .pipe($.autoprefixer({ browsers: AUTOPREFIXER_BROWSERS }))
@@ -117,8 +117,8 @@ gulp.task('assets', ['styles', 'browserify'], function() {
             html: ['app/index.html'],
             // CSS Selectors for UnCSS to ignore
             ignore: [/.js-email-replace/],
-          }),
-        ),
+          })
+        )
       )
       // Concatenate And Minify Styles
       .pipe($.if('*.css', $.csso()))
@@ -143,14 +143,14 @@ gulp.task('html', ['assets'], function() {
           scriptToken,
           '<script async defer>' +
             fs.readFileSync('dist/scripts/main.min.js') +
-            '</script>',
-        ),
+            '</script>'
+        )
       )
       .pipe(
         $.replace(
           styleToken,
-          '<style>' + fs.readFileSync('dist/styles/main.min.css') + '</style>',
-        ),
+          '<style>' + fs.readFileSync('dist/styles/main.min.css') + '</style>'
+        )
       )
       // Output Files
       .pipe(gulp.dest('dist'))
@@ -193,7 +193,7 @@ gulp.task(
   pagespeed.bind(null, {
     url: 'https://thibaudcolas.github.io/thibaudcolas/',
     strategy: 'mobile',
-  }),
+  })
 );
 
 // Build Production Files, the Default Task
