@@ -41,7 +41,9 @@
     "vinyl-source-stream": "^1.0.0"
   },
   "browserify": {
-    "transform": ["browserify-shim"]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browserify-shim": {
     "./app/vendor/fittext/fittext.js": "fitText"
@@ -50,5 +52,8 @@
     "start": "gulp serve",
     "build": "gulp build",
     "deploy": "gulp build && ./deploy.sh"
+  },
+  "dependencies": {
+    "bootstrap-css-only": "3.3.5"
   }
 }
