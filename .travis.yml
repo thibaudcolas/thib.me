@@ -1,7 +1,23 @@
 language: node_js
-node_js:
-  - '0.10'
-after_success: npm run deploy
+cache:
+  directories:
+  - node_modules
+install:
+- npm install
+script:
+- npm run test:ci
+branches:
+  except:
+  - gh-pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: dist
+  github_token: "$GITHUB_TOKEN"
+  on:
+    branch: master
+notifications:
+  email: false
 env:
   global:
-    secure: TCho+s61OgenfIuQFoTZLBrl/IfVEv8JUX5XhsGn71strwsDCdy4Y5hrsyfogFrXEemDd60z/igCL9yUSIjatWgmGtEUziVxy24awEwokKE1LOh01Qi3RxCxXDpLY8T2eR1xGEDFrUq0dIWzmtx/LHDPr7i/rUmXnc7aVU3atLQ=
+    secure: Ji3szRlXsjzGUpmryV6ecZEcpqXAx9zbL1Icp4O5hIxiQb+rGetAYG+lYgnVT4560wuwr3p0yVyJm1JfdUWz05rL8+kKu3kdGjHf8f79OTWIPI8NxsNBecaiMAS+3oE3v78F5NpDUcekFl1QS+uEvbLb68q7dfDdO4U1//zTQ04=

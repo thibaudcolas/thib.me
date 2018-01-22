@@ -2,11 +2,27 @@
   "name": "thibaudcolas",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://github.com/thibaudcolas/thibaudcolas",
+  "author": "Thibaud Colas",
+  "license": "MIT",
+  "homepage": "https://thib.me/",
   "description": "My personal portfolio website",
   "repository": {
     "type": "git",
-    "url": "git://github.com/thibaudcolas/thibaudcolas"
+    "url": "https://github.com/thibaudcolas/thibaudcolas.git"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "proseWrap": "preserve"
+  },
+  "dependencies": {
+    "bootstrap-css-only": "3.3.5"
   },
   "devDependencies": {
     "browser-sync": "^1.8.3",
@@ -33,10 +49,6 @@
   "scripts": {
     "start": "gulp serve",
     "build": "gulp build",
-    "test:ci": "npm run build -s",
-    "deploy": "gulp build && ./deploy.sh"
-  },
-  "dependencies": {
-    "bootstrap-css-only": "3.3.5"
+    "test:ci": "npm run build -s"
   }
 }
