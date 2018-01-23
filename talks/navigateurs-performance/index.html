@@ -1,0 +1,313 @@
+---
+layout: default_reveal
+title: Navigateurs et performance
+description: Navigateurs et performance
+---
+
+<section>
+    <h1>Navigateurs <small>et</small> performance</h1>
+    <br>
+    <h3><em>Le chemin critique</em></h3>
+    <p><br></p>
+    <p><small>Par <a href="http://thib.me">Thibaud Colas</a>, partage en <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></small></p>
+</section>
+
+<section>
+    <h2>Sources d'information</h2>
+    <ul>
+        <li><a href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7">Ilya Grigork, <em>Optimizing the Critical Rendering Path</em></a></li>
+        <li><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Patrick Hamann, <em>CSS And The Critical Path</em></a></li>
+        <li><a href="https://www.youtube.com/watch?v=R8W_6xWphtw">Paul Irish, Keynote @ Fluent 2014</a></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Points abordés</h2>
+    <ul>
+        <li><h3>L'enjeu</h3></li>
+        <li><h3>Le défi</h3></li>
+        <li><h3>Moteurs de rendu</h3></li>
+        <li><h3>Le chemin critique</h3></li>
+        <li><h3>L'avenir</h3></li>
+    </ul>
+</section>
+
+<section data-background="rgb(93, 186, 189)">
+    <h2>L'enjeu</h2>
+</section>
+
+<section>
+    <h2>Pourquoi ?</h2>
+    <ul>
+        <li>Impact direct sur le <b>business</b>.</li>
+        <li>Impact direct sur le <b>référencement</b>.
+        </li>
+        <li>Nous ne sommes plus patients et n'hésitons
+            pas à aller ailleurs.</li>
+    </ul>
+    <p><small><a href="http://www.llaumgui.com/public/slides/web-performances/">Source : llaumgui.com</a></small></p>
+</section>
+
+<section>
+    <h2>Nouvelles attentes</h2>
+    <a class="image" href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/" target="_blank">
+        <img src="img/userbase-expectation.png">
+    </a>
+    <p><small><a href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/">Source : StrangeLoop</a></small></p>
+</section>
+
+<section>
+    <h2>Nouveaux usages</h2>
+    <a class="image" href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/" target="_blank">
+        <img src="img/userbase-behavior.png">
+    </a>
+    <p><small><a href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/">Source : StrangeLoop</a></small></p>
+</section>
+
+<section>
+    <h2>Impact direct</h2>
+    <a class="image" href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/" target="_blank">
+        <img src="img/performance-indicators.png">
+    </a>
+    <p><small><a href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/">Source : StrangeLoop</a></small></p>
+</section>
+
+
+<section data-background="rgb(200, 93, 93)">
+    <h2>La vitesse est une <br><strong>fonctionnalité</strong></h2>
+</section>
+
+<section data-background="rgb(93, 186, 189)">
+    <h2>Le défi</h2>
+</section>
+
+<section>
+    <h2>Diminuer l'attente</h2>
+    <a class="image" href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7" target="_blank">
+        <img src="img/user-reaction.png">
+    </a>
+    <ul>
+        <li>Affichage des pages en moins de <strong>1000ms</strong></li>
+        <li>Réponse aux interactions en <strong>100ms</strong></li>
+    </ul>
+    <p><br><small><a href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7">Source : Ilya Grigork, <em>Optimizing the Critical Rendering Path</em></a></small></p>
+</section>
+
+<section data-background="rgb(200, 93, 93)">
+    <h2>Objectif : <br>affichage en moins d'<strong>une seconde</strong></h2>
+</section>
+
+<section data-background="rgb(93, 186, 189)">
+    <h2>Moteurs de rendu</h2>
+</section>
+
+<section>
+    <a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+        <img src="img/engine-overview.png">
+    </a>
+    <p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+</section>
+
+<section>
+    <a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+        <img src="img/engine-network.png">
+    </a>
+    <p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+</section>
+
+<section>
+    <a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+        <img src="img/engine-dom.png">
+    </a>
+    <p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+</section>
+
+<section>
+    <a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+        <img src="img/engine-cssom.png">
+    </a>
+    <p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+</section>
+
+<section>
+    <a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+        <img src="img/engine-javascript.png">
+    </a>
+    <p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+</section>
+
+<section>
+    <a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+        <img src="img/engine-complete.png">
+    </a>
+    <p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+</section>
+
+<section>
+    <a class="image" href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7" target="_blank">
+        <img src="img/web-request.png">
+    </a>
+    <ul>
+        <li>Lookup DNS : <strong>200ms</strong></li>
+        <li>Connexion TCP (SYN, ACK) : <strong>200ms</strong></li>
+        <li>Handshake TLS (HTTPS) : <strong>200ms</strong></li>
+        <li>Requête HTTP : <strong>200ms</strong></li>
+        <li>Ne parlons même pas de redirection...</li>
+    </ul>
+    <p><br><small><a href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7">Source : Ilya Grigork, <em>Optimizing the Critical Rendering Path</em></a></small></p>
+</section>
+
+<section>
+    <p>Sans HTTPS, il reste <strong>400ms</strong> pour le traitement serveur, l'envoi de la réponse et le rendu client.</p>
+    <p><br>... en théorie.</p>
+</section>
+
+<section>
+    <h2>TCP Slow Start</h2>
+    <a class="image" href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7" target="_blank">
+        <img src="img/tcp-slow-start.png">
+    </a>
+    <ul>
+        <li>TCP n'utilise pas toute la bande passante disponible</li>
+        <li>C'est une <em>feature</em>, pas un bug</li>
+    </ul>
+    <p><br><small><a href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7">Source : Ilya Grigork, <em>Optimizing the Critical Rendering Path</em></a></small></p>
+</section>
+
+<section>
+    <h2>Exemple : 40kb en TCP</h2>
+    <a class="image" href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7" target="_blank">
+        <img src="img/tcp-example.png">
+    </a>
+    <ul>
+        <li>= <strong style="font-size: 200%;">700ms !</strong></li>
+        <li>+ DNS, TLS, etc</li>
+        <li>-> Un round-trip = 14kb</li>
+    </ul>
+    <p><br><small><a href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7">Source : Ilya Grigork, <em>Optimizing the Critical Rendering Path</em></a></small></p>
+</section>
+
+<section>
+    <p>Déprimant, mais</p>
+    <ul>
+        <li>Seul le rendu du contenu visible est nécessaire</li>
+        <li>HTML est parsé de manière incrémentale</li>
+        <li>CSS est bloquant mais JavaScript peut être déferré</li>
+    </ul>
+    <a class="image" href="#" target="_blank">
+        <img src="img/seal-circle.gif" width="100%">
+    </a>
+</section>
+
+<section data-background="rgb(200, 93, 93)">
+    <h2>Objectif : <br>afficher le contenu visible, <br><em>critique</em></h2>
+</section>
+
+<section data-background="rgb(93, 186, 189)">
+    <h2>Le chemin critique</h2>
+</section>
+
+<section>
+    <blockquote>
+        <p>Le chemin de rendu critique relie les échanges réseau à l'affichage du contenu visible sur l'écran. <em>Above the fold</em></p>
+    </blockquote>
+    <p><br></p>
+    <ul>
+        <li>Le HTML est envoyé incrémentalement, la partie visible en 14kb</li>
+        <li>Traitement sans redirection, on peut s'en passer</li>
+        <li>Le CSS critique doit être inliné</li>
+        <li>Le JavaScript doit être asynchrone</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Above the fold</h2>
+    <a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+        <img src="img/above-the-fold.png">
+    </a>
+    <p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+</section>
+
+<section>
+    <h2>Résultat</h2>
+    <a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+        <img src="img/inline-results.png">
+    </a>
+    <p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+</section>
+
+<section>
+    <h2>localStorage</h2>
+    <a class="image" href="#" target="_blank">
+        <img src="img/guardian-localstorage.png">
+    </a>
+    <ul>
+        <li>Les ressources ne sont pas chargées lors de navigations ultérieures</li>
+        <li>Technique utilisée par Google, entre autres</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Résultat</h2>
+    <a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+        <img src="img/localstorage-result.png">
+    </a>
+    <p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+</section>
+
+<section data-background="img/success-kid.jpg">
+</section>
+
+<section data-background="rgb(93, 186, 189)">
+    <h2>L'avenir</h2>
+</section>
+
+<section>
+    <h2>Resource Priorities</h2>
+    <p><a href="https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/ResourcePriorities/Overview.html">Editor's Draft W3C</a></p>
+    <pre><code data-trim contenteditable>
+&lt;html&gt;
+&lt;head&gt;
+<link rel="stylesheet" href="{{ '/assets/reveal/sky.css' | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ '/assets/reveal/zenburn.css' | prepend: site.baseurl }}" lazyload="true">
+&lt;/head&gt;
+&lt;/html&gt;
+    </code></pre>
+    <ul>
+        <li><em> Using the lazyload attribute on a resource will signal to the User Agent that in cases of network resource contention, it may lower the download priority of that resource.</em></li>
+        <li><em>Using the postpone attribute, developers can specify which resources the User Agent should not download until they are visible to the user. </em></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Client Hints</h2>
+    <p><a href="http://tools.ietf.org/html/draft-grigorik-http-client-hints-00">Draft IETF par <em>Ilya Grigorik</em></a></p>
+    <a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+        <img src="img/client-hints.png">
+    </a>
+    <ul>
+        <li>Nouveau header HTTP</li>
+        <li>Largeur, hauteur, densité de pixels</li>
+    </ul>
+    <p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+</section>
+
+<section>
+    <h2>SPDY/HTTP 2.0</h2>
+    <p>Draft en cours de finalisation</p>
+    <ul>
+        <li>Une connexion par origine</li>
+        <li>Latence plus faible sur mobile</li>
+        <li>Et bien plus</li>
+    </ul>
+</section>
+
+<section data-background="white">
+    <h2>Merci !</h2>
+    <p><br></p>
+    <p><small>Par <a href="http://thib.me">Thibaud Colas</a>, partage en <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></small></p>
+    <ul>
+        <li>Slides sur <a href="http://talks.thib.me/">talks.thib.me/navigateurs-performance</a></li>
+        <li>Sources sur <a href="https://github.com/thibaudcolas/talks/tree/master/2014/navigateurs-performance">GitHub</a></li>
+    </ul>
+</section>

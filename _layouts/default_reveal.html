@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.talks_title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.talks_description }}{% endif %}">
+
+    <link rel="stylesheet" href="{{ '/assets/reveal/reveal.min.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/assets/reveal/sky.css' | prepend: site.baseurl }}" id="theme">
+    <link rel="stylesheet" href="{{ '/assets/reveal/custom.css' | prepend: site.baseurl }}">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="{{ '/assets/reveal/docco.css' | prepend: site.baseurl }}">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write( '<link rel="stylesheet" media="print" href="{{ site.baseurl }}/assets/reveal/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css">' );
+    </script>
+
+    {% include google_analytics.html %}
+</head>
+
+<body>
+<div class="reveal">
+    <div class="slides">
+        {{ content }}
+    </div>
+</div>
+
+<script src="{{ '/assets/reveal/head.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/assets/reveal/reveal.min.js' | prepend: site.baseurl }}"></script>
+
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: true,
+        slideNumber: true,
+        history: true,
+        keyboard: true,
+        overview: true,
+        center: true,
+        hideAddressBar: true,
+        transition: 'none',
+        transitionSpeed: 'fast',
+        // ?theme=simple
+        theme: Reveal.getQueryHash().theme || 'sky',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: '{{ site.baseurl}}/assets/reveal/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>

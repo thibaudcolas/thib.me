@@ -1,0 +1,97 @@
+---
+layout: default_reveal
+title: Integrating D3 into React
+description: Integrating D3 into React
+---
+
+<section>
+    <br>
+    <h1>Integrating D3 into React</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Thibaud Colas - <a href="http://twitter.com/thibaud_colas">@thibaud_colas</a><br><br> Slides: <a href="http://talks.thib.me/integrating-d3-into-react">talks.thib.me/integrating-d3-into-react</a></p>
+</section>
+
+<section>
+    <p>This approach is inspired by a <a href="http://nicolashery.com/integrating-d3js-visualizations-in-a-react-app/">blog post from Nicolas Hery</a>. It has also been taken for a spin by <a href="http://blog.siftscience.com/blog/2015/4/6/d-threeact-how-sift-science-made-d3-react-besties">the folks at sift science</a>.</p>
+</section>
+
+<section>
+    <h2>Advantages and tradeoffs</h2>
+    <ul>
+        <li>Clearly separates concerns between D3 (rendering the chart) and React (managing the data &amp; lifecycle)</li>
+        <li>Copy-pasteability of online examples</li>
+    </ul>
+    <ul>
+        <li>React relies on D3 to output the markup</li>
+        <li>State has to be synchronized between D3 chart and React component</li>
+    </ul>
+</section>
+
+<section data-background="rgba(93, 186, 189, 0.5)">
+    <blockquote>
+        Use this approach if you value the ability to use the chart outside of React and idiomatic D3 code over the performance gains you'll have by using React's virtual DOM for SVG.
+    </blockquote>
+</section>
+
+<section>
+    <pre><code data-trim contenteditable>
+export default class ProgressChart extends Chart {
+
+create() {
+const svg = super.createRoot();
+}
+
+update(state) {
+const scales = this._scales(state.domain);
+this._drawBar(scales, state.data);
+}
+    </code></pre>
+</section>
+
+
+<section>
+    <h2>Hooking into React's lifecycle</h2>
+    <br>
+    <pre><code data-trim contenteditable>
+componentDidMount() {
+this.createChart();
+window.addEventListener('resize', this.createChart);
+},
+
+shouldComponentUpdate() {
+if (this.state.chart) {
+this.state.chart.update(this.getChartState());
+}
+
+return false;
+},
+
+componentWillUnmount() {
+this.state.chart.destroy();
+window.removeEventListener('resize', this.createChart);
+},
+    </code></pre>
+</section>
+
+<section>
+    <h2>Other approaches</h2>
+    <br>
+    <ul>
+        <li><a href="https://ericbullington.com/blog/2014/11/16/react-d3-charts/">https://ericbullington.com/blog/2014/11/16/react-d3-charts/</a></li>
+        <li><a href="https://github.com/codesuki/react-d3-components">https://github.com/codesuki/react-d3-components</a></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Code + Demo</h2>
+    <br>
+    <ul>
+        <li><a href="https://github.com/springload/react-d3-integration">https://github.com/springload/react-d3-integration</a></li>
+        <li><a href="https://springload.github.io/react-d3-integration/">https://springload.github.io/react-d3-integration/</a></li>
+    </ul>
+</section>

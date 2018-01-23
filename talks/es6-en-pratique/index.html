@@ -1,0 +1,174 @@
+---
+layout: default_reveal
+title: ES6 en pratique
+description: ES6 en pratique
+---
+
+<section>
+    <h1>ES6 en pratique</h1>
+    <br>
+    <br>
+    <p>Slides : <a href="http://thib.me/es6">thib.me/es6</a></p>
+    <p><br></p>
+    <!-- <span style="display: none; color:rgb(225,25,55); font-family:'Gill Sans', 'Futura', arial; font-size:3em; letter-spacing: -2px;">CGI</span> -->
+    <p><a href="http://twitter.com/thibaud_colas"><img class="inline-img" src="img/tails.png" alt="thibaud_colas"></a> Thibaud Colas - <a href="http://twitter.com/thibaud_colas">@thibaud_colas</a><br/> Ingénieur Développeur @ <img class="inline-img" src="img/cgi-logo.png" alt="CGI"></p>
+</section>
+
+<section>
+    <h2>Évolution du standard</h2>
+    <br>
+    <ul>
+        <li>ES3 : <strong>1999</strong> — regex, try/catch</li>
+        <li>ES5 : <strong>2009</strong> — "use strict", JSON</li>
+        <li>ES6 : <strong>2014 ?</strong> — classes, générateurs, modules, métaprogrammation</li>
+        <li>ES7 : <strong>WIP</strong> — surcharge d'opérateurs, pattern matching, traits</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Support des fonctionnalités</h2>
+    <a href="https://kangax.github.io/es5-compat-table/es6/"><img src="img/compatibility-table.png" alt=""></a>
+    <p>Liste de features sur GitHub : <a href="https://github.com/lukehoban/es6features">lukehoban/es6features</a></p>
+</section>
+
+<section data-background="rgba(93, 186, 189, 0.5)">
+    <h2>Exemples</h2>
+    <br>
+    <br>
+    <p>Sucre syntaxique utilisable dès <strong>aujourd'hui</strong></p>
+    <br>
+    <p>Compatibles Traceur &amp; Firefox 24+</p>
+    <p>Versions originales et transpilées sur GitHub : <br><a href="https://github.com/thibaudcolas/es6-mix-it/">thibaudcolas/es6-mix-it</a></p>
+</section>
+
+<section>
+    <h2>Default parameters</h2>
+    <pre><code data-trim contenteditable>
+var addES5 = function(x, y) {
+y = y ? y : 5;
+return x + y;
+};
+
+var addES6 = function(x, y = 5) {
+return x + y;
+};
+
+var addES6Compiled = function(x) {
+var y = arguments[1] !== (void 0) ? arguments[1] : 5;
+return x + y;
+};
+    </code></pre>
+    <p>Remplace <code>(typeof myVar === "undefined")</code></p>
+</section>
+
+
+<section>
+    <h2>Destructuring</h2>
+    <pre><code data-trim contenteditable>
+var Circle = function(x, y, r) {
+this.center = {
+x: x,
+y: y
+};
+this.radius = r;
+};
+
+var c = new Circle(3, 5, 10);
+
+// ES5
+var centerX = c.center.x;
+var centerY = c.center.y;
+
+var {x: centerX, y: centerY} = c.center; // ES6
+
+var {x, y} = c.center; // ES6 raccourci
+    </code></pre>
+    <p>Assignement multiple selon un pattern</p>
+</section>
+
+<section>
+    <h2>Destructuring</h2>
+    <pre><code data-trim contenteditable>
+var getDiameterES5 = function(c) {
+return c.radius * 2;
+};
+
+var getDiameterES6 = function({radius: r}) {
+return r * 2;
+};
+
+var getDiameterES6Compiled = function($__0) {
+var r = $__0.radius;
+return r * 2;
+};
+    </code></pre>
+    <p>Fonctionne aussi pour les paramètres !</p>
+</section>
+
+<section>
+    <h2>Lambdas / Arrow functions</h2>
+    <pre><code data-trim contenteditable>
+var squareES5 = function (x) {
+return x * x;
+};
+
+
+var squareES6 = x => x * x;
+
+
+var squareES6Compiled = (function(x) {
+return x * x;
+});
+    </code></pre>
+    <br>
+    <p>Syntaxe plus lisible, <code>return</code> implicite</p>
+    <p>Programmation fonctionnelle FTW</p>
+</section>
+
+<section>
+    <h2>Lambdas / Arrow functions</h2>
+    <pre><code data-trim contenteditable>
+var ES5Tree = function() {
+var self = this; // Contexte A
+self.age = 0;
+
+setInterval(function () {
+self.age++; // Contexte B :(
+}, 2000);
+};
+
+var ES6Tree = function() {
+this.age = 0; // Contexte C
+
+setInterval(() => {
+this.age++; // Contexte C toujours !
+}, 2000);
+};
+
+var tree = new ES6Tree();
+    </code></pre>
+    <p></p>
+
+</section>
+
+<section>
+    <h2>Aller plus loin</h2>
+    <br>
+    <ul>
+        <li><a href="https://github.com/google/traceur-compiler">Compilateur Traceur</a></li>
+        <li><a href="http://www.es6fiddle.net/">ES6Fiddle : éditeur en ligne</a></li>
+        <li><a href="https://github.com/lukehoban/es6features">Liste de fonctionnalités par @lukehoban</a></li>
+        <li><a href="https://kangax.github.io/es5-compat-table/es6/">Table de compatibilité de @Kangax</a></li>
+    </ul>
+</section>
+
+<section data-background="white">
+    <h2>Merci !</h2>
+    <br>
+    <br>
+    <p>Par <a href="http://twitter.com/thibaud_colas">Thibaud Colas</a>, partage en <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p>
+    <ul>
+        <li>Slides : <a href="http://talks.thib.me/es6-en-pratique">thib.me/es6</a></li>
+        <li>Sources ES6 sur GitHub : <a href="https://github.com/thibaudcolas/es6-mix-it/">thibaudcolas/es6-mix-it</a></li>
+    </ul>
+</section>
