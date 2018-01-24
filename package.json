@@ -26,6 +26,7 @@
     "prettier": "^1.10.2"
   },
   "scripts": {
+    "start": "bundle exec jekyll serve",
     "dist": "bundle exec jekyll build",
     "formatter": "prettier --write",
     "linter:md": "prettier --list-different",
