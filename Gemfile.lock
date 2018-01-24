@@ -29,6 +29,7 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.9.2)
       jekyll (~> 3.3)
+    jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.1)
       sass (~> 3.4)
     jekyll-watch (2.0.0)
@@ -42,9 +43,12 @@ GEM
     mercenary (0.3.6)
     minima (2.1.1)
       jekyll (~> 3.3)
+    multi_json (1.13.1)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.1)
+    pygments.rb (1.2.1)
+      multi_json (>= 1.0.0)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -63,8 +67,9 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.7.0)
   jekyll-feed (~> 0.6)
+  jekyll-paginate (~> 1.1.0)
   minima (~> 2.0)
-  tzinfo-data
+  pygments.rb (~> 1.2.0)
 
 BUNDLED WITH
    1.16.1

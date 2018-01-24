@@ -1,0 +1,13 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "blog/compass";
+@import "blog/global-reset";
+
+@import "blog/custom/colors";
+@import "blog/custom/fonts";
+@import "blog/custom/layout";
+@import "blog/base";
+@import "blog/partials";
+@import "blog/custom/styles";

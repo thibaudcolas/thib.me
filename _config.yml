@@ -13,37 +13,103 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Thibaud’s blog
+subtitle: Notes, thoughts, and open-source software
+author: Thibaud Colas
+# email: your-email@example.com
+description: Logbook of a software engineer navigating web development
+keywords: thibaud colas thibaudcolas blog software engineer web developer javascript
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://thib.me" # the base hostname & protocol for your site, e.g. http://example.com
+
+date_format: "%F %R"
+
 twitter_username: thibaud_colas
 github_username:  thibaudcolas
 
+# RSS / Email (optional) subscription links (change if using something like Feedburner)
+subscribe_rss: /atom.xml
+subscribe_email:
+# RSS feeds can list your email address if you like
+email:
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
 # Build settings
-markdown: kramdown
-theme: minima
+# theme: minima
+
+# If publishing to a subdirectory as in http://site.com/project set 'root: /project'
+root: /
+permalink: /:title
+source: src
+destination: dist
+# plugins_dir: plugins
 plugins:
-  - jekyll-feed
+  - jekyll-paginate
+code_dir: downloads/code
+category_dir: categories
+markdown: kramdown
+highlighter: false # default python pygments have been replaced by pygments.rb
+
+paginate: 5           # Posts per page on the blog index
+paginate_path: "/page/:num/"
+recent_posts: 5       # Posts in the sidebar Recent Posts section
+excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+# https://github.com/octopress/filters#excerpted-posts
+excerpt_separator: <!-- more -->
+
+titlecase: false       # Converts page and post titles to titlecase
+
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+# Github repositories
+github_user: thibaudcolas
+github_repo_count: 5
+github_show_profile_link: true
+github_skip_forks: true
+
+# Twitter
+twitter_user: thibaud_colas
+twitter_tweet_button: false
+
+# Google +1
+google_plus_one: false
+google_plus_one_size: medium
+
+# Google Plus Profile
+# Hidden: No visible button, just add author information to search results
+googleplus_user: 102675689688248197665
+googleplus_hidden: true
+
+# Pinboard
+pinboard_user:
+pinboard_count: 3
+
+# Delicious
+delicious_user:
+delicious_count: 3
+
+# Disqus Comments
+disqus_short_name:
+disqus_show_comment_count: false
+
+# Google Analytics
+google_analytics_tracking_id: UA-34692999-4
+
+# Facebook Like
+facebook_like: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
-  - Gemfile
-  - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-
-# Google Analytics
-google_analytics_tracking_id: UA-34692999-4
 
 viz_title: Thibaud’s Viz
 viz_description: A group of little visualizations / experiments running in the browser.

@@ -1,0 +1,22 @@
+body > header {
+  background: $header-bg url("/images/tails-128x128.png") left bottom no-repeat;
+  h1 {
+    padding-left: 115px;
+    display: inline-block;
+    margin: 0;
+    a,
+    a:visited,
+    a:hover {
+      color: $title_color;
+      text-decoration: none;
+    }
+  }
+  h2 {
+    padding-left: 115px;
+    margin: 0.2em 0 0;
+    @extend .sans;
+    font-size: 1em;
+    color: $subtitle-color;
+    font-weight: normal;
+  }
+}
