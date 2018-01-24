@@ -45,4 +45,3 @@ Côté Open-source, [Remote Preview](https://github.com/viljamis/Remote-Preview)
 ## MIHTool
 
 Kudos à Unbug qui propose [MIHTool](https://itunes.apple.com/us/app/mihtool-web-debugger-pro/id584739126?mt=8), un outil sortant du cadre de la navigation synchronisée mais qui mérite tout de même d'être cité. MIHTool intègre lui aussi Weinre, et fonctionne sur tous appareils connectés à internet.
-

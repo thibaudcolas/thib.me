@@ -3,7 +3,7 @@ layout: post
 title: "OS//OS in ten tweets"
 date: 2015-04-21 20:59:38 +1200
 comments: true
-categories: [Events, Community, Report] 
+categories: [Events, Community, Report]
 ---
 
 I got to go to the [Open Source // Open Society](http://www.opensourceopensociety.com/) conference here in Wellington thanks to my employer, who was a sponsor. This is probably the conference where I used Twitter the most, so I decided to change my habits and try to summarize it with ten tweets.

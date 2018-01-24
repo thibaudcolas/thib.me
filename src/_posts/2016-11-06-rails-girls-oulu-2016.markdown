@@ -32,9 +32,8 @@ One of the reasons why I wanted to coach here is that my colleagues and I are or
 
 Here are some things that I will keep in mind:
 
-- Not all people learn the same – adapt to each person.
-- Basic steps like "edit code - save file - switch to browser - refresh page" are not basic for newcomers.
-- You will be late on schedule. People will arrive late.
-- Most likely, people will be using Windows. Sharpen your Windows skills beforehand.
-- People will be using computers in other languages than english.
-
+* Not all people learn the same – adapt to each person.
+* Basic steps like "edit code - save file - switch to browser - refresh page" are not basic for newcomers.
+* You will be late on schedule. People will arrive late.
+* Most likely, people will be using Windows. Sharpen your Windows skills beforehand.
+* People will be using computers in other languages than english.

@@ -14,9 +14,9 @@ After two years working in the IT & BPS consulting field at CGI, I was fed up wi
 
 In hindsight, I'd have only left my previous job and moved to New Zealand sooner. Here are a few reasons why:
 
-- New Zealand is the place. New Zealand has amazing scenery, nice weather, a very good tech scene and very kind people.
-- IT salaries are high! The average IT salary for a Java/.NET developer with 2 years of experience is around NZD 75'000$, which is 50'000€ at the current exchange rate. My own salary nearly doubled: I'd have never dreamt of having such a raise by just finding the right job in the right place!
-- The cost of life is quite low. It is definitely lower than in France.
+* New Zealand is the place. New Zealand has amazing scenery, nice weather, a very good tech scene and very kind people.
+* IT salaries are high! The average IT salary for a Java/.NET developer with 2 years of experience is around NZD 75'000$, which is 50'000€ at the current exchange rate. My own salary nearly doubled: I'd have never dreamt of having such a raise by just finding the right job in the right place!
+* The cost of life is quite low. It is definitely lower than in France.
 
 I'd love to expand on this but it feels like I'm just bragging. If you're thinking about moving to NZ, definitely get in touch: [@thibaud_colas](https://twitter.com/thibaud_colas).
 

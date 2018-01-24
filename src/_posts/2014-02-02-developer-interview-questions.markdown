@@ -14,7 +14,7 @@ I stumbled upon a great collection of [Front-end Job Interview Questions](https:
 
 ## General (Web) questions
 
-* What did you learn lately? (framework, stack, trick, methodology, etc.) 
+* What did you learn lately? (framework, stack, trick, methodology, etc.)
 * Talk about your preferred development environment. (OS, Editor, Browsers, Tools etc.)
 * Can you describe the difference between progressive enhancement and graceful degradation?
   * Bonus points for describing feature detection

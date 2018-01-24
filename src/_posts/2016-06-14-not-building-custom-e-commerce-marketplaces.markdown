@@ -8,17 +8,17 @@ categories: [Commerce, Community, Startup]
 
 I think it's now the third time I've had to think about the best approach to create new e-commerce marketplaces.
 
-__TL;DR;__ This is hard, and there is no go-to marketplace as a service yet. But there are alternative approaches.
+**TL;DR;** This is hard, and there is no go-to marketplace as a service yet. But there are alternative approaches.
 
 <!-- more -->
 
 > Note: this text was originally in email form.
 
-In general, I would try to challenge the conclusion that you __"need to create a commerce marketplace from scratch"__ as much as possible, as it will be a big up front effort that might not yield reliable results fast enough. Here are alternative things to look at:
+In general, I would try to challenge the conclusion that you **"need to create a commerce marketplace from scratch"** as much as possible, as it will be a big up front effort that might not yield reliable results fast enough. Here are alternative things to look at:
 
-- https://www.shopify.com/, build e-commerce shops in minutes (likely not to be for you, but well worth a try)
-- http://inselly.com/, http://www.instaorders.com/, tools to sell through Instagram
-- http://pasary.com/, best marketplace as a service contender... from the looks of their product site.
+* https://www.shopify.com/, build e-commerce shops in minutes (likely not to be for you, but well worth a try)
+* http://inselly.com/, http://www.instaorders.com/, tools to sell through Instagram
+* http://pasary.com/, best marketplace as a service contender... from the looks of their product site.
 
 # The "sell through Instagram" approach
 
@@ -38,4 +38,4 @@ For that approach to work, you'll most likely need more than 1/2 developers. Get
 
 I have attended multiple of those in the past. My two cents: most of the times the ideas are great but the teams lack the resources (time, finances, business know-how, technical know-how) to bring those ideas to fruition.
 
-Try to explore those alternative solutions first (eg. building on top of established social platforms) so that you can get going, __fail fast__, make progress. If you succeed there, you'll have the opportunity to take this to the next level, get financial backing and tailor-build the best platform for your users to be happy and your business model to work.
+Try to explore those alternative solutions first (eg. building on top of established social platforms) so that you can get going, **fail fast**, make progress. If you succeed there, you'll have the opportunity to take this to the next level, get financial backing and tailor-build the best platform for your users to be happy and your business model to work.
