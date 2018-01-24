@@ -4,6 +4,8 @@ title: "Browsers and performance: The Critical Path"
 date: 2014-03-24 00:27:19 +0100
 comments: true
 categories: [Talks, Community, Performance]
+redirect_from:
+- /navigateurs-performance
 ---
 
 Here is [a presentation](https://thib.me/talks/navigateurs-performance) I gave a few days ago, entitled « Browsers and performance: The Critical Path ».

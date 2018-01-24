@@ -49,6 +49,7 @@ destination: dist
 # plugins_dir: plugins
 plugins:
   - jekyll-paginate
+  - jekyll-redirect-from
 code_dir: downloads/code
 category_dir: categories
 markdown: kramdown
