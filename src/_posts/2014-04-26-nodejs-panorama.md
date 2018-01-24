@@ -6,7 +6,7 @@ comments: true
 categories: [Talks, Community, JavaScript]
 ---
 
-Dans le cadre de la veille technologique institutionnelle de mon entreprise, j'ai présenté la plateforme Node.js à mes collègues : [Node.js : panorama de la plateforme](https://thib.me/talks/nodejs-panorama).
+Dans le cadre de la veille technologique institutionnelle de mon entreprise, j'ai présenté la plateforme Node.js à mes collègues : [Node.js : panorama de la plateforme](/talks/nodejs-panorama).
 
 <!-- more -->
 
@@ -17,5 +17,3 @@ En trois quarts d'heure, j'évoque :
 * Démonstration des capacités avec plusieurs exemples (Gulp, Streams, Express)
 
 J'ai également mentionné l'excellent [NodeSchool](http://nodeschool.io), une collection de tutoriels gamifiés qui représente selon moi la meilleure façon de découvrir Node.
-
-La présentation est bien évidemment disponible [sur GitHub](https://github.com/thibaudcolas/talks) et sur mon site personnel [thibaudcolas's Talks](https://thib.me/talks).

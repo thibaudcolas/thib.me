@@ -33,17 +33,17 @@ description: Node.js - panorama de la plateforme
 
 <section>
     <pre><code data-trim contenteditable>
-        // Load the http module to create an http server.
-        var http = require('http');
+// Load the http module to create an http server.
+var http = require('http');
 
-        // Respond with Hello World to all requests.
-        var server = http.createServer(function (request, response) {
-            response.writeHead(200, {"Content-Type": "text/plain"});
-            response.end("Hello World\n");
-        });
+// Respond with Hello World to all requests.
+var server = http.createServer(function (request, response) {
+response.writeHead(200, {"Content-Type": "text/plain"});
+response.end("Hello World\n");
+});
 
-        // Listen on port 8000, IP defaults to 127.0.0.1
-        server.listen(8000);
+// Listen on port 8000, IP defaults to 127.0.0.1
+server.listen(8000);
     </code></pre>
 </section>
 
@@ -219,7 +219,6 @@ description: Node.js - panorama de la plateforme
     <p><br></p>
     <p><small>Par <a href="https://thib.me">Thibaud Colas</a>, partage en <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></small></p>
     <ul>
-        <li>Slides sur <a href="https://thib.me/talks/">thib.me/talks/nodejs-panorama</a></li>
-        <li>Sources sur <a href="https://github.com/thibaudcolas/talks/tree/master/2014/nodejs-panorama">GitHub</a></li>
+        <li>Slides sur <a href="https://thib.me/talks/nodejs-panorama">thib.me/talks/nodejs-panorama</a></li>
     </ul>
 </section>
