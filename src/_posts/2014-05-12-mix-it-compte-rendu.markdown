@@ -6,10 +6,10 @@ comments: true
 categories: [Events, Community, Report]
 ---
 
-C'était ma première participation au [Mix-IT](http://www.mix-it.fr), et ça valait le coup ! Les sujets étaient très variés : technique, agilité, et sujets "alien" bien spécifiques à l'évènement. Deux journées très agréables en somme — j'ai même eu la chance d'y faire un petit [lightning talk sur ES6](http://talks.thib.me/es6-en-pratique/).
- 
+C'était ma première participation au [Mix-IT](http://www.mix-it.fr), et ça valait le coup ! Les sujets étaient très variés : technique, agilité, et sujets "alien" bien spécifiques à l'évènement. Deux journées très agréables en somme — j'ai même eu la chance d'y faire un petit [lightning talk sur ES6](https://thib.me/talks/es6-en-pratique/).
+
 <!-- more -->
- 
+
 ## [Des applications réactives avec Spring, AngularDart et Websocket](https://speakerdeck.com/sdeleuze/reactive-applications-with-spring-angulardart-and-websocket)
 
 Sébastien Deleuze nous a fait découvrir [OpenSnap](https://github.com/sdeleuze/opensnap), un clône HTML5 de Snapchat utilisant une stack technologique impressionnante : HTML5, Bootstrap, Dart, AngularDart, WebSockets, SockJS, Java8, Spring Boot, Spring Framework 4, Tomcat 8, MongoDB, RabbitMQ. Cette liste parle pour elle-même, le code vaut le coup d'être lu.

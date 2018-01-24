@@ -6,7 +6,7 @@ comments: true
 categories: [Talk, Community, Performance]
 ---
 
-Voici [une présentation](http://talks.thib.me/navigateurs-performance) que j'ai donné il y a quelques jours, intitulée « Navigateurs et performance : le chemin critique ».
+Voici [une présentation](https://thib.me/talks/navigateurs-performance) que j'ai donné il y a quelques jours, intitulée « Navigateurs et performance : le chemin critique ».
 
 <!-- more -->
 
@@ -16,4 +16,4 @@ Ce talk d'une demi-heure est basé sur trois excellentes présentations :
 * [Patrick Hamann, _CSS And The Critical Path_](https://speakerdeck.com/patrickhamann/css-and-the-critical-path)
 * [Paul Irish, Keynote @ Fluent 2014](https://www.youtube.com/watch?v=R8W_6xWphtw)
 
-Je m'attends à continuer sur cette lancée et présenter de plus en plus à l'avenir, cela a donc été l'occasion de mettre en place un nouveau site pour réunir mes présentations : [thibaudcolas's Talks](http://talks.thib.me).
+Je m'attends à continuer sur cette lancée et présenter de plus en plus à l'avenir, cela a donc été l'occasion de mettre en place un nouveau site pour réunir mes présentations : [thibaudcolas's Talks](https://thib.me/talks).
