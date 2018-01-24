@@ -16,15 +16,20 @@
     "useTabs": false,
     "semi": true,
     "singleQuote": false,
-    "trailingComma": "es5",
+    "trailingComma": "all",
     "bracketSpacing": true,
     "arrowParens": "always",
     "proseWrap": "preserve"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^1.10.2"
+  },
   "scripts": {
     "dist": "bundle exec jekyll build",
+    "formatter": "prettier --write",
+    "linter:md": "prettier --list-different",
+    "lint": "npm run linter:md -s -- '**/*.md'",
     "test:ci": "npm run dist -s"
   }
 }
