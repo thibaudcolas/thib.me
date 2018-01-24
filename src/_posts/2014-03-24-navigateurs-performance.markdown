@@ -3,7 +3,7 @@ layout: post
 title: "Navigateurs et performance"
 date: 2014-03-24 00:27:19 +0100
 comments: true
-categories: [Talk, Community, Performance]
+categories: [Talks, Community, Performance]
 ---
 
 Voici [une présentation](https://thib.me/talks/navigateurs-performance) que j'ai donné il y a quelques jours, intitulée « Navigateurs et performance : le chemin critique ».

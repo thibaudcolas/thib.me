@@ -3,7 +3,7 @@ layout: post
 title: "Node.js : panorama de la plateforme"
 date: 2014-04-26 17:10:30 +0200
 comments: true
-categories: [Talk, Community, JavaScript]
+categories: [Talks, Community, JavaScript]
 ---
 
 Dans le cadre de la veille technologique institutionnelle de mon entreprise, j'ai présenté la plateforme Node.js à mes collègues : [Node.js : panorama de la plateforme](https://thib.me/talks/nodejs-panorama).
