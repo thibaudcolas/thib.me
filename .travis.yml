@@ -13,7 +13,7 @@ branches:
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: _site
+  local_dir: dist
   github_token: "$GITHUB_TOKEN"
   on:
     branch: master
