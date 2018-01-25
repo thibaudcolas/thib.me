@@ -1,0 +1,27 @@
+- Web Development
+    + Front-end: HTML5, CSS3, DOM, JavaScript, ES6, Angular, Knockout, jQuery, Sass, Less, Bootstrap, CoffeeScript, D3, Modernizr, Backbone, Polymer, Require.js, Browserify
+    + Back-end: Node, Express, Python, Ruby, Firebase, PHP, Drupal 7, Drupal Commerce, JEE, GWT, Scala, Play2, Sinatra, Spring, Tornado, Jersey
+    + Architecture : MVC, REST, CRUD, SPA, AJAX, SOAP, WebSockets, WebComponents
+- Practices
+    + Methodologies & Principles: Agile, Scrum, TDD, DRY & KISS, SOLID, SemVer, Static Analysis, Styleguides
+    + Testing Practices: Acceptance Testing, Functional Testing, Performance Testing, Unit Testing
+    + Front-end Practices: RWD, A/B Testing, Accessibility, Feature Detection, Mobile First, Performance Optimization, Progressive Enhancement, SEO
+- Tools
+    + Developer tools: Eclipse, Firebug, Sublime Text, Vim
+    + Front-end tools: npm, Bower, Gulp, Grunt, Ant, Cake, JSHint, CSSLint, Jekyll, Chrome Developer Tools
+    + Test tools: Karma, Mocha, Chai, Jasmine, Selenium, PhantomJS, Browserstack, Sauce Labs, GTMetrix, PageSpeed Insights, WebPageTest, Tenon
+    + Project management tools: Git, SVN, GitHub, GitLab, Redmine, JIRA, Indefero, Mantis, Jenkins, Travis, Sonar, Office
+- Sysadmin & Ops: Apache, MySQL, Staged deployments, Hosting, Load balancing, Monitoring
+- Environments: Unix, OSX, Windows, Vagrant, AWS, App Engine, Heroku
+- Databases: MariaDB, MySQL, MongoDB, PostgreSQL, PostGIS
+- Mobile: iOS, Android, Cordova, Sencha
+- Consulting: Client Meetings, Functional Design, Technical Expertise, Bid proposals
+- Project Management: Team lead, Coaching, Quality Assurance, Team meetings, Cost estimates, Training, Documentation, HR management, Planning, R&D, Reporting
+- Graphics Design: UX, Integration, Photoshop, HMI
+- Semantic Web: SPARQL, RDF, OWL, Jena, Sesame, Silk
+
+
+- Monitoring / Analytics: Google Analytics, Webmaster Tools
+- Libs: AngularFire, Google Charts, WebGL, Three.js, Pixi.js, CodeMirror, Compass, Canvas
+- Other languages: C++, CLISP, Dart, Flex, LaTeX, Markdown, Metaprogramming, NetLogo, OCaml, Objective-C, OpenGL, Perl, R, Regexes, SQL, XML, XSL, Bash, JSON
+- Other fields: Droit, Economie, Ergonomics, Gestion, Psychology, IA, Marketing
