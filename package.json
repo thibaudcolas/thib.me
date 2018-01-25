@@ -31,8 +31,8 @@
   },
   "scripts": {
     "start": "bundle exec jekyll serve",
-    "dist": "bundle exec jekyll build",
-    "dist:resume": "node raw/resume/export.js",
+    "dist": "bundle exec jekyll build && npm run dist:resume -s",
+    "dist:resume": "node raw/resume/export.js > dist/thibaud-resume.html",
     "formatter": "prettier --write",
     "linter:md": "prettier --list-different",
     "lint:resume": "write-good --no-adverb --no-passive --no-weasel raw/resume/resume.json && ./rank-writing.py --aspell --diction resume.json",

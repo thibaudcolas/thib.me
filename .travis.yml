@@ -6,7 +6,7 @@ install:
 - bundle install
 - npm install
 script:
-- bundle exec jekyll build
+- npm run dist
 branches:
   except:
   - gh-pages
