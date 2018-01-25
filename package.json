@@ -22,7 +22,7 @@
     "proseWrap": "preserve"
   },
   "dependencies": {
-    "jsonresume-theme-eloquent": "^3.0.2"
+    "jsonresume-theme-eloquent": "^4.0.0"
   },
   "devDependencies": {
     "prettier": "^1.10.2",
