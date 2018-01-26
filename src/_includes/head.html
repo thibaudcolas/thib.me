@@ -2,9 +2,9 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   {% capture title %}{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %} - {% endif %}{{ site.title }}{% endcapture %}
   <title>{{ title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
 
@@ -31,6 +31,8 @@
   {% endif %}
   <meta name="twitter:label1" value="Reading time">
   <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
 
   {% include google_analytics.html %}
 </head>
