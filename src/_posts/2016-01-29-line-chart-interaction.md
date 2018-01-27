@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Line chart interaction overlay
-date: 2015-04-29 18:40:02 +1200
+date: 2016-01-29 18:40:02 +1200
 comments: true
 categories: [Dataviz, D3, Experiments]
 redirect_from:
