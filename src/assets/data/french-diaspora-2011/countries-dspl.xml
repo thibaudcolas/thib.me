@@ -51,7 +51,7 @@
 		        <file format="csv" encoding="utf-8">countries.csv</file>
 		      </data>
 		    </table>
-		
+
 		<table id="countries_slice_table">
 			<column id="country" type="string"/>
 			<column id="year" type="date" format="yyyy"/>
