@@ -56,7 +56,8 @@ article {
     font-style: italic;
     line-height: 1.3em;
   }
-  img,
+
+  > img,
   video,
   .flash-video {
     @extend .flex-content;
