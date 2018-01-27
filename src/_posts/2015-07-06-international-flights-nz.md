@@ -1,10 +1,25 @@
 ---
-layout: default_viz
+layout: post
 title: International flights to and from New Zealand
+date: 2015-07-06 18:40:02 +1200
+comments: true
+categories: [Dataviz, Open Data, Experiments, D3]
+redirect_from:
+    - /viz/international-flights-nz
 ---
 
-<link rel="stylesheet" href="metricsgraphics.css">
-<style type="text/css">
+This is [StatsNZ](http://www.stats.govt.nz/infoshare/SelectVariables.aspx?pxID=163d666b-55b3-476a-ba8b-d8507dd8b0e3) data about immigration in New Zealand. Worth having a look at!
+
+<!-- more -->
+
+> Flights are only counted if at least one individual on the flight is recorded as an arrival or a departure.
+>
+> Although most flights are scheduled commercial services, the numbers may also include charter services, private aircraft, cargo aircraft and other special flights.
+>
+> Flights may visit more than one overseas port, and will be counted under each. Hence, the sum across overseas ports may differ from the total number of flights.
+
+<link rel="stylesheet" href="/assets/data/metricsgraphics.css">
+<style>
 .mg-line1-color { stroke: #393b79;} .mg-area1-color { fill: #393b79;} .mg-hover-line1-color { fill: #393b79;} .mg-line1-legend-color { color: #393b79;}
 .mg-line2-color { stroke: #5254a3;} .mg-area2-color { fill: #5254a3;} .mg-hover-line2-color { fill: #5254a3;} .mg-line2-legend-color { color: #5254a3;}
 .mg-line3-color { stroke: #6b6ecf;} .mg-area3-color { fill: #6b6ecf;} .mg-hover-line3-color { fill: #6b6ecf;} .mg-line3-legend-color { color: #6b6ecf;}
@@ -47,8 +62,6 @@ title: International flights to and from New Zealand
 .mg-line40-color { stroke: #d9d9d9;} .mg-area40-color { fill: #d9d9d9;} .mg-hover-line40-color { fill: #d9d9d9;} .mg-line40-legend-color { color: #d9d9d9;}
 </style>
 
-<p><a href="http://www.stats.govt.nz/infoshare/SelectVariables.aspx?pxID=163d666b-55b3-476a-ba8b-d8507dd8b0e3">http://www.stats.govt.nz/infoshare/SelectVariables.aspx?pxID=163d666b-55b3-476a-ba8b-d8507dd8b0e3</a></p>
-
 <div id="inbound"></div>
 <div id="inbound-legend"></div>
 <div id="outbound"></div>
@@ -59,11 +72,10 @@ title: International flights to and from New Zealand
 <div id="inbound-rate"></div>
 <div id="inbound-rate-legend"></div>
 
-<blockquote>Flights are only counted if at least one individual on the flight is recorded as an arrival or a departure.</blockquote>
-<blockquote>Although most flights are scheduled commercial services, the numbers may also include charter services, private aircraft, cargo aircraft and other special flights.</blockquote>
-<blockquote>Flights may visit more than one overseas port, and will be counted under each. Hence, the sum across overseas ports may differ from the total number of flights.</blockquote>
+<script src="/assets/data/d3.min.js"></script>
 
-<script src="d3.min.js"></script>
-<script src="jquery-2.1.4.min.js"></script>
-<script src="metricsgraphics.min.js"></script>
-<script src="script.js"></script>
+<script src="/assets/data/jquery-2.1.4.min.js"></script>
+
+<script src="/assets/data/metricsgraphics.min.js"></script>
+
+<script src="/assets/data/international-flights-nz/script.js"></script>

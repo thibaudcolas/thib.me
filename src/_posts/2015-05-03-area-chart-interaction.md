@@ -1,7 +1,16 @@
 ---
-layout: default_viz
-title: Area Chart interaction
+layout: post
+title: Area chart interaction
+date: 2015-05-03 13:40:02 +1200
+comments: true
+categories: [Dataviz, D3, Experiments]
+redirect_from:
+    - /viz/area-chart-interaction
 ---
+
+Here's an experiment, with an area chart that changes its shape based on a financial calculation.
+
+<!-- more -->
 
 <style>
 .area {
@@ -27,12 +36,6 @@ title: Area Chart interaction
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
-}
-
-#update {
-  position: fixed;
-  top: 50px;
-  right: 30px;
 }
 
 </style>
@@ -150,6 +153,8 @@ title: Area Chart interaction
 <div id="entry99" class="viz"></div>
 <div id="entry100" class="viz"></div>
 
-<script src="d3.min.js"></script>
-<script src="data.js"></script>
-<script src="script.js"></script>
+<script src="/assets/data/d3.min.js"></script>
+
+<script src="/assets/data/area-chart-interaction/data.js"></script>
+
+<script src="/assets/data/area-chart-interaction/script.js"></script>
