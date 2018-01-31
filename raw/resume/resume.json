@@ -43,16 +43,17 @@
       "position": "Technical Director - Front-end Development",
       "website": "https://www.springload.co.nz/",
       "startDate": "2016-09-01",
-      "endDate": "2016-11-01",
+      "endDate": "2017-11-01",
       "summary": "Front-end leadership for a team of 10 developers. Oversight of web development projects, either CMS-driven or data-driven single-page apps. Strategic direction, technical architexture, training plans, sales and recruiting.",
       "highlights": [
         "Oversight on 10+ API-driven web app projects, with React, API backends, and client-side routing",
         "Oversight on 10+ content-driven site projects, with a CMS, front-end component library",
         "Technical architecture and project planning for long-term build and maintenance projects",
-        "HR management, career progression, training oversight, hiring, and public relations",
+        "HR management, career progression (OKR), training oversight, hiring, and public relations",
         "Front-end lead for a large-scale CMS redevelopment, built with a pattern library and headless CMS",
         "Build of an advanced extensible rich text editor with React, Draft.js",
-        "Team standards definition - open-source contributions, code reviews rollout, performance targets"
+        "Team standards definition - open-source contributions, code reviews rollout, performance targets",
+        "JavaScript (ES2015+), React, D3, REST APIs, BEM, Express, Django, Wagtail, GitHub, CodeShip, Travis"
       ]
     },
     {
@@ -239,104 +240,145 @@
   ],
   "publications": [
     {
-      "name": "Springload Blog",
-      "publisher": "",
-      "releaseDate": "2016-02-22",
-      "website": "https://www.springload.co.nz/blog/",
-      "summary": "Frequent contributor to Springload's blog. Posts on code, design, user experience, and remote work."
-    },
-    {
-      "name": "Visualization Experiments",
-      "publisher": "",
-      "releaseDate": "2015-01-06",
-      "website": "http://viz.thib.me/",
-      "summary": "A group of little visualizations running in the browser."
-    },
-    {
-      "name": "Public speaking",
-      "publisher": "",
-      "releaseDate": "2014-10-01",
-      "website": "http://talks.thib.me/",
-      "summary": "Public talks in either english or french, given at various events around the world."
-    },
-    {
-      "name": "Personal Blog",
+      "name": "Personal Website and blog",
       "publisher": "",
       "releaseDate": "2013-12-06",
-      "website": "http://blog.thib.me/",
+      "website": "https://thib.me",
       "summary": "Notes, Thoughts and Open-source software."
+    },
+    {
+      "name": "How Springload scores on the Joel Test and why it matters",
+      "publisher": "Springload",
+      "releaseDate": "2017-08-01",
+      "website": "https://www.springload.co.nz/blog/how-springload-scores-joel-test-and-why-it-matters/",
+      "summary": "Ever heard of the Joel Test? It’s a simple 12 question measure of the quality of a software team, introduced by Joel Spolsky of Stack Overflow and Trello fame. The test is famous in the software development community as a no-BS calculation of the maturity of a development team. So, how’d we do?"
+    },
+    {
+      "name": "Exploring uncharted datasets",
+      "publisher": "Springload",
+      "releaseDate": "2017-05-15",
+      "website": "https://www.springload.co.nz/blog/exploring-uncharted-datasets/",
+      "summary": "I’m a self-diagnosed data nerd. For me, there’s nothing like trying to make sense of a phenomenon by looking at data, exploring an uncharted dataset to uncover insights. Sure, I don’t expect everyone to be as excited as I am about the release of the latest seasonally adjusted chain-volume GDP – but I do think that basic data literacy is becoming a vital part of running a successful business, or being an informed citizen."
+    },
+    {
+      "name": "Bringing our mad skillz to Wagtail",
+      "publisher": "Springload",
+      "releaseDate": "2017-05-03",
+      "website": "https://www.springload.co.nz/blog/bringing-our-mad-skillz-wagtail/",
+      "summary": "Springload regularly attends development sprints of Wagtail. They’re a great occasion to meet with other core contributors, and drive the project together towards the needs of its users, aka our clients. In the past our work has taken us to Ede, Netherlands, and Cape Town, South Africa but this time we headed North to Reykjavík, Iceland thanks to our friends at Overcast Software."
+    },
+    {
+      "name": "Awesome Wagtail",
+      "publisher": "Springload",
+      "releaseDate": "2017-02-02",
+      "website": "https://www.springload.co.nz/blog/awesome-wagtail/",
+      "summary": "Disclaimer: this blog post contains a high amount of unreserved enthusiasm about Wagtail and its community."
+    },
+    {
+      "name": "Blurring the line between web and desktop apps",
+      "publisher": "Springload",
+      "releaseDate": "2016-05-30",
+      "website": "https://www.springload.co.nz/blog/blurring-line-between-web-and-desktop-apps/",
+      "summary": "Two years ago, the folks at GitHub released a new text editor called Atom. They built it with web technologies: HTML, CSS and JavaScript. As part of this project they released Electron, a framework to write cross-platform desktop applications with web technologies."
+    },
+    {
+      "name": "A stable front-end stack for 2016",
+      "publisher": "Springload",
+      "releaseDate": "2016-02-22",
+      "website": "https://www.springload.co.nz/blog/a-stable-front-end-stack-for-2016/",
+      "summary": "We've been trialing new front-end tools and libraries over 2015 but our main stack has remained very stable. Starting a new project? Here are Springload’s picks, all available in our front-end starter kit."
     }
   ],
   "skills": [
     {
         "name": "Web Development: Front-end",
         "level": "",
-        "keywords": ["HTML5", "CSS3", "JavaScript", "ES6", "CoffeeScript", "Angular", "Knockout", "jQuery", "Sass", "Less", "Bootstrap", "D3"]
+        "keywords": ["HTML5", "CSS3", "SVG", "JavaScript", "ES2015+", "React", "Redux", "D3", "Angular", "Knockout", "jQuery", "Sass", "Draft.js", "Electron", "Lodash", "Flow"]
     },
     {
         "name": "Web Development: Back-end",
         "level": "",
-        "keywords": ["Node", "Express", "Python", "Ruby", "Firebase", "PHP"]
+        "keywords": ["Node", "Express", "Python", "Django", "Wagtail", "Ruby", "Firebase", "PHP"]
     },
     {
         "name": "Web Development: Architecture",
         "level": "",
-        "keywords": ["MVC", "REST", "CRUD", "SPA", "AJAX", "SOAP", "WebSockets"]
+        "keywords": ["SPA", "REST", "SSR", "MVC", "CRUD", "AJAX", "SOAP", "WebSockets"]
+    },
+    {
+        "name": "Platforms",
+        "level": "",
+        "keywords": ["Wagtail CMS", "Django", "Drupal 7", "Contentful", "AWS EC2", "Heroku", "React Native"]
     },
     {
         "name": "Consulting",
         "level": "",
-        "keywords": ["Client Meetings", "Functional Design", "Technical Expertise", "Presales"]
+        "keywords": ["Technical Expertise", "Functional Design", "Project Lifecycle"]
+    },
+    {
+        "name": "Direction",
+        "level": "",
+        "keywords": ["Partner relationships", "Strategic thinking", "Business development", "Strategic planning"]
+    },
+    {
+        "name": "Sales",
+        "level": "",
+        "keywords": ["Proposals", "Presales", "Workshops"]
     },
     {
         "name": "Project Management",
         "level": "",
-        "keywords": ["Team lead", "Coaching", "Quality Assurance", "Team meetings", "Cost estimates", "Training", "Documentation", "HR management"]
+        "keywords": ["Agile", "Scrum", "TDD", "Quality Assurance", "Team meetings", "Cost estimates", "Code reviews", "Documentation"]
     },
     {
-        "name": "Methodologies & Principles",
+        "name": "Team Management",
         "level": "",
-        "keywords": ["Agile", "Scrum", "TDD", "DRY & KISS", "SOLID"]
+        "keywords": ["Team leadership", "Mentoring", "Training", "OKR", "Workshops", "HR management", "Hiring", "Team standards", "Code styleguides"]
     },
     {
         "name": "Front-end Practices",
         "level": "",
-        "keywords": ["RWD", "A/B Testing", "Accessibility", "Feature Detection", "Mobile First", "Performance Optimization", "Progressive Enhancement", "SEO"]
+        "keywords": ["Accessibility", "Pattern libraries", "RWD", "Code Reviews", "A/B Testing", "Feature Detection", "Mobile First", "Performance Optimization", "Progressive Enhancement", "SEO"]
     },
     {
         "name": "Testing Practices",
         "level": "",
-        "keywords": ["Unit Testing", "Performance Testing", "Functional Testing"]
+        "keywords": ["Unit Testing", "Performance Testing", "Accessibility Testing", "Functional Testing", "UI regression testing"]
+    },
+    {
+        "name": "Public relations",
+        "level": "",
+        "keywords": ["Meetups", "Conference talks", "Events sponsorships", "Technical writing", "Social media"]
     },
     {
         "name": "Front-end Tools",
         "level": "",
-        "keywords": ["npm", "Bower", "Gulp", "Grunt"]
+        "keywords": ["npm", "Webpack", "yarn", "ESLint", "Prettier", "Rollup", "Gulp"]
     },
     {
         "name": "Testing Tools",
         "level": "",
-        "keywords": ["Karma", "Mocha", "Chai", "Jasmine", "Selenium"]
+        "keywords": ["Jest", "Selenium", "Karma", "Mocha", "Chai", "Jasmine"]
     },
     {
         "name": "Project Management Tools",
         "level": "",
-        "keywords": ["Git", "SVN", "GitHub", "GitLab", "Redmine", "JIRA", "Jenkins", "Travis", "Office"]
+        "keywords": ["Git", "GitHub", "GitLab", "Trello", "Redmine", "JIRA", "Google Docs"]
+    },
+    {
+        "name": "Design Tools",
+        "level": "",
+        "keywords": ["Sketch", "Zeplin", "InVision"]
     },
     {
         "name": "Sysadmin & Ops",
         "level": "",
-        "keywords": ["Apache", "MySQL", "Staged deployments"]
-    },
-    {
-        "name": "Environments",
-        "level": "",
-        "keywords": ["Unix", "OSX", "Windows", "Vagrant", "AWS", "Heroku"]
+        "keywords": ["CI", "CD", "Vagrant", "Docker", "Build pipelines", "Jenkins", "Travis", "CircleCI", "CodeShip", "DangerJS"]
     },
     {
         "name": "Databases",
         "level": "",
-        "keywords": ["MariaDB", "MySQL", "MongoDB", "PostgreSQL"]
+        "keywords": ["PostgreSQL", "MariaDB", "MySQL", "MongoDB"]
     }
   ],
   "languages": [
@@ -349,6 +391,10 @@
       "fluency": "Fluent — TOEIC: 985/990"
     },
     {
+      "language": "French Sign Language",
+      "fluency": "Elementary proficiency"
+    },
+    {
       "language": "Finnish",
       "fluency": "Actively learning"
     }
@@ -358,7 +404,8 @@
       "name": "Programming",
       "keywords": [
         "Open-Source Software",
-        "Data Visualization"
+        "Data Visualization",
+        "Machine Learning"
       ]
     },
     {
@@ -373,7 +420,8 @@
       "name": "Sports",
       "keywords": [
         "Rollerskating",
-        "Basketball"
+        "Basketball",
+        "Sumo"
       ]
     },
     {
@@ -382,11 +430,16 @@
         "France",
         "India",
         "New Zealand",
+        "Japan",
         "Finland"
       ]
     }
   ],
   "references": [
+    {
+      "name": "Vincent Audebert - Front-end Developer - Springload",
+      "reference": "I highly recommend Thibaud.\nI have been working with him for the past 2 years and he has been a great workmate and then director.\n\nHis technical skills are really good and he is always keen to learn and explore new technologies. He is a keen teacher and happy to share about his experiments so everyone can jump on board. Thibaud is also really focused on code quality and a keen advocate for code formatting, unit testing, performance improvement, etc.\n\nIn terms of management skills Thibaud has been a great manager. Always supporting his team and always trying to understand the situation to get the best compromise for all the parties involved. He knows how to be strict if required but also how to trust his team when needed. He has a great diplomacy sense and knows how to get the most of everyone. This gives a great emulation inside the team to deliver better work in better conditions."
+    },
     {
       "name": "Anthony Dardilhac - Project Lead, Head of tooling - CGI WebFactory",
       "reference": "Thibaud is an avid developer. He quickly grasps complex problems and goes beyond the expectations of his managers. Thanks to his great coaching skills and clear explanations, he helped his colleagues to improve themselves. It's a pleasure to work with him and I recommend him with my eyes closed."
