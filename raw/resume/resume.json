@@ -44,7 +44,7 @@
       "website": "https://www.springload.co.nz/",
       "startDate": "2016-09-01",
       "endDate": "2017-11-01",
-      "summary": "Front-end leadership for a team of 10 developers. Oversight of web development projects, either CMS-driven or data-driven single-page apps. Strategic direction, technical architexture, training plans, sales and recruiting.",
+      "summary": "Front-end leadership for a team of 10 developers. Oversight of web development projects, either CMS-driven or data-driven single-page apps. Strategic direction, technical architecture, training plans, sales and recruiting.",
       "highlights": [
         "Oversight on 10+ API-driven web app projects, with React, API backends, and client-side routing",
         "Oversight on 10+ content-driven site projects, with a CMS, front-end component library",
@@ -83,9 +83,9 @@
       "highlights": [
         "International project with teams in France, Denmark, Sweden.",
         "Frequent client meetings abroad and by telephone.",
-        "Participation to presales projects with innovative technology stacks (POCs with Angular, Polymer, Spring microservices).",
-        "Participation to the CGI Web Factory's Excellence Team, dedicated to improve tooling and processes throughout all projects.",
-        "Deployment of Selenium on the agency's Continuous Integration platform (Jenkins), available for all projects.",
+        "Participation to presales projects with innovative technology stacks (POC with Angular, Polymer, Spring microservices).",
+        "Participation to the CGI Web Factory’s Excellence Team, dedicated to improve tooling and processes throughout all projects.",
+        "Deployment of Selenium on the agency’s Continuous Integration platform (Jenkins), available for all projects.",
         "Mentoring of three interns.",
         "LAMP, Drupal, JavaScript, Angular, jQuery, RWD, SOAP, REST, Jenkins, Selenium, Git, Redmine, JIRA, Scrum"
       ]
@@ -100,7 +100,7 @@
       "highlights": [
         "Technical referee and Project Lead backup on two portal maintenance projects. Team of six developers.",
         "Direct mentoring of two developers.",
-        "Improvement on functional regression rates by adding Selenium to the team's testing process.",
+        "Improvement on functional regression rates by adding Selenium to the team’s testing process.",
         "Customer Satisfaction: 9.6/10",
         "LAMP, Drupal, JavaScript, jQuery, RWD, SOAP, Jenkins, Selenium, Git"
       ]
@@ -111,7 +111,7 @@
       "website": "http://www.english.univ-montp2.fr/",
       "startDate": "2012-09-01",
       "endDate": "2013-01-01",
-      "summary": "Organization of three groups in a JavaScript class (Master's degree) and a Computer Science initiation class (Bachelor's degree).",
+      "summary": "Organization of three groups in a JavaScript class (Master’s degree) and a Computer Science initiation class (Bachelor’s degree).",
       "highlights": [
         "Teaching of HTML, CSS, JavaScript"
       ]
@@ -142,6 +142,15 @@
   ],
   "volunteer": [
     {
+      "organization": "Wagtail",
+      "position": "Core Developer",
+      "website": "https://github.com/wagtail/wagtail",
+      "startDate": "2015-04-01",
+      "endDate": "",
+      "summary": "Wagtail is a content management system built on Django. It’s focused on user experience, and offers precise control for designers and developers.",
+      "highlights": []
+    },
+    {
       "organization": "Oulu Web Development Meetup",
       "position": "Organizer & founder",
       "website": "https://www.meetup.com/Oulu-Web-Development/",
@@ -150,6 +159,131 @@
       "highlights": [
         "Local, english-speaking group of common interest",
         "Meetups every month"
+      ]
+    },
+    {
+      "organization": "Draftail",
+      "position": "",
+      "website": "https://github.com/springload/draftail",
+      "startDate": "2016-11-01",
+      "endDate": "",
+      "summary": "A configurable rich text editor based on Draft.js, built for Wagtail.",
+      "highlights": [
+        "ES2015+, React, Draft.js, Jest, Prettier, Webpack, Rollup"
+      ]
+    },
+    {
+      "organization": "Draft.js exporter",
+      "position": "",
+      "website": "https://github.com/springload/draftjs_exporter",
+      "startDate": "2016-07-01",
+      "endDate": "",
+      "summary": "Library to convert Draft.js ContentState to HTML",
+      "highlights": [
+        "Python, pypi, PEP8, Draft.js, BeautifulSoup, lxml"
+      ]
+    },
+    {
+      "organization": "Awesome Wagtail",
+      "position": "",
+      "website": "https://github.com/springload/awesome-wagtail",
+      "startDate": "2016-06-01",
+      "endDate": "",
+      "summary": "A curated list of awesome packages, articles, and other cool resources from the Wagtail community. Wagtail is a Python CMS powered by Django, focusing on flexibility and user experience.",
+      "highlights": []
+    },
+    {
+      "organization": "Draft.js filters",
+      "position": "",
+      "website": "https://github.com/thibaudcolas/draftjs-filters",
+      "startDate": "2018-01-01",
+      "endDate": "",
+      "summary": "Filter Draft.js content to preserve only the formatting you allow. Built for Draftail and Wagtail.",
+      "highlights": [
+        "ES2015+, React, Draft.js, Jest, Flow, Prettier, DangerJS"
+      ]
+    },
+    {
+      "organization": "Django Girls Wellington",
+      "position": "Organizer and Coach",
+      "website": "https://djangogirls.org/wellington/",
+      "startDate": "2017-12-08",
+      "endDate": "2017-12-10",
+      "summary": "A free programming workshop for women, held at Springload",
+      "highlights": []
+    },
+    {
+      "organization": "Django Girls Oulu",
+      "position": "Coach",
+      "website": "https://djangogirls.org/oulu/",
+      "startDate": "2017-11-08",
+      "endDate": "2017-11-10",
+      "summary": "A free programming workshop for women",
+      "highlights": []
+    },
+    {
+      "organization": "Front-end starter kit",
+      "position": "",
+      "website": "https://github.com/springload/frontend-starter-kit",
+      "startDate": "2015-04-01",
+      "endDate": "2017-11-01",
+      "summary": "A reference and starter kit for front-end development.",
+      "highlights": [
+        "Pattern library",
+        "Code styleguides and quality checklists",
+        "Job descriptions and OKRs",
+        "Webpack, React, Sass, BEM, ITCSS"
+      ]
+    },
+    {
+      "organization": "Django Girls Wellington",
+      "position": "Organizer and Coach",
+      "website": "https://djangogirls.org/wellington/",
+      "startDate": "2016-12-08",
+      "endDate": "2016-12-10",
+      "summary": "A free programming workshop for women, held at Springload",
+      "highlights": []
+    },
+    {
+      "organization": "Rails Girls Oulu",
+      "position": "Coach",
+      "website": "http://railsgirls.com/oulu.html",
+      "startDate": "2016-11-04",
+      "endDate": "2016-11-05",
+      "summary": "Free two-day beginner workshop about Ruby on Rails",
+      "highlights": []
+    },
+    {
+      "organization": "Moulinette",
+      "position": "",
+      "website": "https://github.com/thibaudcolas/moulinette",
+      "startDate": "2016-07-01",
+      "endDate": "2016-07-30",
+      "summary": "Bioinformatics (biochemistry) data processing scripts for NMR (Nuclear Magnetic Resonance), and protein data analysis (PyMOL)",
+      "highlights": [
+        "Python, PyMol, Statistical inference"
+      ]
+    },
+    {
+      "organization": "Test-drive D3",
+      "position": "",
+      "website": "https://github.com/thibaudcolas/testdrived3",
+      "startDate": "2016-01-01",
+      "endDate": "2016-01-30",
+      "summary": "Test-drive D3 is an intro to D3 via a set of self-guided workshops",
+      "highlights": [
+        "D3, Node, SVG, jsdom, NodeSchool"
+      ]
+    },
+    {
+      "organization": "RubeGoldBash",
+      "position": "",
+      "website": "https://github.com/thibaudcolas/rubegoldbash",
+      "startDate": "2015-01-01",
+      "endDate": "2015-01-30",
+      "summary": "A command-line quest where your goal is to invent Rube Goldberg machines in bash! Create the longest one-liners you can, the more pipes (|) the better. Master Rube ((◕‿◕) Hi there!) will help you during your quest.",
+      "highlights": [
+        "Bash, Heroku, Node"
       ]
     },
     {
@@ -184,8 +318,31 @@
       "endDate": "2013-06-02",
       "summary": "Skimbo is a social-networks mash-up. It helps you manage your social networks, for example by viewing and posting to a lot of social feeds at once.",
       "highlights": [
-        "First started by the Froggies team for the TypeSafe contest, development continued during the Montpellier Start-up Weekend.",
+        "First started by the Froggies team for the TypeSafe contest, development continued during the Montpellier Startup Weekend.",
         "Scala, Play 2, AngularJS, Less, MongoDB, WebSockets"
+      ]
+    },
+    {
+      "organization": "Datalift Visualisation",
+      "position": "",
+      "website": "https://github.com/Thibau/datalift-datacubeviz",
+      "startDate": "2013-02-01",
+      "endDate": "2013-02-29",
+      "summary": "DataCubeViz is a Datalift module which helps visualizing statistical datasets using the DataCube ontology. It was created to fulfill the needs of the Datalift project to work with statistical linked data.",
+      "highlights": [
+        "Datalift, SDMX, DataCube, Knockout, RequireJS, jQuery, Datatables, D3"
+      ]
+    },
+    {
+      "organization": "Triple Bench",
+      "position": "",
+      "website": "https://github.com/Thibau/complex",
+      "startDate": "2013-01-01",
+      "endDate": "2013-01-30",
+      "summary": "A benchmarking app for interconnected triple stores (Semantic Web).",
+      "highlights": [
+        "Integrates a GUI SPARQL client and an interface to select triple stores on which to execute the query",
+        "Java EE, PostgreSQL, MySQL, Jena TDB, Jena SDB, D2RQ, Sesame, Bootstrap, jQuery, Google Charts, D3"
       ]
     },
     {
@@ -196,8 +353,19 @@
       "endDate": "2013-01-14",
       "summary": "D4 is a Datalift module to visualize RDF statistical datasets using the DataCube ontology. D4 is built with Bootstrap, D3.js and CoffeeScript.",
       "highlights": [
-        "D4 was made as part of a Master's degree Web Development course.",
+        "D4 was made as part of a Master’s degree Web Development course.",
         "JEE, Jersey, CoffeeScript, Knockout, Bootstrap, Underscore, D3, NVD3, SPARQL"
+      ]
+    },
+    {
+      "organization": "iCopter",
+      "position": "",
+      "website": "https://github.com/thibaudcolas/icopter",
+      "startDate": "2012-10-01",
+      "endDate": "2012-10-30",
+      "summary": "An arcade game for iPhone and iPad, with parallax horizontal scrolling and adaptive sound effects",
+      "highlights": [
+        "iOS, Objective C, XCode, FMOD Designer"
       ]
     }
   ],
@@ -205,7 +373,7 @@
     {
       "institution": "Montpellier 2 University",
       "area": "Web Architecture and Software Engineering",
-      "studyType": "Master's degree",
+      "studyType": "Master’s degree",
       "startDate": "2011-09-01",
       "endDate": "2013-02-10",
       "gpa": "",
@@ -214,7 +382,7 @@
     {
       "institution": "Paris 11 University",
       "area": "Computer Science",
-      "studyType": "Bachelor's degree",
+      "studyType": "Bachelor’s degree",
       "startDate": "2008-09-01",
       "endDate": "2011-07-01",
       "gpa": "",
@@ -286,7 +454,7 @@
       "publisher": "Springload",
       "releaseDate": "2016-02-22",
       "website": "https://www.springload.co.nz/blog/a-stable-front-end-stack-for-2016/",
-      "summary": "We've been trialing new front-end tools and libraries over 2015 but our main stack has remained very stable. Starting a new project? Here are Springload’s picks, all available in our front-end starter kit."
+      "summary": "We’ve been trialing new front-end tools and libraries over 2015 but our main stack has remained very stable. Starting a new project? Here are Springload’s picks, all available in our front-end starter kit."
     }
   ],
   "skills": [
@@ -442,7 +610,7 @@
     },
     {
       "name": "Anthony Dardilhac - Project Lead, Head of tooling - CGI WebFactory",
-      "reference": "Thibaud is an avid developer. He quickly grasps complex problems and goes beyond the expectations of his managers. Thanks to his great coaching skills and clear explanations, he helped his colleagues to improve themselves. It's a pleasure to work with him and I recommend him with my eyes closed."
+      "reference": "Thibaud is an avid developer. He quickly grasps complex problems and goes beyond the expectations of his managers. Thanks to his great coaching skills and clear explanations, he helped his colleagues to improve themselves. It’s a pleasure to work with him and I recommend him with my eyes closed."
     },
     {
       "name": "Arnaud Paul - Project Lead, Open-Source Consultant - CGI WebFactory",
