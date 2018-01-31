@@ -1,7 +1,7 @@
 - Web Development
-    + Front-end: HTML5, CSS3, DOM, JavaScript, ES6, Angular, Knockout, jQuery, Sass, Less, Bootstrap, CoffeeScript, D3, Modernizr, Backbone, Polymer, Require.js, Browserify
-    + Back-end: Node, Express, Python, Ruby, Firebase, PHP, Drupal 7, Drupal Commerce, JEE, GWT, Scala, Play2, Sinatra, Spring, Tornado, Jersey
-    + Architecture : MVC, REST, CRUD, SPA, AJAX, SOAP, WebSockets, WebComponents
+    + Front-end: HTML5, CSS3, DOM, JavaScript, ES2015+, AngularJS, Knockout, jQuery, Sass, Less, Bootstrap, CoffeeScript, D3, Modernizr, Backbone, Polymer, Require.js, Browserify
+    + Back-end: Node, Express, Python, Django, Wagtail, Ruby, Firebase, PHP, Drupal 7, Drupal Commerce, JEE, GWT, Scala, Play2, Sinatra, Spring, Tornado, Jersey
+    + Architecture : MVC, REST, CRUD, SPA, Flux/Redux, AJAX, SOAP, WebSockets, WebComponents
 - Practices
     + Methodologies & Principles: Agile, Scrum, TDD, DRY & KISS, SOLID, SemVer, Static Analysis, Styleguides
     + Testing Practices: Acceptance Testing, Functional Testing, Performance Testing, Unit Testing
@@ -21,7 +21,8 @@
 - Semantic Web: SPARQL, RDF, OWL, Jena, Sesame, Silk
 
 
-- Monitoring / Analytics: Google Analytics, Webmaster Tools
+- Analytics: Google Analytics, Google Tag Manager, Hotjar
+- SEO: Google Search Console (Webmaster Tools), Schema.org, SMO
 - Libs: AngularFire, Google Charts, WebGL, Three.js, Pixi.js, CodeMirror, Compass, Canvas
 - Other languages: C++, CLISP, Dart, Flex, LaTeX, Markdown, Metaprogramming, NetLogo, OCaml, Objective-C, OpenGL, Perl, R, Regexes, SQL, XML, XSL, Bash, JSON
 - Other fields: Droit, Economie, Ergonomics, Gestion, Psychology, IA, Marketing

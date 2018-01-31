@@ -6,7 +6,7 @@
     "email": "thibaudcolas@gmail.com",
     "phone": "+358 44 914 6944",
     "website": "https://thib.me",
-    "summary": "I'm Thibaud, a Technical Lead specialized in Web technologies.\n\n I'm interested in impactful work that makes a difference, open-source software, and sharing my learnings with others. If you care about diverse communities and fighting the good fight, we'll do great things together.",
+    "summary": "I’m Thibaud, a Technical Lead specialized in Web technologies.\n\n I’m interested in impactful work that makes a difference, open-source software, and sharing my learnings with others. If you care about diverse communities and fighting the good fight, we’ll do great things together.",
     "location": {
       "address": "Uusikatu 23",
       "postalCode": "90100",
@@ -40,20 +40,37 @@
   "work": [
     {
       "company": "Springload",
-      "position": "Technical Lead",
+      "position": "Technical Director - Front-end Development",
       "website": "https://www.springload.co.nz/",
-      "startDate": "2016-05-01",
-      "summary": "",
-      "highlights": []
+      "startDate": "2016-09-01",
+      "endDate": "2016-11-01",
+      "summary": "Front-end leadership for a team of 10 developers. Oversight of web development projects, either CMS-driven or data-driven single-page apps. Strategic direction, technical architexture, training plans, sales and recruiting.",
+      "highlights": [
+        "Oversight on 10+ API-driven web app projects, with React, API backends, and client-side routing",
+        "Oversight on 10+ content-driven site projects, with a CMS, front-end component library",
+        "Technical architecture and project planning for long-term build and maintenance projects",
+        "HR management, career progression, training oversight, hiring, and public relations",
+        "Front-end lead for a large-scale CMS redevelopment, built with a pattern library and headless CMS",
+        "Build of an advanced extensible rich text editor with React, Draft.js",
+        "Team standards definition - open-source contributions, code reviews rollout, performance targets"
+      ]
     },
     {
       "company": "Springload",
       "position": "Senior Front-End Developer",
       "website": "https://www.springload.co.nz/",
       "startDate": "2015-03-01",
-      "endDate": "2016-05-01",
-      "summary": "",
-      "highlights": []
+      "endDate": "2016-09-01",
+      "summary": "Front-end development for websites and web apps, primarily with React, Django and Node. Mentoring and training for other front-end developers, R&D, tooling, and pre-sales activities.",
+      "highlights": [
+        "Front-end lead for the kick-off of a new data-driven digital platform for a major New Zealand pension fund. Single-page app with React",
+        "Interactive data visualisation development (D3) for New Zealand’s statistics department and other statistics agencies",
+        "Other CMS-driven sites and apps for organisations such as NZ Red Cross and Kiwibank",
+        "QA expertise, roll out of systematic CI pipelines for all projects as well as front-end unit & integration tests",
+        "Switch to ES6 JavaScript and bundled modules with npm and Browserify, then Webpack",
+        "Participation to bids & proposals, marketing, hiring",
+        "JavaScript (ES2015+), React, D3, REST APIs, BEM, Express, Django, Wagtail, GitHub, CodeShip, Travis"
+      ]
     },
     {
       "company": "CGI",
