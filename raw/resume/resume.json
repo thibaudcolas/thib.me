@@ -44,14 +44,13 @@
       "website": "https://www.springload.co.nz/",
       "startDate": "2016-09-01",
       "endDate": "2017-11-01",
-      "summary": "Front-end leadership for a team of 10 developers. Oversight of web development projects, either CMS-driven or data-driven single-page apps. Strategic direction, technical architecture, training plans, sales and recruiting.",
+      "summary": "Front-end leadership for a team of 10 developers. Front-end Direction for a 40-person agency. Oversight of web development projects, either CMS-driven or data-driven single-page apps. Strategic direction, technical architecture, training plans, sales and recruiting.",
       "highlights": [
         "Oversight on 10+ API-driven web app projects, with React, API backends, and client-side routing",
         "Oversight on 10+ content-driven site projects, with a CMS, front-end component library",
         "Technical architecture and project planning for long-term build and maintenance projects",
         "HR management, career progression (OKR), training oversight, hiring, and public relations",
         "Front-end lead for a large-scale CMS redevelopment, built with a pattern library and headless CMS",
-        "Build of an advanced extensible rich text editor with React, Draft.js",
         "Team standards definition - open-source contributions, code reviews rollout, performance targets",
         "JavaScript (ES2015+), React, D3, REST APIs, BEM, Express, Django, Wagtail, GitHub, CodeShip, Travis"
       ]
