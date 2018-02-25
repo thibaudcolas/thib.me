@@ -12,7 +12,7 @@ Here is a list of upcoming events in southern France (/ Barcelona) around Montpe
 
 ## April
 
-* 16/04 : [Montpellier JUG "Sécurité et authentification d'applications web"](http://jug-montpellier.org/event/26) @ Polytech Montpellier]
+* 16/04 : [Montpellier JUG "Sécurité et authentification d'applications web"](https://www.jug-montpellier.org/events/26) @ Polytech Montpellier]
 * 16/04 - [Drupal Meetup](http://www.meetup.com/drupal-france-francophonie/events/146202632/) @ Cowork'in Montpellier
 * 29-30/04 - [Mix IT - Lyon](http://www.mix-it.fr/)
 

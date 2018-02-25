@@ -8,7 +8,7 @@ redirect_from:
 - /navigateurs-performance
 ---
 
-Here is [a presentation](https://thib.me/talks/navigateurs-performance) I gave a few days ago, entitled « Browsers and performance: The Critical Path ».
+Here is [a presentation](https://thib.me/talks/navigateurs-performance/) I gave a few days ago, entitled « Browsers and performance: The Critical Path ».
 
 <!-- more -->
 

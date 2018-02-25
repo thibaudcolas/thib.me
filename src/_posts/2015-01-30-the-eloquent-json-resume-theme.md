@@ -29,4 +29,4 @@ Here are features that are new compared to Elegant:
 
 IMHO it is much more important for a resume to look great than for a portfolio. The resume may be the first thing any recruiter will look at, and first impression matters. **A lot.** That's why the theme is quite boring to look at — its most important feature is to make your content stand out.
 
-Here's the result on my own resume: [thib.me/cv](https://thib.me/cv).
+Here's the result on my own resume: [thib.me/resume](https://thib.me/resume).

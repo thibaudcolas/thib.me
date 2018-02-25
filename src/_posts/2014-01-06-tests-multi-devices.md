@@ -12,19 +12,19 @@ Après plusieurs heures à tester manuellement une Web App sur mon smartphone, l
 
 Armé de mon ami XKCD, je sais que le jeu en vaut la chandelle. En plus de préserver ma santé mentale, ce genre d'outil permettra un gain de temps substantiel lors des phases de test avec un, et surtout plusieurs appareils.
 
-[![Is it worth the time?](http://imgs.xkcd.com/comics/is_it_worth_the_time.png)](http://xkcd.com/1205/)
+[![Is it worth the time?](https://imgs.xkcd.com/comics/is_it_worth_the_time.png)](http://xkcd.com/1205/)
 
 ## L'outil idéal
 
 L'outil idéal ne nécessite pas ou peu d'installation. Il fonctionne sur tous les terminaux iOS et Android du moment, et sa mise en place est rapide. Cet outil utopique fonctionne à la fois pour des appareils partageant le même réseau, mais aussi lorsque les devices ne sont connectées entre elles que par internet. L'appariement des appareils est simple (détection puis confirmation, passphrase, code, etc).
 
-Surtout, outre la navigation, l'on pourrait également inspecter les éléments des pages des devices (_à la [weinre](http://people.apache.org/~pmuellr/weinre/docs/latest/)_), et surveiller les modifications sur des fichiers afin de déclencher un rafraîchissement sur tous les navigateurs (_à la [LiveReload](http://livereload.com/)_). Enfin, outre la navigation, les interactions avec le navigateur sont également jouées en simultané sur chaque appareil : contrôles de formulaires, scrolling, et hovers synchronisés.
+Surtout, outre la navigation, l'on pourrait également inspecter les éléments des pages des devices (_à la [weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/)_), et surveiller les modifications sur des fichiers afin de déclencher un rafraîchissement sur tous les navigateurs (_à la [LiveReload](http://livereload.com/)_). Enfin, outre la navigation, les interactions avec le navigateur sont également jouées en simultané sur chaque appareil : contrôles de formulaires, scrolling, et hovers synchronisés.
 
 Ensemble, les outils disponibles sur le marché remplissent toutes ces caractéristiques. Malheureusement, aucune solution ne se dégage encore suffisament du lot.
 
 ## Adobe Edge Inspect CC
 
-[Edge Inspect](https://creative.adobe.com/products/inspect) intègre [weinre](http://people.apache.org/~pmuellr/weinre/docs/latest/) et permet également de prendre des captures d'écran sur les devices utilisées. L'une des solutions les plus onéreuses.
+[Edge Inspect](https://www.adobe.com/products/edge-inspect.html) intègre weinre et permet également de prendre des captures d'écran sur les devices utilisées. L'une des solutions les plus onéreuses.
 
 ## Muir
 

@@ -11,7 +11,7 @@ Having just shipped a big "single-page app" project, I think it would be useful 
 <!-- more -->
 
 * [React](https://facebook.github.io/react/) – I'm not doing any JS front-end without React these days. The development experience is amazing, and they have done a terrific job at being highly stable over time. It's always a pleasure to upgrade the React version.
-* [Redux](http://redux.js.org/) – Very stable and reliable, high learning curve but high reward too
+* [Redux](https://redux.js.org/) – Very stable and reliable, high learning curve but high reward too
 * [D3 (v3)](https://d3js.org/) – One of my favorite tools. Can't wait for v4 to be out, the main issue with D3 as it stands now is that I'm only using a fifth of its features but still shipping it all in my JS
 * Springload's reusable components [`react-simpler-select`](https://springload.github.io/react-simpler-select/), [`react-svg-icon`](https://springload.github.io/react-svg-icon/), [`react-accessible-modal`](https://github.com/springload/react-accessible-modal) Because for UI elements you likely want to have your own touch.
 * Flexbox – Such a pleasure to build layouts with this, if browser support isn't too advanced (no IE10 and below)
@@ -29,4 +29,4 @@ Other goodies:
 * [`babel-plugin-lodash`](https://github.com/lodash/babel-plugin-lodash/) for smaller builds
 * npm shrinkwrap – Finally!
 * [Integration tests with Nightmare](https://github.com/thibaudcolas/nightmarejs-integration-tests)
-* [SVG+CSS export as SVG/PNG](https://github.com/springload/reusable-d3-charts/blob/master/client/js/api/download.js) – The more R&D part of this project, which turned out to work quite well
+* [SVG+CSS export as SVG/PNG](https://github.com/thibaudcolas/export-svg-chart) – The more R&D part of this project, which turned out to work quite well

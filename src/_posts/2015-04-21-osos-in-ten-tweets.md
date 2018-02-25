@@ -13,7 +13,7 @@ I got to go to the [Open Source // Open Society](http://www.opensourceopensociet
 ## GitHub Patchwork event [@BizDojo](https://twitter.com/bizdojo), two days before the conference
 
 <blockquote class="twitter-tweet" lang="en">
-    <p>Excited to have <a href="https://twitter.com/kellective">@kellective</a> talking about getting started in open source at Patchwork Wellington! <a href="http://t.co/5T10g4lx1t">pic.twitter.com/5T10g4lx1t</a></p>&mdash; Jessica Lord (@jllord) <a href="https://twitter.com/jllord/status/587892175939117056">April 14, 2015</a>
+    <p>Excited to have <a href="https://github.com/kellective">@kellective</a> talking about getting started in open source at Patchwork Wellington! <a href="http://t.co/5T10g4lx1t">pic.twitter.com/5T10g4lx1t</a></p>&mdash; Jessica Lord (@jllord) <a href="https://twitter.com/jllord/status/587892175939117056">April 14, 2015</a>
 </blockquote>
 
 ## First day: talk by [@benbalter](https://twitter.com/benbalter)

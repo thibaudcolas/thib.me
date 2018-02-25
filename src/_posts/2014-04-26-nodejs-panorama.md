@@ -6,7 +6,7 @@ comments: true
 categories: [Talks, Community, JavaScript]
 ---
 
-Dans le cadre de la veille technologique institutionnelle de mon entreprise, j'ai présenté la plateforme Node.js à mes collègues : [Node.js : panorama de la plateforme](/talks/nodejs-panorama).
+Dans le cadre de la veille technologique institutionnelle de mon entreprise, j'ai présenté la plateforme Node.js à mes collègues : [Node.js : panorama de la plateforme](/talks/nodejs-panorama/).
 
 <!-- more -->
 

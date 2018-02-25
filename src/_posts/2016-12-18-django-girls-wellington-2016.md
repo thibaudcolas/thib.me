@@ -22,6 +22,6 @@ Here are some of the pictures of the event for posterity.
 
 ![Programming is fun!](/images/djangogirls-sandra.jpg)
 
-> Photo credit [Kinfolk Photography](http://www.kinfolkphotography.co.nz/)
+> Photo credit [Kinfolk Photography](https://www.facebook.com/kinfolkphotography/)
 
 Until next time!

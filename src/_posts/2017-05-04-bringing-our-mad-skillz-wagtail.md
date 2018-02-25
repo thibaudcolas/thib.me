@@ -9,7 +9,7 @@ redirect_from:
     - /writing-about-wagtail
 ---
 
-Springload often attends development sprints of Wagtail. They’re a great occasion to meet with other core contributors, and drive the project together towards the needs of its users, aka our clients. In the past our work has taken us to [Ede, Netherlands](/awesome-wagtail/), and Cape Town but this time we headed North to [Reykjavík, Iceland](https://www.google.co.nz/maps?q=Reykjav%C3%ADk) thanks to our friends at [Overcast Software](https://www.overcast.io/).
+Springload often attends development sprints of Wagtail. They’re a great occasion to meet with other core contributors, and drive the project together towards the needs of its users, aka our clients. In the past our work has taken us to [Ede, Netherlands](/awesome-wagtail), and Cape Town but this time we headed North to [Reykjavík, Iceland](https://www.google.co.nz/maps?q=Reykjav%C3%ADk) thanks to our friends at [Overcast Software](https://www.overcast.io/).
 
 <!-- more -->
 

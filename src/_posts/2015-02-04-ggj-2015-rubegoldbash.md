@@ -18,11 +18,11 @@ I started thinking about command-line games when I had a look at the [diversifie
 
 Inspiring isn't it? I got my idea when we learned the theme: _What do we do now?_ See, UNIX tools are known to be easy to combine together. You start with a fixed toolset, but by combining them together you end up with endless possibilities. I would build a game about building [Rube Goldberg machines](https://en.wikipedia.org/wiki/Rube_Goldberg_machine) in bash, _RubeGoldBash_ (thanks for the name Chris).
 
-<p><a href="https://commons.wikimedia.org/wiki/File:Professor_Lucifer_Butts.gif#mediaviewer/File:Professor_Lucifer_Butts.gif"><img alt="Professor Lucifer Butts.gif" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Professor_Lucifer_Butts.gif"></a><br>"<a href="https://commons.wikimedia.org/wiki/File:Professor_Lucifer_Butts.gif#mediaviewer/File:Professor_Lucifer_Butts.gif">Professor Lucifer Butts</a>" by Rube Goldberg - an old comic book. Licensed under Public Domain via <a href="//commons.wikimedia.org/wiki/">Wikimedia Commons</a>.</p>
+[![One of Rube Goldberg's inventions](https://upload.wikimedia.org/wikipedia/commons/a/a9/Rube_Goldberg%27s_%22Self-Operating_Napkin%22_%28cropped%29.gif)](<https://commons.wikimedia.org/wiki/File:Rube_Goldberg%27s_%22Self-Operating_Napkin%22_(cropped).gif>)
 
 This is what it looks like:
 
-<iframe src="http://showterm.io/a06f7dcf548aadbbcb751" width="640" height="480"></iframe>
+<iframe src="https://showterm.io/a06f7dcf548aadbbcb751" width="640" height="480"></iframe>
 
 The goal of the game is to create the most crazy, useless, enormous bash one-liners by combining basic commands together, using as many pipes as possible. Quite simple!
 
@@ -48,9 +48,7 @@ cat /usr/share/dict/propernames | grep 'S' | awk '{print length($1), $1}' | sort
 cat /usr/share/dict/propernames | grep 'S' | awk '{print length($1), $1}' | sort -n | tail -n 1 | cut -d ' ' -f 2 | say
 ```
 
-You can then submit your score by using the `rubeshare` command:
-
-<iframe style="width: 100%; height: 600px" src="http://highscore.rubegoldbash.com/?limit=5"></iframe>
+You can then submit your score by using the `rubeshare` command: [https://github.com/thibaudcolas/rubegoldbash-server](https://github.com/thibaudcolas/rubegoldbash-server).
 
 And voilà! Your score is on the wall, your commands are stored as Gists on GitHub, and you can boast about your newly gained UNIX wizardry skills!
 

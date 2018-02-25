@@ -10,7 +10,7 @@ Il y a quelques jours j’évoquais avec un collègue les évènements organisé
 
 <!-- more -->
 
-## [Agenda Digisquare Montpellier](http://montpellier.digisquare.net/agenda.html)
+## [Agenda Digisquare Montpellier](https://twitter.com/digisquare_mtp)
 
 Un agenda qui répertorie tous les évènements Web / Entrepreunariat / tech.
 
@@ -22,7 +22,7 @@ Des lightning talks (prez de 10 minutes) orientées Web, mensuel, dans plusieurs
 
 Un rendez-vous mensuel sur Montpellier d'utilisateurs (devs) du CMS Drupal.
 
-## [JUG Montpellier](http://jug-montpellier.org/)
+## [JUG Montpellier](https://www.jug-montpellier.org/)
 
 Le Java User Group de Montpellier organise tous les mois des soirées autour de leur langage, mais pas que. Exemple récent : une Dart Flight School, qui s'est très bien passée.
 

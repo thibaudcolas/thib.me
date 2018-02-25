@@ -61,7 +61,7 @@ To understand a dataset, look at what makes up a single data point. Is it a numb
 
 You should also take a look at the available metadata, particularly if there’s a high number of datasets and your audience needs to navigate between them. Talking about navigation – now’s the time to look for the dimensions within your data. Look at how the data is structured, and how many hierarchy levels there are. A uni-dimensional dataset (eg. population of a single country over time) is easier to visualise than a multi-dimensional dataset (eg. population over time, by country; population over time, by country and by age group).
 
-Start with a spreadsheet program (Excel, [Google Sheets](https://www.google.com/sheets/), etc). For coders, [R](https://www.r-project.org/) is worth learning (particularly when working with statistics). While cleaning the data, [OpenRefine](https://github.com/OpenRefine/OpenRefine) is also worth trying before making the move to visualisation tools.
+Start with a spreadsheet program (Excel, [Google Sheets](https://www.google.com/sheets/about/), etc). For coders, [R](https://www.r-project.org/) is worth learning (particularly when working with statistics). While cleaning the data, [OpenRefine](https://github.com/OpenRefine/OpenRefine) is also worth trying before making the move to visualisation tools.
 
 ### Exploratory visualisation, dimensions and trends
 
