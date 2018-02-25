@@ -36,7 +36,7 @@
     .append("g")
     .attr(
       "transform",
-      "translate(" + (width - cellSize * 53) / 2 + "," + 40 + ")",
+      "translate(" + (width - cellSize * 53) / 2 + "," + 40 + ")"
     );
 
   svg
@@ -147,7 +147,7 @@
             "" +
               (d3.time.dayOfYear(start) +
                 1 +
-                Math.floor(amount / input.budgetPerDay)),
+                Math.floor(amount / input.budgetPerDay))
           );
         end.setFullYear(start.getFullYear());
 
@@ -163,7 +163,7 @@
         .range(
           d3.range(11).map(function(d) {
             return "q" + d + "-11";
-          }),
+          })
         );
 
       rect
@@ -178,6 +178,6 @@
         .text(function(d) {
           return d + ": " + input.unit + data[d];
         });
-    },
+    }
   );
 })(window.d3);
