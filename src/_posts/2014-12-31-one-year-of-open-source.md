@@ -13,8 +13,8 @@ The end of the year seems to be a good time to turn back and have a look at what
 In 2014:
 
 * My blog got [13 new blog posts](/archives).
-* I did [4 talks](https://thib.me/talks/) at various events.
-* I created [34 PRs](https://github.com/pulls?q=is%3Apr+author%3Athibaudcolas+is%3Apublic) for many projects on GitHub.
+* I did [4 talks](/talks/) at various events.
+* I created [34 PRs](https://github.com/thibaudcolas?tab=overview&from=2010-12-01&to=2010-12-31) for many projects on GitHub.
 * My [main website](https://thib.me) was rebuilt from scratch.
 * I did a **lot** of side-projects:
   * [Zori](https://github.com/FlipFlopWeekly/zori)

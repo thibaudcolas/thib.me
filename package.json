@@ -16,7 +16,7 @@
     "useTabs": false,
     "semi": true,
     "singleQuote": false,
-    "trailingComma": "all",
+    "trailingComma": "es5",
     "bracketSpacing": true,
     "arrowParens": "always",
     "proseWrap": "preserve"

@@ -9,7 +9,7 @@
       Object.keys(row).forEach(function(key) {
         if (key === "Date") {
           ret[key] = new Date(
-            row[key].slice(0, 4) + "-" + row[key].slice(5, 7) + "-01",
+            row[key].slice(0, 4) + "-" + row[key].slice(5, 7) + "-01"
           );
         } else {
           ret[key] = parseInt(row[key], 10);

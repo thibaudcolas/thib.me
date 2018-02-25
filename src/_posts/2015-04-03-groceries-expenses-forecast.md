@@ -60,4 +60,4 @@ Related:
 
 <script src="/assets/data/d3.min.js"></script>
 
-<script src="/assets/data/groceries-expense-forecast/script.js"></script>
+<script src="/assets/data/groceries-expenses-forecast/script.js"></script>

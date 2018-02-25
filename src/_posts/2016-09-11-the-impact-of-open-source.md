@@ -28,4 +28,4 @@ The real surprise came from this search on GitHub: https://github.com/search?utf
 
 Glad this helps too :)
 
-PS: Wow! [106 PRs so far](https://github.com/pulls?q=is%3Apr+author%3Athibaudcolas+is%3Apublic)
+PS: Wow! [106 PRs so far](https://github.com/thibaudcolas?tab=overview&from=2010-12-01&to=2010-12-31)
