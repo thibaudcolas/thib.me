@@ -26,9 +26,7 @@ Full list of what I tried to do / how I did it / with what tools:
 * Mobile first (thanks [Bootstrap](http://getbootstrap.com/))
 * Flat design (heavily inspired by [Anna Debenham's site](http://maban.co.uk/))
 * Card-based design (inspired by experiments like [this codepen](http://codepen.io/bennettfeely/pen/Ftczh))
-* Publicize [my blog](https://thib.me/) and [my talks](https://thib.me/talks/)
-* Display relevant content to summarize [my skills](https://thib.me/#activities)
-* Display [projects that I did](https://thib.me/#projects)
+* Publicize my [blog](https://thib.me/) and [talks](https://thib.me/talks/)
 * Many performance optimizations
 * [Sass](http://sass-lang.com/) for stylesheets
 * [ES6](https://github.com/lukehoban/es6features) for JavaScript

@@ -26,11 +26,6 @@
         "url": "https://twitter.com/thibaud_colas"
       },
       {
-        "network": "LinkedIn",
-        "username": "thibaudcolas",
-        "url": "https://www.linkedin.com/in/thibaudcolas"
-      },
-      {
         "network": "SoundCloud",
         "username": "Thibaud Colas",
         "url": "https://soundcloud.com/thibaudcolas"
@@ -105,9 +100,9 @@
       ]
     },
     {
-      "company": "Montpellier 2 University",
+      "company": "Montpellier University",
       "position": "Graduate Teaching Assistant",
-      "website": "http://www.english.univ-montp2.fr/",
+      "website": "https://en.wikipedia.org/wiki/University_of_Montpellier",
       "startDate": "2012-09-01",
       "endDate": "2013-01-01",
       "summary": "Organization of three groups in a JavaScript class (Master’s degree) and a Computer Science initiation class (Bachelor’s degree).",
@@ -370,7 +365,7 @@
   ],
   "education": [
     {
-      "institution": "Montpellier 2 University",
+      "institution": "Montpellier University",
       "area": "Web Architecture and Software Engineering",
       "studyType": "Master’s degree",
       "startDate": "2011-09-01",

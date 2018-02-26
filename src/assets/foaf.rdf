@@ -30,7 +30,7 @@
         <foaf:workInfoHomepage rdf:resource="http://www.cgi.com/" rdfs:label="CGI Montpellier"/>
         <foaf:workInfoHomepage rdf:resource="http://www.lirmm.fr" rdfs:label="LIRMM Research Laboratory"/>
         <foaf:workInfoHomepage rdf:resource="http://www.cornelius-communication.com" rdfs:label="Cornelius Communication"/>
-        <foaf:schoolHomepage rdf:resource="http://www.univ-montp2.fr" rdfs:label="Montpellier 2 University"/>
+        <foaf:schoolHomepage rdf:resource="https://en.wikipedia.org/wiki/University_of_Montpellier" rdfs:label="Montpellier University"/>
         <foaf:schoolHomepage rdf:resource="http://www.u-psud.fr" rdfs:label="Paris 11 University"/>
         <foaf:schoolHomepage rdf:resource="http://www.iedparis8.net" rdfs:label="Paris 8 University IED"/>
 
@@ -51,15 +51,6 @@
                 <foaf:name>GitHub</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://github.com/"/>
                 <foaf:page rdf:resource="https://github.com/thibaudcolas"/>
-                <foaf:accountName>thibaudcolas</foaf:accountName>
-            </foaf:OnlineAccount>
-        </foaf:account>
-
-        <foaf:account>
-            <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-linkedin">
-                <foaf:name>LinkedIn</foaf:name>
-                <foaf:accountServiceHomepage rdf:resource="https://www.linkedin.com/"/>
-                <foaf:page rdf:resource="https://www.linkedin.com/in/thibaudcolas"/>
                 <foaf:accountName>thibaudcolas</foaf:accountName>
             </foaf:OnlineAccount>
         </foaf:account>

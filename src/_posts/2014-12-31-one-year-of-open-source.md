@@ -12,7 +12,7 @@ The end of the year seems to be a good time to turn back and have a look at what
 
 In 2014:
 
-* My blog got [13 new blog posts](/archives).
+* My blog got [13 new blog posts](/archives/).
 * I did [4 talks](/talks/) at various events.
 * I created [34 PRs](https://github.com/thibaudcolas?tab=overview&from=2010-12-01&to=2010-12-31) for many projects on GitHub.
 * My [main website](https://thib.me) was rebuilt from scratch.
