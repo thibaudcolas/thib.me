@@ -6,7 +6,7 @@ comments: true
 categories: [Wagtail, JavaScript, React, Draftjs]
 ---
 
-Have you ever worked with rich text editors? You know how frustrating of an experience that can be. Users enter content without much confidence in how the editor will preserve it. Developers have to harden their sites to handle the unstructured soup that is rich text. Designers see their layout completely destroyed by the cheer variations in formats and length. A recipe for frustration.
+Have you ever worked with rich text editors? You know how frustrating of an experience that can be. Users enter content without much confidence in how the editor will preserve it. Developers have to harden their sites to handle the unstructured soup that is rich text. Designers see their layout completely destroyed by the cheer variation in shape and length. A recipe for frustration.
 
 It’s time to add some noodles and flavour, give some structure to our bland broth and enjoy rich text again.
 
@@ -57,7 +57,7 @@ If you want a more in-depth introduction, here is a great talk from the creator 
 
 ## A framework for rich text
 
-Draft.js isn’t the only tool to use this “content model separate from contenteditable” approach though: [Trix](https://trix-editor.org/), [Quill](https://quilljs.com/), [Slate](https://github.com/ianstormtaylor/slate), [ProseMirror](https://prosemirror.net/), and [Scribe](https://github.com/guardian/scribe) all work similarly. Where Draft.js distinguishes itself is that it is a _framework_, not a full-featured editor, not even a modular editor. Draft.js provides many low-level APIs, for example:
+Draft.js isn’t the only tool to use this “content model separate from `contenteditable`” approach though: [Trix](https://trix-editor.org/), [Quill](https://quilljs.com/), [Slate](https://github.com/ianstormtaylor/slate), [ProseMirror](https://prosemirror.net/), and [Scribe](https://github.com/guardian/scribe) all work similarly. Where Draft.js distinguishes itself is that it is a _framework_, not a full-featured editor, not even a modular editor. Draft.js provides many low-level APIs, for example:
 
 * Process the input of a single character. This could be used to make an autocomplete, or to turn boring "quotes" into their “smart” equivalent. Or enhance emojis with accessible text.
 * Handle pasting or drag-and-drop in the editor. Auto-linkify, auto-embed, drag-drop image upload features start here.
