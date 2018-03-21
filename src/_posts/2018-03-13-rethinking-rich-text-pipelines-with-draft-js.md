@@ -48,7 +48,7 @@ Here is a GIF illustrating the popular “paste from Word” workflow with Wagta
 
 Pasting rich text preserves **a lot** of unwanted or irrelevant styles, and there is no indication whatsoever that the content is problematic. Saving the content and reloading the page, we see the server-side filtering kick into action and – _surprise_ – reveal Microsoft Word metadata and styles (wich is plain gibberish for a user). Even if that was properly removed, the rich text still contains unwanted formattings – subscript and superscript in this case.
 
-By comparison, here is the Draft.js equivalent:
+By contrast, here is the Draft.js equivalent:
 
 ![Screencast of Word copy-pasting into Wagtail’s new editor. Content is correctly filtered on paste.](/images/draftail-paste-from-word.gif)
 
@@ -79,7 +79,7 @@ The content is now filtered, and saved in the database. Now we want to render it
 The Draft.js -> HTML conversion may seem like extra overhead, but its impact will be minimal compared to data retrieval for the hydration. Additionally, it provides us with an opportunity to **customise the front-end HTML our users will look at**, for example:
 
 * Adding classes to list items, `ul` and `ol` tags so you can use your favourite CSS architecture or methodology.
-* Automagically making all links pointing to third-party sites open in a separate tabs by adding `target="_blank` on the `a` tags.
+* Automagically making all links pointing to third-party sites open in a separate tabs by adding `target="_blank"` on the `a` tags.
 
 In practice, the API allows completely arbitrary rendering. It comes from the [Draft.js exporter](https://github.com/springload/draftjs_exporter), and is heavily inspired by React’s [`createElement`](https://facebook.github.io/react/docs/top-level-api.html#react.createelement) (what powers JSX):
 
