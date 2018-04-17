@@ -16,12 +16,16 @@ This blog post is my overview of the resources I looked at and the things I lear
 
 Starting on a new project, I quickly realised Docker would be a central part of my day to day work. It is used for development environments, CI, staging, as well as production. When learning something as fundamental and ubiquitous, I think it’s quite important to take a step back and note where you’re starting from:
 
-* **What are the fundamental principles?** For Docker this would be things like [containerisation](https://en.wikipedia.org/wiki/Operating-system-level_virtualization), [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery), and generally the idea of speeding up [release cycles](https://en.wikipedia.org/wiki/Software_release_life_cycle) and facilitating administration by moving to infrastructure as code.
-* **What is the context?** Here I would think of things like micro-services, and generally the move to cloud platforms.
-* **What do you know already?** For me, I had some notion of basic docker commands, and I had used Vagrant extensively to achieve similar results as what Docker is for in development.
-* **Where do you want to be?** Not everyone needs to be an expert at everything. I don’t need to know the details of the consensus algorithm used in Kubernetes clusters (it’s called [Raft](<https://en.wikipedia.org/wiki/Raft_(computer_science)>).
+* **What are the fundamental principles?**
+  * For Docker this would be things like [containerisation](https://en.wikipedia.org/wiki/Operating-system-level_virtualization), [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery), and generally the idea of speeding up [release cycles](https://en.wikipedia.org/wiki/Software_release_life_cycle) and facilitating administration by moving to infrastructure as code.
+* **What is the context?**
+  * Here I would think of things like micro-services, and generally the move to cloud platforms.
+* **What do you know already?**
+  * For me, I had some notion of basic docker commands, and I had used Vagrant extensively to achieve similar results as what Docker is for in development.
+* **Where do you want to be?**
+  * Not everyone needs to be an expert at everything. I don’t need to know the details of the consensus algorithm used in Kubernetes clusters (it’s called [Raft](<https://en.wikipedia.org/wiki/Raft_(computer_science)>).
 
-I quite like to summarise this as a score from 0 to 5 – 0 being [“you know nothing Jon Snow” (NSFW)](https://www.youtube.com/watch?v=dQw4w9WgXcQ), and 5 being “complete expert, Ask Me Anything, I can teach anyone about any of this”. You can then assess how you perceive your skills before starting to learn, and decide on how much you want to know.
+I quite like to summarise this as a score from 0 to 5, 0 being [“you know nothing Jon Snow” (NSFW)](https://www.youtube.com/watch?v=dQw4w9WgXcQ), and 5 being “complete expert, Ask Me Anything, I can teach anyone about any of this”. You can then assess how you perceive your skills before starting to learn, and decide on how much you want to know.
 
 I gave myself a 1/5 because of my Vagrant knowledge and awareness of the problems this is trying to solve, and decided I would need to get to 4/5 to do my job effectively. But this is quite a big jump, so for now let’s get to 2 out of 5.
 
@@ -43,11 +47,15 @@ I also made a list of resources to look at to achieve the above learning goals, 
 
 ### Learn Docker in 12 minutes 🐳
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=YFl2mCHdv24" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YFl2mCHdv24" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+---
 
 ### Docker Compose in 12 Minutes
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=Qw9zlE3t8Ko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Qw9zlE3t8Ko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+---
 
 ### Reading through Dockerfiles
 
@@ -69,11 +77,13 @@ The basic understanding of the key principles, and of how containers and images 
 > [Containers are not new, but their use for easily deploying applications is.](https://docs.docker.com/get-started/)
 >
 > **Image**: an executable package that includes everything needed to run an application – the code, a runtime, libraries, environment variables, and configuration files.
-> **Image**: template to create a target container (snapshot)
+>
+> Also **Image**: template to create a target container (snapshot)
 > Images are defined using a Dockerfile
 >
 > **Container**: running instance of an image
-> **Container**: a runtime instance of an image – what the image becomes in memory when executed (that is, an image with state, or a user process)
+>
+> Also **Container**: a runtime instance of an image – what the image becomes in memory when executed (that is, an image with state, or a user process)
 >
 > **Dockerfile**: defines what goes on in the environment inside your container.
 > Access to resources like networking interfaces and disk drives is virtualized inside this environment, which is isolated from the rest of your system, so you need to map ports to the outside world, and be specific about what files you want to “copy in” to that environment.
@@ -84,7 +94,8 @@ The basic understanding of the key principles, and of how containers and images 
 > **Registry**: a collection of repositories.
 >
 > **Service**: defines how containers behave in production
-> **Service**: really just “containers in production.” A service only runs one image, but it codifies the way that image runs—what ports it should use, how many replicas of the container should run so the service has the capacity it needs, and so on.
+>
+> Also **Service**: really just “containers in production.” A service only runs one image, but it codifies the way that image runs—what ports it should use, how many replicas of the container should run so the service has the capacity it needs, and so on.
 >
 > **Compose**: a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
 
