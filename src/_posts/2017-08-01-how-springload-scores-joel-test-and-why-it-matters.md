@@ -38,27 +38,27 @@ The Joel Test is important because all of its questions are a good commonsense s
 
 Here are the actual development practices that allow us to score so high (this is also where we geek out with dev terminology):
 
-#### **Continuous integration**
+#### Continuous integration
 
 The project’s automated test suites are executed on every code change, and contributors are notified of the status of those builds within the code repository and via our messaging tools. At Springload, this is CodeShip or CircleCI for client work, and Travis for open-source projects. Check out our [Travis dashboard](https://travis-ci.org/springload/) to see what’s on here.
 
-#### **Continuous delivery (CD)**
+#### Continuous delivery (CD)
 
 Delivery of updates is automated after successful builds on “delivery-ready” branches. This greatly reduces the time it takes to ship code. This as part of our CI pipeline described above.
 
-#### **Web development quality checklists**
+#### Web development quality checklists
 
 All of our projects abide by the same [quality standards](https://github.com/springload/frontend-starter-kit/blob/master/docs/frontend-launch-checklist.md), based on web standards (valid HTML and CSS, [WCAG](https://www.w3.org/WAI/intro/wcag.php), [NZISM compliance](http://www.gcsb.govt.nz/publications/the-nz-information-security-manual/), etc), and industry best practice (programming style guides, CSS architecture practices like ITCSS and BEM, etc).
 
-#### **State of the art tooling**
+#### State of the art tooling
 
 This includes, for example, static analysis in every developer’s environment that checks our code’s compliance with the standards we set for ourselves. Our interfaces are audited for common accessibility, performance and compatibility pitfalls. See [Airbnb JavaScript style guide](https://github.com/airbnb/javascript) for JavaScript, and [PEP8](https://www.python.org/dev/peps/pep-0008/) for Python.
 
-#### **Pair programming**
+#### Pair programming
 
 Frequent pair programming sessions are a good way to provide peer review, reinforce our development culture, and ensure knowledge retention on the project stays high. When doing this remotely, we use the wonderful [Screenhero](https://screenhero.com/).
 
-#### **Code reviews**
+#### Code reviews
 
 As part of our broader quality assurance practice, the work of individual developers is reviewed by their peers within our code repositories. Those reviews are enforced to ensure that our principles are respected on every project.
 
