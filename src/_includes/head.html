@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
 
-  {% capture description %}{% if content %}{{ content | raw_content | strip_html | condense_spaces | truncate:150 }}{% else %}{{ site.description | strip_html | condense_spaces | truncate:150 }}{% endif %}{% endcapture %}
+  {% capture description %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif content %}{{ content | raw_content | strip_html | condense_spaces | truncate:150 }}{% else %}{{ site.description | strip_html | condense_spaces | truncate:150 }}{% endif %}{% endcapture %}
   <meta name="description" content="{{ description }}">
   <meta name="author" content="{{ site.author }}">
 
