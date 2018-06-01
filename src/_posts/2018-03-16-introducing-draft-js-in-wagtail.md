@@ -3,7 +3,7 @@ layout: post
 title: Introducing Draft.js in Wagtail
 date: 2018-03-16 14:10:22 +0100
 comments: true
-categories: [Wagtail, Draftjs, Talks]
+categories: [Wagtail, Draftjs, Draftail, Talks]
 ---
 
 Here is a talk I gave at [Wagtail Space 2018](https://www.wagtail.space). The video recording is available [on YouTube](https://www.youtube.com/watch?v=lh9nmN1mzwQ&t=2618s). The talk was 90% demos so the purpose of this presentation is to share the links.

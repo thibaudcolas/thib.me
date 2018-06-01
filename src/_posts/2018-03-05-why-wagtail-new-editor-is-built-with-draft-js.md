@@ -3,7 +3,7 @@ layout: post
 title: Why Wagtail’s new editor is built with Draft.js
 date: 2018-03-05 22:38:09 +0200
 comments: true
-categories: [Wagtail, JavaScript, React, Draftjs]
+categories: [Wagtail, JavaScript, React, Draftjs, Draftail]
 redirect_from:
 - /why-draft-js-is-good
 ---

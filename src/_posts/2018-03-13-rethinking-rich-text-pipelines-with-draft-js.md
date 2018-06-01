@@ -3,7 +3,7 @@ layout: post
 title: Rethinking rich text pipelines with Draft.js
 date: 2018-03-13 19:03:21 +0100
 comments: true
-categories: [Wagtail, JavaScript, React, Draftjs]
+categories: [Wagtail, JavaScript, React, Draftjs, Draftail]
 ---
 
 Discussing rich text capabilities in a CMS is an exercise in compromise. Authors want the flexibility to be creative in their content. Developers want to ensure said content fits in the box. This can feel like fighting over the bed covers with a spouse: everyone initially means well, but things turn sour and we all wish for a bigger duvet. Or a more understanding spouse.
