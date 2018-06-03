@@ -36,6 +36,12 @@ There may be an opportunity for Draftail to support blocks better in the future,
 
 With the presentations out of the way, we can now talk about the areas where Draftail extensions can help.
 
+There are three categories of extensions I can think of:
+
+1. Custom links – things that enhance textual content with added data.
+2. Tokens, IMEs, autocompletes – help entering content, with or without extra data.
+3. Editor metrics, highlighting, helpers – help without necessarily altering content.
+
 ### Custom links
 
 Any kind of custom "link" feature is a good fit for a Draftail extension. This can be:
@@ -46,17 +52,21 @@ Any kind of custom "link" feature is a good fit for a Draftail extension. This c
 
 [![Screenshot of a quote card in a Forbes article. The quote card expands from the word "Google" in the text, showing Google's stock and relevant articles.](/images/forbes-quotecard-expanded.png)](https://www.forbes.com/sites/jasonbloomberg/2018/02/04/the-real-reason-red-hat-is-acquiring-coreos/#70a79bf05c4d)
 
-> Quote cards enrich Forbes articles with stock information, and also show related content that their readers might find helpful.
+> Quote cards enrich Forbes articles with stock information, and also show related content that readers might find helpful.
 
 ### Tokens, IMEs, autocompletes
 
 By "token", I mean any content that could be confused with other plain text if it did not have a [particular meaning](https://en.wikipedia.org/wiki/Lexical_analysis#Token). IMEs and autocompletes are simply ways to insert content. Some examples include:
 
-* Emojis, with an emoji picker, and potentially a UI to enter alternative labels for screen readers.
+* Emojis, with an emoji picker, and potentially an interface to enter alternative labels for screen readers.
 * Hashtags, with or without an aucomplete or other IME.
 * Predefined keywords, tags, or entries from a taxonomy.
 * Mentions, most likely with an autocomplete that turns them into links.
 * Any set of values specific to the site’s purpose. For example, a web design website might want a way to easily insert color codes into their content: `#E75480`.
+
+[![Screenshot of a mention UI in Draft.js, where the text @j triggers an autocomplete UI](/images/draftjs-plugin-mention.png)](https://www.draft-js-plugins.com/plugin/mention)
+
+> [Draft.js plugin](https://www.draft-js-plugins.com/plugin/mention) for a mention feature, where `@` triggers the autocomplete UI.
 
 ### Editor metrics, highlighting, helpers
 
@@ -79,7 +89,7 @@ You’re ready to wrangle with rich text. StreamField definitely won’t cut it 
   * Will it be an additional toolbar button? What happens when you click on it?
   * If you create custom entities (say a `STOCK`), how are they meant to behave once inserted in the editor? Can they be edited? Deleted?
   * What does the your custom content look like when displayed in the editor?
-* **how will the custom format be stored within rich text?**
+* **How will the custom format be stored within rich text?**
   * Will it have its own HTML tag, perhaps with specific attributes?
   * Will it risk clashing with the storage format of other rich text content?
   * Which parts of your rich text markup are semantic? Which are presentational? Can those not be stored?
@@ -101,6 +111,10 @@ Generally, the hardest part to build when creating a content extension is the ed
 
 ## Going further
 
-As of today, the most advanced extensions to learn from are actually Wagtail’s built-in [Link, Document, Image, and Embed](https://github.com/wagtail/wagtail/blob/607f2ec0673814a54bd8c35f7cda42a4b37f73f2/client/src/components/Draftail/decorators/Link.js). They use the same APIs as any custom extension would, and offer quite good rich text interactions. To learn even more about making extensions, you might also enjoy this [video tutorial](https://www.twitch.tv/videos/266474479) where I go through the official "stock" example from start to finish, explaining what is going on along the way.
+[Draft.js Plugins](https://github.com/draft-js-plugins/draft-js-plugins) also offers a lot of general-purpose extensions for Draft.js. For Draftail in particular, as of today, the most advanced extensions to learn from are Wagtail’s built-in [Link, Document, Image, and Embed](https://github.com/wagtail/wagtail/blob/607f2ec0673814a54bd8c35f7cda42a4b37f73f2/client/src/components/Draftail/decorators/Link.js). They use the same APIs as any custom extension would, and offer quite good rich text interactions. To learn even more about making extensions, you might also enjoy a video tutorial where I go through the official "stock" example from start to finish, explaining what is going on along the way:
+
+<iframe src="https://player.twitch.tv/?autoplay=false&video=v266474479" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+
+---
 
 If you want to know more about specific extension types, please get in touch on Twitter ([@thibaud_colas](https://twitter.com/thibaud_colas)) – I'm looking for ideas for what to cover next as part of my [Patreon](https://www.patreon.com/thibaud_colas).
