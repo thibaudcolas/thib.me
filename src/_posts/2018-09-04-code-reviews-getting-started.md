@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Code reviews: Getting started
+title: Code reviews – Getting started
 date: 2018-09-04 19:35:09 +0300
 comments: true
-categories: [ Resources, Methodology, Team ]
+categories: [Resources, Methodology, Team]
 canonical: https://www.codemate.com/code-reviews-getting-started/
 ---
 
