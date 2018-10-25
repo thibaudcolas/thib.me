@@ -124,4 +124,4 @@ With the help of Draft.js, we are bringing more [structure and semantics](https:
 
 However, beyond the rich text pipeline, there is another area where Draft.js helps a lot: building better user experiences for content authors. This could be as simple as having a reliable way to measure the length of written content, or calculating other useful metrics like [reading level](https://github.com/vixdigital/wagtail-readinglevel). Or simply converting "quotes" into their “smart” equivalent, to make your site’s microcopy shine even brighter. All of those features could (and should) be available on plain-text content, and here as well Draft.js and its programmatic API could help tremendously.
 
-[Draftail](https://github.com/springload/draftail) already does quite a bit in this direction, in particular with its keyboard-centric control, and we’ll explore future possibilities in an upcoming blog post.
+[Draftail](https://www.draftail.org/) already does quite a bit in this direction, in particular with its keyboard-centric control, and we’ll explore future possibilities in an upcoming blog post.
