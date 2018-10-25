@@ -93,9 +93,9 @@ It’s no accident that React and Draft.js work nicely together: they are both b
 
 The advantages of using Draft.js go beyond the editor UI component, because of the structure it brings to rich text. But for now, let’s look at editors. There are many [open-source editors](https://github.com/nikgraf/awesome-draft-js#standalone-editors-built-on-draftjs) built with Draft.js. There is also a whole [plugin architecture](https://github.com/draft-js-plugins/draft-js-plugins), that comes with many plugins.
 
-We wanted a lot of control over rich text features, which led us to build our own editor: [Draftail](https://github.com/springload/draftail/).
+We wanted a lot of control over rich text features, which led us to build our own editor: [Draftail](https://www.draftail.org/).
 
-[![Screenshot of Draftail, with the toolbar, and some example content](/images/draftail-intro.png)](https://github.com/springload/draftail)
+[![Screenshot of Draftail, with the toolbar, and some example content](/images/draftail-intro.png)](https://www.draftail.org/)
 
 It was nonetheless really useful to reuse established solutions for common rich text behaviors, and we also got to create reusable Draft.js-friendly packages, like the [Draft.js filters](https://github.com/thibaudcolas/draftjs-filters).
 
