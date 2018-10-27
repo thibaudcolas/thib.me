@@ -6,6 +6,7 @@ comments: true
 categories: [Wagtail, JavaScript, React, Draftjs, Draftail]
 redirect_from:
 - /why-draft-js-is-good
+canonical: https://www.draftail.org/blog/2018/03/05/why-wagtail-new-editor-is-built-with-draft-js
 ---
 
 Have you ever worked with rich text editors? You know how frustrating of an experience that can be. Users enter content without much confidence in how the editor will preserve it. Developers have to harden their sites to handle the unstructured soup that is rich text. Designers see their layout completely destroyed by the cheer variation in shape and length. A recipe for frustration.
