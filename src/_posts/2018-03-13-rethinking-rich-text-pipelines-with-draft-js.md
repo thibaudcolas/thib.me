@@ -4,6 +4,7 @@ title: Rethinking rich text pipelines with Draft.js
 date: 2018-03-13 19:03:21 +0100
 comments: true
 categories: [Wagtail, JavaScript, React, Draftjs, Draftail]
+canonical: https://www.draftail.org/blog/2018/03/13/rethinking-rich-text-pipelines-with-draft-js
 ---
 
 Discussing rich text capabilities in a CMS is an exercise in compromise. Authors want the flexibility to be creative in their content. Developers want to ensure said content fits in the box. This can feel like fighting over the bed covers with a spouse: everyone initially means well, but things turn sour and we all wish for a bigger duvet. Or a more understanding spouse.
@@ -21,7 +22,7 @@ Rich text pipelines usually process HTML, or a subset of it. With Draft.js, we i
 * It follows a fixed schema, with predefined formats (eg. bold) but also the opportunity to make custom ones.
 * There are strong constraints on content structure – what is block-level formatting and what is inline, what can have data and how.
 
-If you want to know the full story, have a look at [Why Wagtail’s new editor is built with Draft.js](https://wagtail.io/blog/why-wagtail-new-editor-is-built-with-draft-js/).
+If you want to know the full story, have a look at [Why Wagtail’s new editor is built with Draft.js](https://www.draftail.org/blog/2018/03/05/why-wagtail-new-editor-is-built-with-draft-js).
 
 ## The rich text pipeline
 
