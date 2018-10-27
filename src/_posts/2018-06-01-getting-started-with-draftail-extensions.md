@@ -4,15 +4,16 @@ title: Getting started with Draftail extensions
 date: 2018-06-01 23:55:03 +0300
 comments: true
 categories: [Wagtail, Draftjs, Draftail, Resources]
+canonical: https://www.draftail.org/docs/getting-started-with-extensions
 ---
 
-Do you want to write extensions for [Draftail](https://github.com/springload/draftail)? This is a good place to start. I’ll first try to discourage you from doing it (rich text is messy and unforgiving), then tell what you need to know, and how to proceed.
+Do you want to write extensions for [Draftail](https://www.draftail.org/)? This is a good place to start. I’ll first try to discourage you from doing it (rich text is messy and unforgiving), then tell what you need to know, and how to proceed.
 
 <!-- more -->
 
 ## Why you shouldn’t mess with rich text editors
 
-It all comes down to [`contenteditable`](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content), which is very hard to make work. [Draft.js](https://draftjs.org/) partly saves us from this. If you want to know more, read on [Why Wagtail’s new editor is built with Draft.js](https://wagtail.io/blog/why-wagtail-new-editor-is-built-with-draft-js/).
+It all comes down to [`contenteditable`](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content), which is very hard to make work. [Draft.js](https://draftjs.org/) partly saves us from this. If you want to know more, read on [Why Wagtail’s new editor is built with Draft.js](https://www.draftail.org/blog/2018/03/05/why-wagtail-new-editor-is-built-with-draft-js).
 
 The TL;DR; is that there are a lot of issues with specific interactions within `contenteditable`. I made a list of the [issues I know about in Draft.js / Draftail](https://github.com/springload/draftail/issues/138). Here are the high-level problems you will have to make peace with:
 
