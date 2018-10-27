@@ -1,6 +1,6 @@
-# [thib.me](http://thib.me) [![Build Status](https://travis-ci.org/thibaudcolas/thibaudcolas.svg?branch=master)](https://travis-ci.org/thibaudcolas/thibaudcolas) [![devDependency Status](https://david-dm.org/thibaudcolas/thibaudcolas/dev-status.svg)](https://david-dm.org/thibaudcolas/thibaudcolas#info=devDependencies)
+# [thib.me](http://thib.me) [![Build Status](https://travis-ci.org/thibaudcolas/thibaudcolas.svg?branch=master)](https://travis-ci.org/thibaudcolas/thibaudcolas)
 
-My personal website's repository.
+> My personal website's repository.
 
 ## Tooling
 
@@ -84,21 +84,6 @@ Accessibility:
 Monitoring:
 
 * http://www.pingdom.com
-
-## TODO
-
-* 2. GitHub repos integration https://akshaykumar6.github.io/github-js/
-* 2. GitHub card integration https://github.com/lepture/github-cards
-* 2. Kudos counter
-* 2. Fix the font loading experience
-* 3. StackOverflow flair integration
-* 3. Images on top
-* 3. Twitter integration
-* 3. "More cards" button (Twilight SPARQL, Skimbo, Koans, iCopter) https://www.youtube.com/watch?v=lR7QnU34BGs
-* 3. Work experience section
-* 3. Add HTML5 AppCache for offline viewing
-* 4. Add js-complexity report via https://www.npmjs.com/package/gulp-complexity
-* 4. Code coverage for the tests
 
 ## Monitoring
 
