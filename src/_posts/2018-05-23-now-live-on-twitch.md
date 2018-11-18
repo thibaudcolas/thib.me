@@ -3,7 +3,7 @@ layout: post
 title: Now live on Twitch!
 date: 2018-05-23 17:37:03 +0300
 comments: true
-categories: [Community, Personal, Wagtail]
+categories: [Community, Personal, Wagtail, Streaming]
 canonical: https://www.patreon.com/posts/18981379
 ---
 
