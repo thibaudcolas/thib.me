@@ -30,13 +30,13 @@ We’ll simply make a pull request, with **all** of the project’s code in it. 
 
 That’is it! You should now be able to create a pull request for the branch, targeting the `review-1-target` branch on your fork so no changes risk making their way to the main repository.
 
-On GitHub, this can be created simply by going to the right comparison URL, e.g. https://github.com/thibaudcolas/react-streamfield/compare/review-1-target...review-1.
+On GitHub, this can be created simply by going to the right comparison URL, e.g. [https://github.com/thibaudcolas/react-streamfield/compare/review-1-target...review-1](https://github.com/thibaudcolas/react-streamfield/compare/review-1-target...review-1).
 
 ## An example
 
-I’ve used this methodology to review https://github.com/noripyt/react-streamfield, a package created as part of Wagtail’s [first Kickstarter campaign](https://www.kickstarter.com/projects/noripyt/wagtails-first-hatch), so it could be integrated into Wagtail ([#4942](https://github.com/wagtail/wagtail/pull/4942)).
+I’ve used this methodology to review [react-streamfield](https://github.com/noripyt/react-streamfield), a package created as part of Wagtail’s [first Kickstarter campaign](https://www.kickstarter.com/projects/noripyt/wagtails-first-hatch), so it could be integrated into Wagtail ([#4942](https://github.com/wagtail/wagtail/pull/4942)).
 
-You can view the resulting PR over at https://github.com/thibaudcolas/react-streamfield/pull/1, and its summarised version at https://github.com/noripyt/react-streamfield/issues/4.
+You can view the resulting PR over at [thibaudcolas/react-streamfield#1](https://github.com/thibaudcolas/react-streamfield/pull/1), and its summarised version at [noripyt/react-streamfield#4](https://github.com/noripyt/react-streamfield/issues/4).
 
 ## Onwards
 
