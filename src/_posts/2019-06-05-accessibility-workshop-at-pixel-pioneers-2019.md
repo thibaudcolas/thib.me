@@ -18,8 +18,8 @@ Here are some of the key things I had no idea about that surprised me.
 - If you’re using NVDA to test a site, do it in Firefox. Same reasons.
 - Chrome has an official "ChromeVox" screen reader extension that works across all OSes. Its main purpose is for Chromebooks relying on Chrome OS.
 - When using VoiceOver, you can hit the `ctrl` key to pause text reading 🤯.
-- There's a site to check browser support of accessibility APIs, https://www.html5accessibility.com/
-- https://empathyprompts.net/ is really cool. I want to try some of these with my team.
+- There's a site to check browser support of accessibility APIs, [https://www.html5accessibility.com/](https://www.html5accessibility.com/)
+- [https://empathyprompts.net/](https://empathyprompts.net/) is really cool. I want to try some of these with my team.
 
 ## Key takeaways
 
@@ -54,9 +54,9 @@ We’ll look at two types of testing that are easy to do and cover a big proport
 
 Do the above tests on:
 
-- https://www.gosportpanel.independent.gov.uk/
-- https://digitalcapability.jisc.ac.uk/
-- https://www.google.com/
+- [https://www.gosportpanel.independent.gov.uk/](https://www.gosportpanel.independent.gov.uk/)
+- [https://digitalcapability.jisc.ac.uk/](https://digitalcapability.jisc.ac.uk/)
+- [https://www.google.com/](https://www.google.com/)
 
 #### Screen reader 101 with VoiceOver and NVDA
 
@@ -76,9 +76,9 @@ Easy tests:
 
 Test these on:
 
-- https://www.gosportpanel.independent.gov.uk/
-- https://digitalcapability.jisc.ac.uk/
-- https://www.google.com/
+- [https://www.gosportpanel.independent.gov.uk/](https://www.gosportpanel.independent.gov.uk/)
+- [https://digitalcapability.jisc.ac.uk/](https://digitalcapability.jisc.ac.uk/)
+- [https://www.google.com/](https://www.google.com/)
 
 ## Straw tests
 
@@ -96,14 +96,15 @@ Then look at your website – for example, try to go through a form.
 
 Here are cool links that are relevant:
 
-- Great reference on alt text best practices, https://axesslab.com/alt-texts/
-- Favourite browser extension for accessibility testing, https://accessibilityinsights.io
-- Favourite basic automated testing, http://pa11y.org/
-- Good onboarding resource for developers & testers, https://a11yproject.com/
-- Good onboarding resource for designers, https://inclusivedesignprinciples.org/
-- BBC’s resources and workflows, https://bbc-news.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology
-- I don’t remember what this is https://www.accessibility-developer-guide.com/
-- Gov.uk WCAG primer, https://alphagov.github.io/wcag-primer/#wcag-2-1-getting-started
+- Great reference on alt text best practices, [https://axesslab.com/alt-texts/](https://axesslab.com/alt-texts/)
+- Favourite browser extension for accessibility testing, [https://accessibilityinsights.io](https://accessibilityinsights.io)
+- Favourite basic automated testing, [http://pa11y.org/](http://pa11y.org/)
+- Good onboarding resources,
+  - For designers, [https://inclusivedesignprinciples.org/](https://inclusivedesignprinciples.org/)
+  - For developers & testers, [https://a11yproject.com/](https://a11yproject.com/)
+  - Another great one, [https://www.accessibility-developer-guide.com/](https://www.accessibility-developer-guide.com/)
+  - BBC’s resources and workflows, [https://bbc-news.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology](https://bbc-news.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology)
+- GOV.uk WCAG primer, [https://alphagov.github.io/wcag-primer/](https://alphagov.github.io/wcag-primer/)
 
 ## Notes
 
@@ -142,13 +143,13 @@ Heading
 
 Landmarks
 
-https://www.html5accessibility.com/
+[https://www.html5accessibility.com/](https://www.html5accessibility.com/)
 
 Ctrl shortcut
 
 Buy-in: no one notices! most accessibility features are invisible to sighted users
 
-https://github.com/h5bp/html5-boilerplate
+[https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
 
 Forms
 
