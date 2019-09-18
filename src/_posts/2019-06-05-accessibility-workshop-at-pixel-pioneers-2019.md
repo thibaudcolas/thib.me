@@ -103,7 +103,7 @@ Here are cool links that are relevant:
   - For designers, [https://inclusivedesignprinciples.org/](https://inclusivedesignprinciples.org/)
   - For developers & testers, [https://a11yproject.com/](https://a11yproject.com/)
   - Another great one, [https://www.accessibility-developer-guide.com/](https://www.accessibility-developer-guide.com/)
-  - BBC’s resources and workflows, [https://bbc-news.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology](https://bbc-news.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology)
+  - BBC’s resources and workflows, [https://bbc.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology](https://bbc.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology)
 - GOV.uk WCAG primer, [https://alphagov.github.io/wcag-primer/](https://alphagov.github.io/wcag-primer/)
 
 ## Notes
