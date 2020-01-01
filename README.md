@@ -80,13 +80,3 @@ Accessibility:
 
 * http://tenon.io/
 * https://leaverou.github.io/contrast-ratio/
-
-Monitoring:
-
-* http://www.pingdom.com
-
-## Monitoring
-
-Site uptime and response time checked with Pingdom:
-
-[![Response time Report for thib.me: Last 30 days](https://share.pingdom.com/banners/5f5f5fc1)](http://stats.pingdom.com/22u60my6ll2k/1451905)
