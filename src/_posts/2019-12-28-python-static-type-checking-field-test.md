@@ -32,6 +32,7 @@ The first thing I learned while investigating static typing more thoroughly was 
 - [PEP 589 -- TypedDict: Type Hints for Dictionaries with a Fixed Set of Keys](https://www.python.org/dev/peps/pep-0589/) (Python 3.8)
 - [PEP 544 -- Protocols: Structural subtyping (static duck typing)](https://www.python.org/dev/peps/pep-0544/) (Python 3.8)
 - [PEP 591 -- Adding a final qualifier to typing](https://www.python.org/dev/peps/pep-0591/) (Python 3.8)
+- Not a PEP but also worth mentioning: the [`Typing :: Typed`](https://pypi.org/classifiers/) trove classifier
 
 I’m used to leveraging dictionaries with fixed set of keys in other languages (e.g. JSON with a set structure). Literal types are also very useful. So is structural subtyping, especially in a language like Python. Without these available, it felt really strange to write annotations using very broad categories – e.g. `Dict[str, Any]` when really the dictionary should only have a few keys for which the types are well-known. Or use `str` for a very limited set of literals.
 
