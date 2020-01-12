@@ -14,7 +14,7 @@
     "jsonresume-theme-eloquent": "^4.0.0"
   },
   "devDependencies": {
-    "prettier": "^1.10.2",
+    "prettier": "^1.19.1",
     "resume-cli": "^0.4.19",
     "write-good": "^0.11.3"
   },
@@ -22,10 +22,9 @@
     "start": "bundle exec jekyll serve",
     "dist": "bundle exec jekyll build && npm run dist:resume -s",
     "dist:resume": "node raw/resume/export.js > dist/resume.html",
-    "formatter": "prettier --write",
-    "linter:md": "prettier --list-different",
+    "lint": "prettier --check '**/?(.)*.{md,css,scss,js,json,json5,yaml,yml}'",
+    "format": "prettier --write '**/?(.)*.{md,css,scss,js,json,json5,yaml,yml}'",
     "lint:resume": "write-good --no-adverb --no-passive --no-weasel raw/resume/resume.json && ./rank-writing.py --aspell --diction resume.json",
-    "lint": "npm run linter:md -s -- '**/*.md'",
     "test:resume": "resume test",
     "test:ci": "npm run dist -s && npm run lint -s"
   }
