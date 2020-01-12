@@ -46,5 +46,24 @@
       groupName: "write-good",
       automerge: true,
     },
+    {
+      packagePatterns: ["jekyll", "minima"],
+      groupName: "jekyll",
+      automerge: true,
+    },
+    {
+      packagePatterns: ["pygments.rb"],
+      groupName: "pygments",
+      automerge: true,
+    },
+    {
+      packagePatterns: [
+        "jekyll-feed",
+        "jekyll-paginate",
+        "jekyll-redirect-from",
+      ],
+      groupName: "jekyll-plugins",
+      automerge: true,
+    },
   ],
 }
