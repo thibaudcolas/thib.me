@@ -36,11 +36,11 @@ pids
 lib-cov
 coverage
 .coverage
+coverage_html_report
 .grunt
 .bundle
-docs/pattern-library/index.html
 webpack-stats.json
-source-map-explorer.html
+webpack-stats.html
 
 # -------------------------------------------------
 # Dependency directories
@@ -50,9 +50,9 @@ python_modules*
 bower_components
 .venv
 venv
+.tox
 $virtualenv.tar.gz
 $node_modules.tar.gz
-vendor*
 
 # -------------------------------------------------
 # Users Environment
@@ -63,6 +63,7 @@ vendor*
 .vagrant
 .anaconda
 Vagrantfile.local
+.env
 /local
 local.py
 *.sublime-project
@@ -85,6 +86,7 @@ eggs
 parts
 lib64
 .sass-cache
+.mypy_cache
 
 # -------------------------------------------------
 # Your own project's ignores
