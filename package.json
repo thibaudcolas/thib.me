@@ -11,12 +11,12 @@
     "url": "https://github.com/thibaudcolas/thibaudcolas.git"
   },
   "dependencies": {
-    "jsonresume-theme-eloquent": "^4.0.0"
+    "jsonresume-theme-eloquent": "4.0.0"
   },
   "devDependencies": {
-    "prettier": "^1.19.1",
-    "resume-cli": "^0.4.19",
-    "write-good": "^0.11.3"
+    "prettier": "1.19.1",
+    "resume-cli": "0.4.19",
+    "write-good": "0.11.3"
   },
   "scripts": {
     "start": "bundle exec jekyll serve",
