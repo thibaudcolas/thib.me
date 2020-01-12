@@ -1,15 +1,14 @@
+version: ~> 1.0
+dist: bionic
 language: node_js
-cache:
-  directories:
-  - node_modules
 install:
-- bundle install
-- npm install
+  - bundle install
+  - npm ci
 script:
-- npm run dist
+  - npm run dist
 branches:
   except:
-  - gh-pages
+    - gh-pages
 deploy:
   provider: pages
   skip_cleanup: true
