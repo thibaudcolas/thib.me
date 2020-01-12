@@ -5,7 +5,7 @@ date: 2016-02-22 19:48:43 +0200
 comments: true
 categories: [JavaScript, Wagtail, React]
 redirect_from:
-- /blog-posts-and-front-end-development
+  - /blog-posts-and-front-end-development
 canonical: https://www.springload.co.nz/blog/a-stable-front-end-stack-for-2016/
 ---
 
@@ -43,8 +43,8 @@ One year ago we [discussed our reasons](http://www.springload.co.nz/blog/introd
 
 JavaScript Fatigue doesn’t have to be a thing after all. While the pace of innovation is high, great open-source software is emerging, and improving the way we work. The [web platform](http://radar.oreilly.com/2013/09/from-web-development-to-the-web-platform.html) is getting better by the minute and there is no sign of it stopping. To get you pumped up for the year to come, here are three things to get excited about in 2016:
 
-* The “new Microsoft” is pushing the Web forward with their Edge browser, and [does so in the open](https://dev.windows.com/en-us/microsoft-edge/platform/status/).
-* There are [interesting developments](https://medium.com/@torgo/the-big-browser-you-haven-t-heard-of-yet-481a1b48517b) yet to come in the space of browser-based virtual reality.
-* Service Workers are landing into browsers, enabling [lots of interesting use cases](https://medium.com/google-developers/instant-loading-web-apps-with-an-application-shell-architecture-7c0c2f10c73).
+- The “new Microsoft” is pushing the Web forward with their Edge browser, and [does so in the open](https://dev.windows.com/en-us/microsoft-edge/platform/status/).
+- There are [interesting developments](https://medium.com/@torgo/the-big-browser-you-haven-t-heard-of-yet-481a1b48517b) yet to come in the space of browser-based virtual reality.
+- Service Workers are landing into browsers, enabling [lots of interesting use cases](https://medium.com/google-developers/instant-loading-web-apps-with-an-application-shell-architecture-7c0c2f10c73).
 
 For 2016 we wish you a happy, pragmatic, stable front-end stack. If you want to learn more about our choices, go have a look at [our starter kit](https://github.com/springload/frontend-starter-kit).

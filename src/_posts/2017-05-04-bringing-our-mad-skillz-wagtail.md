@@ -6,7 +6,7 @@ comments: true
 categories: [React, Springload, Wagtail, Draftjs]
 canonical: https://www.springload.co.nz/blog/bringing-our-mad-skillz-wagtail/
 redirect_from:
-    - /writing-about-wagtail
+  - /writing-about-wagtail
 ---
 
 Springload often attends development sprints of Wagtail. They’re a great occasion to meet with other core contributors, and drive the project together towards the needs of its users, aka our clients. In the past our work has taken us to [Ede, Netherlands](/awesome-wagtail), and Cape Town but this time we headed North to [Reykjavík, Iceland](https://www.google.co.nz/maps?q=Reykjav%C3%ADk) thanks to our friends at [Overcast Software](https://www.overcast.io/).
@@ -15,10 +15,10 @@ Springload often attends development sprints of Wagtail. They’re a great occas
 
 Over two days our group of nearly 20 split into specific task forces focusing on:
 
-* Creating a new demo site for Wagtail that better demonstrates its capabilities.
-* Making Wagtail faster on all devices for everyone in all locations.
-* Overhauling the page explorer menu by rebuilding it with an API and React.
-* Rebuilding the rich text editing experience from the ground up.
+- Creating a new demo site for Wagtail that better demonstrates its capabilities.
+- Making Wagtail faster on all devices for everyone in all locations.
+- Overhauling the page explorer menu by rebuilding it with an API and React.
+- Rebuilding the rich text editing experience from the ground up.
 
 Let’s have a look at the latter three areas that Springload actively contributes to.
 
@@ -44,9 +44,9 @@ The page explorer is a very important component, as a point of entry to the inte
 
 This work started as a prototype a year ago and we’re very close to releasing it for general availability. In our latest iteration, we now have:
 
-* Full support for Wagtail sites of all shapes and sizes via the rock solid admin API.
-* 100% unit test coverage of the UI code with Jest and the amazing [snapshot tests](https://www.springload.co.nz/blog/why-were-migrating-unit-tests-jest-and-why-you-should-too/).
-* An accessible explorer for keyboard and screen reader users.
+- Full support for Wagtail sites of all shapes and sizes via the rock solid admin API.
+- 100% unit test coverage of the UI code with Jest and the amazing [snapshot tests](https://www.springload.co.nz/blog/why-were-migrating-unit-tests-jest-and-why-you-should-too/).
+- An accessible explorer for keyboard and screen reader users.
 
 ![Screenshot of the explorer’s latest iteration](/images/new-explorer-ui.png)
 

@@ -17,19 +17,19 @@ It all comes down to [`contenteditable`](https://developer.mozilla.org/en-US/doc
 
 The TL;DR; is that there are a lot of issues with specific interactions within `contenteditable`. I made a list of the [issues I know about in Draft.js / Draftail](https://github.com/springload/draftail/issues/138). Here are the high-level problems you will have to make peace with:
 
-* [Support for IMEs (Input Method Editor)](https://en.wikipedia.org/wiki/Input_method). which is how [CJK characters](https://en.wikipedia.org/wiki/CJK_characters) are entered, and how OS-level autocomplete and autocorrect works. Differently in each OS/browser, of course.
-* Mobile support. For Draft.js, Android Chrome is particularly problematic – because of its implementation of text input as IME in all languages that does not match with other browsers (including Chrome desktop).
-* Copy-pasting. Some things will paste fine, some won't. Thankfully, Draftail is built to never allow unwanted formatting.
-* Focus management. Not strictly an issue, but something that actually needs to be taken care of for the rich text experience to feel good.
+- [Support for IMEs (Input Method Editor)](https://en.wikipedia.org/wiki/Input_method). which is how [CJK characters](https://en.wikipedia.org/wiki/CJK_characters) are entered, and how OS-level autocomplete and autocorrect works. Differently in each OS/browser, of course.
+- Mobile support. For Draft.js, Android Chrome is particularly problematic – because of its implementation of text input as IME in all languages that does not match with other browsers (including Chrome desktop).
+- Copy-pasting. Some things will paste fine, some won't. Thankfully, Draftail is built to never allow unwanted formatting.
+- Focus management. Not strictly an issue, but something that actually needs to be taken care of for the rich text experience to feel good.
 
 ### Draftail vs StreamField
 
 Within Wagtail, [StreamField](http://docs.wagtail.io/en/stable/topics/streamfield.html) already delivers when it comes to free-form content. Sure, it's not rich text, but it's very usable for block-level content. Here is my rule of thumb for when to use one over the other:
 
-* If it's text, use rich text.
-* If it's inline text formatting (bold, strikethrough, etc), use rich text.
-* If it's block text formatting (h2, blockquote, ul), you get to choose, I personally prefer Draftail because it's nicer (faster) to use than the StreamField UI.
-* If it's a block with more than just text, use StreamField.
+- If it's text, use rich text.
+- If it's inline text formatting (bold, strikethrough, etc), use rich text.
+- If it's block text formatting (h2, blockquote, ul), you get to choose, I personally prefer Draftail because it's nicer (faster) to use than the StreamField UI.
+- If it's a block with more than just text, use StreamField.
 
 There may be an opportunity for Draftail to support blocks better in the future, but in the meantime [StreamField is already getting better](https://www.kickstarter.com/projects/noripyt/wagtails-first-hatch) thanks to the work of NoriPyt’s Bertrand.
 
@@ -47,9 +47,9 @@ There are three categories of extensions I can think of:
 
 Any kind of custom "link" feature is a good fit for a Draftail extension. This can be:
 
-* Links to specific entities from the domain model of your site. This could be links that have a specific icon next to them to denote their target is special, like branches of an chain store.
-* Links that are not supported by the traditional "Link" feature. Anchor links come to mind.
-* Enhanced links with embedded content, or inline previews. The official ["stock" example](http://docs.wagtail.io/en/stable/advanced_topics/customisation/extending_draftail.html#creating-new-entities) is one of those. Here is what its attached quote card looked like on the Forbes website:
+- Links to specific entities from the domain model of your site. This could be links that have a specific icon next to them to denote their target is special, like branches of an chain store.
+- Links that are not supported by the traditional "Link" feature. Anchor links come to mind.
+- Enhanced links with embedded content, or inline previews. The official ["stock" example](http://docs.wagtail.io/en/stable/advanced_topics/customisation/extending_draftail.html#creating-new-entities) is one of those. Here is what its attached quote card looked like on the Forbes website:
 
 [![Screenshot of a quote card in a Forbes article. The quote card expands from the word "Google" in the text, showing Google's stock and relevant articles.](/images/forbes-quotecard-expanded.png)](https://www.forbes.com/sites/jasonbloomberg/2018/02/04/the-real-reason-red-hat-is-acquiring-coreos/#70a79bf05c4d)
 
@@ -59,11 +59,11 @@ Any kind of custom "link" feature is a good fit for a Draftail extension. This c
 
 By "token", I mean any content that could be confused with other plain text if it did not have a [particular meaning](https://en.wikipedia.org/wiki/Lexical_analysis#Token). IMEs and autocompletes are simply ways to insert content. Some examples include:
 
-* Emojis, with an emoji picker, and potentially an interface to enter alternative labels for screen readers.
-* Hashtags, with or without an aucomplete or other IME.
-* Predefined keywords, tags, or entries from a taxonomy.
-* Mentions, most likely with an autocomplete that turns them into links.
-* Any set of values specific to the site’s purpose. For example, a web design website might want a way to easily insert color codes into their content: `#E75480`.
+- Emojis, with an emoji picker, and potentially an interface to enter alternative labels for screen readers.
+- Hashtags, with or without an aucomplete or other IME.
+- Predefined keywords, tags, or entries from a taxonomy.
+- Mentions, most likely with an autocomplete that turns them into links.
+- Any set of values specific to the site’s purpose. For example, a web design website might want a way to easily insert color codes into their content: `#E75480`.
 
 [![Screenshot of a mention UI in Draft.js, where the text @j triggers an autocomplete UI](/images/draftjs-plugin-mention.png)](https://www.draft-js-plugins.com/plugin/mention)
 
@@ -73,9 +73,9 @@ By "token", I mean any content that could be confused with other plain text if i
 
 Anything that helps the end user without necessarily changing the content. The folks from VIX Digital have some great examples from this category: [vixdigital/draftail-plugins](https://github.com/vixdigital/draftail-plugins).
 
-* Text metrics – content length, readability, reading time, and much more.
-* Highlighting – be it syntax highlighting for programmers, or highlighting of specific words that are particularly important in the content.
-* Spellcheckers and writing assistants. They will highlight content, as well as offer alternative text.
+- Text metrics – content length, readability, reading time, and much more.
+- Highlighting – be it syntax highlighting for programmers, or highlighting of specific words that are particularly important in the content.
+- Spellcheckers and writing assistants. They will highlight content, as well as offer alternative text.
 
 [![Screenshot of the reading level plugin, with readability metrics updating as the user types in the editor](/images/reading-level-plugin.gif)](https://vixdigital.github.io/draftail-plugins/)
 
@@ -86,18 +86,18 @@ Anything that helps the end user without necessarily changing the content. The f
 
 You’re ready to wrangle with rich text. StreamField definitely won’t cut it for your specific problem. The examples above sound similar to your use case. Here are initial considerations before you get building:
 
-* **How will the extension behave in the editor?**
-  * Will it be an additional toolbar button? What happens when you click on it?
-  * If you create custom entities (say a `STOCK`), how are they meant to behave once inserted in the editor? Can they be edited? Deleted?
-  * What does the your custom content look like when displayed in the editor?
-* **How will the custom format be stored within rich text?**
-  * Will it have its own HTML tag, perhaps with specific attributes?
-  * Will it risk clashing with the storage format of other rich text content?
-  * Which parts of your rich text markup are semantic? Which are presentational? Can those not be stored?
-  * Is there a potential need for migration of this content in the future? Can you make this easier on yourself?
-* **What will the content look like on the site’s front-end?**
-  * Will you need the storage to be done in a specific way to render a no-JS fallback?
-  * What will the differences be between stored content and rendered content?
+- **How will the extension behave in the editor?**
+  - Will it be an additional toolbar button? What happens when you click on it?
+  - If you create custom entities (say a `STOCK`), how are they meant to behave once inserted in the editor? Can they be edited? Deleted?
+  - What does the your custom content look like when displayed in the editor?
+- **How will the custom format be stored within rich text?**
+  - Will it have its own HTML tag, perhaps with specific attributes?
+  - Will it risk clashing with the storage format of other rich text content?
+  - Which parts of your rich text markup are semantic? Which are presentational? Can those not be stored?
+  - Is there a potential need for migration of this content in the future? Can you make this easier on yourself?
+- **What will the content look like on the site’s front-end?**
+  - Will you need the storage to be done in a specific way to render a no-JS fallback?
+  - What will the differences be between stored content and rendered content?
 
 Some of those questions can be hard to answer if you don’t have experience building rich text extensions. My preferred approach is to get prototyping and build a [proof of concept (PoC)](https://en.wikipedia.org/wiki/Proof_of_concept).
 

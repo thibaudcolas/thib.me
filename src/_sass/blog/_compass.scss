@@ -141,7 +141,13 @@ summary {
   display: block;
 }
 
-@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+@mixin link-colors(
+  $normal,
+  $hover: false,
+  $active: false,
+  $visited: false,
+  $focus: false
+) {
   color: $normal;
   @if $visited {
     &:visited {

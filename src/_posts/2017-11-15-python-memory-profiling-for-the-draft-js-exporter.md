@@ -28,8 +28,8 @@ _Can you spot for how long the toolbar looks broken because the icon font isn’
 
 Performance tooling in the Python ecosystem isn’t as simple to use. Lucky for us, the workload of the Draft.js exporter is much simpler: Draft.js content in, HTML out. We can focus on two metrics:
 
-* Speed – how fast the exporter outputs HTML.
-* Memory consumption – how much RAM the exporter uses while processing content.
+- Speed – how fast the exporter outputs HTML.
+- Memory consumption – how much RAM the exporter uses while processing content.
 
 ### Measuring speed in Python
 
@@ -56,10 +56,10 @@ There’s a built-in module for this! Yay! The [cProfile](https://docs.python.or
 
 From this, we learn that:
 
-* The code took 563ms to run, with 820’882 function calls.
-* Of this time and those function calls, the `render_block`, `element_for`, `build_command_groups` were all called 5'650 times.
-* Excluding the main API call `HTML.render()`, the `render_block` function is what took the longest to run, at 437ms.
-* The functions in `string.py` and `dom.py` run often, they should get special attention when optimising the code.
+- The code took 563ms to run, with 820’882 function calls.
+- Of this time and those function calls, the `render_block`, `element_for`, `build_command_groups` were all called 5'650 times.
+- Excluding the main API call `HTML.render()`, the `render_block` function is what took the longest to run, at 437ms.
+- The functions in `string.py` and `dom.py` run often, they should get special attention when optimising the code.
 
 Here is minimal code that produces such a report. The actual output comes from [benchmark.py](https://github.com/springload/draftjs_exporter/blob/4ca2827896cf4f05423e8721209896d49cf89a91/benchmark.py) in the Draft.js exporter repository.
 
@@ -99,9 +99,9 @@ The best package I found for this is [memory_profiler](https://pypi.python.org/p
 
 We learn that:
 
-* The whole program takes up about 41 MiB ([mebibytes](https://en.wikipedia.org/wiki/Mebibyte), about 43MB).
-* Initialising the exporter doesn't consume much memory if any.
-* Processing the export consumes ± 129KiB of memory in this example.
+- The whole program takes up about 41 MiB ([mebibytes](https://en.wikipedia.org/wiki/Mebibyte), about 43MB).
+- Initialising the exporter doesn't consume much memory if any.
+- Processing the export consumes ± 129KiB of memory in this example.
 
 What’s cool about memory_profiler is that it also comes with a way to chart memory usage over time, using [Matplotlib](http://matplotlib.org/):
 
@@ -134,10 +134,10 @@ mprof plot
 
 I'm still exploring how best to leverage memory_profiler. Its author has a [great blog post](http://fa.bianp.net/blog/2014/plot-memory-usage-as-a-function-of-time/) that goes more in depth. For the exporter, I was able to identify that most of the memory consumption comes from loading the code, rather than its actual execution:
 
-* ± 11.5 MiB are for the base Python process (ie. an empty script consumes that much)
-* ± 15 MiB comes from the test content used in the script.
-* ± 8 MiB comes from loading BeautifulSoup.
-* That leaves us with ± 6.25 MiB for the exporter itself.
+- ± 11.5 MiB are for the base Python process (ie. an empty script consumes that much)
+- ± 15 MiB comes from the test content used in the script.
+- ± 8 MiB comes from loading BeautifulSoup.
+- That leaves us with ± 6.25 MiB for the exporter itself.
 
 ### Using a good benchmark
 
@@ -192,10 +192,10 @@ All in all, we went from [5 seconds](https://github.com/springload/draftjs_expor
 
 With the HTML generation now operating only on strings without any further dependencies, it feels like the next speedups will be much harder to reach. Here are some areas to explore:
 
-* Writing the same "string" engine in C? The engine [is only 100 lines](https://github.com/springload/draftjs_exporter/blob/4ca2827896cf4f05423e8721209896d49cf89a91/draftjs_exporter/engines/string.py) of code, most of which run on the hot paths of the exporter’s rendering code.
-* Refactoring the content parsing algorithm to reduce algorithmic complexity. Surely this could be at least `O(N)` on the number of blocks, if it’s not already.
-* Further optimising for real-world workloads. Because test content isn't always representative of real-world usage.
-* Streaming rendering? I have no idea how hard this would be to do in Python / Django, but this would definitely speed-up the rendering of long content chunks in the context of a website.
+- Writing the same "string" engine in C? The engine [is only 100 lines](https://github.com/springload/draftjs_exporter/blob/4ca2827896cf4f05423e8721209896d49cf89a91/draftjs_exporter/engines/string.py) of code, most of which run on the hot paths of the exporter’s rendering code.
+- Refactoring the content parsing algorithm to reduce algorithmic complexity. Surely this could be at least `O(N)` on the number of blocks, if it’s not already.
+- Further optimising for real-world workloads. Because test content isn't always representative of real-world usage.
+- Streaming rendering? I have no idea how hard this would be to do in Python / Django, but this would definitely speed-up the rendering of long content chunks in the context of a website.
 
 ## Takeaways
 

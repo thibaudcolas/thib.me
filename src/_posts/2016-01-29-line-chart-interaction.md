@@ -5,7 +5,7 @@ date: 2016-01-29 18:40:02 +1200
 comments: true
 categories: [Dataviz, D3, Experiments]
 redirect_from:
-    - /viz/line-chart-interaction
+  - /viz/line-chart-interaction
 ---
 
 Here is a quick example of allowing interaction with specific lines in a D3 chart. The lines take up very little space, so we render a transparent interactive overlay on top on which the event handlers are bound.

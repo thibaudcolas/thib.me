@@ -214,7 +214,7 @@ body.sidebar-footer {
     }
   }
   aside.sidebar {
-    width: $sidebar-width-medium - $sidebar-pad-medium*2;
+    width: $sidebar-width-medium - $sidebar-pad-medium * 2;
     padding: 0 $sidebar-pad-medium $sidebar-pad-medium;
     background: none;
     clear: none;
@@ -251,7 +251,7 @@ body.sidebar-footer {
     }
   }
   aside.sidebar {
-    width: $sidebar-width-wide - $sidebar-pad-wide*2;
+    width: $sidebar-width-wide - $sidebar-pad-wide * 2;
     padding: 1.2em $sidebar-pad-wide $sidebar-pad-wide;
     .collapse-sidebar & {
       padding: {

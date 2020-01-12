@@ -14,13 +14,13 @@ Among those podcasts there are quite a few that are related to front-end develop
 
 Anyway. Here are a few that I particularly like and that deserve a shoutout:
 
-* [JavaScript Jabber](http://javascriptjabber.com/) - _Your Prototype for Great Code_, one of my favourites.
-* [TTL Podcast](http://ttlpodcast.com) — The only podcast that's really dedicated to front-end. And it's amazing!
-* [NodeUp](http://nodeup.com/) - A Node.js podcast. Not front-end but very interesting nonetheless.
-* [The Web Platform Podcast](http://thewebplatform.libsyn.com/) — Discovered that one more recently, very good guests.
+- [JavaScript Jabber](http://javascriptjabber.com/) - _Your Prototype for Great Code_, one of my favourites.
+- [TTL Podcast](http://ttlpodcast.com) — The only podcast that's really dedicated to front-end. And it's amazing!
+- [NodeUp](http://nodeup.com/) - A Node.js podcast. Not front-end but very interesting nonetheless.
+- [The Web Platform Podcast](http://thewebplatform.libsyn.com/) — Discovered that one more recently, very good guests.
 
 And here are three other podcasts that I've started listening only very recently:
 
-* [Full Stack Radio](http://fullstackradio.com/)
-* [The Path to Performance](http://pathtoperf.com/)
-* [SVG Immersion](http://svgimmersion.com/)
+- [Full Stack Radio](http://fullstackradio.com/)
+- [The Path to Performance](http://pathtoperf.com/)
+- [SVG Immersion](http://svgimmersion.com/)

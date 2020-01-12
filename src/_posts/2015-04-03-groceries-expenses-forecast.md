@@ -5,7 +5,7 @@ date: 2015-04-03 16:39:07 +1300
 comments: true
 categories: [Dataviz, D3, Personal]
 redirect_from:
-    - /viz/meal-expenses
+  - /viz/meal-expenses
 ---
 
 Here is a small D3 calendar/heatmap visualisation I tried to do to understand how many days’ worth of food would our groceries shopping cover.
@@ -16,9 +16,9 @@ Input data is each food-related expense, and daily food budget (budget per meal 
 
 Related:
 
-* [http://finance.uw.edu/travel/meals](http://finance.uw.edu/travel/meals)
-* [https://bl.ocks.org/mbostock/4063318](https://bl.ocks.org/mbostock/4063318)
-* [https://github.com/wa0x6e/cal-heatmap](https://github.com/wa0x6e/cal-heatmap)
+- [http://finance.uw.edu/travel/meals](http://finance.uw.edu/travel/meals)
+- [https://bl.ocks.org/mbostock/4063318](https://bl.ocks.org/mbostock/4063318)
+- [https://github.com/wa0x6e/cal-heatmap](https://github.com/wa0x6e/cal-heatmap)
 
 <style>
     body {

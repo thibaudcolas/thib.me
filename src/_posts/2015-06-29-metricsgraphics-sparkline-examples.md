@@ -5,7 +5,7 @@ date: 2015-06-29 18:40:02 +1200
 comments: true
 categories: [Dataviz, Open Data, Experiments, D3]
 redirect_from:
-    - /viz/metricsgraphics-sparkline
+  - /viz/metricsgraphics-sparkline
 ---
 
 Sparklines are an interesting form of dataviz, because of how small they can be compared to how much meaning they convey. It's a great data to ink ratio! Here are some examples, using [Metricsgraphics](https://www.metricsgraphicsjs.org/)!

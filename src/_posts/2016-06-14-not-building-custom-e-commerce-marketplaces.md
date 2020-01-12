@@ -16,9 +16,9 @@ I think it's now the third time I've had to think about the best approach to cre
 
 In general, I would try to challenge the conclusion that you **"need to create a commerce marketplace from scratch"** as much as possible, as it will be a big up front effort that might not yield reliable results fast enough. Here are alternative things to look at:
 
-* https://www.shopify.com/, build e-commerce shops in minutes (likely not to be for you, but well worth a try)
-* http://inselly.com/, http://www.instaorders.com/, tools to sell through Instagram
-* http://pasary.com/, best marketplace as a service contender... from the looks of their product site.
+- https://www.shopify.com/, build e-commerce shops in minutes (likely not to be for you, but well worth a try)
+- http://inselly.com/, http://www.instaorders.com/, tools to sell through Instagram
+- http://pasary.com/, best marketplace as a service contender... from the looks of their product site.
 
 # The "sell through Instagram" approach
 

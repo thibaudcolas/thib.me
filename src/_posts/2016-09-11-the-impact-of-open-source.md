@@ -14,17 +14,17 @@ Today I changed my GitHub username from ThibWeb to [thibaudcolas](https://github
 
 The real surprise came from this search on GitHub: https://github.com/search?utf8=%E2%9C%93&q=ThibWeb. The search results are packed with mentions of my open-source contributions in various projects:
 
-* A bunch of people committing their [`smooth-scroll`](https://github.com/cferdinandi/smooth-scroll) dependency – I wrote unit tests for this library a while ago, among other changes. Glad that helped!
-* This [stronger-loop](https://github.com/dnd1/stronger-loop) NodeSchool workshop which cites [workshopper-mocha-boilerplate](https://www.npmjs.com/package/workshopper-mocha-boilerplate) as an inspiration. Glad that helped too.
-* Mentions of the french translations for jQuery Validate I did a while ago.
-* And a lot of other things
+- A bunch of people committing their [`smooth-scroll`](https://github.com/cferdinandi/smooth-scroll) dependency – I wrote unit tests for this library a while ago, among other changes. Glad that helped!
+- This [stronger-loop](https://github.com/dnd1/stronger-loop) NodeSchool workshop which cites [workshopper-mocha-boilerplate](https://www.npmjs.com/package/workshopper-mocha-boilerplate) as an inspiration. Glad that helped too.
+- Mentions of the french translations for jQuery Validate I did a while ago.
+- And a lot of other things
 
 ... and here are four people who built their resume with the JSON resume theme [Eloquent](https://github.com/thibaudcolas/jsonresume-theme-eloquent) I made a few years ago, and that I used to apply to my current job at Springload:
 
-* https://omidreyhani.github.io/
-* https://luoxiaobatman.github.io/
-* https://guntherjh.github.io/
-* http://victorperin.ninja/resume/
+- https://omidreyhani.github.io/
+- https://luoxiaobatman.github.io/
+- https://guntherjh.github.io/
+- http://victorperin.ninja/resume/
 
 Glad this helps too :)
 

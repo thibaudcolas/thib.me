@@ -17,10 +17,10 @@ This release comes with a new feature – support for [form validation](https://
 
 It also comes with many bug fixes:
 
-* Stop unnecessarily calling `onSave` in the editor’s `onBlur` ([#173](https://github.com/springload/draftail/issues/173)).
-* Prevent crash when filtering pasted content whose last block is to be removed (e.g. unsupported image) ([#179](https://github.com/springload/draftail/issues/179)).
-* Prevent crash in `DraftUtils.getEntitySelection`, when the provided entity key isn't valid (undefined, missing) ([#168](https://github.com/springload/draftail/pull/168))
-* Fix entity removal and editing not doing anything when the selection is backwards (right to left) ([#168](https://github.com/springload/draftail/pull/168)).
+- Stop unnecessarily calling `onSave` in the editor’s `onBlur` ([#173](https://github.com/springload/draftail/issues/173)).
+- Prevent crash when filtering pasted content whose last block is to be removed (e.g. unsupported image) ([#179](https://github.com/springload/draftail/issues/179)).
+- Prevent crash in `DraftUtils.getEntitySelection`, when the provided entity key isn't valid (undefined, missing) ([#168](https://github.com/springload/draftail/pull/168))
+- Fix entity removal and editing not doing anything when the selection is backwards (right to left) ([#168](https://github.com/springload/draftail/pull/168)).
 
 None of those bugs were that critical, but I’m particularly happy to see them addressed because the reports came from users of Draftail I didn’t know about. Draftail was originally developped for [Wagtail](https://wagtail.io/), but we spent a great deal of effort to make sure it would be usable (and good!) outside of the CMS as well. It’s good to see others using the editor, and contribute to its maintenance.
 
@@ -30,17 +30,17 @@ The last major feature changes in Draftail happened nearly a year ago – [v0.17
 
 To help with this, I worked on a number of much needed behind-the-scenes improvements to Draftail as a project:
 
-* Integrating [Danger](https://github.com/danger/danger-js) onto the project, an automation tool to vet pull requests.
+- Integrating [Danger](https://github.com/danger/danger-js) onto the project, an automation tool to vet pull requests.
 
 [![Screenshot of Danger’s assessment of a pull request, as a GitHub comment from @thi-bot. Danger notes the PR is marked as "WIP", and might need to update the documentation and the CHANGELOG](/images/blog/draftail-v1-1-0-a-quality-of-life-release/danger-example.png)](https://github.com/springload/draftail/pull/182#issuecomment-460788724)
 
 > Danger helps enforcing the parts of the software development process that are not automated: keeping the documentation up to date, making sure new code comes with tests, assessing new dependencies added onto a project, etc.
 
-* Splitting Draftail’s most important overrides of Draft.js into separate packages, [draftjs-filters](https://github.com/thibaudcolas/draftjs-filters) and [draftjs-conductor](https://github.com/thibaudcolas/draftjs-conductor), so others could use the improvements, and help with the maintenance. Combined, those two packages get **20x** the downloads of Draftail.
-* Adding [stylelint](https://stylelint.io/) to lint styles ([#126](https://github.com/springload/draftail/issues/126)), with my custom [styleling-config-cookbook](https://github.com/thibaudcolas/stylelint-config-cookbook) configuration. CSS being a very permissive language, I find it especially important to have strict checks there.
-* Upgrading ESLint and the config (now [eslint-plugin-cookbook](https://github.com/thibaudcolas/eslint-plugin-cookbook)). Here as well, JavaScript being so permissive, it’s important for the project’s health to have strict checks.
-* Did I mention something about languages being too permissive? Well, the editor now also uses [Flow](https://flow.org/) types ([#127](https://github.com/springload/draftail/issues/127)) to keep JS under check. This actually already helped surface some of the bugs fixed in this release, as well as potential sources of crashes in the editor, so thank you Flow!
-* I also added performance tests (memory, CPU), to be able to benchmark future additions to the editor.
+- Splitting Draftail’s most important overrides of Draft.js into separate packages, [draftjs-filters](https://github.com/thibaudcolas/draftjs-filters) and [draftjs-conductor](https://github.com/thibaudcolas/draftjs-conductor), so others could use the improvements, and help with the maintenance. Combined, those two packages get **20x** the downloads of Draftail.
+- Adding [stylelint](https://stylelint.io/) to lint styles ([#126](https://github.com/springload/draftail/issues/126)), with my custom [styleling-config-cookbook](https://github.com/thibaudcolas/stylelint-config-cookbook) configuration. CSS being a very permissive language, I find it especially important to have strict checks there.
+- Upgrading ESLint and the config (now [eslint-plugin-cookbook](https://github.com/thibaudcolas/eslint-plugin-cookbook)). Here as well, JavaScript being so permissive, it’s important for the project’s health to have strict checks.
+- Did I mention something about languages being too permissive? Well, the editor now also uses [Flow](https://flow.org/) types ([#127](https://github.com/springload/draftail/issues/127)) to keep JS under check. This actually already helped surface some of the bugs fixed in this release, as well as potential sources of crashes in the editor, so thank you Flow!
+- I also added performance tests (memory, CPU), to be able to benchmark future additions to the editor.
 
 Last but not least, Draftail also has new documentation and demos!
 
@@ -52,10 +52,10 @@ The Draftail documentation used to consist of a very long README, which kept thi
 
 Building a full-fledged documentation website is obviously more work than a README, but it comes with many advantages:
 
-* It’s easier to navigate around bigger documentations. To me, good, extensive documentation is one of the hallmarks of great software.
-* Because of the ease of navigation, docs can be redundant – e.g. cover the same topic with an intro, a full-fledged guide, and an API reference.
-* Docs can be versioned. READMEs are versioned too, but people often do not realise they can use GitHub’s branch/tags navigation for this.
-* Search! draftail.org’s is built with [Algolia DocSearch](https://community.algolia.com/docsearch/).
+- It’s easier to navigate around bigger documentations. To me, good, extensive documentation is one of the hallmarks of great software.
+- Because of the ease of navigation, docs can be redundant – e.g. cover the same topic with an intro, a full-fledged guide, and an API reference.
+- Docs can be versioned. READMEs are versioned too, but people often do not realise they can use GitHub’s branch/tags navigation for this.
+- Search! draftail.org’s is built with [Algolia DocSearch](https://community.algolia.com/docsearch/).
 
 Finally, the last thing I love about this new documentation is that it can contain live examples of the editor in iframes.
 
@@ -75,11 +75,11 @@ I’m really happy with how easy to maintain the editor is because of all of tho
 
 I have been working on making Draftail [compatible with the draft-js-plugins architecture](https://github.com/springload/draftail/pull/171) thanks to the support I receive on [Patreon](https://www.patreon.com/thibaud_colas), and this is very close to being ready. This will effectively make it possible to build much more advanced extensions to the editor, without reinventing too many APIs. This is very exciting (at least to me!) because it will make it possible to experiment much more with the editor’s features without compromising its stability. I’m particularly keen to add new means of interacting with content:
 
-* Smarter copy-paste support ([#62](https://github.com/springload/draftail/issues/62)) – paste a YouTube link into the editor, get an embed block right away
-* Drag and drop support ([#117](https://github.com/springload/draftail/issues/117)) – drop an image, get it as a block
-* Better custom blocks ([#158](https://github.com/springload/draftail/issues/158)) – that can easily be selected, edited, moved around
-* New toolbars ([#64](https://github.com/springload/draftail/issues/64)) – to reduce the visual footprint of the editor UI
-* Autocompletes and slash-commands – as fast as keyboard shortcuts, but with better discoverability, and easier extensibility
+- Smarter copy-paste support ([#62](https://github.com/springload/draftail/issues/62)) – paste a YouTube link into the editor, get an embed block right away
+- Drag and drop support ([#117](https://github.com/springload/draftail/issues/117)) – drop an image, get it as a block
+- Better custom blocks ([#158](https://github.com/springload/draftail/issues/158)) – that can easily be selected, edited, moved around
+- New toolbars ([#64](https://github.com/springload/draftail/issues/64)) – to reduce the visual footprint of the editor UI
+- Autocompletes and slash-commands – as fast as keyboard shortcuts, but with better discoverability, and easier extensibility
 
 ---
 

@@ -5,7 +5,7 @@ date: 2015-01-07 10:22:07 +1300
 comments: true
 categories: [Dataviz, Open Data, Maps]
 redirect_from:
-    - /viz/coast2coast-walk
+  - /viz/coast2coast-walk
 ---
 
 The Coast to Coast walk is a 16km hike across Auckland, from the Waitemata Harbour to the Manukau.

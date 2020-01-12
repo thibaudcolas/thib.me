@@ -6,7 +6,7 @@ comments: true
 categories: [JavaScript, Community, Tools]
 canonical: https://www.springload.co.nz/blog/blurring-line-between-web-and-desktop-apps/
 redirect_from:
-    - /electron-javascript-for-desktop-apps
+  - /electron-javascript-for-desktop-apps
 ---
 
 Two years ago, the folks at GitHub released a new text editor called Atom. They built it with web technologies: HTML, CSS and JavaScript. As part of this project they released [Electron](http://electron.atom.io/), a framework to write cross-platform desktop applications with web technologies.
@@ -19,10 +19,10 @@ Projects like Atom and Electron changed the way we think about the frontier betw
 
 You might already be using one of these [Electron-powered applications](http://electron.atom.io/#built-on-electron):
 
-* Slack
-* VisualStudio Code (Microsoft’s new text editor)
-* Caprine (an unofficial client for Facebook Messenger)
-* WordPress.com
+- Slack
+- VisualStudio Code (Microsoft’s new text editor)
+- Caprine (an unofficial client for Facebook Messenger)
+- WordPress.com
 
 Wait, WordPress? Yes – the new WordPress.com interface is bundled as a desktop application, available right from your taskbar or dock. These applications (well, three out of the four) show a trend towards making apps available in the browser _and_ on desktop.
 

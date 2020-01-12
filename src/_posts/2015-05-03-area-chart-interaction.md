@@ -5,7 +5,7 @@ date: 2015-05-03 13:40:02 +1200
 comments: true
 categories: [Dataviz, D3, Experiments]
 redirect_from:
-    - /viz/area-chart-interaction
+  - /viz/area-chart-interaction
 ---
 
 Here's an experiment, with an area chart that changes its shape based on a financial calculation.

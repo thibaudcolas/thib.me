@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Celebrating open source with Hacktoberfest	
+title: Celebrating open source with Hacktoberfest
 date: 2018-10-03 13:16:29 +0300
 comments: true
 categories: [Community, Events, Workshops]

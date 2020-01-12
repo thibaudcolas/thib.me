@@ -372,8 +372,8 @@ class AboutExtraCredit(Koan):
 
 A few takeaways:
 
-* I decided to code the placer choice (keep rolling dices for a higher score or stop and keep a lower one) as a very simple rules-based AI. As the point is to use TDD as much as possible, it makes no sense to create a manual process / UI that'll need to receive input on each test case. Automating input on such an interface would be the same as implementing those rules.
-* When doing TDD, it is important to remind ourselves of the red-green-refactor cycle. Refactoring should be frequent to keep the routines manageable as more and more rules are added.
-* Adding lots of comments for each rule being implemented is a good way to keep track of what should be done: comments need to express the intent, not the implementation.
+- I decided to code the placer choice (keep rolling dices for a higher score or stop and keep a lower one) as a very simple rules-based AI. As the point is to use TDD as much as possible, it makes no sense to create a manual process / UI that'll need to receive input on each test case. Automating input on such an interface would be the same as implementing those rules.
+- When doing TDD, it is important to remind ourselves of the red-green-refactor cycle. Refactoring should be frequent to keep the routines manageable as more and more rules are added.
+- Adding lots of comments for each rule being implemented is a good way to keep track of what should be done: comments need to express the intent, not the implementation.
 
 Now on to a more Web-related Python project!

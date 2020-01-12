@@ -33,31 +33,31 @@ I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 
 ## Browser Support
 
-* IE10+
-* IE Mobile 10+
-* FF 30+
-* Chrome 34+
-* Safari 7+
-* Opera 23+
-* iOS Safari 7+
-* Android / Chrome 4.4+
-* BlackBerry 10
+- IE10+
+- IE Mobile 10+
+- FF 30+
+- Chrome 34+
+- Safari 7+
+- Opera 23+
+- iOS Safari 7+
+- Android / Chrome 4.4+
+- BlackBerry 10
 
 ### Tests
 
 Static code analysis:
 
-* http://www.jshint.com/
-* https://github.com/jscs-dev/node-jscs
-* https://github.com/causes/scss-lint
+- http://www.jshint.com/
+- https://github.com/jscs-dev/node-jscs
+- https://github.com/causes/scss-lint
 
 Unit testing:
 
-* https://jasmine.github.io/
+- https://jasmine.github.io/
 
 Visual regression:
 
-* https://github.com/garris/BackstopJS
+- https://github.com/garris/BackstopJS
 
 ```sh
 # Generate reference screenshots:
@@ -68,15 +68,15 @@ cd backstopjs && gulp test
 
 SEO analysis:
 
-* https://github.com/Munter/hyperlink
+- https://github.com/Munter/hyperlink
 
 Performance:
 
-* http://gtmetrix.com/
-* http://webpagetest.org/
-* https://developers.google.com/speed/pagespeed/insights/
+- http://gtmetrix.com/
+- http://webpagetest.org/
+- https://developers.google.com/speed/pagespeed/insights/
 
 Accessibility:
 
-* http://tenon.io/
-* https://leaverou.github.io/contrast-ratio/
+- http://tenon.io/
+- https://leaverou.github.io/contrast-ratio/

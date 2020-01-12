@@ -26,7 +26,7 @@ url: "https://thib.me" # the base hostname & protocol for your site, e.g. http:/
 date_format: "%F %R"
 
 twitter_username: thibaud_colas
-github_username:  thibaudcolas
+github_username: thibaudcolas
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
@@ -55,15 +55,14 @@ category_dir: categories
 markdown: kramdown
 highlighter: false # default python pygments have been replaced by pygments.rb
 
-paginate: 5           # Posts per page on the blog index
+paginate: 5 # Posts per page on the blog index
 paginate_path: "/page/:num/"
-recent_posts: 5       # Posts in the sidebar Recent Posts section
-excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+recent_posts: 5 # Posts in the sidebar Recent Posts section
+excerpt_link: "Read on &rarr;" # "Continue reading" link text at the bottom of excerpted articles
 # https://github.com/octopress/filters#excerpted-posts
 excerpt_separator: <!-- more -->
 
-titlecase: false       # Converts page and post titles to titlecase
-
+titlecase: false # Converts page and post titles to titlecase
 
 # ----------------------- #
 #   3rd Party Settings    #

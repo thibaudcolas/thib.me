@@ -5,7 +5,7 @@ date: 2015-07-06 18:40:02 +1200
 comments: true
 categories: [Dataviz, Open Data, Experiments, D3]
 redirect_from:
-    - /viz/international-flights-nz
+  - /viz/international-flights-nz
 ---
 
 This is [StatsNZ](http://www.stats.govt.nz/infoshare/SelectVariables.aspx?pxID=163d666b-55b3-476a-ba8b-d8507dd8b0e3) data about immigration in New Zealand. Worth having a look at!

@@ -25,8 +25,8 @@ The data needs to be clean, structured, and complete. If it’s not, it’s impo
 
 Getting the data into a usable shape can take some time, so it’s important to ensure the person or team doing this work has the appropriate workflows and tools. It’s worth mentioning recent initiatives in this space:
 
-* [Data Packages](https://frictionlessdata.io/), a project of the [OKFN](https://okfn.org/).
-* [Dat](https://datproject.org/), originally described as “git for data”.
+- [Data Packages](https://frictionlessdata.io/), a project of the [OKFN](https://okfn.org/).
+- [Dat](https://datproject.org/), originally described as “git for data”.
 
 ### Value – What stories can the data tell?
 
@@ -52,12 +52,12 @@ So, you’ve got your hands on those juicy datasets. You’ve been told many tal
 
 ### Dimensions and data types
 
-To understand a dataset, look at what makes up a single data point. Is it a number with a date, as in a time series? Is the number absolute (eg. a quantity) or relative (eg. $ per capita)? The most important types to look for are:
+To understand a dataset, look at what makes up a single data point. Is it a number with a date, as in a time series? Is the number absolute (eg. a quantity) or relative (eg. \$ per capita)? The most important types to look for are:
 
-* Coordinates – indicate the data is geolocalised and could be displayed on a map, or filtered by area.
-* Dates – with time series data, you’ll be able to show people how a phenomenon evolves over time.
-* Text – labels or categories, forming [nominal or ordinal scales](https://en.wikipedia.org/wiki/Level_of_measurement). Ask yourself whether those are understandable by your audience or not.
-* Numbers, relative & absolute – look for the distribution of those values, whether there are hard extremes (eg. % of population is always between 0 and 100%).
+- Coordinates – indicate the data is geolocalised and could be displayed on a map, or filtered by area.
+- Dates – with time series data, you’ll be able to show people how a phenomenon evolves over time.
+- Text – labels or categories, forming [nominal or ordinal scales](https://en.wikipedia.org/wiki/Level_of_measurement). Ask yourself whether those are understandable by your audience or not.
+- Numbers, relative & absolute – look for the distribution of those values, whether there are hard extremes (eg. % of population is always between 0 and 100%).
 
 You should also take a look at the available metadata, particularly if there’s a high number of datasets and your audience needs to navigate between them. Talking about navigation – now’s the time to look for the dimensions within your data. Look at how the data is structured, and how many hierarchy levels there are. A uni-dimensional dataset (eg. population of a single country over time) is easier to visualise than a multi-dimensional dataset (eg. population over time, by country; population over time, by country and by age group).
 
@@ -77,9 +77,9 @@ When looking at those datasets from the most common statistical lenses, they are
 
 Visualising data takes time, but there are many tools available that can help you with graph building and beyond:
 
-* [Google Sheets’ “Explore”](https://flowingdata.com/2015/09/14/automatic-charts-and-insights-in-google-sheets/) feature is available out of the box, automatically generating (mostly) relevant charts and insights.
-* [IBM Watson Analytics](https://www.ibm.com/analytics/watson-analytics/) is another approach, also providing automatic chart generation and visual data exploration (expert).
-* [Wicked Data](https://www.wickeddata.online/) is a new contender in the exploratory visualisation space, with configurable drill-downs and chart types, as well as dashboards.
+- [Google Sheets’ “Explore”](https://flowingdata.com/2015/09/14/automatic-charts-and-insights-in-google-sheets/) feature is available out of the box, automatically generating (mostly) relevant charts and insights.
+- [IBM Watson Analytics](https://www.ibm.com/analytics/watson-analytics/) is another approach, also providing automatic chart generation and visual data exploration (expert).
+- [Wicked Data](https://www.wickeddata.online/) is a new contender in the exploratory visualisation space, with configurable drill-downs and chart types, as well as dashboards.
 
 ## Early prototyping
 
@@ -93,9 +93,9 @@ Here you can explore which chart components are important: a grid, labels and le
 
 Here are some more things to consider at this stage:
 
-* How should missing data points (“holes”) appear on the visualisation?
-* How are the minimum and maximum values (“domains”) on the axis selected?
-* Are there particular data points that need to be highlighted?
+- How should missing data points (“holes”) appear on the visualisation?
+- How are the minimum and maximum values (“domains”) on the axis selected?
+- Are there particular data points that need to be highlighted?
 
 [![Life expectancy in New Zealand - data from NZIER, data1850.nz](/images/Data1850_pop_le_1892-2011.png)](https://data1850.nz/chart/breakdown/28-49-130)
 

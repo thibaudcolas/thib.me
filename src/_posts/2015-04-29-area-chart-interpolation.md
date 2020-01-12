@@ -5,7 +5,7 @@ date: 2015-04-29 18:40:02 +1200
 comments: true
 categories: [Dataviz, D3, Experiments]
 redirect_from:
-    - /viz/area-chart-interpolation
+  - /viz/area-chart-interpolation
 ---
 
 Data interpolation makes a big difference to how charts renders. Here are all of the built-in interpolations of D3.

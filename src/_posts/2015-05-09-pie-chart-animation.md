@@ -5,7 +5,7 @@ date: 2015-05-09 18:40:02 +1200
 comments: true
 categories: [Dataviz, D3, Experiments]
 redirect_from:
-    - /viz/pie-chart-animation
+  - /viz/pie-chart-animation
 ---
 
 Here is a small experiment: animating pie charts on hover!

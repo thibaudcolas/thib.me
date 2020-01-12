@@ -1,17 +1,21 @@
-(function (L, StationsData, SuburbsData) {
-  'use strict';
+(function(L, StationsData, SuburbsData) {
+  "use strict";
 
-  var map = L.map('map');
+  var map = L.map("map");
 
-  var osmTiles='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-  var osmAttrib='Map data © <a href="http://openstreetmap.org">OSM</a> contributors';
+  var osmTiles = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+  var osmAttrib =
+    'Map data © <a href="http://openstreetmap.org">OSM</a> contributors';
 
-  L.tileLayer(osmTiles, {minZoom: 8, maxZoom: 16, attribution: osmAttrib}).addTo(map);
+  L.tileLayer(osmTiles, {
+    minZoom: 8,
+    maxZoom: 16,
+    attribution: osmAttrib,
+  }).addTo(map);
 
   // Centered on Mount Eden.
   map.setView([-41.286, 174.767], 12);
 
   L.geoJson(StationsData).addTo(map);
   L.geoJson(SuburbsData).addTo(map);
-
 })(window.L, window.StationsData, window.SuburbsData);

@@ -12,16 +12,16 @@ The end of the year seems to be a good time to turn back and have a look at what
 
 In 2014:
 
-* My blog got [13 new blog posts](/archives/).
-* I did [4 talks](/talks/) at various events.
-* I created [34 PRs](https://github.com/thibaudcolas?tab=overview&from=2010-12-01&to=2010-12-31) for many projects on GitHub.
-* My [main website](https://thib.me) was rebuilt from scratch.
-* I did a **lot** of side-projects:
-  * [Zori](https://github.com/FlipFlopWeekly/zori)
-  * [JS1K](https://github.com/thibaudcolas/js1k-2014)
-  * Something cool in Python: [When will it be done?](http://whenwillitbedone.trgdy.com/)
-  * [JS13K](https://github.com/FatBoyCrew/elements-shmup)
-  * A theme for jsonresume.org: [Eloquent](https://github.com/thibaudcolas/jsonresume-theme-eloquent)
+- My blog got [13 new blog posts](/archives/).
+- I did [4 talks](/talks/) at various events.
+- I created [34 PRs](https://github.com/thibaudcolas?tab=overview&from=2010-12-01&to=2010-12-31) for many projects on GitHub.
+- My [main website](https://thib.me) was rebuilt from scratch.
+- I did a **lot** of side-projects:
+  - [Zori](https://github.com/FlipFlopWeekly/zori)
+  - [JS1K](https://github.com/thibaudcolas/js1k-2014)
+  - Something cool in Python: [When will it be done?](http://whenwillitbedone.trgdy.com/)
+  - [JS13K](https://github.com/FatBoyCrew/elements-shmup)
+  - A theme for jsonresume.org: [Eloquent](https://github.com/thibaudcolas/jsonresume-theme-eloquent)
 
 Here's what my GitHub scorecard looks like:
 

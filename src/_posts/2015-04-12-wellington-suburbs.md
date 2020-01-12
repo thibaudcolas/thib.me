@@ -5,7 +5,7 @@ date: 2015-04-12 12:02:40 +1300
 comments: true
 categories: [Dataviz, Open Data, Maps]
 redirect_from:
-    - /viz/wellington-suburbs
+  - /viz/wellington-suburbs
 ---
 
 Built with GeoJSON, Leaflet, OpenStreetMap during Startup Weekend Wellington 2015.

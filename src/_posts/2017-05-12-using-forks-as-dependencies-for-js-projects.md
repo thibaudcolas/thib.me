@@ -16,21 +16,21 @@ I'm seeing this done more often than I would like. Forks make it unnecessarily t
 
 Here are a few reasons why forks are bad:
 
-* They increase how much code we have to look after and maintain, falling out of date, preventing us from receiving the bug fixes and improvements released upstream.
-* They are hard to upgrade – we can't use semantic versioning for a project that does not come from a package registry.
-* They are not "immutable" – if we remove the project on GitHub, we completely lose the fork's code, and the project builds. On the contrary, npm and pip do not allow dependencies to be overwritten / removed.
+- They increase how much code we have to look after and maintain, falling out of date, preventing us from receiving the bug fixes and improvements released upstream.
+- They are hard to upgrade – we can't use semantic versioning for a project that does not come from a package registry.
+- They are not "immutable" – if we remove the project on GitHub, we completely lose the fork's code, and the project builds. On the contrary, npm and pip do not allow dependencies to be overwritten / removed.
 
 Now forks aren't always bad, but they should be considered a last resort. Here are alternatives to consider:
 
-* Do not rely on this dependency. Use something else instead.
-* If the dependency's code is small (not much of it, not many dependencies of its own), consider copy/pasting it directly into your project. It won't make the code easier to update, but at least now we know what we really have to look after.
+- Do not rely on this dependency. Use something else instead.
+- If the dependency's code is small (not much of it, not many dependencies of its own), consider copy/pasting it directly into your project. It won't make the code easier to update, but at least now we know what we really have to look after.
 
 If you still think forking is the right solution, here are rules to follow:
 
-* _Always_ have the fork on your organisation's GitHub account, so everyone can update it.
-* _Never_ rely on someone else's fork. We don't know what they will do with it.
-* Make a branch for your extra code (following our branch naming conventions).
-* If the project requires compilation, compile the code on the project directly, make a separate "release" branch for your extra code and commit the compiled files there.
-* Make a tag for the "releasable" versions of your changes you will want to rely on later.
-* _Reference the dependency based on the tag_, so we know what version we are at, and it is less likely to change than a branch.
-* Make a PR to the upstream project. They will let you know whether your change is appropriate, and potentially merge it, so we can start relying on that project again.
+- _Always_ have the fork on your organisation's GitHub account, so everyone can update it.
+- _Never_ rely on someone else's fork. We don't know what they will do with it.
+- Make a branch for your extra code (following our branch naming conventions).
+- If the project requires compilation, compile the code on the project directly, make a separate "release" branch for your extra code and commit the compiled files there.
+- Make a tag for the "releasable" versions of your changes you will want to rely on later.
+- _Reference the dependency based on the tag_, so we know what version we are at, and it is less likely to change than a branch.
+- Make a PR to the upstream project. They will let you know whether your change is appropriate, and potentially merge it, so we can start relying on that project again.

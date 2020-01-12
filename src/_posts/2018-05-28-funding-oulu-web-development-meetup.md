@@ -44,8 +44,8 @@ Organising good events takes time, and money. The biggest hurdle is to find the 
 
 I’m looking for:
 
-* **1000 euros for a year’s worth of events**. Time-wise, this will allow me to occasionally take a day off to focus on the meetup without compromising my personal finances.
-* **OR 500 euros, and 1 day/month of time** to spend organising the events. Less upfront cost, more time. Win-win.
+- **1000 euros for a year’s worth of events**. Time-wise, this will allow me to occasionally take a day off to focus on the meetup without compromising my personal finances.
+- **OR 500 euros, and 1 day/month of time** to spend organising the events. Less upfront cost, more time. Win-win.
 
 The big difference this will make is in our ability to reliably record events. This takes a lot of time, that I can’t commit to without support.
 
@@ -55,13 +55,13 @@ More than anything else, the eternal gratitude of all future attendees! The “A
 
 Practically, here is what we will do over the next 12 months:
 
-* We will produce higher-quality events thanks to your support, which means better learning and sharing for everyone in Oulu – Codemate employees, potential job applicants, in-house dev teams of Codemate’s clients.
-* We will advertise Codemate’s sponsorship at the beginning of all events.
-* Codemate will be mentioned as a sponsor on the [group’s Meetup page](https://www.meetup.com/Oulu-Web-Development/) (with logo and link to a page of your choice).
-* Official social media communications related to the events will mention “Sponsored by @CodemateLtd” or equivalent.
-* Recorded talks on YouTube will also mention “Sponsored by Codemate”.
-* If you wish, we will write one blog post on Codemate’s blog after each event to quickly recap what happened, and link to the talks.
-* If you wish, we will make a new “Community” page on Codemate’s website to showcase Codemate’s involvement – [Mimmit koodaa](https://twitter.com/MimmitKoodaa), the meetup, etc.
+- We will produce higher-quality events thanks to your support, which means better learning and sharing for everyone in Oulu – Codemate employees, potential job applicants, in-house dev teams of Codemate’s clients.
+- We will advertise Codemate’s sponsorship at the beginning of all events.
+- Codemate will be mentioned as a sponsor on the [group’s Meetup page](https://www.meetup.com/Oulu-Web-Development/) (with logo and link to a page of your choice).
+- Official social media communications related to the events will mention “Sponsored by @CodemateLtd” or equivalent.
+- Recorded talks on YouTube will also mention “Sponsored by Codemate”.
+- If you wish, we will write one blog post on Codemate’s blog after each event to quickly recap what happened, and link to the talks.
+- If you wish, we will make a new “Community” page on Codemate’s website to showcase Codemate’s involvement – [Mimmit koodaa](https://twitter.com/MimmitKoodaa), the meetup, etc.
 
 I’m also very open to suggestions for other ways to promote Codemate through the meetup.
 

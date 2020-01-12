@@ -5,7 +5,7 @@ date: 2015-01-12 18:53:36 +1300
 comments: true
 categories: [Dataviz, Open Data, Datalift]
 redirect_from:
-    - /viz/french-diaspora
+  - /viz/french-diaspora
 ---
 
 This dataset comes from the french Open Data Platform, [data.gouv.fr](https://www.data.gouv.fr/en/). It is visualized using Google's [Public Data Explorer](https://www.google.com/publicdata/) and [DSPL](https://developers.google.com/public-data/) language. The data was processed with [OpenRefine](http://openrefine.org/) and [Datalift](http://datalift.org/).

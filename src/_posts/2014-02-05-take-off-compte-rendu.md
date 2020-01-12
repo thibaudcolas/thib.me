@@ -16,23 +16,23 @@ Aucune présentation n'a directement évoqué le sujet de l'avenir du Web mais b
 
 Quelques liens pour aller plus loin :
 
-* [Extensible Web Manifesto](http://extensiblewebmanifesto.org/), à survoler.
-* [Hitch.js](http://extensiblewebmanifesto.org/), sélecteurs CSS sous stéroïdes.
+- [Extensible Web Manifesto](http://extensiblewebmanifesto.org/), à survoler.
+- [Hitch.js](http://extensiblewebmanifesto.org/), sélecteurs CSS sous stéroïdes.
 
 ## Bonnes pratiques
 
 Je regroupe sous la bannière "Bonnes pratiques" les trois présentations suivantes :
 
-* [Your Customer WANTS to Pay Your Testing Budget](https://www.youtube.com/watch?v=fxe2pH0cTXc) [slides](https://speakerdeck.com/klickass/your-customers-want-to-pay-your-testing-budget), par Andre Jay Meissner. Excellente prez, qui faisait l'éloge des [Open Device Labs](http://opendevicelab.com/). Côté tests sur appareils physiques nous avons encore du chemin à faire à la Web Factory pour arriver au niveau de [ce genre de photo](https://devicelab.fi/).
-* [OWASP Top 10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) : une présentation sur les best practices côté sécurité durant laquelle on a mentionné les outils [Metasploit](http://www.metasploit.com/), [Meldium](https://www.meldium.com/) et [Versioneye](https://github.com/versioneye/). Ce dernier pourrait particulièrement vous intéresser.
-* Enfin, une présentation géniale de Patrick Hamann sur [l'optimisation des performances au Guardian](https://speakerdeck.com/patrickhamann/css-and-the-critical-path). Hyper avant-gardiste, il va beaucoup plus loin que ce que l'on voit habituellement et je vous la conseille vivement.
+- [Your Customer WANTS to Pay Your Testing Budget](https://www.youtube.com/watch?v=fxe2pH0cTXc) [slides](https://speakerdeck.com/klickass/your-customers-want-to-pay-your-testing-budget), par Andre Jay Meissner. Excellente prez, qui faisait l'éloge des [Open Device Labs](http://opendevicelab.com/). Côté tests sur appareils physiques nous avons encore du chemin à faire à la Web Factory pour arriver au niveau de [ce genre de photo](https://devicelab.fi/).
+- [OWASP Top 10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) : une présentation sur les best practices côté sécurité durant laquelle on a mentionné les outils [Metasploit](http://www.metasploit.com/), [Meldium](https://www.meldium.com/) et [Versioneye](https://github.com/versioneye/). Ce dernier pourrait particulièrement vous intéresser.
+- Enfin, une présentation géniale de Patrick Hamann sur [l'optimisation des performances au Guardian](https://speakerdeck.com/patrickhamann/css-and-the-critical-path). Hyper avant-gardiste, il va beaucoup plus loin que ce que l'on voit habituellement et je vous la conseille vivement.
 
 ## L'essor de JavaScript
 
 Pour terminer, JavaScript _comme plateforme_ était omniprésent. J'ai retenu trois sujets :
 
-* [A smaller AngularJS](https://rawgithub.com/timruffles/cute-talk/master/index.html#/) : une réécriture des parties intéressantes d'AngularJS (scopes, double binding) pour les rendre plus compréhensibles. À lire : [code source de cette réécriture (moins de 1000 lignes)](http://timruffles.github.io/cute/).
-* [Patterns for Large scale JS](https://speakerdeck.com/kimjoar/patterns-of-large-scale-javascript-applications-1). Comment construire de grosses applications JavaScript testables, scalables, maintenables. Excellent talk. Du même hauteur : [Superhero.js](http://superherojs.com/), une mine de ressources sur JavaScript.
-* [Time-Series Monitoring Graphs with D3 & Ricksha](http://www.slideshare.net/byrichardpowell/timeseries-monitoring-graphs-with-d3-rickshaw). Si vous êtes passés à côté de D3, je vous conseille vivement d'y [jeter un œil](https://d3js.org) pour voir [l'étendue](http://bl.ocks.org/mbostock/4063318) de ce qu'il est [possible de faire](https://www.theguardian.com/info/2017/feb/05/removed-interactive).
+- [A smaller AngularJS](https://rawgithub.com/timruffles/cute-talk/master/index.html#/) : une réécriture des parties intéressantes d'AngularJS (scopes, double binding) pour les rendre plus compréhensibles. À lire : [code source de cette réécriture (moins de 1000 lignes)](http://timruffles.github.io/cute/).
+- [Patterns for Large scale JS](https://speakerdeck.com/kimjoar/patterns-of-large-scale-javascript-applications-1). Comment construire de grosses applications JavaScript testables, scalables, maintenables. Excellent talk. Du même hauteur : [Superhero.js](http://superherojs.com/), une mine de ressources sur JavaScript.
+- [Time-Series Monitoring Graphs with D3 & Ricksha](http://www.slideshare.net/byrichardpowell/timeseries-monitoring-graphs-with-d3-rickshaw). Si vous êtes passés à côté de D3, je vous conseille vivement d'y [jeter un œil](https://d3js.org) pour voir [l'étendue](http://bl.ocks.org/mbostock/4063318) de ce qu'il est [possible de faire](https://www.theguardian.com/info/2017/feb/05/removed-interactive).
 
 Excellente conférence en somme, j'espère pouvoir y retourner en 2015. Merci à la société [Hopwork](http://www.hopwork.com/) qui m'a offert le billet.

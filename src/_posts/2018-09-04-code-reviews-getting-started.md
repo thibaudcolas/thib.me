@@ -29,8 +29,8 @@ Another great resource on the topic is [Code Reviews: Just Do It](https://blog.c
 
 > the average defect detection rate is only 25 percent for unit testing, 35 percent for function testing, and 45 percent for integration testing. In contrast, the average effectiveness of design and code inspections are 55 and 60 percent.
 >
-> In a software-maintenance organization, 55 percent of one-line maintenance changes were in error before code reviews were introduced. After reviews were introduced, only 2 percent of the changes were in error. 
-> 
+> In a software-maintenance organization, 55 percent of one-line maintenance changes were in error before code reviews were introduced. After reviews were introduced, only 2 percent of the changes were in error.
+>
 > When all changes were considered, 95 percent were correct the first time after reviews were introduced. Before reviews were introduced, under 20 percent were correct the first time.
 
 That’s a **5x increase** in the likelihood of individual changes to be correct! There aren’t many development practices which can make that claim.
@@ -39,9 +39,9 @@ That’s a **5x increase** in the likelihood of individual changes to be correct
 
 Jeff Atwood’s article briefly mentions another reason why I think code reviews should be part of everybody’s toolset: you can learn A LOT from them. They are a great place for the team to share their knowledge and learn:
 
-* How other people would approach and solve a given problem.
-* General stylistic or architectural guidelines to follow for the specific project. Those are defined elsewhere (e.g. in a style guide or architecture principles document), but propagate well via code reviews.
-* Neat programming tricks! For example using [list mapping](https://github.com/roughike/inKino/issues/52) (`Array#map`) over a mutable iteration (`Array#forEach` and `Array#push`).
+- How other people would approach and solve a given problem.
+- General stylistic or architectural guidelines to follow for the specific project. Those are defined elsewhere (e.g. in a style guide or architecture principles document), but propagate well via code reviews.
+- Neat programming tricks! For example using [list mapping](https://github.com/roughike/inKino/issues/52) (`Array#map`) over a mutable iteration (`Array#forEach` and `Array#push`).
 
 ![Screenshot of a GitHub code review from @loicteixeira, with an insightful review comment](/images/loicteixeira-code-review.png)
 

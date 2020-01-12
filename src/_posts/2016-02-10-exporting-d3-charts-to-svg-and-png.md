@@ -12,10 +12,10 @@ Lately I've been very interested in the topic of exporting PNG or SVG assets fro
 
 I have been watching for techniques to do this for a while now, and only recently stumbled upon [saveSvgAsPng](https://github.com/exupero/saveSvgAsPng). This takes care of a lot of the heavylifting:
 
-* Getting the chart's SVG from the DOM.
-* Inlining stylesheets into this SVG.
-* Inlining images as well.
-* Putting all of this in an image tag, and passing it through a canvas to end up with a PNG.
+- Getting the chart's SVG from the DOM.
+- Inlining stylesheets into this SVG.
+- Inlining images as well.
+- Putting all of this in an image tag, and passing it through a canvas to end up with a PNG.
 
 While none of those steps taken individually are hard to build, their combination is tricky to get right. The limitation here is that those exports need to be generated on the fly within a browser – this isn't built for a use case where generated images need to be readily avaible for each chart.
 

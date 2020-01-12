@@ -20,10 +20,10 @@ We want to automate the deployment of [Wagtail pull requests](https://github.com
 
 The general workflow is:
 
-* A contributor makes a pull request.
-* We decide to create a preview environment for it, and make a first deployment.
-* The pull request is updated.
-* The new version is deployed to the preview environment.
+- A contributor makes a pull request.
+- We decide to create a preview environment for it, and make a first deployment.
+- The pull request is updated.
+- The new version is deployed to the preview environment.
 
 Ideally this would all happen without any human interaction. Send a PR, a bot creates the environment and comments on the PR with a ready-made link. For now, all of these steps will be manual.
 
@@ -33,9 +33,9 @@ Ideally this would all happen without any human interaction. Send a PR, a bot cr
 
 The basic ingredients for our recipe are:
 
-* Accounts for [GitHub](https://github.com), [Travis](https://travis-ci.org) (use your GitHub account), and [Heroku](https://www.heroku.com/).
-* Command-line clients: [Travis CLI](https://github.com/travis-ci/travis.rb#command-line-client), [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
-* A fork of Wagtail, and bakerydemo
+- Accounts for [GitHub](https://github.com), [Travis](https://travis-ci.org) (use your GitHub account), and [Heroku](https://www.heroku.com/).
+- Command-line clients: [Travis CLI](https://github.com/travis-ci/travis.rb#command-line-client), [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+- A fork of Wagtail, and bakerydemo
 
 ## Creating a deployment-ready preview branch for Wagtail
 
@@ -87,12 +87,12 @@ sudo: false
 language: python
 branches:
   only:
-  # Only build the branches meant for the automated deployment.
-  - bakerydemo-foo
+    # Only build the branches meant for the automated deployment.
+    - bakerydemo-foo
 install:
-- echo 'There is no install step'
+  - echo 'There is no install step'
 script:
-- echo 'Automated deployment to Heroku'
+  - echo 'Automated deployment to Heroku'
 deploy:
   provider: heroku
   api_key:
@@ -186,8 +186,8 @@ A tool like [Danger](http://danger.systems/js/) could have a bot automatically p
 
 ### Leverage higher-level Heroku features
 
-* Review apps https://devcenter.heroku.com/articles/github-integration-review-apps
-* Pipelines https://devcenter.heroku.com/articles/pipelines
+- Review apps https://devcenter.heroku.com/articles/github-integration-review-apps
+- Pipelines https://devcenter.heroku.com/articles/pipelines
 
 ## Onwards
 

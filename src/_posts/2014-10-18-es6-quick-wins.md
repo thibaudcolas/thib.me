@@ -12,10 +12,10 @@ I'm starting to use ES6 in all of my projects, and wanted to show my colleagues 
 
 I voluntarily limited myself to the most basic parts of the new version, parts that are also present in server-side languages like Java or PHP:
 
-* Default parameters
-* Destructuring
-* Maps and Sets
-* Arrow functions
+- Default parameters
+- Destructuring
+- Maps and Sets
+- Arrow functions
 
 We also talked about the great power lying in a good front-end tooling, where adding support for ES6 syntax comes down to adding a [single line](https://www.npmjs.org/package/gulp-traceur) into your build file.
 

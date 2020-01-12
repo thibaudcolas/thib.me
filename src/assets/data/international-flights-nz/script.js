@@ -1,8 +1,7 @@
 (function(MG, $, d3) {
   "use strict";
 
-  d3
-    .csv("/assets/data/international-flights-nz/arrivals.csv")
+  d3.csv("/assets/data/international-flights-nz/arrivals.csv")
     .row(function(row) {
       var ret = {};
 

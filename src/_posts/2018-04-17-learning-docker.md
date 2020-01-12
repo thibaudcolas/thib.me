@@ -16,14 +16,14 @@ This blog post is my overview of the resources I looked at and the things I lear
 
 Starting on a new project, I quickly realised Docker would be a central part of my day to day work. It is used for development environments, CI, staging, as well as production. When learning something as fundamental and ubiquitous, I think it’s quite important to take a step back and note where you’re starting from:
 
-* **What are the fundamental principles?**
-  * For Docker this would be things like [containerisation](https://en.wikipedia.org/wiki/Operating-system-level_virtualization), [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery), and generally the idea of speeding up [release cycles](https://en.wikipedia.org/wiki/Software_release_life_cycle) and facilitating administration by moving to infrastructure as code.
-* **What is the context?**
-  * Here I would think of things like micro-services, and generally the move to cloud platforms.
-* **What do you know already?**
-  * For me, I had some notion of basic docker commands, and I had used Vagrant extensively to achieve similar results as what Docker is for in development.
-* **Where do you want to be?**
-  * Not everyone needs to be an expert at everything. I don’t need to know the details of the consensus algorithm used in Kubernetes clusters (it’s called [Raft](<https://en.wikipedia.org/wiki/Raft_(computer_science)>).
+- **What are the fundamental principles?**
+  - For Docker this would be things like [containerisation](https://en.wikipedia.org/wiki/Operating-system-level_virtualization), [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery), and generally the idea of speeding up [release cycles](https://en.wikipedia.org/wiki/Software_release_life_cycle) and facilitating administration by moving to infrastructure as code.
+- **What is the context?**
+  - Here I would think of things like micro-services, and generally the move to cloud platforms.
+- **What do you know already?**
+  - For me, I had some notion of basic docker commands, and I had used Vagrant extensively to achieve similar results as what Docker is for in development.
+- **Where do you want to be?**
+  - Not everyone needs to be an expert at everything. I don’t need to know the details of the consensus algorithm used in Kubernetes clusters (it’s called [Raft](<https://en.wikipedia.org/wiki/Raft_(computer_science)>).
 
 I quite like to summarise this as a score from 0 to 5, 0 being [“you know nothing Jon Snow” (NSFW)](https://www.youtube.com/watch?v=dQw4w9WgXcQ), and 5 being “complete expert, Ask Me Anything, I can teach anyone about any of this”. You can then assess how you perceive your skills before starting to learn, and decide on how much you want to know.
 
@@ -33,13 +33,13 @@ I gave myself a 1/5 because of my Vagrant knowledge and awareness of the problem
 
 After doing a bit of research, here are the things I decided on to make a good “2 out of 5” baseline:
 
-* Docker principles and vocabulary
-* Docker from scratch, with the official [Get started with Docker](https://docs.docker.com/get-started/)
-* docker-compose, with its [official guide](https://docs.docker.com/compose/)
-* [Docker with Django](https://docs.docker.com/compose/django/) – unfortunately this stops very early, and doesn’t address eg. migrations.
-* Make a few Docker improvements to my current project
-* Discuss Docker pros and cons with friends and coworkers
-* Write this blog post, of course!
+- Docker principles and vocabulary
+- Docker from scratch, with the official [Get started with Docker](https://docs.docker.com/get-started/)
+- docker-compose, with its [official guide](https://docs.docker.com/compose/)
+- [Docker with Django](https://docs.docker.com/compose/django/) – unfortunately this stops very early, and doesn’t address eg. migrations.
+- Make a few Docker improvements to my current project
+- Discuss Docker pros and cons with friends and coworkers
+- Write this blog post, of course!
 
 I had initially identified other areas to study (eg. Docker usage in CI, 12-factor apps with Docker, and image registries) but decided it would be better to start smaller.
 
@@ -61,9 +61,9 @@ I also made a list of resources to look at to achieve the above learning goals, 
 
 Both of those videos were very good to understand the key principles, but I also needed to get up to speed with Linux distributions and general provisiniong tasks – I also decided to spend time reading Dockerfiles (what a great pastime!).
 
-* My new project’s Dockerfile of course
-* But also the official ones, understanding how they are layered – eg. the [official PHP images](https://github.com/docker-library/php/blob/c4f059d09d7eefcb73304d198faa7674610ed810/7.2/stretch/apache/Dockerfile)
-* And this nicely commented Production-minded example from Tobias McNulty: [A Production-ready Dockerfile for Your Python/Django App](https://www.caktusgroup.com/blog/2017/03/14/production-ready-dockerfile-your-python-django-app/)
+- My new project’s Dockerfile of course
+- But also the official ones, understanding how they are layered – eg. the [official PHP images](https://github.com/docker-library/php/blob/c4f059d09d7eefcb73304d198faa7674610ed810/7.2/stretch/apache/Dockerfile)
+- And this nicely commented Production-minded example from Tobias McNulty: [A Production-ready Dockerfile for Your Python/Django App](https://www.caktusgroup.com/blog/2017/03/14/production-ready-dockerfile-your-python-django-app/)
 
 ## What I learned
 
@@ -116,12 +116,12 @@ For docker-compose,
 
 It was also helpful to understand why these are two separate tools, and when you would use one over the other. In short, from the official docs, here are the useful features of docker-compose:
 
-* Multiple isolated environments on a single host.
-  * Use a project name to isolate environments from each others (of the same app, of apps running the same services, etc).
-  * By default, project name is basename of project directory.
-* Preserve volume data when containers are created.
-* Only recreate containers that have changed.
-* Variables and moving a composition between environments.
+- Multiple isolated environments on a single host.
+  - Use a project name to isolate environments from each others (of the same app, of apps running the same services, etc).
+  - By default, project name is basename of project directory.
+- Preserve volume data when containers are created.
+- Only recreate containers that have changed.
+- Variables and moving a composition between environments.
 
 ## Next steps
 
@@ -129,11 +129,11 @@ Up next, getting to 3/5 of course!
 
 Here are my goals for this milestone so far:
 
-* [Node.js debugging with Docker](https://github.com/docker/labs/tree/master/developer-tools/nodejs-debugging)
-* [Porting of existing apps to Docker](https://github.com/docker/labs/tree/master/developer-tools/nodejs/porting/)
-* [Building 12-factor apps with Docker](https://github.com/docker/labs/tree/master/12factor)
-* Porting my Wagtail development environment to Docker
-* Docker in CI
-* Correctly separating between dev setup and production setup
-* Managing images (locally, and with registries)
-* Kubernetes getting started
+- [Node.js debugging with Docker](https://github.com/docker/labs/tree/master/developer-tools/nodejs-debugging)
+- [Porting of existing apps to Docker](https://github.com/docker/labs/tree/master/developer-tools/nodejs/porting/)
+- [Building 12-factor apps with Docker](https://github.com/docker/labs/tree/master/12factor)
+- Porting my Wagtail development environment to Docker
+- Docker in CI
+- Correctly separating between dev setup and production setup
+- Managing images (locally, and with registries)
+- Kubernetes getting started

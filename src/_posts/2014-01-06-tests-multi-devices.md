@@ -32,7 +32,7 @@ Ensemble, les outils disponibles sur le marché remplissent toutes ces caractér
 
 ## BrowSync
 
-Mon outil préféré du moment, [BrowSync](http://browsync.net/) est facile à mettre en place (les appareils peuvent être sur des réseaux différents) et son coût est simple à prendre en compte : 2$ sur l'App Store.
+Mon outil préféré du moment, [BrowSync](http://browsync.net/) est facile à mettre en place (les appareils peuvent être sur des réseaux différents) et son coût est simple à prendre en compte : 2\$ sur l'App Store.
 
 ## Ghostlab
 

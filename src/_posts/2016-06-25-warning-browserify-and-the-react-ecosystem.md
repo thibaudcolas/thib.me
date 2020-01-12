@@ -18,7 +18,7 @@ More info at https://github.com/thibaudcolas/react-router-browserify-build/.
 
 Other related links for future reference:
 
-* https://github.com/ReactJSTraining/history/pull/307
-* https://github.com/reactjs/react-router/pull/3503
-* http://stackoverflow.com/questions/22118915/how-to-turn-on-off-reactjs-development-mode
-* http://dev.topheman.com/make-your-react-production-minified-version-with-webpack/
+- https://github.com/ReactJSTraining/history/pull/307
+- https://github.com/reactjs/react-router/pull/3503
+- http://stackoverflow.com/questions/22118915/how-to-turn-on-off-reactjs-development-mode
+- http://dev.topheman.com/make-your-react-production-minified-version-with-webpack/
