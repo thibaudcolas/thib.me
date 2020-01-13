@@ -3,7 +3,7 @@ layout: post
 title: "Making Wagtail accessible"
 date: 2019-07-25 19:15:08 +0100
 comments: true
-categories: [Wagtail, Accessibility, Tools]
+categories: [Wagtail, Accessibility, Tools, Talks]
 ---
 
 I recently gave a talk at [Wagtail Space US 2019](https://us.wagtail.space/) about making Wagtail accessible – an ongoing effort over the last few months.
