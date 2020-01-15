@@ -6,7 +6,7 @@ comments: true
 categories: [Wagtail, Accessibility, Tools, Talks]
 ---
 
-I recently gave a talk at [Wagtail Space US 2019](https://us.wagtail.space/) about making Wagtail accessible – an ongoing effort over the last few months.
+I recently gave a talk at [Wagtail Space US 2019](https://us.wagtail.space/) about making Wagtail accessible – an ongoing effort over the last few months. This is a blog post version of the same talk.
 
 <!-- more -->
 
