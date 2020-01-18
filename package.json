@@ -11,7 +11,7 @@
     "url": "https://github.com/thibaudcolas/thibaudcolas.git"
   },
   "dependencies": {
-    "jsonresume-theme-eloquent": "4.0.0"
+    "jsonresume-theme-eloquent": "4.1.0"
   },
   "devDependencies": {
     "prettier": "1.19.1",
