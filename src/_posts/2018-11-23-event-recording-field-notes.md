@@ -82,4 +82,4 @@ Something that can drastically improve the quality of the footage is to use a ca
 
 ## Resources
 
-- https://www.vincit.fi/blog/stream-events-vincit/
+- <https://www.vincit.fi/blog/stream-events-vincit/>
