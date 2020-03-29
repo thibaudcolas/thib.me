@@ -45,7 +45,7 @@ On the topic of type checkers, here are the ones I tried:
 - [pytype](https://github.com/google/pytype) from Google.
 - [pyright](https://github.com/Microsoft/pyright) from Microsoft.
 - [Pyre](https://pyre-check.org/) from Facebook.
-- [mypy](http://mypy-lang.org/) from Dropbox (and more).
+- [mypy](https://github.com/python/mypy) from Dropbox (and more).
 
 Out of these four, mypy is by far the most established, having been around the longest, and having the best documentation. Even though I liked Flow from Facebook, Pyre still feels very experimental and poorly documented – as far as I could remember the official docs are the exact same as they were when I checked it out a year ago, and I couldn’t get it to understand type aliases. I also had similar documentation issues with pytype – I could get it working, but couldn’t get it to read my project’s stubs. Finally, pyright gets an honorable mention. Its README clearly states that it’s only a side project (and has been created only a few months ago), but it was very straightforward to set up and get meaningful results with.
 

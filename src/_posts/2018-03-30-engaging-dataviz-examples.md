@@ -21,7 +21,7 @@ The NY Times “You Draw It” format is a great example of how simple interacti
 
 ### Data Gifs / “animated shorts”
 
-- [Lena Groeger – Data Gifs](http://lenagroeger.com/datagifs/)
+- [Lena Groeger – Data Gifs](https://lenagroeger.com/datagifs/)
 - [NY Times — Katie Ledecky's world record 400-meter freestyle swim](https://www.nytimes.com/2016/08/08/sports/olympics/katie-ledecky-400-freestyle-swimming-record.html)
 
 ### Scrollytelling
@@ -35,8 +35,8 @@ Scrollytelling is [unpopular](https://eagereyes.org/blog/2016/the-scrollytelling
 
 In this case, “social media” often means Twitter.
 
-- [Dataveyes – A real-time visualization of the France vs. Switzerland football match](http://dataveyes.com/#!/en/projects/twitter)
-- [Dataviz.love – Hillary vs Trump: The Game of Tweets](http://dataviz.love/2017/02/05/hillary-vs-trump-the-game-of-tweets/)
+- [Dataveyes – A real-time visualization of the France vs. Switzerland football match](https://dataveyes.com/#!/en/projects/twitter)
+- [Dataviz.love – Hillary vs Trump: The Game of Tweets](https://dataviz.love/2017/02/05/hillary-vs-trump-the-game-of-tweets/)
 
 ## Building your own: factors to consider
 

@@ -98,7 +98,7 @@ Here are cool links that are relevant:
 
 - Great reference on alt text best practices, [https://axesslab.com/alt-texts/](https://axesslab.com/alt-texts/)
 - Favourite browser extension for accessibility testing, [https://accessibilityinsights.io](https://accessibilityinsights.io)
-- Favourite basic automated testing, [http://pa11y.org/](http://pa11y.org/)
+- Favourite basic automated testing, [https://pa11y.org/](https://pa11y.org/)
 - Good onboarding resources,
   - For designers, [https://inclusivedesignprinciples.org/](https://inclusivedesignprinciples.org/)
   - For developers & testers, [https://a11yproject.com/](https://a11yproject.com/)

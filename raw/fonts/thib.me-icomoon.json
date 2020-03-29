@@ -13,7 +13,7 @@
 				"designer": "Keyamoon",
 				"designerURL": "http://keyamoon.com",
 				"license": "GPL",
-				"licenseURL": "http://www.gnu.org/licenses/gpl.html"
+				"licenseURL": "https://www.gnu.org/licenses/gpl-3.0.html"
 			},
 			"height": 1024,
 			"prevSize": 32,
@@ -8061,11 +8061,10 @@
 			"id": 2,
 			"metadata": {
 				"name": "Linecons",
-				"url": "http://designmodo.com/linecons-free/",
+				"url": "https://designmodo.com/linecons-free/",
 				"designer": "Sergey Shmidt",
 				"license": "CC BY-SA 3.0",
-				"licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/us/",
-				"designerURL": "http://shmidt.in/"
+				"licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/us/"
 			},
 			"height": 1024,
 			"prevSize": 32,
@@ -8905,11 +8904,9 @@
 			"id": 1,
 			"metadata": {
 				"name": "Eighty Shades",
-				"url": "http://dribbble.com/shots/928458-80-Shades-of-White-Icons",
+				"url": "https://dribbble.com/shots/928458-80-Shades-of-White-Icons",
 				"designer": "Victor Erixon",
-				"designerURL": "http://victorerixon.com/",
-				"license": "Custom",
-				"licenseURL": "http://dribbble.com/shots/928458-80-Shades-of-White-Icons"
+				"license": "Custom"
 			},
 			"height": 1024,
 			"prevSize": 16,
@@ -10303,7 +10300,7 @@
 				"designer": "Daniel Bruce",
 				"designerURL": "http://danielbruce.se/",
 				"license": "CC BY-SA 3.0",
-				"licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/us/"
+				"licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/us/"
 			},
 			"height": 1024,
 			"prevSize": 20,

@@ -24,7 +24,7 @@ There’s good news for accessibility back in the Wagtail 2.6 release notes:
 
 ## Why this matters
 
-For users of assistive technologies, using Wagtail’s admin interface can be [difficult](https://github.com/wagtail/wagtail/issues/4199#issue-288601594). Organisations shopping for a CMS also are very aware of accessibility – because of legislation that mandates compliance with accessibility standards ([NZ](https://www.digital.govt.nz/standards-and-guidance/nz-government-web-standards/web-accessibility-standard-1-0/), [USA](https://www.section508.gov/), [EU](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.327.01.0001.01.ENG), [UK](http://www.legislation.gov.uk/uksi/2018/952/introduction/made), and more).
+For users of assistive technologies, using Wagtail’s admin interface can be [difficult](https://github.com/wagtail/wagtail/issues/4199#issue-288601594). Organisations shopping for a CMS also are very aware of accessibility – because of legislation that mandates compliance with accessibility standards ([NZ](https://www.digital.govt.nz/standards-and-guidance/nz-government-web-standards/web-accessibility-standard-1-0/), [USA](https://www.section508.gov/), [EU](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.327.01.0001.01.ENG), [UK](https://www.legislation.gov.uk/uksi/2018/952/introduction/made), and more).
 
 We also simply want Wagtail users to have a good experience, regardless of how they access Wagtail. And accessibility improvements for people relying on assistive technology usually also lead to usability improvements for everyone.
 
@@ -152,12 +152,12 @@ And last but not least, this year we are organising a [Wagtail sprint focused on
 [2]: https://www.digital.govt.nz/standards-and-guidance/nz-government-web-standards/web-accessibility-standard-1-0/
 [3]: https://www.section508.gov/
 [4]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.327.01.0001.01.ENG
-[5]: http://www.legislation.gov.uk/uksi/2018/952/introduction/made
+[5]: https://www.legislation.gov.uk/uksi/2018/952/introduction/made
 [6]: https://en.wikipedia.org/wiki/Universal_design
 [7]: https://www.w3.org/TR/WCAG21/#conformance-reqs
 [8]: https://www.w3.org/WAI/policies/
 [9]: https://github.com/dequelabs/axe-core
-[10]: http://pa11y.org/
+[10]: https://pa11y.org/
 [11]: https://medium.com/slalom-engineering/a-maturity-model-for-design-systems-93fff522c3ba
 [12]: https://www.deque.com/shift-left/
 
