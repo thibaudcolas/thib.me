@@ -11,16 +11,13 @@
 		<description>
 			<value>Ce jeu de données est un export des données démographiques sur les Français résidant à l'étranger et inscrits au Registre du réseau consulaire</value>
 		</description>
-		<url>
-			<value>http://www.data.gouv.fr/donnees/view/Statistiques-sur-les-Fran%C3%A7ais-r%C3%A9sidant-a-l%E2%80%99%C3%A9tranger-au-31-d%C3%A9cembre-2011-%3A-donn%C3%A9es-d%C3%A9mographiques-551451</value>
-		</url>
 	</info>
 	<provider>
 		<name>
 			<value>Ministère des Affaires Etrangères et Européenne</value>
 		</name>
 		<url>
-			<value>http://www.diplomatie.gouv.fr/</value>
+			<value>https://www.diplomatie.gouv.fr/</value>
 		</url>
 	</provider>
 	<concepts>

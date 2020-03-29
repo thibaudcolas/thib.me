@@ -3,7 +3,7 @@
 
 /* TEAM */
   Webmaster: Thibaud Colas
-  Site: http://thib.me
+  Site: https://thib.me
   Twitter: @thibaud_colas
 
 /* SITE */

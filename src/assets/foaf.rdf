@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
     <rdf:RDF
-        xml:base="http://thib.me/"
+        xml:base="https://thib.me/"
         xmlns:foaf="http://xmlns.com/foaf/0.1/"
         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -24,15 +24,15 @@
         <foaf:family_name>Colas</foaf:family_name>
         <foaf:nick>thibaudcolas</foaf:nick>
         <foaf:mbox_sha1sum>7b6865dfe03fc198ed3d6346afbca5136745fbb7</foaf:mbox_sha1sum>
-        <foaf:homepage rdf:resource="http://thib.me"/>
+        <foaf:homepage rdf:resource="https://thib.me"/>
         <dc:description xml:lang="en">I'm a Full-Stack Web Developer who loves to create great things.</dc:description>
 
-        <foaf:workInfoHomepage rdf:resource="http://www.cgi.com/" rdfs:label="CGI Montpellier"/>
-        <foaf:workInfoHomepage rdf:resource="http://www.lirmm.fr" rdfs:label="LIRMM Research Laboratory"/>
-        <foaf:workInfoHomepage rdf:resource="http://www.cornelius-communication.com" rdfs:label="Cornelius Communication"/>
+        <foaf:workInfoHomepage rdf:resource="https://www.cgi.com/" rdfs:label="CGI Montpellier"/>
+        <foaf:workInfoHomepage rdf:resource="https://www.lirmm.fr/" rdfs:label="LIRMM Research Laboratory"/>
+        <foaf:workInfoHomepage rdf:resource="https://www.cornelius-communication.com" rdfs:label="Cornelius Communication"/>
         <foaf:schoolHomepage rdf:resource="https://en.wikipedia.org/wiki/University_of_Montpellier" rdfs:label="Montpellier University"/>
-        <foaf:schoolHomepage rdf:resource="http://www.u-psud.fr" rdfs:label="Paris 11 University"/>
-        <foaf:schoolHomepage rdf:resource="http://www.iedparis8.net" rdfs:label="Paris 8 University IED"/>
+        <foaf:schoolHomepage rdf:resource="https://www.universite-paris-saclay.fr/" rdfs:label="Paris 11 University"/>
+        <foaf:schoolHomepage rdf:resource="https://www.iedparis8.net" rdfs:label="Paris 8 University IED"/>
 
         <foaf:interest rdfs:label="Music" dc:title="Music" rdf:resource="http://dbpedia.org/resource/Music"/>
         <foaf:interest rdfs:label="RDF" dc:title="RDF" rdf:resource="http://dbpedia.org/resource/Resource_Description_Framework"/>
@@ -47,7 +47,7 @@
         <foaf:interest rdfs:label="Ergonomics" dc:title="Ergonomics" rdf:resource="http://dbpedia.org/resource/Ergonomics"/>
 
         <foaf:account>
-            <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-github">
+            <foaf:OnlineAccount rdf:about="https://thib.me/foaf.rdf#me-github">
                 <foaf:name>GitHub</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://github.com/"/>
                 <foaf:page rdf:resource="https://github.com/thibaudcolas"/>
@@ -56,7 +56,7 @@
         </foaf:account>
 
         <foaf:account>
-            <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-twitter">
+            <foaf:OnlineAccount rdf:about="https://thib.me/foaf.rdf#me-twitter">
                 <foaf:name>Twitter</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://twitter.com/"/>
                 <foaf:page rdf:resource="https://twitter.com/thibaud_colas"/>
@@ -65,7 +65,7 @@
         </foaf:account>
 
         <foaf:account>
-            <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-soundcloud">
+            <foaf:OnlineAccount rdf:about="https://thib.me/foaf.rdf#me-soundcloud">
                 <foaf:name>SoundCloud</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://soundcloud.com/"/>
                 <foaf:page rdf:resource="https://soundcloud.com/thibaudcolas"/>
@@ -74,7 +74,7 @@
         </foaf:account>
 
         <foaf:account>
-            <foaf:OnlineAccount rdf:about="http://thib.me/foaf.rdf#me-npm">
+            <foaf:OnlineAccount rdf:about="https://thib.me/foaf.rdf#me-npm">
                 <foaf:name>npm</foaf:name>
                 <foaf:accountServiceHomepage rdf:resource="https://www.npmjs.com/"/>
                 <foaf:page rdf:resource="https://www.npmjs.com/~thibaudcolas"/>
@@ -88,14 +88,6 @@
           <foaf:Person>
             <foaf:name>Francois Scharffe</foaf:name>
             <foaf:mbox_sha1sum>c97eff23dff98add7b642c67eb982ee655071b43</foaf:mbox_sha1sum>
-            <rdfs:seeAlso rdf:resource="http://scharffe.fr/foaf.rdff"/>
-          </foaf:Person>
-        </foaf:knows>
-
-        <foaf:knows>
-          <foaf:Person>
-            <foaf:name>Julien Plu</foaf:name>
-            <rdfs:seeAlso rdf:resource="http://jplu.developpez.com/julien.html"/>
           </foaf:Person>
         </foaf:knows>
 
@@ -103,7 +95,7 @@
           <foaf:Person>
             <foaf:name>Luca Costabello</foaf:name>
             <foaf:mbox_sha1sum>18004aecd48f272f2232c70c0fe60c476e3bf133</foaf:mbox_sha1sum>
-            <rdfs:seeAlso rdf:resource="http://www-sop.inria.fr/members/Luca.Costabello/foaf.rdf"/>
+            <rdfs:seeAlso rdf:resource="https://www-sop.inria.fr/members/Luca.Costabello/foaf.rdf"/>
           </foaf:Person>
         </foaf:knows>
 
@@ -111,12 +103,12 @@
           <foaf:Person>
             <foaf:name>Fabien Gandon</foaf:name>
             <foaf:mbox_sha1sum>ec48328fdad40f2ec20d994df1d9ed32cd96b879</foaf:mbox_sha1sum>
-            <rdfs:seeAlso rdf:resource="http://ns.inria.fr/fabien.gandon/foaf.rdf"/>
+            <rdfs:seeAlso rdf:resource="https://ns.inria.fr/fabien.gandon/foaf.rdf"/>
           </foaf:Person>
         </foaf:knows>
 
         <foaf:currentProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#zori">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#zori">
                 <foaf:name>Zori</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/FlipFlopWeekly/zori"/>
                 <dc:description xml:lang="en">A real-time link sharer using Firebase as its backend and AngularJS on the frontend</dc:description>
@@ -125,7 +117,7 @@
         </foaf:currentProject>
 
         <foaf:currentProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#octoblog">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#octoblog">
                 <foaf:name>Octoblog</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/thibaudcolas/octoblog"/>
                 <dc:description xml:lang="en">My personal blog. Contains notes, Thoughts and Open-source software. Built with Octopress.</dc:description>
@@ -134,7 +126,7 @@
         </foaf:currentProject>
 
         <foaf:currentProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#browser-games">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#browser-games">
                 <foaf:name>Browser Games</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/thibaudcolas/browser-games"/>
                 <dc:description xml:lang="en">Little HTML5 / Canvas / WebGL game experiments</dc:description>
@@ -143,7 +135,7 @@
         </foaf:currentProject>
 
         <foaf:currentProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#php-url-shortener">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#php-url-shortener">
                 <foaf:name>URL Shortener</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/thibaudcolas/php-url-shortener"/>
                 <dc:description xml:lang="en">A simple PHP URL Shortener which tries to stay as DRY as possible while adding neat little features</dc:description>
@@ -152,7 +144,7 @@
         </foaf:currentProject>
 
         <foaf:currentProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#thibaudcolas">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#thibaudcolas">
                 <foaf:name>Personal Website</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/thibaudcolas/thibaudcolas"/>
                 <dc:description xml:lang="en">Personal website</dc:description>
@@ -161,7 +153,7 @@
         </foaf:currentProject>
 
         <foaf:pastProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#bitstarter">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#bitstarter">
                 <foaf:name>BitStarter</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/thibaudcolas/bitstarter"/>
                 <dc:description xml:lang="en">A Kickstarter clone built in Node.js and Express using Bitcoin (Coinbase API), hosted on Amazon EC2</dc:description>
@@ -170,7 +162,7 @@
         </foaf:pastProject>
 
         <foaf:pastProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#icopter">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#icopter">
                 <foaf:name>iCopter</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/thibaudcolas/icopter"/>
                 <dc:description xml:lang="en">An iPhone game built with Open GL and FMOD Designer</dc:description>
@@ -179,7 +171,7 @@
         </foaf:pastProject>
 
         <foaf:pastProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#datalift-datacube">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#datalift-datacube">
                 <foaf:name>Datalift DataCube modules</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/Thibau/"/>
                 <dc:description xml:lang="en">Transformation and visualization of rdf:DataCube datasets and structures</dc:description>
@@ -188,16 +180,16 @@
         </foaf:pastProject>
 
         <foaf:pastProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#linked-lifted">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#linked-lifted">
                 <foaf:name>Datalift RIA creation</foaf:name>
-                <foaf:homepage rdf:resource="http://thibaudcolas.github.io/linked-lifted"/>
+                <foaf:homepage rdf:resource="https://thibaudcolas.github.io/linked-lifted/"/>
                 <dc:description xml:lang="en">Creation, enhancement and development of Rich Internet Applications on the Datalift platform</dc:description>
                 <dc:description xml:lang="fr">Création, amélioration et développement d'applications en ligne riches sur la plateforme Datalift</dc:description>
             </foaf:Project>
         </foaf:pastProject>
 
         <foaf:pastProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#stringtouri">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#stringtouri">
                 <foaf:name>StringToURI</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/thibaudcolas/stringtouri"/>
                 <dc:description xml:lang="en">StringToURI is a simple interlink generation framework written in Java with Sesame</dc:description>
@@ -206,25 +198,23 @@
         </foaf:pastProject>
 
         <foaf:pastProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#botanique">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#botanique">
                 <foaf:name>Botanique</foaf:name>
-                <foaf:homepage rdf:resource="http://bda.cartman34.fr"/>
                 <dc:description xml:lang="en">Botanique is a thesaurus built upon an object oriented database with PostgreSQL</dc:description>
                 <dc:description xml:lang="fr">Botanique est un thésaurus construit avec une base de données orientée objet et PostgreSQL</dc:description>
             </foaf:Project>
         </foaf:pastProject>
 
         <foaf:pastProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#zeppelin">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#zeppelin">
                 <foaf:name>Zeppelin</foaf:name>
-                <foaf:homepage rdf:resource="http://www.trgdy.com/zeppelin/www"/>
                 <dc:description xml:lang="en">Zeppelin, a ezComponents-based ORM / CMS / MVC based blog engine</dc:description>
                 <dc:description xml:lang="fr">Zeppelin, un moteur de blog basé sur ezComponents (ORM, CMS, MVC)</dc:description>
             </foaf:Project>
         </foaf:pastProject>
 
         <foaf:pastProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#clisp-vm">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#clisp-vm">
                 <foaf:name>CLISP compiler and VM</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/thibaudcolas/clisp-compiler-vm"/>
                 <dc:description xml:lang="en">A LISP to ASM compiler and virtual machine</dc:description>
@@ -233,7 +223,7 @@
         </foaf:pastProject>
 
         <foaf:pastProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#metaprogramming">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#metaprogramming">
                 <foaf:name>Metaprogramming</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/thibaudcolas/metaprogramming"/>
                 <dc:description xml:lang="en">Experiments around metaprogramming in multiple programming languages</dc:description>
@@ -242,7 +232,7 @@
         </foaf:pastProject>
 
         <foaf:pastProject>
-            <foaf:Project rdf:about="http://thib.me/foaf.rdf#uri-encoder">
+            <foaf:Project rdf:about="https://thib.me/foaf.rdf#uri-encoder">
                 <foaf:name>URI Encoder</foaf:name>
                 <foaf:homepage rdf:resource="https://github.com/thibaudcolas/uriencoder"/>
                 <dc:description xml:lang="en">A simple Mac OS X Dashboard widget which URI-encodes/decodes text</dc:description>

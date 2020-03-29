@@ -3,9 +3,9 @@
 
   var map = L.map("map");
 
-  var osmTiles = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+  var osmTiles = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
   var osmAttrib =
-    'Map data © <a href="http://openstreetmap.org">OSM</a> contributors';
+    'Map data © <a href="https://www.openstreetmap.org/">OSM</a> contributors';
 
   L.tileLayer(osmTiles, {
     minZoom: 8,

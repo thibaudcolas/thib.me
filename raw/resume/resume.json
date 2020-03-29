@@ -70,7 +70,7 @@
     {
       "company": "CGI",
       "position": "Lead Web Software Engineer",
-      "website": "http://www.cgi.com/",
+      "website": "https://www.cgi.com/",
       "startDate": "2014-01-15",
       "endDate": "2014-11-01",
       "summary": "Team Lead during design and development of an e-commerce portal (six developers, 500 man-days). Consulting and technical expertise activities at all stages of the project.",
@@ -87,7 +87,7 @@
     {
       "company": "CGI",
       "position": "Web Software Engineer",
-      "website": "http://www.cgi.com/",
+      "website": "https://www.cgi.com/",
       "startDate": "2013-03-01",
       "endDate": "2014-01-15",
       "summary": "Web Application Development — Participation to PHP development projects with the CGI Web Factory, from design to maintenance.",
@@ -113,7 +113,7 @@
     {
       "company": "LIRMM",
       "position": "Web Developer",
-      "website": "http://datalift.org/",
+      "website": "https://www.w3.org/2001/sw/wiki/Datalift",
       "startDate": "2012-06-01",
       "endDate": "2012-11-30",
       "summary": "Design and development of new features for Datalift, as part of an internship. Datalift is a linked data publication platform for the Semantic Web. Data Visualization and transformation in the SemWeb spirit.",
@@ -125,7 +125,7 @@
     {
       "company": "Cornelius Communication",
       "position": "Webmaster",
-      "website": "http://www.cornelius-communication.com/",
+      "website": "https://www.cornelius-communication.com/",
       "startDate": "2010-04-01",
       "endDate": "2010-06-30",
       "summary": "Integration, Development and Webmastering as part of an internship for the end of the DUT.\n \nContact with clients and teamwork with the Webmaster and designers.",

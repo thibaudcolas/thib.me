@@ -1,4 +1,4 @@
-# [thib.me](http://thib.me) [![Build Status](https://travis-ci.org/thibaudcolas/thibaudcolas.svg?branch=master)](https://travis-ci.org/thibaudcolas/thibaudcolas)
+# [thib.me](https://thib.me) [![Build Status](https://travis-ci.org/thibaudcolas/thibaudcolas.svg?branch=master)](https://travis-ci.org/thibaudcolas/thibaudcolas)
 
 > My personal website's repository.
 
@@ -17,7 +17,7 @@ $ npm test
 
 ### Favicons
 
-Generated with [http://realfavicongenerator.net/](http://realfavicongenerator.net/) and [http://www.xiconeditor.com/](http://www.xiconeditor.com/)
+Generated with [https://realfavicongenerator.net/](https://realfavicongenerator.net/) and xiconeditor.
 
 ### Color theme
 
@@ -25,11 +25,11 @@ Built with [Adobe Kuler](https://color.adobe.com/create/color-wheel/?base=2&rule
 
 ### Icon font
 
-Custom font built with [IcoMoon](http://icomoon.io).
+Custom font built with [IcoMoon](https://icomoon.io).
 
 ### Web font
 
-I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
+I use Fira Sans by Mozilla.
 
 ## Browser Support
 
@@ -47,7 +47,6 @@ I use [Fira Sans](http://www.carrois.com/fira-3-1/) by Mozilla.
 
 Static code analysis:
 
-- http://www.jshint.com/
 - https://github.com/jscs-dev/node-jscs
 - https://github.com/causes/scss-lint
 
@@ -72,11 +71,11 @@ SEO analysis:
 
 Performance:
 
-- http://gtmetrix.com/
-- http://webpagetest.org/
+- https://gtmetrix.com/
+- https://webpagetest.org/
 - https://developers.google.com/speed/pagespeed/insights/
 
 Accessibility:
 
-- http://tenon.io/
+- https://tenon.io/
 - https://leaverou.github.io/contrast-ratio/

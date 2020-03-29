@@ -21,7 +21,7 @@ description: Logbook of a software engineer navigating web development
 keywords: thibaud colas thibaudcolas blog software engineer web developer javascript
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://thib.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://thib.me" # the base hostname & protocol for your site, e.g. https://example.com
 
 date_format: "%F %R"
 
@@ -41,7 +41,7 @@ email:
 # Build settings
 # theme: minima
 
-# If publishing to a subdirectory as in http://site.com/project set 'root: /project'
+# If publishing to a subdirectory as in https://site.com/project set 'root: /project'
 root: /
 permalink: /:title
 source: src

@@ -1,5 +1,5 @@
 /*
- Leaflet, a JavaScript library for mobile-friendly interactive maps. http://leafletjs.com
+ Leaflet, a JavaScript library for mobile-friendly interactive maps. https://leafletjs.com
  (c) 2010-2013, Vladimir Agafonkin
  (c) 2010-2011, CloudMade
 */
@@ -5387,7 +5387,7 @@
       options: {
         position: "bottomright",
         prefix:
-          '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>',
+          '<a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>',
       },
       initialize: function(t) {
         o.setOptions(this, t), (this._attributions = {});
