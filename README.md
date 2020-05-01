@@ -1,4 +1,4 @@
-# [thib.me](https://thib.me) [![Build Status](https://travis-ci.org/thibaudcolas/thibaudcolas.svg?branch=master)](https://travis-ci.org/thibaudcolas/thibaudcolas)
+# [thib.me](https://thib.me) [![Build Status](https://travis-ci.com/thibaudcolas/thibaudcolas.svg?branch=master)](https://travis-ci.com/thibaudcolas/thibaudcolas)
 
 > My personal website's repository.
 
