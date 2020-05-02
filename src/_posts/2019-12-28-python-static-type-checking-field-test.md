@@ -28,6 +28,7 @@ The first thing I learned while investigating static typing more thoroughly was 
 - [PEP 484 -- Type annotations for function parameters and return values](https://www.python.org/dev/peps/pep-0484/) (Python 3.5)
 - [PEP 526 -- Syntax for Variable Annotations](https://www.python.org/dev/peps/pep-0526/) (Python 3.6)
 - [PEP 561 -- Distributing and Packaging Type Information](https://www.python.org/dev/peps/pep-0561/) (Python 3.7)
+- [PEP 563 -- Postponed Evaluation of Annotations](https://www.python.org/dev/peps/pep-0563/) (Python 3.7)
 - [PEP 586 -- Literal Types](https://www.python.org/dev/peps/pep-0586/) (Python 3.8)
 - [PEP 589 -- TypedDict: Type Hints for Dictionaries with a Fixed Set of Keys](https://www.python.org/dev/peps/pep-0589/) (Python 3.8)
 - [PEP 544 -- Protocols: Structural subtyping (static duck typing)](https://www.python.org/dev/peps/pep-0544/) (Python 3.8)
