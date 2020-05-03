@@ -3,7 +3,7 @@ layout: post
 title: "Accessibility audits: getting started"
 date: 2020-05-01 19:15:08 +0100
 comments: true
-categories: [Accessibility, Tools, Automation]
+categories: [Accessibility, Tools, Automation, Methodology]
 ---
 
 Here are my recipes to deliver accessibility audits for web projects, combining multiple layers of automation with manual testing to get the best of both worlds.
