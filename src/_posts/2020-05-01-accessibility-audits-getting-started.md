@@ -106,12 +106,14 @@ Manual tests are the most time-consuming and require the most expertise of commo
 - Keyboard navigation
   - Can the whole page be used with a keyboard only?
   - Are there focus traps?
+  - Are there parts of the page where focus should be trapped but isn’t?
   - Are the tab stops logical?
-- Touch and click navigation
-  - Are pointer targets big enough?
-  - Are there areas of the page that are hard to scroll?
+- Pointer (touch and click) navigation
+  - Are pointer targets big enough, or not too close to one another?
+  - Are there areas of the page that are hard to scroll (especially on mobile)?
+  - Are there areas on the page that require horizontal scrolling (especially on mobile)?
 
-All of that, and of course, screen reader usage - different types of navigation, how text is read, what is and isn’t announced. With multiple screen readers if possible – [my go-to](https://docs.wagtail.io/en/v2.8.1/contributing/developing.html?highlight=accessibility#accessibility-targets) being VoiceOver on Mac with Safari, NVDA on Windows with Firefox, and VoiceOver on iOS.
+All of that, and of course, screen reader usage: different types of navigation, how text is read, what is and isn’t announced. With multiple screen readers if possible – [my go-to](https://docs.wagtail.io/en/v2.8.1/contributing/developing.html?highlight=accessibility#accessibility-targets) being VoiceOver on Mac with Safari, NVDA on Windows with Firefox, and VoiceOver on iOS.
 
 ### Expert-level accessibility compliance testing
 
