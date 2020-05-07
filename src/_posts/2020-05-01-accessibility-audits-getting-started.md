@@ -23,7 +23,7 @@ It’s worth pointing out early that while some parts of my approach are very be
 If you don’t know where to start – here are the easiest first steps:
 
 - If you’re familiar with command-line tools and want something quick, grab [Pa11y](https://github.com/pa11y/pa11y) and point it at pages.
-- If you want to analyse a page more thorouhgly, use [Accessibility Insights](https://accessibilityinsights.io/).
+- If you want to analyse a page more thoroughly, use [Accessibility Insights](https://accessibilityinsights.io/).
 
 ## Intermediate-level auditing
 
