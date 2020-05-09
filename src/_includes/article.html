@@ -3,6 +3,7 @@
     {% if index %}
       <h1 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
     {% else %}
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="{{ site.repository }}/edit/{{ site.branch }}/{{ site.source }}/{{ page.path }}">Edit</a>
       <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
     {% endif %}
     {% unless page.meta == false %}

@@ -135,6 +135,7 @@ article + article {
       }
     }
   }
+
   a[rel="full-article"] {
     background: darken($main-bg, 5);
     display: inline-block;
@@ -142,7 +143,7 @@ article + article {
     margin-right: 0.5em;
     text-decoration: none;
     color: mix($text-color, $text-color-light);
-    @extend .serif;
+    font-family: $serif;
     transition: background-color 0.5s;
     &:hover {
       background: $link-color-hover;
@@ -150,6 +151,12 @@ article + article {
       color: $main-bg;
     }
   }
+
+  .edit-link {
+    float: right;
+    margin-top: -2em;
+  }
+
   footer {
     @extend .sans;
     margin-top: 1em;
