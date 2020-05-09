@@ -49,7 +49,7 @@ I also do some form of accessibility auditing of code manually, by searching the
 After looking at the source, the next step is to look at pages in "bulk" mode – run automated tools that scan as much of the site as possible. My preference is for:
 
 - The [V.Nu](https://validator.github.io/validator/) HTML5 validator. Either the Docker image, or the pre-compiled binaries for the CLI `vnu <url>`. Generally I will either do this for the whole sitemap, or a subset of URLs
-- [pa11y-ci](https://github.com/pa11y/pa11y-ci), or Pa11y directly, for the whole sitemap or a subet of URLs if there is a need for further automation. `pa11y-ci --config <my config> --sitemap <project sitemap> --json > sitemap-report.json`.
+- [pa11y-ci](https://github.com/pa11y/pa11y-ci), or Pa11y directly, for the whole sitemap or a subset of URLs if there is a need for further automation. `pa11y-ci --config <my config> --sitemap <project sitemap> --json > sitemap-report.json`.
 
 Pa11y is worth a special mention here. Pa11y is a wrapper of [Axe](https://github.com/dequelabs/axe-core) and [HTML_CodeSniffer](https://github.com/squizlabs/HTML_CodeSniffer), which do the actual automated checks. It allows those tools to be run in bulk mode, over many pages, or at different states of a page by interacting with it.
 
