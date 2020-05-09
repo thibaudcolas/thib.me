@@ -1,18 +1,14 @@
 # [thib.me](https://thib.me) [![Build Status](https://travis-ci.com/thibaudcolas/thibaudcolas.svg?branch=master)](https://travis-ci.com/thibaudcolas/thibaudcolas)
 
-> My personal website's repository.
-
 ## Tooling
 
 ```sh
-$ # Install all development tools
-$ npm install
-$ # Watch For Changes & Automatically Refresh Across Devices
-$ npm start
-$ # Build & Optimize
-$ npm run build
-$ # Run tests & linting
-$ npm test
+git clone git@github.com:thibaudcolas/thibaudcolas.git
+cd thibaudcolas
+rbenv version
+gem install bundler
+bundle install
+npm install
 ```
 
 ### Favicons

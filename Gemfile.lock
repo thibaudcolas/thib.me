@@ -9,6 +9,8 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
+    faraday (1.0.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.12.2)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
@@ -31,6 +33,9 @@ GEM
       terminal-table (~> 1.8)
     jekyll-feed (0.13.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-github-metadata (2.13.0)
+      jekyll (>= 3.4, < 5.0)
+      octokit (~> 4.0, != 4.4.0)
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
@@ -54,6 +59,10 @@ GEM
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     multi_json (1.13.1)
+    multipart-post (2.1.1)
+    octokit (4.18.0)
+      faraday (>= 0.9)
+      sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.4)
@@ -67,6 +76,9 @@ GEM
     safe_yaml (1.0.5)
     sassc (2.3.0)
       ffi (~> 1.9)
+    sawyer (0.8.2)
+      addressable (>= 2.3.5)
+      faraday (> 0.8, < 2.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     unicode-display_width (1.7.0)
@@ -77,10 +89,11 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.0.0)
   jekyll-feed (~> 0.6)
+  jekyll-github-metadata (~> 2.13.0)
   jekyll-paginate (~> 1.1.0)
   jekyll-redirect-from (~> 0.16.0)
   minima (~> 2.0)
   pygments.rb (~> 1.2.0)
 
 BUNDLED WITH
-   1.16.1
+   2.1.4
