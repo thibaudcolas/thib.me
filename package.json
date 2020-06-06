@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "prettier": "2.0.5",
-    "resume-cli": "1.2.7",
+    "resume-cli": "1.2.8",
     "write-good": "1.0.2"
   },
   "scripts": {
