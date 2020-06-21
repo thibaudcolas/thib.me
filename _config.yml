@@ -50,6 +50,7 @@ destination: dist
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-sitemap
 code_dir: downloads/code
 category_dir: categories
 markdown: kramdown
