@@ -1,0 +1,44 @@
+---
+layout: page
+title: Blog Categories
+footer: false
+---
+
+<h2>All categories</h2>
+{% assign categories_list = site.categories %}
+<p>
+{% for category in categories_list %}
+  <span>
+    {%- if categories_list.first[0] == null -%}
+      <a class="category" href="#{{ category | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+    {%- else -%}
+      <a class="category" href="#{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
+    {%- endif -%}
+    <span>, </span>
+  </span>
+{% endfor %}
+</p>
+{% assign categories_list = nil %}
+
+<div id="blog-archives">
+  {% assign posts = site.posts %}
+  {% for category in site.categories %}
+    <h2 id="{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }}</h2>
+    {% assign pages_list = category[1] %}
+    {% for post in pages_list %}
+      <article>
+        {% capture category %}{{ post.categories | size }}{% endcapture %}
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+        <footer>
+          <span class="categories">posted in
+            <span>
+                {% for category in post.categories %}
+                  <a class="category" href="/{{ site.category_dir }}/{{ category | downcase | url_encode }}/">{{ category }}</a>{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            </span>
+          </span>
+        </footer>
+      </article>
+    {% endfor %}
+  {% endfor %}
+</div>
