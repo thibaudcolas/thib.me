@@ -1,5 +1,1 @@
-- [Interview exercises for web developers](https://thib.me/interview-exercises-for-web-developers)
-- [Procuring accessibility audits](https://thib.me/procuring-accessibility-audits)
-- [Welcome to curlylint.org!](https://www.curlylint.org/blog/welcome-to-curlylint)
-- [Timing attacks, everywhere](https://thib.me/timing-attacks-everywhere)
-- [Accessibility audits: getting started](https://torchbox.com/blog/accessibility-audits/)
+[Timing attacks, everywhere](https://thib.me/timing-attacks-everywhere) | [Welcome to curlylint.org!](https://www.curlylint.org/blog/welcome-to-curlylint) | [Accessibility audits: getting started](https://torchbox.com/blog/accessibility-audits/)
