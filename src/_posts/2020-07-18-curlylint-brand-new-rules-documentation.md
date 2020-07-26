@@ -15,7 +15,7 @@ Have I mentioned [how important I think it is for a linter to have great docs](/
 
 Up until now the rules’ documentation was pretty sad, essentially limited to what could fit in the project’s README. Now… take a look:
 
-[![Screen capture of the image_alt rule’s documentation](/images/blog/curlylint-brand-new-rules-documentation.png)](https://www.curlylint.org/docs/rules/image_alt)
+[![Screen capture of the image_alt rule’s documentation](/images/blog/curlylint-brand-new-rules-documentation/new-rules-docs.png)](https://www.curlylint.org/docs/rules/image_alt)
 
 - The rule’s different configuration options are clearly visible, copy-pasteable, each with a description.
 - Cases where the rule check "succeeds" are well documented, alongside a comment, and matching configuration.
