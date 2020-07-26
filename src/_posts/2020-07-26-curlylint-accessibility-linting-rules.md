@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Curlylint: Accessibility linting rules"
-date: 2020-07-25 03:22:49 +0100
+date: 2020-07-26 03:22:49 +0100
 comments: true
 categories: [Accessibility, Curlylint]
 canonical: https://www.curlylint.org/blog/accessibility-linting-rules
