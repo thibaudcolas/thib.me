@@ -16,7 +16,7 @@
   "devDependencies": {
     "prettier": "2.0.5",
     "resume-cli": "1.2.8",
-    "write-good": "1.0.2"
+    "write-good": "1.0.3"
   },
   "scripts": {
     "start": "bundle exec jekyll serve",
