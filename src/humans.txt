@@ -2,8 +2,8 @@
 /* humanstxt.org */
 
 /* TEAM */
-  Webmaster: Thibaud Colas
   Site: https://thib.me
+  Author: Thibaud Colas
   Twitter: @thibaud_colas
 
 /* SITE */

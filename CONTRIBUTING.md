@@ -1,4 +1,4 @@
-# [thib.me](https://thib.me) [![Build Status](https://travis-ci.com/thibaudcolas/thibaudcolas.svg?branch=master)](https://travis-ci.com/thibaudcolas/thibaudcolas)
+# [thib.me](https://thib.me) [![Build Status](https://travis-ci.com/thibaudcolas/thibaudcolas.svg?branch=main)](https://travis-ci.com/thibaudcolas/thibaudcolas)
 
 ## Tooling
 
