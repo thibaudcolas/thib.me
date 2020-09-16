@@ -1,0 +1,37 @@
+[tool.curlylint]
+include = '\.(html)$'
+exclude = '''
+(
+  /(
+      \.eggs           # exclude a few common directories in the root of the project
+    | \.git
+    | node_modules
+    | dist
+    | raw
+  )/
+  | webpack-stats.html # also separately exclude a file named webpack-stats.html in the root of the project
+)
+'''
+
+[tool.curlylint.rules]
+# All role attributes must be valid.
+# See https://www.curlylint.org/docs/rules/aria_role.
+aria_role = true
+# Forms cannot be rendered with as_table, as_ul, or as_p
+# See https://www.curlylint.org/docs/rules/django_forms_rendering.
+django_forms_rendering = true
+# The `lang` attribute must be present.
+# See https://www.curlylint.org/docs/rules/html_has_lang.
+html_has_lang = true
+# The `alt` attribute must be present.
+# See https://www.curlylint.org/docs/rules/image_alt.
+image_alt = true
+# `user-scalable=no` must not be used, and `maximum-scale` should be 2 or above.
+# See https://www.curlylint.org/docs/rules/meta_viewport.
+meta_viewport = true
+# The `autofocus` attribute must not be used.
+# See https://www.curlylint.org/docs/rules/no_autofocus.
+no_autofocus = true
+# Avoid positive `tabindex` values, change the order of elements on the page instead.
+# See https://www.curlylint.org/docs/rules/tabindex_no_positive.
+tabindex_no_positive = true
