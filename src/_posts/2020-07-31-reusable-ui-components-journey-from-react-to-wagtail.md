@@ -11,7 +11,7 @@ This is Ben Dickinson and I’s joint [Wagtail Space US 2020](https://us.wagtail
 
 <!-- more -->
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4iTr72qXGXo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/isrOufI7TKc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Slides: [Wagtail Space US 2020 - Reusable UI components – A journey from React to Wagtail](https://docs.google.com/presentation/d/1pZAbunn0Ci8B9NR0mS5taOPe7BMdAiDrKNIcd9xBWO4/edit)
 
