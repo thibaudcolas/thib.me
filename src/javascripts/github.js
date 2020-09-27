@@ -47,7 +47,6 @@ var github = (function() {
       var container = document.querySelector(options.target);
       var user = container.dataset.user;
       var count = parseInt(container.dataset.count, 10);
-      console.log(user, count);
 
       jsonp(
         "https://api.github.com/users/" + user + "/repos?sort=pushed",

@@ -8,7 +8,6 @@ article {
     padding-top: 2em;
     padding-bottom: 1em;
     margin-bottom: 1em;
-    background: $img-border bottom left repeat-x;
     h1 {
       margin: 0;
       a {
@@ -32,12 +31,11 @@ article {
     @media only screen and (min-width: 768px) {
       margin-bottom: 1.5em;
       padding-bottom: 1em;
-      background: $img-border bottom left repeat-x;
     }
   }
   h2 {
     padding-top: 0.8em;
-    background: $img-border top left repeat-x;
+    border-top: 1px dashed $type-border;
   }
   .entry-content & h2:first-child,
   header + h2 {
@@ -51,7 +49,7 @@ article {
     padding-top: 0.5em;
     margin-bottom: 1em;
     padding-bottom: 1em;
-    background: $img-border bottom left repeat-x;
+    border-bottom: 1px dashed $type-border;
     font-size: 2em;
     font-style: italic;
     line-height: 1.3em;
@@ -111,7 +109,7 @@ article {
 }
 article + article {
   .blog-index & {
-    background: $img-border top left repeat-x;
+    border-top: 1px dashed $type-border;
   }
 }
 #content .blog-index {
@@ -173,7 +171,7 @@ article + article {
   text-align: center;
   font-size: 0.95em;
   position: relative;
-  background: $img-border top left repeat-x;
+  border-top: 1px dashed $type-border;
   padding: {
     top: 1.5em;
     bottom: 1.5em;
