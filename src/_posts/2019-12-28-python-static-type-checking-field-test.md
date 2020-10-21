@@ -14,7 +14,7 @@ A few years ago, with the release of [Pyre](https://pyre-check.org/) from Facebo
 
 After my experiments, I was really hoping I could heartily recommend using type annotations and static type checkers for most projects in most cases. In reality it feels like it’s too early still, unless:
 
-- You’re already sold on the idea of static typing, and you already know type systems from other langues – you’ll be able to navigate the messy Python landscape.
+- You’re already sold on the idea of static typing, and you already know type systems from other languages – you’ll be able to navigate the messy Python landscape.
 - You only work on projects that are kept up-to-date with Python releases – so Python 3.8+ only.
 - You maintain large codebases, and have a large enough team to invest into tooling.
 
