@@ -14,7 +14,7 @@
     "jsonresume-theme-eloquent": "4.1.0"
   },
   "devDependencies": {
-    "prettier": "2.2.0",
+    "prettier": "2.2.1",
     "resume-cli": "2.2.3",
     "write-good": "1.0.3"
   },
