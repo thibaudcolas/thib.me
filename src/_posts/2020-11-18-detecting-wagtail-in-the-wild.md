@@ -62,6 +62,8 @@ The regex could be more complex and precise but this wouldn’t actually change 
 
 With Wappalyzer in particular, they also offer additional services based on anonymous data reporting from their detection tools. Here is their page that aggregates Wagtail usage data: [Websites using Wagtail](https://www.wappalyzer.com/technologies/cms/wagtail/).
 
+If you’re unsure which of these to use – the Wappalyzer checks are the strictest, so best used if you don’t want to manually confirm the results by inspecting the pages’ HTML.
+
 ## Real-world data
 
 With this regex in place, I tried it out on a few lists of websites. See [detect-wagtail/docs/analysis](https://github.com/thibaudcolas/detect-wagtail/tree/main/docs/analysis) for the full details.
