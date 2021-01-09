@@ -55,12 +55,10 @@ GEM
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
-    multi_json (1.13.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
-    pygments.rb (1.2.1)
-      multi_json (>= 1.0.0)
+    pygments.rb (2.0.0)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -83,7 +81,7 @@ DEPENDENCIES
   jekyll-redirect-from (~> 0.16.0)
   jekyll-sitemap (~> 1.4.0)
   minima (~> 2.0)
-  pygments.rb (~> 1.2.0)
+  pygments.rb (~> 2.0.0)
 
 BUNDLED WITH
    2.1.4
