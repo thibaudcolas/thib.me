@@ -3,7 +3,6 @@ layout: post
 title: "Accessibility wins for Django projects"
 date: 2020-09-15 23:15:22 +0100
 comments: true
-draft: true
 categories: [Accessibility, Django, Wagtail, Tools]
 redirect_from:
   - /django-wins

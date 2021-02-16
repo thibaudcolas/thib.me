@@ -3,7 +3,6 @@ layout: post
 title: "Reusable UI components – A journey from React to Wagtail"
 date: 2020-07-31 02:15:22 +0100
 comments: true
-draft: true
 categories: [Accessibility, Wagtail, Tools]
 ---
 

@@ -3,7 +3,6 @@ layout: post
 title: "Detecting Wagtail in the wild"
 date: 2020-11-18 16:15:22 +0100
 comments: true
-draft: true
 categories: [Automation, Wagtail, Experiments]
 ---
 

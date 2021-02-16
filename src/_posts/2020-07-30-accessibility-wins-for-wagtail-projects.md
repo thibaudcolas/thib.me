@@ -3,7 +3,6 @@ layout: post
 title: "Accessibility wins for Wagtail projects"
 date: 2020-07-30 02:15:22 +0100
 comments: true
-draft: true
 categories: [Accessibility, Wagtail, Tools]
 redirect_from:
   - /wagtail-wins

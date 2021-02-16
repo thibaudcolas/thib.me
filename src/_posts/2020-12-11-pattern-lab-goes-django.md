@@ -3,7 +3,6 @@ layout: post
 title: "Pattern Lab goes Django"
 date: 2020-12-11 12:52:22 +0000
 comments: true
-draft: true
 categories: [Django, Wagtail, Project]
 canonical: https://torchbox.com/blog/reusable-ui-components-pattern-lab-goes-django/
 ---
@@ -47,8 +46,8 @@ This is now possible thanks to the new [SECTIONS](https://torchbox.github.io/dj
 
 This new management command might or might not be relevant to you but it's worth highlighting use cases this is intended to support:
 
--   [Static exports of the pattern library](https://torchbox.github.io/django-pattern-library/guides/static-site-export/), for those cases where you want a simple way to share patterns publicly or host them alongside documentation, rather than alongside your site.
--   [Automated tests of UI components](https://torchbox.github.io/django-pattern-library/guides/automated-tests/), particularly in continuous integration, where it might be problematic for you to get a Django server up and running depending on the project's dependencies.
+- [Static exports of the pattern library](https://torchbox.github.io/django-pattern-library/guides/static-site-export/), for those cases where you want a simple way to share patterns publicly or host them alongside documentation, rather than alongside your site.
+- [Automated tests of UI components](https://torchbox.github.io/django-pattern-library/guides/automated-tests/), particularly in continuous integration, where it might be problematic for you to get a Django server up and running depending on the project's dependencies.
 
 Combined with tools like [Pa11y and pa11y-ci](https://pa11y.org/), this makes it much simpler to run site-wide automated accessibility tests for all of your project's templates, making the most of the pattern library's tightly controlled mock data:
 
