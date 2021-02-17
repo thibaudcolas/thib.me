@@ -34,19 +34,19 @@ So – yes, there is no compliance requirement. But it’s no less relevant of a
 
 There are very few unfortunately.
 
-- <https://www.w3.org/WAI/atag/report-tool/> is the official ATAG report generator.
-- <https://github.com/w3c/wai-authoring-tools> is a very promising way to explore how different tools comply with ATAG, unfortunately the project seems to have stalled halfway through.
+- [ATAG report tool](https://www.w3.org/WAI/atag/report-tool/) is the official ATAG report generator.
+- [WAI Authoring Tools](https://github.com/w3c/wai-authoring-tools) is a very promising way to explore how different tools comply with ATAG, unfortunately the project seems to have stalled halfway through.
   - In particular, this project has a list of [accessibility features in authoring tools](https://wai-authoring-tools.netlify.app/authoring-tools/selecting#features) which makes for a very good introduction to ATAG.
-- <https://www.w3.org/WAI/about/projects/wai-guide/> is a W3C project co-funded by the EU’s Horizon 2020 program, that might produce more resources in the future.
+- [WAI Guide](https://www.w3.org/WAI/about/projects/wai-guide/) is a W3C project co-funded by the EU’s Horizon 2020 program, that might produce more resources in the future.
 
 ## Research
 
 There are a few research teams working on authoring tools’ accessibility. Here is the work that stood out the most for me.
 
-- <https://accessibilitycluster.com/> is another EU research project currently under way to look at accessibility in CMSes. There are interesting resources available from the project pilot, unfortunately doesn’t go very far beyond what ATAG already states:
-  - <https://www.funka.com/en/projekt/we4authors/we4authors-main-activities-and-results/workshops-on-accessible-content-management-systems/workshops/>
-  - <https://www.funka.com/en/projekt/we4authors/we4authors-main-activities-and-results/[…]elines-for-the-cms-community-suppliers-and-public-governments/>
-  - Report for CMS tools in particular (but could apply to any kind of web publishing): <https://www.funka.com/contentassets/c43f6521e7354c9a8f82e62402f10aad/guidelines_for_authoring_tools_producers.pdf>
+- [Accessibility Cluster](https://accessibilitycluster.com/) is another EU research project currently under way to look at accessibility in CMSes. There are interesting resources available from the project pilot, unfortunately doesn’t go very far beyond what ATAG already states:
+  - [Workshops results](https://www.funka.com/en/projekt/we4authors/we4authors-main-activities-and-results/workshops-on-accessible-content-management-systems/workshops/)
+  - [Guidelines for stakeholders](https://www.funka.com/en/projekt/we4authors/we4authors-main-activities-and-results/accessibility-guidelines-for-the-cms-community-suppliers-and-public-governments/)
+  - Report for CMS tools in particular (but could apply to any kind of web publishing): [Guidelines for authoring tools producers](https://www.funka.com/contentassets/c43f6521e7354c9a8f82e62402f10aad/guidelines_for_authoring_tools_producers.pdf)
 - [Method for accessibility assessment of online content editors (preprint)](https://www.researchgate.net/profile/Tania_Acosta4/publication/322250312_Method_for_Accessibility_Assessment_of_Online_Content_Editors/links/5d6600faa6fdccc32cd67dbd/Method-for-Accessibility-Assessment-of-Online-Content-Editors.pdf) covers which WCAG guidelines should likely be considered when evaluating ATAG for a CMS.
 
 ## Drupal and WordPress
