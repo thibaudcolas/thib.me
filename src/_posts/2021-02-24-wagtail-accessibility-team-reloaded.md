@@ -6,7 +6,7 @@ comments: true
 categories: [Accessibility, Wagtail, Community]
 ---
 
-In [June last year](https://wagtail.io/blog/announcing-wagtail-sub-teams/), we started Wagtail’s dedicated [accessibility team](https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility). 6 months on, now is a good time for us to reflect on our work to date, and go on the lookout for new contributors!
+After [6 months of operations](https://wagtail.io/blog/announcing-wagtail-sub-teams/), we reflect on the progress our [accessibility team](https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility) has made, and go on the lookout for new contributors.
 
 <!-- more -->
 
@@ -23,7 +23,7 @@ Along the way, we also kept working on the [SVG icons](https://github.com/wagtai
 
 We ran a short [retrospective](https://github.com/wagtail/wagtail/wiki/Accessibility-team#2021-01-22----team-retrospective) to reflect on the team’s way of working over the last 6 months.
 
-- There were a total of 5 people involved at some point over the 6 months (Scott, Andreas, Nick, Helen, and Thibaud), but only 2 people attending each meeting on average. Not as much as we’d ideally want to.
+- There were a total of 5 people involved at some point over the 6 months (Scott, Andreas, Nick, Helen, and Thibaud), but only 2 people attended each meeting on average. Not as much as we’d ideally want to.
 - We met 9 times, for 30min each, scheduled once every two weeks.
 - Overall we’re happy with what we’ve achieved and how the team works.
 - We were keen to do more automated tests and manual auditing but didn't get around to it.
@@ -40,6 +40,13 @@ And we’ll also investigate having **automated accessibility tests built into W
 
 ---
 
-**More importantly, we’ll also want the team to be bigger!**
+### We also want to involve more people
 
-There’s only so much we can do with two to three people actively involved – we want a team twice that size! All are welcome regardless of skill level or background, and the time commitment is very reasonable, so if you’re keen to get involved do [reach out to us on Slack](https://github.com/wagtail/wagtail/wiki/Slack) in #accessibility.
+There’s only so much we can do with two to three of us actively involved – ideally we’d want a team twice that size! All are welcome regardless of skill level or background, and the time commitment is very reasonable. We’re particularly keen to work with people who:
+
+- Have personal experience of access and functional needs, or who are regular users of assistive technologies.
+- Work on User Experience, design, or content – and can help us understand the needs of our users.
+
+And of course web developers who want to have a practical impact on making the web more accessible!
+
+Does this sound like your kind of jam? If you’re keen to learn more, [reach out to us on Slack](https://github.com/wagtail/wagtail/wiki/Slack) in #accessibility.
