@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Curlylint: Quality-of-life improvements"
-date: 2020-07-26 03:22:49 +0100
+date: 2021-04-25 10:22:49 +0100
 comments: true
 categories: [Curlylint, Tools, Python]
 canonical: https://www.curlylint.org/blog/quality-of-life-improvements
