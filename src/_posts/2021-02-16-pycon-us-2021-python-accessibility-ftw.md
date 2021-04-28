@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PyCon US 2021: Improving web accessibility with Python"
-date: 2021-05-16 13:22:49 +0100
+date: 2021-02-16 13:22:49 +0100
 comments: true
 categories: [Curlylint, Accessibility, Talks]
 redirect_from:
