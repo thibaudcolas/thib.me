@@ -13,4 +13,4 @@ Talk at PyCon US 2021.
 <!-- more -->
 
 - [Google Slides: PyCon US 2021 | Building accessibility into open-source projects](https://docs.google.com/presentation/d/1qjHKEWoExYY-fG4qbRBQP_EN5fxs_8z7csVIpy9bWlg/edit)
-- [PDF: PyCon US 2021 | Building accessibility into open-source projects](https://www.example.com/)
+- [PDF: PyCon US 2021 | Building accessibility into open-source projects](https://drive.google.com/file/d/1hN554kNicuEvBcWK_VsiRazBTfbBGt6X/view?usp=sharing)
