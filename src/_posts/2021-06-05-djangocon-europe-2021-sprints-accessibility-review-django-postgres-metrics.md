@@ -77,7 +77,7 @@ Methodology:
 
 Illustration:
 
-![Screenshot of four highlighted rows in Django Postgres Metrics in dark mode. The rows aren’t readable](/images/blog/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics/)
+![Screenshot of four highlighted rows in Django Postgres Metrics in dark mode. The rows aren’t readable](/images/blog/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics/django-postgres-metrics-dark-mode.png)
 
 ### RTL support [00:19:20](https://www.youtube.com/watch?v=8pegTdRaUDg&t=1160s)
 
