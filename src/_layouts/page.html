@@ -6,6 +6,7 @@ layout: default
 <article>
   {% if page.title %}
   <header>
+    <a class="edit-link" aria-label="Edit this page on GitHub" href="{{ site.repository }}/edit/{{ site.branch }}/{{ site.source }}/{{ page.path }}">Edit</a>
     <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
     {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
   </header>
