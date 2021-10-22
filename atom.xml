@@ -4,7 +4,7 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2021-10-22T17:09:26+01:00</updated>
+  <updated>2021-10-22T16:11:42+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
@@ -15,7 +15,7 @@
   <entry>
     <title type="html"><![CDATA[DjangoCon US 2021: Kontrasto – improving accessibility with Python]]></title>
     <link href="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python"/>
-    <updated>2021-10-22T10:01:32+01:00</updated>
+    <updated>2021-10-22T09:01:32+00:00</updated>
     <id>https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python</id>
     <content type="html"><![CDATA[<p>Slides for my <a href="https://2021.djangocon.us/talks/kontrasto-improving-accessibility-with/">DjangoCon US 2021 talk</a> on <a href="https://kontrasto.netlify.app/">Kontrasto</a>.</p>
 
@@ -32,7 +32,7 @@
   <entry>
     <title type="html"><![CDATA[WCAG 2.2: new accessibility guidelines on the way]]></title>
     <link href="https://thib.me/wcag-22-accessibility-guidelines"/>
-    <updated>2021-08-13T17:52:22+01:00</updated>
+    <updated>2021-08-13T16:52:22+00:00</updated>
     <id>https://thib.me/wcag-22-accessibility-guidelines</id>
     <content type="html"><![CDATA[<p>In web accessibility testing, WCAG 2.1 is the gold standard. But talk to experts – and they’ll be quick to tell you it’s a very low baseline. WCAG 2.2’s latest draft introduces new criteria, relevant for all websites.</p>
 
@@ -97,7 +97,7 @@
   <entry>
     <title type="html"><![CDATA[DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania]]></title>
     <link href="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania"/>
-    <updated>2021-06-07T19:21:03+01:00</updated>
+    <updated>2021-06-07T18:21:03+00:00</updated>
     <id>https://thib.me/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania</id>
     <content type="html"><![CDATA[<p>Here are the results of an accessibility audit I did for the <a href="https://github.com/PyConLT/pyconlt.github.io/pull/12">PyCon Lithuania website</a>, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: <a href="https://www.youtube.com/watch?v=NH4VWUguxUw">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania’s website</a>.</p>
 
@@ -136,7 +136,7 @@
   <entry>
     <title type="html"><![CDATA[DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics]]></title>
     <link href="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics"/>
-    <updated>2021-06-05T22:07:49+01:00</updated>
+    <updated>2021-06-05T21:07:49+00:00</updated>
     <id>https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics</id>
     <content type="html"><![CDATA[<p>Here are the results of an accessibility audit I did for <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/issues/57">Django Postgres Metrics</a>, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: <a href="https://youtu.be/8pegTdRaUDg">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>.</p>
 
@@ -310,7 +310,7 @@
   <entry>
     <title type="html"><![CDATA[DjangoCon Europe 2021 field notes]]></title>
     <link href="https://thib.me/djangocon-europe-field-notes"/>
-    <updated>2021-06-04T07:43:49+01:00</updated>
+    <updated>2021-06-04T06:43:49+00:00</updated>
     <id>https://thib.me/djangocon-europe-field-notes</id>
     <content type="html"><![CDATA[<p>Notes from the conference.</p>
 
@@ -393,7 +393,7 @@
   <entry>
     <title type="html"><![CDATA[PyCon US 2021: Web Accessibility ♥ Python]]></title>
     <link href="https://thib.me/pycon-us-2021-python-accessibility-ftw"/>
-    <updated>2021-05-13T07:43:49+01:00</updated>
+    <updated>2021-05-13T06:43:49+00:00</updated>
     <id>https://thib.me/pycon-us-2021-python-accessibility-ftw</id>
     <content type="html"><![CDATA[<p>This is a poster presentation for <a href="https://us.pycon.org/2021/">PyCon US 2021</a>, which covers two separate projects:</p>
 
@@ -416,7 +416,7 @@
   <entry>
     <title type="html"><![CDATA[PyCon US 2021: Building accessibility into open-source projects]]></title>
     <link href="https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects"/>
-    <updated>2021-05-09T16:03:21+01:00</updated>
+    <updated>2021-05-09T15:03:21+00:00</updated>
     <id>https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects</id>
     <content type="html"><![CDATA[<p>This is a lightning talk I gave at PyCon US 2021’s <a href="https://us.pycon.org/2021/summits/maintainers/">Maintainers Summit</a>, intended for an audience of project maintainers / open-source contributors.</p>
 
@@ -552,7 +552,7 @@ so yeah there is legislation in the US, in the EU, and really all around the wor
   <entry>
     <title type="html"><![CDATA[Curlylint: Quality-of-life improvements]]></title>
     <link href="https://thib.me/curlylint-quality-of-life-improvements"/>
-    <updated>2021-04-25T10:22:49+01:00</updated>
+    <updated>2021-04-25T09:22:49+00:00</updated>
     <id>https://thib.me/curlylint-quality-of-life-improvements</id>
     <content type="html"><![CDATA[<p>Curlylint v0.13.0 is out. It’s a relatively minor release, but comes with a few nice-to-haves for users, and a lot of behind-the-scenes project changes.</p>
 
@@ -1068,7 +1068,7 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
   <entry>
     <title type="html"><![CDATA[Accessibility wins for Django projects]]></title>
     <link href="https://thib.me/accessibility-wins-for-django-projects"/>
-    <updated>2020-09-15T23:15:22+01:00</updated>
+    <updated>2020-09-15T22:15:22+00:00</updated>
     <id>https://thib.me/accessibility-wins-for-django-projects</id>
     <content type="html"><![CDATA[<p>Talk at DjangoCon EU 2020</p>
 
@@ -1084,7 +1084,7 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
   <entry>
     <title type="html"><![CDATA[Testing accessibility in Continuous Integration with Pa11y and beyond]]></title>
     <link href="https://thib.me/testing-accessibility-in-ci-with-pa11y-and-beyond"/>
-    <updated>2020-08-13T22:21:08+01:00</updated>
+    <updated>2020-08-13T21:21:08+00:00</updated>
     <id>https://thib.me/testing-accessibility-in-ci-with-pa11y-and-beyond</id>
     <content type="html"><![CDATA[<p>Here are tools I recommend to test for accessibility issues in continuous integration, where automation is the only option, and reliability is paramount.</p>
 
@@ -1128,7 +1128,7 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
   <entry>
     <title type="html"><![CDATA[Reusable UI components – A journey from React to Wagtail]]></title>
     <link href="https://thib.me/reusable-ui-components-journey-from-react-to-wagtail"/>
-    <updated>2020-07-31T02:15:22+01:00</updated>
+    <updated>2020-07-31T01:15:22+00:00</updated>
     <id>https://thib.me/reusable-ui-components-journey-from-react-to-wagtail</id>
     <content type="html"><![CDATA[<p>This is Ben Dickinson and I’s joint <a href="https://us.wagtail.space/">Wagtail Space US 2020</a> talk about pattern libraries at Torchbox, introducing <a href="https://github.com/torchbox/django-pattern-library">django-pattern-library</a>.</p>
 
@@ -1282,7 +1282,7 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
   <entry>
     <title type="html"><![CDATA[Accessibility wins for Wagtail projects]]></title>
     <link href="https://thib.me/accessibility-wins-for-wagtail-projects"/>
-    <updated>2020-07-30T02:15:22+01:00</updated>
+    <updated>2020-07-30T01:15:22+00:00</updated>
     <id>https://thib.me/accessibility-wins-for-wagtail-projects</id>
     <content type="html"><![CDATA[<p>I recently gave a talk at <a href="https://us.wagtail.space/">Wagtail Space US 2020</a> about the accessibility of Wagtail websites – following on last year’s talk about the <a href="/making-wagtail-accessible">accessibility of the Wagtail admin</a>.</p>
 
@@ -1521,7 +1521,7 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
   <entry>
     <title type="html"><![CDATA[Curlylint: Accessibility linting rules]]></title>
     <link href="https://thib.me/curlylint-accessibility-linting-rules"/>
-    <updated>2020-07-26T03:22:49+01:00</updated>
+    <updated>2020-07-26T02:22:49+00:00</updated>
     <id>https://thib.me/curlylint-accessibility-linting-rules</id>
     <content type="html"><![CDATA[<p>Curlylint now comes with 7 accessibility-related rules, ready to use in HTML templates. See <a href="https://www.curlylint.org/docs/rules/all">All rules</a> for details about the individual rules.</p>
 
@@ -1567,7 +1567,7 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
   <entry>
     <title type="html"><![CDATA[Curlylint: Brand new rules documentation]]></title>
     <link href="https://thib.me/curlylint-brand-new-rules-documentation"/>
-    <updated>2020-07-18T23:05:21+01:00</updated>
+    <updated>2020-07-18T22:05:21+00:00</updated>
     <id>https://thib.me/curlylint-brand-new-rules-documentation</id>
     <content type="html"><![CDATA[<p>Have I mentioned <a href="/welcome-to-curlylint">how important I think it is for a linter to have great docs</a>? Well, now is the time for Curlylint to live up to this!</p>
 
@@ -1683,7 +1683,7 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
   <entry>
     <title type="html"><![CDATA[Interview exercises for web developers]]></title>
     <link href="https://thib.me/interview-exercises-for-web-developers"/>
-    <updated>2020-07-05T23:05:21+01:00</updated>
+    <updated>2020-07-05T22:05:21+00:00</updated>
     <id>https://thib.me/interview-exercises-for-web-developers</id>
     <content type="html"><![CDATA[<p>Here are a couple of interview exercises I like to give, which are relatively open to varied approaches.</p>
 
