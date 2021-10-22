@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>[WIP] The future of (rich text) authoring experiences in Wagtail - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Here is a talk I gave at Wagtail Space 2019. The video recording is available on YouTube. The talk was 90% demos so the purpose of this presentation is to sh...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.draftail.org/blog/2019/03/15/wip-the-future-of-rich-text-authoring-experiences-in-wagtail">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.draftail.org/blog/2019/03/15/wip-the-future-of-rich-text-authoring-experiences-in-wagtail">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="[WIP] The future of (rich text) authoring experiences in Wagtail">
+  <meta property="og:description" content="Here is a talk I gave at Wagtail Space 2019. The video recording is available on YouTube. The talk was 90% demos so the purpose of this presentation is to sh...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2019-03-15-wip-the-future-of-rich-text-authoring-experiences-in-wagtail.md">Edit</a>
+      <h1 class="entry-title">[WIP] The future of (rich text) authoring experiences in Wagtail</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2019-03-15T14:10:22+00:00" pubdate data-updated="true">2019-03-15 14:10</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Here is a talk I gave at <a href="https://www.wagtail.space/2019">Wagtail Space 2019</a>. The video recording is available <a href="https://www.youtube.com/watch?v=Fp8nClLoQC0">on YouTube</a>. The talk was 90% demos so the purpose of this presentation is to share the links.</p>
+
+<!-- more -->
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Fp8nClLoQC0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<hr />
+
+<blockquote>
+  <p>👉 <a href="https://demo.draftail.org/storybook/?path=/story/plugins--linkify">Wagtail Space Storybook demos</a></p>
+</blockquote>
+
+<h2 id="wip-the-future-of-rich-text-authoring-experiences-in-wagtail">[WIP] The future of (rich text) authoring experiences in Wagtail</h2>
+
+<p>Hi 👋, I’m Thibaud! Web developer <a href="https://github.com/torchbox">@Torchbox</a> since 2 weeks ago. Member of Wagtail’s core dev team since 2 years ago.</p>
+
+<p>Today’s talk covers what I did before joining Torchbox. Some context:</p>
+
+<ul>
+  <li>Draftail started in 2016 <a href="https://github.com/springload">@Springload</a>
+    <ul>
+      <li>We were frustrated with the previous editor’s UI, and lack of extensibility</li>
+      <li>We wanted guarantees that rich text content is free of unwanted “copy-paste” formatting</li>
+      <li>We needed to introduce new, custom formats to support our client’s sites.</li>
+    </ul>
+  </li>
+  <li>Draftail got integrated into Wagtail core a year ago, february 2018</li>
+  <li>All of what we will look at as part of this talk was done over the last year, made possible thanks to the people who <a href="https://www.patreon.com/thibaud_colas">supported me on Patreon</a></li>
+  <li>Last year’s talk: <a href="https://www.draftail.org/blog/2018/03/16/introducing-draft-js-in-wagtail">Introducing Draft.js in Wagtail – Wagtail Space 2018</a></li>
+  <li>Today’s talk: the missing “UI/UX blog post” that was supposed to be on its way a year ago.</li>
+</ul>
+
+<h3 id="why-this-matters">Why this matters</h3>
+
+<p>More context - motivations:</p>
+
+<ul>
+  <li>IMO, If your site’s content sucks, the whole site suffers. No matter how good the design or features are.</li>
+  <li>To me, this makes the content authoring UI the most important feature of a CMS.</li>
+  <li>If the UI is lacking, content authors will work outside of the CMS and only reluctantly use it for publication.
+    <ul>
+      <li>“Copy-paste from Word” workflow is a symptom (but should be supported nonetheless).</li>
+    </ul>
+  </li>
+  <li>Other tools are innovating a lot with authoring experiences – <a href="https://paper.dropbox.com">Dropbox Paper</a>, Slack, <a href="https://www.notion.so/">Notion</a>
+    <ul>
+      <li><a href="https://wordpress.org/gutenberg/">Wordpress Gutenberg editor</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="demos-">Demos! 🌈</h3>
+
+<ul>
+  <li>Demoing things outside of Wagtail, but all of those examples can also work within Wagtail <code class="language-plaintext highlighter-rouge">*</code>
+    <ul>
+      <li><em><code class="language-plaintext highlighter-rouge">*</code> As soon as my <a href="https://github.com/wagtail/wagtail/pull/5117">PR</a> is merged and released</em> 😅</li>
+    </ul>
+  </li>
+  <li>Proof-of-concepts meant to demonstrate the capabilities of Draftail, and stress test its APIs. Not refined designs.</li>
+</ul>
+
+<blockquote>
+  <p>👉 <a href="https://demo.draftail.org/storybook/?path=/story/plugins--linkify">Wagtail Space Storybook demos</a></p>
+</blockquote>
+
+<ul>
+  <li>Linkify for intuitively creating links</li>
+  <li>Single-line inputs for headings</li>
+  <li>Markdown shortcuts for power users</li>
+  <li>Emojis!</li>
+  <li>Action lists as an example of a custom block</li>
+  <li>Slash commands for editing actions beyond rich text</li>
+  <li>Custom toolbars, blurring the line with StreamField</li>
+</ul>
+
+<h3 id="what-next">What next</h3>
+
+<ul>
+  <li>Polish and integrate some or all of those changes in Wagtail, out of the box or as plug and play extensions</li>
+  <li>Do more documentation, tutorials, so people can leverage those APIs to experiment with their own UIs</li>
+</ul>
+
+<p>How you can help:</p>
+
+<ul>
+  <li>Talk to your content editors, do UX research with them, pass on the feedback
+    <ul>
+      <li>Have them try out those features, inside and <a href="https://demo.draftail.org/storybook/?path=/story/plugins--linkify">outside</a> of Wagtail</li>
+    </ul>
+  </li>
+  <li>Try out the APIs to build your own extensions, and share pain points / missed opportunities</li>
+  <li>Get involved with a future rich text task force?</li>
+</ul>
+
+<p>Thank you!</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2019-03-15T14:10:22+00:00" pubdate data-updated="true">2019-03-15 14:10</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/draftjs/">Draftjs</a>,
+    
+      <a class="category" href="/categories/draftail/">Draftail</a>,
+    
+      <a class="category" href="/categories/talks/">Talks</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/patreon-time-out" title="Previous Post: Patreon: time out!">&laquo; Patreon: time out!</a>
+      
+      
+        <a class="basic-alignment right" href="/accessibility-workshop-at-pixel-pioneers-2019" title="Next Post: Accessibility workshop @ Pixel Pioneers 2019">Accessibility workshop @ Pixel Pioneers 2019 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

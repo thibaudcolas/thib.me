@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Curlylint: Brand new rules documentation - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Have I mentioned how important I think it is for a linter to have great docs? Well, now is the time for Curlylint to live up to this!">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.curlylint.org/blog/brand-new-rules-documentation">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.curlylint.org/blog/brand-new-rules-documentation">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Curlylint: Brand new rules documentation">
+  <meta property="og:description" content="Have I mentioned how important I think it is for a linter to have great docs? Well, now is the time for Curlylint to live up to this!">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-07-18-curlylint-brand-new-rules-documentation.md">Edit</a>
+      <h1 class="entry-title">Curlylint: Brand new rules documentation</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-07-18T23:05:21+01:00" pubdate data-updated="true">2020-07-18 23:05</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Have I mentioned <a href="/welcome-to-curlylint">how important I think it is for a linter to have great docs</a>? Well, now is the time for Curlylint to live up to this!</p>
+
+<!-- more -->
+
+<h2 id="new-documentation-format-for-rules">New documentation format for rules</h2>
+
+<p>Up until now the rules’ documentation was pretty sad, essentially limited to what could fit in the project’s README. Now… take a look:</p>
+
+<p><a href="https://www.curlylint.org/docs/rules/image_alt"><img src="/images/blog/curlylint-brand-new-rules-documentation/new-rules-docs.png" alt="Screen capture of the image_alt rule’s documentation" /></a></p>
+
+<ul>
+  <li>The rule’s different configuration options are clearly visible, copy-pasteable, each with a description.</li>
+  <li>Cases where the rule check “succeeds” are well documented, alongside a comment, and matching configuration.</li>
+  <li>Same for problematic cases, which even show the actual error message!</li>
+  <li>All of this is toggle-able between the different configuration formats supported by Curlylint!</li>
+  <li>There are follow-up resources available for developers who want more information about the rule.</li>
+</ul>
+
+<p>This feels like a pretty big step up compared to the previous documentation, and should hopefully make it as easy as possible for people to start using the linter for their templates.</p>
+
+<h2 id="how-this-works">How this works</h2>
+
+<p>The majority of the rules’ documentation is generated from their metadata:</p>
+
+<h3 id="json-schema">JSON Schema</h3>
+
+<p>The configuration options are all defined with <a href="https://json-schema.org/">JSON Schema</a>.Currently this is only used to generate the documentation, but in the future I would also like to make this validate configurations as Curlylint runs.</p>
+
+<p>JSON Schema is particularly good for this because it has built-in support for the schema to be self-documenting – adding titles, descriptions, and examples, which are all used to generate the documentation. Here is the schema of the <a href="https://www.curlylint.org/docs/rules/html_has_lang"><code class="language-plaintext highlighter-rouge">html_has_lang</code></a> rule as an example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"const"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The `lang` attribute must be present."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"examples"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">true</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The `lang` attribute must match the configured language tag."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"examples"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"en-US"</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="test-cases">Test cases</h3>
+
+<p>The success / fail sections are simply coming from the project’s test suite! I always prefer to invest time writing extensive unit tests for projects of this kind. Some of the test cases simply have a flag marking them as “documentation examples”:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check lang is present"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html lang=</span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">&gt;&lt;/html&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"example"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"config"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"output"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It’s the same story for “fail” cases, where the annotations are simply generated from the expected output (issues):</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Missing"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html&gt;&lt;/html&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"example"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"config"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"output"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test.html"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"column"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"line"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"html_has_lang"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The `&lt;html&gt;` tag should have a `lang` attribute with a valid value, describing the main language of the page"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="mdx">MDX</h3>
+
+<p>All of this comes together with <a href="https://mdxjs.com/">MDX</a>, a Markdown-inspired syntax which makes it possible to use JSX directly inside documents, thereby making it possible to use React components, like the language tabs and code snippets with annotations:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Tabs</span>
+  <span class="na">groupId</span><span class="p">=</span><span class="s">"config-language"</span>
+  <span class="na">defaultValue</span><span class="p">=</span><span class="s">"toml"</span>
+  <span class="na">values</span><span class="p">=</span><span class="si">{</span><span class="p">[</span>
+    <span class="p">{</span> <span class="na">label</span><span class="p">:</span> <span class="dl">"</span><span class="s2">TOML</span><span class="dl">"</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="dl">"</span><span class="s2">toml</span><span class="dl">"</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">label</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Shell</span><span class="dl">"</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="dl">"</span><span class="s2">shell</span><span class="dl">"</span> <span class="p">},</span>
+  <span class="p">]</span><span class="si">}</span>
+<span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nc">TabItem</span> <span class="na">value</span><span class="p">=</span><span class="s">"toml"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nc">CodeSnippet</span>
+      <span class="na">snippet</span><span class="p">=</span><span class="si">{</span><span class="s2">`# The </span><span class="se">\`</span><span class="s2">alt</span><span class="se">\`</span><span class="s2"> attribute must be present.\nimage_alt = true`</span><span class="si">}</span>
+      <span class="na">annotations</span><span class="p">=</span><span class="si">{</span><span class="p">[]</span><span class="si">}</span>
+      <span class="na">lang</span><span class="p">=</span><span class="s">"toml"</span>
+    <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nc">TabItem</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nc">TabItem</span> <span class="na">value</span><span class="p">=</span><span class="s">"shell"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nc">CodeSnippet</span>
+      <span class="na">snippet</span><span class="p">=</span><span class="si">{</span><span class="s2">`# The </span><span class="se">\`</span><span class="s2">alt</span><span class="se">\`</span><span class="s2"> attribute must be present.\ncurlylint --rule 'image_alt: true' .`</span><span class="si">}</span>
+      <span class="na">annotations</span><span class="p">=</span><span class="si">{</span><span class="p">[]</span><span class="si">}</span>
+      <span class="na">lang</span><span class="p">=</span><span class="s">"shell"</span>
+    <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nc">TabItem</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nc">Tabs</span><span class="p">&gt;</span>
+</code></pre></div></div>
+
+<p>Docusaurus supports MDX out of the box, and provides the “Tabs” components. The CodeSnippet component is originally from Docusaurus but has been customized to support basic annotations.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-07-18T23:05:21+01:00" pubdate data-updated="true">2020-07-18 23:05</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/tools/">Tools</a>,
+    
+      <a class="category" href="/categories/curlylint/">Curlylint</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/interview-exercises-for-web-developers" title="Previous Post: Interview exercises for web developers">&laquo; Interview exercises for web developers</a>
+      
+      
+        <a class="basic-alignment right" href="/curlylint-accessibility-linting-rules" title="Next Post: Curlylint: Accessibility linting rules">Curlylint: Accessibility linting rules &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

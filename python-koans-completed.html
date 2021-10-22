@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Python Koans Completed - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="I recently discovered the concept of programming Koans: series of TDD-style tutorials to learn parts of a programming language. I’ve been willing to get bett...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/python-koans-completed">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/python-koans-completed">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Python Koans Completed">
+  <meta property="og:description" content="I recently discovered the concept of programming Koans: series of TDD-style tutorials to learn parts of a programming language. I’ve been willing to get bett...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2014-12-22-python-koans-completed.md">Edit</a>
+      <h1 class="entry-title">Python Koans Completed</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2014-12-22T05:22:42+00:00" pubdate data-updated="true">2014-12-22 05:22</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>I recently discovered the concept of programming Koans: series of TDD-style tutorials to learn parts of a programming language. I’ve been willing to get better at Python for a while and started doing Greg Malcolm’s <a href="https://github.com/gregmalcolm/python_koans">Python Koans</a>. After a few months of practice, I <a href="https://github.com/thibaudcolas/koans-playground/tree/master/python/python2">completed all of them</a> and thought it’d be cool to share my take on the extra credit task.</p>
+
+<!-- more -->
+
+<p>This task is more complicated than all of the other koans: it is a free-form programming exercice, where you both write tests and implementation for a given problem: the Greed Game and its <a href="https://github.com/thibaudcolas/koans-playground/blob/master/python/python2/koans/GREEDS_RULES.txt">Greed Rules</a>. It tests your ability to write proper idiomatic (<em>Pythonic</em>) code, and to be thorough when testing it.</p>
+
+<p>My take on about_extra_credit.py’s Greed Game - Implementation https://github.com/thibaudcolas/koans-playground/blob/master/python/python2/koans/about_extra_credit.py</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+</span>
+<span class="c1"># EXTRA CREDIT:
+#
+# Create a program that will play the Greed Game.
+# Rules for the game are in GREED_RULES.TXT.
+#
+# You already have a DiceSet class and score function you can use.
+# Write a player class and a Game class to complete the project.  This
+# is a free form assignment, so approach it however you desire.
+</span>
+<span class="kn">from</span> <span class="nn">runner.koan</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">about_scoring_project</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">about_dice_project</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="s">"Represents a player of the Greed Game. He has a name, points, and the ability to roll dices."</span>
+
+    <span class="n">HIGH_DICE_CAP</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">LOW_DICE_CAP</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">HIGH_POINTS_CAP</span> <span class="o">=</span> <span class="mi">800</span>
+    <span class="n">LOW_POINTS_CAP</span> <span class="o">=</span> <span class="mi">200</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">points</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_points</span> <span class="o">=</span> <span class="n">points</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_dice</span> <span class="o">=</span> <span class="n">DiceSet</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"{0}: {1}pts"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">_name</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">_points</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="o">@</span><span class="nb">property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">_name</span>
+
+    <span class="o">@</span><span class="nb">property</span>
+    <span class="k">def</span> <span class="nf">points</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">_points</span>
+
+    <span class="k">def</span> <span class="nf">accumulate_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_points</span> <span class="o">+=</span> <span class="n">points</span>
+
+    <span class="k">def</span> <span class="nf">roll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_dice</span><span class="p">.</span><span class="n">roll</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">_dice</span><span class="p">.</span><span class="n">values</span>
+
+    <span class="k">def</span> <span class="nf">continue_roll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">dices</span><span class="p">):</span>
+        <span class="n">stop</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">points</span> <span class="o">&gt;</span> <span class="n">Player</span><span class="p">.</span><span class="n">HIGH_POINTS_CAP</span> <span class="ow">and</span> <span class="n">dices</span> <span class="o">&lt;</span> <span class="n">Player</span><span class="p">.</span><span class="n">HIGH_DICE_CAP</span><span class="p">,</span>
+            <span class="n">points</span> <span class="o">&gt;</span> <span class="n">Player</span><span class="p">.</span><span class="n">LOW_POINTS_CAP</span> <span class="ow">and</span> <span class="n">dices</span> <span class="o">&lt;</span> <span class="n">Player</span><span class="p">.</span><span class="n">LOW_DICE_CAP</span> <span class="ow">and</span> <span class="bp">self</span><span class="p">.</span><span class="n">points</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="n">points</span> <span class="o">&gt;</span> <span class="n">Game</span><span class="p">.</span><span class="n">ACCUMULATION_CAP</span> <span class="ow">and</span> <span class="bp">self</span><span class="p">.</span><span class="n">points</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">points</span> <span class="o">+</span> <span class="n">points</span> <span class="o">&gt;</span> <span class="n">Game</span><span class="p">.</span><span class="n">FINAL_CAP</span><span class="p">,</span>
+        <span class="p">]</span>
+
+        <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">True</span> <span class="ow">in</span> <span class="n">stop</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Game</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="s">"Represents a game of Greed."</span>
+
+    <span class="n">ACCUMULATION_CAP</span> <span class="o">=</span> <span class="mi">300</span>
+    <span class="n">FINAL_CAP</span> <span class="o">=</span> <span class="mi">3000</span>
+    <span class="n">ITER_CAP</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">DICE_NUMBER</span> <span class="o">=</span> <span class="mi">5</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">players</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_players</span> <span class="o">=</span> <span class="n">players</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"players:[{0}]"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="s">", "</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">player</span><span class="p">)</span> <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">_players</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">pick_best_player</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">players</span><span class="p">):</span>
+        <span class="s">"Pick the best player: the one with the most points."</span>
+        <span class="n">best</span> <span class="o">=</span> <span class="n">players</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">players</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">player</span><span class="p">.</span><span class="n">points</span> <span class="o">&gt;</span> <span class="n">best</span><span class="p">.</span><span class="n">points</span><span class="p">:</span>
+                <span class="n">best</span> <span class="o">=</span> <span class="n">player</span>
+        <span class="k">return</span> <span class="n">best</span>
+
+    <span class="k">def</span> <span class="nf">play_turn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+        <span class="s">"One turn: actions of a single player in a round."</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">roll_counter</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">roll</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">dice_number</span> <span class="o">=</span> <span class="n">Game</span><span class="p">.</span><span class="n">DICE_NUMBER</span>
+        <span class="n">zero_roll</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">continue_roll</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="c1"># The player may continue to roll as long as each roll scores points.
+</span>        <span class="k">while</span> <span class="n">continue_roll</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">zero_roll</span><span class="p">)</span> <span class="ow">and</span> <span class="n">roll_counter</span> <span class="o">&lt;</span> <span class="n">Game</span><span class="p">.</span><span class="n">ITER_CAP</span><span class="p">:</span>
+            <span class="n">roll_points</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">roll_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">roll</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">roll</span><span class="p">(</span><span class="n">dice_number</span><span class="p">)</span>
+
+            <span class="n">score_counter</span> <span class="o">=</span> <span class="n">score_hash</span><span class="p">(</span><span class="n">roll</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">score_counter</span><span class="p">.</span><span class="n">iteritems</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">score</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">roll_points</span> <span class="o">+=</span> <span class="n">score</span>
+                    <span class="c1"># After a player rolls and the score is calculated, the scoring dice are
+</span>                    <span class="c1"># removed and the player has the option of rolling again using only the
+</span>                    <span class="c1"># non-scoring dice.
+</span>                    <span class="n">dice_number</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="n">points</span> <span class="o">+=</span> <span class="n">roll_points</span>
+            <span class="n">zero_roll</span> <span class="o">=</span> <span class="n">roll_points</span> <span class="o">==</span> <span class="mi">0</span>
+
+            <span class="c1"># If all of the thrown dice are scoring, then the
+</span>            <span class="c1"># player may roll all 5 dice in the next roll.
+</span>            <span class="k">if</span> <span class="n">dice_number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">dice_number</span> <span class="o">=</span> <span class="n">Game</span><span class="p">.</span><span class="n">DICE_NUMBER</span>
+
+            <span class="c1"># If a roll has zero points, then the player loses not only their turn,
+</span>            <span class="c1"># but also accumulated score for that turn.
+</span>            <span class="k">if</span> <span class="n">zero_roll</span><span class="p">:</span>
+                <span class="n">points</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="n">continue_roll</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">dice_number</span><span class="p">)</span>
+
+            <span class="n">UI</span><span class="p">.</span><span class="n">display_roll</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">roll_counter</span><span class="p">,</span> <span class="n">roll</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">dice_number</span><span class="p">,</span> <span class="n">continue_roll</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">points</span>
+
+    <span class="k">def</span> <span class="nf">play_round</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">players</span><span class="p">):</span>
+        <span class="s">"One round: a turn for each player."</span>
+        <span class="n">game_ongoing</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">players</span><span class="p">:</span>
+            <span class="n">points</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">play_turn</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+            <span class="c1"># Before a player is allowed to accumulate points, they must get at
+</span>            <span class="c1"># least 300 points in a single turn. Once they have achieved 300 points
+</span>            <span class="c1"># in a single turn, the points earned in that turn and each following
+</span>            <span class="c1"># turn will be counted toward their total score.
+</span>            <span class="k">if</span> <span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">points</span> <span class="o">&gt;=</span> <span class="n">Game</span><span class="p">.</span><span class="n">ACCUMULATION_CAP</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">points</span> <span class="o">&gt;=</span> <span class="n">Game</span><span class="p">.</span><span class="n">ACCUMULATION_CAP</span><span class="p">):</span>
+                <span class="n">player</span><span class="p">.</span><span class="n">accumulate_points</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+
+            <span class="c1"># Once a player reaches 3000 (or more) points, the game enters the final
+</span>            <span class="c1"># round where each of the other players gets one more turn.
+</span>            <span class="n">game_ongoing</span> <span class="o">=</span> <span class="n">game_ongoing</span> <span class="ow">and</span> <span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">points</span> <span class="o">&lt;</span> <span class="n">Game</span><span class="p">.</span><span class="n">FINAL_CAP</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">game_ongoing</span>
+
+    <span class="k">def</span> <span class="nf">play_last_round</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">players</span><span class="p">):</span>
+        <span class="s">"End game: last round for all but the best player."</span>
+
+        <span class="n">best_player</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">pick_best_player</span><span class="p">(</span><span class="n">players</span><span class="p">)</span>
+        <span class="n">players</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">best_player</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play_round</span><span class="p">(</span><span class="n">players</span><span class="p">)</span>
+        <span class="n">players</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">best_player</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">pick_best_player</span><span class="p">(</span><span class="n">players</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"Plays a game of Greed."</span>
+        <span class="n">playing</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">round_counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">UI</span><span class="p">.</span><span class="n">display</span><span class="p">(</span><span class="s">'START'</span><span class="p">)</span>
+
+        <span class="c1"># The count flag prevents infinite loop.
+</span>        <span class="k">while</span> <span class="n">playing</span> <span class="ow">and</span> <span class="n">round_counter</span> <span class="o">&lt;</span> <span class="n">Game</span><span class="p">.</span><span class="n">ITER_CAP</span><span class="p">:</span>
+            <span class="n">round_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">playing</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">play_round</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">_players</span><span class="p">)</span>
+            <span class="n">UI</span><span class="p">.</span><span class="n">display_round</span><span class="p">(</span><span class="n">round_counter</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">_players</span><span class="p">)</span>
+
+        <span class="c1"># The winner is the player with the highest score after the final round.
+</span>        <span class="n">winner</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">play_last_round</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">_players</span><span class="p">)</span>
+        <span class="n">UI</span><span class="p">.</span><span class="n">display_round</span><span class="p">(</span><span class="n">round_counter</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">_players</span><span class="p">)</span>
+
+        <span class="n">UI</span><span class="p">.</span><span class="n">display_winner</span><span class="p">(</span><span class="n">winner</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">winner</span>
+
+
+<span class="k">class</span> <span class="nc">UI</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="s">"Represents the user interface for a game of Greed"</span>
+
+    <span class="n">ITEMS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'EN_SHORT'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">'START'</span><span class="p">:</span> <span class="s">'Start!'</span><span class="p">,</span>
+            <span class="s">'END'</span><span class="p">:</span> <span class="s">'End!'</span><span class="p">,</span>
+            <span class="s">'LAST'</span><span class="p">:</span> <span class="s">'Last Round Start!'</span><span class="p">,</span>
+            <span class="s">'PLAYER'</span><span class="p">:</span> <span class="s">'Player: {0}'</span><span class="p">,</span>
+            <span class="s">'PLAYERS'</span><span class="p">:</span> <span class="s">'Players: {0}'</span><span class="p">,</span>
+            <span class="s">'WINNER'</span><span class="p">:</span> <span class="s">'Winner: {0}'</span><span class="p">,</span>
+            <span class="s">'BEST'</span><span class="p">:</span> <span class="s">'Best: {0}'</span><span class="p">,</span>
+            <span class="s">'POINTS'</span><span class="p">:</span> <span class="s">'Points: {0}'</span><span class="p">,</span>
+            <span class="s">'SCORE'</span><span class="p">:</span> <span class="s">'Score: {0}'</span><span class="p">,</span>
+            <span class="s">'ROUND'</span><span class="p">:</span> <span class="s">'Round: {0}'</span><span class="p">,</span>
+            <span class="s">'ROLL'</span><span class="p">:</span> <span class="s">'Roll: {0}'</span><span class="p">,</span>
+            <span class="s">'DICE'</span><span class="p">:</span> <span class="s">'Dice: {0}'</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s">'EN_LONG'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">'ROLL'</span><span class="p">:</span> <span class="s">'│  {0} #{1} roll: {2}, {3}pts, {4}dcs, again? {5}'</span><span class="p">,</span>
+            <span class="s">'ROUND'</span><span class="p">:</span> <span class="s">'├ Round #{0}! Last? {1}, Players: {2}'</span><span class="p">,</span>
+            <span class="s">'WINNER'</span><span class="p">:</span> <span class="s">'└── And the winner is... {0}! With {1}points.'</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="o">@</span><span class="nb">staticmethod</span>
+    <span class="k">def</span> <span class="nf">output_short</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">UI</span><span class="p">.</span><span class="n">ITEMS</span><span class="p">[</span><span class="s">'EN_SHORT'</span><span class="p">][</span><span class="n">item</span><span class="p">].</span><span class="nb">format</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+    <span class="o">@</span><span class="nb">staticmethod</span>
+    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">UI</span><span class="p">.</span><span class="n">output_short</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+
+    <span class="o">@</span><span class="nb">staticmethod</span>
+    <span class="k">def</span> <span class="nf">display_roll</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">roll_number</span><span class="p">,</span> <span class="n">roll</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">dice</span><span class="p">,</span> <span class="n">choice</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">UI</span><span class="p">.</span><span class="n">ITEMS</span><span class="p">[</span><span class="s">'EN_LONG'</span><span class="p">][</span><span class="s">'ROLL'</span><span class="p">].</span><span class="nb">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">roll_number</span><span class="p">,</span> <span class="n">roll</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">dice</span><span class="p">,</span> <span class="n">choice</span><span class="p">)</span>
+
+    <span class="o">@</span><span class="nb">staticmethod</span>
+    <span class="k">def</span> <span class="nf">display_round</span><span class="p">(</span><span class="n">round_number</span><span class="p">,</span> <span class="n">last_round</span><span class="p">,</span> <span class="n">players</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">UI</span><span class="p">.</span><span class="n">ITEMS</span><span class="p">[</span><span class="s">'EN_LONG'</span><span class="p">][</span><span class="s">'ROUND'</span><span class="p">].</span><span class="nb">format</span><span class="p">(</span><span class="n">round_number</span><span class="p">,</span> <span class="n">last_round</span><span class="p">,</span> <span class="n">players</span><span class="p">)</span>
+
+    <span class="o">@</span><span class="nb">staticmethod</span>
+    <span class="k">def</span> <span class="nf">display_winner</span><span class="p">(</span><span class="n">winner</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">UI</span><span class="p">.</span><span class="n">ITEMS</span><span class="p">[</span><span class="s">'EN_LONG'</span><span class="p">][</span><span class="s">'WINNER'</span><span class="p">].</span><span class="nb">format</span><span class="p">(</span><span class="n">winner</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">winner</span><span class="p">.</span><span class="n">points</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>My take on about_extra_credit.py’s Greed Game - Test cases https://github.com/thibaudcolas/koans-playground/blob/master/python/python2/koans/about_extra_credit.py</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">AboutExtraCredit</span><span class="p">(</span><span class="n">Koan</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">test_extra_credit_task</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">test_player_initialization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p1"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s">"p1"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">points</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">p2</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p2"</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">p2</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s">"p2"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">p2</span><span class="p">.</span><span class="n">points</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_player_points_couting</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">points</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">p</span><span class="p">.</span><span class="n">accumulate_points</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">points</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="n">p</span><span class="p">.</span><span class="n">accumulate_points</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">points</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_player_dice_rolling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p"</span><span class="p">)</span>
+        <span class="n">roll</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">roll</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="n">DICE_NUMBER</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">roll</span><span class="p">),</span> <span class="nb">list</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">roll</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="n">roll</span> <span class="o">==</span> <span class="n">p</span><span class="p">.</span><span class="n">roll</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="n">DICE_NUMBER</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">test_player_continue_roll_choice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p1"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">3100</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">3100</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+        <span class="n">p2</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p2"</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">2800</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">continue_roll</span><span class="p">(</span><span class="mi">2800</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">test_game_initialization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">Game</span><span class="p">([</span><span class="n">Player</span><span class="p">(</span><span class="s">"p1"</span><span class="p">),</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p2"</span><span class="p">),</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p3"</span><span class="p">)])</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">),</span> <span class="n">Game</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">g</span><span class="p">),</span> <span class="s">"players:[p1: 0pts, p2: 0pts, p3: 0pts]"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_game_best_player_pick</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">best</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s">"ppp"</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+        <span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="n">Player</span><span class="p">(</span><span class="s">"p"</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">Player</span><span class="p">(</span><span class="s">"pp"</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">best</span><span class="p">]</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">players</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">pick_best_player</span><span class="p">(</span><span class="n">players</span><span class="p">),</span> <span class="n">best</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">pick_best_player</span><span class="p">(</span><span class="n">players</span><span class="p">).</span><span class="n">points</span><span class="p">,</span> <span class="n">best</span><span class="p">.</span><span class="n">points</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_game_play_turn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p1"</span><span class="p">)</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">Game</span><span class="p">([</span><span class="n">p1</span><span class="p">,</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p2"</span><span class="p">),</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p3"</span><span class="p">)])</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">play_turn</span><span class="p">(</span><span class="n">p1</span><span class="p">)),</span> <span class="nb">int</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_game_play_round</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p1"</span><span class="p">)</span>
+        <span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p2"</span><span class="p">),</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p3"</span><span class="p">)]</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">players</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">play_round</span><span class="p">(</span><span class="n">players</span><span class="p">)),</span> <span class="nb">bool</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_game_play_last_round</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p1"</span><span class="p">)</span>
+        <span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p2"</span><span class="p">),</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p3"</span><span class="p">)]</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">players</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">play_last_round</span><span class="p">(</span><span class="n">players</span><span class="p">)),</span> <span class="n">Player</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_game_play</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p1"</span><span class="p">)</span>
+        <span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p2"</span><span class="p">),</span> <span class="n">Player</span><span class="p">(</span><span class="s">"p3"</span><span class="p">)]</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">players</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">play</span><span class="p">()),</span> <span class="n">Player</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_score_of_an_empty_list_is_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([]))</span>
+
+    <span class="k">def</span> <span class="nf">test_score_of_a_single_roll_of_5_is_50</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">5</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">test_score_of_a_single_roll_of_1_is_100</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">1</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">test_score_of_multiple_1s_and_5s_is_the_sum_of_individual_scores</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">test_score_of_single_2s_3s_4s_and_6s_are_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">test_score_of_a_triple_1_is_1000</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">test_score_of_other_triples_is_100x</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">600</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">test_score_of_mixed_is_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">550</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">1100</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">test_ones_not_left_out</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'2'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">'5'</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s">'4'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'6'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">score_hash</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+</code></pre></div></div>
+
+<p>A few takeaways:</p>
+
+<ul>
+  <li>I decided to code the placer choice (keep rolling dices for a higher score or stop and keep a lower one) as a very simple rules-based AI. As the point is to use TDD as much as possible, it makes no sense to create a manual process / UI that’ll need to receive input on each test case. Automating input on such an interface would be the same as implementing those rules.</li>
+  <li>When doing TDD, it is important to remind ourselves of the red-green-refactor cycle. Refactoring should be frequent to keep the routines manageable as more and more rules are added.</li>
+  <li>Adding lots of comments for each rule being implemented is a good way to keep track of what should be done: comments need to express the intent, not the implementation.</li>
+</ul>
+
+<p>Now on to a more Web-related Python project!</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2014-12-22T05:22:42+00:00" pubdate data-updated="true">2014-12-22 05:22</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/python/">Python</a>,
+    
+      <a class="category" href="/categories/koans/">Koans</a>,
+    
+      <a class="category" href="/categories/code/">Code</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/litterature-francaise" title="Previous Post: Littérature française">&laquo; Littérature française</a>
+      
+      
+        <a class="basic-alignment right" href="/one-year-of-open-source" title="Next Post: One year of Open-source">One year of Open-source &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

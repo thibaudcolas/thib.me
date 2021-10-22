@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Testing with multiple versions of npm packages - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Have you ever wondered how to test your library against multiple versions of a project like React? Well, there is a way – and it’s not even that complex!">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/testing-with-multiple-versions-of-npm-packages">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/testing-with-multiple-versions-of-npm-packages">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Testing with multiple versions of npm packages">
+  <meta property="og:description" content="Have you ever wondered how to test your library against multiple versions of a project like React? Well, there is a way – and it’s not even that complex!">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2019-12-09-testing-with-multiple-versions-of-npm-packages.md">Edit</a>
+      <h1 class="entry-title">Testing with multiple versions of npm packages</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2019-12-09T20:36:37+00:00" pubdate data-updated="true">2019-12-09 20:36</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Have you ever wondered how to test your library against multiple versions of a project like React? Well, there is a way – and it’s not even that complex!</p>
+
+<!-- more -->
+
+<h2 id="installing-multiple-versions">Installing multiple versions</h2>
+
+<p>With Yarn – it’s been around for ages, and is <a href="https://yarnpkg.com/lang/en/docs/cli/add/#toc-yarn-add-alias">very well documented</a>:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add &lt;alias-package&gt;@npm:&lt;package&gt;
+</code></pre></div></div>
+
+<p>This aliasing feature allows us to add as many packages as we need, all resolving to different versions of the same package.</p>
+
+<p>With npm – package aliases have been available since <a href="https://github.com/npm/cli/releases/tag/v6.9.0">v6.9.0</a>. Sadly, the only good resource I could find on this is a StackOverflow answer: <a href="https://stackoverflow.com/a/56495651/1798491">how to install multiple versions of package using npm</a>.</p>
+
+<p>For my need with Draft.js, this is what the result looks like in <code class="language-plaintext highlighter-rouge">package.json</code>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"draft-js"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.10.5"</span><span class="err">,</span><span class="w">
+</span><span class="nl">"draft-js-11"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm:draft-js@0.11.3"</span><span class="err">,</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="configuring-mocks-for-tests">Configuring mocks for tests</h2>
+
+<p>Using <a href="https://jestjs.io/">Jest</a>, this also turns out to be very straightforward. The setup even works with <code class="language-plaintext highlighter-rouge">create-react-app</code>. In <code class="language-plaintext highlighter-rouge">setupTests.js</code>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">jest</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="dl">"</span><span class="s2">draft-js</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">packages</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">0.10</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">draft-js</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">0.11</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">draft-js-11</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">};</span>
+  <span class="kd">const</span> <span class="nx">version</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">DRAFTJS_VERSION</span> <span class="o">||</span> <span class="dl">"</span><span class="s2">0.10</span><span class="dl">"</span><span class="p">;</span>
+
+  <span class="c1">// Require the original module.</span>
+  <span class="kd">const</span> <span class="nx">originalModule</span> <span class="o">=</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">requireActual</span><span class="p">(</span><span class="nx">packages</span><span class="p">[</span><span class="nx">version</span><span class="p">]);</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">__esModule</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">...</span><span class="nx">originalModule</span><span class="p">,</span>
+  <span class="p">};</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>We simply have a mock for the dependency, and then require either of the packages depending on an environment variable.</p>
+
+<h2 id="testing-both-versions-in-ci">Testing both versions in CI</h2>
+
+<p>In CI, we can then set up a build (or environment, or job) matrix to run tests with different environment variables. With Travis CI, this looks like:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">language</span><span class="pi">:</span> <span class="s">node_js</span>
+<span class="na">install</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">npm ci</span>
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">include</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">env</span><span class="pi">:</span> <span class="s">DRAFTJS_VERSION=0.10</span>
+    <span class="pi">-</span> <span class="na">env</span><span class="pi">:</span> <span class="s">DRAFTJS_VERSION=0.11</span>
+<span class="na">script</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">npm run test</span>
+</code></pre></div></div>
+
+<p>And that’s it!</p>
+
+<p>See the end results over at <a href="https://github.com/thibaudcolas/draftjs-filters">thibaudcolas/draftjs-filters</a>.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2019-12-09T20:36:37+00:00" pubdate data-updated="true">2019-12-09 20:36</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/javascript/">JavaScript</a>,
+    
+      <a class="category" href="/categories/draftjs/">Draftjs</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/draftail-v1-3-0-community-improvements-beyond-wagtail" title="Previous Post: Draftail v1.3.0: community improvements, beyond Wagtail">&laquo; Draftail v1.3.0: community improvements, beyond Wagtail</a>
+      
+      
+        <a class="basic-alignment right" href="/python-static-type-checking-field-test" title="Next Post: Python static type checking: field test">Python static type checking: field test &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

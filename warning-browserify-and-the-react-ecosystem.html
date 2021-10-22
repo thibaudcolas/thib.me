@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Warning: Browserify and the React ecosystem - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="While working on yet another React project using react-router, I discovered ±3kb of minified warning messages / development aids in my JavaScript bundle.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/warning-browserify-and-the-react-ecosystem">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/warning-browserify-and-the-react-ecosystem">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Warning: Browserify and the React ecosystem">
+  <meta property="og:description" content="While working on yet another React project using react-router, I discovered ±3kb of minified warning messages / development aids in my JavaScript bundle.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2016-06-25-warning-browserify-and-the-react-ecosystem.md">Edit</a>
+      <h1 class="entry-title">Warning: Browserify and the React ecosystem</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2016-06-25T17:55:22+01:00" pubdate data-updated="true">2016-06-25 17:55</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>While working on yet another React project using <a href="https://github.com/reactjs/react-router/"><code class="language-plaintext highlighter-rouge">react-router</code></a>, I discovered ±3kb of minified warning messages / development aids in my JavaScript bundle.</p>
+
+<!-- more -->
+
+<p>As it turns out, React’s practice of having different code for “development mode” and “production” is being used by other projects from community members, but not with the same level of caution – for this tooling to work, the build steps need to use specific configuration: https://facebook.github.io/react/docs/package-management.html.</p>
+
+<p>Not all projects mention this, and more importantly not all projects warn you if you don’t. The solution? Configure your build step to remove those development aids in <em>the entire bundle</em>, and not just your own code.</p>
+
+<p>More info at https://github.com/thibaudcolas/react-router-browserify-build/.</p>
+
+<p>Other related links for future reference:</p>
+
+<ul>
+  <li>https://github.com/ReactJSTraining/history/pull/307</li>
+  <li>https://github.com/reactjs/react-router/pull/3503</li>
+  <li>http://stackoverflow.com/questions/22118915/how-to-turn-on-off-reactjs-development-mode</li>
+  <li>http://dev.topheman.com/make-your-react-production-minified-version-with-webpack/</li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2016-06-25T17:55:22+01:00" pubdate data-updated="true">2016-06-25 17:55</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/javascript/">JavaScript</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>,
+    
+      <a class="category" href="/categories/react/">React</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/not-building-custom-e-commerce-marketplaces" title="Previous Post: (Not) building custom e-commerce marketplaces">&laquo; (Not) building custom e-commerce marketplaces</a>
+      
+      
+        <a class="basic-alignment right" href="/reliable-front-end-building-blocks" title="Next Post: Reliable front-end building blocks">Reliable front-end building blocks &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

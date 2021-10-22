@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Blurring the line between web and desktop apps - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Two years ago, the folks at GitHub released a new text editor called Atom. They built it with web technologies: HTML, CSS and JavaScript. As part of this pro...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.springload.co.nz/blog/blurring-line-between-web-and-desktop-apps/">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.springload.co.nz/blog/blurring-line-between-web-and-desktop-apps/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Blurring the line between web and desktop apps">
+  <meta property="og:description" content="Two years ago, the folks at GitHub released a new text editor called Atom. They built it with web technologies: HTML, CSS and JavaScript. As part of this pro...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2016-05-30-blurring-line-between-web-and-desktop-apps.md">Edit</a>
+      <h1 class="entry-title">Blurring the line between web and desktop apps</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2016-05-30T09:33:37+01:00" pubdate data-updated="true">2016-05-30 09:33</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Two years ago, the folks at GitHub released a new text editor called Atom. They built it with web technologies: HTML, CSS and JavaScript. As part of this project they released <a href="http://electron.atom.io/">Electron</a>, a framework to write cross-platform desktop applications with web technologies.</p>
+
+<p>Projects like Atom and Electron changed the way we think about the frontier between desktop and web apps. Let’s consider what frameworks like Electron make possible.</p>
+
+<!-- more -->
+
+<h2 id="building-cross-platform-applications">Building cross-platform applications</h2>
+
+<p>You might already be using one of these <a href="http://electron.atom.io/#built-on-electron">Electron-powered applications</a>:</p>
+
+<ul>
+  <li>Slack</li>
+  <li>VisualStudio Code (Microsoft’s new text editor)</li>
+  <li>Caprine (an unofficial client for Facebook Messenger)</li>
+  <li>WordPress.com</li>
+</ul>
+
+<p>Wait, WordPress? Yes – the new WordPress.com interface is bundled as a desktop application, available right from your taskbar or dock. These applications (well, three out of the four) show a trend towards making apps available in the browser <em>and</em> on desktop.</p>
+
+<p><a href="/images/caprine-screenshot.png"><img src="/images/caprine-screenshot.png" alt="Screenshot of Caprine, a Facebook Messenger client built with Electron" /></a></p>
+
+<blockquote>
+  <p><a href="https://github.com/sindresorhus/caprine">Caprine</a> is an unofficial Facebook Messenger app. This desktop UI is built in less than one thousand lines of code, on top of the existing messenger.com.</p>
+</blockquote>
+
+<p>This “web first” approach to application development combines the best of both worlds. You can develop once, then run your application on multiple platforms. For first-time or occasional users, you have a no-install browser version. Frequent users can make the most of an easily accessible, always-on desktop app.</p>
+
+<p>This allows us to start thinking of “desktop availability” as another feature of the product rather than as a completely separate (and costly) project.</p>
+
+<h2 id="the-desktop-app-question">The desktop app question</h2>
+
+<p><a href="/images/desktop-need-spetctrum.png"><img src="/images/desktop-need-spetctrum.png" alt="Diagram of the need for a desktop app, with four quadrants, depending on usage urgency and frequency. The answer is &quot;YES&quot; for apps like Spotify, Slack, Evernote" /></a></p>
+
+<blockquote>
+  <p>The “need for a desktop app” spectrum – Credits to <a href="https://medium.com/@collinmathilde/why-desktop-apps-are-making-a-comeback-5b4eb0427647">Mathilde Collin</a>.</p>
+</blockquote>
+
+<p>Whether you really need a desktop app should be your first question. Is the product catering to an audience of frequent users? Are they likely to browse multiple pages at once, or to concentrate their focus on a single task? Where is the product positioned on the <a href="https://medium.com/@jaredstanley/dont-call-it-a-website-aae07340ecc1">web site to web app scale</a>? It’s important to understand the user’s intent when interacting with the product, as well as their varying expectations in front of browser-based and desktop UIs.</p>
+
+<p>From a technical standpoint, Electron is very new and probably isn’t on anyone’s resume yet – and this is exactly what’s great about it. Since the technologies are the same as browser-based applications, web designers and developers can leverage their existing knowledge, adapting it to the desktop context. The community around Electron is creating a <a href="https://github.com/sindresorhus/awesome-electron">series of tools</a> to simplify the most tedious tasks of desktop development. Utilities like <a href="https://github.com/jiahaog/nativefier">nativefier</a> can turn a website into an app in a matter of seconds, and <a href="http://photonkit.com/">UI kits</a> are starting to pop up for interfaces to achieve a native feel.</p>
+
+<h2 id="beyond-operating-systems">Beyond operating systems</h2>
+
+<p>There are a lot of smart people working on cross-platform development at the moment. At Springload we’ve used the <a href="https://cordova.apache.org/">Cordova</a> “web wrapper” approach; and we’re currently very excited about mobile innovation with <a href="https://facebook.github.io/react-native/">React Native</a> and <a href="https://www.nativescript.org/">NativeScript</a>. On desktop, <a href="https://en.wikipedia.org/wiki/Chrome_OS">Chrome OS</a> is also worth having a look at.</p>
+
+<p>There is no one-size-fits-all solution, but we do believe that the web as a platform is as close to true cross-platform availability as it gets. Tools like Electron enable us to look at desktop applications as another medium, instead of a separate entity.</p>
+
+<p>We’ve built a little prototype web app to take Electron for a spin. Give it a try <a href="https://thibaudcolas.github.io/react-d3-electron/">online</a>, <a href="https://github.com/thibaudcolas/react-d3-electron/releases"><em>or on your computer</em></a>.</p>
+
+<hr />
+
+<blockquote>
+  <p>This article was originally published on <a href="https://www.springload.co.nz/blog/blurring-line-between-web-and-desktop-apps/">Springload’s blog</a>.</p>
+</blockquote>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2016-05-30T09:33:37+01:00" pubdate data-updated="true">2016-05-30 09:33</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/javascript/">JavaScript</a>,
+    
+      <a class="category" href="/categories/community/">Community</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/javascript-workshops-at-springload" title="Previous Post: JavaScript Workshops at Springload">&laquo; JavaScript Workshops at Springload</a>
+      
+      
+        <a class="basic-alignment right" href="/react-overview" title="Next Post: React overview">React overview &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

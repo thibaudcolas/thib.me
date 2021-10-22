@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "name": "Thib.me",
+  "launch_path": "/index.html",
+  "description": "Thibaud Colas, a Software Engineer specialized in Web technologies",
+  "icons": {
+    "128": "/icon-128x128.png",
+    "256": "/icon-256x256.png",
+    "512": "/icon-512x512.png"
+  },
+  "developer": {
+    "name": "Thibaud Colas",
+    "url": "https://thib.me"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "Thibaud Colas",
+      "description": "Thibaud Colas, a Software Engineer specialized in Web technologies"
+    }
+  }
+}

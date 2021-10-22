@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Bringing our mad skillz to Wagtail - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Springload often attends development sprints of Wagtail. They’re a great occasion to meet with other core contributors, and drive the project together toward...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.springload.co.nz/blog/bringing-our-mad-skillz-wagtail/">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.springload.co.nz/blog/bringing-our-mad-skillz-wagtail/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Bringing our mad skillz to Wagtail">
+  <meta property="og:description" content="Springload often attends development sprints of Wagtail. They’re a great occasion to meet with other core contributors, and drive the project together toward...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2017-05-04-bringing-our-mad-skillz-wagtail.md">Edit</a>
+      <h1 class="entry-title">Bringing our mad skillz to Wagtail</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2017-05-03T09:35:03+01:00" pubdate data-updated="true">2017-05-03 09:35</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Springload often attends development sprints of Wagtail. They’re a great occasion to meet with other core contributors, and drive the project together towards the needs of its users, aka our clients. In the past our work has taken us to <a href="/awesome-wagtail">Ede, Netherlands</a>, and Cape Town but this time we headed North to <a href="https://www.google.co.nz/maps?q=Reykjav%C3%ADk">Reykjavík, Iceland</a> thanks to our friends at <a href="https://www.overcast.io/">Overcast Software</a>.</p>
+
+<!-- more -->
+
+<p>Over two days our group of nearly 20 split into specific task forces focusing on:</p>
+
+<ul>
+  <li>Creating a new demo site for Wagtail that better demonstrates its capabilities.</li>
+  <li>Making Wagtail faster on all devices for everyone in all locations.</li>
+  <li>Overhauling the page explorer menu by rebuilding it with an API and React.</li>
+  <li>Rebuilding the rich text editing experience from the ground up.</li>
+</ul>
+
+<p>Let’s have a look at the latter three areas that Springload actively contributes to.</p>
+
+<h2 id="optimising-the-performance-of-modern-web-apps">Optimising the performance of modern web apps</h2>
+
+<p>The impact of poor performance on user experience is well known across the industry, and it’s paramount for the Wagtail experience to be best in class.</p>
+
+<p>As part of this sprint, we contributed by setting up tooling to audit Wagtail’s performance with <a href="https://www.sitespeed.io/">Sitespeed.io</a>, Grafana and Graphite. This tooling is available on GitHub, at <a href="https://github.com/thibaudcolas/wagtail-dev-tooling">thibaudcolas/wagtail-dev-tooling</a>.</p>
+
+<p><a href="https://github.com/thibaudcolas/wagtail-dev-tooling"><img src="/images/sitespeed-report.png" alt="Sitespeed report example with timings for a Wagtail admin page load" /></a></p>
+
+<p>With this tooling in place we were able to quantify some of the improvements we were making during the sprint. To take it further we’ll need to create <a href="https://timkadlec.com/2013/01/setting-a-performance-budget/">performance budgets</a> so we have a shared definition of what level of performance we are aiming for.</p>
+
+<p><img src="/images/performance-budget-wagtail.png" alt="Performance budget example" /></p>
+
+<blockquote>
+  <p>Performance monitoring and performance budgets (metric thresholds) are set up so we know how quickly the interface becomes usable. Here, the budget states that the page must be fully loaded within a 5s timeframe.</p>
+</blockquote>
+
+<p>For our clients, we monitor performance and set budgets with <a href="https://speedcurve.com/">SpeedCurve</a>. If you’re just getting started, <a href="https://gtmetrix.com/">GTmetrix</a> can give you quick audits and simple monitoring for free.</p>
+
+<h2 id="a-new-page-explorer-built-on-a-modern-architecture">A new page explorer built on a modern architecture</h2>
+
+<p>The page explorer is a very important component, as a point of entry to the interactions with the pages of the site. We’ve been willing to rebuild as much of the UI of the CMS in <a href="https://facebook.github.io/react/">React</a> – while the explorer might not have been the easiest to start with, our users will definitely notice the difference in speed.</p>
+
+<p>This work started as a prototype a year ago and we’re very close to releasing it for general availability. In our latest iteration, we now have:</p>
+
+<ul>
+  <li>Full support for Wagtail sites of all shapes and sizes via the rock solid admin API.</li>
+  <li>100% unit test coverage of the UI code with Jest and the amazing <a href="https://www.springload.co.nz/blog/why-were-migrating-unit-tests-jest-and-why-you-should-too/">snapshot tests</a>.</li>
+  <li>An accessible explorer for keyboard and screen reader users.</li>
+</ul>
+
+<p><img src="/images/new-explorer-ui.png" alt="Screenshot of the explorer’s latest iteration" /></p>
+
+<p>The last step for us is to refine the UI on mobile. This might seem less important for a CMS that relies on advanced editing workflows, but it’s a nice challenge nonetheless! We just got a <a href="https://www.browserstack.com/">BrowserStack</a> subscription for Wagtail, which is going help a lot.</p>
+
+<p><img src="/images/browserstack-wagtail.png" alt="Screenshot of the Browserstack interface, testing the Wagtail admin on an Android phone" /></p>
+
+<blockquote>
+  <p>BrowserStack provides us with automated screenshots, as well as On-demand browser instances – to test and debug in real browsers, without having to maintain local installations of many browser versions.</p>
+</blockquote>
+
+<h2 id="rethinking-rich-text-editing">Rethinking rich text editing</h2>
+
+<p>Both users and developers have mixed feelings when it comes to rich text editing. For users, text editors can feel hard to use or downright unpleasant. For developers, they don’t provide enough control on the formatting of the content once it is entered.</p>
+
+<p>We decided to tackle both problems at once by building a new rich text editor, the aptly named <a href="https://github.com/springload/draftail">Draftail</a>. Draftail builds upon the <a href="https://draftjs.org/">Draft.js</a> framework and React from Facebook, and it gives us all of the building blocks we need to create the best editing experience while retaining enough control over how the content is displayed. Try our <a href="https://springload.github.io/draftail">online demo</a>!</p>
+
+<p><img src="/images/draftail-v06.png" alt="Screenshot from the Draftail demo" /></p>
+
+<p>As part of the sprint, we refined the <a href="https://github.com/springload/wagtaildraftail">integration of the editor within Wagtail</a> with the help of <a href="https://torchbox.com/">Torchbox</a> and the <a href="https://littleweaverweb.com/">Little Weaver Web Collective</a>.</p>
+
+<h2 id="building-the-future-of-wagtail">Building the future of Wagtail</h2>
+
+<p>We invest so much in the future of Wagtail because we truly believe open-source communities are a great approach to software development. Building upon Django, Wagtail gave us a solid alternative from other stacks. We were so stoked to learn that what we’re contributing to building was used to make <a href="http://www.thedrum.com/news/2017/04/27/hillary-clintons-election-campaign-was-designed-wagtail-platform-created-torchbox">Hillary Clinton’s campaign site</a>, and this is a perfect reminder that the impact of open-source software goes well beyond its original users.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2017-05-03T09:35:03+01:00" pubdate data-updated="true">2017-05-03 09:35</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/react/">React</a>,
+    
+      <a class="category" href="/categories/springload/">Springload</a>,
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/draftjs/">Draftjs</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/awesome-wagtail" title="Previous Post: Awesome Wagtail">&laquo; Awesome Wagtail</a>
+      
+      
+        <a class="basic-alignment right" href="/using-forks-as-dependencies-for-js-projects" title="Next Post: Using forks as dependencies for JS projects">Using forks as dependencies for JS projects &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

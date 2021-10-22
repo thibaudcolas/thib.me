@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Introducing Draft.js in Wagtail - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Here is a talk I gave at Wagtail Space 2018. The video recording is available on YouTube. The talk was 90% demos so the purpose of this presentation is to sh...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.draftail.org/blog/2018/03/16/introducing-draft-js-in-wagtail">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.draftail.org/blog/2018/03/16/introducing-draft-js-in-wagtail">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Introducing Draft.js in Wagtail">
+  <meta property="og:description" content="Here is a talk I gave at Wagtail Space 2018. The video recording is available on YouTube. The talk was 90% demos so the purpose of this presentation is to sh...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2018-03-16-introducing-draft-js-in-wagtail.md">Edit</a>
+      <h1 class="entry-title">Introducing Draft.js in Wagtail</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2018-03-16T13:10:22+00:00" pubdate data-updated="true">2018-03-16 13:10</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Here is a talk I gave at <a href="https://www.wagtail.space">Wagtail Space 2018</a>. The video recording is available <a href="https://www.youtube.com/watch?v=mf8AS5EwHvc">on YouTube</a>. The talk was 90% demos so the purpose of this presentation is to share the links.</p>
+
+<!-- more -->
+
+<p>Hi 👋, I’m Thibaud! <a href="https://twitter.com/thibaud_colas">@thibaud_colas</a>.</p>
+
+<p>Why this happened, and how – read the following blog posts:</p>
+
+<ul>
+  <li><a href="https://www.draftail.org/blog/2018/03/05/why-wagtail-new-editor-is-built-with-draft-js">Why Wagtail’s new editor is built with Draft.js</a></li>
+  <li><a href="https://www.draftail.org/blog/2018/03/13/rethinking-rich-text-pipelines-with-draft-js">Rethinking rich text pipelines with Draft.js</a></li>
+  <li>(UI/UX blog post on its way)</li>
+</ul>
+
+<hr />
+
+<h2 id="demos-">Demos! 🌈</h2>
+
+<blockquote>
+  <p>Demos built with the <a href="https://draftjs.org/">Draft.js</a> framework, not (only) with Wagtail’s editor.</p>
+</blockquote>
+
+<h3 id="draftail">Draftail</h3>
+
+<ul>
+  <li><a href="http://playground.draftail.org/">Draftail Playground</a></li>
+  <li>Rich text formats: <a href="https://www.draftail.org/">Draftail</a></li>
+  <li>Copy-paste: <a href="https://thibaudcolas.github.io/draftjs-filters/">Draft.js filters</a></li>
+  <li>More formats: <a href="https://www.draftail.org/">Draftail examples</a></li>
+</ul>
+
+<h3 id="draftjs-plugins">Draft.js plugins</h3>
+
+<blockquote>
+  <p>High quality plugins with great UX on top of Draft.js.</p>
+</blockquote>
+
+<ul>
+  <li><a href="https://www.draft-js-plugins.com/plugin/emoji">😄 emojis!</a></li>
+  <li><a href="https://www.draft-js-plugins.com/plugin/mention">@mentions</a></li>
+  <li><a href="https://www.draft-js-plugins.com/plugin/video">Videos (embeds)</a></li>
+  <li><a href="https://www.draft-js-plugins.com/plugin/counter">Counter</a></li>
+</ul>
+
+<h3 id="more-draftjs">More Draft.js</h3>
+
+<ul>
+  <li><a href="https://www.draft-js-plugins.com/plugin/sticker">Stickers</a></li>
+  <li><a href="https://efloti.github.io/draft-js-mathjax-plugin/">Mathjax</a></li>
+  <li><a href="https://letranloc.github.io/draft-js-katex-plugin/">KaTeX</a></li>
+  <li><a href="https://ngs.github.io/draft-js-markdown-shortcuts-plugin/">Markdown shortcuts</a></li>
+</ul>
+
+<hr />
+
+<h2 id="what-next">What next</h2>
+
+<p>Blog posts to learn more:</p>
+
+<ul>
+  <li><a href="https://www.draftail.org/blog/2018/03/05/why-wagtail-new-editor-is-built-with-draft-js">Why Wagtail’s new editor is built with Draft.js</a></li>
+  <li><a href="https://www.draftail.org/blog/2018/03/13/rethinking-rich-text-pipelines-with-draft-js">Rethinking rich text pipelines with Draft.js</a></li>
+  <li>(UI/UX blog post on its way)</li>
+</ul>
+
+<p>How you can help:</p>
+
+<ul>
+  <li>Try out the editor, inside and <a href="https://www.draftail.org/">outside of Wagtail</a></li>
+  <li><strong>Try to <a href="https://www.draftail.org/">break it</a></strong> (and report issues 😄)</li>
+  <li>Review and improve the <a href="https://www.draftail.org/docs/user-guide">user guide</a></li>
+</ul>
+
+<p>The presentation was originally available on <a href="http://playground.draftail.org/">playground.draftail.org</a>.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2018-03-16T13:10:22+00:00" pubdate data-updated="true">2018-03-16 13:10</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/draftjs/">Draftjs</a>,
+    
+      <a class="category" href="/categories/draftail/">Draftail</a>,
+    
+      <a class="category" href="/categories/talks/">Talks</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/rethinking-rich-text-pipelines-with-draft-js" title="Previous Post: Rethinking rich text pipelines with Draft.js">&laquo; Rethinking rich text pipelines with Draft.js</a>
+      
+      
+        <a class="basic-alignment right" href="/engaging-dataviz-examples" title="Next Post: Engaging dataviz examples">Engaging dataviz examples &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

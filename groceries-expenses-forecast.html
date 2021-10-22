@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Groceries expenses forecast - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Here is a small D3 calendar/heatmap visualisation I tried to do to understand how many days’ worth of food would our groceries shopping cover.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/groceries-expenses-forecast">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/groceries-expenses-forecast">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Groceries expenses forecast">
+  <meta property="og:description" content="Here is a small D3 calendar/heatmap visualisation I tried to do to understand how many days’ worth of food would our groceries shopping cover.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2015-04-03-groceries-expenses-forecast.md">Edit</a>
+      <h1 class="entry-title">Groceries expenses forecast</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2015-04-03T04:39:07+01:00" pubdate data-updated="true">2015-04-03 04:39</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Here is a small D3 calendar/heatmap visualisation I tried to do to understand how many days’ worth of food would our groceries shopping cover.</p>
+
+<!-- more -->
+
+<p>Input data is each food-related expense, and daily food budget (budget per meal * number of meals). Expenses are then spread on the days they (should) cover, according to the daily food budget. If multiple expenses cover the same day, the day’s food expense increases above the daily food budget threshold.</p>
+
+<p>Related:</p>
+
+<ul>
+  <li><a href="http://finance.uw.edu/travel/meals">http://finance.uw.edu/travel/meals</a></li>
+  <li><a href="https://bl.ocks.org/mbostock/4063318">https://bl.ocks.org/mbostock/4063318</a></li>
+  <li><a href="https://github.com/wa0x6e/cal-heatmap">https://github.com/wa0x6e/cal-heatmap</a></li>
+</ul>
+
+<style>
+    body {
+      shape-rendering: crispEdges;
+    }
+
+    .day {
+      fill: rgba(0, 0, 0, 0.03);
+    }
+
+    .day.today, .day:hover {
+      stroke: #333;
+    }
+
+    .month {
+      fill: none;
+      stroke: #333;
+    }
+
+    .label {
+      font-size: 2em;
+    }
+
+    /* Read Yellow Green */
+    .RdYlGn .q0-11{fill:rgba(0,104,55, 0.8);}
+    .RdYlGn .q1-11{fill:rgba(26,152,80, 0.8);}
+    .RdYlGn .q2-11{fill:rgba(102,189,99, 0.8);}
+    .RdYlGn .q3-11{fill:rgba(166,217,106, 0.8);}
+    .RdYlGn .q4-11{fill:rgba(217,239,139, 0.8);}
+    .RdYlGn .q5-11{fill:rgba(255,255,191, 0.8);}
+    .RdYlGn .q6-11{fill:rgba(254,224,139, 0.8);}
+    .RdYlGn .q7-11{fill:rgba(253,174,97, 0.8);}
+    .RdYlGn .q8-11{fill:rgba(244,109,67, 0.8);}
+    .RdYlGn .q9-11{fill:rgba(215,48,39, 0.8);}
+    .RdYlGn .q10-11{fill:rgba(165,0,38, 0.8);}
+</style>
+
+<div id="viz"></div>
+
+<script src="/assets/data/d3.min.js"></script>
+
+<script src="/assets/data/groceries-expenses-forecast/script.js"></script>
+
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2015-04-03T04:39:07+01:00" pubdate data-updated="true">2015-04-03 04:39</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/dataviz/">Dataviz</a>,
+    
+      <a class="category" href="/categories/d3/">D3</a>,
+    
+      <a class="category" href="/categories/personal/">Personal</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/ggj-2015-rubegoldbash" title="Previous Post: GGJ 2015: RubeGoldBash">&laquo; GGJ 2015: RubeGoldBash</a>
+      
+      
+        <a class="basic-alignment right" href="/wellington-suburbs" title="Next Post: Wellington suburbs and weather stations">Wellington suburbs and weather stations &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

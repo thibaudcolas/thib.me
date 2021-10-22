@@ -1,0 +1,1785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Thibaud’s blog]]></title>
+  <link href="https://thib.me/atom.xml" rel="self"/>
+  <link href="https://thib.me/"/>
+  <updated>2021-10-22T17:09:26+01:00</updated>
+  <id>https://thib.me/</id>
+  <author>
+    <name><![CDATA[Thibaud Colas]]></name>
+    
+  </author>
+
+  
+  <entry>
+    <title type="html"><![CDATA[DjangoCon US 2021: Kontrasto – improving accessibility with Python]]></title>
+    <link href="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python"/>
+    <updated>2021-10-22T10:01:32+01:00</updated>
+    <id>https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python</id>
+    <content type="html"><![CDATA[<p>Slides for my <a href="https://2021.djangocon.us/talks/kontrasto-improving-accessibility-with/">DjangoCon US 2021 talk</a> on <a href="https://kontrasto.netlify.app/">Kontrasto</a>.</p>
+
+<!-- more -->
+
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/10718N6sEdx37JqMrBaS4prVOs-kH9ad61lsRTzdNPmI/edit">Google Slides: DjangoCon US 2021 - Kontrasto: improving accessibility with Python</a></li>
+  <li><a href="https://drive.google.com/file/d/1L6UZbN8VdTX_i6yTKghwB-5FalCA05s8/view?usp=sharing">PDF export</a></li>
+  <li><a href="https://drive.google.com/file/d/1cwVsGcikJxG_K0Sy98WY5J6ajZXENoIP/view?usp=sharing">Plain-text transcript</a></li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[WCAG 2.2: new accessibility guidelines on the way]]></title>
+    <link href="https://thib.me/wcag-22-accessibility-guidelines"/>
+    <updated>2021-08-13T17:52:22+01:00</updated>
+    <id>https://thib.me/wcag-22-accessibility-guidelines</id>
+    <content type="html"><![CDATA[<p>In web accessibility testing, WCAG 2.1 is the gold standard. But talk to experts – and they’ll be quick to tell you it’s a very low baseline. WCAG 2.2’s latest draft introduces new criteria, relevant for all websites.</p>
+
+<!-- more -->
+
+<h2 id="whats-new-in-wcag-22">What’s new in WCAG 2.2</h2>
+
+<p>Plenty of good things – there are 9 new success criteria:</p>
+
+<ul>
+  <li>Guideline 2.4 Navigable
+    <ul>
+      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2411-focus-appearance-minimum-aa">2.4.11 Focus Appearance (Minimum) (AA)</a></li>
+      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2412-focus-appearance-enhanced-aaa">2.4.12 Focus Appearance (Enhanced) (AAA)</a></li>
+      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2413-page-break-navigation-a">2.4.13 Page Break Navigation (A)</a></li>
+    </ul>
+  </li>
+  <li>Guideline 2.5 Input Modalities
+    <ul>
+      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#257-dragging-movements-aa">2.5.7 Dragging Movements (AA)</a></li>
+      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#258-target-size-minimum-aa">2.5.8 Target Size (Minimum) (AA)</a></li>
+    </ul>
+  </li>
+  <li>Guideline 3.2 Predictable
+    <ul>
+      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#326-consistent-help-a">3.2.6 Consistent Help (A)</a></li>
+      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#327-visible-controls-aa">3.2.7 Visible Controls (AA)</a></li>
+    </ul>
+  </li>
+  <li>Guideline 3.3 Input Assistance
+    <ul>
+      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#337-accessible-authentication-a">3.3.7 Accessible Authentication (A)</a></li>
+      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#338-redundant-entry-a">3.3.8 Redundant Entry (A)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>As well as the normative guidelines, all criteria also use <a href="https://www.w3.org/WAI/people-use-web/user-stories/">stories of web users</a> to better convey what problems we are trying to prevent with those guidelines – and what “success” looks like.</p>
+
+<p>There are a lot of good resources covering the new criteria in much better detail than we ever could – we’d highly recommend taking a look at Alastair Campbell’s talk <a href="https://www.youtube.com/watch?v=EZlqSwgKuZE">WCAG 2.2: What’s new and what to do with it</a> at the Virtua11y conference.</p>
+
+<h2 id="applying-wcag-22-to-sites">Applying WCAG 2.2 to sites</h2>
+
+<p>There won’t be any legal requirements to follow this new draft version for quite a while. That said, the new guidelines are so good they are well worth implementing and testing for right away.</p>
+
+<p>WCAG 2.1 is a good baseline, but there are a lot of areas where it falls short and we should aim beyond. To illustrate – here is a color contrast fail, generated with <a href="https://whocanuse.com/">Who Can Use</a>. According to WCAG 2.1 rules, the black text would be higher-contrast over this shade of blue than white text:</p>
+
+<p><img src="/images/blog/wcag-22-accessibility-guidelines/whocanuse-blue.png" alt="Comparison of lorem copy in white and black, over a blue background (hex code #2E7CD6). White has a contrast ratio of 4.23:1, non-compliant, black has 4.97:1, passing level AA." /></p>
+
+<blockquote>
+  <p>Comparison of lorem copy in white and black, over a blue background (hex code #2E7CD6). White has a contrast ratio of 4.23:1, non-compliant, black has 4.97:1, passing level AA</p>
+</blockquote>
+
+<p>This is due to how basic the contrast calculations are in WCAG 2.1. This specific issue will – hopefully – be addressed in the upcoming <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3.0</a>. It’s still a very early draft, but is well worth being aware of as well if you’re critically thinking of where else WCAG 2.1 might be falling short.</p>
+
+<h2 id="we-can-help">We can help</h2>
+
+<p>Torchbox offers standalone <a href="https://torchbox.com/digital-products/accessibility-testing/">accessibility consulting services</a>, with the goal of helping organisations aim beyond compliance. Don’t hesitate to get in touch if you want your site to get ahead of the curve.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania]]></title>
+    <link href="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania"/>
+    <updated>2021-06-07T19:21:03+01:00</updated>
+    <id>https://thib.me/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania</id>
+    <content type="html"><![CDATA[<p>Here are the results of an accessibility audit I did for the <a href="https://github.com/PyConLT/pyconlt.github.io/pull/12">PyCon Lithuania website</a>, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: <a href="https://www.youtube.com/watch?v=NH4VWUguxUw">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania’s website</a>.</p>
+
+<!-- more -->
+
+<iframe title="DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania’s website" width="560" height="315" src="https://www.youtube-nocookie.com/embed/NH4VWUguxUw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>I think the most problematic issue was with the animating banner on Safari, which made it completely impossible to navigate the page with a screen reader. Other than this, most issues were relatively minor.</p>
+
+<p>The main issues I didn’t get to are the ones with buttons / links – the fact having disabled buttons is confusing, and that there are lots of contrast issues with those disabled styles. The focus styles also have poor contrast for the buttons that are focusable.</p>
+
+<p>My recommended fix for these would be to completely remove any button that’s currently disabled from the page, so there is no confusion.</p>
+
+<p>Sections:</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=0s">00:00</a> Intro</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=40s">00:40</a> Audit methodology</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=109s">01:49</a> HTML5 validation</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=260s">04:20</a> Reviewing HTML templates</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=780s">13:00</a> Alt text for photos</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=1190s">19:50</a> Accessibility Insights automated checks</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=1290s">21:30</a> Checking landmarks</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=1380s">23:00</a> Color contrast checks</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=1515s">25:15</a> Checking headings</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=1605s">26:45</a> Using h123 for the document outline</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=1665s">27:45</a> Tab stops</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=1778s">29:38</a> Mobile support</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=1900s">31:40</a> Looping animations</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=1960s">32:40</a> Testing with VoiceOver in Safari</li>
+  <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=2160s">36:00</a> Performance issues with banner animation</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics]]></title>
+    <link href="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics"/>
+    <updated>2021-06-05T22:07:49+01:00</updated>
+    <id>https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics</id>
+    <content type="html"><![CDATA[<p>Here are the results of an accessibility audit I did for <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/issues/57">Django Postgres Metrics</a>, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: <a href="https://youtu.be/8pegTdRaUDg">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>.</p>
+
+<!-- more -->
+
+<iframe title="DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics" width="560" height="315" src="https://www.youtube-nocookie.com/embed/8pegTdRaUDg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="tldr-011515">TL;DR; <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=4515s">01:15:15</a></h2>
+
+<p>TL;DR; in video form: <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=4515s">01:15:15</a></p>
+
+<ul>
+  <li>Most issues come from Django for the UI, and the RTD theme for the documentation</li>
+  <li>Great effort on translations and RTL support! It’s wonderful to see this being done as a baseline</li>
+  <li>Very semantic tables markup, which definitely matters for the metrics’ display</li>
+  <li>Some issues from this package with dark mode support, which make the library potentially unusable for dark mode users. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/59">#59</a>.</li>
+  <li>There are a few improvements for screen reader users to be done here and there</li>
+  <li>Table sorting was particularly hard to follow with a screen reader, although I suspect this is the Django implementation</li>
+</ul>
+
+<h2 id="about-the-audit-000105">About the audit <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=65s">00:01:05</a></h2>
+
+<p>Scope:</p>
+
+<ul>
+  <li>HTML templates in GitHub</li>
+  <li>UI in the Django admin (minimal customisations)</li>
+  <li>Documentation in README</li>
+  <li>Documentation in Read the Docs (default sphinx-rtd theme)</li>
+</ul>
+
+<p>Methodology:</p>
+
+<ul>
+  <li>Automated tests with Accessibility Insights with Chrome</li>
+  <li>Keyboard navigation (tab stops)</li>
+  <li>Color contrast</li>
+  <li>Dark mode support</li>
+  <li>RTL support</li>
+  <li>Mobile support</li>
+  <li>Screen reader navigation (VoiceOver in Safari)</li>
+  <li>Other things picked up along the way</li>
+</ul>
+
+<h2 id="html-templates-000222">HTML templates <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=142s">00:02:22</a></h2>
+
+<p><code class="language-plaintext highlighter-rouge">index.html</code>:</p>
+
+<ul>
+  <li>There are a lot of links with the <code class="language-plaintext highlighter-rouge">title</code> attribute being used in. This can be announced multiple times by some screen readers, so I would suggest not using <code class="language-plaintext highlighter-rouge">title</code> wherever it matches the visible label of the link</li>
+  <li>Table markup for the navigation in <code class="language-plaintext highlighter-rouge">index.html</code> looks great, however this would be much quicker to navigate with a screen reader by using simpler markup, for example <code class="language-plaintext highlighter-rouge">ul</code> with a list item for each link.</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">table.html</code>:</p>
+
+<ul>
+  <li>Place the breadcrumb in a <code class="language-plaintext highlighter-rouge">&lt;nav aria-label="Breadcrumbs"&gt;&lt;/nav&gt;</code> landmark, so screen reader users can bypass it or reach it more easily</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">aria-current="page"</code> to the current page so it’s announced as such. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
+</ul>
+
+<h2 id="ui-000738">UI <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=458s">00:07:38</a></h2>
+
+<h3 id="automated-tests-with-accessibility-insights-with-chrome">Automated tests with Accessibility Insights with Chrome</h3>
+
+<ul>
+  <li>A lot of color contrast issues, but I believe they all come from Django itself</li>
+</ul>
+
+<h3 id="keyboard-navigation-001235">Keyboard navigation <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=755s">00:12:35</a></h3>
+
+<ul>
+  <li>Missing a skip link on all pages – Django issue</li>
+  <li>On metric pages, I found it a bit odd how the tab focus moves from the breadcrumb, to the package’s nav to the right, and then back to the metrics on the left. It’d be better to go straight from breadcrumb to the metrics’ tables.</li>
+  <li>Likely a Django issue – the tab order for sorting is unexpected (right-to-left)</li>
+</ul>
+
+<h3 id="color-contrast">Color contrast</h3>
+
+<ul>
+  <li>In the package’s views in the “POSTGRESQL METRICS” nav, there isn’t enough contrast between the “active” menu item and the other ones, so people won’t be able to tell which menu item is active. This is both for the text, and the “selected” indicator”. I would suggest adding an underline to the text. <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=1584s">00:26:24</a></li>
+</ul>
+
+<h3 id="dark-mode-001603">Dark mode <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=963s">00:16:03</a></h3>
+
+<ul>
+  <li>None of the package’s <code class="language-plaintext highlighter-rouge">ok</code>, <code class="language-plaintext highlighter-rouge">warning</code>, <code class="language-plaintext highlighter-rouge">critical</code>, <code class="language-plaintext highlighter-rouge">info</code> states work in dark mode. They make the table’s contents completely unreadable. A solution would be to use <code class="language-plaintext highlighter-rouge">@media (prefers-color-scheme: dark)</code> styles like Django does, however I would recommend another approach that doesn’t rely on background color as the color also won’t be picked up by blind users – it’d be better to represent those 4 states with an icon, that could then have a text alternative, or just a label. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/59">#59</a>.</li>
+</ul>
+
+<p>Illustration:</p>
+
+<p><a href="/images/blog/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics/django-postgres-metrics-dark-mode.png"><img src="/images/blog/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics/django-postgres-metrics-dark-mode.png" alt="Screenshot of four highlighted rows in Django Postgres Metrics in dark mode. The rows aren’t readable" /></a></p>
+
+<h3 id="rtl-support-001920">RTL support <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=1160s">00:19:20</a></h3>
+
+<p>😐 I did all of my testing without having configured the language in Django settings, forgetting Django uses this to set <code class="language-plaintext highlighter-rouge">LANGUAGE_BIDI</code> and load the correct stylesheet. As far as I can tell there are no issues here!</p>
+
+<h3 id="mobile-support-002415">Mobile support <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=1455s">00:24:15</a></h3>
+
+<p>(this is more “small browser” support really, I didn’t do any touch navigation testing)</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">urlize</code>d links cause the page to overflow and scroll in 2 directions at once. That’s bad. For this, and for screen readers, I’d recommend using proper link labels.</li>
+  <li>Tables also cause the page to overflow and scroll in 2 directions. It would be better if they overflowed the page but the overflow was scrollable for the table separately (wrap the table in a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> with <code class="language-plaintext highlighter-rouge">overflow: scroll</code>).</li>
+  <li>With the way tables resize currently, they cause some of the cells with long values to reflow, which makes big numbers harder to read in my opinion. Scroll would be better in this instance.</li>
+</ul>
+
+<h3 id="screen-reader-navigation-voiceover-with-safari-003000">Screen reader navigation (VoiceOver with Safari) <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=1800s">00:30:00</a></h3>
+
+<p>Dashboard:</p>
+
+<ul>
+  <li>Django issue – the views should be using ARIA landmarks to facilitate navigation.</li>
+  <li>Prefer displaying “POSTGRESQL METRICS” in TitleCase or lowercase as much as possible, rather than uppercase, as TTS is prone to mispronounce PostgreSQL if it’s all uppercase.</li>
+  <li>The “show” link need a more descriptive label for screen reader users (with <code class="language-plaintext highlighter-rouge">aria-label</code>) so they can be understood without the visual context the links are in on the page. Alternatively, remove those links, as they do the same thing as the link next to them that has a better label already. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
+  <li>Django issue – duplicate h1 heading</li>
+</ul>
+
+<p>Metrics views:</p>
+
+<ul>
+  <li>All of the custom views are missing a <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> matching the <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=915s">00:15:15</a>. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
+  <li>Prefer to use links with human-friendly labels over <code class="language-plaintext highlighter-rouge">urlize</code> URLs. These don’t announce very well with screen reader text-to-speech unless the user knows how to navigate word-by-word or character-by-character <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=678s">00:11:18</a></li>
+  <li>Django issue (?) I found the table ordering to be very confusing</li>
+  <li>Consider adding spaces around <code class="language-plaintext highlighter-rouge">=</code> signs in table captions so screen readers TTS have a better chance of pronouncing the text correctly</li>
+  <li>Currently the warning/info/ok/critical status are invisible for screen reader users. I’d suggesting adding a screen-reader only label, or an icon + label</li>
+  <li>Some of the larger numbers in the tables are pronounced as identifiers (“one three five”) rather than numbers (“one hundred thirty five”). Consider adding numeric separators to make numbers more readable for humans and text-to-speech.</li>
+</ul>
+
+<h3 id="other-things-picked-up-along-the-way">Other things picked up along the way</h3>
+
+<ul>
+  <li>The bigger values in tables are picked up by my browser as telephone numbers. This might warrant a <code class="language-plaintext highlighter-rouge">&lt;meta name="format-detection" content="telephone=no"/&gt;</code>.</li>
+</ul>
+
+<h2 id="docs-in-readme-005315">Docs in README <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=3195s">00:53:15</a></h2>
+
+<ul>
+  <li>The project’s name <code class="language-plaintext highlighter-rouge">django-postgres-metrics</code> is being read letter-by-letter by VoiceOver, unless I manually switch to word-by-word navigation. In the main heading, I would suggest switching to <code class="language-plaintext highlighter-rouge">Django Postgres Metrics</code> to make it more likely for people to understand what the project is.</li>
+  <li>The badges’ alt text should match the text on the images. This is likely impossible, but I’d suggest changing alt text to match the visible text more closely. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
+  <li>Python and Django versions badges should link to some place those versions are available in text format (or add the versions hard-coded in the alt text). Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
+  <li>It would be nice to use more descriptive alt text for the screenshot. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
+  <li>The “AT” and “DOT” in the email address are read as acronyms. Would be nice to replace with lowercase variants so they are read as words. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
+</ul>
+
+<h2 id="documentation-in-read-the-docs-default-sphinx-rtd-theme-010045">Documentation in Read the Docs (default sphinx-rtd theme) <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=3645s">01:00:45</a></h2>
+
+<h3 id="automated-tests-with-accessibility-insights-with-chrome-1">Automated tests with Accessibility Insights with Chrome</h3>
+
+<ul>
+  <li>Too many issues for me to count, all with the theme itself I expect</li>
+</ul>
+
+<h3 id="keyboard-navigation-tab-stops">Keyboard navigation (tab stops)</h3>
+
+<ul>
+  <li>Missing a skip link</li>
+  <li>The RTD version picker is impossible to reach</li>
+</ul>
+
+<h3 id="screen-reader-navigation-voiceover-with-safari-010545">Screen reader navigation (VoiceOver with Safari) <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=3945s">01:05:45</a></h3>
+
+<ul>
+  <li>A lot of RTD issues at the theme level</li>
+  <li>RTD ads are particularly poorly done</li>
+  <li>There are two <code class="language-plaintext highlighter-rouge">h1</code> in the index page. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
+  <li>The RTD version picker is reachable, but impossible to open</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DjangoCon Europe 2021 field notes]]></title>
+    <link href="https://thib.me/djangocon-europe-field-notes"/>
+    <updated>2021-06-04T07:43:49+01:00</updated>
+    <id>https://thib.me/djangocon-europe-field-notes</id>
+    <content type="html"><![CDATA[<p>Notes from the conference.</p>
+
+<!-- more -->
+
+<p><a href="https://github.com/mxsasha/lessobviouschecklist">https://github.com/mxsasha/lessobviouschecklist</a></p>
+
+<h2 id="climate">Climate</h2>
+
+<p><a href="https://www.youtube.com/watch?v=upiK4du5vUI">https://www.youtube.com/watch?v=upiK4du5vUI</a></p>
+
+<p><a href="https://cloud.google.com/sustainability/region-carbon">https://cloud.google.com/sustainability/region-carbon</a>
+<a href="https://pypi.org/project/energyusage/">https://pypi.org/project/energyusage/</a>
+<a href="https://www.cloudcarbonfootprint.org/docs/gcp">https://www.cloudcarbonfootprint.org/docs/gcp</a>
+<a href="https://codeascraft.com/2020/04/23/cloud-jewels-estimating-kwh-in-the-cloud/">https://codeascraft.com/2020/04/23/cloud-jewels-estimating-kwh-in-the-cloud/</a>
+<a href="https://www.cloudcarbonfootprint.org/docs/methodology">https://www.cloudcarbonfootprint.org/docs/methodology</a>
+<a href="https://github.com/hubblo-org/scaphandre">https://github.com/hubblo-org/scaphandre</a>
+<a href="https://pypi.org/project/pyJoules">https://pypi.org/project/pyJoules</a></p>
+
+<p><a href="https://github.com/responsibleproblemsolving/energy-usage/issues/16">https://github.com/responsibleproblemsolving/energy-usage/issues/16</a></p>
+
+<h2 id="indexes">Indexes</h2>
+
+<p>db_index=True on fields</p>
+
+<p>class-based indexes on classes</p>
+
+<p>Functional indexes?</p>
+
+<p><a href="https://adamj.eu/tech/2020/07/27/how-to-modernize-your-django-index-definitions/">https://adamj.eu/tech/2020/07/27/how-to-modernize-your-django-index-definitions/</a></p>
+
+<h2 id="database-migrations">Database migrations</h2>
+
+<p><a href="https://speakerdeck.com/markush/writing-safe-database-migrations-djangocon-europe-2021">https://speakerdeck.com/markush/writing-safe-database-migrations-djangocon-europe-2021</a></p>
+
+<h2 id="hunting-performance-in-django-code">Hunting Performance in Django code</h2>
+
+<p>Tracing profilers vs sampling profilers</p>
+
+<p>Good overview of different profiler options for Python (for example the ones that support multi-threading)</p>
+
+<p><a href="https://github.com/plasma-umass/scalene">https://github.com/plasma-umass/scalene</a></p>
+
+<h2 id="dd-with-graphql-and-django">DD with GraphQL and Django</h2>
+
+<p><a href="https://www.cosmicpython.com/">https://www.cosmicpython.com/</a></p>
+
+<p>Leaner framework could be better? (FastAPI?)</p>
+
+<h2 id="django--sphinx">Django + Sphinx</h2>
+
+<h2 id="clean-architecture-with-django">Clean architecture with Django</h2>
+
+<p>Best use case for Django</p>
+
+<p>Dependency inversion</p>
+
+<h2 id="htmx-frontend-revolution">HTMX: Frontend Revolution</h2>
+
+<h2 id="absolutely-no-javascript">Absolutely no JavaScript</h2>
+
+<p><a href="https://github.com/adamghill/djangocon-eu-2021-conference-talk">https://github.com/adamghill/djangocon-eu-2021-conference-talk</a></p>
+
+<h2 id="sprint">Sprint</h2>
+
+<p><a href="https://github.com/django/django/pull/14391">https://github.com/django/django/pull/14391</a>
+<a href="https://github.com/django/django/pull/14389">https://github.com/django/django/pull/14389</a></p>
+
+<p><a href="https://github.com/aeltanawy/Receptor">https://github.com/aeltanawy/Receptor</a></p>
+
+<hr />
+
+<p><a href="https://github.com/adamghill/djangocon-eu-2021-conference-talk">https://github.com/adamghill/djangocon-eu-2021-conference-talk</a></p>
+
+<p><a href="https://code.djangoproject.com/ticket/32819">https://code.djangoproject.com/ticket/32819</a>
+<a href="https://code.djangoproject.com/ticket/32820">https://code.djangoproject.com/ticket/32820</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PyCon US 2021: Web Accessibility ♥ Python]]></title>
+    <link href="https://thib.me/pycon-us-2021-python-accessibility-ftw"/>
+    <updated>2021-05-13T07:43:49+01:00</updated>
+    <id>https://thib.me/pycon-us-2021-python-accessibility-ftw</id>
+    <content type="html"><![CDATA[<p>This is a poster presentation for <a href="https://us.pycon.org/2021/">PyCon US 2021</a>, which covers two separate projects:</p>
+
+<ul>
+  <li><a href="https://www.curlylint.org/">Curlylint</a>, an experimental linter for HTML templates focusing on accessibility issues.</li>
+  <li><a href="https://kontrasto.netlify.app/">Kontrasto</a>, a library automatically improving the contrast of text over images.</li>
+</ul>
+
+<!-- more -->
+
+<ul>
+  <li>Demo site: <a href="https://accessibility-loves-python.vercel.app/">accessibility-loves-python.vercel.app</a></li>
+  <li>GitHub: <a href="https://github.com/thibaudcolas/accessibility-loves-python">thibaudcolas/accessibility-loves-python</a></li>
+</ul>
+
+<p>The poster explains what the two projects are, and offers interactive demos. For Curlylint, the demo allows linting any templates with basic configuration. For Kontrasto, users can upload an image and get the Kontrasto results.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PyCon US 2021: Building accessibility into open-source projects]]></title>
+    <link href="https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects"/>
+    <updated>2021-05-09T16:03:21+01:00</updated>
+    <id>https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects</id>
+    <content type="html"><![CDATA[<p>This is a lightning talk I gave at PyCon US 2021’s <a href="https://us.pycon.org/2021/summits/maintainers/">Maintainers Summit</a>, intended for an audience of project maintainers / open-source contributors.</p>
+
+<!-- more -->
+
+<p>Video:</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9XI-8ZvU2w0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Slides:</p>
+
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/1qjHKEWoExYY-fG4qbRBQP_EN5fxs_8z7csVIpy9bWlg/edit">Google Slides: PyCon US 2021 - Building accessibility into open-source projects</a></li>
+  <li><a href="https://drive.google.com/file/d/1hN554kNicuEvBcWK_VsiRazBTfbBGt6X/view">PDF: PyCon US 2021 - Building accessibility into open-source projects</a></li>
+</ul>
+
+<h2 id="transcript">Transcript</h2>
+
+<p>Hi PyCon, thanks for having me, I’m Thibaud my pronouns are he/him and I’m a developer at Torchbox in the UK.</p>
+
+<p>Today I’m here to talk to you about building accessibility into open source projects, and in particular coming to you with our learnings from Wagtail; I’m a core developer of this CMS called Wagtail built on Python and Django and I also contribute to Django’s accessibility team so I’m here to share with you the learnings from those two projects.</p>
+
+<h3 id="a-wagtail-story">A Wagtail story</h3>
+
+<p>So Wagtail is a CMS that people use to build websites.</p>
+
+<h4 id="why-accessibility-matters-to-us">Why accessibility matters to us</h4>
+
+<p>When it comes to why we care about accessibility there are essentially two reasons.</p>
+
+<p>One of them is we want the Wagtail admin to be accessible to as many people as possible and the other is we want the sites actually built with Wagtail to be as accessible as possible so these are the two main reasons for end users.</p>
+
+<h4 id="other-reasons-to-care">Other reasons to care</h4>
+
+<p>And then as a project there are definitely a few more reasons – the big one is legislation and procurement our clients and people who pick Wagtail as a CMS definitely have very specific expectations from projects and they would pick one or the other based on requirements like this.
+so yeah there is legislation in the US, in the EU, and really all around the world it’s not just those two countries.</p>
+
+<p>One thing we do have going for ourselves is that all of those laws are based on the same standard called WCAG 2.1, the AA level being the most recent and widespread version of it.</p>
+
+<h4 id="its-not-just-wagtail">It’s not just Wagtail</h4>
+
+<p>And yeah it’s not just Wagtail obviously it’s not just CMSes, all types of online tools, apps, sites we build have to follow those same standards.</p>
+
+<p>And really as developers I want to make the points that this isn’t just those projects it’s also the building blocks of those projects, the frameworks, the database modeling, the development tools, even the READMEs have to follow those same standards.</p>
+
+<p>But yeah I don’t want this to be too negative either, so let’s look at some practical examples of where accessibility matters in the Python ecosystem in particular.</p>
+
+<h3 id="where-accessibility-matters">Where accessibility matters</h3>
+
+<p>I went through the <a href="https://hugovk.github.io/top-pypi-packages/">top 1000 Python packages on PyPI</a> and thought I’d pick a few examples of where you might not think of accessibility but actually there are very clear considerations to be had.</p>
+
+<h4 id="data-science">Data science</h4>
+
+<p>So the first one is data science, and alt text for dataviz.</p>
+
+<p>As part of studying data you will very likely have to visualise it at some point and that might include producing images that you do want to be accessible to people who can’t actually see the visuals.</p>
+
+<p>Of course they might not get the whole interactivity and interaction that might not be the point of your exercise but just having some form of alternative text would be useful.</p>
+
+<h4 id="data-science-example-alt-text">Data science example: alt text</h4>
+
+<p>So this example in particular, that comes from Matplotlib and the alt text they have defined in their example basically just restates the caption at the top of the chart.</p>
+
+<p>Which is, well, definitely better than nothing, but to the right I have an example of what it might look like for you to consider actually going through the whole data for people who can’t see the visuals.</p>
+
+<p>And yeah not saying this is always appropriate again but definitely something to consider and if you happen to work with one of those dataviz projects it’s important I think for this to be considered in the docs in the actual framework of how you create the visualizations, and yeah just making sure that this is taken into account.</p>
+
+<h4 id="web-development">Web development</h4>
+
+<p>Another important part of the Python ecosystem is web development with big frameworks that I’m sure you all have heard of before, and templating languages, and here as well, basically even though those frameworks might not always be very opinionated about HTML they do have for example code snippets in their docs that really should take accessibility into account.</p>
+
+<p>So it’s very common for me to look at those documentation code snippets and see very basic HTML issues.</p>
+
+<h4 id="web-development-examples-html-bad-practices">Web development examples: HTML bad practices</h4>
+
+<p>So for example to the left here this is missing a “lang” attribute on the HTML tag.</p>
+
+<h4 id="pdf-generation">PDF generation</h4>
+
+<p>And here a third topic in Python in particular is PDF generation, there are lots of those projects out there and something that people might overlook is that even though the source for those PDFs is HTML, the PDF itself might not be structured at all and it might not be usable by people with screen readers, so the key feature here that I have to look for is called “tagged PDFs” and it’s a requirement that very few of those projects actually have.</p>
+
+<p>Yeah I’m trying my best not to have this be too negative, so just to finish on a more positive note I wanted to showcase different ways you could foster those accessibility contributions on your own projects.</p>
+
+<h3 id="fostering-contributions">Fostering contributions</h3>
+
+<h4 id="define-your-target">Define your target</h4>
+
+<p>The first thing to do is obviously to pick a target for what you support.</p>
+
+<p>WCAG 2.1 at the AA level being the obvious thing to start from, and just not stop at picking the target but actually documenting it and documenting practical code review and testing steps, I think it’s very important.</p>
+
+<p>I have added a few examples of this should you want to look into this further.</p>
+
+<h4 id="leverage-automated-tools">Leverage automated tools</h4>
+
+<p>And yeah now that you have this target actually doing some testing, there are lots of great automated tools out there they won’t find all of the issues but they definitely find plenty enough to get going with so I’d highly recommend looking into this.</p>
+
+<ul>
+  <li><a href="https://www.deque.com/axe/">Axe</a> – Accessibility rules engine with support for WCAG &amp; Section 508</li>
+  <li><a href="https://accessibilityinsights.io/docs/en/web/overview">Accessibility Insights</a> – Browser extension with Axe and more</li>
+  <li><a href="https://pa11y.org/">Pa11y</a> – Command line tool for accessibility checks with Axe &amp; HTML_CS</li>
+  <li><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a>, <a href="https://github.com/maranran/eslint-plugin-vue-a11y">eslint-plugin-vue-a11y</a>, <a href="https://github.com/YozhikM/stylelint-a11y">stylelint-a11y</a></li>
+</ul>
+
+<h4 id="leverage-automated-tools-django-example">Leverage automated tools: Django example</h4>
+
+<p>And this is an example from Django in particular where we have this very big report that takes screenshots and logs all of the accessibility issues for different parts of the Django admin and you can just look at this and get a sense of a snapshot of how Django itself is doing.</p>
+
+<ul>
+  <li>Pa11y example: <a href="https://github.com/thibaudcolas/django_admin_tests">github.com / thibaudcolas / django_admin_tests</a></li>
+</ul>
+
+<h4 id="manual-audits">Manual audits</h4>
+
+<p>And back on the Wagtail side we tend to invest more into manual audits just because we have the expertise to do this so these are definitely much more complex to put together and I won’t be talking about this much further but if you’re interested I can definitely talk to that a bit more.</p>
+
+<h4 id="for-larger-projects-have-an-accessibility-team">For larger projects: have an accessibility team</h4>
+
+<p>And yes for larger projects I definitely recommend having a dedicated team for this of subject matter experts so we have the example of the Wagtail team here but yeah for example Jupyter notebooks as well do have a team like this that looks after the accessibility of the actual notebooks which as they are used in classroom environments is very important.</p>
+
+<p><a href="https://wagtail.io/blog/accessibility-team-reloaded/">Wagtail’s team</a> = 5 people committed for 6 months. Thank you Storm, Jesse, Kyle, Scott!</p>
+
+<h3 id="open-source-can-lead-the-way">Open-source can lead the way</h3>
+
+<p>So the last point I want to make really is that there are a few areas in software development like security for example where open source leads the way and shows us how it’s meant to be done basically, and I really think accessibility could be one of those areas, it really is something that matters on all projects no matter their size, and yeah that matters to a huge number of people that developers often underestimate just the sheer size of the people who can benefit from this, and yes there are well-defined standards and readily-available tools.</p>
+
+<h3 id="thank-you-️">Thank you! ❤️</h3>
+
+<p>Thank you I hope you enjoyed this and I’ll definitely be available later on to answer any questions.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Curlylint: Quality-of-life improvements]]></title>
+    <link href="https://thib.me/curlylint-quality-of-life-improvements"/>
+    <updated>2021-04-25T10:22:49+01:00</updated>
+    <id>https://thib.me/curlylint-quality-of-life-improvements</id>
+    <content type="html"><![CDATA[<p>Curlylint v0.13.0 is out. It’s a relatively minor release, but comes with a few nice-to-haves for users, and a lot of behind-the-scenes project changes.</p>
+
+<!-- more -->
+
+<h2 id="modern-python-support">Modern Python support</h2>
+
+<p>Curlylint now officially supports Python 3.9, and (tentatively) Python 3.10, based on the 6th alpha release. From now on, you can expect support for all Python versions <a href="https://devguide.python.org/#status-of-python-branches">actively supported by CPython maintainers</a>. In the future, this will also mean actively removing support for Python versions that reach their scheduled end-of-life.</p>
+
+<h2 id="removed-extras-for-development-dependencies">Removed extras for development dependencies</h2>
+
+<p>Python packaging is very messy. I’ve recently started using the <a href="https://python-poetry.org/">Poetry</a> package manager at work, primarily for the benefit of having lockfiles to pin transitive dependencies on application-style projects (a must, in my opinion). Here is an excerpt of what installing curlylint looks like in a <code class="language-plaintext highlighter-rouge">poetry.lock</code>:</p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[[package]</span><span class="err">]</span>
+<span class="py">name</span> <span class="p">=</span> <span class="s">"curlylint"</span>
+<span class="py">version</span> <span class="p">=</span> <span class="s">"0.12.2"</span>
+<span class="py">description</span> <span class="p">=</span> <span class="s">" Experimental HTML templates linting for Jinja, Nunjucks, Django templates, Twig, Liquid"</span>
+<span class="py">category</span> <span class="p">=</span> <span class="s">"main"</span>
+<span class="py">optional</span> <span class="p">=</span> <span class="s">false</span>
+<span class="py">python-versions</span> <span class="p">=</span> <span class="s">"&gt;=3.6"</span>
+
+<span class="nn">[package.dependencies]</span>
+<span class="py">attrs</span> <span class="p">=</span> <span class="s">"&gt;=17.2.0"</span>
+<span class="py">click</span> <span class="p">=</span> <span class="s">"&gt;=6.5"</span>
+<span class="py">dataclasses</span> <span class="p">=</span> <span class="s">{version = "&gt;=0.6", markers = "python_version &lt; </span><span class="se">\"</span><span class="s">3.7</span><span class="se">\"</span><span class="s">"}
+parsy = "1.1.0"</span>
+<span class="py">pathspec</span> <span class="p">=</span> <span class="s">"&gt;=0.6,&lt;1"</span>
+<span class="py">toml</span> <span class="p">=</span> <span class="s">"&gt;=0.9.4"</span>
+
+<span class="nn">[package.extras]</span>
+<span class="py">dev</span> <span class="p">=</span> <span class="s">["black (==19.10b0)", "flake8 (==3.8.4)", "mypy (==0.812)", "pytest (==6.2.2)", "coverage (==5.4)"]</span>
+</code></pre></div></div>
+
+<p>I find this last line very puzzling – there really should be no need for dependencies intended only for development to be visible in the published package. I don’t want curlylint’s development dependencies changing from release to release to cause noise in upgrade diffs, hence why the <code class="language-plaintext highlighter-rouge">dev</code> extra has been removed.</p>
+
+<p>It’s worth saying Poetry has otherwise been a pleasure to work with, with only a few minor inconveniences like this one. I would happily recommend it to people wanting more out of their Python package management.</p>
+
+<h2 id="new---template-tags-cli-flag">New <code class="language-plaintext highlighter-rouge">--template-tags</code> CLI flag</h2>
+
+<p>As the <a href="https://www.curlylint.org/docs/command-line-usage#--template-tags"><code class="language-plaintext highlighter-rouge">--template-tags</code> documentation</a> now states, this makes Curlylint aware of custom tags used in templates, so the parser can understand they contain HTML content to go through.</p>
+
+<p>This option was previously only available via a TOML configuration file, via the (now deprecated) <code class="language-plaintext highlighter-rouge">jinja-custom-elements-names</code> / <code class="language-plaintext highlighter-rouge">jinja_custom_elements_names</code> setting. The new setting works the same, but can also be set via CLI flags.</p>
+
+<h2 id="behind-the-scenes-changes">Behind-the-scenes changes</h2>
+
+<p>There really is only one I want to highlight – improvements to Curlylint’s test suite, which have resulted in a <a href="https://coveralls.io/github/thibaudcolas/curlylint?branch=main">14% increase in test coverage</a>. While test coverage percentages generally don’t mean much, in this case this means:</p>
+
+<ul>
+  <li>The command line interface now has unit tests. While relatively basic in the current iteration, they should be very easy to add to.</li>
+  <li>The parser has more unit tests, and they are now in line with the rest of the test suite.</li>
+</ul>
+
+<p><a href="https://coveralls.io/github/thibaudcolas/curlylint"><img src="/images/blog/curlylint-quality-of-life-improvements/coverage-over-time.png" alt="Screen capture of the Coveralls coverage score over time as an area chart, from 59% in early March to 74% now" /></a></p>
+
+<blockquote>
+  <p><a href="https://coveralls.io/">Coveralls</a> shows coverage increasing from 59.39% in early March to 74% in late April.</p>
+</blockquote>
+
+<p>Having comprehensive unit tests really matters to me as a maintainer, and from now on it should be much more realistic to expect all changes to the project to come with corresponding unit tests.</p>
+
+<h2 id="up-next">Up next</h2>
+
+<p>There are a lot of <a href="https://github.com/thibaudcolas/curlylint/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Aparser">parser bugs</a> I will now feel much more comfortable approaching, due to having a way to easily write tests for them.</p>
+
+<p>Short-term, I want to make sure to get to all of the open pull request, hopefully fully clearing the backlog. I can see people are responding very well to Curlylint despite its experimental nature, and are eager to help making it more useful:</p>
+
+<ul>
+  <li><a href="https://github.com/thibaudcolas/curlylint/pull/53">#53 Optional HTML container parsing for if-else-endif type code</a></li>
+  <li><a href="https://github.com/thibaudcolas/curlylint/pull/75">#75 Add test for unresolved missing alt attribute inside django block (#72)</a></li>
+  <li><a href="https://github.com/thibaudcolas/curlylint/pull/76">#76 Use types_or directive for hook instead of files</a></li>
+</ul>
+
+<p>For me, the most immediate next step will be presenting Curlylint at <a href="https://us.pycon.org/2021/">PyCon US 2021</a>! I hope to get critical feedback on the tool, and am also working on an “online playground” version to try lint templates without installing anything, we should make it simpler for people to try out the linter.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[2021 web conferences accepting talks]]></title>
+    <link href="https://thib.me/2021-web-conferences-accepting-talks"/>
+    <updated>2021-03-04T07:42:03+00:00</updated>
+    <id>https://thib.me/2021-web-conferences-accepting-talks</id>
+    <content type="html"><![CDATA[<p>Here is a small list of conferences I put together for 2021, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!</p>
+
+<!-- more -->
+
+<h2 id="djangocon-eu-2021">DjangoCon EU 2021</h2>
+
+<p>02-06 June 2021, remote. <a href="https://2021.djangocon.eu/talks/cfp/">CFP under way</a>, ending 2020-04-01 23h59 UTC.</p>
+
+<p>Also <a href="https://www.djangoproject.com/weblog/2021/feb/16/djangocon-europe-2021-announcement/">looking for volunteers</a> to help organise &amp; run the event.</p>
+
+<h2 id="jsconf-budapest-2021">JSConf Budapest 2021</h2>
+
+<p>23-24 September 2021, Budapest. <a href="https://jsconfbp.com/call-for-speakers-2021/">CFP under way</a>, ending March 31th 2021.</p>
+
+<h2 id="djangocon-us-2021">DjangoCon US 2021</h2>
+
+<p>October 2021, remote. <a href="https://2021.djangocon.us/">No CFP announced yet</a>.</p>
+
+<h2 id="pycon-uk-2021">PyCon UK 2021</h2>
+
+<p>No date announced except for “2021”. Cardiff. <a href="https://2020.pyconuk.org/">No CFP announced yet</a>.</p>
+
+<h2 id="nordic-js-2021">Nordic JS 2021</h2>
+
+<p>October 2021, Stockholm. <a href="https://nordicjs.com/call-for-speakers">CFP under way</a>, no deadline.</p>
+
+<h2 id="mixit">MiXiT</h2>
+
+<p>18-20 May 2021, Lyon, France. Looks like there might not be <a href="https://mixitconf.org/">any CFP this year</a>.</p>
+
+<h2 id="halfstack-london-2021">HalfStack London 2021</h2>
+
+<p>November 2021, London. <a href="https://halfstackconf.com/london/">CFP under way</a>, no deadline.</p>
+
+<h2 id="halfstack-phoenix-2022">HalfStack Phoenix 2022</h2>
+
+<p>January 2022, Phoenix. <a href="https://halfstackconf.com/phoenix/">CFP under way</a>, ending 15/09/2021.</p>
+
+<h2 id="halfstack-newquay-2022">HalfStack Newquay 2022</h2>
+
+<p>July 2022, Newquay (/ˈnjuːki/) (UK). <a href="https://halfstackconf.com/newquay/">CFP under way</a>, no deadline.</p>
+
+<h2 id="halfstack-new-york-2022">HalfStack New York 2022</h2>
+
+<p>August 2022, New York. <a href="https://halfstackconf.com/newyork/">CFP under way</a>, ending 30/04/2022.</p>
+
+<h2 id="halfstack-vienna-2022">HalfStack Vienna 2022</h2>
+
+<p>September 2022, Vienna. <a href="https://halfstackconf.com/vienna/">CFP under way</a>, ending 31/05/2022.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Accessibility team reloaded]]></title>
+    <link href="https://thib.me/wagtail-accessibility-team-reloaded"/>
+    <updated>2021-02-24T07:42:03+00:00</updated>
+    <id>https://thib.me/wagtail-accessibility-team-reloaded</id>
+    <content type="html"><![CDATA[<p>After <a href="https://wagtail.io/blog/announcing-wagtail-sub-teams/">6 months of operations</a>, we reflect on the progress our <a href="https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility">accessibility team</a> has made, and go on the lookout for new contributors.</p>
+
+<!-- more -->
+
+<h2 id="progress-to-date">Progress to date</h2>
+
+<p>Early on, <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team#2020-07-17">we chose</a> to give priority to improvements we could make to sites built with Wagtail, rather than the Wagtail admin. Practically, this meant:</p>
+
+<ul>
+  <li>Putting together <a href="https://docs.wagtail.io/en/latest/advanced_topics/accessibility_considerations.html">Wagtail’s accessibility considerations documentation</a>, as most of the accessibility issues we identified were either dependent on how Wagtail is used, or could be worked around by implementers.</li>
+  <li>From this list, we also created a <a href="https://github.com/wagtail/wagtail/projects/10">backlog of known accessibility issues</a>, which we would then proceed to fixing.</li>
+</ul>
+
+<p>Along the way, we also kept working on the <a href="https://github.com/wagtail/wagtail/issues/6107">SVG icons</a> refactoring for the admin, bit by bit.</p>
+
+<h2 id="team-operations">Team operations</h2>
+
+<p>We ran a short <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team#2021-01-22----team-retrospective">retrospective</a> to reflect on the team’s way of working over the last 6 months.</p>
+
+<ul>
+  <li>There were a total of 5 people involved at some point over the 6 months (Scott, Andreas, Nick, Helen, and Thibaud), but only 2 people attended each meeting on average. Not as much as we’d ideally want to.</li>
+  <li>We met 9 times, for 30min each, scheduled once every two weeks.</li>
+  <li>Overall we’re happy with what we’ve achieved and how the team works.</li>
+  <li>We were keen to do more automated tests and manual auditing but didn’t get around to it.</li>
+</ul>
+
+<h2 id="the-future">The future</h2>
+
+<p>There are a few changes we will want to see over the next 6-month tenure of the team.</p>
+
+<p><strong>We’ll want to do a new, comprehensive accessibility audit of Wagtail</strong>, either for WCAG 2.2 AA or ATAG 2.0. We want to have a clear, public record of how we’re doing.</p>
+
+<p>We’ll review our contribution guidelines <strong>so accessibility is part and parcel of making changes to Wagtail</strong>.</p>
+
+<p>And we’ll also investigate having <strong>automated accessibility tests built into Wagtail</strong>. <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a> is one of the most popular third-party packages out there, and we want to double down on having this be one of Wagtail’s strengths.</p>
+
+<hr />
+
+<h3 id="we-also-want-to-involve-more-people">We also want to involve more people</h3>
+
+<p>There’s only so much we can do with two to three of us actively involved – ideally we’d want a team twice that size! All are welcome regardless of skill level or background, and the time commitment is very reasonable. We’re particularly keen to work with people who:</p>
+
+<ul>
+  <li>Have personal experience of access and functional needs, or who are regular users of assistive technologies.</li>
+  <li>Work on User Experience, design, or content – and can help us understand the needs of our users.</li>
+</ul>
+
+<p>And of course web developers who want to have a practical impact on making the web more accessible!</p>
+
+<p>Does this sound like your kind of jam? If you’re keen to learn more, <a href="https://github.com/wagtail/wagtail/wiki/Slack">reach out to us on Slack</a> in #accessibility.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ATAG 2.0 getting started resources]]></title>
+    <link href="https://thib.me/atag-getting-started-resources"/>
+    <updated>2021-01-06T21:42:03+00:00</updated>
+    <id>https://thib.me/atag-getting-started-resources</id>
+    <content type="html"><![CDATA[<p>There aren’t many resources out there about <a href="https://www.w3.org/TR/ATAG20/">ATAG</a>. Here are the ones I have found and occasionally come back to.</p>
+
+<!-- more -->
+
+<h2 id="why-do-we-need-this">Why do we need this?</h2>
+
+<p>I often hear people question whether ATAG really is applicable to <code class="language-plaintext highlighter-rouge">&lt;insert name of tool&gt;</code>. In my experience the answer has so far always been “yes”. Here’s a quick step by step:</p>
+
+<ol>
+  <li>Does the tool allow creating content for the web? (any editing of content visible on a website)</li>
+  <li>That content needs to be accessible.</li>
+  <li>So the tool needs to make it possible to create accessible content.</li>
+</ol>
+
+<p>It’s as simple as that, regardless of whether the “tool” is a CMS, a text editor, an admin panel, or just a form with a few plain-text fields.</p>
+
+<p>Mitchell Evan also summarizes the need for ATAG in his excellent talk <a href="https://wpaccessibilityday.org/talks/if-its-true-it-aint-bragging-choosing-a-cms-for-accessibility/">If it’s true it ain’t bragging! Choosing a CMS for accessibility</a>:</p>
+
+<blockquote>
+  <p>Authoring Tool Accessibility Guidelines (ATAG): Who needs them?</p>
+
+  <ul>
+    <li>Nobody — because no law or regulation directly requires ATAG.</li>
+    <li><strong>Everybody — because ATAG reduces your risk of an inaccessible website.</strong></li>
+  </ul>
+</blockquote>
+
+<p>So – yes, there is no compliance requirement. But it’s no less relevant of a standard, and it is the de-facto goalpost for all authoring tools who care about accessibility out there. Oh and it will likely <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">be part of WCAG 3.0</a>, which will likely be a compliance requirement in the future.</p>
+
+<h2 id="official-resources">Official resources</h2>
+
+<p>There are very few unfortunately.</p>
+
+<ul>
+  <li><a href="https://www.w3.org/WAI/atag/report-tool/">ATAG report tool</a> is the official ATAG report generator.</li>
+  <li><a href="https://github.com/w3c/wai-authoring-tools">WAI Authoring Tools</a> is a very promising way to explore how different tools comply with ATAG, unfortunately the project seems to have stalled halfway through.
+    <ul>
+      <li>In particular, this project has a list of <a href="https://wai-authoring-tools.netlify.app/authoring-tools/selecting#features">accessibility features in authoring tools</a> which makes for a very good introduction to ATAG.</li>
+    </ul>
+  </li>
+  <li><a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI Guide</a> is a W3C project co-funded by the EU’s Horizon 2020 program, that might produce more resources in the future.</li>
+</ul>
+
+<h2 id="research">Research</h2>
+
+<p>There are a few research teams working on authoring tools’ accessibility. Here is the work that stood out the most for me.</p>
+
+<ul>
+  <li><a href="https://accessibilitycluster.com/">Accessibility Cluster</a> is another EU research project currently under way to look at accessibility in CMSes. There are interesting resources available from the project pilot, unfortunately doesn’t go very far beyond what ATAG already states:
+    <ul>
+      <li><a href="https://www.funka.com/en/projekt/we4authors/we4authors-main-activities-and-results/workshops-on-accessible-content-management-systems/workshops/">Workshops results</a></li>
+      <li><a href="https://www.funka.com/en/projekt/we4authors/we4authors-main-activities-and-results/accessibility-guidelines-for-the-cms-community-suppliers-and-public-governments/">Guidelines for stakeholders</a></li>
+      <li>Report for CMS tools in particular (but could apply to any kind of web publishing): <a href="https://www.funka.com/contentassets/c43f6521e7354c9a8f82e62402f10aad/guidelines_for_authoring_tools_producers.pdf">Guidelines for authoring tools producers</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.researchgate.net/profile/Tania_Acosta4/publication/322250312_Method_for_Accessibility_Assessment_of_Online_Content_Editors/links/5d6600faa6fdccc32cd67dbd/Method-for-Accessibility-Assessment-of-Online-Content-Editors.pdf">Method for accessibility assessment of online content editors (preprint)</a> covers which WCAG guidelines should likely be considered when evaluating ATAG for a CMS.</li>
+</ul>
+
+<h2 id="drupal-and-wordpress">Drupal and WordPress</h2>
+
+<p>In the CMS world, Drupal and WordPress have the most established resources when it comes to accessibility, and ATAG in particular.</p>
+
+<p>Drupal:</p>
+
+<ul>
+  <li><a href="https://www.drupal.org/docs/accessibility">Accessibility in Drupal</a></li>
+  <li><a href="https://www.drupal.org/node/2034909">Drupal - Track progress in ATAG 2.0 conformance</a>
+    <ul>
+      <li>Out of date but still interesting: <a href="https://groups.drupal.org/node/164389">Drupal compliance overview of ATAG 2.0</a></li>
+    </ul>
+  </li>
+  <li><a href="https://medium.com/@mgifford/web-accessibility-atag-drupal-8-4132bf3724ea">Web Accessibility, ATAG &amp; Drupal 8</a></li>
+  <li>Talk: <a href="https://drupal.tv/index.php/external-video/2017-08-26/why-we-should-get-excited-about-atag-20">Why We Should Get Excited About ATAG 2.0</a></li>
+</ul>
+
+<p>WordPress:</p>
+
+<ul>
+  <li><a href="https://wpaccessibilityday.org/">WP Accessibility Day</a>
+    <ul>
+      <li><a href="https://wpaccessibilityday.org/talks/your-cms-is-an-accessibility-assistant/">Your CMS is an Accessibility Assistant</a>, <a href="https://youtu.be/V0yJ_qJBvoc?t=7775">video</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.wpcampus.org/blog/2019/05/gutenberg-audit-results/">WPCampus releases results of the Gutenberg accessibility audit</a></li>
+</ul>
+
+<h2 id="other-platforms">Other platforms</h2>
+
+<p>There are a few other authoring tools that have some accessibility / ATAG-relevant resources:</p>
+
+<ul>
+  <li><a href="https://www.wix.com/accessibility">Wix accessibility tools &amp; guides</a></li>
+  <li><a href="https://help.surveymonkey.com/articles/en_US/kb/Accessibility-at-SurveyMonkey">Accessibility at SurveyMonkey</a></li>
+  <li>One I put together for Wagtail: <a href="https://docs.wagtail.io/en/latest/advanced_topics/accessibility_considerations.html">Wagtail accessibility considerations</a></li>
+</ul>
+
+<h2 id="atag-examples">ATAG examples</h2>
+
+<p>To round off this list, here are practical examples of checkers that can help meet ATAG’s Principle B.3: Authors are supported in improving the accessibility of existing content.</p>
+
+<ul>
+  <li><a href="https://www.tiny.cloud/docs/plugins/premium/a11ychecker/">TinyMCE’s accessibility checker</a></li>
+  <li><a href="https://khan.github.io/tota11y/">Tota11y</a>, particularly relevant for content management systems.
+    <ul>
+      <li><a href="https://github.com/neon-jungle/wagtail-accessibility">And its Wagtail implementation, wagtail-accessibility</a></li>
+    </ul>
+  </li>
+  <li><a href="https://support.microsoft.com/en-us/office/make-your-content-accessible-to-everyone-with-the-accessibility-checker-38059c2d-45ef-4830-9797-618f0e96f3ab">Microsoft Office 365 accessibility checker</a></li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pattern Lab goes Django]]></title>
+    <link href="https://thib.me/pattern-lab-goes-django"/>
+    <updated>2020-12-11T12:52:22+00:00</updated>
+    <id>https://thib.me/pattern-lab-goes-django</id>
+    <content type="html"><![CDATA[<p>If you’re into UI component reuse, you may have heard of <a href="https://atomicdesign.bradfrost.com/">Atomic Design</a> and <a href="https://patternlab.io/">Pattern Lab</a>. We’re big fans at Torchbox, but Pattern Lab is PHP or Node-based, while we decided long ago to <a href="https://torchbox.com/blog/alternatives-to-drupal/">leave the PHP / Drupal world behind</a>, and concentrate on Django. We took Pattern Lab with us, and built <a href="https://torchbox.github.io/django-pattern-library/">django-pattern-library</a> – a.k.a. Pattern Lab goes Django.</p>
+
+<!-- more -->
+
+<h2 id="pattern-libraries-at-torchbox">Pattern libraries at Torchbox</h2>
+
+<p>At Torchbox, pattern libraries are a way to separate concerns between front-end and back-end development. We’ve been using our Django pattern library package for a couple of years to:</p>
+
+<ul>
+  <li>Clarify responsibilities and separate concerns, both in code, and as members of a development team between front-end and back-end development.</li>
+  <li>As needed, enable for front-end developers to work on pages and block templates before any back-end development happens.</li>
+  <li>Encourage code reuse and components composition – defining independent UI components, reusable without markup copy-paste, and reusable on other projects like any Django app.</li>
+</ul>
+
+<p>Does this sound useful to you? Go and have a look at our introductory presentation from Wagtail Space US 2020, <a href="https://www.youtube.com/watch?v=isrOufI7TKc">Reusable UI components – A journey from React to Wagtail</a>:</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/isrOufI7TKc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Slides: <a href="https://docs.google.com/presentation/d/1pZAbunn0Ci8B9NR0mS5taOPe7BMdAiDrKNIcd9xBWO4/edit">Wagtail Space US 2020 - Reusable UI components – A journey from React to Wagtail</a></p>
+
+<h2 id="our-first-big-release">Our first big release</h2>
+
+<p>Pattern Lab has been around for a while, and so has our own <a href="https://torchbox.github.io/django-pattern-library/">django-pattern-library</a>, but we only open-sourced it a few months ago. Sadly it wasn’t as well documented or flexible as we would have liked it to be. This is starting to change with our most recent release. Here are the headline features:</p>
+
+<ul>
+  <li><a href="https://torchbox.github.io/django-pattern-library/getting-started/#compatibility">Support for Python 3.9, Django 3.0, 3.1, and tentatively 3.2</a>. We also started running the project’s tests against Django’s development branch for good measure.</li>
+  <li>A new <a href="https://torchbox.github.io/django-pattern-library/guides/automated-tests/#with-render_patterns"><em>render_patterns</em> management command</a>, so you can test whether all of your project’s patterns render successfully at once. Think of it as smoke tests for pattern library components.</li>
+  <li><a href="https://torchbox.github.io/django-pattern-library/reference/api/#override_tag">Optional default values for tag overrides</a>, so you no longer have to repeat specific overrides in all of your component mocks.</li>
+  <li><a href="https://torchbox.github.io/django-pattern-library/reference/api/#sections">Support for arbitrary template structures</a> – whether that’s across multiple apps or only one, however you want your templates to be structured.</li>
+</ul>
+
+<p>View the full <a href="https://github.com/torchbox/django-pattern-library/blob/master/CHANGELOG.md">CHANGELOG</a>. Along those shiny features, we also released two massive improvements to the project: a <a href="https://torchbox.github.io/django-pattern-library/">new documentation website</a>, with lots more content – guides, recipes, and reference info. And also a <a href="https://torchbox.github.io/django-pattern-library/demo/pattern-library/">new demo site</a>, so you can see for yourself how the project works (although note the public demo is <a href="https://torchbox.github.io/django-pattern-library/guides/static-site-export/">exported as a static site</a>).</p>
+
+<h3 id="template-structures">Template structures</h3>
+
+<p>Starting in v0.3.0, you may structure your project’s templates in however many folders you want. This feels like such an obvious need in hindsight, but the pattern library having only been an internal Torchbox project for a while, it didn’t really need to accommodate that many different structures!</p>
+
+<p>This is now possible thanks to the new <a href="https://torchbox.github.io/django-pattern-library/reference/api/#sections">SECTIONS</a> setting, with the previous predefined structure kept as the default for backwards compatibility. It also comes with a lot of black magic to decide which templates are partials and should be rendered in a base template, and which can be rendered as-is.</p>
+
+<h3 id="render_patterns">render_patterns</h3>
+
+<p>This new management command might or might not be relevant to you but it’s worth highlighting use cases this is intended to support:</p>
+
+<ul>
+  <li><a href="https://torchbox.github.io/django-pattern-library/guides/static-site-export/">Static exports of the pattern library</a>, for those cases where you want a simple way to share patterns publicly or host them alongside documentation, rather than alongside your site.</li>
+  <li><a href="https://torchbox.github.io/django-pattern-library/guides/automated-tests/">Automated tests of UI components</a>, particularly in continuous integration, where it might be problematic for you to get a Django server up and running depending on the project’s dependencies.</li>
+</ul>
+
+<p>Combined with tools like <a href="https://pa11y.org/">Pa11y and pa11y-ci</a>, this makes it much simpler to run site-wide automated accessibility tests for all of your project’s templates, making the most of the pattern library’s tightly controlled mock data:</p>
+
+<p><img src="/images/blog/pattern-lab-goes-django/gitlab-ci-pa11y-patterns.png" alt="Screenshot of pa11y-ci output in GitLab CI showing reported issues on pattern library templates" /></p>
+
+<p>There are still rough edges (for example the command will abort the whole test suite if only a single template fails to render!), but we hope you’ll find uses for this nonetheless.</p>
+
+<h2 id="whats-next">What’s next</h2>
+
+<p>Hopefully more of the above – new features, more stability, better documentation. We’re particulary keen on <a href="https://github.com/torchbox/django-pattern-library/issues/106">finding ways to mock templates with factories rather than plain data structures</a>, and <a href="https://github.com/torchbox/django-pattern-library/issues/103">combining our Django rendering features with Storybook’s developer experience</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Detecting Wagtail in the wild]]></title>
+    <link href="https://thib.me/detecting-wagtail-in-the-wild"/>
+    <updated>2020-11-18T15:15:22+00:00</updated>
+    <id>https://thib.me/detecting-wagtail-in-the-wild</id>
+    <content type="html"><![CDATA[<p>How can you tell if a site is made with Wagtail or not? There are more ways than people might think at first sight, and after a few years of toying with the idea I finally put together a way to detect Wagtail sites, that strikes a good balance between reliability and convenience. Let’s go birdwatching.</p>
+
+<!-- more -->
+
+<h2 id="ways-to-detect-wagtail">Ways to detect Wagtail</h2>
+
+<p>I could think of a few <a href="https://github.com/springload/madewithwagtail/issues/62">when I first started thinking of this problem</a>:</p>
+
+<ul>
+  <li>Determine if the site is <a href="https://stackoverflow.com/questions/721934/how-can-you-tell-if-a-site-has-been-made-with-django">built with Django</a>. That’s a start</li>
+  <li>Check if the site uses a <a href="https://wagtail.io/wagtail-badges/">Wagtail badge</a>. Cute, but not used much in practice.</li>
+  <li>Load <code class="language-plaintext highlighter-rouge">/admin/login</code> and check for “wagtail” in the response – that would surely be an almost certain match.</li>
+</ul>
+
+<p>The problem with a lot of those approaches is their relance on crawling the site, which is quite invasive, not very reliable, and can be time-consuming across a lot of sites. It’s also unclear how common those cues would be across the breadth of Wagtail sites out there.</p>
+
+<p>The ideal approach would be HTTP response headers – which could be obtained from any page with a lightweight HEAD request. Wagtail unfortunately doesn’t have any custom header, so the next best thing is to inspect the pages’ markup:</p>
+
+<ul>
+  <li>Wagtail’s (legacy) rich text uses the <code class="language-plaintext highlighter-rouge">rich-text</code> class to wrap the HTML of rich text fields</li>
+  <li>Rich text images use hard-coded classes like <a href="https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/images/formats.py#L91-L94"><code class="language-plaintext highlighter-rouge">richtext-image full-width</code></a></li>
+  <li>Wagtail’s documents are served from a <a href="https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/documents/urls.py#L6"><code class="language-plaintext highlighter-rouge">/documents/</code></a> sub-path.</li>
+  <li>And last but not least, <a href="https://docs.wagtail.io/en/stable/topics/images.html?highlight=renditions#generating-image-renditions-in-python">image renditions</a>.</li>
+</ul>
+
+<p>Image renditions are very common on Wagtail sites. The detection would only work for pages that have user-uploaded images, but lucky for us a site’s homepage tends to be the type of high-value page where there are CMS-managed images. Here are a few examples of URLs from renditions:</p>
+
+<pre><code class="language-txt">https://www.jazzfestival.nz/media/images/video-fallback-image_1.width-1920.png
+
+/media/images/bevi_3_mob.original.format-png.png
+
+/media/original_images/Social_Distancing_Dashboard_-_image_1_TU_DelftAMS_Institute.png
+
+https://buckup-ff-stories.s3.amazonaws.com/original_images/Lockup_Logo_-_JPEG-1.png
+
+/media/images/UE4LowPolyVehicleTh.2e16d0ba.fill-960x540-c0.jpg
+</code></pre>
+
+<p>The distinctive features are the folders – always either <code class="language-plaintext highlighter-rouge">images</code> or <code class="language-plaintext highlighter-rouge">original_images</code>, and frequently either placed directly at the root of a site, or from a <code class="language-plaintext highlighter-rouge">/media</code> subfolder at the root, or a single level up. And then the fact that all of the site’s images are placed in those two folders without any additional sub-folders, with file name suffixes following a set format for all files under <code class="language-plaintext highlighter-rouge">images/</code> like <code class="language-plaintext highlighter-rouge">.width-1920</code> or <code class="language-plaintext highlighter-rouge">.fill-960x450-c0</code> above. I came up with the particular regex used here after trying out different variations on 800’000 homepages from the <a href="https://majestic.com/reports/majestic-million">Majestic Million</a> list of domains.</p>
+
+<h2 id="the-regex">The regex</h2>
+
+<p>Here is a simplified diagram of the logic (created with <a href="https://regexper.com/#%5C%2F%28original_images%5C%2F%5B%5Cw-%5D%2B%5C.%7Cimages%5C%2F%5B%5Cw-.%5D%2B%5C.%28%28fill%7Cmax%7Cmin%7Cwidth%7Cheight%7Cscale%29-%5Cd%7Coriginal%29%29">regexper</a>):</p>
+
+<p><img src="/images/blog/detecting-wagtail-in-the-wild/regexper-diagram.svg" alt="regexper train diagram of Wagtail regular expressions" /></p>
+
+<h2 id="real-world-usage">Real-world usage</h2>
+
+<p>The regex could be more complex and precise but this wouldn’t actually change much to its real-world usefulness, so I gradually simplified it to the above. With this in place, we can then create different ways to run this detection on arbitrary websites:</p>
+
+<ul>
+  <li>An online website, <a href="https://detect-wagtail.netlify.app/">detect-wagtail.netlify.app</a>.</li>
+  <li>A bookmarket, also available from <a href="https://detect-wagtail.netlify.app/">detect-wagtail.netlify.app</a>.</li>
+  <li>A browser extension thanks to <a href="https://github.com/AliasIO/wappalyzer">Wappalyzer</a>.</li>
+  <li>A Node CLI, also thanks to <a href="https://github.com/AliasIO/wappalyzer">Wappalyzer</a>.</li>
+  <li>As an npm package for more custom needs, <a href="https://www.npmjs.com/package/detect-wagtail">detect-wagtail</a></li>
+</ul>
+
+<p>With Wappalyzer in particular, they also offer additional services based on anonymous data reporting from their detection tools. Here is their page that aggregates Wagtail usage data: <a href="https://www.wappalyzer.com/technologies/cms/wagtail/">Websites using Wagtail</a>.</p>
+
+<p>If you’re unsure which of these to use – the Wappalyzer checks are the strictest, so best used if you don’t want to manually confirm the results by inspecting the pages’ HTML.</p>
+
+<h2 id="real-world-data">Real-world data</h2>
+
+<p>With this regex in place, I tried it out on a few lists of websites. See <a href="https://github.com/thibaudcolas/detect-wagtail/tree/main/docs/analysis">detect-wagtail/docs/analysis</a> for the full details.</p>
+
+<h3 id="eu-public-sector-websites">EU public sector websites</h3>
+
+<p>Dataset from <a href="https://www.funka.com/en/projekt/we4authors/">We4authors</a>. Based on this analysis, I could find 3 national EU public sector websites built with Wagtail:</p>
+
+<pre><code class="language-txt">www.danepubliczne.gov.pl
+www.nhs.uk
+www.nesta.org.uk
+</code></pre>
+
+<p>There are many more public sector websites built with Wagtail at the national and regional / local level, but this type of analysis already shows the value in having the ability to detect Wagtail – the CMS could be part of <a href="https://www.funka.com/en/projekt/we4authors/we4authors-main-activities-and-results/market-analysis-and-benchmarking-process-of-existing-cms/">market analysis</a> for research projects like We4authors, from which we can learn a lot.</p>
+
+<h3 id="us-federal-websites">US federal websites</h3>
+
+<p>Analysis of the US federal websites from the <a href="https://github.com/GSA/digitalgov.gov/blob/main/content/resources/content-management-systems-used-by-government-agencies.md">digital.gov list</a>.</p>
+
+<pre><code class="language-txt">fec.gov
+www.peacecorps.gov
+www.consumerfinance.gov
+</code></pre>
+
+<h3 id="made-with-wagtail">Made with Wagtail</h3>
+
+<p><a href="https://madewithwagtail.org/">Made with Wagtail</a> is a showcase of a lot of Wagtail sites and apps. About two thirds of sites listed are detected with the following regular expressions.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min|width|height|scale)-\d|original))'</span> mww <span class="nt">--stats-only</span>
+<span class="c"># 382 files contained matches</span>
+ag <span class="s1">'\/media\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min)-\d+x\d+(-c\d+)?|(width|height|scale)-\d+|original)\.)'</span> mww <span class="nt">--stats-only</span>
+<span class="c"># 292 files contained matches</span>
+</code></pre></div></div>
+
+<p>The remaining third are largely made up of sites that… actually aren’t made with Wagtail, either because Wagtail is only used for a specific section of a site (and not the homepage), or because the site got rebuilt with another technology since being listed there.</p>
+
+<h3 id="majestic-million">Majestic Million</h3>
+
+<p>The <a href="https://majestic.com/reports/majestic-million">Majestic Million</a> is a dataset of 1M domain names ordered by popularity. We can also use the above methodology to assess how many websites are made with Wagtail on this list (about 0.05%).</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ag <span class="s1">'\/media\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min)-\d+x\d+(-c\d+)?|(width|height|scale)-\d+|original)\.)'</span> million <span class="nt">--stats-only</span>
+<span class="c"># 296 files contained matches</span>
+ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min|width|height|scale)-\d|original))'</span> ../detect-wagtail-data/million <span class="nt">--stats-only</span>
+<span class="c"># 528 files contained matches</span>
+</code></pre></div></div>
+
+<p>Those numbers neatly match those of <a href="https://whatcms.org/c/Wagtail">WhatCMS</a>.</p>
+
+<h2 id="security-implications">Security implications</h2>
+
+<p>Telling whether a given site is built with Wagtail or not really doesn’t take that much effort. The image renditions methodology also shows it’s very easy to do at scale. There is nothing here that can prevent bad actors from scanning the web for vulnerable Wagtail sites, as is commonplace for other platforms. For all intents and purposes, you should assume this is happening already.</p>
+
+<p>What should we do then? For a start, don’t rely on <a href="https://en.wikipedia.org/wiki/Security_through_obscurity">security through obscurity</a>. Take the time to establish a threat model for your site, and protect it accordingly by restricting access to anything exploitable, and implementing brute force protections where relevant. Take a multi-layered approach to security – with defenses at the network level (e.g. a WAF), application level (e.g. rate limiting, defensive programming, handling of untrusted input, etc.), and also monitoring (logs analysis).</p>
+
+<p>An old but still relevant example of this in the Wagtail world is <a href="https://github.com/springload/wagtailenforcer">WagtailEnforcer</a>.</p>
+
+<p>And of course, keep your site up-to-date with security fixes for all its dependencies. While the approach described here doesn’t make it possible to determine which version of Wagtail is used – there are other very viable approaches that make this equally as easy (see <a href="https://github.com/caioariede/detect-django-version">detect-django-version</a> for inspiration).</p>
+
+<h2 id="applications">Applications</h2>
+
+<p>There are a lot more applications to being able to detect Wagtail websites than just knowing how many there are out there. <a href="WhatCMS.org">WhatCMS.org</a> has had some amount of Wagtail data for years and is a good example of the potential for market analysis. For me, I’m more interested in seeing how Wagtail is used in the wild. Here are interesting questions this can help answer:</p>
+
+<ul>
+  <li>Wagtail headless usage – which static site generators are the most common with Wagtail, that would be worth documenting the usage of better. In my analysis, I found a lot of Next and Gatsby websites in particular.</li>
+  <li>Security best practices – how many websites have the Wagtail admin accessible from any IP vs being restricted.</li>
+  <li>Accessibility – how accessible Wagtail sites are.</li>
+</ul>
+
+<p>This last point is the one I’m the most interested in – in particular, comparing Wagtail’s results to those of other technologies in the <a href="https://webaim.org/projects/million/">WebAIM Million</a>. We’ll see how that goes!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Accessibility wins for Django projects]]></title>
+    <link href="https://thib.me/accessibility-wins-for-django-projects"/>
+    <updated>2020-09-15T23:15:22+01:00</updated>
+    <id>https://thib.me/accessibility-wins-for-django-projects</id>
+    <content type="html"><![CDATA[<p>Talk at DjangoCon EU 2020</p>
+
+<!-- more -->
+
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/1JWroGeYl7JlP2OHbG4a4h0SxSlMsWJvRTvDm0kFkqhQ/edit">Google Slides: DjangoCon EU 2020 - Accessibility wins for Django projects</a></li>
+  <li><a href="https://drive.google.com/file/d/12tedghT8bRGhnZgWt7tXWv_qtvJ1YKCA/view?usp=sharing">PDF: DjangoCon EU 2020 - Accessibility wins for Django projects</a></li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Testing accessibility in Continuous Integration with Pa11y and beyond]]></title>
+    <link href="https://thib.me/testing-accessibility-in-ci-with-pa11y-and-beyond"/>
+    <updated>2020-08-13T22:21:08+01:00</updated>
+    <id>https://thib.me/testing-accessibility-in-ci-with-pa11y-and-beyond</id>
+    <content type="html"><![CDATA[<p>Here are tools I recommend to test for accessibility issues in continuous integration, where automation is the only option, and reliability is paramount.</p>
+
+<!-- more -->
+
+<h2 id="the-requirements-of-ci">The requirements of CI</h2>
+
+<p>It’s worth pointing out early – no accessibility testing tool can <a href="https://alphagov.github.io/accessibility-tool-audit/">find all issues</a> . With this in mind, in CI, we need to focus on tools that find as much as possible… but don’t create false positives, which are very damaging when they fail your build. It’s more important for a tool to have a <a href="https://en.wikipedia.org/wiki/Precision_and_recall">high precision, than a high recall</a>).</p>
+
+<h2 id="static-analysis">Static analysis</h2>
+
+<p>This is always a valuable first line of defense.</p>
+
+<ul>
+  <li>
+    <p>Basic checks for stylesheets: <a href="https://github.com/YozhikM/stylelint-a11y">stylelint-a11y</a></p>
+  </li>
+  <li>Relatively advanced checks for React code: <a href="https://github.com/yannickcr/eslint-plugin-react">eslint-plugin-react</a>, <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a></li>
+  <li>And a Vue equivalent: <a href="https://github.com/maranran/eslint-plugin-vue-a11y">eslint-plugin-vue-a11y</a></li>
+  <li>For HTML templates, you can try my own experimental HTML templates linter, <a href="https://github.com/thibaudcolas/curlylint">Curlylint</a>.</li>
+</ul>
+
+<h2 id="accessibility-tests-in-unit-and-integration-tests">Accessibility tests in unit and integration tests</h2>
+
+<p>Here are the options, from simplest to most complex:</p>
+
+<ul>
+  <li><a href="https://github.com/nickcolley/jest-axe">jest-axe</a> in jsdom for React projects. It’s very lightweight to set up, and gives surprisingly good results.</li>
+  <li><a href="https://github.com/nickcolley/jest-axe">jest-axe</a> in Puppeteer. It’s not lightweight to set up, far from it, but does a bit more.</li>
+  <li><a href="https://pa11y.org/">Pa11y</a>, or <a href="https://github.com/pa11y/pa11y-ci">pa11y-ci</a>. Not lightweight either, but simple to configure.</li>
+  <li>Google’s Lighthouse also has a <a href="https://github.com/GoogleChrome/lighthouse-ci">Lighthouse CI</a> variant which may be useful when also wanting to have performance and best practice checks.</li>
+  <li>An alternative could also be to run HTML validation with <a href="https://validator.github.io/validator/">V.Nu HTML5 validator</a>.</li>
+</ul>
+
+<h2 id="what-to-test">What to test</h2>
+
+<p>It’s not always easy to have test content to run the checks against of in CI. My personal preference is to run the tests against a pattern library’s components, for example <a href="https://storybook.js.org/">Storybook</a> or <a href="https://github.com/torchbox/django-pattern-library">django-pattern-library</a>. As part of creating the components, we naturally create test data for them similarly to unit tests (TDD or not) – this test content can then be used to test the components’ variations for accessibility issues.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reusable UI components – A journey from React to Wagtail]]></title>
+    <link href="https://thib.me/reusable-ui-components-journey-from-react-to-wagtail"/>
+    <updated>2020-07-31T02:15:22+01:00</updated>
+    <id>https://thib.me/reusable-ui-components-journey-from-react-to-wagtail</id>
+    <content type="html"><![CDATA[<p>This is Ben Dickinson and I’s joint <a href="https://us.wagtail.space/">Wagtail Space US 2020</a> talk about pattern libraries at Torchbox, introducing <a href="https://github.com/torchbox/django-pattern-library">django-pattern-library</a>.</p>
+
+<!-- more -->
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/isrOufI7TKc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Slides: <a href="https://docs.google.com/presentation/d/1pZAbunn0Ci8B9NR0mS5taOPe7BMdAiDrKNIcd9xBWO4/edit">Wagtail Space US 2020 - Reusable UI components – A journey from React to Wagtail</a></p>
+
+<hr />
+
+<h2 id="pattern-libraries-as-a-methodology">Pattern libraries as a methodology</h2>
+
+<h3 id="atomic-design">Atomic Design</h3>
+
+<h3 id="pattern-lab">Pattern Lab</h3>
+
+<h2 id="react">React</h2>
+
+<h3 id="a-paradigm-shift">A paradigm shift</h3>
+
+<ul>
+  <li>Component-driven UIs</li>
+  <li>Functional programming for UIs</li>
+  <li>Not a template language</li>
+</ul>
+
+<h3 id="what-makes-react-good-in-practice">What makes React good in practice</h3>
+
+<ul>
+  <li>Nice developer experience</li>
+  <li>Reusable components</li>
+  <li>Maintainable, testable code</li>
+  <li>Component-driven development with Storybook</li>
+</ul>
+
+<h3 id="pattern-libraries-at-torchbox">Pattern libraries at Torchbox</h3>
+
+<p>The codified interface between front-end and back-end work</p>
+
+<ul>
+  <li>Clarifies responsibilities, separates concerns, both in code, and as members of a development team</li>
+  <li>If needed, makes it possible for front-end developers to work on pages and block templates before the models are done</li>
+  <li>Encourages code reuse – defining independent UI components, easy to port to other projects</li>
+</ul>
+
+<h3 id="current-trends-design-systems">Current trends: design systems</h3>
+
+<ul>
+  <li><a href="https://designsystem.digital.gov/">USWDS</a></li>
+  <li><a href="https://design-system.service.gov.uk/">GOV.UK Design System</a></li>
+  <li><a href="https://luna.sainsburys.co.uk/">Sainsbury’s Luna</a></li>
+  <li><a href="https://decanter.stanford.edu/">Stanford’s Decanter</a></li>
+</ul>
+
+<h2 id="why-develop-another-pattern-library-tool">Why develop another pattern library tool?</h2>
+
+<h3 id="challenges">Challenges</h3>
+
+<ul>
+  <li>Most of our projects are not API-driven React SPAs - they’re vanilla Django/Wagtail</li>
+  <li>Django has a proprietary template language</li>
+  <li>Translating non-Django templates from a pattern library is time-consuming and error-prone</li>
+  <li>Duplicating templates is a maintenance burden and often leads to divergence</li>
+</ul>
+
+<h3 id="more-challenges">More challenges!</h3>
+
+<ul>
+  <li>Template tags are great, but are discouraged by using a pattern library that doesn’t support them</li>
+  <li>Tags often depend on the database (e.g. <code class="language-plaintext highlighter-rouge">include_block foo</code>)</li>
+  <li>Visual testing requires time-consuming manual setup</li>
+  <li>Django’s native testing tools are inadequate for visual testing - especially cross-browser</li>
+</ul>
+
+<h3 id="pattern-lab-goes-django">Pattern Lab goes Django!</h3>
+
+<p>pip install django-pattern-library</p>
+
+<h3 id="features">Features</h3>
+
+<ul>
+  <li>Component playground for Django template partials</li>
+  <li>Mock template context from YAML files</li>
+  <li>Template documentation in markdown</li>
+  <li>Mock out template tags (both built-in and user-defined tags)</li>
+</ul>
+
+<h3 id="advantages">Advantages</h3>
+
+<ul>
+  <li>No duplication of templates - the pattern library uses the real templates</li>
+  <li>All components can be viewed in one place</li>
+  <li>Easier visual testing</li>
+  <li>No need for content in the DB</li>
+  <li>Front-end development can happen before the models are ready</li>
+</ul>
+
+<h3 id="known-issues">Known issues</h3>
+
+<ul>
+  <li>Documentation is good but could be much better</li>
+  <li>Context merging is fragile and requires some repetition in YAML files</li>
+  <li>Template tag mocking is not flexible enough</li>
+  <li>No support for mocking filters yet</li>
+  <li>Richer objects are fiddly to mock (e.g. ``)</li>
+</ul>
+
+<h2 id="demo-time">Demo time!</h2>
+
+<h3 id="first-demo">First demo</h3>
+
+<h3 id="second-demo">Second demo</h3>
+
+<p><a href="https://storybook-django.herokuapp.com/?path=/docs/django-patterns-streamfield-quote-block--default">storybook-django</a></p>
+
+<h2 id="takeaways-">Takeaways 🌈</h2>
+
+<h3 id="why-we-recommend-this-approach">Why we recommend this approach</h3>
+
+<ul>
+  <li>As a methodology: speeds up the process for medium to large sites</li>
+  <li>Reusable components: Encourages code reuse and UI consistency across the site</li>
+  <li>Testing opportunities: Manual “unit tests” for UI components, &amp; opportunities for automated visual regression / E2E / accessibility tests</li>
+</ul>
+
+<h3 id="ready-to-use">Ready to use</h3>
+
+<ul>
+  <li>Used for all production Wagtail sites at Torchbox: <a href="https://github.com/torchbox/django-pattern-library">django-pattern-library</a></li>
+  <li>Experimental, used on two projects, feedback welcome: <a href="https://github.com/torchbox/storybook-django">storybook-django</a></li>
+  <li>For all our React projects: <a href="https://storybook.js.org/">Storybook</a></li>
+</ul>
+
+<h3 id="ready-for-contributions-">Ready for contributions 😬</h3>
+
+<ul>
+  <li>Open-sourced <a href="https://github.com/torchbox/django-pattern-library">django-pattern-library</a> a few months ago</li>
+  <li><a href="https://github.com/torchbox/storybook-django">storybook-django</a> still very experimental</li>
+  <li>Feedback welcome</li>
+</ul>
+
+<p>Backlog for the next three months: <a href="https://github.com/torchbox/django-pattern-library/projects/3">github.com/torchbox/django-pattern-library/projects/3</a></p>
+
+<h2 id="thank-you">Thank you!</h2>
+
+<p>Thank you to Dan, Tom, William, Nick for helping us rehearse!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Accessibility wins for Wagtail projects]]></title>
+    <link href="https://thib.me/accessibility-wins-for-wagtail-projects"/>
+    <updated>2020-07-30T02:15:22+01:00</updated>
+    <id>https://thib.me/accessibility-wins-for-wagtail-projects</id>
+    <content type="html"><![CDATA[<p>I recently gave a talk at <a href="https://us.wagtail.space/">Wagtail Space US 2020</a> about the accessibility of Wagtail websites – following on last year’s talk about the <a href="/making-wagtail-accessible">accessibility of the Wagtail admin</a>.</p>
+
+<!-- more -->
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZcHfUu_u4e0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Slides: <a href="https://docs.google.com/presentation/d/14iSPklZmrjlMZlaFOBP1Mavt_tmz6vcF_t6cHVCCek8/edit">Wagtail Space US 2020 - Accessibility wins for Wagtail projects</a></p>
+
+<hr />
+
+<h2 id="why-accessibility-matters">Why accessibility matters</h2>
+
+<h3 id="inclusive-experiences">Inclusive experiences</h3>
+
+<ul>
+  <li>We want all users to have a great experience, no matter how they use the web.</li>
+  <li>Accessibility improvements lead to usability improvements for all.</li>
+</ul>
+
+<p>Search: “Curb cut effect”</p>
+
+<h3 id="accessibility-is-not-an-optional-extra">Accessibility is not an optional extra</h3>
+
+<p>USA:</p>
+
+<ul>
+  <li><a href="https://section508.gov/">Section 508</a> for recipients of federal funding, <a href="https://www.ada.gov/">ADA</a> for all*.</li>
+</ul>
+
+<p>EU/UK:</p>
+
+<ul>
+  <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016L2102">EU Directive 2016/2102</a> for the public sector, UK <a href="https://www.legislation.gov.uk/ukpga/2010/15/contents">Equality Act 2010</a> for all.</li>
+</ul>
+
+<p>In the end it’s all based on <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 AA</a>.</p>
+
+<p>* I’m not a lawyer. See <a href="https://gizmodo.com/gimlet-media-sued-for-not-making-podcasts-accessible-to-1844369021">Gimlet Media lawsuit</a></p>
+
+<h3 id="oh-and-its-not-just-about-wagtail-sites">Oh and it’s not just about Wagtail sites</h3>
+
+<p>Intranets, CRMs, ERPs, dashboards. Django admin.</p>
+
+<p>Internal-only tools shouldn’t compromise on accessibility just because their audience is smaller.</p>
+
+<p><a href="https://alistapart.com/article/building-the-woke-web/">alistapart.com/article/building-the-woke-web</a></p>
+
+<h2 id="common-wagtail-issues">Common* Wagtail issues</h2>
+
+<p>* Very common. Go check your sites after the talk</p>
+
+<h3 id="alt-text-for-images">Alt text for images</h3>
+
+<ol>
+  <li>Images’ Title fields are auto-populated with file names on upload</li>
+  <li>Wagtail sets alt text based on image Title by default</li>
+  <li>????</li>
+</ol>
+
+<p>Solution: always have an “alt text” field wherever an image is used.</p>
+
+<p><a href="https://github.com/wagtail/rfcs/pull/51">RFC #51</a>, <a href="https://github.com/wagtail/wagtail/issues/4945">#4945</a>, <a href="https://github.com/wagtail/rfcs/pull/44">RFC #44</a>, <a href="https://github.com/wagtail/wagtail/pull/5789">#5789</a></p>
+
+<h3 id="alt-text-for-images-2">Alt text for images, #2</h3>
+
+<ul>
+  <li>Have a mandatory alt text field when images aren’t decorative…</li>
+  <li>Display it</li>
+</ul>
+
+<p>Solution: always have an “alt text” field wherever an image is used.</p>
+
+<p><a href="https://github.com/wagtail/rfcs/pull/51">RFC #51</a>, <a href="https://github.com/wagtail/wagtail/issues/4945">#4945</a>, <a href="https://github.com/wagtail/rfcs/pull/44">RFC #44</a>, <a href="https://github.com/wagtail/wagtail/pull/5789">#5789</a></p>
+
+<h3 id="alt-text-for-images-3">Alt text for images, #3</h3>
+
+<ul>
+  <li>Always have an alt text field for each usage of an image</li>
+  <li>Make sure the field is optional when appropriate so decorative images can be hidden</li>
+  <li>Give appropriate guidance to editors, <a href="https://axesslab.com/alt-texts/">axesslab.com/alt-texts</a></li>
+  <li>Wagtail’s rich text images alt text needs to become optional</li>
+</ul>
+
+<p>Solution: always have an “alt text” field wherever an image is used.</p>
+
+<p><a href="https://github.com/wagtail/rfcs/pull/51">RFC #51</a>, <a href="https://github.com/wagtail/wagtail/issues/4945">#4945</a>, <a href="https://github.com/wagtail/rfcs/pull/44">RFC #44</a>, <a href="https://github.com/wagtail/wagtail/pull/5789">#5789</a></p>
+
+<h3 id="embed-titles">Embed titles</h3>
+
+<ul>
+  <li>In some cases, Wagtail embeds don’t have a title attribute set</li>
+  <li>Screen reader users need it to know what the embed is, and decide to browse it, or skip it</li>
+</ul>
+
+<p>Solution: either check your embed provider returns a title in 100% of the cases, or add a mandatory “Title” field for all embeds.</p>
+
+<p><a href="https://github.com/wagtail/wagtail/issues/5982">#5982</a></p>
+
+<h3 id="heading-levels">Heading levels</h3>
+
+<p>Screen reader users rely on logical, lean heading outlines to navigate pages</p>
+
+<ul>
+  <li>Wagtail makes it easy to restrict which heading levels are available in any rich text field. Do it.</li>
+  <li>Also restrict which heading levels are available via StreamField</li>
+  <li>Keep your templates in check too.</li>
+</ul>
+
+<p>Solution: <a href="https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field">Limiting features in a rich text field</a>. Use <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a>.</p>
+
+<h3 id="heading-levels-2">Heading levels, #2</h3>
+
+<p>Heading levels</p>
+
+<p>Screen reader users rely on logical, lean heading outlines to navigate pages</p>
+
+<ul>
+  <li>Validate that no heading is left empty</li>
+  <li>Or, consider hiding empty headings with CSS (h2:empty { display: none; })</li>
+</ul>
+
+<p>Solution: <a href="https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field">Limiting features in a rich text field</a>. Use <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a>.</p>
+
+<p>In the future – rich text rewriting to remove empty headings? <a href="https://github.com/wagtail/wagtail/issues/4223">#4223</a></p>
+
+<h3 id="other-issues-worth-knowing-about">Other issues worth knowing about</h3>
+
+<ul>
+  <li>TableBlock
+    <ul>
+      <li>The Caption field should be mandatory</li>
+      <li>The header cells field should be mandatory (<a href="https://github.com/wagtail/wagtail/issues/5989">#5989</a>)</li>
+    </ul>
+  </li>
+  <li>Links
+    <ul>
+      <li>We need a way to flag / validate link text to avoid “Read more”, “Click here”, “Find out more”</li>
+      <li>Or having a way to add custom aria-label where relevant</li>
+      <li>Broken links should be user-friendly, not href=”None”.</li>
+    </ul>
+  </li>
+  <li>Forms
+    <ul>
+      <li>Avoid Django’s as_table, as_ul rendering.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="content-wins">Content wins</h2>
+
+<ul>
+  <li><a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a> (based on <a href="https://khan.github.io/tota11y/">tota11y</a>)</li>
+  <li>help_text (example: <a href="https://github.com/nhsuk/wagtail-nhsuk-frontend">wagtail-nhsuk-frontend</a>)</li>
+  <li><a href="https://docs.wagtail.io/en/stable/reference/pages/panels.html#helppanel">HelpPanel</a> – help_text but bigger</li>
+  <li><a href="https://vixdigital.github.io/draftail-plugins/">wagtail-readinglevel</a></li>
+  <li>Rich text experiments: guidelines-aware spellcheck</li>
+  <li>Rich text experiments: sentence length, <a href="https://wooorm.com/readability/">wooorm.com/readability</a></li>
+</ul>
+
+<h2 id="developer-wins">Developer wins</h2>
+
+<p><a href="https://torchbox.com/blog/accessibility-audits/">Accessibility audits: getting started</a></p>
+
+<h3 id="django-html-validator"><a href="https://github.com/peterbe/django-html-validator">django-html-validator</a></h3>
+
+<p>Based on the official v.Nu validator. Very easy to integrate into your workflow with Docker.</p>
+
+<ul>
+  <li>
+    <p>Finds <a href="https://alphagov.github.io/accessibility-tool-audit/">about 15% of issues</a></p>
+  </li>
+  <li>
+    <p>v.Nu also has a CLI which I recommend as part of accessibility audits</p>
+  </li>
+</ul>
+
+<h3 id="static-analysis">Static analysis</h3>
+
+<ul>
+  <li>React: <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a></li>
+  <li>Vue: <a href="https://github.com/maranran/eslint-plugin-vue-a11y">eslint-plugin-vue-a11y</a></li>
+  <li>Styles: <a href="https://github.com/YozhikM/stylelint-a11y">stylelint-a11y</a></li>
+</ul>
+
+<h3 id="curlylint">Curlylint</h3>
+
+<h3 id="learn-how-to-use-a-screen-reader">Learn how to use a screen reader</h3>
+
+<p>On a Mac with VoiceOver,</p>
+
+<ul>
+  <li>Cmd + F5 to open VoiceOver. Same to close it.</li>
+  <li>Ctrl to silence it</li>
+  <li>Ctrl + U to open the rotor</li>
+</ul>
+
+<p>That’s it.</p>
+
+<p>Even simpler on iOS.</p>
+
+<p><a href="https://a11ysupport.io/learn/">a11ysupport.io / learn</a></p>
+
+<h2 id="community-wins">Community wins</h2>
+
+<p>A cultural shift?</p>
+
+<h3 id="you-can-be-the-person-on-your-team-who-advocates-for-those-issues-to-be-fixed">You can be the person on your team who advocates for those issues to be fixed</h3>
+
+<p>It matters on all projects, all audiences</p>
+
+<p>There are well-defined standards, and readily available tools.</p>
+
+<p>You can be the person who knows how to use a screen reader and shows others how to do it.</p>
+
+<p><a href="https://alistapart.com/article/building-the-woke-web/">alistapart.com/article/building-the-woke-web</a></p>
+
+<h3 id="wagtail-can-be-a-cms-thats-part-of-the-solution">Wagtail can be a CMS that’s part of the solution</h3>
+
+<p>The <a href="https://webaim.org/projects/million/">WebAIM Million</a> keeps track of the accessibility of 1M websites’ homepages</p>
+
+<ul>
+  <li>Numbers are appalling</li>
+  <li>We can do better</li>
+  <li>Wagtail can help people make accessible websites – better defaults, starter templates, documentation</li>
+</ul>
+
+<h3 id="accessibility-team-">Accessibility team 🌈</h3>
+
+<p>The <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team">accessibility team</a> focuses on improvements to the accessibility of Wagtail, and of websites built with Wagtail. Everyone is welcome regardless of skill level or background.</p>
+
+<p>Find us on the Wagtail Slack in <a href="https://github.com/wagtail/wagtail/wiki/Slack">#accessibility</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Curlylint: Accessibility linting rules]]></title>
+    <link href="https://thib.me/curlylint-accessibility-linting-rules"/>
+    <updated>2020-07-26T03:22:49+01:00</updated>
+    <id>https://thib.me/curlylint-accessibility-linting-rules</id>
+    <content type="html"><![CDATA[<p>Curlylint now comes with 7 accessibility-related rules, ready to use in HTML templates. See <a href="https://www.curlylint.org/docs/rules/all">All rules</a> for details about the individual rules.</p>
+
+<!-- more -->
+
+<p>This is an important milestone for the linter – essentially demonstrating its usefulness once and for all, if that was still needed.</p>
+
+<h2 id="html-best-practices">HTML best practices</h2>
+
+<p>Most of the rules Curlylint currently ships with are very simple “HTML linting” rules for accessibility, based on established best practice:</p>
+
+<ul>
+  <li><a href="https://www.curlylint.org/docs/rules/aria_role"><code class="language-plaintext highlighter-rouge">aria_role</code></a> just checks that <code class="language-plaintext highlighter-rouge">role</code> attributes are valid.</li>
+  <li>Same for <a href="https://www.curlylint.org/docs/rules/html_has_lang"><code class="language-plaintext highlighter-rouge">html_has_lang</code></a>, for the <code class="language-plaintext highlighter-rouge">html</code> <code class="language-plaintext highlighter-rouge">lang</code> attribute.</li>
+  <li>Same for <a href="https://www.curlylint.org/docs/rules/image_alt"><code class="language-plaintext highlighter-rouge">image_alt</code></a>, <a href="https://www.curlylint.org/docs/rules/meta_viewport"><code class="language-plaintext highlighter-rouge">meta_viewport</code></a>, <a href="https://www.curlylint.org/docs/rules/no_autofocus"><code class="language-plaintext highlighter-rouge">no_autofocus</code></a>, <a href="https://www.curlylint.org/docs/rules/tabindex_no_positive"><code class="language-plaintext highlighter-rouge">tabindex_no_positive</code></a>!</li>
+</ul>
+
+<p>See a pattern? All of these are variations on the same theme of “HTML attributes should only contain a limited range of values based on established best practices”. This is great news for this project – it means there can be quite a lot of results achieved with minimal complexity when it comes to creating individual rules.</p>
+
+<p>In the future, this could easily be taken further to cover:</p>
+
+<ul>
+  <li>Security best practices, for example <code class="language-plaintext highlighter-rouge">rel="noopener"</code>, or disallowing <code class="language-plaintext highlighter-rouge">javascript:</code> URLs in <code class="language-plaintext highlighter-rouge">href</code>.</li>
+  <li>HTML maintainability best practices, for example disallowing duplicate class attributes.</li>
+  <li>And of course, more accessibility and ARIA best practices.</li>
+</ul>
+
+<p>Obligatory mention of <a href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a>, which has been a huge source of inspiration. Generally, modern React tooling has this figured out, with extensive static analysis available. For me, this isn’t just a nice-to-have – it’s hard to always keel all of those best practices in mind, and linting is there to automate this for you. Note this isn’t just React – Vue has its <a href="https://github.com/maranran/eslint-plugin-vue-a11y">eslint-plugin-vue-a11y</a> too!</p>
+
+<h2 id="templates-best-practices">Templates best practices</h2>
+
+<p>This doesn’t have to stop at HTML. Curlylint already supports parsing template syntax, attempting to be usable as a linter for Jinja, Twig, Liquid, <a href="https://www.curlylint.org/docs/template-languages">and the likes</a>. We can also have rules to enforce best practices for this template syntax.</p>
+
+<p>The first example of such a rule is <a href="https://www.curlylint.org/docs/rules/django_forms_rendering"><code class="language-plaintext highlighter-rouge">django_forms_rendering</code></a>, which restricts how forms can be rendered in Django projects, for accessibility reasons. I’m very excited about opportunities like this to codify and share best practices in a way that scales well.</p>
+
+<ul>
+  <li>Hopefully there will be more <a href="https://github.com/django/deps/pull/69">linting rules for Django</a> coming in the future.</li>
+  <li>And more linting rules <a href="https://github.com/wagtail/wagtail/issues/6090">for Wagtail</a> as well.</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Curlylint: Brand new rules documentation]]></title>
+    <link href="https://thib.me/curlylint-brand-new-rules-documentation"/>
+    <updated>2020-07-18T23:05:21+01:00</updated>
+    <id>https://thib.me/curlylint-brand-new-rules-documentation</id>
+    <content type="html"><![CDATA[<p>Have I mentioned <a href="/welcome-to-curlylint">how important I think it is for a linter to have great docs</a>? Well, now is the time for Curlylint to live up to this!</p>
+
+<!-- more -->
+
+<h2 id="new-documentation-format-for-rules">New documentation format for rules</h2>
+
+<p>Up until now the rules’ documentation was pretty sad, essentially limited to what could fit in the project’s README. Now… take a look:</p>
+
+<p><a href="https://www.curlylint.org/docs/rules/image_alt"><img src="/images/blog/curlylint-brand-new-rules-documentation/new-rules-docs.png" alt="Screen capture of the image_alt rule’s documentation" /></a></p>
+
+<ul>
+  <li>The rule’s different configuration options are clearly visible, copy-pasteable, each with a description.</li>
+  <li>Cases where the rule check “succeeds” are well documented, alongside a comment, and matching configuration.</li>
+  <li>Same for problematic cases, which even show the actual error message!</li>
+  <li>All of this is toggle-able between the different configuration formats supported by Curlylint!</li>
+  <li>There are follow-up resources available for developers who want more information about the rule.</li>
+</ul>
+
+<p>This feels like a pretty big step up compared to the previous documentation, and should hopefully make it as easy as possible for people to start using the linter for their templates.</p>
+
+<h2 id="how-this-works">How this works</h2>
+
+<p>The majority of the rules’ documentation is generated from their metadata:</p>
+
+<h3 id="json-schema">JSON Schema</h3>
+
+<p>The configuration options are all defined with <a href="https://json-schema.org/">JSON Schema</a>.Currently this is only used to generate the documentation, but in the future I would also like to make this validate configurations as Curlylint runs.</p>
+
+<p>JSON Schema is particularly good for this because it has built-in support for the schema to be self-documenting – adding titles, descriptions, and examples, which are all used to generate the documentation. Here is the schema of the <a href="https://www.curlylint.org/docs/rules/html_has_lang"><code class="language-plaintext highlighter-rouge">html_has_lang</code></a> rule as an example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"const"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The `lang` attribute must be present."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"examples"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">true</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The `lang` attribute must match the configured language tag."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"examples"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"en-US"</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="test-cases">Test cases</h3>
+
+<p>The success / fail sections are simply coming from the project’s test suite! I always prefer to invest time writing extensive unit tests for projects of this kind. Some of the test cases simply have a flag marking them as “documentation examples”:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check lang is present"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html lang=</span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">&gt;&lt;/html&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"example"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"config"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"output"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It’s the same story for “fail” cases, where the annotations are simply generated from the expected output (issues):</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Missing"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html&gt;&lt;/html&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"example"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"config"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"output"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test.html"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"column"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"line"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"html_has_lang"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The `&lt;html&gt;` tag should have a `lang` attribute with a valid value, describing the main language of the page"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="mdx">MDX</h3>
+
+<p>All of this comes together with <a href="https://mdxjs.com/">MDX</a>, a Markdown-inspired syntax which makes it possible to use JSX directly inside documents, thereby making it possible to use React components, like the language tabs and code snippets with annotations:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Tabs</span>
+  <span class="na">groupId</span><span class="p">=</span><span class="s">"config-language"</span>
+  <span class="na">defaultValue</span><span class="p">=</span><span class="s">"toml"</span>
+  <span class="na">values</span><span class="p">=</span><span class="si">{</span><span class="p">[</span>
+    <span class="p">{</span> <span class="na">label</span><span class="p">:</span> <span class="dl">"</span><span class="s2">TOML</span><span class="dl">"</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="dl">"</span><span class="s2">toml</span><span class="dl">"</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">label</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Shell</span><span class="dl">"</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="dl">"</span><span class="s2">shell</span><span class="dl">"</span> <span class="p">},</span>
+  <span class="p">]</span><span class="si">}</span>
+<span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nc">TabItem</span> <span class="na">value</span><span class="p">=</span><span class="s">"toml"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nc">CodeSnippet</span>
+      <span class="na">snippet</span><span class="p">=</span><span class="si">{</span><span class="s2">`# The </span><span class="se">\`</span><span class="s2">alt</span><span class="se">\`</span><span class="s2"> attribute must be present.\nimage_alt = true`</span><span class="si">}</span>
+      <span class="na">annotations</span><span class="p">=</span><span class="si">{</span><span class="p">[]</span><span class="si">}</span>
+      <span class="na">lang</span><span class="p">=</span><span class="s">"toml"</span>
+    <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nc">TabItem</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nc">TabItem</span> <span class="na">value</span><span class="p">=</span><span class="s">"shell"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nc">CodeSnippet</span>
+      <span class="na">snippet</span><span class="p">=</span><span class="si">{</span><span class="s2">`# The </span><span class="se">\`</span><span class="s2">alt</span><span class="se">\`</span><span class="s2"> attribute must be present.\ncurlylint --rule 'image_alt: true' .`</span><span class="si">}</span>
+      <span class="na">annotations</span><span class="p">=</span><span class="si">{</span><span class="p">[]</span><span class="si">}</span>
+      <span class="na">lang</span><span class="p">=</span><span class="s">"shell"</span>
+    <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nc">TabItem</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nc">Tabs</span><span class="p">&gt;</span>
+</code></pre></div></div>
+
+<p>Docusaurus supports MDX out of the box, and provides the “Tabs” components. The CodeSnippet component is originally from Docusaurus but has been customized to support basic annotations.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Interview exercises for web developers]]></title>
+    <link href="https://thib.me/interview-exercises-for-web-developers"/>
+    <updated>2020-07-05T23:05:21+01:00</updated>
+    <id>https://thib.me/interview-exercises-for-web-developers</id>
+    <content type="html"><![CDATA[<p>Here are a couple of interview exercises I like to give, which are relatively open to varied approaches.</p>
+
+<!-- more -->
+
+<h2 id="before-the-interview-form-validation">Before the interview: Form validation</h2>
+
+<p>I’ve always liked Springload’s <a href="https://github.com/springload/form-validation-problem">form validation problem</a>. It’s a relatively simple problem in apparence – implementing form validation for a basic HTML form, with a few fields, and a few validation rules.</p>
+
+<p>What I think makes it really good is that it’s possible to approach this in many different ways – and there are lots of things for candidates to demonstrate beyond the basic implementation of the form validation – knowledge in any of those areas:</p>
+
+<ul>
+  <li>Documentation</li>
+  <li>Accessibility</li>
+  <li>Progressive enhancement</li>
+  <li>Browser support</li>
+  <li>Testing</li>
+  <li>Tooling</li>
+</ul>
+
+<p>Form validation is a particularly interesting problem in web development because there is a fair amount of state to manage – validation errors for each fields, as well as whether the fields have been interacted with or not to decide when to display the errors.</p>
+
+<p>Candidates can take a shot at this with vanilla JS, a ready-made library like <a href="https://parsleyjs.org/">Parsley</a>, or can be asked to do this with React (Redux Forms, Formik, bespoke?), or even back-end technologies.</p>
+
+<h2 id="at-the-interview-build-this">At the interview: Build This</h2>
+
+<p>This is my go-to “how would you do this” problem, initially encountered at Codemate, which can be used to interview full-stack developers (any stack), or front-end or back-end only. The candidate is shown a specific UI (via a wireframe, screenshot, or real-world app), and is then asked to explain how they would build it within the context of a real project.</p>
+
+<p>Depending on the candidate’s experience level, role, (and level of interview stress), this can be run as an open-ended conversation driven by the candidate directly, or as a series of guided themes / questions.</p>
+
+<p>The whole exercise takes 30min to 1h depending on what is covered – spend a good 5 mins on the problem statement + intro &amp; architecture, then move through the themes.</p>
+
+<p>I really like this because:</p>
+
+<ul>
+  <li>It makes for a more conversational interview – even if the questions are fixed, it’s more natural to have them with a specific app to think about.</li>
+  <li>For candidates, it makes it easier to relate to their past work, for example reflecting on similar apps they’ve built.</li>
+  <li>For interviewers, it does give enough structure to the interview that candidates’ answers can easily be categorised on the fly, and then compared to those of other candidates.</li>
+</ul>
+
+<p>This works particularly well if the wireframe has quite a few things going on visually, with different types of data, a user account, and a form or two.</p>
+
+<h2 id="template-build-this-twitter-clone">Template: Build This Twitter Clone</h2>
+
+<p><img src="/images/blog/interview-exercises-for-web-developers/twitter-wireframe.png" alt="Wireframe of a Twitter clone, showing a logged-in user’s timeline, with few tweets, a form to post a new tweet, and the user’s profile details" /></p>
+
+<p><em>Placeholder wireframe from <a href="https://www.flickr.com/photos/doos/4689874175/in/photostream/">Rob Enslin</a></em></p>
+
+<h3 id="fundamentals">Fundamentals</h3>
+
+<ul>
+  <li><strong>Introduction</strong>
+    <ul>
+      <li>Identify the features of this UI</li>
+      <li>Identify the underlying data / models</li>
+    </ul>
+  </li>
+  <li><strong>Tech stack and architecture</strong>
+    <ul>
+      <li>Rough architecture of the app (front-end and back-end)</li>
+      <li>Overall stack, centred around <code class="language-plaintext highlighter-rouge">&lt;tech we care about&gt;</code></li>
+    </ul>
+  </li>
+  <li><strong>Integrations &amp; APIs</strong>
+    <ul>
+      <li>Integration with the backend, endpoints and payloads</li>
+      <li>Client-side integrations</li>
+    </ul>
+  </li>
+  <li><strong>Data management</strong>
+    <ul>
+      <li>State management tools with <code class="language-plaintext highlighter-rouge">&lt;tech&gt;</code></li>
+      <li>Data flow for a given feature (e.g. search)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="electives">Electives</h4>
+
+<ul>
+  <li><strong>Mobile-friendly UI</strong>
+    <ul>
+      <li>RWD, cross-browser support</li>
+      <li>Offline capabilities</li>
+    </ul>
+  </li>
+  <li><strong>Security</strong>
+    <ul>
+      <li>Security considerations for a new feature: user accounts with saved searches</li>
+    </ul>
+  </li>
+  <li><strong>Testing / Tooling</strong></li>
+  <li><strong>Accessibility</strong></li>
+  <li><strong>Performance</strong></li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>

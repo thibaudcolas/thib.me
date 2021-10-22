@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Draftail v1.3.0: community improvements, beyond Wagtail - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Time for a new release! Draftail v1.3.0 is out, and this is the first release to solely focus on improvements or fixes requested by users of Draftail outside...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.draftail.org/blog/2019/08/15/draftail-v1-3-0-community-improvements-beyond-wagtail">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.draftail.org/blog/2019/08/15/draftail-v1-3-0-community-improvements-beyond-wagtail">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Draftail v1.3.0: community improvements, beyond Wagtail">
+  <meta property="og:description" content="Time for a new release! Draftail v1.3.0 is out, and this is the first release to solely focus on improvements or fixes requested by users of Draftail outside...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2019-08-15-draftail-v1-3-0-community-improvements-beyond-wagtail.md">Edit</a>
+      <h1 class="entry-title">Draftail v1.3.0: community improvements, beyond Wagtail</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2019-08-15T00:56:37+01:00" pubdate data-updated="true">2019-08-15 00:56</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Time for a new release! Draftail <a href="https://github.com/springload/draftail/blob/master/CHANGELOG.md#v130">v1.3.0</a> is out, and this is the first release to solely focus on improvements or fixes requested by users of Draftail outside of Wagtail, its first large-scale implementation.</p>
+
+<!-- more -->
+
+<h2 id="bug-fixes-and-new-features">Bug fixes and new features</h2>
+
+<h3 id="readonly-editor-support">readOnly editor support</h3>
+
+<p>The editor now supports being set to <a href="https://www.draftail.org/docs/api#draftaileditor"><code class="language-plaintext highlighter-rouge">readOnly</code></a> mode, just like vanilla Draft.js. Thanks to <a href="https://github.com/SpearThruster">@SpearThruster</a> for requesting this, <em>and</em> making the pull request to implement this new prop for the editor 🎉.</p>
+
+<h3 id="controlled-editor">Controlled editor</h3>
+
+<p>Another commonly requested feature was for using the editor as a <a href="https://reactjs.org/docs/forms.html#controlled-components">controlled component</a> – the recommended mode of operation for form elements in React, and again how vanilla Draft.js works.</p>
+
+<p>This is now implemented with two props: <a href="https://www.draftail.org/docs/api#editorstate-and-onchange"><code class="language-plaintext highlighter-rouge">editorState</code> and <code class="language-plaintext highlighter-rouge">onChange</code></a>. People familiar with vanilla Draft.js will feel right at home. This will also make it much easier to integrate the editor in apps where state is centrally managed, or where forms have specific reset / validation behavior.</p>
+
+<p>To help with Draft.js state initialisation and persistence, Draftail now also exposes APIs to help with <a href="https://www.draftail.org/docs/controlled-component#data-conversion-helpers">data conversion</a>, which are built-in with the uncontrolled editor API.</p>
+
+<h3 id="customisable-undoredo-button-icons">Customisable undo/redo button icons</h3>
+
+<p>Thanks to <a href="https://github.com/rmakovyak">@rmakovyak</a> for fixing this – icons should be <a href="https://www.draftail.org/docs/customising-icons">customisable in the toolbar</a> for all buttons, but there was a bug preventing this for undo/redo buttons via the <code class="language-plaintext highlighter-rouge">showUndoControl</code> and <code class="language-plaintext highlighter-rouge">showRedoControl</code> props.</p>
+
+<h2 id="state-of-draftail">State of Draftail</h2>
+
+<p>Put simply, none of the above changes are going to be useful for Draftail’s first use case: as an editor for <a href="https://wagtail.io">Wagtail</a>. I find this wonderful: this reflects that the editor is beneficial for people outside of the Wagtail bubble, and, with those changes, it will become useful for even more use cases that I didn’t initially identify.</p>
+
+<p>According to GitHub and npm statistics, the editor is used in <a href="https://github.com/springload/draftail/network/dependents">118 public repositories</a> and gets downloaded <a href="https://www.npmjs.com/package/draftail">1’772 times per week on npm</a>. There are well known names in there – the <a href="https://github.com/fecgov/fec-cms">FEC</a> in the US for their CMS, <a href="https://github.com/NCI-Agency/anet">NATO’s Communication and Information Agency</a>, <a href="https://medialab.sciencespo.fr">Sciences Po’s médialab</a>. <a href="https://getsaleor.com/">Saleor</a>, an up-and-coming e-commerce platform built on modern technologies also <a href="https://medium.com/saleor/february-release-of-saleor-three-new-dashboard-2-0-sections-6d775479882e">announced on their blog</a> that the upcoming version of Saleor would be using Draftail for rich text content.</p>
+
+<p><img src="/images/blog/draftail-v1-3-0-community-improvements-beyond-wagtail/draftail-in-saleor.png" alt="Screenshot of Draftail as it is used in Saleor 2.0, for a product description field" /></p>
+
+<blockquote>
+  <p>Draftail looking good in Saleor dashboard 2.0!</p>
+</blockquote>
+
+<p>I’m sure there are many more. If you’re using Draftail, please do <a href="https://github.com/thibaudcolas/draftail.org/issues/13">get in touch</a> so others can see all of the cool things you’re doing with it!</p>
+
+<h3 id="up-next">Up next</h3>
+
+<p>With those improvements in place to make Draftail usable in more scenarios, I’d really like to go back to focusing on features again. Here are things that look really cool that I’d like to look at next:</p>
+
+<ul>
+  <li><a href="https://github.com/springload/draftail/issues/198">Table support #198</a>. This is lots of work, but would be really cool to have basic support out of the box or as an “official” extension.</li>
+  <li><a href="https://github.com/springload/draftail/issues/158">Support image blocks without wrapper text blocks #158</a> – and generally better built-in support for images, most likely as an “official” extension with good defaults.</li>
+  <li><a href="https://github.com/springload/draftail/issues/113">Add character replacements for typing convenience &amp; typographic correctness #113</a>. This is one of those little things that make an editor much more pleasant to use, if done well.</li>
+  <li><a href="https://github.com/springload/draftail/issues/118">Add support for emojis #118</a>. I’d really like to nail this one!</li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2019-08-15T00:56:37+01:00" pubdate data-updated="true">2019-08-15 00:56</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/draftjs/">Draftjs</a>,
+    
+      <a class="category" href="/categories/draftail/">Draftail</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/making-wagtail-accessible" title="Previous Post: Making Wagtail accessible">&laquo; Making Wagtail accessible</a>
+      
+      
+        <a class="basic-alignment right" href="/testing-with-multiple-versions-of-npm-packages" title="Next Post: Testing with multiple versions of npm packages">Testing with multiple versions of npm packages &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

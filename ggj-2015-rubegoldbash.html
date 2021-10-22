@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>GGJ 2015: RubeGoldBash - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="This post is my post-mortem after the 2015 edition of the Global Game Jam. It was my first Game Jam ever, and I planned to learn the Phaser framework beforeh...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/ggj-2015-rubegoldbash">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/ggj-2015-rubegoldbash">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="GGJ 2015: RubeGoldBash">
+  <meta property="og:description" content="This post is my post-mortem after the 2015 edition of the Global Game Jam. It was my first Game Jam ever, and I planned to learn the Phaser framework beforeh...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2015-02-04-ggj-2015-rubegoldbash.md">Edit</a>
+      <h1 class="entry-title">GGJ 2015: RubeGoldBash</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2015-02-04T10:50:08+00:00" pubdate data-updated="true">2015-02-04 10:50</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>This post is my post-mortem after the 2015 edition of the <a href="http://globalgamejam.org/">Global Game Jam</a>. It was my first Game Jam ever, and I planned to learn the <a href="http://phaser.io/">Phaser</a> framework beforehand in order to get going quickly.</p>
+
+<p>It was completely useless, as I decided to build a game in Bash, <a href="https://github.com/thibaudcolas/rubegoldbash">RubeGoldBash</a>.</p>
+
+<!-- more -->
+
+<p>I started thinking about command-line games when I had a look at the <a href="http://globalgamejam.org/news/introducing-ggj-2015-diversifiers">diversifiers</a> in the morning, particularly:</p>
+
+<blockquote>
+  <p><strong>Batch Job</strong>: The game is a batch file from any operating system, using command line tools found in an out of the box installation.</p>
+</blockquote>
+
+<p>Inspiring isn’t it? I got my idea when we learned the theme: <em>What do we do now?</em> See, UNIX tools are known to be easy to combine together. You start with a fixed toolset, but by combining them together you end up with endless possibilities. I would build a game about building <a href="https://en.wikipedia.org/wiki/Rube_Goldberg_machine">Rube Goldberg machines</a> in bash, <em>RubeGoldBash</em> (thanks for the name Chris).</p>
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Rube_Goldberg%27s_%22Self-Operating_Napkin%22_(cropped).gif"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Rube_Goldberg%27s_%22Self-Operating_Napkin%22_%28cropped%29.gif" alt="One of Rube Goldberg's inventions" /></a></p>
+
+<p>This is what it looks like:</p>
+
+<iframe src="https://showterm.io/a06f7dcf548aadbbcb751" width="640" height="480"></iframe>
+
+<p>The goal of the game is to create the most crazy, useless, enormous bash one-liners by combining basic commands together, using as many pipes as possible. Quite simple!</p>
+
+<p>Here are a few examples which are worth a lot of points:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Retrieve the weather for your location</span>
+curl <span class="nt">-s</span> ip.appspot.com | xargs <span class="nt">-n</span> 1 curl <span class="nt">-s</span> <span class="s2">"freegeoip.net/csv/</span><span class="nv">$1</span><span class="s2">"</span> | <span class="nb">cut</span> <span class="nt">-d</span> <span class="s1">','</span> <span class="nt">-f</span> <span class="s1">'9 10'</span> | <span class="nb">sed</span> <span class="s1">'s/,/\&amp;lon=/g'</span> | xargs <span class="nt">-n</span> 1 <span class="nb">echo</span> <span class="s2">"http://api.openweathermap.org/data/2.5/weather?mode=html&amp;lat=</span><span class="nv">$1</span><span class="s2">"</span> | <span class="nb">sed</span> <span class="s1">'s/ //g'</span> | xargs <span class="nt">-n</span> 1 curl <span class="nt">-s</span> <span class="nv">$1</span> | <span class="nb">tee </span>weather.html
+<span class="c"># Same request, with display to the prompt using lynx</span>
+curl <span class="nt">-s</span> ip.appspot.com | xargs <span class="nt">-n</span> 1 curl <span class="nt">-s</span> <span class="s2">"freegeoip.net/csv/</span><span class="nv">$1</span><span class="s2">"</span> | <span class="nb">cut</span> <span class="nt">-d</span> <span class="s1">','</span> <span class="nt">-f</span> <span class="s1">'9 10'</span> | <span class="nb">sed</span> <span class="s1">'s/,/\&amp;lon=/g'</span> | xargs <span class="nt">-n</span> 1 <span class="nb">echo</span> <span class="s2">"http://api.openweathermap.org/data/2.5/weather?mode=html&amp;lat=</span><span class="nv">$1</span><span class="s2">"</span> | <span class="nb">sed</span> <span class="s1">'s/ //g'</span> | xargs <span class="nt">-n</span> 1 curl <span class="nt">-s</span> <span class="nv">$1</span> | lynx <span class="nt">-stdin</span> <span class="nt">-dump</span>
+
+<span class="c"># Retrieve the answer to "When will it be done?" (scraping) and make a nice voice read it for you.</span>
+lynx <span class="nt">--dump</span> whenwillitbedone.trgdy.com | <span class="nb">head</span> <span class="nt">-n</span> 8 | <span class="nb">tail</span> <span class="nt">-n</span> 4 | <span class="nb">tr</span> <span class="s2">"</span><span class="se">\\</span><span class="s2">n"</span> <span class="s1">' '</span> | <span class="nb">cut</span> <span class="nt">-d</span> <span class="s1">'['</span> <span class="nt">-f</span> 1 | <span class="nb">sed</span> <span class="s1">'s/   //g'</span> | <span class="nb">sed</span> <span class="s2">"s/'/ /g"</span> | perl <span class="nt">-pe</span> <span class="s1">'s/([^a-zA-Z0-9_.!~*()'</span><span class="se">\'</span><span class="s1">'-])/sprintf("%%%02X", ord($1))/ge'</span> | xargs <span class="nt">-n</span> 1 <span class="nb">echo</span> <span class="s2">"http://translate.google.com/translate_tts?ie=UTF-8&amp;tl=en&amp;q=</span><span class="nv">$1</span><span class="s2">"</span> | <span class="nb">sed</span> <span class="s1">'s/ //g'</span> | xargs <span class="nt">-n</span> 1 curl <span class="nt">-s</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> <span class="o">&gt;</span> whenwillitbedone.mp3
+<span class="c"># File can be read with</span>
+afplay whenwillitbedone.mp3
+
+<span class="c"># Count the number of folders in the current working directory.</span>
+<span class="nb">ls</span> <span class="nt">-l</span> | <span class="nb">cut</span> <span class="nt">-c</span> 1 | <span class="nb">grep </span>d | <span class="nb">wc</span> <span class="nt">-l</span>
+
+<span class="c"># Find the longest name</span>
+<span class="nb">cat</span> /usr/share/dict/propernames | <span class="nb">grep</span> <span class="s1">'S'</span> | <span class="nb">awk</span> <span class="s1">'{print length($1), $1}'</span> | <span class="nb">sort</span> <span class="nt">-n</span> | <span class="nb">tail</span> <span class="nt">-n</span> 1 | <span class="nb">cut</span> <span class="nt">-d</span> <span class="s1">' '</span> <span class="nt">-f</span> 2
+<span class="c"># And spell it</span>
+<span class="nb">cat</span> /usr/share/dict/propernames | <span class="nb">grep</span> <span class="s1">'S'</span> | <span class="nb">awk</span> <span class="s1">'{print length($1), $1}'</span> | <span class="nb">sort</span> <span class="nt">-n</span> | <span class="nb">tail</span> <span class="nt">-n</span> 1 | <span class="nb">cut</span> <span class="nt">-d</span> <span class="s1">' '</span> <span class="nt">-f</span> 2 | say
+</code></pre></div></div>
+
+<p>You can then submit your score by using the <code class="language-plaintext highlighter-rouge">rubeshare</code> command: <a href="https://github.com/thibaudcolas/rubegoldbash-server">https://github.com/thibaudcolas/rubegoldbash-server</a>.</p>
+
+<p>And voilà! Your score is on the wall, your commands are stored as Gists on GitHub, and you can boast about your newly gained UNIX wizardry skills!</p>
+
+<p>Thanks <a href="http://globalgamejam.org/">Global Game Jam</a>, I had a lot of fun.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2015-02-04T10:50:08+00:00" pubdate data-updated="true">2015-02-04 10:50</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/events/">Events</a>,
+    
+      <a class="category" href="/categories/game/">Game</a>,
+    
+      <a class="category" href="/categories/project/">Project</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/the-eloquent-json-resume-theme" title="Previous Post: The Eloquent JSON Resume theme">&laquo; The Eloquent JSON Resume theme</a>
+      
+      
+        <a class="basic-alignment right" href="/groceries-expenses-forecast" title="Next Post: Groceries expenses forecast">Groceries expenses forecast &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

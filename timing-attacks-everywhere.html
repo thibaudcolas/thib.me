@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Timing attacks, everywhere - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Ever heard of timing attacks? Turns out timing attack vulnerabilities are pretty common. It’s unclear to me how practical those attacks are, but I wouldn’t r...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/timing-attacks-everywhere">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/timing-attacks-everywhere">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Timing attacks, everywhere">
+  <meta property="og:description" content="Ever heard of timing attacks? Turns out timing attack vulnerabilities are pretty common. It’s unclear to me how practical those attacks are, but I wouldn’t r...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-05-04-timing-attacks-everywhere.md">Edit</a>
+      <h1 class="entry-title">Timing attacks, everywhere</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-05-04T22:15:08+01:00" pubdate data-updated="true">2020-05-04 22:15</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Ever heard of <a href="https://en.wikipedia.org/wiki/Timing_attack">timing attacks</a>? Turns out timing attack vulnerabilities are pretty common. It’s unclear to me how practical those attacks are, but I wouldn’t risk it.</p>
+
+<!-- more -->
+
+<h2 id="finding-timing-attack-vulnerabilities">Finding timing attack vulnerabilities</h2>
+
+<p>The gist of a timing attack is an <em><a href="http://cwe.mitre.org/data/definitions/208.html">observable timing discrepancy</a></em> in access control code:</p>
+
+<ul>
+  <li>Some code compares two values in order to determine whether something is authorised or not, for example comparing the user input with a stored plaintext password, or even comparing a hashed version of the user input against a password hash.</li>
+  <li>Turns out, the programming language executing that comparison is smart enough to stop the comparison as early as one of the characters stops matching – instead of having to compare all of the characters of the two strings.</li>
+  <li>If the execution time of the comparison can be observed – then an attacker can determine whether their supplied input is getting closer to the compared value, by seeing the execution take gradually longer.</li>
+</ul>
+
+<p>What does this look like in practice? This:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PasswordViewRestrictionForm</span><span class="p">(</span><span class="n">forms</span><span class="p">.</span><span class="n">Form</span><span class="p">):</span>
+    <span class="p">[...]</span>
+
+    <span class="k">def</span> <span class="nf">clean_password</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s">'password'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="o">!=</span> <span class="bp">self</span><span class="p">.</span><span class="n">restriction</span><span class="p">.</span><span class="n">password</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">forms</span><span class="p">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s">"The password you have entered is not correct. Please try again."</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>or that:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">authorize</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">configured_username</span><span class="p">,</span> <span class="n">configured_password</span><span class="p">):</span>
+    <span class="c1"># [...]
+</span>    <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="n">configured_username</span> <span class="ow">and</span> <span class="n">password</span> <span class="o">==</span> <span class="n">configured_password</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<p>…or <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7576">in Ruby (Rails)</a>,</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">ClassMethods</span>
+  <span class="k">def</span> <span class="nf">http_basic_authenticate_with</span><span class="p">(</span><span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+    <span class="n">before_filter</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="nf">except</span><span class="p">(</span><span class="ss">:name</span><span class="p">,</span> <span class="ss">:password</span><span class="p">,</span> <span class="ss">:realm</span><span class="p">))</span> <span class="k">do</span>
+      <span class="n">authenticate_or_request_with_http_basic</span><span class="p">(</span><span class="n">options</span><span class="p">[</span><span class="ss">:realm</span><span class="p">]</span> <span class="o">||</span> <span class="s2">"Application"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="p">,</span> <span class="n">password</span><span class="o">|</span>
+        <span class="nb">name</span> <span class="o">==</span> <span class="n">options</span><span class="p">[</span><span class="ss">:name</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">password</span> <span class="o">==</span> <span class="n">options</span><span class="p">[</span><span class="ss">:password</span><span class="p">]</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>or <a href="https://github.com/flawyte/now-basic-auth/issues/4">in Node (Express)</a>,</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">protect</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">/admin</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="nx">pass</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">user</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">admin</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="nx">pass</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">admin</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">{</span>
+    <span class="na">directory</span><span class="p">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">/_static</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">realm</span><span class="p">:</span> <span class="dl">"</span><span class="s2">now-basic-auth.node-static-auth</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">onAuthFailed</span><span class="p">:</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="dl">"</span><span class="s2">Restricted area, please login (admin:admin).</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>Once you know what to look for, timing attack vulnerabilities really are everywhere. In <a href="https://github.com/flawyte/now-basic-auth/issues/4">basic auth code</a>. In <a href="https://github.com/tm-kn/django-basic-auth-ip-whitelist/security/advisories/GHSA-m38j-pmg3-v5x5">more basic auth code</a>, and also in <a href="https://github.com/wagtail/wagtail/security/advisories/GHSA-jjjr-3jcw-f8v6">password-protected content</a>.</p>
+
+<p>For me, this came up because I was looking for a good Express basic auth implementation, stumbled upon <a href="https://github.com/LionC/express-basic-auth">express-basic-auth</a>, which works well, and then wondered – “oh, are other libraries using a <a href="https://nodejs.org/api/crypto.html#crypto_crypto_timingsafeequal_a_b">timing-safe comparison function</a>?” Lots weren’t.</p>
+
+<h2 id="protecting-yourself">Protecting yourself</h2>
+
+<p>As mentioned above, all sensitive comparison checks should use timing-safe comparison functions such as Node’s <a href="https://nodejs.org/api/crypto.html#crypto_crypto_timingsafeequal_a_b">crypto.timingSafeEqual</a> or Python 3.4+’s <a href="https://docs.python.org/3/library/hmac.html#hmac.compare_digest">hmac.compare_digest</a> (or Django’s <a href="https://github.com/django/django/blob/659a73bc0a2df9be856e23fcfc6cc66d0d1a35fd/django/utils/crypto.py#L77"><code class="language-plaintext highlighter-rouge">crypto.constant_time_compare</code></a>).</p>
+
+<h3 id="proactively-looking-for-similar-issues">Proactively looking for similar issues</h3>
+
+<p>You will want to look for all access control code that uses the programming language’s built-in comparison operators (<code class="language-plaintext highlighter-rouge">==</code> or <code class="language-plaintext highlighter-rouge">!=</code>). I’m very excited about the potential of platforms like <a href="https://lgtm.com/">LGTM</a> and their <a href="https://securitylab.github.com/tools/codeql">CodeQL language</a> to find vulnerabilities like this automaticaly. Here is a sample query:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">python</span>
+
+<span class="k">from</span> <span class="nx">Compare</span> <span class="nx">eq</span>
+<span class="nx">where</span> <span class="nx">eq</span><span class="p">.</span><span class="nx">getAComparator</span><span class="p">().</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">matches</span><span class="p">(</span><span class="dl">"</span><span class="s2">%key%</span><span class="dl">"</span><span class="p">)</span> <span class="nx">or</span> <span class="nx">eq</span><span class="p">.</span><span class="nx">getAComparator</span><span class="p">().</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">matches</span><span class="p">(</span><span class="dl">"</span><span class="s2">%password%</span><span class="dl">"</span><span class="p">)</span> <span class="nx">or</span> <span class="nx">eq</span><span class="p">.</span><span class="nx">getAComparator</span><span class="p">().</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">matches</span><span class="p">(</span><span class="dl">"</span><span class="s2">%auth%</span><span class="dl">"</span><span class="p">)</span> <span class="nx">or</span> <span class="nx">eq</span><span class="p">.</span><span class="nx">getAComparator</span><span class="p">().</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">matches</span><span class="p">(</span><span class="dl">"</span><span class="s2">%sign%</span><span class="dl">"</span><span class="p">)</span>
+<span class="nx">select</span> <span class="nx">eq</span>
+</code></pre></div></div>
+
+<p>This is a relatively naive query, but it helped me identify issues like Wagtail’s bypass-able <a href="https://github.com/wagtail/wagtail/issues/6127">image serve signature check</a>.</p>
+
+<p>If you want to try this out for yourself, <a href="https://securitylab.github.com/tools/codeql">GitHub’s Security Labs</a> have the most extensive documentation on how to use this.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>Tools to probe for timing attack vulnerabilities:
+    <ul>
+      <li><a href="https://github.com/ffleming/timing_attack">https://github.com/ffleming/timing_attack</a></li>
+      <li><a href="https://github.com/SakiiR/timeauth">https://github.com/SakiiR/timeauth</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.blackhat.com/docs/us-15/materials/us-15-Morgan-Web-Timing-Attacks-Made-Practical.pdf">Timing Attacks Made Practical, Blackhat 2015</a></li>
+  <li><a href="https://gist.github.com/thibaudcolas/f68fb257abb6dc6164be0c01c4f42367">Initial research for django-basic-auth-ip-whitelist vulnerability</a>
+    <ul>
+      <li><a href="https://github.com/tm-kn/django-basic-auth-ip-whitelist/security/advisories/GHSA-m38j-pmg3-v5x5">CVE-2020-4071</a></li>
+    </ul>
+  </li>
+  <li><a href="https://gist.github.com/thibaudcolas/bf80b119225dacb8463aab7d7e527bd6">Initial research for Wagtail vulnerability</a>
+    <ul>
+      <li><a href="https://github.com/wagtail/wagtail/security/advisories/GHSA-jjjr-3jcw-f8v6">CVE-2020-11037</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-05-04T22:15:08+01:00" pubdate data-updated="true">2020-05-04 22:15</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/security/">Security</a>,
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/accessibility-audits-getting-started" title="Previous Post: Accessibility audits: getting started">&laquo; Accessibility audits: getting started</a>
+      
+      
+        <a class="basic-alignment right" href="/welcome-to-curlylint" title="Next Post: Welcome to curlylint.org!">Welcome to curlylint.org! &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

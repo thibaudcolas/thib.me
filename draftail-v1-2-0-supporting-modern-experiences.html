@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Draftail v1.2.0: supporting modern experiences - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Draftail v1.2.0 is out, and it packs a punch. While the previous release focused on maintainability and bug fixes, this time around it’s all about shiny new ...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.draftail.org/blog/2019/03/03/draftail-v1-2-0-supporting-modern-experiences">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.draftail.org/blog/2019/03/03/draftail-v1-2-0-supporting-modern-experiences">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Draftail v1.2.0: supporting modern experiences">
+  <meta property="og:description" content="Draftail v1.2.0 is out, and it packs a punch. While the previous release focused on maintainability and bug fixes, this time around it’s all about shiny new ...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2019-03-03-draftail-v1-2-0-supporting-modern-experiences.md">Edit</a>
+      <h1 class="entry-title">Draftail v1.2.0: supporting modern experiences</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2019-03-03T12:01:24+00:00" pubdate data-updated="true">2019-03-03 12:01</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Draftail <a href="https://github.com/springload/draftail/blob/master/CHANGELOG.md#v120">v1.2.0</a> is out, and it packs a punch. While the <a href="https://www.draftail.org/blog/2019/02/08/draftail-v1-1-0-a-quality-of-life-release">previous release</a> focused on maintainability and bug fixes, this time around it’s all about shiny new features: support for the <a href="https://www.draft-js-plugins.com/">Draft.js Plugins</a> architecture and its plugin ecosystem, and new ways to format content with Markdown shortcuts.</p>
+
+<!-- more -->
+
+<h2 id="draftjs-plugins-support">Draft.js Plugins support</h2>
+
+<p>Draftail now supports <a href="https://www.draft-js-plugins.com/">Draft.js Plugins</a>, a set of high-quality plugins for Draft.js editors, and a pluggable architecture to write advanced extensions for Draftail.</p>
+
+<p>While the set of existing plugins is already pretty impressive in its own right, the architecture is even more important: it makes it possible for third-party developers to customise most if not all of the behavior of the editor – from the rendering of any block, to the text input handling, keyboard shortcuts, copy-paste handling, and more. <strong>Anything that is customisable in a bespoke Draft.js implementation should now be customisable in Draftail.</strong></p>
+
+<p><a href="https://www.draft-js-plugins.com/"><img src="/images/blog/draftail-v1-2-0-supporting-modern-experiences/draft-js-plugins-capabilities-examples.png" alt="Screenshot of a rich text editor built with Draft.js Plugins. Visible features: image alignment, image selection, emojis, and more" /></a></p>
+
+<blockquote>
+  <p>All of these rich text features are built with plugins. See any you’d like to use?</p>
+</blockquote>
+
+<p>For the future of Draftail, it will make it much easier to experiment with new rich text interactions without compromising on the editor’s stability. Building upon an existing ecosystem of plugins will also increase the reusability of Draft.js extensions, and ease maintenance.</p>
+
+<h3 id="tradeoffs">Tradeoffs</h3>
+
+<p>The obvious tradeoff in introducing support for Draft.js Plugins is the performance cost of a plugin architecture on top of Draft.js. It’s actually fairly minimal: for loading performance, the core of Draft.js Plugins (<code class="language-plaintext highlighter-rouge">draft-js-plugins-editor</code>) is relatively small: <a href="https://bundlephobia.com/result?p=draft-js-plugins-editor">about 4kB gzipped</a>. For rendering performance / responsivity of the editor, Draft.js is pretty good at limiting re-rendering and computations to only the subset of the editor that’s being edited. This makes the performance overhead relatively small as long as the plugins perform normally.</p>
+
+<p>The other tradeoff is in preserving the content filtering capabilities that make Draftail good: being able to trust the editor to filter out unsupported content, and only keep what is whitelisted. Here, the plugins come with a catch: since the architecture doesn’t support whitelisting supported content, types of formatting that can be introduced by plugins will need to be registered with the editor’s existing <a href="https://www.draftail.org/docs/formatting-options">APIs for content formats</a>.</p>
+
+<h3 id="opportunities">Opportunities</h3>
+
+<p>The biggest opportunity is in being able to introduce new means of interaction with the editor, that will make it better for end users. My favourite example of this is a simple <a href="https://www.draftail.org/docs/extensions-tutorial-linkify">“linkify” feature</a>:</p>
+
+<p><a href="https://www.draftail.org/docs/extensions-tutorial-linkify"><img src="/images/blog/draftail-v1-2-0-supporting-modern-experiences/linkify-demo.gif" alt="Screencap of a “linkify” interaction with the editor: copying a link, selecting text, pasting; creates the link onto the selected text" /></a></p>
+
+<p>See how easy it was to add that link? No need to reach out for the mouse to use the toolbar’s link picker, or know the keyboard shortcut – paste the link where it’s meant to be and it just works. This is the type of interaction that’s easy to iterate on when the editor comes with APIs that support these (here, the <a href="https://draftjs.org/docs/api-reference-editor#handlepastedtext"><code class="language-plaintext highlighter-rouge">handlePastedText</code></a> API from Draft.js).</p>
+
+<hr />
+
+<p>Here’s another example, this time with embeds:</p>
+
+<p><img src="/images/blog/draftail-v1-2-0-supporting-modern-experiences/slash-embed-demo.gif" alt="Screencap of a “slash-command” interaction: type /embed, then an embed URL, enter, and an embed block appears" /></p>
+
+<p>Here, typing <code class="language-plaintext highlighter-rouge">/embed</code> followed by an embed URL and pressing return is enough for an embed block to appear. No need for a modal to appear with a “URL” field to paste our link in, the editor’s API allow us to do this directly within the content. The added benefit is in discoverability of the editor’s features: it would be pretty simple to have an autocomplete on those commands, and support many more features than it would be realistic to have in a toolbar, or as keyboard shortcuts.</p>
+
+<p>Again, experimenting with this new type of interaction pattern is made possible by the new APIs that come with the plugin architecture (here, <a href="https://draftjs.org/docs/api-reference-editor#handlereturn"><code class="language-plaintext highlighter-rouge">handleReturn</code></a>).</p>
+
+<hr />
+
+<p>Here are examples of feature requests to Draftail that can now be implemented as extensions, thanks to the new APIs:</p>
+
+<ul>
+  <li><a href="https://github.com/springload/draftail/issues/62">#62 – Add “linkify” feature</a></li>
+  <li><a href="https://github.com/springload/draftail/issues/64">#64 – Add editor UI with Medium-style controls</a></li>
+  <li><a href="https://github.com/springload/draftail/issues/113">#113 – Add character replacements for typing convenience &amp; typographic correctness</a></li>
+  <li><a href="https://github.com/springload/draftail/issues/118">#118 – Add support for emojis</a></li>
+  <li><a href="https://github.com/springload/draftail/issues/158">#158 – Support atomic blocks (images, embeds, hr, etc) without wrapper text blocks</a></li>
+  <li><a href="https://github.com/springload/draftail/issues/169">#169 – Support advanced customisations to block rendering</a></li>
+</ul>
+
+<h2 id="markdown-shortcuts-for-inline-styles">Markdown shortcuts for inline styles</h2>
+
+<p>The editor now supports using Markdown shortcuts for inline styles: bold, italic, strikethrough, and code.</p>
+
+<p><img src="/images/blog/draftail-v1-2-0-supporting-modern-experiences/markdown-shortcuts-demo.gif" alt="Screencap of Markdown shortcuts for bold styles: type **, then text, then ** again, and voilà" /></p>
+
+<p>Have a look at the <a href="https://www.draftail.org/docs/keyboard-shortcuts">keyboard shortcuts</a> to see what’s supported.</p>
+
+<hr />
+
+<p>Now I’m excited to see what people will be building with those new APIs! Please come by the <a href="https://github.com/wagtail/wagtail/wiki/Slack">#draftail</a> Slack channel if you need any help, or don’t hesitate to <a href="https://github.com/springload/draftail">participate in the Draftail issue tracker</a>.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2019-03-03T12:01:24+00:00" pubdate data-updated="true">2019-03-03 12:01</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/draftjs/">Draftjs</a>,
+    
+      <a class="category" href="/categories/draftail/">Draftail</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/draftail-v1-1-0-a-quality-of-life-release" title="Previous Post: Draftail v1.1.0: a quality of life release">&laquo; Draftail v1.1.0: a quality of life release</a>
+      
+      
+        <a class="basic-alignment right" href="/patreon-time-out" title="Next Post: Patreon: time out!">Patreon: time out! &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

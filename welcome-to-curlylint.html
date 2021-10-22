@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Welcome to curlylint.org! - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Curlylint now has a website! 🎉">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.curlylint.org/blog/welcome-to-curlylint">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.curlylint.org/blog/welcome-to-curlylint">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Welcome to curlylint.org!">
+  <meta property="og:description" content="Curlylint now has a website! 🎉">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-06-19-welcome-to-curlylint.md">Edit</a>
+      <h1 class="entry-title">Welcome to curlylint.org!</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-06-19T23:03:29+01:00" pubdate data-updated="true">2020-06-19 23:03</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Curlylint now has a website! 🎉</p>
+
+<!-- more -->
+
+<p>While the linter itself is still very experimental, and subject to major changes, I believe that having great documentation is a much more important step than any single feature or linting rule of the linter. Particularly:</p>
+
+<ul>
+  <li>Documenting the rules, with their respective configuration options, with lots of examples.</li>
+  <li>Documenting CLI options, and (hopefully) future editor integrations.</li>
+</ul>
+
+<p>With a standalone site (as opposed to Markdown files in GitHub), I can create clean URLs for each of the rules, that can then be used directly in the CLI’s output. This is all inspired by <a href="https://eslint.org/">ESLint</a>, which is years ahead of any other static analysis tool I’ve ever used.</p>
+
+<p><img src="/images/blog/welcome-to-curlylint/eslint-awesome.gif" alt="Screen capture of ESLint in VS Code, with link to a rule’s documentation, and options to automatically disable the rule" /></p>
+
+<blockquote>
+  <p>ESLint’s VS Code integration, with link straight to the rule’s documentation, and options to auto-disable the violation.</p>
+</blockquote>
+
+<h2 id="the-website">The website</h2>
+
+<p>The website itself is built with <a href="https://v2.docusaurus.io/">Docusaurus v2</a>. I don’t think this matters too much – the main features I was after were:</p>
+
+<ul>
+  <li>A focus on documentation websites – with versioning, code highlighting.</li>
+  <li>Being able to write docs in Markdown without having to worry about creating a theme, or manually writing HTML / CSS.</li>
+  <li>Having a blog section and blogging features directly on the same docs website.</li>
+</ul>
+
+<p>The fact that it’s built with React is a plus that will come in handy should I want to build more bespoke pages. MDX is a plus too.</p>
+
+<h2 id="up-next">Up next</h2>
+
+<p>Once the website is up and running, there are two things I’d really like to make:</p>
+
+<ul>
+  <li>An editor integration with VS Code. I’ve had some exposure to this with <a href="https://github.com/stylelint/vscode-stylelint">vscode-stylelint</a>, but still don’t have the clearest understanding of how best to do this for a Python CLI.</li>
+  <li>An online playground similar to that of <a href="https://prettier.io/">Prettier</a>. I think it’s the best demonstrator of a tool’s capabilities, and it simplifies bug reports / quick tests greatly.</li>
+</ul>
+
+<p>Onwards!</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-06-19T23:03:29+01:00" pubdate data-updated="true">2020-06-19 23:03</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/tools/">Tools</a>,
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/automation/">Automation</a>,
+    
+      <a class="category" href="/categories/curlylint/">Curlylint</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/timing-attacks-everywhere" title="Previous Post: Timing attacks, everywhere">&laquo; Timing attacks, everywhere</a>
+      
+      
+        <a class="basic-alignment right" href="/procuring-accessibility-audits" title="Next Post: Procuring accessibility audits">Procuring accessibility audits &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

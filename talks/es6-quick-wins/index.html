@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ES6 Quick Wins</title>
+    <meta name="description" content="Thibaud’s Talks">
+
+    <link rel="stylesheet" href="/assets/reveal/reveal.min.css">
+    <link rel="stylesheet" href="/assets/reveal/sky.css" id="theme">
+    <link rel="stylesheet" href="/assets/reveal/custom.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="/assets/reveal/docco.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write( '<link rel="stylesheet" media="print" href="/assets/reveal/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css">' );
+    </script>
+
+    
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+    <br>
+    <h1>ES6 Quick Wins</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Thibaud Colas - <a href="https://twitter.com/thibaud_colas">@thibaud_colas</a><br><br> Slides : <a href="https://thib.me/talks/">thib.me/talks/</a></p>
+</section>
+
+<section>
+    <h2>Évolution du langage</h2>
+    <br>
+    <ul>
+        <li><strong>1995</strong> : LiveScript @ Netscape</li>
+        <li><strong>1999</strong> : ES3 — regex, try/catch</li>
+        <li><strong>2009</strong> : ES5 / ES3.1 — "use strict", JSON</li>
+        <li><strong>2015 ?</strong> : ES6 / Harmony — classes, générateurs, modules, métaprogrammation</li>
+        <li><strong>Ensuite</strong> : ES7 — surcharge d'opérateurs, pattern matching, traits</li>
+    </ul>
+    <br>
+    <br>
+    <p><a href="https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript"><em>Source: A Short History of JavaScript</em></a></p>
+</section>
+
+<section>
+    <h2>Support des fonctionnalités</h2>
+    <a href="https://kangax.github.io/es5-compat-table/es6/"><img src="img/compatibility-table-2.png" alt=""></a>
+    <p>Liste de features sur GitHub : <a href="https://github.com/lukehoban/es6features">lukehoban/es6features</a></p>
+</section>
+
+<section data-background="rgba(93, 186, 189, 0.5)">
+    <h2>Quick Wins</h2>
+    <br>
+    <br>
+    <ul>
+        <li>Fonctionnalités simples à utiliser</li>
+        <li>Utilisables <strong>dès aujourd'hui</strong></li>
+        <li>Compatibles Traceur &amp; Firefox 27+</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Default parameters</h2>
+    <br>
+    <pre><code data-trim contenteditable>
+var addES5 = function(x, y) {
+y = y || 5;
+return x + y;
+};
+
+
+var addES6 = function(x, y = 5) {
+return x + y;
+};
+<!-- var addES6Compiled = function(x) {
+var y = arguments[1] !== (void 0) ? arguments[1] : 5;
+return x + y;
+}; -->
+    </code></pre>
+</section>
+
+
+<section>
+    <h2>Destructuring</h2>
+    <br>
+    <pre><code data-trim contenteditable>
+var Circle = function(x, y, r) {
+this.center = {x: x, y: y};
+this.radius = r;
+};
+
+var c = new Circle(3, 5, 10);
+
+var centerX = c.center.x; // ES5
+var centerY = c.center.y; // ES5
+
+var {x: centerX, y: centerY} = c.center; // ES6
+
+var {x, y} = c.center; // ES6 raccourci
+    </code></pre>
+</section>
+
+<section>
+    <h2>Destructuring</h2>
+    <br>
+    <pre><code data-trim contenteditable>
+var getDiameterES5 = function(c) {
+return c.radius * 2;
+};
+
+var getDiameterES6 = function({radius: r}) {
+return r * 2;
+};<!-- var getDiameterES6Compiled = function($__0) {
+var r = $__0.radius;
+return r * 2;
+}; -->
+    </code></pre>
+    <p>Fonctionne aussi pour les paramètres !</p>
+</section>
+
+<section>
+    <h2>Map &amp; Set</h2>
+    <br>
+    <pre><code data-trim contenteditable>
+var s = new Set();
+s.add("hello").add("goodbye").add("hello");
+s.size === 2;
+s.has("hello") === true;
+
+// Maps
+var m = new Map();
+m.set("hello", 42);
+m.set(s, 34);
+m.get(s) == 34;
+    </code></pre>
+</section>
+
+<section>
+    <h2>Lambdas / Arrow functions</h2>
+    <pre><code data-trim contenteditable>
+var squareES5 = function (x) {
+return x * x;
+};
+
+
+var squareES6 = x => x * x;
+
+
+var squareES6Compiled = (function(x) {
+return x * x;
+});
+    </code></pre>
+    <br>
+    <p>Syntaxe plus lisible, <code>return</code> implicite</p>
+    <p>Programmation fonctionnelle FTW</p>
+</section>
+
+<section>
+    <h2>Lambdas / Arrow functions</h2>
+    <pre><code data-trim contenteditable>
+var ES5Tree = function() {
+var self = this; // Contexte A
+self.age = 0;
+
+setInterval(function () {
+self.age++; // Contexte B :(
+}, 2000);
+};
+
+var ES6Tree = function() {
+this.age = 0; // Contexte C
+
+setInterval(() => {
+this.age++; // Contexte C toujours !
+}, 2000);
+};
+
+var tree = new ES6Tree();
+    </code></pre>
+    <p></p>
+
+</section>
+
+<section>
+    <h2>Pourquoi utiliser ces nouveautés ?</h2>
+    <br>
+    <ul>
+        <li>Meilleure expressivité</li>
+        <li>Code plus lisible</li>
+        <li>Porte d'entrée vers des features plus complexes</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <p>ES6 est <strong>déjà utilisé</strong> par des projets comme <a href="https://github.com/sindresorhus/esnext-showcase">AngularJS 2.0, Ember, Koa</a></p>
+    <p>... et par des compagnies comme <a href="https://facebook.github.io/regenerator/">Facebook</a>, <a href="https://github.com/google/traceur-compiler">Google</a>, <a href="https://esnext.github.io/esnext/">Square</a></p>
+</section>
+
+<section>
+    <h2>Aller plus loin</h2>
+    <br>
+    <ul>
+        <li><a href="https://github.com/google/traceur-compiler">Compilateur Traceur</a></li>
+        <li><a href="https://github.com/lukehoban/es6features">Liste de fonctionnalités</a> par @lukehoban</li>
+        <li><a href="https://kangax.github.io/es5-compat-table/es6/">Table de compatibilité</a> de @Kangax</li>
+        <li><a href="https://github.com/addyosmani/es6-tools">Outils ES6</a> par @addyosmani</li>
+        <li><a href="https://github.com/sindresorhus/esnext-showcase">Projets utilisant ES6</a> par @sindresorhus</li>
+    </ul>
+</section>
+
+<section data-background="white">
+    <h2>Merci !</h2>
+    <br>
+    <br>
+    <p>Par <a href="https://twitter.com/thibaud_colas">Thibaud Colas</a>, partage en <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p>
+    <br>
+    <ul>
+        <li>Slides : <a href="https://thib.me/talks/">thib.me/talks/</a></li>
+    </ul>
+</section>
+
+    </div>
+</div>
+
+<script src="/assets/reveal/head.min.js"></script>
+<script src="/assets/reveal/reveal.min.js"></script>
+
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: true,
+        slideNumber: true,
+        history: true,
+        keyboard: true,
+        overview: true,
+        center: true,
+        hideAddressBar: true,
+        transition: 'none',
+        transitionSpeed: 'fast',
+        // ?theme=simple
+        theme: Reveal.getQueryHash().theme || 'sky',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: '/assets/reveal/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>

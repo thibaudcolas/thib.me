@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Learning Docker - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="A few weeks ago, I started a new job at Codemate (yay! More on that in a future post). Among many other things, this was the occasion for me to learn more ab...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/learning-docker">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/learning-docker">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Learning Docker">
+  <meta property="og:description" content="A few weeks ago, I started a new job at Codemate (yay! More on that in a future post). Among many other things, this was the occasion for me to learn more ab...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2018-04-17-learning-docker.md">Edit</a>
+      <h1 class="entry-title">Learning Docker</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2018-04-17T20:05:03+01:00" pubdate data-updated="true">2018-04-17 20:05</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>A few weeks ago, I started a new job at <a href="https://www.codemate.com/">Codemate</a> (yay! More on that in a future post). Among many other things, this was the occasion for me to learn more about a technology I had been avoiding so far: Docker, and the whole concept of containerization. I usually prefer to focus on user-facing work, and leave sysadmin and ops to others – but I also have a sweet tooth for any and all automation, especially the type that can save developers time and headaches. It was definitely time to dive deep!</p>
+
+<p>This blog post is my overview of the resources I looked at and the things I learned over the last few weeks.</p>
+
+<!-- more -->
+
+<h2 id="where-from-where-to">Where from, where to</h2>
+
+<p>Starting on a new project, I quickly realised Docker would be a central part of my day to day work. It is used for development environments, CI, staging, as well as production. When learning something as fundamental and ubiquitous, I think it’s quite important to take a step back and note where you’re starting from:</p>
+
+<ul>
+  <li><strong>What are the fundamental principles?</strong>
+    <ul>
+      <li>For Docker this would be things like <a href="https://en.wikipedia.org/wiki/Operating-system-level_virtualization">containerisation</a>, <a href="https://en.wikipedia.org/wiki/Continuous_delivery">continuous delivery</a>, and generally the idea of speeding up <a href="https://en.wikipedia.org/wiki/Software_release_life_cycle">release cycles</a> and facilitating administration by moving to infrastructure as code.</li>
+    </ul>
+  </li>
+  <li><strong>What is the context?</strong>
+    <ul>
+      <li>Here I would think of things like micro-services, and generally the move to cloud platforms.</li>
+    </ul>
+  </li>
+  <li><strong>What do you know already?</strong>
+    <ul>
+      <li>For me, I had some notion of basic docker commands, and I had used Vagrant extensively to achieve similar results as what Docker is for in development.</li>
+    </ul>
+  </li>
+  <li><strong>Where do you want to be?</strong>
+    <ul>
+      <li>Not everyone needs to be an expert at everything. I don’t need to know the details of the consensus algorithm used in Kubernetes clusters (it’s called <a href="https://en.wikipedia.org/wiki/Raft_(computer_science)">Raft</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>I quite like to summarise this as a score from 0 to 5, 0 being <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">“you know nothing Jon Snow” (NSFW)</a>, and 5 being “complete expert, Ask Me Anything, I can teach anyone about any of this”. You can then assess how you perceive your skills before starting to learn, and decide on how much you want to know.</p>
+
+<p>I gave myself a 1/5 because of my Vagrant knowledge and awareness of the problems this is trying to solve, and decided I would need to get to 4/5 to do my job effectively. But this is quite a big jump, so for now let’s get to 2 out of 5.</p>
+
+<h2 id="going-to-25">Going to 2/5</h2>
+
+<p>After doing a bit of research, here are the things I decided on to make a good “2 out of 5” baseline:</p>
+
+<ul>
+  <li>Docker principles and vocabulary</li>
+  <li>Docker from scratch, with the official <a href="https://docs.docker.com/get-started/">Get started with Docker</a></li>
+  <li>docker-compose, with its <a href="https://docs.docker.com/compose/">official guide</a></li>
+  <li><a href="https://docs.docker.com/compose/django/">Docker with Django</a> – unfortunately this stops very early, and doesn’t address eg. migrations.</li>
+  <li>Make a few Docker improvements to my current project</li>
+  <li>Discuss Docker pros and cons with friends and coworkers</li>
+  <li>Write this blog post, of course!</li>
+</ul>
+
+<p>I had initially identified other areas to study (eg. Docker usage in CI, 12-factor apps with Docker, and image registries) but decided it would be better to start smaller.</p>
+
+<p>I also made a list of resources to look at to achieve the above learning goals, complementing the official documentation, and settled on two of the simplest ones out there:</p>
+
+<h3 id="learn-docker-in-12-minutes-">Learn Docker in 12 minutes 🐳</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YFl2mCHdv24" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<hr />
+
+<h3 id="docker-compose-in-12-minutes">Docker Compose in 12 Minutes</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Qw9zlE3t8Ko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<hr />
+
+<h3 id="reading-through-dockerfiles">Reading through Dockerfiles</h3>
+
+<p>Both of those videos were very good to understand the key principles, but I also needed to get up to speed with Linux distributions and general provisiniong tasks – I also decided to spend time reading Dockerfiles (what a great pastime!).</p>
+
+<ul>
+  <li>My new project’s Dockerfile of course</li>
+  <li>But also the official ones, understanding how they are layered – eg. the <a href="https://github.com/docker-library/php/blob/c4f059d09d7eefcb73304d198faa7674610ed810/7.2/stretch/apache/Dockerfile">official PHP images</a></li>
+  <li>And this nicely commented Production-minded example from Tobias McNulty: <a href="https://www.caktusgroup.com/blog/2017/03/14/production-ready-dockerfile-your-python-django-app/">A Production-ready Dockerfile for Your Python/Django App</a></li>
+</ul>
+
+<h2 id="what-i-learned">What I learned</h2>
+
+<p>In short, quite a lot! I logged all of my progress on my <a href="https://github.com/thibaudcolas/koans-playground/tree/master/docker">koans-playground repository</a>, as a way to see my progress.</p>
+
+<h3 id="vocabulary">Vocabulary</h3>
+
+<p>The basic understanding of the key principles, and of how containers and images and services work together, was critical for me to actually understand what I was doing day to day.</p>
+
+<blockquote>
+  <p><strong>Containerization</strong>: the use of Linux containers to deploy applications.
+<a href="https://docs.docker.com/get-started/">Containers are not new, but their use for easily deploying applications is.</a></p>
+
+  <p><strong>Image</strong>: an executable package that includes everything needed to run an application – the code, a runtime, libraries, environment variables, and configuration files.</p>
+
+  <p>Also <strong>Image</strong>: template to create a target container (snapshot)
+Images are defined using a Dockerfile</p>
+
+  <p><strong>Container</strong>: running instance of an image</p>
+
+  <p>Also <strong>Container</strong>: a runtime instance of an image – what the image becomes in memory when executed (that is, an image with state, or a user process)</p>
+
+  <p><strong>Dockerfile</strong>: defines what goes on in the environment inside your container.
+Access to resources like networking interfaces and disk drives is virtualized inside this environment, which is isolated from the rest of your system, so you need to map ports to the outside world, and be specific about what files you want to “copy in” to that environment.
+However, after doing that, you can expect that the build of your app defined in this Dockerfile behaves exactly the same wherever it runs.</p>
+
+  <p><strong>Repository</strong>: a collection of images – sort of like a GitHub repository, except the code is already built.</p>
+
+  <p><strong>Registry</strong>: a collection of repositories.</p>
+
+  <p><strong>Service</strong>: defines how containers behave in production</p>
+
+  <p>Also <strong>Service</strong>: really just “containers in production.” A service only runs one image, but it codifies the way that image runs—what ports it should use, how many replicas of the container should run so the service has the capacity it needs, and so on.</p>
+
+  <p><strong>Compose</strong>: a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.</p>
+</blockquote>
+
+<h3 id="the-docker-and-docker-compose-workflows">The Docker and docker-compose workflows</h3>
+
+<p>For Docker,</p>
+
+<ol>
+  <li>Write Dockerfile</li>
+  <li>Build an image from the Dockerfile</li>
+  <li>Run the image to get containers</li>
+</ol>
+
+<p>For docker-compose,</p>
+
+<ol>
+  <li>Define your app’s environment with a Dockerfile so it can be reproduced anywhere.</li>
+  <li>Define the services that make up your app in docker-compose.yml so they can be run together in an isolated environment.</li>
+</ol>
+
+<h3 id="docker-vs-docker-compose">Docker vs docker-compose</h3>
+
+<p>It was also helpful to understand why these are two separate tools, and when you would use one over the other. In short, from the official docs, here are the useful features of docker-compose:</p>
+
+<ul>
+  <li>Multiple isolated environments on a single host.
+    <ul>
+      <li>Use a project name to isolate environments from each others (of the same app, of apps running the same services, etc).</li>
+      <li>By default, project name is basename of project directory.</li>
+    </ul>
+  </li>
+  <li>Preserve volume data when containers are created.</li>
+  <li>Only recreate containers that have changed.</li>
+  <li>Variables and moving a composition between environments.</li>
+</ul>
+
+<h2 id="next-steps">Next steps</h2>
+
+<p>Up next, getting to 3/5 of course!</p>
+
+<p>Here are my goals for this milestone so far:</p>
+
+<ul>
+  <li><a href="https://github.com/docker/labs/tree/master/developer-tools/nodejs-debugging">Node.js debugging with Docker</a></li>
+  <li><a href="https://github.com/docker/labs/tree/master/developer-tools/nodejs/porting/">Porting of existing apps to Docker</a></li>
+  <li><a href="https://github.com/docker/labs/tree/master/12factor">Building 12-factor apps with Docker</a></li>
+  <li>Porting my Wagtail development environment to Docker</li>
+  <li>Docker in CI</li>
+  <li>Correctly separating between dev setup and production setup</li>
+  <li>Managing images (locally, and with registries)</li>
+  <li>Kubernetes getting started</li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2018-04-17T20:05:03+01:00" pubdate data-updated="true">2018-04-17 20:05</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/automation/">Automation</a>,
+    
+      <a class="category" href="/categories/resources/">Resources</a>,
+    
+      <a class="category" href="/categories/docker/">Docker</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/engaging-dataviz-examples" title="Previous Post: Engaging dataviz examples">&laquo; Engaging dataviz examples</a>
+      
+      
+        <a class="basic-alignment right" href="/now-live-on-twitch" title="Next Post: Now live on Twitch!">Now live on Twitch! &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

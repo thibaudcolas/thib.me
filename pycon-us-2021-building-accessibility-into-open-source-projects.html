@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>PyCon US 2021: Building accessibility into open-source projects - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="This is a lightning talk I gave at PyCon US 2021’s Maintainers Summit, intended for an audience of project maintainers / open-source contributors.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="PyCon US 2021: Building accessibility into open-source projects">
+  <meta property="og:description" content="This is a lightning talk I gave at PyCon US 2021’s Maintainers Summit, intended for an audience of project maintainers / open-source contributors.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2021-05-09-pycon-us-2021-building-accessibility-into-open-source-projects.md">Edit</a>
+      <h1 class="entry-title">PyCon US 2021: Building accessibility into open-source projects</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2021-05-09T16:03:21+01:00" pubdate data-updated="true">2021-05-09 16:03</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>This is a lightning talk I gave at PyCon US 2021’s <a href="https://us.pycon.org/2021/summits/maintainers/">Maintainers Summit</a>, intended for an audience of project maintainers / open-source contributors.</p>
+
+<!-- more -->
+
+<p>Video:</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9XI-8ZvU2w0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Slides:</p>
+
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/1qjHKEWoExYY-fG4qbRBQP_EN5fxs_8z7csVIpy9bWlg/edit">Google Slides: PyCon US 2021 - Building accessibility into open-source projects</a></li>
+  <li><a href="https://drive.google.com/file/d/1hN554kNicuEvBcWK_VsiRazBTfbBGt6X/view">PDF: PyCon US 2021 - Building accessibility into open-source projects</a></li>
+</ul>
+
+<h2 id="transcript">Transcript</h2>
+
+<p>Hi PyCon, thanks for having me, I’m Thibaud my pronouns are he/him and I’m a developer at Torchbox in the UK.</p>
+
+<p>Today I’m here to talk to you about building accessibility into open source projects, and in particular coming to you with our learnings from Wagtail; I’m a core developer of this CMS called Wagtail built on Python and Django and I also contribute to Django’s accessibility team so I’m here to share with you the learnings from those two projects.</p>
+
+<h3 id="a-wagtail-story">A Wagtail story</h3>
+
+<p>So Wagtail is a CMS that people use to build websites.</p>
+
+<h4 id="why-accessibility-matters-to-us">Why accessibility matters to us</h4>
+
+<p>When it comes to why we care about accessibility there are essentially two reasons.</p>
+
+<p>One of them is we want the Wagtail admin to be accessible to as many people as possible and the other is we want the sites actually built with Wagtail to be as accessible as possible so these are the two main reasons for end users.</p>
+
+<h4 id="other-reasons-to-care">Other reasons to care</h4>
+
+<p>And then as a project there are definitely a few more reasons – the big one is legislation and procurement our clients and people who pick Wagtail as a CMS definitely have very specific expectations from projects and they would pick one or the other based on requirements like this.
+so yeah there is legislation in the US, in the EU, and really all around the world it’s not just those two countries.</p>
+
+<p>One thing we do have going for ourselves is that all of those laws are based on the same standard called WCAG 2.1, the AA level being the most recent and widespread version of it.</p>
+
+<h4 id="its-not-just-wagtail">It’s not just Wagtail</h4>
+
+<p>And yeah it’s not just Wagtail obviously it’s not just CMSes, all types of online tools, apps, sites we build have to follow those same standards.</p>
+
+<p>And really as developers I want to make the points that this isn’t just those projects it’s also the building blocks of those projects, the frameworks, the database modeling, the development tools, even the READMEs have to follow those same standards.</p>
+
+<p>But yeah I don’t want this to be too negative either, so let’s look at some practical examples of where accessibility matters in the Python ecosystem in particular.</p>
+
+<h3 id="where-accessibility-matters">Where accessibility matters</h3>
+
+<p>I went through the <a href="https://hugovk.github.io/top-pypi-packages/">top 1000 Python packages on PyPI</a> and thought I’d pick a few examples of where you might not think of accessibility but actually there are very clear considerations to be had.</p>
+
+<h4 id="data-science">Data science</h4>
+
+<p>So the first one is data science, and alt text for dataviz.</p>
+
+<p>As part of studying data you will very likely have to visualise it at some point and that might include producing images that you do want to be accessible to people who can’t actually see the visuals.</p>
+
+<p>Of course they might not get the whole interactivity and interaction that might not be the point of your exercise but just having some form of alternative text would be useful.</p>
+
+<h4 id="data-science-example-alt-text">Data science example: alt text</h4>
+
+<p>So this example in particular, that comes from Matplotlib and the alt text they have defined in their example basically just restates the caption at the top of the chart.</p>
+
+<p>Which is, well, definitely better than nothing, but to the right I have an example of what it might look like for you to consider actually going through the whole data for people who can’t see the visuals.</p>
+
+<p>And yeah not saying this is always appropriate again but definitely something to consider and if you happen to work with one of those dataviz projects it’s important I think for this to be considered in the docs in the actual framework of how you create the visualizations, and yeah just making sure that this is taken into account.</p>
+
+<h4 id="web-development">Web development</h4>
+
+<p>Another important part of the Python ecosystem is web development with big frameworks that I’m sure you all have heard of before, and templating languages, and here as well, basically even though those frameworks might not always be very opinionated about HTML they do have for example code snippets in their docs that really should take accessibility into account.</p>
+
+<p>So it’s very common for me to look at those documentation code snippets and see very basic HTML issues.</p>
+
+<h4 id="web-development-examples-html-bad-practices">Web development examples: HTML bad practices</h4>
+
+<p>So for example to the left here this is missing a “lang” attribute on the HTML tag.</p>
+
+<h4 id="pdf-generation">PDF generation</h4>
+
+<p>And here a third topic in Python in particular is PDF generation, there are lots of those projects out there and something that people might overlook is that even though the source for those PDFs is HTML, the PDF itself might not be structured at all and it might not be usable by people with screen readers, so the key feature here that I have to look for is called “tagged PDFs” and it’s a requirement that very few of those projects actually have.</p>
+
+<p>Yeah I’m trying my best not to have this be too negative, so just to finish on a more positive note I wanted to showcase different ways you could foster those accessibility contributions on your own projects.</p>
+
+<h3 id="fostering-contributions">Fostering contributions</h3>
+
+<h4 id="define-your-target">Define your target</h4>
+
+<p>The first thing to do is obviously to pick a target for what you support.</p>
+
+<p>WCAG 2.1 at the AA level being the obvious thing to start from, and just not stop at picking the target but actually documenting it and documenting practical code review and testing steps, I think it’s very important.</p>
+
+<p>I have added a few examples of this should you want to look into this further.</p>
+
+<h4 id="leverage-automated-tools">Leverage automated tools</h4>
+
+<p>And yeah now that you have this target actually doing some testing, there are lots of great automated tools out there they won’t find all of the issues but they definitely find plenty enough to get going with so I’d highly recommend looking into this.</p>
+
+<ul>
+  <li><a href="https://www.deque.com/axe/">Axe</a> – Accessibility rules engine with support for WCAG &amp; Section 508</li>
+  <li><a href="https://accessibilityinsights.io/docs/en/web/overview">Accessibility Insights</a> – Browser extension with Axe and more</li>
+  <li><a href="https://pa11y.org/">Pa11y</a> – Command line tool for accessibility checks with Axe &amp; HTML_CS</li>
+  <li><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a>, <a href="https://github.com/maranran/eslint-plugin-vue-a11y">eslint-plugin-vue-a11y</a>, <a href="https://github.com/YozhikM/stylelint-a11y">stylelint-a11y</a></li>
+</ul>
+
+<h4 id="leverage-automated-tools-django-example">Leverage automated tools: Django example</h4>
+
+<p>And this is an example from Django in particular where we have this very big report that takes screenshots and logs all of the accessibility issues for different parts of the Django admin and you can just look at this and get a sense of a snapshot of how Django itself is doing.</p>
+
+<ul>
+  <li>Pa11y example: <a href="https://github.com/thibaudcolas/django_admin_tests">github.com / thibaudcolas / django_admin_tests</a></li>
+</ul>
+
+<h4 id="manual-audits">Manual audits</h4>
+
+<p>And back on the Wagtail side we tend to invest more into manual audits just because we have the expertise to do this so these are definitely much more complex to put together and I won’t be talking about this much further but if you’re interested I can definitely talk to that a bit more.</p>
+
+<h4 id="for-larger-projects-have-an-accessibility-team">For larger projects: have an accessibility team</h4>
+
+<p>And yes for larger projects I definitely recommend having a dedicated team for this of subject matter experts so we have the example of the Wagtail team here but yeah for example Jupyter notebooks as well do have a team like this that looks after the accessibility of the actual notebooks which as they are used in classroom environments is very important.</p>
+
+<p><a href="https://wagtail.io/blog/accessibility-team-reloaded/">Wagtail’s team</a> = 5 people committed for 6 months. Thank you Storm, Jesse, Kyle, Scott!</p>
+
+<h3 id="open-source-can-lead-the-way">Open-source can lead the way</h3>
+
+<p>So the last point I want to make really is that there are a few areas in software development like security for example where open source leads the way and shows us how it’s meant to be done basically, and I really think accessibility could be one of those areas, it really is something that matters on all projects no matter their size, and yeah that matters to a huge number of people that developers often underestimate just the sheer size of the people who can benefit from this, and yes there are well-defined standards and readily-available tools.</p>
+
+<h3 id="thank-you-️">Thank you! ❤️</h3>
+
+<p>Thank you I hope you enjoyed this and I’ll definitely be available later on to answer any questions.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2021-05-09T16:03:21+01:00" pubdate data-updated="true">2021-05-09 16:03</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/talks/">Talks</a>,
+    
+      <a class="category" href="/categories/community/">Community</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/curlylint-quality-of-life-improvements" title="Previous Post: Curlylint: Quality-of-life improvements">&laquo; Curlylint: Quality-of-life improvements</a>
+      
+      
+        <a class="basic-alignment right" href="/pycon-us-2021-python-accessibility-ftw" title="Next Post: PyCon US 2021: Web Accessibility ♥ Python">PyCon US 2021: Web Accessibility ♥ Python &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

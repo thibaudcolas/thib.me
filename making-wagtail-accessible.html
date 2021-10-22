@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Making Wagtail accessible - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="I recently gave a talk at Wagtail Space US 2019 about making Wagtail accessible – an ongoing effort over the last few months. This is a blog post version of ...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/making-wagtail-accessible">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/making-wagtail-accessible">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Making Wagtail accessible">
+  <meta property="og:description" content="I recently gave a talk at Wagtail Space US 2019 about making Wagtail accessible – an ongoing effort over the last few months. This is a blog post version of ...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2019-07-25-making-wagtail-accessible.md">Edit</a>
+      <h1 class="entry-title">Making Wagtail accessible</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2019-07-25T19:15:08+01:00" pubdate data-updated="true">2019-07-25 19:15</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>I recently gave a talk at <a href="https://us.wagtail.space/">Wagtail Space US 2019</a> about making Wagtail accessible – an ongoing effort over the last few months. This is a blog post version of the same talk.</p>
+
+<!-- more -->
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tdB1I_gSCeY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Slides: <a href="https://docs.google.com/presentation/d/15y8XIe7SL-RYEO9tEE8n9chx80_X4j4PbczGGM-cEGE/edit">Making Wagtail accessible – Wagtail Space US 2019</a></p>
+
+<hr />
+
+<p>There’s good news for accessibility back in the Wagtail 2.6 release notes:</p>
+
+<blockquote>
+  <p>Wagtail now has official accessibility support targets: we are aiming for compliance with WCAG2.1, AA level. WCAG 2.1 is the international standard which underpins many national accessibility laws.</p>
+
+  <p>Wagtail isn’t fully compliant just yet, but we have made many changes to the admin interface to get there. We thank the UK Government (in particular the CMS team at the Department for International Trade), who commissioned many of these improvements.</p>
+</blockquote>
+
+<h2 id="why-this-matters">Why this matters</h2>
+
+<p>For users of assistive technologies, using Wagtail’s admin interface can be <a href="https://github.com/wagtail/wagtail/issues/4199#issue-288601594">difficult</a>. Organisations shopping for a CMS also are very aware of accessibility – because of legislation that mandates compliance with accessibility standards (<a href="https://www.digital.govt.nz/standards-and-guidance/nz-government-web-standards/web-accessibility-standard-1-0/">NZ</a>, <a href="https://www.section508.gov/">USA</a>, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.327.01.0001.01.ENG">EU</a>, <a href="https://www.legislation.gov.uk/uksi/2018/952/introduction/made">UK</a>, and more).</p>
+
+<p>We also simply want Wagtail users to have a good experience, regardless of how they access Wagtail. And accessibility improvements for people relying on assistive technology usually also lead to usability improvements for everyone.</p>
+
+<p><strong>And this reasoning also applies beyond Wagtail</strong> – whether you’re building working on an intranet platform, CRM, ERP, dashboard tools. Building an internal app with the Django admin. The same standards should apply, even if the audience is smaller or restricted to a specific organisation.</p>
+
+<h2 id="what-weve-done-so-far">What we’ve done so far</h2>
+
+<p>We started by setting our target: compliance with <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a>, AA level.</p>
+
+<ul>
+  <li>Why WCAG2.1? Because it’s a well-established standard internationally, and the basis of many national accessibility laws.</li>
+  <li>Why AA level instead of AAA? Because AAA compliance generally mandates a lot when it comes to visual design, and it didn’t feel realistic. AAA-level compliance will be achieved on some parts of Wagtail, but not all of it.</li>
+</ul>
+
+<p>To complement this target, we also decided to make a shortlist of specific assistive technologies we wanted to support and use in our testing:</p>
+
+<ul>
+  <li><a href="https://www.nvaccess.org/download/">NVDA</a> on Windows with Firefox ESR</li>
+  <li><a href="https://support.apple.com/en-gb/guide/voiceover-guide/welcome/web">VoiceOver</a> on macOS with Safari</li>
+  <li>Windows Magnifier</li>
+  <li>macOS Zoom</li>
+  <li>Windows Speech Recognition</li>
+  <li>macOS Dictation</li>
+  <li>Mobile VoiceOver on iOS, or TalkBack on Android</li>
+</ul>
+
+<p>Like for cross-browser testing, having explicit targets helps a lot in understanding what to test. When choosing those targets, we tried to have a representative selection of assistive technology in use (thanks to the <a href="https://accessibility.blog.gov.uk/2016/11/01/results-of-the-2016-gov-uk-assistive-technology-survey/">2016 GOV.UK assistive technology survey</a>), but also choose tools that we could reasonably expect people contributing to Wagtail to install and test with. There are things not covered here – high-contrast modes, dyslexia fonts, etc.</p>
+
+<h3 id="tooling">Tooling</h3>
+
+<p>To assist with our audits and accessibility testing we picked a selection of tools centred on <a href="https://www.deque.com/axe/">Axe</a>, an accessibility rules engine. We specifically chose three integrations of Axe:</p>
+
+<ul>
+  <li><a href="https://accessibilityinsights.io/docs/en/web/overview">Accessibility Insights</a> – a set of accessibility compliance browser extenstions, built upon Axe for automated checks.</li>
+  <li><a href="https://pa11y.org/">Pa11y</a> – Command line tool for accessibility checks with Axe &amp; HTML_CS.</li>
+  <li><a href="https://github.com/dequelabs/react-axe">React Axe</a> – integrated directly in our build tools, to identify actionable issues. Logs its results in the browser console.</li>
+</ul>
+
+<p>Here again, our choice of Axe over other tools is largely thanks to excellent work from the GDS – its <a href="https://alphagov.github.io/accessibility-tool-audit/">accessibility tools audit</a> in this case. While Axe doesn’t top this list, it has one of the lowest rates of false positives, making it particularly suitable for automated tests, which are paramount for an open-source project with a lot of contributors.</p>
+
+<p>To make the most of those tools, we also worked on an <a href="https://github.com/thibaudcolas/wagtail-tooling">automated accessibility and visual regression test suite</a>, which helped us seeing our progress as we started fixing issues.</p>
+
+<h3 id="audit">Audit</h3>
+
+<p>There is no better start to an accessibility push than an audit – to understand where we are at, create a backlog of improvements to improve the user experience, and reach compliance. Auditing can be automated (to cover lots of UI at a high-level), semi-automated , or fully manual (to have a more qualitative assessment).</p>
+
+<p>But first – we needed to figure out what to audit. We made a big spreadsheet:</p>
+
+<p><img src="/images/blog/making-wagtail-accessible/ui-overview.png" alt="Screenshot of a spreadsheet – different parts of Wagtail as rows, with columns for whether they are used or not, by whom, what states they can be in, and whether automated tests are set up or not" /></p>
+
+<p>…and from there, we could start to audit our way through the Wagtail admin!</p>
+
+<p>The results</p>
+
+<ul>
+  <li>We identified <strong>344 different scenarios</strong> / parts of Wagtail to test.</li>
+  <li>We tested 189 of those 344.</li>
+</ul>
+
+<p>The discrepancy between the two is due to the scenarios either being seldom used (e.g. Sites management), hard to reach, or hard to test (e.g. the inside of the datepicker).</p>
+
+<p>From this, <strong>we found 336 issues via automated testing 🙀.</strong> While this can feel like a big number, there were a lot of issues that were duplicated between the different parts of Wagtail, and a few false positives as well. But 336 is a big number nonetheless.</p>
+
+<h2 id="the-issues">The issues</h2>
+
+<p>We made a big spreadsheet with the 336 automated test failures, and the manual ones too. It’s not that interesting to look at (<em>and a lot of them have been fixed since!</em>), but let’s have a look at a selection of my personal favourites.</p>
+
+<h3 id="colour-contrast">Colour contrast</h3>
+
+<p>Can you spot the error message? Hint: it’s red.</p>
+
+<p><img src="/images/blog/making-wagtail-accessible/color-contrast-error-solution-v25.png" alt="Screenshot of Wagtail’s Documents search, with an error message barely visible under the search field" /></p>
+
+<p>What can we learn from this? Testing all variations of a given UI is mandatory – focusing on the “success” path is not enough.</p>
+
+<hr />
+
+<p>If you can’t see colours, can you tell which message is a warning, and which one is a critical error? Hint: one is slightly darker.</p>
+
+<p><img src="/images/blog/making-wagtail-accessible/color-contrast-warning.png" alt="Screenshot of Wagtail’s info, warning and error messages, in greyscale." /></p>
+
+<p>Here, the takeaway is to never rely on colour alone. Sure – the messages come with icons, but they are identical for warnings and critical messages.</p>
+
+<h3 id="focus-outlines">Focus outlines</h3>
+
+<p>Can you spot where the focus is? I can’t either.</p>
+
+<p><img src="/images/blog/making-wagtail-accessible/focus-outline2.png" alt="Screenshot of Wagtail’s page editing UI, with a few fields, and a faint focus outline around one of the buttons of the image chooser" /></p>
+
+<p>Good, consistent focus styles are fundamental to an interface being usable with the keyboard. Don’t build different styles for each component.</p>
+
+<h3 id="tab-stops">Tab stops</h3>
+
+<p>Tab stops are a measure of how many “tab” presses are needed to reach a given part of the page. Wagtail currently doesn’t score well at this, to say the least.</p>
+
+<p><img src="/images/blog/making-wagtail-accessible/tab-stops-solution-v25.png" alt="Screenshot of the Wagtail page editing UI, with a visualisation of tab stops overlayed – the tabs start on random buttons, then go through the menu, and finally arrive on the main content" /></p>
+
+<hr />
+
+<p>As a bonus, here is a recording of testing Wagtail 2.5 with a screen reader:</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/f98wE4SwGLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="what-we-fixed">What we fixed</h2>
+
+<p>Quite simply, we went from 336 to 172 issues, with the remainder essentially on parts of Wagtail we chose not to cover (yet!). The <a href="https://docs.wagtail.io/en/latest/releases/2.6.html">Wagtail 2.6 release notes</a> have more information about the fixes:</p>
+
+<ul>
+  <li>Better text-to-background color contrast across the whole CMS</li>
+  <li>Increased font size across the board as well</li>
+  <li>Added focus outline styles</li>
+  <li>Added more ARIA landmarks and refactored heading structure</li>
+  <li>Added a lot more contextual information to links for screen reader users</li>
+  <li>Fixed the icons implementation (more or less)</li>
+  <li>Fixed focus not moving to the pages explorer</li>
+</ul>
+
+<h2 id="up-next">Up next</h2>
+
+<p>Even though this was a wonderful push to make Wagtail more accessible, in practice this really should be part of ongoing development. Accessibility should be taken into account in the design &amp; dev workflow for any UI changes. Contributors to Wagtail should have clear information on what to do to make sure they build accessible UIs.</p>
+
+<p>We’re not there yet, but you can follow our progress and get involved by:</p>
+
+<ul>
+  <li>Looking at the accessibility RFC: <a href="https://github.com/wagtail/rfcs/pull/37">Making Wagtail Accessible for users of assistive technologies</a>. Comments welcome!</li>
+  <li>Reviewing our backlog: <a href="https://github.com/wagtail/wagtail/projects/5">WCAG2.1 AA compliance</a> project on GitHub.</li>
+  <li>Joining us on <a href="https://github.com/wagtail/wagtail/wiki/Slack">Wagtail’s Slack workspace</a>, in the #accessibility channel.</li>
+</ul>
+
+<p>And last but not least, this year we are organising a <a href="https://wagtail.io/blog/bristol-sprint-2020/">Wagtail sprint focused on accessibility</a> in Bristol.</p>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://github.com/wagtail/wagtail/issues/4199#issue-288601594">Issue #4199: Making Wagtail Accessible for users with disabilities</a></li>
+  <li><a href="https://www.digital.govt.nz/standards-and-guidance/nz-government-web-standards/web-accessibility-standard-1-0/">NZ: Web Accessibility Standard</a></li>
+  <li><a href="https://www.section508.gov/">US: Section 508</a></li>
+  <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.327.01.0001.01.ENG">EU: Directive on the accessibility of public sector websites and mobile applications.</a></li>
+  <li><a href="https://www.legislation.gov.uk/uksi/2018/952/introduction/made">GB: The Public Sector Bodies (Websites and Mobile Applications) (No.2) Accessibility Regulations 2018</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Universal_design">Wikipedia: Universal design</a></li>
+  <li><a href="https://www.w3.org/TR/WCAG21/#conformance-reqs">WCAG2.1 conformance levels</a></li>
+  <li><a href="https://www.w3.org/WAI/policies/">W3C: Web Accessibility Laws and Policies</a></li>
+  <li><a href="https://github.com/dequelabs/axe-core">Axe: Accessibility engine for automated Web UI testing</a></li>
+  <li><a href="https://pa11y.org/">Pa11y: your automated accessibility testing pal</a></li>
+  <li><a href="https://medium.com/slalom-engineering/a-maturity-model-for-design-systems-93fff522c3ba">A maturity model for design systems</a></li>
+  <li><a href="https://www.deque.com/shift-left/">Deque: What is Shift Left Accessibility Testing?</a></li>
+  <li><a href="https://docs.wagtail.io/en/latest/releases/2.6.html">Wagtail 2.6 release notes</a></li>
+  <li><a href="https://github.com/wagtail/wagtail/projects/5">WCAG2.1 AA compliance roadmap</a></li>
+  <li><a href="https://github.com/wagtail/wagtail/pull/5245">Accessibility support targets &amp; tooling setup (#4871) #5245</a></li>
+  <li><a href="https://github.com/wagtail/rfcs/pull/37">RFC 37: Making Wagtail Accessible for users of assistive technologies</a></li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2019-07-25T19:15:08+01:00" pubdate data-updated="true">2019-07-25 19:15</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>,
+    
+      <a class="category" href="/categories/talks/">Talks</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/jamstack-conf-london-2019" title="Previous Post: Notes from JAMstack conf London 2019">&laquo; Notes from JAMstack conf London 2019</a>
+      
+      
+        <a class="basic-alignment right" href="/draftail-v1-3-0-community-improvements-beyond-wagtail" title="Next Post: Draftail v1.3.0: community improvements, beyond Wagtail">Draftail v1.3.0: community improvements, beyond Wagtail &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

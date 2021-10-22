@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Curlylint: Accessibility linting rules - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Curlylint now comes with 7 accessibility-related rules, ready to use in HTML templates. See All rules for details about the individual rules.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.curlylint.org/blog/accessibility-linting-rules">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.curlylint.org/blog/accessibility-linting-rules">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Curlylint: Accessibility linting rules">
+  <meta property="og:description" content="Curlylint now comes with 7 accessibility-related rules, ready to use in HTML templates. See All rules for details about the individual rules.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-07-26-curlylint-accessibility-linting-rules.md">Edit</a>
+      <h1 class="entry-title">Curlylint: Accessibility linting rules</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-07-26T03:22:49+01:00" pubdate data-updated="true">2020-07-26 03:22</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Curlylint now comes with 7 accessibility-related rules, ready to use in HTML templates. See <a href="https://www.curlylint.org/docs/rules/all">All rules</a> for details about the individual rules.</p>
+
+<!-- more -->
+
+<p>This is an important milestone for the linter – essentially demonstrating its usefulness once and for all, if that was still needed.</p>
+
+<h2 id="html-best-practices">HTML best practices</h2>
+
+<p>Most of the rules Curlylint currently ships with are very simple “HTML linting” rules for accessibility, based on established best practice:</p>
+
+<ul>
+  <li><a href="https://www.curlylint.org/docs/rules/aria_role"><code class="language-plaintext highlighter-rouge">aria_role</code></a> just checks that <code class="language-plaintext highlighter-rouge">role</code> attributes are valid.</li>
+  <li>Same for <a href="https://www.curlylint.org/docs/rules/html_has_lang"><code class="language-plaintext highlighter-rouge">html_has_lang</code></a>, for the <code class="language-plaintext highlighter-rouge">html</code> <code class="language-plaintext highlighter-rouge">lang</code> attribute.</li>
+  <li>Same for <a href="https://www.curlylint.org/docs/rules/image_alt"><code class="language-plaintext highlighter-rouge">image_alt</code></a>, <a href="https://www.curlylint.org/docs/rules/meta_viewport"><code class="language-plaintext highlighter-rouge">meta_viewport</code></a>, <a href="https://www.curlylint.org/docs/rules/no_autofocus"><code class="language-plaintext highlighter-rouge">no_autofocus</code></a>, <a href="https://www.curlylint.org/docs/rules/tabindex_no_positive"><code class="language-plaintext highlighter-rouge">tabindex_no_positive</code></a>!</li>
+</ul>
+
+<p>See a pattern? All of these are variations on the same theme of “HTML attributes should only contain a limited range of values based on established best practices”. This is great news for this project – it means there can be quite a lot of results achieved with minimal complexity when it comes to creating individual rules.</p>
+
+<p>In the future, this could easily be taken further to cover:</p>
+
+<ul>
+  <li>Security best practices, for example <code class="language-plaintext highlighter-rouge">rel="noopener"</code>, or disallowing <code class="language-plaintext highlighter-rouge">javascript:</code> URLs in <code class="language-plaintext highlighter-rouge">href</code>.</li>
+  <li>HTML maintainability best practices, for example disallowing duplicate class attributes.</li>
+  <li>And of course, more accessibility and ARIA best practices.</li>
+</ul>
+
+<p>Obligatory mention of <a href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a>, which has been a huge source of inspiration. Generally, modern React tooling has this figured out, with extensive static analysis available. For me, this isn’t just a nice-to-have – it’s hard to always keel all of those best practices in mind, and linting is there to automate this for you. Note this isn’t just React – Vue has its <a href="https://github.com/maranran/eslint-plugin-vue-a11y">eslint-plugin-vue-a11y</a> too!</p>
+
+<h2 id="templates-best-practices">Templates best practices</h2>
+
+<p>This doesn’t have to stop at HTML. Curlylint already supports parsing template syntax, attempting to be usable as a linter for Jinja, Twig, Liquid, <a href="https://www.curlylint.org/docs/template-languages">and the likes</a>. We can also have rules to enforce best practices for this template syntax.</p>
+
+<p>The first example of such a rule is <a href="https://www.curlylint.org/docs/rules/django_forms_rendering"><code class="language-plaintext highlighter-rouge">django_forms_rendering</code></a>, which restricts how forms can be rendered in Django projects, for accessibility reasons. I’m very excited about opportunities like this to codify and share best practices in a way that scales well.</p>
+
+<ul>
+  <li>Hopefully there will be more <a href="https://github.com/django/deps/pull/69">linting rules for Django</a> coming in the future.</li>
+  <li>And more linting rules <a href="https://github.com/wagtail/wagtail/issues/6090">for Wagtail</a> as well.</li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-07-26T03:22:49+01:00" pubdate data-updated="true">2020-07-26 03:22</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/curlylint/">Curlylint</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/curlylint-brand-new-rules-documentation" title="Previous Post: Curlylint: Brand new rules documentation">&laquo; Curlylint: Brand new rules documentation</a>
+      
+      
+        <a class="basic-alignment right" href="/accessibility-wins-for-wagtail-projects" title="Next Post: Accessibility wins for Wagtail projects">Accessibility wins for Wagtail projects &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

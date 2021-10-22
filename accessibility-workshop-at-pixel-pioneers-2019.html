@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Accessibility workshop @ Pixel Pioneers 2019 - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Today I attended a very good accessibility 101 workshop at Pixel Pioneers 2019. Here are some insights I learned there.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/accessibility-workshop-at-pixel-pioneers-2019">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/accessibility-workshop-at-pixel-pioneers-2019">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Accessibility workshop @ Pixel Pioneers 2019">
+  <meta property="og:description" content="Today I attended a very good accessibility 101 workshop at Pixel Pioneers 2019. Here are some insights I learned there.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2019-06-05-accessibility-workshop-at-pixel-pioneers-2019.md">Edit</a>
+      <h1 class="entry-title">Accessibility workshop @ Pixel Pioneers 2019</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2019-06-06T15:10:22+01:00" pubdate data-updated="true">2019-06-06 15:10</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Today I attended a very good accessibility 101 workshop at Pixel Pioneers 2019. Here are some insights I learned there.</p>
+
+<!-- more -->
+
+<h2 id="the-gist">The gist</h2>
+
+<p>Here are some of the key things I had no idea about that surprised me.</p>
+
+<ul>
+  <li>If you’re using VoiceOver to test a site, do it in Safari. Doing this in Chrome is basically a waste of time, Chrome is much worse at integration with VoiceOver so gets used much less than Safari by people who actually rely on screen readers.</li>
+  <li>If you’re using NVDA to test a site, do it in Firefox. Same reasons.</li>
+  <li>Chrome has an official “ChromeVox” screen reader extension that works across all OSes. Its main purpose is for Chromebooks relying on Chrome OS.</li>
+  <li>When using VoiceOver, you can hit the <code class="language-plaintext highlighter-rouge">ctrl</code> key to pause text reading 🤯.</li>
+  <li>There’s a site to check browser support of accessibility APIs, <a href="https://www.html5accessibility.com/">https://www.html5accessibility.com/</a></li>
+  <li><a href="https://empathyprompts.net/">https://empathyprompts.net/</a> is really cool. I want to try some of these with my team.</li>
+</ul>
+
+<h2 id="key-takeaways">Key takeaways</h2>
+
+<h3 id="access-needs-overview">Access needs overview</h3>
+
+<p>GDS has wonderful, up-to-date resources.</p>
+
+<ul>
+  <li><a href="https://accessibility.blog.gov.uk/2016/05/16/consider-the-range-of-people-that-will-use-your-product-or-service/">Examples of various handicaps to consider</a></li>
+  <li><a href="https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/">Do’s and don’ts posters</a></li>
+</ul>
+
+<h3 id="assistive-technology-landscape">Assistive technology landscape</h3>
+
+<p>With limited budget, we need to prioritise accessibility improvements that make the biggest difference to our audience. GDS has the most comprehensive overview of what assistive technology people actually rely on to use websites.</p>
+
+<ul>
+  <li><a href="https://accessibility.blog.gov.uk/2016/11/01/results-of-the-2016-gov-uk-assistive-technology-survey/">2016 Gov.uk assistive technology survey results</a></li>
+</ul>
+
+<h3 id="you-are-not-the-user">“You are not the user”</h3>
+
+<p>An important reminder – knowing how to use assistive technology and what users expect is useful, but cannot replace talking to real users with real access needs.</p>
+
+<h3 id="testing">Testing</h3>
+
+<p>We’ll look at two types of testing that are easy to do and cover a big proportion of how people use assistive technology to test sites</p>
+
+<h4 id="screen-magnifier-101">Screen magnifier 101</h4>
+
+<ul>
+  <li>With Safari and macOS</li>
+  <li>OS-level zoom (the one that doesn’t work with screen sharing)</li>
+  <li>Browser-level zoom (resizes all of the page elements, can make text overlap)</li>
+  <li>Minimum text size increase</li>
+  <li>Straw test</li>
+</ul>
+
+<p>Do the above tests on:</p>
+
+<ul>
+  <li><a href="https://www.gosportpanel.independent.gov.uk/">https://www.gosportpanel.independent.gov.uk/</a></li>
+  <li><a href="https://digitalcapability.jisc.ac.uk/">https://digitalcapability.jisc.ac.uk/</a></li>
+  <li><a href="https://www.google.com/">https://www.google.com/</a></li>
+</ul>
+
+<h4 id="screen-reader-101-with-voiceover-and-nvda">Screen reader 101 with VoiceOver and NVDA</h4>
+
+<p>Shortcuts (macOS):</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Cmd + F5</code> to start VoiceOVer</li>
+  <li><code class="language-plaintext highlighter-rouge">Cmd + F5</code> to stop it</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl</code> to pause text reading</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + alt + U</code> to open the rotor (landmarks, headings)</li>
+</ul>
+
+<p>Easy tests:</p>
+
+<ul>
+  <li>Tab through the site, see whether you can always see the focus, and whether you can interact with every part of the site</li>
+  <li>Skip links</li>
+  <li>Open the rotor, check that there are landmarks and that their labels are descriptive</li>
+  <li>Open the rotor, check there are headings and their structure is appropriate</li>
+</ul>
+
+<p>Test these on:</p>
+
+<ul>
+  <li><a href="https://www.gosportpanel.independent.gov.uk/">https://www.gosportpanel.independent.gov.uk/</a></li>
+  <li><a href="https://digitalcapability.jisc.ac.uk/">https://digitalcapability.jisc.ac.uk/</a></li>
+  <li><a href="https://www.google.com/">https://www.google.com/</a></li>
+</ul>
+
+<h2 id="straw-tests">Straw tests</h2>
+
+<p>I also learned about a really nice technique called a “straw test”, to test whether a website / design is usable for people who rely on zoom / magnifiers. This is something I’ve had trouble testing for in the past, not really understanding how exactly those people would interact with a site using a magnifier.</p>
+
+<p>Here’s the test, three steps, no tools required:</p>
+
+<ol>
+  <li>Make a fist with one of your hands</li>
+  <li>Open your fist just enough to let a “straw” through</li>
+  <li>Hold your fist up to one of your eyes</li>
+</ol>
+
+<p>Then look at your website – for example, try to go through a form.</p>
+
+<h2 id="further-references">Further references</h2>
+
+<p>Here are cool links that are relevant:</p>
+
+<ul>
+  <li>Great reference on alt text best practices, <a href="https://axesslab.com/alt-texts/">https://axesslab.com/alt-texts/</a></li>
+  <li>Favourite browser extension for accessibility testing, <a href="https://accessibilityinsights.io">https://accessibilityinsights.io</a></li>
+  <li>Favourite basic automated testing, <a href="https://pa11y.org/">https://pa11y.org/</a></li>
+  <li>Good onboarding resources,
+    <ul>
+      <li>For designers, <a href="https://inclusivedesignprinciples.org/">https://inclusivedesignprinciples.org/</a></li>
+      <li>For developers &amp; testers, <a href="https://a11yproject.com/">https://a11yproject.com/</a></li>
+      <li>Another great one, <a href="https://www.accessibility-developer-guide.com/">https://www.accessibility-developer-guide.com/</a></li>
+      <li>BBC’s resources and workflows, <a href="https://bbc.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology">https://bbc.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology</a></li>
+    </ul>
+  </li>
+  <li>GOV.uk WCAG primer, <a href="https://alphagov.github.io/wcag-primer/">https://alphagov.github.io/wcag-primer/</a></li>
+</ul>
+
+<h2 id="notes">Notes</h2>
+
+<p>These are just my notes from the workshop that didn’t make their way to the above report.</p>
+
+<p>Lots of disabled people around the world</p>
+
+<p>Lots of different types of disabilities</p>
+
+<p>Four principles of accessibility</p>
+
+<p>Introduce W3C and WCAG</p>
+
+<p>Three levels of WCAG 2.1 - A, AA, AAA</p>
+
+<p>First focus: keyboard “everything doable with the mouse should be doable with a keyboard”</p>
+
+<p>Remove focus indicator ring: no</p>
+
+<p>CSS order customisations cause issues for keyboard users because the DOM order is different from visual order</p>
+
+<p>Empathy stations</p>
+
+<p>Reference site: MDN, HTML5 doctor, not W3school</p>
+
+<p>ARIA includes no keyboard support</p>
+
+<p>Updating page title to reflect test</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Error</td>
+      <td>Contact</td>
+      <td>Website</td>
+    </tr>
+    <tr>
+      <td>Payment information (Step 3 of 4)</td>
+      <td>Shop</td>
+      <td>Website</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Page title</p>
+
+<p>Heading</p>
+
+<p>Landmarks</p>
+
+<p><a href="https://www.html5accessibility.com/">https://www.html5accessibility.com/</a></p>
+
+<p>Ctrl shortcut</p>
+
+<p>Buy-in: no one notices! most accessibility features are invisible to sighted users</p>
+
+<p><a href="https://github.com/h5bp/html5-boilerplate">https://github.com/h5bp/html5-boilerplate</a></p>
+
+<p>Forms</p>
+
+<p>aria-describedby</p>
+
+<p>Error list</p>
+
+<p>live reload - announce number of results</p>
+
+<p>Straw test</p>
+
+<p>prefers-reduced-motion</p>
+
+<p>ARIA roles that are not landmarks - you probably need to have keyboard management</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2019-06-06T15:10:22+01:00" pubdate data-updated="true">2019-06-06 15:10</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/workshops/">Workshops</a>,
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/resources/">Resources</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/wip-the-future-of-rich-text-authoring-experiences-in-wagtail" title="Previous Post: [WIP] The future of (rich text) authoring experiences in Wagtail">&laquo; [WIP] The future of (rich text) authoring experiences in Wagtail</a>
+      
+      
+        <a class="basic-alignment right" href="/jamstack-conf-london-2019" title="Next Post: Notes from JAMstack conf London 2019">Notes from JAMstack conf London 2019 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

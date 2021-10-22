@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Interview exercises for web developers - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Here are a couple of interview exercises I like to give, which are relatively open to varied approaches.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/interview-exercises-for-web-developers">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/interview-exercises-for-web-developers">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Interview exercises for web developers">
+  <meta property="og:description" content="Here are a couple of interview exercises I like to give, which are relatively open to varied approaches.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-07-05-interview-exercises-for-web-developers.md">Edit</a>
+      <h1 class="entry-title">Interview exercises for web developers</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-07-05T23:05:21+01:00" pubdate data-updated="true">2020-07-05 23:05</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Here are a couple of interview exercises I like to give, which are relatively open to varied approaches.</p>
+
+<!-- more -->
+
+<h2 id="before-the-interview-form-validation">Before the interview: Form validation</h2>
+
+<p>I’ve always liked Springload’s <a href="https://github.com/springload/form-validation-problem">form validation problem</a>. It’s a relatively simple problem in apparence – implementing form validation for a basic HTML form, with a few fields, and a few validation rules.</p>
+
+<p>What I think makes it really good is that it’s possible to approach this in many different ways – and there are lots of things for candidates to demonstrate beyond the basic implementation of the form validation – knowledge in any of those areas:</p>
+
+<ul>
+  <li>Documentation</li>
+  <li>Accessibility</li>
+  <li>Progressive enhancement</li>
+  <li>Browser support</li>
+  <li>Testing</li>
+  <li>Tooling</li>
+</ul>
+
+<p>Form validation is a particularly interesting problem in web development because there is a fair amount of state to manage – validation errors for each fields, as well as whether the fields have been interacted with or not to decide when to display the errors.</p>
+
+<p>Candidates can take a shot at this with vanilla JS, a ready-made library like <a href="https://parsleyjs.org/">Parsley</a>, or can be asked to do this with React (Redux Forms, Formik, bespoke?), or even back-end technologies.</p>
+
+<h2 id="at-the-interview-build-this">At the interview: Build This</h2>
+
+<p>This is my go-to “how would you do this” problem, initially encountered at Codemate, which can be used to interview full-stack developers (any stack), or front-end or back-end only. The candidate is shown a specific UI (via a wireframe, screenshot, or real-world app), and is then asked to explain how they would build it within the context of a real project.</p>
+
+<p>Depending on the candidate’s experience level, role, (and level of interview stress), this can be run as an open-ended conversation driven by the candidate directly, or as a series of guided themes / questions.</p>
+
+<p>The whole exercise takes 30min to 1h depending on what is covered – spend a good 5 mins on the problem statement + intro &amp; architecture, then move through the themes.</p>
+
+<p>I really like this because:</p>
+
+<ul>
+  <li>It makes for a more conversational interview – even if the questions are fixed, it’s more natural to have them with a specific app to think about.</li>
+  <li>For candidates, it makes it easier to relate to their past work, for example reflecting on similar apps they’ve built.</li>
+  <li>For interviewers, it does give enough structure to the interview that candidates’ answers can easily be categorised on the fly, and then compared to those of other candidates.</li>
+</ul>
+
+<p>This works particularly well if the wireframe has quite a few things going on visually, with different types of data, a user account, and a form or two.</p>
+
+<h2 id="template-build-this-twitter-clone">Template: Build This Twitter Clone</h2>
+
+<p><img src="/images/blog/interview-exercises-for-web-developers/twitter-wireframe.png" alt="Wireframe of a Twitter clone, showing a logged-in user’s timeline, with few tweets, a form to post a new tweet, and the user’s profile details" /></p>
+
+<p><em>Placeholder wireframe from <a href="https://www.flickr.com/photos/doos/4689874175/in/photostream/">Rob Enslin</a></em></p>
+
+<h3 id="fundamentals">Fundamentals</h3>
+
+<ul>
+  <li><strong>Introduction</strong>
+    <ul>
+      <li>Identify the features of this UI</li>
+      <li>Identify the underlying data / models</li>
+    </ul>
+  </li>
+  <li><strong>Tech stack and architecture</strong>
+    <ul>
+      <li>Rough architecture of the app (front-end and back-end)</li>
+      <li>Overall stack, centred around <code class="language-plaintext highlighter-rouge">&lt;tech we care about&gt;</code></li>
+    </ul>
+  </li>
+  <li><strong>Integrations &amp; APIs</strong>
+    <ul>
+      <li>Integration with the backend, endpoints and payloads</li>
+      <li>Client-side integrations</li>
+    </ul>
+  </li>
+  <li><strong>Data management</strong>
+    <ul>
+      <li>State management tools with <code class="language-plaintext highlighter-rouge">&lt;tech&gt;</code></li>
+      <li>Data flow for a given feature (e.g. search)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="electives">Electives</h4>
+
+<ul>
+  <li><strong>Mobile-friendly UI</strong>
+    <ul>
+      <li>RWD, cross-browser support</li>
+      <li>Offline capabilities</li>
+    </ul>
+  </li>
+  <li><strong>Security</strong>
+    <ul>
+      <li>Security considerations for a new feature: user accounts with saved searches</li>
+    </ul>
+  </li>
+  <li><strong>Testing / Tooling</strong></li>
+  <li><strong>Accessibility</strong></li>
+  <li><strong>Performance</strong></li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-07-05T23:05:21+01:00" pubdate data-updated="true">2020-07-05 23:05</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/interview/">Interview</a>,
+    
+      <a class="category" href="/categories/react/">React</a>,
+    
+      <a class="category" href="/categories/methodology/">Methodology</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/procuring-accessibility-audits" title="Previous Post: Procuring accessibility audits">&laquo; Procuring accessibility audits</a>
+      
+      
+        <a class="basic-alignment right" href="/curlylint-brand-new-rules-documentation" title="Next Post: Curlylint: Brand new rules documentation">Curlylint: Brand new rules documentation &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

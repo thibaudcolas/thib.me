@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Why Wagtail’s new editor is built with Draft.js - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Have you ever worked with rich text editors? You know how frustrating of an experience that can be. Users enter content without much confidence in how the ed...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.draftail.org/blog/2018/03/05/why-wagtail-new-editor-is-built-with-draft-js">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.draftail.org/blog/2018/03/05/why-wagtail-new-editor-is-built-with-draft-js">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Why Wagtail’s new editor is built with Draft.js">
+  <meta property="og:description" content="Have you ever worked with rich text editors? You know how frustrating of an experience that can be. Users enter content without much confidence in how the ed...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2018-03-05-why-wagtail-new-editor-is-built-with-draft-js.md">Edit</a>
+      <h1 class="entry-title">Why Wagtail’s new editor is built with Draft.js</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2018-03-05T20:38:09+00:00" pubdate data-updated="true">2018-03-05 20:38</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Have you ever worked with rich text editors? You know how frustrating of an experience that can be. Users enter content without much confidence in how the editor will preserve it. Developers have to harden their sites to handle the unstructured soup that is rich text. Designers see their layout completely destroyed by the cheer variation in shape and length. A recipe for frustration.</p>
+
+<p>It’s time to add some noodles and flavour, give some structure to our bland broth and enjoy rich text again.</p>
+
+<!-- more -->
+
+<h2 id="introducing-draftjs">Introducing Draft.js</h2>
+
+<blockquote>
+  <p><a href="https://draftjs.org/">Draft.js</a> is a framework for building rich text editors in React, powered by an immutable model and abstracting over cross-browser differences.</p>
+</blockquote>
+
+<p>Sure, using React is nice, but what matters the most is the model:</p>
+
+<ul>
+  <li>The content “source of truth” is separate from HTML rendered in the editor via <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content"><code class="language-plaintext highlighter-rouge">contenteditable</code></a> (which has highly unreliable behavior between browsers).</li>
+  <li>It follows a fixed schema, with predefined formats (eg. bold) but also the opportunity to make custom ones.</li>
+  <li>There are strong constraints on content structure – what is block-level formatting and what is inline, what can have data and how.</li>
+</ul>
+
+<p>This model, called ContentState, is the most important characteristic of Draft.js. Conceptually, it addresses the frustrating brittleness of <code class="language-plaintext highlighter-rouge">contenteditable</code>, which is too permissive and might process content differently in each browser.</p>
+
+<p>In practice, here is what ContentState content looks like:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">blocks</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">key</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">b1ito</span><span class="dl">"</span><span class="p">,</span>
+      <span class="c1">// Here’s the most important bits: text and type.</span>
+      <span class="dl">"</span><span class="s2">text</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Rethinking rich text pipelines with Draft.js</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">header-one</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">depth</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">inlineStyleRanges</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="c1">// The text is bold starting at offset 10, for 4 characters.</span>
+          <span class="dl">"</span><span class="s2">offset</span><span class="dl">"</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+          <span class="dl">"</span><span class="s2">length</span><span class="dl">"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+          <span class="dl">"</span><span class="s2">style</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BOLD</span><span class="dl">"</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="dl">"</span><span class="s2">entityRanges</span><span class="dl">"</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="dl">"</span><span class="s2">entityMap</span><span class="dl">"</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Content is stored as separate blocks containing plain text, with separate text ranges for styles (bold, italic) and entities (things with data like links). A block’s <code class="language-plaintext highlighter-rouge">type</code> defines how the block behaves. There are built-in types like <code class="language-plaintext highlighter-rouge">header-one</code>, but you can also make your own. Same goes for the styles, and entities.</p>
+
+<p>If you want a more in-depth introduction, here is a great talk from the creator of Draft.js:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/feUYwoLhE_4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h2 id="a-framework-for-rich-text">A framework for rich text</h2>
+
+<p>Draft.js isn’t the only tool to use this “content model separate from <code class="language-plaintext highlighter-rouge">contenteditable</code>” approach though: <a href="https://trix-editor.org/">Trix</a>, <a href="https://quilljs.com/">Quill</a>, <a href="https://github.com/ianstormtaylor/slate">Slate</a>, <a href="https://prosemirror.net/">ProseMirror</a>, and <a href="https://github.com/guardian/scribe">Scribe</a> all work similarly. Where Draft.js distinguishes itself is that it is a <em>framework</em>, not a full-featured editor, not even a modular editor. Draft.js provides many low-level APIs, for example:</p>
+
+<ul>
+  <li>Process the input of a single character. This could be used to make an autocomplete, or to turn boring “quotes” into their “smart” equivalent. Or enhance emojis with accessible text.</li>
+  <li>Handle pasting or drag-and-drop in the editor. Auto-linkify, auto-embed, drag-drop image upload features start here.</li>
+  <li>Parse and filter editor content. Data migrations for rich text, anyone?</li>
+</ul>
+
+<p>The sky is the limit! This flexibility comes at a cost though: even seemingly basic rich text interactions might require extra code. Additionally, the model’s conceptual constraints can drastically reduce what the framework can be used for:</p>
+
+<ul>
+  <li>It is impossible to represent nested structures beyond nested lists (at least <a href="https://github.com/facebook/draft-js/pull/388">for now</a>).</li>
+  <li>Highlights-heavy rich text is hard to work with (think comments or annotations on text containing a link).</li>
+  <li>Collaborative editing isn’t designed for.</li>
+</ul>
+
+<blockquote>
+  <p>There is a good list of Draft.js conceptual frustrations in the <a href="https://github.com/ianstormtaylor/slate#why">Slate documentation</a>.</p>
+</blockquote>
+
+<p>The implementation itself also has its shortcomings, but those are generally easier to address.</p>
+
+<h2 id="abstracting-over-cross-browser-differences">Abstracting over cross-browser differences</h2>
+
+<p>Front-end developers know very well how hard it can be to build UIs across the Web’s fragmented landscape – multiple browsers, on different operating systems, at different screen sizes, and more. Cross-browser rich text editing faces those same problems, except even the modern browsers behave in their own quirky ways. Draft.js abstracts this all away from view, but it has its shortcomings, especially on <a href="https://github.com/facebook/draft-js/issues/1077">Android</a>.</p>
+
+<p>I have spent enough time working with Draft.js editors and looking at the Draft.js issue tracker to know that, yep, it works, mostly. There is a lot of improvement to be done in handling of text drag-and-drop, IMEs, and rich text copy-paste in particular – you can see the full list of issues you might run into for non-IME usage <a href="https://github.com/springload/draftail/issues/138">here</a>.</p>
+
+<h2 id="built-with-react">Built with React</h2>
+
+<p>Did I mention that using <a href="https://reactjs.org/">React</a> is nice? I have been using React for three full years now, and it still is hands-down the best view layer library I know of. In the fast-paced JavaScript world, this is a big compliment.</p>
+
+<p>It’s no accident that React and Draft.js work nicely together: they are both built with the same approach of deriving the UI from the underlying data and state, following functional programming and immutability principles. It also helps that they are both built by Facebook.</p>
+
+<h2 id="using-draftjs-to-build-an-actual-editor">Using Draft.js to build an actual editor</h2>
+
+<p>The advantages of using Draft.js go beyond the editor UI component, because of the structure it brings to rich text. But for now, let’s look at editors. There are many <a href="https://github.com/nikgraf/awesome-draft-js#standalone-editors-built-on-draftjs">open-source editors</a> built with Draft.js. There is also a whole <a href="https://github.com/draft-js-plugins/draft-js-plugins">plugin architecture</a>, that comes with many plugins.</p>
+
+<p>We wanted a lot of control over rich text features, which led us to build our own editor: <a href="https://www.draftail.org/">Draftail</a>.</p>
+
+<p><a href="https://www.draftail.org/"><img src="/images/draftail-intro.png" alt="Screenshot of Draftail, with the toolbar, and some example content" /></a></p>
+
+<p>It was nonetheless really useful to reuse established solutions for common rich text behaviors, and we also got to create reusable Draft.js-friendly packages, like the <a href="https://github.com/thibaudcolas/draftjs-filters">Draft.js filters</a>.</p>
+
+<h2 id="what-next">What next</h2>
+
+<p>Rich text has a lot of potential as a user interface. #hashtags and @mentions are now part of our everyday lives. I don’t want to ever have to press <code class="language-plaintext highlighter-rouge">Ctrl + B</code> to make text bold when Slack allows <code class="language-plaintext highlighter-rouge">*Markdown*</code> formatting. Mobile devices with limited keyboards spurred innovations like predictive typing, eg. in Google’s <a href="https://en.wikipedia.org/wiki/Gboard">Gboard</a> – can I have this in my desktop editor as well please?</p>
+
+<p>With those new means of interaction in mind, I am thrilled to see the <a href="https://wagtail.io/blog/wagtail-2/">Draftail editor make its way into Wagtail core</a>, and empower Wagtail users to better communicate with their audiences. I really hope we can build upon this foundation, and create even more delightful UIs that give users the freedom they want, while preserving the structure developers rely upon.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2018-03-05T20:38:09+00:00" pubdate data-updated="true">2018-03-05 20:38</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/javascript/">JavaScript</a>,
+    
+      <a class="category" href="/categories/react/">React</a>,
+    
+      <a class="category" href="/categories/draftjs/">Draftjs</a>,
+    
+      <a class="category" href="/categories/draftail/">Draftail</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/recipe-dead-simple-preview-environments-with-github-travis-heroku" title="Previous Post: Recipe: dead-simple preview environments with GitHub, Travis, and Heroku">&laquo; Recipe: dead-simple preview environments with GitHub, Travis, and Heroku</a>
+      
+      
+        <a class="basic-alignment right" href="/rethinking-rich-text-pipelines-with-draft-js" title="Next Post: Rethinking rich text pipelines with Draft.js">Rethinking rich text pipelines with Draft.js &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

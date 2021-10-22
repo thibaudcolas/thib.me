@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>First draft – Data quality checklist for dataviz projects - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="First draft of what could have been a very cool checklist for dataviz efforts where the data is also made reusable.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/first-draft-data-quality-checklist-for-dataviz-projects">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/first-draft-data-quality-checklist-for-dataviz-projects">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="First draft – Data quality checklist for dataviz projects">
+  <meta property="og:description" content="First draft of what could have been a very cool checklist for dataviz efforts where the data is also made reusable.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2017-08-27-first-draft-data-quality-checklist-for-dataviz-projects.md">Edit</a>
+      <h1 class="entry-title">First draft – Data quality checklist for dataviz projects</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2017-08-27T09:35:03+01:00" pubdate data-updated="true">2017-08-27 09:35</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>First draft of what could have been a very cool checklist for dataviz efforts where the data is also made reusable.</p>
+
+<!-- more -->
+
+<h2 id="structure-and-format">Structure and format</h2>
+
+<p>To be reusable, data needs to be structured consistently and to follow pre-existing standards, vocabularies, and formats.</p>
+
+<h3 id="the-basics">The basics</h3>
+
+<ul>
+  <li>The data and metadata are provided in a non-proprietary, structured format.</li>
+  <li>The data structure is defined.</li>
+  <li>The metadata structure is defined.</li>
+</ul>
+
+<h3 id="use-of-standards">Use of standards</h3>
+
+<ul>
+  <li>All labels in the dataset follow the same naming convention.</li>
+  <li>The naming convention is made available along with the dataset.</li>
+  <li>The vocabularies used in the dataset are consistent.</li>
+  <li>Use of abbreviations in the dataset is consistent.</li>
+  <li>References to other datasets or standards are identified (eg. ISO 3166 2-character country codes for countries, IANA TZ for timezones).</li>
+</ul>
+
+<h3 id="units">Units</h3>
+
+<ul>
+  <li>Units of measurement are defined for all fields.</li>
+  <li>Date and time formats are defined.</li>
+</ul>
+
+<h2 id="metadata">Metadata</h2>
+
+<p>Good metadata will facilitate reuse of the dataset, providing the necessary information to identify provenance of the data but also providing context.</p>
+
+<h3 id="the-basics-1">The basics</h3>
+
+<ul>
+  <li>Metadata is provided with the dataset</li>
+  <li>Metadata is up to date</li>
+</ul>
+
+<h3 id="for-the-dataset-are-documented">For the dataset, are documented</h3>
+
+<ul>
+  <li>Title</li>
+  <li>Description</li>
+  <li>Unique identifier</li>
+  <li>Category</li>
+  <li>Usage license</li>
+  <li>Conditions of attribution, reuse, redistribution and commercialisation</li>
+  <li>Creation date</li>
+  <li>Last update date</li>
+  <li>Publication date</li>
+  <li>Author</li>
+  <li>Publisher</li>
+  <li>Mean of contact for the author or publisher</li>
+  <li>Data transformations</li>
+  <li>Data sources</li>
+  <li>Changelog</li>
+  <li>Update frequency</li>
+</ul>
+
+<h3 id="for-geospatial-datasets-are-documented">For geospatial datasets, are documented</h3>
+
+<ul>
+  <li>Coverage area</li>
+  <li>Coordinate system</li>
+  <li>Map projection</li>
+</ul>
+
+<h2 id="data">Data</h2>
+
+<h3 id="validation">Validation</h3>
+
+<ul>
+  <li>There are no duplicate records in the dataset.</li>
+  <li>Missing records are accounted for, to decide whether to surface or ignore them.</li>
+  <li>Record structure is the same for all records.</li>
+  <li>Units of measurement are the same for all records.</li>
+  <li>Missing values are accounted for, to decide whether to surface or ignore them.</li>
+</ul>
+
+<p>Sources:</p>
+
+<ul>
+  <li><a href="http://checklists.opquast.com/en/opendata/">http://checklists.opquast.com/en/opendata/</a></li>
+  <li><a href="https://medium.com/@ptvan/how-to-advocate-for-data-throughout-the-project-process-bed6422a4680#.a2vdc9dvw">https://medium.com/@ptvan/how-to-advocate-for-data-throughout-the-project-process-bed6422a4680#.a2vdc9dvw</a></li>
+  <li><a href="http://www.periscopic.com/content/how-to-work-with-a-data-visualization-partner/">http://www.periscopic.com/content/how-to-work-with-a-data-visualization-partner/</a></li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2017-08-27T09:35:03+01:00" pubdate data-updated="true">2017-08-27 09:35</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/resources/">Resources</a>,
+    
+      <a class="category" href="/categories/dataviz/">Dataviz</a>,
+    
+      <a class="category" href="/categories/prototyping/">Prototyping</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/how-springload-scores-joel-test-and-why-it-matters" title="Previous Post: How Springload scores on the Joel Test and why it matters">&laquo; How Springload scores on the Joel Test and why it matters</a>
+      
+      
+        <a class="basic-alignment right" href="/python-memory-profiling-for-the-draft-js-exporter" title="Next Post: Python memory profiling and speed benchmarks for the Draft.js exporter">Python memory profiling and speed benchmarks for the Draft.js exporter &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

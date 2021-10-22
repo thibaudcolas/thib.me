@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Take Off : Compte-rendu - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="La conférence Take Off avait lieu la semaine dernière à Lille, et j’ai eu la chance d’y participer. C’est une conférence dédiée au Web en général, pour les t...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/take-off-compte-rendu">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/take-off-compte-rendu">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Take Off : Compte-rendu">
+  <meta property="og:description" content="La conférence Take Off avait lieu la semaine dernière à Lille, et j’ai eu la chance d’y participer. C’est une conférence dédiée au Web en général, pour les t...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2014-02-05-take-off-compte-rendu.md">Edit</a>
+      <h1 class="entry-title">Take Off : Compte-rendu</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2014-02-05T22:55:04+00:00" pubdate data-updated="true">2014-02-05 22:55</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>La conférence <a href="http://takeoffconf.com/2014">Take Off</a> avait lieu la semaine dernière à Lille, et j’ai eu la chance d’y participer. C’est une conférence dédiée au Web en général, pour les techos mais pas que. Les présentations sont disponibles <a href="https://www.youtube.com/user/takeoffconference">sur YouTube</a> (en anglais). Pour ce compte-rendu, j’ai regroupé les sujets en trois thèmes : L’avenir du Web, les bonnes pratiques, et l’essor de JavaScript.</p>
+
+<!-- more -->
+
+<h2 id="lavenir-du-web">L’avenir du Web</h2>
+
+<p>Aucune présentation n’a directement évoqué le sujet de l’avenir du Web mais beaucoup se questionnaient sur les rapports entre ses acteurs : navigateurs, standards et développeurs. Nous avons eu droit à une grosse piqûre de rappel très utile sur <a href="http://paulrouget.com/takeoff2014">le fonctionnement d’un navigateur</a>, par un dev. de Mozilla. Il a bien mis en avant l’intérêt pour nous développeurs d’avoir une bonne connaissance de ces moteurs de rendu, je vous conseille donc au passage un <a href="http://www.paulirish.com/2013/webkit-for-developers/">excellent article de Paul Irish sur Webkit</a>. Une autre présentation évoquait le <a href="https://www.youtube.com/watch?v=vatY9oDLk1A">rôle des standards</a> dans <a href="http://berjon.com/presentations/20140130-own-adventure-web-takeoff/#/">l’extensibilité du Web</a>, invitant les développeurs à réclamer non pas des fonctionnalités supplémentaires (ex : cache pour Web Apps), mais des primitives bas niveau (ex: IndexedDB) sur lesquelles bâtir des APIs. Une approche intéressante, à méditer.</p>
+
+<p>Quelques liens pour aller plus loin :</p>
+
+<ul>
+  <li><a href="http://extensiblewebmanifesto.org/">Extensible Web Manifesto</a>, à survoler.</li>
+  <li><a href="http://extensiblewebmanifesto.org/">Hitch.js</a>, sélecteurs CSS sous stéroïdes.</li>
+</ul>
+
+<h2 id="bonnes-pratiques">Bonnes pratiques</h2>
+
+<p>Je regroupe sous la bannière “Bonnes pratiques” les trois présentations suivantes :</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=fxe2pH0cTXc">Your Customer WANTS to Pay Your Testing Budget</a> <a href="https://speakerdeck.com/klickass/your-customers-want-to-pay-your-testing-budget">slides</a>, par Andre Jay Meissner. Excellente prez, qui faisait l’éloge des <a href="http://opendevicelab.com/">Open Device Labs</a>. Côté tests sur appareils physiques nous avons encore du chemin à faire à la Web Factory pour arriver au niveau de <a href="https://devicelab.fi/">ce genre de photo</a>.</li>
+  <li><a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10</a> : une présentation sur les best practices côté sécurité durant laquelle on a mentionné les outils <a href="http://www.metasploit.com/">Metasploit</a>, <a href="https://www.meldium.com/">Meldium</a> et <a href="https://github.com/versioneye/">Versioneye</a>. Ce dernier pourrait particulièrement vous intéresser.</li>
+  <li>Enfin, une présentation géniale de Patrick Hamann sur <a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">l’optimisation des performances au Guardian</a>. Hyper avant-gardiste, il va beaucoup plus loin que ce que l’on voit habituellement et je vous la conseille vivement.</li>
+</ul>
+
+<h2 id="lessor-de-javascript">L’essor de JavaScript</h2>
+
+<p>Pour terminer, JavaScript <em>comme plateforme</em> était omniprésent. J’ai retenu trois sujets :</p>
+
+<ul>
+  <li><a href="https://rawgithub.com/timruffles/cute-talk/master/index.html#/">A smaller AngularJS</a> : une réécriture des parties intéressantes d’AngularJS (scopes, double binding) pour les rendre plus compréhensibles. À lire : <a href="http://timruffles.github.io/cute/">code source de cette réécriture (moins de 1000 lignes)</a>.</li>
+  <li><a href="https://speakerdeck.com/kimjoar/patterns-of-large-scale-javascript-applications-1">Patterns for Large scale JS</a>. Comment construire de grosses applications JavaScript testables, scalables, maintenables. Excellent talk. Du même hauteur : <a href="http://superherojs.com/">Superhero.js</a>, une mine de ressources sur JavaScript.</li>
+  <li><a href="http://www.slideshare.net/byrichardpowell/timeseries-monitoring-graphs-with-d3-rickshaw">Time-Series Monitoring Graphs with D3 &amp; Ricksha</a>. Si vous êtes passés à côté de D3, je vous conseille vivement d’y <a href="https://d3js.org">jeter un œil</a> pour voir <a href="http://bl.ocks.org/mbostock/4063318">l’étendue</a> de ce qu’il est <a href="https://www.theguardian.com/info/2017/feb/05/removed-interactive">possible de faire</a>.</li>
+</ul>
+
+<p>Excellente conférence en somme, j’espère pouvoir y retourner en 2015. Merci à la société <a href="http://www.hopwork.com/">Hopwork</a> qui m’a offert le billet.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2014-02-05T22:55:04+00:00" pubdate data-updated="true">2014-02-05 22:55</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/events/">Events</a>,
+    
+      <a class="category" href="/categories/community/">Community</a>,
+    
+      <a class="category" href="/categories/report/">Report</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/developer-interview-questions" title="Previous Post: Developer Interview Questions">&laquo; Developer Interview Questions</a>
+      
+      
+        <a class="basic-alignment right" href="/communaute-web-montpellier" title="Next Post: La communauté Web à Montpellier">La communauté Web à Montpellier &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

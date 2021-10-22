@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Reliable front-end building blocks - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Having just shipped a big “single-page app” project, I think it would be useful to list all of its dependencies among the current climate of dependency burno...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/reliable-front-end-building-blocks">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/reliable-front-end-building-blocks">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Reliable front-end building blocks">
+  <meta property="og:description" content="Having just shipped a big “single-page app” project, I think it would be useful to list all of its dependencies among the current climate of dependency burno...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2016-06-28-reliable-front-end-building-blocks.md">Edit</a>
+      <h1 class="entry-title">Reliable front-end building blocks</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2016-06-28T12:21:29+01:00" pubdate data-updated="true">2016-06-28 12:21</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Having just shipped a big “single-page app” project, I think it would be useful to list all of its dependencies among the current climate of dependency burnout in front-end land. Those were all very stable and easy to combine.</p>
+
+<!-- more -->
+
+<ul>
+  <li><a href="https://facebook.github.io/react/">React</a> – I’m not doing any JS front-end without React these days. The development experience is amazing, and they have done a terrific job at being highly stable over time. It’s always a pleasure to upgrade the React version.</li>
+  <li><a href="https://github.com/reactjs/redux">Redux</a> – Very stable and reliable, high learning curve but high reward too</li>
+  <li><a href="https://d3js.org/">D3 (v3)</a> – One of my favorite tools. Can’t wait for v4 to be out, the main issue with D3 as it stands now is that I’m only using a fifth of its features but still shipping it all in my JS</li>
+  <li>Springload’s reusable components <a href="https://springload.github.io/react-simpler-select/"><code class="language-plaintext highlighter-rouge">react-simpler-select</code></a>, <a href="https://springload.github.io/react-svg-icon/"><code class="language-plaintext highlighter-rouge">react-svg-icon</code></a>, <a href="https://github.com/springload/react-accessible-modal"><code class="language-plaintext highlighter-rouge">react-accessible-modal</code></a> Because for UI elements you likely want to have your own touch.</li>
+  <li>Flexbox – Such a pleasure to build layouts with this, if browser support isn’t too advanced (no IE10 and below)</li>
+  <li><a href="https://github.com/moroshko/react-autosuggest"><code class="language-plaintext highlighter-rouge">react-autosuggest</code></a> – A nice UI component that took care of what’s hard - keyboard interactions and accessibility</li>
+  <li><a href="https://github.com/reactjs/react-router/"><code class="language-plaintext highlighter-rouge">react-router</code></a> – Probably the least stable of all of those building blocks, but they have done a better job at this since version 2.</li>
+  <li><a href="https://github.com/springload/frontend-starter-kit/blob/master/gulpfile.js/tasks/js.js">Browserify + gulp builds</a> – Webpack might be better, but its documentation / ease of use is not.</li>
+</ul>
+
+<p>Other goodies:</p>
+
+<ul>
+  <li><a href="https://github.com/sudodoki/copy-to-clipboard"><code class="language-plaintext highlighter-rouge">copy-to-clipboard</code></a></li>
+  <li>Client-side search with <a href="https://github.com/weixsong/elasticlunr.js"><code class="language-plaintext highlighter-rouge">elasticlunr</code></a> – Like lunr.js but better.</li>
+  <li>sessionStorage caching</li>
+  <li>performance tracking</li>
+  <li><a href="https://github.com/googleanalytics/autotrack/"><code class="language-plaintext highlighter-rouge">autotrack</code></a> analytics - Another one of my favorites, more recent.</li>
+  <li><a href="https://github.com/lodash/babel-plugin-lodash/"><code class="language-plaintext highlighter-rouge">babel-plugin-lodash</code></a> for smaller builds</li>
+  <li>npm shrinkwrap – Finally!</li>
+  <li><a href="https://github.com/thibaudcolas/nightmarejs-integration-tests">Integration tests with Nightmare</a></li>
+  <li><a href="https://github.com/thibaudcolas/export-svg-chart">SVG+CSS export as SVG/PNG</a> – The more R&amp;D part of this project, which turned out to work quite well</li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2016-06-28T12:21:29+01:00" pubdate data-updated="true">2016-06-28 12:21</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/javascript/">JavaScript</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>,
+    
+      <a class="category" href="/categories/react/">React</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/warning-browserify-and-the-react-ecosystem" title="Previous Post: Warning: Browserify and the React ecosystem">&laquo; Warning: Browserify and the React ecosystem</a>
+      
+      
+        <a class="basic-alignment right" href="/oulu-web-development-meetup" title="Next Post: Oulu Web Development Meetup">Oulu Web Development Meetup &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

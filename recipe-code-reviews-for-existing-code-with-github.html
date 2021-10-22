@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Recipe: code reviews for existing code with GitHub - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="To me, code reviews are one of the most useful practices of modern software development. It used to be quite tedious to set up tools and a workflow to be abl...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/recipe-code-reviews-for-existing-code-with-github">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/recipe-code-reviews-for-existing-code-with-github">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Recipe: code reviews for existing code with GitHub">
+  <meta property="og:description" content="To me, code reviews are one of the most useful practices of modern software development. It used to be quite tedious to set up tools and a workflow to be abl...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2019-01-23-recipe-code-reviews-for-existing-code-with-github.md">Edit</a>
+      <h1 class="entry-title">Recipe: code reviews for existing code with GitHub</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2019-01-22T23:10:54+00:00" pubdate data-updated="true">2019-01-22 23:10</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>To me, <a href="/code-reviews-getting-started">code reviews</a> are one of the most useful practices of modern software development. It used to be quite tedious to set up tools and a workflow to be able to use them on projects, but with the arrival of <a href="https://guides.github.com/introduction/flow/">PR workflows</a> on platforms like GitHub and GitLab, with built-in code review interfaces, there is no reason not to systematically review code. Make a branch, make a PR, review, merge.</p>
+
+<p>But what if the code to review has already been committed? Sure, GitHub supports commenting on commits, but it becomes quite tedious to have to do this as individual comments scattered across a repository. Instead, here’s a technique I’ve used to leverage GitHub (or GitLab’s) wonderful PR review tools, to look at whole repositories.</p>
+
+<!-- more -->
+
+<h2 id="goal">Goal</h2>
+
+<p>We want to be able to review the existing code of any project, code that has already been committed (with or without a pull request). We want to do so with the same tools that we would normally use to review pull requests. So let’s make a pull request!</p>
+
+<h2 id="recipe">Recipe</h2>
+
+<p>We’ll simply make a pull request, with <strong>all</strong> of the project’s code in it. We don’t want this PR to actually affect the project, so we will:</p>
+
+<ol>
+  <li>Make a fork of the project to review, and from then on use that fork for the reviews</li>
+  <li>Create an empty branch with <code class="language-plaintext highlighter-rouge">git checkout --orphan</code>, for example <code class="language-plaintext highlighter-rouge">git checkout --orphan review-1-target</code></li>
+  <li>On the empty branch, create an empty commit with <code class="language-plaintext highlighter-rouge">git commit --allow-empty -m 'Empty commit'</code></li>
+  <li>Push the empty branch to our fork, <code class="language-plaintext highlighter-rouge">git push -u origin review-1-target</code></li>
+  <li>Now let’s go to the branch we want to review (say <code class="language-plaintext highlighter-rouge">master</code>), and create a new branch from it: <code class="language-plaintext highlighter-rouge">git checkout -b review-1</code>.</li>
+  <li>We then want to rebase from our empty/target branch. Make sure to place the empty commit as the first commit on the branch, <code class="language-plaintext highlighter-rouge">git rebase -i review-1-target</code></li>
+  <li>Push the branch to the fork, <code class="language-plaintext highlighter-rouge">git push -u origin review-1</code></li>
+</ol>
+
+<p>That’is it! You should now be able to create a pull request for the branch, targeting the <code class="language-plaintext highlighter-rouge">review-1-target</code> branch on your fork so no changes risk making their way to the main repository.</p>
+
+<p>On GitHub, this can be created simply by going to the right comparison URL, e.g. <a href="https://github.com/thibaudcolas/react-streamfield/compare/review-1-target...review-1">https://github.com/thibaudcolas/react-streamfield/compare/review-1-target…review-1</a>.</p>
+
+<h2 id="an-example">An example</h2>
+
+<p>I’ve used this methodology to review <a href="https://github.com/noripyt/react-streamfield">react-streamfield</a>, a package created as part of Wagtail’s <a href="https://www.kickstarter.com/projects/noripyt/wagtails-first-hatch">first Kickstarter campaign</a>, so it could be integrated into Wagtail (<a href="https://github.com/wagtail/wagtail/pull/4942">#4942</a>).</p>
+
+<p>You can view the resulting PR over at <a href="https://github.com/thibaudcolas/react-streamfield/pull/1">thibaudcolas/react-streamfield#1</a>, and its summarised version at <a href="https://github.com/noripyt/react-streamfield/issues/4">noripyt/react-streamfield#4</a>.</p>
+
+<h2 id="onwards">Onwards</h2>
+
+<p>I hope this helps! Have a look at <a href="/code-reviews-getting-started">Code reviews – Getting started</a> for more of my thoughts on the topic.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2019-01-22T23:10:54+00:00" pubdate data-updated="true">2019-01-22 23:10</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/tools/">Tools</a>,
+    
+      <a class="category" href="/categories/automation/">Automation</a>,
+    
+      <a class="category" href="/categories/methodology/">Methodology</a>,
+    
+      <a class="category" href="/categories/team/">Team</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/event-recording-field-notes" title="Previous Post: Event recording field notes">&laquo; Event recording field notes</a>
+      
+      
+        <a class="basic-alignment right" href="/draftail-v1-1-0-a-quality-of-life-release" title="Next Post: Draftail v1.1.0: a quality of life release">Draftail v1.1.0: a quality of life release &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

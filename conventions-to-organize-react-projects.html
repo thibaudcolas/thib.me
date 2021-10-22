@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Conventions to organize React projects - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="I’ve spent a lot of time thinking of how best to structure React projects over the last few years. This is especially important when React is a central part ...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/conventions-to-organize-react-projects">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/conventions-to-organize-react-projects">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Conventions to organize React projects">
+  <meta property="og:description" content="I’ve spent a lot of time thinking of how best to structure React projects over the last few years. This is especially important when React is a central part ...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-04-20-conventions-to-organize-react-projects.md">Edit</a>
+      <h1 class="entry-title">Conventions to organize React projects</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-04-20T23:03:29+01:00" pubdate data-updated="true">2020-04-20 23:03</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>I’ve spent a lot of time thinking of how best to structure React projects over the last few years. This is especially important when React is a central part of the project’s front-end tech stack, as React in itself has very few opinions about how to organize code (it’s a library, not a framework). Here are my notes.</p>
+
+<!-- more -->
+
+<h2 id="inspiration">Inspiration</h2>
+
+<p>My favourite file structure is that of <a href="https://www.djangoproject.com/">Django</a>. In particular,</p>
+
+<ul>
+  <li>At the top level, dividing code by functional area</li>
+  <li>Within each functional area, the files’ names follow an established convention based on non-functional considerations.</li>
+  <li>If needed, code can then be broken up by functional area for each type of file</li>
+</ul>
+
+<p>What I really like about those conventions is that they give the code as much room to grow as possible – add more apps as the project grows, remove whole apps if they’re no longer needed, and sub-divide individual apps if they start getting too big.</p>
+
+<p>Here is what this looks like in practice:</p>
+
+<pre><code class="language-txt">demo
+├── feedback
+│   ├── templates
+│   ├── urls.py
+│   └── views.py
+├── polls
+│   ├── admin.py
+│   ├── migrations
+│   ├── models
+│   │   ├── questions.py
+│   │   └── choices.py
+│   ├── templates
+│   │   └── polls
+│   │       ├── question_list.html
+│   │       └── results.html
+│   ├── urls.py
+│   └── views.py
+├── settings.py
+└── urls.py
+</code></pre>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">polls</code> is a functional area</li>
+  <li>Within this, <code class="language-plaintext highlighter-rouge">urls.py</code> does all routing-level logic for <code class="language-plaintext highlighter-rouge">polls</code></li>
+  <li>If needed, that non-functional can be broken up into further features-oriented files like with <code class="language-plaintext highlighter-rouge">models</code>, which has separate files.</li>
+</ol>
+
+<h2 id="the-overarching-rules">The overarching rules</h2>
+
+<p>From that Django baseline, here are rules I like to follow when adapting this to arbitrary technologies.</p>
+
+<h3 id="folder-structure">Folder structure</h3>
+
+<ul>
+  <li>Co-locate code by feature rather than file type as much as possible.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Button.js</code>, <code class="language-plaintext highlighter-rouge">Button.css</code>, <code class="language-plaintext highlighter-rouge">Button.test.js</code>, and <code class="language-plaintext highlighter-rouge">Button.md</code> should all live side-by-side.</li>
+      <li>User profile logic, avatar &amp; bio UI components, profile details update forms – should all be close one-another if possible.</li>
+    </ul>
+  </li>
+  <li>Avoid files that are just importing and re-exporting code.
+    <ul>
+      <li>These are useful for libraries that need a clean API, and an overhead for our first-party project code.</li>
+      <li>Modern IDEs support automatically updating file paths as files move, and auto-completing imports.</li>
+    </ul>
+  </li>
+  <li>Extract code that is not feature-specific into a reusable “shared” folder.</li>
+  <li>Consider having another “modules” folder for code that is so un-specific to your project that it could just as well come from a dependency.</li>
+</ul>
+
+<h3 id="naming-conventions">Naming conventions</h3>
+
+<ul>
+  <li>Files should be named after their default export as much as possible.
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">Button</code> component lives in <code class="language-plaintext highlighter-rouge">Button.js</code>.</li>
+    </ul>
+  </li>
+  <li>For ancilliary files, take the name of the main file and suffix it with the “type”.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Button.test.js</code>, <code class="language-plaintext highlighter-rouge">Button.stories.js</code>, <code class="language-plaintext highlighter-rouge">Button.scss</code></li>
+      <li>Files that represent non-functional considerations can be named after the “app” they are in, for example <code class="language-plaintext highlighter-rouge">polls.models.js</code></li>
+    </ul>
+  </li>
+  <li>Each file name must be unique for the whole project, and convey what the file contains without context.
+    <ul>
+      <li>Don’t <code class="language-plaintext highlighter-rouge">models.js</code>. Do <code class="language-plaintext highlighter-rouge">polls.models.js</code>. Don’t <code class="language-plaintext highlighter-rouge">urls.js</code>. Do <code class="language-plaintext highlighter-rouge">polls.urls.js</code>.</li>
+      <li>I always use text search and filters to navigate through code, this makes it much easier.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="import">Import</h3>
+
+<ul>
+  <li>Always import by relative file path.
+    <ul>
+      <li>Those imports are compatible with the most tools – IDEs, linters, SCMs</li>
+      <li>They can be automatically generated by IDEs.</li>
+      <li>They are very short when code is co-located with its immediate dependencies, which is the most common type of import.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="react-specificites">React specificites</h3>
+
+<ul>
+  <li>Components should be in their <code class="language-plaintext highlighter-rouge">components</code> folder for each app</li>
+  <li>If your tools allow it, always start by co-locating the component’s code, documentation, styles, data dependencies, all in the same file.
+    <ul>
+      <li>Break it down into separate co-located files if it gets too big.</li>
+    </ul>
+  </li>
+  <li>Components should have their own folder if the component is made up of more than one file (<code class="language-plaintext highlighter-rouge">Button.js</code>, <code class="language-plaintext highlighter-rouge">Button.test.js</code>)</li>
+  <li>If React is your main UI building block, consider having a separate <code class="language-plaintext highlighter-rouge">pages</code> folder for page-level components, if the <code class="language-plaintext highlighter-rouge">components</code> folder gets too big.</li>
+</ul>
+
+<h3 id="redux-specificities">Redux specificities</h3>
+
+<ul>
+  <li>Follow the Ducks methodology, ideally using <a href="https://redux-starter-kit.js.org/">Redux Toolkit</a>.</li>
+  <li>Co-locate <code class="language-plaintext highlighter-rouge">connect</code> code in the component’s source. No one wants to jump back and forth between “container” and “dumb” components.</li>
+</ul>
+
+<h2 id="in-practice">In practice</h2>
+
+<p>Here is a bigger React project structured with this methodology:</p>
+
+<pre><code class="language-txt">.
+├── admin.entry.js
+├── client.entry.js
+├── counsellor.entry.js
+├── booking
+│   ├── booking.actions.js
+│   ├── booking.constants.js
+│   ├── booking.models.js
+│   ├── booking.models.test.js
+│   ├── booking.reducer.js
+│   ├── booking.routes.js
+│   ├── booking.types.js
+│   └── components
+│   ├── AvailabilityPicker
+│   │   ├── AvailabilityPicker.js
+│   │   ├── AvailabilityPicker.scss
+│   │   ├── AvailabilityPicker.stories.js
+│   │   ├── CalendarButton
+│   │   │   ├── CalendarButton.js
+│   │   │   └── CalendarButton.scss
+│   │   ├── CounsellorSlots.js
+│   │   ├── LoadingOverlay.js
+│   │   ├── LoadingOverlay.scss
+│   │   ├── SlotOverlay.js
+│   │   ├── SlotOverlay.scss
+│   │   ├── SlotPicker.js
+│   │   └── SlotPicker.scss
+│   ├── BookingContent
+│   │   ├── BookingContent.js
+│   │   └── BookingContent.test.js
+│   ├── BookingFlow.js
+│   ├── ChooseAvailability.js
+│   ├── ConfirmBooking
+│   │   ├── ConfirmBooking.js
+│   │   └── ConfirmBooking.scss
+│   ├── CounsellorBioModal
+│   │   ├── CounsellorBioModal.js
+│   │   ├── CounsellorBioModal.scss
+│   │   └── CounsellorBioModal.stories.js
+│   ├── ProgressBar
+│   │   ├── ProgressBar.js
+│   │   └── ProgressBar.scss
+│   └── Register
+│   ├── ProvisionalBookingCard.js
+│   ├── Register.js
+│   ├── Register.scss
+│   ├── RegisterPersonal.js
+│   ├── RegisterPersonal.test.js
+│   └── RegisterSituation.js
+├── counsellors
+│   ├── components
+│   │   ├── ClientDetail.js
+│   │   ├── ClientHistory
+│   │   │   ├── ClientHistory.js
+│   │   │   ├── ClientHistory.scss
+│   │   │   ├── ClientHistory.stories.js
+│   │   │   └── ClientHistoryCard
+│   │   │   ├── ClientHistoryCard.js
+│   │   │   └── ClientHistoryCard.scss
+│   │   ├── CounsellorDashboard.js
+│   │   ├── Timeline
+│   │   │   ├── Timeline.js
+│   │   │   ├── Timeline.scss
+│   │   │   ├── Timeline.stories.js
+│   │   │   └── Timeline.test.js
+│   │   └── TimelineCard
+│   │   ├── TimelineCard.js
+│   │   ├── TimelineCard.scss
+│   │   ├── TimelineCard.stories.js
+│   │   ├── TimelineCard.test.js
+│   │   └── **snapshots**
+│   │   └── TimelineCard.test.js.snap
+│   ├── counsellors.actions.js
+│   ├── counsellors.api.js
+│   ├── counsellors.reducer.js
+│   ├── counsellors.routes.js
+│   └── counsellors.types.js
+├── dashboard
+│   ├── components
+│   │   ├── BookingLanding
+│   │   │   ├── BookingLanding.js
+│   │   │   └── BookingLanding.scss
+│   │   ├── CancelBooking
+│   │   │   ├── CancelBooking.js
+│   │   │   ├── CancelBooking.scss
+│   │   │   ├── CancelBookingSuccess.js
+│   │   │   └── CancelForm.js
+│   │   ├── ChangeBooking
+│   │   │   ├── ChangeBooking.js
+│   │   │   ├── ChangeBooking.scss
+│   │   │   └── ChangeBookingConfirm.js
+│   │   ├── Dashboard.js
+│   │   ├── DonationRequest
+│   │   │   ├── DonationRequest.js
+│   │   │   └── DonationRequest.scss
+│   │   ├── EndOfSessions
+│   │   │   ├── EndOfSessions.js
+│   │   │   └── EndOfSessions.scss
+│   │   ├── NonVerifiedUserMessage
+│   │   │   ├── NonVerifiedUserMessage.js
+│   │   │   └── NonVerifiedUserMessage.scss
+│   │   └── ViewBookings
+│   │   ├── ViewBookings.js
+│   │   ├── ViewBookings.scss
+│   │   └── ViewBookings.test.js
+│   ├── dashboard.actions.js
+│   ├── dashboard.api.js
+│   ├── dashboard.constants.js
+│   ├── dashboard.reducer.js
+│   └── dashboard.routes.js
+├── main.scss
+├── shared
+│   ├── api
+│   │   ├── timekit.js
+│   │   └── video.js
+│   ├── components
+│   │   ├── AppError
+│   │   │   └── AppError.js
+│   │   ├── BookingCard
+│   │   │   ├── BookingCard.js
+│   │   │   ├── BookingCard.mixins.scss
+│   │   │   ├── BookingCard.scss
+│   │   │   ├── BookingCard.stories.js
+│   │   │   └── DNACard
+│   │   │   ├── DNACard.js
+│   │   │   └── DNACard.scss
+│   │   ├── Button
+│   │   │   ├── Button.js
+│   │   │   └── Button.stories.js
+│   │   ├── ClientApp.js
+│   │   ├── ContentCard
+│   │   │   ├── ContentCard.js
+│   │   │   ├── ContentCard.scss
+│   │   │   └── ContentCard.stories.js
+│   │   ├── CounsellorApp.js
+│   │   ├── DashboardWrapper.js
+│   │   ├── DatePicker
+│   │   │   ├── DatePicker.js
+│   │   │   ├── DatePicker.scss
+│   │   │   └── DatePicker.stories.js
+│   │   ├── ErrorModal
+│   │   │   ├── ErrorModal.js
+│   │   │   ├── ErrorModal.scss
+│   │   │   └── ErrorModal.stories.js
+│   │   ├── FormField
+│   │   │   ├── FormField.js
+│   │   │   ├── FormField.stories.js
+│   │   │   ├── RadioGroup.js
+│   │   │   └── StyledErrorMessage.js
+│   │   ├── Icon
+│   │   │   ├── Icon.js
+│   │   │   ├── Icon.stories.js
+│   │   │   └── Icon.test.js
+│   │   ├── InfoBox
+│   │   │   ├── InfoBox.js
+│   │   │   ├── InfoBox.scss
+│   │   │   └── InfoBox.stories.js
+│   │   ├── LoadingIndicator
+│   │   │   ├── LoadingIndicator.js
+│   │   │   ├── LoadingIndicator.scss
+│   │   │   └── LoadingIndicator.stories.js
+│   │   ├── MainWrapper.js
+│   │   ├── Modal
+│   │   │   ├── Modal.js
+│   │   │   ├── Modal.scss
+│   │   │   └── Modal.stories.js
+│   │   ├── NoBookings
+│   │   │   ├── NoBookings.js
+│   │   │   ├── NoBookings.scss
+│   │   │   └── NoBookings.stories.js
+│   │   ├── NotFound.js
+│   │   ├── ScrollToTop.js
+│   │   ├── SentryBoundary
+│   │   ├── SentryBoundary.js
+│   │   ├── ShowBetween
+│   │   │   ├── ShowBetween.js
+│   │   │   └── ShowBetween.test.js
+│   │   ├── mobile-menu.js
+│   │   ├── mobile-sub-menu.js
+│   │   └── read-more.js
+│   ├── fonts
+│   │   ├── IF_Std_Bold.ttf
+│   │   ├── IF_Std_Bold.woff2
+│   │   ├── IF_Std_Light.ttf
+│   │   ├── IF_Std_Light.woff2
+│   │   ├── IF_Std_Regular.ttf
+│   │   └── IF_Std_Regular.woff2
+│   ├── images
+│   │   ├── backdrop-bluecard.svg
+│   │   ├── backdrop-shape.svg
+│   │   ├── bottom-right-white-brand-blob.svg
+│   │   ├── cancellation.png
+│   │   ├── change.png
+│   │   ├── checkmark.svg
+│   │   ├── chevron-right.svg
+│   │   ├── confirmation.png
+│   │   ├── email-logo.png
+│   │   ├── fr-logo.png
+│   │   ├── reminder.png
+│   │   └── verification.png
+│   ├── sass
+│   │   ├── abstracts
+│   │   │   ├── _functions.scss
+│   │   │   ├── _mixins.scss
+│   │   │   └── _variables.scss
+│   │   ├── base
+│   │   │   ├── _base.scss
+│   │   │   ├── _fonts.scss
+│   │   │   └── _typography.scss
+│   │   ├── components
+│   │   │   ├── _blockquote.scss
+│   │   │   ├── _call-to-action.scss
+│   │   │   ├── _card.scss
+│   │   │   ├── _client-detail.scss
+│   │   │   ├── _cookie-message.scss
+│   │   │   ├── _grid.scss
+│   │   │   ├── _icon.scss
+│   │   │   ├── _menu-dropdown.scss
+│   │   │   ├── _nav.scss
+│   │   │   ├── _read-more.scss
+│   │   │   ├── _responsive-object.scss
+│   │   │   ├── _rich-text.scss
+│   │   │   ├── _section.scss
+│   │   │   ├── _select-menu.scss
+│   │   │   ├── _user-modal.scss
+│   │   │   ├── _wrapper.scss
+│   │   │   ├── button
+│   │   │   │   ├── _button-action.scss
+│   │   │   │   ├── _button-rounded.scss
+│   │   │   │   ├── _button-slot.scss
+│   │   │   │   └── _button.scss
+│   │   │   ├── case-load
+│   │   │   │   ├── _case-load-header.scss
+│   │   │   │   ├── _case-load-table.scss
+│   │   │   │   └── _case-load.scss
+│   │   │   └── form
+│   │   │   ├── _form-checkbox.scss
+│   │   │   ├── _form-item.scss
+│   │   │   ├── _form-radio.scss
+│   │   │   └── _form.scss
+│   │   ├── layout
+│   │   │   ├── _footer.scss
+│   │   │   ├── _header.scss
+│   │   │   └── _sidebar.scss
+│   │   ├── utilities
+│   │   │   └── _utilities.scss
+│   │   └── vendor
+│   │   └── _normalize.scss
+│   └── utils
+│   ├── actions.js
+│   ├── dates.js
+│   ├── dates.test.js
+│   ├── delay.js
+│   ├── delay.test.js
+│   ├── errors.js
+│   ├── hooks.js
+│   ├── notifications.js
+│   ├── phonenumbers.js
+│   ├── phonenumbers.test.js
+│   ├── storage.js
+│   └── storage.test.js
+├── store.js
+├── stories
+│   ├── TemplatePattern.js
+│   ├── addons.js
+│   ├── config.js
+│   ├── middleware.js
+│   ├── mocks
+│   │   ├── bookings.mock.js
+│   │   ├── counsellor-sample-image.jpeg
+│   │   ├── counsellors.mock.js
+│   │   ├── sample-video.mp4
+│   │   └── users.mock.js
+│   ├── storyshots.test.js
+│   └── webpack.config.js
+├── tests
+│   ├── assetMock.js
+│   ├── environment.js
+│   └── setupTests.js
+├── user
+│   ├── components
+│   │   └── UserNav.js
+│   ├── user.actions.js
+│   ├── user.api.js
+│   ├── user.constants.js
+│   ├── user.reducer.js
+│   └── user.types.js
+└── video
+├── components
+│   ├── AppointmentDetails
+│   │   ├── AppointmentDetails.js
+│   │   ├── AppointmentDetails.scss
+│   │   └── AppointmentDetails.stories.js
+│   ├── PreviewPlayer
+│   │   ├── PreviewFeed.js
+│   │   ├── PreviewPlayer.js
+│   │   ├── PreviewPlayer.scss
+│   │   └── PreviewPlayer.stories.js
+│   ├── SessionStatusForm
+│   │   ├── SessionStatusForm.js
+│   │   ├── SessionStatusForm.scss
+│   │   └── SessionStatusForm.stories.js
+│   ├── Timer
+│   │   ├── Timer.js
+│   │   ├── Timer.scss
+│   │   ├── Timer.stories.js
+│   │   └── Timer.test.js
+│   ├── TwilioVideoPlayer.js
+│   ├── Video.js
+│   ├── VideoOverlay
+│   │   ├── VideoOverlay.js
+│   │   └── VideoOverlay.scss
+│   ├── VideoPlayer
+│   │   ├── VideoPlayer.js
+│   │   ├── VideoPlayer.scss
+│   │   └── VideoPlayer.stories.js
+│   └── VideoRoom
+│   ├── ClientVideoRoom.js
+│   ├── ClientVideoRoom.stories.js
+│   ├── ConfirmEndCall.js
+│   ├── ConfirmEndCall.scss
+│   ├── CounsellorVideoRoom.js
+│   ├── CounsellorVideoRoom.stories.js
+│   ├── VideoRoom.js
+│   └── VideoRoom.scss
+├── video.actions.js
+├── video.constants.js
+├── video.reducer.js
+└── video.routes.js
+
+70 directories, 258 files
+</code></pre>
+
+<p>Smaller Create React App + Redux Toolkit project:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src/
+├── main.entry.tsx
+├── main.entry.scss
+├── nav
+│   ├── components
+│   │   ├── NavBar
+│   │   │   ├── Logo.svg
+│   │   │   ├── NavBar.stories.tsx
+│   │   │   └── NavBar.tsx
+│   │   └── PrimaryNav
+│   │       ├── PrimaryCategory.tsx
+│   │       ├── PrimaryNav.stories.tsx
+│   │       ├── PrimaryNav.test.tsx
+│   │       └── PrimaryNav.tsx
+│   ├── nav.data.ts
+│   ├── nav.slice.ts
+│   └── nav.types.ts
+├── shared
+│   ├── components
+│   │   ├── App
+│   │   │   ├── App.test.tsx
+│   │   │   ├── App.tsx
+│   │   │   └── Dashboard.tsx
+│   │   ├── Button
+│   │   │   ├── Button.stories.tsx
+│   │   │   └── Button.tsx
+│   │   └── Release
+│   │       ├── Release.module.scss
+│   │       ├── Release.test.tsx
+│   │       └── Release.tsx
+│   ├── shared.constants.ts
+│   ├── store.ts
+│   └── styles
+│       └── theme.ts
+└── user
+    ├── components
+    │   └── AccountInfo
+    │       ├── AccountInfo.stories.tsx
+    │       ├── AccountInfo.test.tsx
+    │       └── AccountInfo.tsx
+    ├── user.data.ts
+    ├── user.slice.ts
+    └── user.types.ts
+</code></pre></div></div>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://blog.danawoodman.com/articles/organizing-react-projects">How I Organize React Projects</a></li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-04-20T23:03:29+01:00" pubdate data-updated="true">2020-04-20 23:03</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/react/">React</a>,
+    
+      <a class="category" href="/categories/javascript/">JavaScript</a>,
+    
+      <a class="category" href="/categories/methodology/">Methodology</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/react-training-goals-for-front-end-developers" title="Previous Post: React training goals for front-end developers">&laquo; React training goals for front-end developers</a>
+      
+      
+        <a class="basic-alignment right" href="/accessibility-audits-getting-started" title="Next Post: Accessibility audits: getting started">Accessibility audits: getting started &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

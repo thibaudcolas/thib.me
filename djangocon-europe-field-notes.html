@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>DjangoCon Europe 2021 field notes - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Notes from the conference.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/djangocon-europe-field-notes">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/djangocon-europe-field-notes">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="DjangoCon Europe 2021 field notes">
+  <meta property="og:description" content="Notes from the conference.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2021-06-04-djangocon-europe-field-notes.md">Edit</a>
+      <h1 class="entry-title">DjangoCon Europe 2021 field notes</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2021-06-04T07:43:49+01:00" pubdate data-updated="true">2021-06-04 07:43</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Notes from the conference.</p>
+
+<!-- more -->
+
+<p><a href="https://github.com/mxsasha/lessobviouschecklist">https://github.com/mxsasha/lessobviouschecklist</a></p>
+
+<h2 id="climate">Climate</h2>
+
+<p><a href="https://www.youtube.com/watch?v=upiK4du5vUI">https://www.youtube.com/watch?v=upiK4du5vUI</a></p>
+
+<p><a href="https://cloud.google.com/sustainability/region-carbon">https://cloud.google.com/sustainability/region-carbon</a>
+<a href="https://pypi.org/project/energyusage/">https://pypi.org/project/energyusage/</a>
+<a href="https://www.cloudcarbonfootprint.org/docs/gcp">https://www.cloudcarbonfootprint.org/docs/gcp</a>
+<a href="https://codeascraft.com/2020/04/23/cloud-jewels-estimating-kwh-in-the-cloud/">https://codeascraft.com/2020/04/23/cloud-jewels-estimating-kwh-in-the-cloud/</a>
+<a href="https://www.cloudcarbonfootprint.org/docs/methodology">https://www.cloudcarbonfootprint.org/docs/methodology</a>
+<a href="https://github.com/hubblo-org/scaphandre">https://github.com/hubblo-org/scaphandre</a>
+<a href="https://pypi.org/project/pyJoules">https://pypi.org/project/pyJoules</a></p>
+
+<p><a href="https://github.com/responsibleproblemsolving/energy-usage/issues/16">https://github.com/responsibleproblemsolving/energy-usage/issues/16</a></p>
+
+<h2 id="indexes">Indexes</h2>
+
+<p>db_index=True on fields</p>
+
+<p>class-based indexes on classes</p>
+
+<p>Functional indexes?</p>
+
+<p><a href="https://adamj.eu/tech/2020/07/27/how-to-modernize-your-django-index-definitions/">https://adamj.eu/tech/2020/07/27/how-to-modernize-your-django-index-definitions/</a></p>
+
+<h2 id="database-migrations">Database migrations</h2>
+
+<p><a href="https://speakerdeck.com/markush/writing-safe-database-migrations-djangocon-europe-2021">https://speakerdeck.com/markush/writing-safe-database-migrations-djangocon-europe-2021</a></p>
+
+<h2 id="hunting-performance-in-django-code">Hunting Performance in Django code</h2>
+
+<p>Tracing profilers vs sampling profilers</p>
+
+<p>Good overview of different profiler options for Python (for example the ones that support multi-threading)</p>
+
+<p><a href="https://github.com/plasma-umass/scalene">https://github.com/plasma-umass/scalene</a></p>
+
+<h2 id="dd-with-graphql-and-django">DD with GraphQL and Django</h2>
+
+<p><a href="https://www.cosmicpython.com/">https://www.cosmicpython.com/</a></p>
+
+<p>Leaner framework could be better? (FastAPI?)</p>
+
+<h2 id="django--sphinx">Django + Sphinx</h2>
+
+<h2 id="clean-architecture-with-django">Clean architecture with Django</h2>
+
+<p>Best use case for Django</p>
+
+<p>Dependency inversion</p>
+
+<h2 id="htmx-frontend-revolution">HTMX: Frontend Revolution</h2>
+
+<h2 id="absolutely-no-javascript">Absolutely no JavaScript</h2>
+
+<p><a href="https://github.com/adamghill/djangocon-eu-2021-conference-talk">https://github.com/adamghill/djangocon-eu-2021-conference-talk</a></p>
+
+<h2 id="sprint">Sprint</h2>
+
+<p><a href="https://github.com/django/django/pull/14391">https://github.com/django/django/pull/14391</a>
+<a href="https://github.com/django/django/pull/14389">https://github.com/django/django/pull/14389</a></p>
+
+<p><a href="https://github.com/aeltanawy/Receptor">https://github.com/aeltanawy/Receptor</a></p>
+
+<hr />
+
+<p><a href="https://github.com/adamghill/djangocon-eu-2021-conference-talk">https://github.com/adamghill/djangocon-eu-2021-conference-talk</a></p>
+
+<p><a href="https://code.djangoproject.com/ticket/32819">https://code.djangoproject.com/ticket/32819</a>
+<a href="https://code.djangoproject.com/ticket/32820">https://code.djangoproject.com/ticket/32820</a></p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2021-06-04T07:43:49+01:00" pubdate data-updated="true">2021-06-04 07:43</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/events/">Events</a>,
+    
+      <a class="category" href="/categories/resources/">Resources</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/pycon-us-2021-python-accessibility-ftw" title="Previous Post: PyCon US 2021: Web Accessibility ♥ Python">&laquo; PyCon US 2021: Web Accessibility ♥ Python</a>
+      
+      
+        <a class="basic-alignment right" href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics" title="Next Post: DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

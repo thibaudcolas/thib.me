@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2021-10-22T17:09:26+01:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">DjangoCon US 2021: Kontrasto – improving accessibility with Python</title><link href="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python" rel="alternate" type="text/html" title="DjangoCon US 2021: Kontrasto – improving accessibility with Python" /><published>2021-10-22T10:01:32+01:00</published><updated>2021-10-22T10:01:32+01:00</updated><id>https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python</id><content type="html" xml:base="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python">&lt;p&gt;Slides for my &lt;a href=&quot;https://2021.djangocon.us/talks/kontrasto-improving-accessibility-with/&quot;&gt;DjangoCon US 2021 talk&lt;/a&gt; on &lt;a href=&quot;https://kontrasto.netlify.app/&quot;&gt;Kontrasto&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/10718N6sEdx37JqMrBaS4prVOs-kH9ad61lsRTzdNPmI/edit&quot;&gt;Google Slides: DjangoCon US 2021 - Kontrasto: improving accessibility with Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1L6UZbN8VdTX_i6yTKghwB-5FalCA05s8/view?usp=sharing&quot;&gt;PDF export&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1cwVsGcikJxG_K0Sy98WY5J6ajZXENoIP/view?usp=sharing&quot;&gt;Plain-text transcript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Slides for my DjangoCon US 2021 talk on Kontrasto.</summary></entry><entry><title type="html">WCAG 2.2: new accessibility guidelines on the way</title><link href="https://thib.me/wcag-22-accessibility-guidelines" rel="alternate" type="text/html" title="WCAG 2.2: new accessibility guidelines on the way" /><published>2021-08-13T17:52:22+01:00</published><updated>2021-08-13T17:52:22+01:00</updated><id>https://thib.me/wcag-22-accessibility-guidelines</id><content type="html" xml:base="https://thib.me/wcag-22-accessibility-guidelines">&lt;p&gt;In web accessibility testing, WCAG 2.1 is the gold standard. But talk to experts – and they’ll be quick to tell you it’s a very low baseline. WCAG 2.2’s latest draft introduces new criteria, relevant for all websites.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;whats-new-in-wcag-22&quot;&gt;What’s new in WCAG 2.2&lt;/h2&gt;
+
+&lt;p&gt;Plenty of good things – there are 9 new success criteria:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Guideline 2.4 Navigable
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2411-focus-appearance-minimum-aa&quot;&gt;2.4.11 Focus Appearance (Minimum) (AA)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2412-focus-appearance-enhanced-aaa&quot;&gt;2.4.12 Focus Appearance (Enhanced) (AAA)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2413-page-break-navigation-a&quot;&gt;2.4.13 Page Break Navigation (A)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Guideline 2.5 Input Modalities
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#257-dragging-movements-aa&quot;&gt;2.5.7 Dragging Movements (AA)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#258-target-size-minimum-aa&quot;&gt;2.5.8 Target Size (Minimum) (AA)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Guideline 3.2 Predictable
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#326-consistent-help-a&quot;&gt;3.2.6 Consistent Help (A)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#327-visible-controls-aa&quot;&gt;3.2.7 Visible Controls (AA)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Guideline 3.3 Input Assistance
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#337-accessible-authentication-a&quot;&gt;3.3.7 Accessible Authentication (A)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#338-redundant-entry-a&quot;&gt;3.3.8 Redundant Entry (A)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As well as the normative guidelines, all criteria also use &lt;a href=&quot;https://www.w3.org/WAI/people-use-web/user-stories/&quot;&gt;stories of web users&lt;/a&gt; to better convey what problems we are trying to prevent with those guidelines – and what “success” looks like.&lt;/p&gt;
+
+&lt;p&gt;There are a lot of good resources covering the new criteria in much better detail than we ever could – we’d highly recommend taking a look at Alastair Campbell’s talk &lt;a href=&quot;https://www.youtube.com/watch?v=EZlqSwgKuZE&quot;&gt;WCAG 2.2: What’s new and what to do with it&lt;/a&gt; at the Virtua11y conference.&lt;/p&gt;
+
+&lt;h2 id=&quot;applying-wcag-22-to-sites&quot;&gt;Applying WCAG 2.2 to sites&lt;/h2&gt;
+
+&lt;p&gt;There won’t be any legal requirements to follow this new draft version for quite a while. That said, the new guidelines are so good they are well worth implementing and testing for right away.&lt;/p&gt;
+
+&lt;p&gt;WCAG 2.1 is a good baseline, but there are a lot of areas where it falls short and we should aim beyond. To illustrate – here is a color contrast fail, generated with &lt;a href=&quot;https://whocanuse.com/&quot;&gt;Who Can Use&lt;/a&gt;. According to WCAG 2.1 rules, the black text would be higher-contrast over this shade of blue than white text:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/wcag-22-accessibility-guidelines/whocanuse-blue.png&quot; alt=&quot;Comparison of lorem copy in white and black, over a blue background (hex code #2E7CD6). White has a contrast ratio of 4.23:1, non-compliant, black has 4.97:1, passing level AA.&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Comparison of lorem copy in white and black, over a blue background (hex code #2E7CD6). White has a contrast ratio of 4.23:1, non-compliant, black has 4.97:1, passing level AA&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is due to how basic the contrast calculations are in WCAG 2.1. This specific issue will – hopefully – be addressed in the upcoming &lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/&quot;&gt;WCAG 3.0&lt;/a&gt;. It’s still a very early draft, but is well worth being aware of as well if you’re critically thinking of where else WCAG 2.1 might be falling short.&lt;/p&gt;
+
+&lt;h2 id=&quot;we-can-help&quot;&gt;We can help&lt;/h2&gt;
+
+&lt;p&gt;Torchbox offers standalone &lt;a href=&quot;https://torchbox.com/digital-products/accessibility-testing/&quot;&gt;accessibility consulting services&lt;/a&gt;, with the goal of helping organisations aim beyond compliance. Don’t hesitate to get in touch if you want your site to get ahead of the curve.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">In web accessibility testing, WCAG 2.1 is the gold standard. But talk to experts – and they’ll be quick to tell you it’s a very low baseline. WCAG 2.2’s latest draft introduces new criteria, relevant for all websites.</summary></entry><entry><title type="html">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</title><link href="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania" rel="alternate" type="text/html" title="DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania" /><published>2021-06-07T19:21:03+01:00</published><updated>2021-06-07T19:21:03+01:00</updated><id>https://thib.me/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania</id><content type="html" xml:base="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">&lt;p&gt;Here are the results of an accessibility audit I did for the &lt;a href=&quot;https://github.com/PyConLT/pyconlt.github.io/pull/12&quot;&gt;PyCon Lithuania website&lt;/a&gt;, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: &lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&quot;&gt;DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania’s website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;iframe title=&quot;DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania’s website&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/NH4VWUguxUw&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I think the most problematic issue was with the animating banner on Safari, which made it completely impossible to navigate the page with a screen reader. Other than this, most issues were relatively minor.&lt;/p&gt;
+
+&lt;p&gt;The main issues I didn’t get to are the ones with buttons / links – the fact having disabled buttons is confusing, and that there are lots of contrast issues with those disabled styles. The focus styles also have poor contrast for the buttons that are focusable.&lt;/p&gt;
+
+&lt;p&gt;My recommended fix for these would be to completely remove any button that’s currently disabled from the page, so there is no confusion.&lt;/p&gt;
+
+&lt;p&gt;Sections:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=0s&quot;&gt;00:00&lt;/a&gt; Intro&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=40s&quot;&gt;00:40&lt;/a&gt; Audit methodology&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=109s&quot;&gt;01:49&lt;/a&gt; HTML5 validation&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=260s&quot;&gt;04:20&lt;/a&gt; Reviewing HTML templates&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=780s&quot;&gt;13:00&lt;/a&gt; Alt text for photos&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1190s&quot;&gt;19:50&lt;/a&gt; Accessibility Insights automated checks&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1290s&quot;&gt;21:30&lt;/a&gt; Checking landmarks&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1380s&quot;&gt;23:00&lt;/a&gt; Color contrast checks&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1515s&quot;&gt;25:15&lt;/a&gt; Checking headings&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1605s&quot;&gt;26:45&lt;/a&gt; Using h123 for the document outline&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1665s&quot;&gt;27:45&lt;/a&gt; Tab stops&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1778s&quot;&gt;29:38&lt;/a&gt; Mobile support&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1900s&quot;&gt;31:40&lt;/a&gt; Looping animations&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1960s&quot;&gt;32:40&lt;/a&gt; Testing with VoiceOver in Safari&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=2160s&quot;&gt;36:00&lt;/a&gt; Performance issues with banner animation&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here are the results of an accessibility audit I did for the PyCon Lithuania website, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania’s website.</summary></entry><entry><title type="html">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</title><link href="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics" rel="alternate" type="text/html" title="DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics" /><published>2021-06-05T22:07:49+01:00</published><updated>2021-06-05T22:07:49+01:00</updated><id>https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics</id><content type="html" xml:base="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">&lt;p&gt;Here are the results of an accessibility audit I did for &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/issues/57&quot;&gt;Django Postgres Metrics&lt;/a&gt;, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: &lt;a href=&quot;https://youtu.be/8pegTdRaUDg&quot;&gt;DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;iframe title=&quot;DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/8pegTdRaUDg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&quot;tldr-011515&quot;&gt;TL;DR; &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=4515s&quot;&gt;01:15:15&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;TL;DR; in video form: &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=4515s&quot;&gt;01:15:15&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Most issues come from Django for the UI, and the RTD theme for the documentation&lt;/li&gt;
+  &lt;li&gt;Great effort on translations and RTL support! It’s wonderful to see this being done as a baseline&lt;/li&gt;
+  &lt;li&gt;Very semantic tables markup, which definitely matters for the metrics’ display&lt;/li&gt;
+  &lt;li&gt;Some issues from this package with dark mode support, which make the library potentially unusable for dark mode users. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/59&quot;&gt;#59&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;There are a few improvements for screen reader users to be done here and there&lt;/li&gt;
+  &lt;li&gt;Table sorting was particularly hard to follow with a screen reader, although I suspect this is the Django implementation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;about-the-audit-000105&quot;&gt;About the audit &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=65s&quot;&gt;00:01:05&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Scope:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTML templates in GitHub&lt;/li&gt;
+  &lt;li&gt;UI in the Django admin (minimal customisations)&lt;/li&gt;
+  &lt;li&gt;Documentation in README&lt;/li&gt;
+  &lt;li&gt;Documentation in Read the Docs (default sphinx-rtd theme)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Methodology:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Automated tests with Accessibility Insights with Chrome&lt;/li&gt;
+  &lt;li&gt;Keyboard navigation (tab stops)&lt;/li&gt;
+  &lt;li&gt;Color contrast&lt;/li&gt;
+  &lt;li&gt;Dark mode support&lt;/li&gt;
+  &lt;li&gt;RTL support&lt;/li&gt;
+  &lt;li&gt;Mobile support&lt;/li&gt;
+  &lt;li&gt;Screen reader navigation (VoiceOver in Safari)&lt;/li&gt;
+  &lt;li&gt;Other things picked up along the way&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;html-templates-000222&quot;&gt;HTML templates &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=142s&quot;&gt;00:02:22&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There are a lot of links with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt; attribute being used in. This can be announced multiple times by some screen readers, so I would suggest not using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt; wherever it matches the visible label of the link&lt;/li&gt;
+  &lt;li&gt;Table markup for the navigation in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; looks great, however this would be much quicker to navigate with a screen reader by using simpler markup, for example &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ul&lt;/code&gt; with a list item for each link.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;table.html&lt;/code&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Place the breadcrumb in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;nav aria-label=&quot;Breadcrumbs&quot;&amp;gt;&amp;lt;/nav&amp;gt;&lt;/code&gt; landmark, so screen reader users can bypass it or reach it more easily&lt;/li&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-current=&quot;page&quot;&lt;/code&gt; to the current page so it’s announced as such. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ui-000738&quot;&gt;UI &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=458s&quot;&gt;00:07:38&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;automated-tests-with-accessibility-insights-with-chrome&quot;&gt;Automated tests with Accessibility Insights with Chrome&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A lot of color contrast issues, but I believe they all come from Django itself&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;keyboard-navigation-001235&quot;&gt;Keyboard navigation &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=755s&quot;&gt;00:12:35&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Missing a skip link on all pages – Django issue&lt;/li&gt;
+  &lt;li&gt;On metric pages, I found it a bit odd how the tab focus moves from the breadcrumb, to the package’s nav to the right, and then back to the metrics on the left. It’d be better to go straight from breadcrumb to the metrics’ tables.&lt;/li&gt;
+  &lt;li&gt;Likely a Django issue – the tab order for sorting is unexpected (right-to-left)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;color-contrast&quot;&gt;Color contrast&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In the package’s views in the “POSTGRESQL METRICS” nav, there isn’t enough contrast between the “active” menu item and the other ones, so people won’t be able to tell which menu item is active. This is both for the text, and the “selected” indicator”. I would suggest adding an underline to the text. &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=1584s&quot;&gt;00:26:24&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dark-mode-001603&quot;&gt;Dark mode &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=963s&quot;&gt;00:16:03&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;None of the package’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ok&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;warning&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;critical&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;info&lt;/code&gt; states work in dark mode. They make the table’s contents completely unreadable. A solution would be to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@media (prefers-color-scheme: dark)&lt;/code&gt; styles like Django does, however I would recommend another approach that doesn’t rely on background color as the color also won’t be picked up by blind users – it’d be better to represent those 4 states with an icon, that could then have a text alternative, or just a label. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/59&quot;&gt;#59&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Illustration:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics/django-postgres-metrics-dark-mode.png&quot;&gt;&lt;img src=&quot;/images/blog/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics/django-postgres-metrics-dark-mode.png&quot; alt=&quot;Screenshot of four highlighted rows in Django Postgres Metrics in dark mode. The rows aren’t readable&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;rtl-support-001920&quot;&gt;RTL support &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=1160s&quot;&gt;00:19:20&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;😐 I did all of my testing without having configured the language in Django settings, forgetting Django uses this to set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LANGUAGE_BIDI&lt;/code&gt; and load the correct stylesheet. As far as I can tell there are no issues here!&lt;/p&gt;
+
+&lt;h3 id=&quot;mobile-support-002415&quot;&gt;Mobile support &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=1455s&quot;&gt;00:24:15&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;(this is more “small browser” support really, I didn’t do any touch navigation testing)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;urlize&lt;/code&gt;d links cause the page to overflow and scroll in 2 directions at once. That’s bad. For this, and for screen readers, I’d recommend using proper link labels.&lt;/li&gt;
+  &lt;li&gt;Tables also cause the page to overflow and scroll in 2 directions. It would be better if they overflowed the page but the overflow was scrollable for the table separately (wrap the table in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;overflow: scroll&lt;/code&gt;).&lt;/li&gt;
+  &lt;li&gt;With the way tables resize currently, they cause some of the cells with long values to reflow, which makes big numbers harder to read in my opinion. Scroll would be better in this instance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;screen-reader-navigation-voiceover-with-safari-003000&quot;&gt;Screen reader navigation (VoiceOver with Safari) &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=1800s&quot;&gt;00:30:00&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Dashboard:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Django issue – the views should be using ARIA landmarks to facilitate navigation.&lt;/li&gt;
+  &lt;li&gt;Prefer displaying “POSTGRESQL METRICS” in TitleCase or lowercase as much as possible, rather than uppercase, as TTS is prone to mispronounce PostgreSQL if it’s all uppercase.&lt;/li&gt;
+  &lt;li&gt;The “show” link need a more descriptive label for screen reader users (with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-label&lt;/code&gt;) so they can be understood without the visual context the links are in on the page. Alternatively, remove those links, as they do the same thing as the link next to them that has a better label already. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Django issue – duplicate h1 heading&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Metrics views:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All of the custom views are missing a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;title&amp;gt;&lt;/code&gt; matching the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=915s&quot;&gt;00:15:15&lt;/a&gt;. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Prefer to use links with human-friendly labels over &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;urlize&lt;/code&gt; URLs. These don’t announce very well with screen reader text-to-speech unless the user knows how to navigate word-by-word or character-by-character &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=678s&quot;&gt;00:11:18&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Django issue (?) I found the table ordering to be very confusing&lt;/li&gt;
+  &lt;li&gt;Consider adding spaces around &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=&lt;/code&gt; signs in table captions so screen readers TTS have a better chance of pronouncing the text correctly&lt;/li&gt;
+  &lt;li&gt;Currently the warning/info/ok/critical status are invisible for screen reader users. I’d suggesting adding a screen-reader only label, or an icon + label&lt;/li&gt;
+  &lt;li&gt;Some of the larger numbers in the tables are pronounced as identifiers (“one three five”) rather than numbers (“one hundred thirty five”). Consider adding numeric separators to make numbers more readable for humans and text-to-speech.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;other-things-picked-up-along-the-way&quot;&gt;Other things picked up along the way&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The bigger values in tables are picked up by my browser as telephone numbers. This might warrant a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;/&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;docs-in-readme-005315&quot;&gt;Docs in README &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=3195s&quot;&gt;00:53:15&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The project’s name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;django-postgres-metrics&lt;/code&gt; is being read letter-by-letter by VoiceOver, unless I manually switch to word-by-word navigation. In the main heading, I would suggest switching to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Django Postgres Metrics&lt;/code&gt; to make it more likely for people to understand what the project is.&lt;/li&gt;
+  &lt;li&gt;The badges’ alt text should match the text on the images. This is likely impossible, but I’d suggest changing alt text to match the visible text more closely. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Python and Django versions badges should link to some place those versions are available in text format (or add the versions hard-coded in the alt text). Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;It would be nice to use more descriptive alt text for the screenshot. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;The “AT” and “DOT” in the email address are read as acronyms. Would be nice to replace with lowercase variants so they are read as words. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;documentation-in-read-the-docs-default-sphinx-rtd-theme-010045&quot;&gt;Documentation in Read the Docs (default sphinx-rtd theme) &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=3645s&quot;&gt;01:00:45&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;automated-tests-with-accessibility-insights-with-chrome-1&quot;&gt;Automated tests with Accessibility Insights with Chrome&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Too many issues for me to count, all with the theme itself I expect&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;keyboard-navigation-tab-stops&quot;&gt;Keyboard navigation (tab stops)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Missing a skip link&lt;/li&gt;
+  &lt;li&gt;The RTD version picker is impossible to reach&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;screen-reader-navigation-voiceover-with-safari-010545&quot;&gt;Screen reader navigation (VoiceOver with Safari) &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=3945s&quot;&gt;01:05:45&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A lot of RTD issues at the theme level&lt;/li&gt;
+  &lt;li&gt;RTD ads are particularly poorly done&lt;/li&gt;
+  &lt;li&gt;There are two &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;h1&lt;/code&gt; in the index page. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;The RTD version picker is reachable, but impossible to open&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here are the results of an accessibility audit I did for Django Postgres Metrics, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics.</summary></entry><entry><title type="html">DjangoCon Europe 2021 field notes</title><link href="https://thib.me/djangocon-europe-field-notes" rel="alternate" type="text/html" title="DjangoCon Europe 2021 field notes" /><published>2021-06-04T07:43:49+01:00</published><updated>2021-06-04T07:43:49+01:00</updated><id>https://thib.me/djangocon-europe-field-notes</id><content type="html" xml:base="https://thib.me/djangocon-europe-field-notes">&lt;p&gt;Notes from the conference.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/mxsasha/lessobviouschecklist&quot;&gt;https://github.com/mxsasha/lessobviouschecklist&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;climate&quot;&gt;Climate&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=upiK4du5vUI&quot;&gt;https://www.youtube.com/watch?v=upiK4du5vUI&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cloud.google.com/sustainability/region-carbon&quot;&gt;https://cloud.google.com/sustainability/region-carbon&lt;/a&gt;
+&lt;a href=&quot;https://pypi.org/project/energyusage/&quot;&gt;https://pypi.org/project/energyusage/&lt;/a&gt;
+&lt;a href=&quot;https://www.cloudcarbonfootprint.org/docs/gcp&quot;&gt;https://www.cloudcarbonfootprint.org/docs/gcp&lt;/a&gt;
+&lt;a href=&quot;https://codeascraft.com/2020/04/23/cloud-jewels-estimating-kwh-in-the-cloud/&quot;&gt;https://codeascraft.com/2020/04/23/cloud-jewels-estimating-kwh-in-the-cloud/&lt;/a&gt;
+&lt;a href=&quot;https://www.cloudcarbonfootprint.org/docs/methodology&quot;&gt;https://www.cloudcarbonfootprint.org/docs/methodology&lt;/a&gt;
+&lt;a href=&quot;https://github.com/hubblo-org/scaphandre&quot;&gt;https://github.com/hubblo-org/scaphandre&lt;/a&gt;
+&lt;a href=&quot;https://pypi.org/project/pyJoules&quot;&gt;https://pypi.org/project/pyJoules&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/responsibleproblemsolving/energy-usage/issues/16&quot;&gt;https://github.com/responsibleproblemsolving/energy-usage/issues/16&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;indexes&quot;&gt;Indexes&lt;/h2&gt;
+
+&lt;p&gt;db_index=True on fields&lt;/p&gt;
+
+&lt;p&gt;class-based indexes on classes&lt;/p&gt;
+
+&lt;p&gt;Functional indexes?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://adamj.eu/tech/2020/07/27/how-to-modernize-your-django-index-definitions/&quot;&gt;https://adamj.eu/tech/2020/07/27/how-to-modernize-your-django-index-definitions/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;database-migrations&quot;&gt;Database migrations&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/markush/writing-safe-database-migrations-djangocon-europe-2021&quot;&gt;https://speakerdeck.com/markush/writing-safe-database-migrations-djangocon-europe-2021&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;hunting-performance-in-django-code&quot;&gt;Hunting Performance in Django code&lt;/h2&gt;
+
+&lt;p&gt;Tracing profilers vs sampling profilers&lt;/p&gt;
+
+&lt;p&gt;Good overview of different profiler options for Python (for example the ones that support multi-threading)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/plasma-umass/scalene&quot;&gt;https://github.com/plasma-umass/scalene&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;dd-with-graphql-and-django&quot;&gt;DD with GraphQL and Django&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cosmicpython.com/&quot;&gt;https://www.cosmicpython.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Leaner framework could be better? (FastAPI?)&lt;/p&gt;
+
+&lt;h2 id=&quot;django--sphinx&quot;&gt;Django + Sphinx&lt;/h2&gt;
+
+&lt;h2 id=&quot;clean-architecture-with-django&quot;&gt;Clean architecture with Django&lt;/h2&gt;
+
+&lt;p&gt;Best use case for Django&lt;/p&gt;
+
+&lt;p&gt;Dependency inversion&lt;/p&gt;
+
+&lt;h2 id=&quot;htmx-frontend-revolution&quot;&gt;HTMX: Frontend Revolution&lt;/h2&gt;
+
+&lt;h2 id=&quot;absolutely-no-javascript&quot;&gt;Absolutely no JavaScript&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adamghill/djangocon-eu-2021-conference-talk&quot;&gt;https://github.com/adamghill/djangocon-eu-2021-conference-talk&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sprint&quot;&gt;Sprint&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/django/django/pull/14391&quot;&gt;https://github.com/django/django/pull/14391&lt;/a&gt;
+&lt;a href=&quot;https://github.com/django/django/pull/14389&quot;&gt;https://github.com/django/django/pull/14389&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/aeltanawy/Receptor&quot;&gt;https://github.com/aeltanawy/Receptor&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adamghill/djangocon-eu-2021-conference-talk&quot;&gt;https://github.com/adamghill/djangocon-eu-2021-conference-talk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://code.djangoproject.com/ticket/32819&quot;&gt;https://code.djangoproject.com/ticket/32819&lt;/a&gt;
+&lt;a href=&quot;https://code.djangoproject.com/ticket/32820&quot;&gt;https://code.djangoproject.com/ticket/32820&lt;/a&gt;&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Notes from the conference.</summary></entry><entry><title type="html">PyCon US 2021: Web Accessibility ♥ Python</title><link href="https://thib.me/pycon-us-2021-python-accessibility-ftw" rel="alternate" type="text/html" title="PyCon US 2021: Web Accessibility ♥ Python" /><published>2021-05-13T07:43:49+01:00</published><updated>2021-05-13T07:43:49+01:00</updated><id>https://thib.me/pycon-us-2021-python-accessibility-ftw</id><content type="html" xml:base="https://thib.me/pycon-us-2021-python-accessibility-ftw">&lt;p&gt;This is a poster presentation for &lt;a href=&quot;https://us.pycon.org/2021/&quot;&gt;PyCon US 2021&lt;/a&gt;, which covers two separate projects:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.curlylint.org/&quot;&gt;Curlylint&lt;/a&gt;, an experimental linter for HTML templates focusing on accessibility issues.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kontrasto.netlify.app/&quot;&gt;Kontrasto&lt;/a&gt;, a library automatically improving the contrast of text over images.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Demo site: &lt;a href=&quot;https://accessibility-loves-python.vercel.app/&quot;&gt;accessibility-loves-python.vercel.app&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;GitHub: &lt;a href=&quot;https://github.com/thibaudcolas/accessibility-loves-python&quot;&gt;thibaudcolas/accessibility-loves-python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The poster explains what the two projects are, and offers interactive demos. For Curlylint, the demo allows linting any templates with basic configuration. For Kontrasto, users can upload an image and get the Kontrasto results.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">This is a poster presentation for PyCon US 2021, which covers two separate projects: Curlylint, an experimental linter for HTML templates focusing on accessibility issues. Kontrasto, a library automatically improving the contrast of text over images.</summary></entry><entry><title type="html">PyCon US 2021: Building accessibility into open-source projects</title><link href="https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects" rel="alternate" type="text/html" title="PyCon US 2021: Building accessibility into open-source projects" /><published>2021-05-09T16:03:21+01:00</published><updated>2021-05-09T16:03:21+01:00</updated><id>https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects</id><content type="html" xml:base="https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects">&lt;p&gt;This is a lightning talk I gave at PyCon US 2021’s &lt;a href=&quot;https://us.pycon.org/2021/summits/maintainers/&quot;&gt;Maintainers Summit&lt;/a&gt;, intended for an audience of project maintainers / open-source contributors.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Video:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/9XI-8ZvU2w0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Slides:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1qjHKEWoExYY-fG4qbRBQP_EN5fxs_8z7csVIpy9bWlg/edit&quot;&gt;Google Slides: PyCon US 2021 - Building accessibility into open-source projects&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1hN554kNicuEvBcWK_VsiRazBTfbBGt6X/view&quot;&gt;PDF: PyCon US 2021 - Building accessibility into open-source projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;transcript&quot;&gt;Transcript&lt;/h2&gt;
+
+&lt;p&gt;Hi PyCon, thanks for having me, I’m Thibaud my pronouns are he/him and I’m a developer at Torchbox in the UK.&lt;/p&gt;
+
+&lt;p&gt;Today I’m here to talk to you about building accessibility into open source projects, and in particular coming to you with our learnings from Wagtail; I’m a core developer of this CMS called Wagtail built on Python and Django and I also contribute to Django’s accessibility team so I’m here to share with you the learnings from those two projects.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-wagtail-story&quot;&gt;A Wagtail story&lt;/h3&gt;
+
+&lt;p&gt;So Wagtail is a CMS that people use to build websites.&lt;/p&gt;
+
+&lt;h4 id=&quot;why-accessibility-matters-to-us&quot;&gt;Why accessibility matters to us&lt;/h4&gt;
+
+&lt;p&gt;When it comes to why we care about accessibility there are essentially two reasons.&lt;/p&gt;
+
+&lt;p&gt;One of them is we want the Wagtail admin to be accessible to as many people as possible and the other is we want the sites actually built with Wagtail to be as accessible as possible so these are the two main reasons for end users.&lt;/p&gt;
+
+&lt;h4 id=&quot;other-reasons-to-care&quot;&gt;Other reasons to care&lt;/h4&gt;
+
+&lt;p&gt;And then as a project there are definitely a few more reasons – the big one is legislation and procurement our clients and people who pick Wagtail as a CMS definitely have very specific expectations from projects and they would pick one or the other based on requirements like this.
+so yeah there is legislation in the US, in the EU, and really all around the world it’s not just those two countries.&lt;/p&gt;
+
+&lt;p&gt;One thing we do have going for ourselves is that all of those laws are based on the same standard called WCAG 2.1, the AA level being the most recent and widespread version of it.&lt;/p&gt;
+
+&lt;h4 id=&quot;its-not-just-wagtail&quot;&gt;It’s not just Wagtail&lt;/h4&gt;
+
+&lt;p&gt;And yeah it’s not just Wagtail obviously it’s not just CMSes, all types of online tools, apps, sites we build have to follow those same standards.&lt;/p&gt;
+
+&lt;p&gt;And really as developers I want to make the points that this isn’t just those projects it’s also the building blocks of those projects, the frameworks, the database modeling, the development tools, even the READMEs have to follow those same standards.&lt;/p&gt;
+
+&lt;p&gt;But yeah I don’t want this to be too negative either, so let’s look at some practical examples of where accessibility matters in the Python ecosystem in particular.&lt;/p&gt;
+
+&lt;h3 id=&quot;where-accessibility-matters&quot;&gt;Where accessibility matters&lt;/h3&gt;
+
+&lt;p&gt;I went through the &lt;a href=&quot;https://hugovk.github.io/top-pypi-packages/&quot;&gt;top 1000 Python packages on PyPI&lt;/a&gt; and thought I’d pick a few examples of where you might not think of accessibility but actually there are very clear considerations to be had.&lt;/p&gt;
+
+&lt;h4 id=&quot;data-science&quot;&gt;Data science&lt;/h4&gt;
+
+&lt;p&gt;So the first one is data science, and alt text for dataviz.&lt;/p&gt;
+
+&lt;p&gt;As part of studying data you will very likely have to visualise it at some point and that might include producing images that you do want to be accessible to people who can’t actually see the visuals.&lt;/p&gt;
+
+&lt;p&gt;Of course they might not get the whole interactivity and interaction that might not be the point of your exercise but just having some form of alternative text would be useful.&lt;/p&gt;
+
+&lt;h4 id=&quot;data-science-example-alt-text&quot;&gt;Data science example: alt text&lt;/h4&gt;
+
+&lt;p&gt;So this example in particular, that comes from Matplotlib and the alt text they have defined in their example basically just restates the caption at the top of the chart.&lt;/p&gt;
+
+&lt;p&gt;Which is, well, definitely better than nothing, but to the right I have an example of what it might look like for you to consider actually going through the whole data for people who can’t see the visuals.&lt;/p&gt;
+
+&lt;p&gt;And yeah not saying this is always appropriate again but definitely something to consider and if you happen to work with one of those dataviz projects it’s important I think for this to be considered in the docs in the actual framework of how you create the visualizations, and yeah just making sure that this is taken into account.&lt;/p&gt;
+
+&lt;h4 id=&quot;web-development&quot;&gt;Web development&lt;/h4&gt;
+
+&lt;p&gt;Another important part of the Python ecosystem is web development with big frameworks that I’m sure you all have heard of before, and templating languages, and here as well, basically even though those frameworks might not always be very opinionated about HTML they do have for example code snippets in their docs that really should take accessibility into account.&lt;/p&gt;
+
+&lt;p&gt;So it’s very common for me to look at those documentation code snippets and see very basic HTML issues.&lt;/p&gt;
+
+&lt;h4 id=&quot;web-development-examples-html-bad-practices&quot;&gt;Web development examples: HTML bad practices&lt;/h4&gt;
+
+&lt;p&gt;So for example to the left here this is missing a “lang” attribute on the HTML tag.&lt;/p&gt;
+
+&lt;h4 id=&quot;pdf-generation&quot;&gt;PDF generation&lt;/h4&gt;
+
+&lt;p&gt;And here a third topic in Python in particular is PDF generation, there are lots of those projects out there and something that people might overlook is that even though the source for those PDFs is HTML, the PDF itself might not be structured at all and it might not be usable by people with screen readers, so the key feature here that I have to look for is called “tagged PDFs” and it’s a requirement that very few of those projects actually have.&lt;/p&gt;
+
+&lt;p&gt;Yeah I’m trying my best not to have this be too negative, so just to finish on a more positive note I wanted to showcase different ways you could foster those accessibility contributions on your own projects.&lt;/p&gt;
+
+&lt;h3 id=&quot;fostering-contributions&quot;&gt;Fostering contributions&lt;/h3&gt;
+
+&lt;h4 id=&quot;define-your-target&quot;&gt;Define your target&lt;/h4&gt;
+
+&lt;p&gt;The first thing to do is obviously to pick a target for what you support.&lt;/p&gt;
+
+&lt;p&gt;WCAG 2.1 at the AA level being the obvious thing to start from, and just not stop at picking the target but actually documenting it and documenting practical code review and testing steps, I think it’s very important.&lt;/p&gt;
+
+&lt;p&gt;I have added a few examples of this should you want to look into this further.&lt;/p&gt;
+
+&lt;h4 id=&quot;leverage-automated-tools&quot;&gt;Leverage automated tools&lt;/h4&gt;
+
+&lt;p&gt;And yeah now that you have this target actually doing some testing, there are lots of great automated tools out there they won’t find all of the issues but they definitely find plenty enough to get going with so I’d highly recommend looking into this.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.deque.com/axe/&quot;&gt;Axe&lt;/a&gt; – Accessibility rules engine with support for WCAG &amp;amp; Section 508&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://accessibilityinsights.io/docs/en/web/overview&quot;&gt;Accessibility Insights&lt;/a&gt; – Browser extension with Axe and more&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pa11y.org/&quot;&gt;Pa11y&lt;/a&gt; – Command line tool for accessibility checks with Axe &amp;amp; HTML_CS&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/evcohen/eslint-plugin-jsx-a11y&quot;&gt;eslint-plugin-jsx-a11y&lt;/a&gt;, &lt;a href=&quot;https://github.com/maranran/eslint-plugin-vue-a11y&quot;&gt;eslint-plugin-vue-a11y&lt;/a&gt;, &lt;a href=&quot;https://github.com/YozhikM/stylelint-a11y&quot;&gt;stylelint-a11y&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;leverage-automated-tools-django-example&quot;&gt;Leverage automated tools: Django example&lt;/h4&gt;
+
+&lt;p&gt;And this is an example from Django in particular where we have this very big report that takes screenshots and logs all of the accessibility issues for different parts of the Django admin and you can just look at this and get a sense of a snapshot of how Django itself is doing.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pa11y example: &lt;a href=&quot;https://github.com/thibaudcolas/django_admin_tests&quot;&gt;github.com / thibaudcolas / django_admin_tests&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;manual-audits&quot;&gt;Manual audits&lt;/h4&gt;
+
+&lt;p&gt;And back on the Wagtail side we tend to invest more into manual audits just because we have the expertise to do this so these are definitely much more complex to put together and I won’t be talking about this much further but if you’re interested I can definitely talk to that a bit more.&lt;/p&gt;
+
+&lt;h4 id=&quot;for-larger-projects-have-an-accessibility-team&quot;&gt;For larger projects: have an accessibility team&lt;/h4&gt;
+
+&lt;p&gt;And yes for larger projects I definitely recommend having a dedicated team for this of subject matter experts so we have the example of the Wagtail team here but yeah for example Jupyter notebooks as well do have a team like this that looks after the accessibility of the actual notebooks which as they are used in classroom environments is very important.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://wagtail.io/blog/accessibility-team-reloaded/&quot;&gt;Wagtail’s team&lt;/a&gt; = 5 people committed for 6 months. Thank you Storm, Jesse, Kyle, Scott!&lt;/p&gt;
+
+&lt;h3 id=&quot;open-source-can-lead-the-way&quot;&gt;Open-source can lead the way&lt;/h3&gt;
+
+&lt;p&gt;So the last point I want to make really is that there are a few areas in software development like security for example where open source leads the way and shows us how it’s meant to be done basically, and I really think accessibility could be one of those areas, it really is something that matters on all projects no matter their size, and yeah that matters to a huge number of people that developers often underestimate just the sheer size of the people who can benefit from this, and yes there are well-defined standards and readily-available tools.&lt;/p&gt;
+
+&lt;h3 id=&quot;thank-you-️&quot;&gt;Thank you! ❤️&lt;/h3&gt;
+
+&lt;p&gt;Thank you I hope you enjoyed this and I’ll definitely be available later on to answer any questions.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">This is a lightning talk I gave at PyCon US 2021’s Maintainers Summit, intended for an audience of project maintainers / open-source contributors.</summary></entry><entry><title type="html">Curlylint: Quality-of-life improvements</title><link href="https://thib.me/curlylint-quality-of-life-improvements" rel="alternate" type="text/html" title="Curlylint: Quality-of-life improvements" /><published>2021-04-25T10:22:49+01:00</published><updated>2021-04-25T10:22:49+01:00</updated><id>https://thib.me/curlylint-quality-of-life-improvements</id><content type="html" xml:base="https://thib.me/curlylint-quality-of-life-improvements">&lt;p&gt;Curlylint v0.13.0 is out. It’s a relatively minor release, but comes with a few nice-to-haves for users, and a lot of behind-the-scenes project changes.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;modern-python-support&quot;&gt;Modern Python support&lt;/h2&gt;
+
+&lt;p&gt;Curlylint now officially supports Python 3.9, and (tentatively) Python 3.10, based on the 6th alpha release. From now on, you can expect support for all Python versions &lt;a href=&quot;https://devguide.python.org/#status-of-python-branches&quot;&gt;actively supported by CPython maintainers&lt;/a&gt;. In the future, this will also mean actively removing support for Python versions that reach their scheduled end-of-life.&lt;/p&gt;
+
+&lt;h2 id=&quot;removed-extras-for-development-dependencies&quot;&gt;Removed extras for development dependencies&lt;/h2&gt;
+
+&lt;p&gt;Python packaging is very messy. I’ve recently started using the &lt;a href=&quot;https://python-poetry.org/&quot;&gt;Poetry&lt;/a&gt; package manager at work, primarily for the benefit of having lockfiles to pin transitive dependencies on application-style projects (a must, in my opinion). Here is an excerpt of what installing curlylint looks like in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;poetry.lock&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-ini highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;[[package]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;curlylint&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;0.12.2&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;description&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; Experimental HTML templates linting for Jinja, Nunjucks, Django templates, Twig, Liquid&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;category&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;main&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;python-versions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;=3.6&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nn&quot;&gt;[package.dependencies]&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;attrs&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;=17.2.0&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;click&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;=6.5&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;dataclasses&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;{version = &quot;&amp;gt;=0.6&quot;, markers = &quot;python_version &amp;lt; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3.7&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;}
+parsy = &quot;1.1.0&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;pathspec&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;=0.6,&amp;lt;1&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;toml&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;=0.9.4&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nn&quot;&gt;[package.extras]&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;[&quot;black (==19.10b0)&quot;, &quot;flake8 (==3.8.4)&quot;, &quot;mypy (==0.812)&quot;, &quot;pytest (==6.2.2)&quot;, &quot;coverage (==5.4)&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I find this last line very puzzling – there really should be no need for dependencies intended only for development to be visible in the published package. I don’t want curlylint’s development dependencies changing from release to release to cause noise in upgrade diffs, hence why the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dev&lt;/code&gt; extra has been removed.&lt;/p&gt;
+
+&lt;p&gt;It’s worth saying Poetry has otherwise been a pleasure to work with, with only a few minor inconveniences like this one. I would happily recommend it to people wanting more out of their Python package management.&lt;/p&gt;
+
+&lt;h2 id=&quot;new---template-tags-cli-flag&quot;&gt;New &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--template-tags&lt;/code&gt; CLI flag&lt;/h2&gt;
+
+&lt;p&gt;As the &lt;a href=&quot;https://www.curlylint.org/docs/command-line-usage#--template-tags&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--template-tags&lt;/code&gt; documentation&lt;/a&gt; now states, this makes Curlylint aware of custom tags used in templates, so the parser can understand they contain HTML content to go through.&lt;/p&gt;
+
+&lt;p&gt;This option was previously only available via a TOML configuration file, via the (now deprecated) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jinja-custom-elements-names&lt;/code&gt; / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jinja_custom_elements_names&lt;/code&gt; setting. The new setting works the same, but can also be set via CLI flags.&lt;/p&gt;
+
+&lt;h2 id=&quot;behind-the-scenes-changes&quot;&gt;Behind-the-scenes changes&lt;/h2&gt;
+
+&lt;p&gt;There really is only one I want to highlight – improvements to Curlylint’s test suite, which have resulted in a &lt;a href=&quot;https://coveralls.io/github/thibaudcolas/curlylint?branch=main&quot;&gt;14% increase in test coverage&lt;/a&gt;. While test coverage percentages generally don’t mean much, in this case this means:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The command line interface now has unit tests. While relatively basic in the current iteration, they should be very easy to add to.&lt;/li&gt;
+  &lt;li&gt;The parser has more unit tests, and they are now in line with the rest of the test suite.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://coveralls.io/github/thibaudcolas/curlylint&quot;&gt;&lt;img src=&quot;/images/blog/curlylint-quality-of-life-improvements/coverage-over-time.png&quot; alt=&quot;Screen capture of the Coveralls coverage score over time as an area chart, from 59% in early March to 74% now&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://coveralls.io/&quot;&gt;Coveralls&lt;/a&gt; shows coverage increasing from 59.39% in early March to 74% in late April.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Having comprehensive unit tests really matters to me as a maintainer, and from now on it should be much more realistic to expect all changes to the project to come with corresponding unit tests.&lt;/p&gt;
+
+&lt;h2 id=&quot;up-next&quot;&gt;Up next&lt;/h2&gt;
+
+&lt;p&gt;There are a lot of &lt;a href=&quot;https://github.com/thibaudcolas/curlylint/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Aparser&quot;&gt;parser bugs&lt;/a&gt; I will now feel much more comfortable approaching, due to having a way to easily write tests for them.&lt;/p&gt;
+
+&lt;p&gt;Short-term, I want to make sure to get to all of the open pull request, hopefully fully clearing the backlog. I can see people are responding very well to Curlylint despite its experimental nature, and are eager to help making it more useful:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/thibaudcolas/curlylint/pull/53&quot;&gt;#53 Optional HTML container parsing for if-else-endif type code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/thibaudcolas/curlylint/pull/75&quot;&gt;#75 Add test for unresolved missing alt attribute inside django block (#72)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/thibaudcolas/curlylint/pull/76&quot;&gt;#76 Use types_or directive for hook instead of files&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For me, the most immediate next step will be presenting Curlylint at &lt;a href=&quot;https://us.pycon.org/2021/&quot;&gt;PyCon US 2021&lt;/a&gt;! I hope to get critical feedback on the tool, and am also working on an “online playground” version to try lint templates without installing anything, we should make it simpler for people to try out the linter.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Curlylint v0.13.0 is out. It’s a relatively minor release, but comes with a few nice-to-haves for users, and a lot of behind-the-scenes project changes.</summary></entry><entry><title type="html">2021 web conferences accepting talks</title><link href="https://thib.me/2021-web-conferences-accepting-talks" rel="alternate" type="text/html" title="2021 web conferences accepting talks" /><published>2021-03-04T07:42:03+00:00</published><updated>2021-03-04T07:42:03+00:00</updated><id>https://thib.me/2021-web-conferences-accepting-talks</id><content type="html" xml:base="https://thib.me/2021-web-conferences-accepting-talks">&lt;p&gt;Here is a small list of conferences I put together for 2021, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;djangocon-eu-2021&quot;&gt;DjangoCon EU 2021&lt;/h2&gt;
+
+&lt;p&gt;02-06 June 2021, remote. &lt;a href=&quot;https://2021.djangocon.eu/talks/cfp/&quot;&gt;CFP under way&lt;/a&gt;, ending 2020-04-01 23h59 UTC.&lt;/p&gt;
+
+&lt;p&gt;Also &lt;a href=&quot;https://www.djangoproject.com/weblog/2021/feb/16/djangocon-europe-2021-announcement/&quot;&gt;looking for volunteers&lt;/a&gt; to help organise &amp;amp; run the event.&lt;/p&gt;
+
+&lt;h2 id=&quot;jsconf-budapest-2021&quot;&gt;JSConf Budapest 2021&lt;/h2&gt;
+
+&lt;p&gt;23-24 September 2021, Budapest. &lt;a href=&quot;https://jsconfbp.com/call-for-speakers-2021/&quot;&gt;CFP under way&lt;/a&gt;, ending March 31th 2021.&lt;/p&gt;
+
+&lt;h2 id=&quot;djangocon-us-2021&quot;&gt;DjangoCon US 2021&lt;/h2&gt;
+
+&lt;p&gt;October 2021, remote. &lt;a href=&quot;https://2021.djangocon.us/&quot;&gt;No CFP announced yet&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;pycon-uk-2021&quot;&gt;PyCon UK 2021&lt;/h2&gt;
+
+&lt;p&gt;No date announced except for “2021”. Cardiff. &lt;a href=&quot;https://2020.pyconuk.org/&quot;&gt;No CFP announced yet&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;nordic-js-2021&quot;&gt;Nordic JS 2021&lt;/h2&gt;
+
+&lt;p&gt;October 2021, Stockholm. &lt;a href=&quot;https://nordicjs.com/call-for-speakers&quot;&gt;CFP under way&lt;/a&gt;, no deadline.&lt;/p&gt;
+
+&lt;h2 id=&quot;mixit&quot;&gt;MiXiT&lt;/h2&gt;
+
+&lt;p&gt;18-20 May 2021, Lyon, France. Looks like there might not be &lt;a href=&quot;https://mixitconf.org/&quot;&gt;any CFP this year&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;halfstack-london-2021&quot;&gt;HalfStack London 2021&lt;/h2&gt;
+
+&lt;p&gt;November 2021, London. &lt;a href=&quot;https://halfstackconf.com/london/&quot;&gt;CFP under way&lt;/a&gt;, no deadline.&lt;/p&gt;
+
+&lt;h2 id=&quot;halfstack-phoenix-2022&quot;&gt;HalfStack Phoenix 2022&lt;/h2&gt;
+
+&lt;p&gt;January 2022, Phoenix. &lt;a href=&quot;https://halfstackconf.com/phoenix/&quot;&gt;CFP under way&lt;/a&gt;, ending 15/09/2021.&lt;/p&gt;
+
+&lt;h2 id=&quot;halfstack-newquay-2022&quot;&gt;HalfStack Newquay 2022&lt;/h2&gt;
+
+&lt;p&gt;July 2022, Newquay (/ˈnjuːki/) (UK). &lt;a href=&quot;https://halfstackconf.com/newquay/&quot;&gt;CFP under way&lt;/a&gt;, no deadline.&lt;/p&gt;
+
+&lt;h2 id=&quot;halfstack-new-york-2022&quot;&gt;HalfStack New York 2022&lt;/h2&gt;
+
+&lt;p&gt;August 2022, New York. &lt;a href=&quot;https://halfstackconf.com/newyork/&quot;&gt;CFP under way&lt;/a&gt;, ending 30/04/2022.&lt;/p&gt;
+
+&lt;h2 id=&quot;halfstack-vienna-2022&quot;&gt;HalfStack Vienna 2022&lt;/h2&gt;
+
+&lt;p&gt;September 2022, Vienna. &lt;a href=&quot;https://halfstackconf.com/vienna/&quot;&gt;CFP under way&lt;/a&gt;, ending 31/05/2022.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here is a small list of conferences I put together for 2021, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!</summary></entry><entry><title type="html">Accessibility team reloaded</title><link href="https://thib.me/wagtail-accessibility-team-reloaded" rel="alternate" type="text/html" title="Accessibility team reloaded" /><published>2021-02-24T07:42:03+00:00</published><updated>2021-02-24T07:42:03+00:00</updated><id>https://thib.me/wagtail-accessibility-team-reloaded</id><content type="html" xml:base="https://thib.me/wagtail-accessibility-team-reloaded">&lt;p&gt;After &lt;a href=&quot;https://wagtail.io/blog/announcing-wagtail-sub-teams/&quot;&gt;6 months of operations&lt;/a&gt;, we reflect on the progress our &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility&quot;&gt;accessibility team&lt;/a&gt; has made, and go on the lookout for new contributors.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;progress-to-date&quot;&gt;Progress to date&lt;/h2&gt;
+
+&lt;p&gt;Early on, &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Accessibility-team#2020-07-17&quot;&gt;we chose&lt;/a&gt; to give priority to improvements we could make to sites built with Wagtail, rather than the Wagtail admin. Practically, this meant:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Putting together &lt;a href=&quot;https://docs.wagtail.io/en/latest/advanced_topics/accessibility_considerations.html&quot;&gt;Wagtail’s accessibility considerations documentation&lt;/a&gt;, as most of the accessibility issues we identified were either dependent on how Wagtail is used, or could be worked around by implementers.&lt;/li&gt;
+  &lt;li&gt;From this list, we also created a &lt;a href=&quot;https://github.com/wagtail/wagtail/projects/10&quot;&gt;backlog of known accessibility issues&lt;/a&gt;, which we would then proceed to fixing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Along the way, we also kept working on the &lt;a href=&quot;https://github.com/wagtail/wagtail/issues/6107&quot;&gt;SVG icons&lt;/a&gt; refactoring for the admin, bit by bit.&lt;/p&gt;
+
+&lt;h2 id=&quot;team-operations&quot;&gt;Team operations&lt;/h2&gt;
+
+&lt;p&gt;We ran a short &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Accessibility-team#2021-01-22----team-retrospective&quot;&gt;retrospective&lt;/a&gt; to reflect on the team’s way of working over the last 6 months.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There were a total of 5 people involved at some point over the 6 months (Scott, Andreas, Nick, Helen, and Thibaud), but only 2 people attended each meeting on average. Not as much as we’d ideally want to.&lt;/li&gt;
+  &lt;li&gt;We met 9 times, for 30min each, scheduled once every two weeks.&lt;/li&gt;
+  &lt;li&gt;Overall we’re happy with what we’ve achieved and how the team works.&lt;/li&gt;
+  &lt;li&gt;We were keen to do more automated tests and manual auditing but didn’t get around to it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-future&quot;&gt;The future&lt;/h2&gt;
+
+&lt;p&gt;There are a few changes we will want to see over the next 6-month tenure of the team.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;We’ll want to do a new, comprehensive accessibility audit of Wagtail&lt;/strong&gt;, either for WCAG 2.2 AA or ATAG 2.0. We want to have a clear, public record of how we’re doing.&lt;/p&gt;
+
+&lt;p&gt;We’ll review our contribution guidelines &lt;strong&gt;so accessibility is part and parcel of making changes to Wagtail&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;And we’ll also investigate having &lt;strong&gt;automated accessibility tests built into Wagtail&lt;/strong&gt;. &lt;a href=&quot;https://github.com/neon-jungle/wagtail-accessibility&quot;&gt;wagtail-accessibility&lt;/a&gt; is one of the most popular third-party packages out there, and we want to double down on having this be one of Wagtail’s strengths.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;we-also-want-to-involve-more-people&quot;&gt;We also want to involve more people&lt;/h3&gt;
+
+&lt;p&gt;There’s only so much we can do with two to three of us actively involved – ideally we’d want a team twice that size! All are welcome regardless of skill level or background, and the time commitment is very reasonable. We’re particularly keen to work with people who:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Have personal experience of access and functional needs, or who are regular users of assistive technologies.&lt;/li&gt;
+  &lt;li&gt;Work on User Experience, design, or content – and can help us understand the needs of our users.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And of course web developers who want to have a practical impact on making the web more accessible!&lt;/p&gt;
+
+&lt;p&gt;Does this sound like your kind of jam? If you’re keen to learn more, &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Slack&quot;&gt;reach out to us on Slack&lt;/a&gt; in #accessibility.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">After 6 months of operations, we reflect on the progress our accessibility team has made, and go on the lookout for new contributors.</summary></entry></feed>

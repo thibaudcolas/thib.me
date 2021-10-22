@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Procuring accessibility audits - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Following from Accessibility audits: getting started, here are practical tips on how to procure / schedule an accessibility audit, and how to structure the r...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/procuring-accessibility-audits">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/procuring-accessibility-audits">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Procuring accessibility audits">
+  <meta property="og:description" content="Following from Accessibility audits: getting started, here are practical tips on how to procure / schedule an accessibility audit, and how to structure the r...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-07-03-procuring-accessibility-audits.md">Edit</a>
+      <h1 class="entry-title">Procuring accessibility audits</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-07-03T19:15:08+01:00" pubdate data-updated="true">2020-07-03 19:15</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Following from <a href="/accessibility-audits-getting-started">Accessibility audits: getting started</a>, here are practical tips on how to procure / schedule an accessibility audit, and how to structure the report.</p>
+
+<!-- more -->
+
+<p>Accessibility audits can take anywhere from 10 minutes to a week, depending on the scope of the audit, the amount of manual testing required, and the expected report format.</p>
+
+<p>The main factors for an estimate are:</p>
+
+<ul>
+  <li>What’s the purpose of the audit? Do we want a “compliant = yes/no”, or create a backlog of improvements, or something in-between</li>
+  <li>What’s the scope? How many sites / page types / pages. Provide links to a few pages so we have a sense of how many issues we’re likely to find (the more, the longer it takes to report them).</li>
+  <li>What kind of report / output do they need? Either something for stakeholders, or developers, or both. Generally it takes nearly as much time to write the report as to find the issues.</li>
+</ul>
+
+<p>Avoid compliance pass/fail audits, which are onerous, and for which we aren’t competent. Get in touch with <a href="https://digitalaccessibilitycentre.org/">DAC</a>, <a href="https://www.rnib.org.uk/rnib-business">RNIB</a>, <a href="https://abilitynet.org.uk/accessibility-services/products-and-services">AbilityNet</a>, or <a href="https://www.deque.com/">Deque</a>.</p>
+
+<p><strong>Suggested format for medium websites</strong>: “backlog of improvements”, for which we can make a proposal for 1 to 4 days, based on automated tests, manual tests for 5 to 10 page types. A one-pager “executive summary” report, and adjoining list of issues / backlog as a spreadsheet or Trello board.</p>
+
+<h2 id="audit-strategy">Audit strategy</h2>
+
+<h3 id="target-standards">Target standards</h3>
+
+<p>First, define the target standard for the audit. Generally WCAG 2.1 AA, or Section 508. We will consider the latest Section 508 version, post January 2018 update to track WCAG2.0 AA.</p>
+
+<p>If relevant, also define which standards are out of scope, such as compliance for the Rehabilitation Act and ADA. Compliance for WCAG2.1 AAA is out of scope, but we may provide AAA issues as relevant if they seem to be easily solvable.</p>
+
+<h3 id="audit-scope">Audit scope</h3>
+
+<p>Make a clear list of URLs to audit. Define whether the audit is on a production or staging environment. If there is any dynamic functionality to audit, define to what extent.</p>
+
+<h3 id="report-format">Report format</h3>
+
+<blockquote>
+  <p>Keep it actionable. We don’t want to do pass/fail compliance audits.</p>
+</blockquote>
+
+<ul>
+  <li>“Cover sheet” / written document with overview of common issues, and a scoring of how feasible it seems to reach compliance &amp; effort involved.</li>
+  <li>Tabular data / spreadsheet with individual issues at a more granular level. Including testing tool if relevant, &amp; proposed solution if time allows.</li>
+  <li>As relevant, direct output from automated / semi-automated testing tools</li>
+</ul>
+
+<h3 id="high-level-testing-methodology">High-level testing methodology</h3>
+
+<blockquote>
+  <p>See <a href="/accessibility-audits-getting-started">Accessibility audits: getting started</a>.</p>
+</blockquote>
+
+<p>This is a baseline only, please adapt as needed. For all identified pages,</p>
+
+<ul>
+  <li>Bulk automated page checks with <a href="https://validator.github.io/validator/">V.Nu HTML5 validator</a></li>
+  <li>Bulk automated page checks with <a href="https://github.com/pa11y/pa11y">Pa11y</a> – HTML CodeSniffer, Axe.</li>
+</ul>
+
+<p>For a relevant subset of pages,</p>
+
+<ul>
+  <li>Single-page semi-automated checks with either <a href="https://accessibilityinsights.io/">Accessibility Insights</a> or similar.</li>
+  <li>Manual keyboard navigation checks</li>
+  <li>Manual colour contrast check for non-text UI elements and images</li>
+  <li>Manual screen reader navigation check with VoiceOver in macOS Safari</li>
+  <li>Manual zoom &amp; magnification testing with Chrome &amp; macOS Zoom</li>
+</ul>
+
+<p>For a smaller subset of high-value pages,</p>
+
+<ul>
+  <li>Full screen reader testing with VoiceOver in macOS Safari</li>
+  <li>Full screen reader testing with NVDA in Firefox ESR</li>
+  <li>Full screen reader testing with VoiceOver in iOS Safari</li>
+  <li>Mobile touch interaction testing with iOS Safari</li>
+</ul>
+
+<h2 id="outcome-of-the-audit">Outcome of the audit</h2>
+
+<ul>
+  <li>Report to project stakeholders</li>
+  <li>Guidance for implementers</li>
+  <li>Report to other vendors if needed</li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-07-03T19:15:08+01:00" pubdate data-updated="true">2020-07-03 19:15</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/methodology/">Methodology</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/welcome-to-curlylint" title="Previous Post: Welcome to curlylint.org!">&laquo; Welcome to curlylint.org!</a>
+      
+      
+        <a class="basic-alignment right" href="/interview-exercises-for-web-developers" title="Next Post: Interview exercises for web developers">Interview exercises for web developers &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Tests multi-devices - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Après plusieurs heures à tester manuellement une Web App sur mon smartphone, l’évidence est là : utiliser un outil de navigation synchronisée desktop-devices...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/tests-multi-devices">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/tests-multi-devices">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Tests multi-devices">
+  <meta property="og:description" content="Après plusieurs heures à tester manuellement une Web App sur mon smartphone, l’évidence est là : utiliser un outil de navigation synchronisée desktop-devices...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2014-01-06-tests-multi-devices.md">Edit</a>
+      <h1 class="entry-title">Tests multi-devices</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2014-01-06T01:14:12+00:00" pubdate data-updated="true">2014-01-06 01:14</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Après plusieurs heures à tester manuellement une Web App sur mon smartphone, l’évidence est là : utiliser un outil de navigation synchronisée desktop-devices me ferait grand bien. J’ai donc décidé de partir à la recherche des solutions disponibles sur le marché, gratuites ou pas, open-sources ou pas.</p>
+
+<!-- more -->
+
+<p>Armé de mon ami XKCD, je sais que le jeu en vaut la chandelle. En plus de préserver ma santé mentale, ce genre d’outil permettra un gain de temps substantiel lors des phases de test avec un, et surtout plusieurs appareils.</p>
+
+<p><a href="http://xkcd.com/1205/"><img src="https://imgs.xkcd.com/comics/is_it_worth_the_time.png" alt="Is it worth the time?" /></a></p>
+
+<h2 id="loutil-idéal">L’outil idéal</h2>
+
+<p>L’outil idéal ne nécessite pas ou peu d’installation. Il fonctionne sur tous les terminaux iOS et Android du moment, et sa mise en place est rapide. Cet outil utopique fonctionne à la fois pour des appareils partageant le même réseau, mais aussi lorsque les devices ne sont connectées entre elles que par internet. L’appariement des appareils est simple (détection puis confirmation, passphrase, code, etc).</p>
+
+<p>Surtout, outre la navigation, l’on pourrait également inspecter les éléments des pages des devices (<em>à la <a href="https://people.apache.org/~pmuellr/weinre/docs/latest/">weinre</a></em>), et surveiller les modifications sur des fichiers afin de déclencher un rafraîchissement sur tous les navigateurs (<em>à la <a href="http://livereload.com/">LiveReload</a></em>). Enfin, outre la navigation, les interactions avec le navigateur sont également jouées en simultané sur chaque appareil : contrôles de formulaires, scrolling, et hovers synchronisés.</p>
+
+<p>Ensemble, les outils disponibles sur le marché remplissent toutes ces caractéristiques. Malheureusement, aucune solution ne se dégage encore suffisament du lot.</p>
+
+<h2 id="adobe-edge-inspect-cc">Adobe Edge Inspect CC</h2>
+
+<p><a href="https://www.adobe.com/products/edge-inspect.html">Edge Inspect</a> intègre weinre et permet également de prendre des captures d’écran sur les devices utilisées. L’une des solutions les plus onéreuses.</p>
+
+<h2 id="muir">Muir</h2>
+
+<p><a href="http://labs.iqfoundry.com/muir/">Muir</a> est la seule des solutions à proposer des plugins pour IDE synchronisant sauvegarde de fichiers et rechargement des pages.</p>
+
+<h2 id="browsync">BrowSync</h2>
+
+<p>Mon outil préféré du moment, <a href="http://browsync.net/">BrowSync</a> est facile à mettre en place (les appareils peuvent être sur des réseaux différents) et son coût est simple à prendre en compte : 2$ sur l’App Store.</p>
+
+<h2 id="ghostlab">Ghostlab</h2>
+
+<p>La plus complète des propositions, <a href="http://ghostlab.vanamco.com/">Ghostlab</a> synchronise le remplissage des formulaires ainsi que le scroll et les clicks en plus de la navigation.</p>
+
+<h2 id="remote-preview">Remote Preview</h2>
+
+<p>Côté Open-source, <a href="https://github.com/viljamis/Remote-Preview">Remote Preview</a> propose une solution simple bien qu’à héberger soi-même.</p>
+
+<h2 id="mihtool">MIHTool</h2>
+
+<p>Kudos à Unbug qui propose <a href="https://itunes.apple.com/us/app/mihtool-web-debugger-pro/id584739126?mt=8">MIHTool</a>, un outil sortant du cadre de la navigation synchronisée mais qui mérite tout de même d’être cité. MIHTool intègre lui aussi Weinre, et fonctionne sur tous appareils connectés à internet.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2014-01-06T01:14:12+00:00" pubdate data-updated="true">2014-01-06 01:14</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/list/">List</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>,
+    
+      <a class="category" href="/categories/test/">Test</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/veille-technologique" title="Previous Post: Veille technologique">&laquo; Veille technologique</a>
+      
+      
+        <a class="basic-alignment right" href="/developer-interview-questions" title="Next Post: Developer Interview Questions">Developer Interview Questions &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

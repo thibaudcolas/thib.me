@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Waffle vs Trello - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="I am a big user of Trello. For todolists, waterfall projects, kanban boards, all the things. I particularly love its flexibility – there are a thousand ways ...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/waffle-vs-trello">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/waffle-vs-trello">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Waffle vs Trello">
+  <meta property="og:description" content="I am a big user of Trello. For todolists, waterfall projects, kanban boards, all the things. I particularly love its flexibility – there are a thousand ways ...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2016-08-20-waffle-vs-trello.md">Edit</a>
+      <h1 class="entry-title">Waffle vs Trello</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2016-08-20T10:34:00+01:00" pubdate data-updated="true">2016-08-20 10:34</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>I am a big user of <a href="https://trello.com">Trello</a>. For todolists, waterfall projects, kanban boards, all the things. I particularly love its flexibility – there are a thousand ways to structure your work with it. This can be overwhelming if you’re not familiar with it though.</p>
+
+<p>At Springload, we took one of the competing tools, <a href="https://waffle.io/">Waffle</a>, for a spin. Here are my notes.</p>
+
+<!-- more -->
+
+<p>While Trello is a standalone tool, Waffle is built upon GitHub issues. Instead of duplicating the information between multiple trackers/tools, GitHub issues and pull requests become the single source of truth. Since they are used for development anyway, we might as well get the most out of them and reduce our tool fragmentation!</p>
+
+<p>I took Waffle for a spin on one of our prototyping projects, and here is the conclusion: <strong>while I like GitHub issues, they might not be an appropriate medium for our project tasks</strong>. Waffle has interesting features that distinguish itself from Trello, but they are too targeted towards development tasks for the tool to be as relevant to non-developers, or to developers handling other aspects of the work. I like the fact that Waffle pushes you to do more Markdown and “GitHub”, but this isn’t always appropriate.</p>
+
+<h2 id="waffle-things-i-like">Waffle things I like</h2>
+
+<ul>
+  <li>Tighter integration with GitHub means that it will be easier for GitHub to get more non-code use. Which can be a good thing?</li>
+  <li>Filters are persisted in URL</li>
+</ul>
+
+<h2 id="waffle-things-i-dont-like">Waffle things I don’t like</h2>
+
+<ul>
+  <li>Waffle uses the word “Issue”, as GitHub does. This might be innocuous but it’s not a word I like to describe what we do. We’re organising tasks, not bugs and support tickets. Trello says “Card”, which is more neutral.</li>
+  <li>Does not have color-less labels</li>
+  <li>Does not support multiple “Backlog” or “Done” columns</li>
+  <li>Does not support attaching images to cards/issues
+    <ul>
+      <li>Nor other files…</li>
+    </ul>
+  </li>
+  <li>Cannot create a board without a GitHub repository</li>
+</ul>
+
+<h2 id="trello-things-i-like">Trello things I like</h2>
+
+<ul>
+  <li>Lots</li>
+  <li>Mainly,
+    <ul>
+      <li>the UI is more refined</li>
+      <li>it proposes interesting integration, and</li>
+      <li>it is way easier to use lists of tasks via the Checklist feature</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I will stick with Trello over Waffle because:</p>
+
+<ul>
+  <li>Waffle’s interface isn’t as good in general, doesn’t do as many things</li>
+  <li>You need a GitHub repository to create a Waffle board.</li>
+  <li>You need a GitHub account to access a Waffle board.</li>
+</ul>
+
+<p>On the contrary, with Trello:</p>
+
+<ul>
+  <li>The interface is amazing, although confusing to newcomers, not more than Waffle’s</li>
+  <li>You can create as many boards as you want to, give access to some to the clients, keep some for ourselves, keep some private just for you</li>
+  <li>There are more integrations and other things we could make use of but aren’t using at the moment (Calendars view, card aging, vote, Slack/GitHub integrations)</li>
+</ul>
+
+<p>Go #TeamTrello!</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2016-08-20T10:34:00+01:00" pubdate data-updated="true">2016-08-20 10:34</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/list/">List</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>,
+    
+      <a class="category" href="/categories/test/">Test</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/modern-front-end-architectures-with-react" title="Previous Post: Modern front-end architectures with React">&laquo; Modern front-end architectures with React</a>
+      
+      
+        <a class="basic-alignment right" href="/the-impact-of-open-source" title="Next Post: The impact of open-source">The impact of open-source &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

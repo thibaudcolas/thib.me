@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Code reviews – Getting started - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="What if I told you there is a simple technique to make your project run smoother, faster, and with fewer bugs 🤔. Better yet, it’s completely free, does not r...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.codemate.com/code-reviews-getting-started/">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.codemate.com/code-reviews-getting-started/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Code reviews – Getting started">
+  <meta property="og:description" content="What if I told you there is a simple technique to make your project run smoother, faster, and with fewer bugs 🤔. Better yet, it’s completely free, does not r...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2018-09-04-code-reviews-getting-started.md">Edit</a>
+      <h1 class="entry-title">Code reviews – Getting started</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2018-09-04T17:35:09+01:00" pubdate data-updated="true">2018-09-04 17:35</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>What if I told you there is a simple technique to make your project run smoother, faster, and with fewer bugs 🤔. Better yet, it’s completely free, does not require much tooling, and any developer can learn to use it in a matter of minutes 😳. This is how good code reviews are, and why you should use them.</p>
+
+<!-- more -->
+
+<h2 id="why-its-good">Why it’s good</h2>
+
+<p>Developers tend to think of productivity in terms of “how fast can I write the code for this new feature”. We also tend to say “I write code” when describing our jobs. In practice though, professional software development is a matter of understanding the code that is already there: we simply spend much more time reading than writing. Productivity thus depends more on the overall code’s quality and maintainability, rather than the skills of individual contributors making changes.</p>
+
+<p>Simply put:</p>
+
+<blockquote>
+  <p><strong>It’s harder to read code than to write it.</strong></p>
+
+  <p>– Joel Spolsky, <a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/">Things You Should Never Do</a></p>
+</blockquote>
+
+<p>Code readability is fundamental. John Papa recently gave a talk on how to achieve it in practice:</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/56mETnrByBM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<p>Another great resource on the topic is <a href="https://blog.codinghorror.com/code-reviews-just-do-it/">Code Reviews: Just Do It</a> by Jeff Atwood. If you like numbers, you should definitely read it. I especially like its excerpts from <a href="https://www.amazon.com/exec/obidos/ASIN/0735619670">Code Complete</a>:</p>
+
+<blockquote>
+  <p>the average defect detection rate is only 25 percent for unit testing, 35 percent for function testing, and 45 percent for integration testing. In contrast, the average effectiveness of design and code inspections are 55 and 60 percent.</p>
+
+  <p>In a software-maintenance organization, 55 percent of one-line maintenance changes were in error before code reviews were introduced. After reviews were introduced, only 2 percent of the changes were in error.</p>
+
+  <p>When all changes were considered, 95 percent were correct the first time after reviews were introduced. Before reviews were introduced, under 20 percent were correct the first time.</p>
+</blockquote>
+
+<p>That’s a <strong>5x increase</strong> in the likelihood of individual changes to be correct! There aren’t many development practices which can make that claim.</p>
+
+<h3 id="a-great-way-to-learn">A great way to learn</h3>
+
+<p>Jeff Atwood’s article briefly mentions another reason why I think code reviews should be part of everybody’s toolset: you can learn A LOT from them. They are a great place for the team to share their knowledge and learn:</p>
+
+<ul>
+  <li>How other people would approach and solve a given problem.</li>
+  <li>General stylistic or architectural guidelines to follow for the specific project. Those are defined elsewhere (e.g. in a style guide or architecture principles document), but propagate well via code reviews.</li>
+  <li>Neat programming tricks! For example using <a href="https://github.com/roughike/inKino/issues/52">list mapping</a> (<code class="language-plaintext highlighter-rouge">Array#map</code>) over a mutable iteration (<code class="language-plaintext highlighter-rouge">Array#forEach</code> and <code class="language-plaintext highlighter-rouge">Array#push</code>).</li>
+</ul>
+
+<p><img src="/images/loicteixeira-code-review.png" alt="Screenshot of a GitHub code review from @loicteixeira, with an insightful review comment" /></p>
+
+<p><em>My friend <a href="https://twitter.com/loicteixeira">@loicteixeira</a> does wonderful code reviews. Once he taught me about Python’s <a href="https://stackoverflow.com/questions/1132941/least-astonishment-and-the-mutable-default-argument">mutable default arguments</a> during a review – they are a great way to learn platform-specific gotchas.</em></p>
+
+<h2 id="code-reviews-in-practice">Code reviews in practice</h2>
+
+<p>Sounds great on paper, right? 🌈</p>
+
+<h3 id="convince-the-boss">Convince the boss</h3>
+
+<p>In practice, the first step is to “convince the boss”. Show them those great <a href="https://blog.codinghorror.com/code-reviews-just-do-it/">metrics on the effectiveness of code reviews</a>. Talk about how reviews improve <a href="https://www.codemate.com/quality-in-terms-of-business-value">quality <em>in terms of business value</em></a>. Their main concern might be in the cost of having more people working on an otherwise identical amount of changes – this is a good time to talk about the economics of fixing software defects:</p>
+
+<p><img src="/images/relative-cost-of-fixing-defects-sdlc.png" alt="Bar chart showing the relative cost of fixing software defects in each phase of the software development lifecycle. The relative cost increases from 1 in design, to 6.5 in implementation, 15 in testing, and 100 in maintenance." /></p>
+
+<p><em>Relative cost of fixing defects in the software development lifecycle. The later, the worse. Source: IBM System Science Institute.</em></p>
+
+<h3 id="leverage-existing-tooling">Leverage existing tooling</h3>
+
+<p>With the business case taken care of, simply try code reviews for yourself, with the tools you already use! Every major Git platform has a pull request feature with built-in <a href="https://help.github.com/articles/requesting-a-pull-request-review/">review workflows</a>. If yours doesn’t, you can try doing code reviews in person instead, <a href="https://en.wikipedia.org/wiki/Extreme_programming">pair programming style</a>.</p>
+
+<p>Be kind, and let your tools do the nitpicking: linters and formatters (like <a href="https://prettier.io/">Prettier</a>) are there to enforce common formatting, so humans can focus on logic, readability, and learning. Don’t waste time discussing tabs versus spaces on each review.</p>
+
+<h2 id="resources-to-get-started">Resources to get started</h2>
+
+<p>To give you a headstart in implementing code reviews for your teams, here are three things you will need:</p>
+
+<ol>
+  <li><a href="https://github.com/thibaudcolas/cookbook/blob/master/CONTRIBUTING.md">Code review guidelines</a>. We usually put those in a <code class="language-plaintext highlighter-rouge">CONTRIBUTING.md</code> file at the root of the project.</li>
+  <li><a href="https://github.com/thibaudcolas/cookbook/blob/master/.github/PULL_REQUEST_TEMPLATE.md">A pull request template</a>. This is where you state that the team does code reviews, that they will be enforced, and that pull requests should be authored accordingly. Ours is simple but gets the job done.</li>
+  <li><a href="https://github.com/thibaudcolas/cookbook/blob/master/CONTRIBUTING.md">Useful resources about how to do this well</a>. Code reviews are a solved problem, and there are great resources out there to take inspiration from.</li>
+</ol>
+
+<p>Take all of these, sprinkle some LGTM (<a href="https://knowyourmeme.com/memes/lgtm">Looks Good To Me</a>) images on top when approving changes, and you’re all set. Code reviews can feel tense at times, those silly images set a more relaxed tone, and can ease the relationship between reviewers and reviewees. Plus, a nice picture is a great reward for good work!</p>
+
+<p><img src="/images/flarnie-lgtm.png" alt="Screenshot of a GitHub code review from @flarnie, with a cute Looks Good To Me image of a jumping goat captioned &quot;LOOKS GOAT TO ME&quot;" /></p>
+
+<p><em>Pro-level LGTM on the <a href="https://github.com/facebook/draft-js/pull/1652">Draft.js repository</a></em></p>
+
+<h2 id="do-it">Do it!</h2>
+
+<p>Still unsure? The best way to know whether code reviews will work for your team is to try them. All of the major hosted Git platforms have pull request features with code reviews built-in, you can try them out and see for yourself how many defects you will catch before they even get merged. At Codemate, a good example of this in practice is <a href="https://github.com/roughike/inKino/issues/52">my review of Iiro’s inKino project</a>. I didn’t catch any bugs, but we certainly all learned a lot 😄 – for me, <a href="https://www.codemate.com/considering-flutter/">Flutter</a>, and for him a web developer’s perspective on UI code architecture.</p>
+
+<p>If you want to learn more about how Codemate works, have a look at how we actually <a href="https://github.com/CodemateLtd/codemate-blog/pull/21">used code reviews on this very blog post</a>.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2018-09-04T17:35:09+01:00" pubdate data-updated="true">2018-09-04 17:35</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/resources/">Resources</a>,
+    
+      <a class="category" href="/categories/methodology/">Methodology</a>,
+    
+      <a class="category" href="/categories/team/">Team</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/live-coding-draftjs-copy-paste-fix" title="Previous Post: Live coding – Draft.js copy-paste fix">&laquo; Live coding – Draft.js copy-paste fix</a>
+      
+      
+        <a class="basic-alignment right" href="/celebrating-open-source-with-hacktoberfest" title="Next Post: Celebrating open source with Hacktoberfest">Celebrating open source with Hacktoberfest &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

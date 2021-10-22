@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Python memory profiling and speed benchmarks for the Draft.js exporter - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Ever heard of Draft.js? We are rebuilding Wagtail’s rich text content management using this rich text editor framework from Facebook. Apart from a new editor...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/python-memory-profiling-for-the-draft-js-exporter">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/python-memory-profiling-for-the-draft-js-exporter">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Python memory profiling and speed benchmarks for the Draft.js exporter">
+  <meta property="og:description" content="Ever heard of Draft.js? We are rebuilding Wagtail’s rich text content management using this rich text editor framework from Facebook. Apart from a new editor...">
+  
+    <meta property="og:image" content="https://thib.me/images/exporter-speed-per-version.png">
+    <meta name="twitter:image:alt" content="Bar chart of Draft.js exporter speed per version, for each engine, showing an increase from version to version, with the right-most "string" engine being the fastest.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2017-11-15-python-memory-profiling-for-the-draft-js-exporter.md">Edit</a>
+      <h1 class="entry-title">Python memory profiling and speed benchmarks for the Draft.js exporter</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2017-11-15T13:24:38+00:00" pubdate data-updated="true">2017-11-15 13:24</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Ever heard of <a href="https://draftjs.org/">Draft.js</a>? We are rebuilding <a href="https://github.com/wagtail/wagtail">Wagtail</a>’s rich text content management using this rich text editor framework from Facebook. Apart from a new editor, <a href="https://github.com/springload/draftail">Draftail</a>, we also needed an exporter to convert Draft.js content to HTML: the aptly-named <a href="https://github.com/springload/draftjs_exporter">draftjs_exporter</a>.</p>
+
+<p>In this post I’ll focus on this critical piece of the puzzle, which needs to operate as fast as possible regardless of how much content it has to handle. Memory profiling and benchmarks in a Python ecosystem were new to me, so here is what I learned along the way.</p>
+
+<!-- more -->
+
+<h2 id="why-this-was-necessary">Why this was necessary</h2>
+
+<p>This may seem obvious but is worth stating: to improve performance, the first step is to measure it. It’s easy for developers to start optimising code based on instinct, but tooling is available to identify which parts are actually worth focusing on, which performance bottlenecks are the biggest. The general wisdom is to focus on <strong>hot paths</strong> (parts of the code executing often, eg. in loops), and apply the <a href="https://en.wikipedia.org/wiki/Pareto_principle">80/20 rule</a>: focusing optimisation efforts on some key parts of the code can reap much of the performance improvements. That said, measuring is the only way to know for sure how much of an improvement each potential change would make.</p>
+
+<h2 id="measuring-performance">Measuring performance</h2>
+
+<p>To me, the golden standard for performance profiling is the <a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/">Chrome DevTools</a>. It profiles CPU, GPU, memory, network, frames rendering speed, and lots more, all out of the box without any change of the code. Here is a good illustration, profiling the load of <a href="https://springload.github.io/draftail/">Draftail’s demo</a>:</p>
+
+<p><a href="/images/devtools-draftail-load-profiling.png"><img src="/images/devtools-draftail-load-profiling.png" alt="Screenshot of the Draftail demo page load profiling" /></a></p>
+
+<p><em>Can you spot for how long the toolbar looks broken because the icon font isn’t loaded yet?</em></p>
+
+<p>Performance tooling in the Python ecosystem isn’t as simple to use. Lucky for us, the workload of the Draft.js exporter is much simpler: Draft.js content in, HTML out. We can focus on two metrics:</p>
+
+<ul>
+  <li>Speed – how fast the exporter outputs HTML.</li>
+  <li>Memory consumption – how much RAM the exporter uses while processing content.</li>
+</ul>
+
+<h3 id="measuring-speed-in-python">Measuring speed in Python</h3>
+
+<p>There’s a built-in module for this! Yay! The <a href="https://docs.python.org/3.6/library/profile.html">cProfile</a> module is part of the standard library, has little overhead, and provides insights into which parts of the code are slow with minimal work. Combined with <a href="https://docs.python.org/3.6/library/profile.html#module-pstats">pstats</a> (built-in too!), its output looks like:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   820882 function calls (777342 primitive calls) in 0.563 seconds
+
+   Ordered by: cumulative time
+   List reduced from 82 to 10 due to restriction &lt;10&gt;
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      792    0.013    0.000    0.563    0.001 html.py:30(render)
+     5650    0.066    0.000    0.437    0.000 html.py:59(render_block)
+     5650    0.018    0.000    0.129    0.000 wrapper_state.py:89(element_for)
+     5650    0.040    0.000    0.100    0.000 html.py:85(build_command_groups)
+      792    0.001    0.000    0.098    0.000 dom.py:138(render)
+14924/792    0.017    0.000    0.098    0.000 string.py:78(render)
+14914/792    0.011    0.000    0.097    0.000 string.py:74(render_children)
+14914/792    0.018    0.000    0.095    0.000 string.py:76(&lt;listcomp&gt;)
+18026/16862  0.047    0.000    0.091    0.000 dom.py:58(create_element)
+    29668    0.014    0.000    0.049    0.000 dom.py:134(append_child)
+</code></pre></div></div>
+
+<p>From this, we learn that:</p>
+
+<ul>
+  <li>The code took 563ms to run, with 820’882 function calls.</li>
+  <li>Of this time and those function calls, the <code class="language-plaintext highlighter-rouge">render_block</code>, <code class="language-plaintext highlighter-rouge">element_for</code>, <code class="language-plaintext highlighter-rouge">build_command_groups</code> were all called 5’650 times.</li>
+  <li>Excluding the main API call <code class="language-plaintext highlighter-rouge">HTML.render()</code>, the <code class="language-plaintext highlighter-rouge">render_block</code> function is what took the longest to run, at 437ms.</li>
+  <li>The functions in <code class="language-plaintext highlighter-rouge">string.py</code> and <code class="language-plaintext highlighter-rouge">dom.py</code> run often, they should get special attention when optimising the code.</li>
+</ul>
+
+<p>Here is minimal code that produces such a report. The actual output comes from <a href="https://github.com/springload/draftjs_exporter/blob/4ca2827896cf4f05423e8721209896d49cf89a91/benchmark.py">benchmark.py</a> in the Draft.js exporter repository.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cProfile</span>
+<span class="kn">from</span> <span class="nn">pstats</span> <span class="kn">import</span> <span class="n">Stats</span>
+
+
+<span class="n">pr</span> <span class="o">=</span> <span class="n">cProfile</span><span class="p">.</span><span class="n">Profile</span><span class="p">()</span>
+<span class="n">pr</span><span class="p">.</span><span class="n">enable</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Here, call the code you want to measure the performance of %s'</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="n">pr</span><span class="p">.</span><span class="n">disable</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Stats</span><span class="p">(</span><span class="n">pr</span><span class="p">)</span>
+
+<span class="c1"># This stats output is highlight configurable. Take the time to learn what options are available.
+</span><span class="n">p</span><span class="p">.</span><span class="n">strip_dirs</span><span class="p">().</span><span class="n">sort_stats</span><span class="p">(</span><span class="s">'cumulative'</span><span class="p">).</span><span class="n">print_stats</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="profiling-memory-consumption">Profiling memory consumption</h3>
+
+<p>Did you see how simple it was to get a basic but effective speed measurement? No pip install, just a couple of imports, a few more lines and voilà! Too bad memory profiling isn’t as simple. I’m still learning how best to do this, here is what I found out so far.</p>
+
+<p>The best package I found for this is <a href="https://pypi.python.org/pypi/memory_profiler">memory_profiler</a>. It provides line-by-line profiling of functions, which makes it invaluable to investigate specific parts of a program. Here is a sample output, again from <a href="https://github.com/springload/draftjs_exporter/blob/4ca2827896cf4f05423e8721209896d49cf89a91/benchmark.py">benchmark.py</a>:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #L   Mem usage       Increment      Line Contents
+    95  40.820312 MiB   0.000000 MiB   @profile(precision=6)
+    96                                 def memory_consumption_run():
+    97  40.820312 MiB   0.000000 MiB       exporter = HTML(config)
+    98
+    99  40.949219 MiB   0.128906 MiB       for content_state in content_states:
+    100 40.949219 MiB   0.000000 MiB           exporter.render(content_state)
+</code></pre></div></div>
+
+<p>We learn that:</p>
+
+<ul>
+  <li>The whole program takes up about 41 MiB (<a href="https://en.wikipedia.org/wiki/Mebibyte">mebibytes</a>, about 43MB).</li>
+  <li>Initialising the exporter doesn’t consume much memory if any.</li>
+  <li>Processing the export consumes ± 129KiB of memory in this example.</li>
+</ul>
+
+<p>What’s cool about memory_profiler is that it also comes with a way to chart memory usage over time, using <a href="http://matplotlib.org/">Matplotlib</a>:</p>
+
+<p><img src="/images/draftjs_exporter-memory-profiler.png" alt="Screenshot of the memory consumption of the exporter over time, made with memory_profiler" /></p>
+
+<p>Here, we can see that after a sharp increase in memory usage, the memory consumption is mostly flat over the execution of the script. Unfortunately, using the profiler to understand where this memory consumption comes from takes quite a bit of manual work and fiddling with the code. The profiler is limited to <em>line-by-line reporting</em> for functions annotated with the <code class="language-plaintext highlighter-rouge">@profile</code> decorator or full-script over-time consumption, it has quite a big overhead which makes it impractical to run frequently (say on every code change), and most importantly there is no notion of “cumulative” memory consumption for a function. Calling a function 10 times will produce 10 separate reports.</p>
+
+<p>Then again, getting that much information was easy:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">memory_profiler</span> <span class="kn">import</span> <span class="n">profile</span>
+
+<span class="o">@</span><span class="n">profile</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">memory_consumption_run</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Easy!'</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Here, call the code you want to measure the performance of %s'</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="n">memory_consumption_run</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>And to produce the chart:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mprof run benchmark.py
+<span class="c"># NB: the plot command relies on Matplotlib. It may be a bit finicky to make this work on your system.</span>
+mprof plot
+</code></pre></div></div>
+
+<p>I’m still exploring how best to leverage memory_profiler. Its author has a <a href="http://fa.bianp.net/blog/2014/plot-memory-usage-as-a-function-of-time/">great blog post</a> that goes more in depth. For the exporter, I was able to identify that most of the memory consumption comes from loading the code, rather than its actual execution:</p>
+
+<ul>
+  <li>± 11.5 MiB are for the base Python process (ie. an empty script consumes that much)</li>
+  <li>± 15 MiB comes from the test content used in the script.</li>
+  <li>± 8 MiB comes from loading BeautifulSoup.</li>
+  <li>That leaves us with ± 6.25 MiB for the exporter itself.</li>
+</ul>
+
+<h3 id="using-a-good-benchmark">Using a good benchmark</h3>
+
+<p>All of those numbers are interesting on their own, but without any context it’s hard to judge of their significance. For a while, the exporter was profiled with a content load equivalent to a small blog post – A good indicator, but not the most representative of the types of site it’s meant for (large-scale, content-driven, hundreds of pages of rich text). To address this, I built <a href="https://github.com/thibaudcolas/markov_draftjs">markov_draftjs</a>: a repository of sample content representative of a big website, with the content equivalent of about 200 pages of rich text. The actual content is computer-generated with <a href="https://en.wikipedia.org/wiki/Markov_chain">Markov chains</a> of <a href="https://www.gutenberg.org/">Project Gutenberg</a> books, while the specific rich text features in use (and their frequency in the content) match the load of a real CMS-driven site.</p>
+
+<p>The takeaway is: without a good benchmark, it will be harder to judge whether given optimisations actually make a difference in real-world performance!</p>
+
+<h2 id="optimising-the-exporter">Optimising the exporter</h2>
+
+<p>Coming back to the purpose of this work, we wanted to make the exporter faster. <a href="https://github.com/su27">@su27</a>, an early adopter, <a href="https://github.com/springload/draftjs_exporter/issues/31">started this conversation</a> with performance feedback and profiling help.</p>
+
+<p>This quickly led to a <strong>20-30x</strong> (!) speedup, from 500 to 10ms for the sample “blog post size”. This one improvement came from a <a href="https://github.com/springload/draftjs_exporter/commit/24a048e0b36cc19c06c17110cc3cacf442d5fb06"><em>single line of code</em></a>, perfectly illustrating the importance of the 80/20 rule. With these “low-hanging fruit” optimisations out of the way, the biggest performance bottleneck was the HTML generation, which led us to change the exporter API to <a href="https://github.com/springload/draftjs_exporter#alternative-backing-engines">allow custom HTML-generating engines</a> to facilitate iterations on this code. If you want to learn more than necessary about lxml vs html5lib vs (or with!) BeautifulSoup, the Draft.js repository and its issues contain <a href="https://github.com/springload/draftjs_exporter/tree/main/docs#rd-notes">plenty</a> of <a href="https://github.com/springload/draftjs_exporter/pull/56">notes</a>.</p>
+
+<p>With the performance tooling in place, we were then able to check that new features added to the exporter would not degrade its performance, and to make <a href="https://github.com/springload/draftjs_exporter/pull/58">incremental improvements</a> by changing its content parsing logic. We made good progress from version to version, all the while adding more functionality:</p>
+
+<p><img src="/images/exporter-speed-per-version.png" alt="Bar chart of Draft.js exporter speed per version, for each engine, showing an increase from version to version, with the right-most &quot;string&quot; engine being the fastest." /></p>
+
+<blockquote>
+  <p>Exporter speed per version, for each HTML generation engine.</p>
+</blockquote>
+
+<details>
+<summary><em>View chart data</em></summary>
+
+```text
+version,html5lib,lxml,string
+v0.7.0,15.37,
+v0.8.0,19.44,
+v0.8.1,19.26,
+v0.9.0,18.84,8.99
+v1.0.0,18.84,8.99
+v1.1.0,18.57,8.87,8.08
+```
+
+</details>
+
+<p>The rightmost line is the latest progress: a new dependency-free engine, thanks to the feedback of <a href="https://github.com/BertrandBordage">@BertrandBordage</a>, who knows a great deal about Python performance and optimisations (he made <a href="https://github.com/BertrandBordage/django-cachalot">Django Cachalot</a>, a popular ORM caching tool for Django!).</p>
+
+<p>With the engine API, and the benchmark content work done previously, we were able to meaningfully compare the <a href="https://github.com/springload/draftjs_exporter/pull/77#issuecomment-344272238">impact of various optimisations</a>, and of the different engines:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html5lib         lxml              string
+Min.   :1.271    Min.   :0.6150    Min.   :0.5190
+1st Qu.:1.333    1st Qu.:0.6300    1st Qu.:0.5310
+Median :1.347    Median :0.6350    Median :0.5360
+Mean   :1.351    Mean   :0.6366    Mean   :0.5384
+3rd Qu.:1.361    3rd Qu.:0.6410    3rd Qu.:0.5410
+Max.   :1.756    Max.   :0.7960    Max.   :1.0250
+</code></pre></div></div>
+
+<p>All in all, we went from <a href="https://github.com/springload/draftjs_exporter/issues/31">5 seconds</a> to render the equivalent of one small blog post, to <a href="https://github.com/springload/draftjs_exporter/pull/77#issuecomment-344272238">500ms</a> for 792 content chunks representative of one whole website!</p>
+
+<h3 id="next-steps">Next steps</h3>
+
+<p>With the HTML generation now operating only on strings without any further dependencies, it feels like the next speedups will be much harder to reach. Here are some areas to explore:</p>
+
+<ul>
+  <li>Writing the same “string” engine in C? The engine <a href="https://github.com/springload/draftjs_exporter/blob/4ca2827896cf4f05423e8721209896d49cf89a91/draftjs_exporter/engines/string.py">is only 100 lines</a> of code, most of which run on the hot paths of the exporter’s rendering code.</li>
+  <li>Refactoring the content parsing algorithm to reduce algorithmic complexity. Surely this could be at least <code class="language-plaintext highlighter-rouge">O(N)</code> on the number of blocks, if it’s not already.</li>
+  <li>Further optimising for real-world workloads. Because test content isn’t always representative of real-world usage.</li>
+  <li>Streaming rendering? I have no idea how hard this would be to do in Python / Django, but this would definitely speed-up the rendering of long content chunks in the context of a website.</li>
+</ul>
+
+<h2 id="takeaways">Takeaways</h2>
+
+<p>Starting this process, I would have never thought that the biggest speedups would come from fixing programming mistakes. Having the tooling in place quickly made these obvious, and came with the biggest speedups (20-30x). Hunting for further improvements forced us to rethink the API of the exporter, and led us to simplifying it greatly <a href="https://github.com/springload/draftjs_exporter#custom-components">to match that of React</a>. Finally, we had to consider real-world content workloads over experimental ones to find further speedups. In the end, it’s not just the exporter’s performance that has improved but its overall quality and usefulness as a general-purpose library.</p>
+
+<p>For Wagtail, introducing components that are performance-tested (and <a href="https://coveralls.io/github/springload/draftjs_exporter?branch=main">heavily unit-tested</a>, more on that in another post) increases the confidence that the changes will not have adverse effects for end users, and generally raises the bar for software quality. Now onto <a href="https://springload.github.io/draftail/">Draftail</a> performance testing!</p>
+
+<p><em>Special thanks to <a href="https://github.com/su27">@su27</a>, <a href="https://github.com/loicteixeira">Loic Teixeira</a>, and <a href="https://github.com/BertrandBordage">Bertrand Bordage</a> for their help building the exporter. Thanks to <a href="https://springload.co.nz/">Springload</a> for supporting building this open-source project in the first place 💚.</em></p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2017-11-15T13:24:38+00:00" pubdate data-updated="true">2017-11-15 13:24</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>,
+    
+      <a class="category" href="/categories/python/">Python</a>,
+    
+      <a class="category" href="/categories/draftjs/">Draftjs</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/first-draft-data-quality-checklist-for-dataviz-projects" title="Previous Post: First draft – Data quality checklist for dataviz projects">&laquo; First draft – Data quality checklist for dataviz projects</a>
+      
+      
+        <a class="basic-alignment right" href="/recipe-dead-simple-preview-environments-with-github-travis-heroku" title="Next Post: Recipe: dead-simple preview environments with GitHub, Travis, and Heroku">Recipe: dead-simple preview environments with GitHub, Travis, and Heroku &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

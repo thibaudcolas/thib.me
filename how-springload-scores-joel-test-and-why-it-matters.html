@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>How Springload scores on the Joel Test and why it matters - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Ever heard of the Joel Test? It’s a simple 12 question measure of the quality of a software team, introduced by Joel Spolsky of Stack Overflow and Trello fam...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.springload.co.nz/blog/how-springload-scores-joel-test-and-why-it-matters/">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.springload.co.nz/blog/how-springload-scores-joel-test-and-why-it-matters/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="How Springload scores on the Joel Test and why it matters">
+  <meta property="og:description" content="Ever heard of the Joel Test? It’s a simple 12 question measure of the quality of a software team, introduced by Joel Spolsky of Stack Overflow and Trello fam...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2017-08-01-how-springload-scores-joel-test-and-why-it-matters.md">Edit</a>
+      <h1 class="entry-title">How Springload scores on the Joel Test and why it matters</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2017-08-01T09:35:03+01:00" pubdate data-updated="true">2017-08-01 09:35</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Ever heard of the <a href="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/">Joel Test</a>? It’s a simple 12 question measure of the quality of a software team, introduced by Joel Spolsky of <a href="https://stackoverflow.com/">Stack Overflow</a> and Trello fame. The test is famous in the software development community as a no-BS calculation of the maturity of a development team. So, how’d we do?</p>
+
+<!-- more -->
+
+<h2 id="joel-test-results">Joel Test Results</h2>
+
+<hr />
+
+<p>Drum roll please. Here’s how Springload scores:</p>
+
+<ol>
+  <li>Do you use source control? – <strong>Yes</strong>. We use git and GitHub.</li>
+  <li>Can you make a build in one step? – <strong>Yes</strong>. Push to a branch.</li>
+  <li>Do you make daily builds? – <strong>Yes</strong>. On every push to every branch.</li>
+  <li>Do you have a bug database? – <strong>Yes</strong>. GitHub Issues.</li>
+  <li>Do you fix bugs before writing new code? – <strong>Not always</strong> :(</li>
+  <li>Do you have an up-to-date schedule? – <strong>Yes</strong>.</li>
+  <li>Do you have a spec? – <strong>Yes</strong>. User stories in our agile projects.</li>
+  <li>Do programmers have quiet working conditions? – <strong>Yes</strong>.</li>
+  <li>Do you use the best tools money can buy? – <strong>Yes</strong>. Choose your own hardware.</li>
+  <li>Do you have testers? – <strong>Yes</strong>.</li>
+  <li>Do new candidates write code during their interview? – <strong>Yes</strong>. Usually before the in-person interview.</li>
+  <li>Do you do hallway usability testing? – <strong>Yes</strong>.</li>
+</ol>
+
+<p>OK so we scored a solid 11/12! But we’re not here to humblebrag. We want you to understand why you should care about this kind of score.</p>
+
+<h2 id="why-it-matters">Why it matters</h2>
+
+<p>The Joel Test is important because all of its questions are a good commonsense set of rules that help to quickly evaluate the operating level of any development team. Speed is important: it’s easier to give a quick yes or no to each question, and it doesn’t require calculating any metrics like a number of defects over time or test coverage. This also helps keep answers truthful.</p>
+
+<p>Here are the actual development practices that allow us to score so high (this is also where we geek out with dev terminology):</p>
+
+<h4 id="continuous-integration">Continuous integration</h4>
+
+<p>The project’s automated test suites are executed on every code change, and contributors are notified of the status of those builds within the code repository and via our messaging tools. At Springload, this is CodeShip or CircleCI for client work, and Travis for open-source projects. Check out our <a href="https://travis-ci.org/springload/">Travis dashboard</a> to see what’s on here.</p>
+
+<h4 id="continuous-delivery-cd">Continuous delivery (CD)</h4>
+
+<p>Delivery of updates is automated after successful builds on “delivery-ready” branches. This greatly reduces the time it takes to ship code. This as part of our CI pipeline described above.</p>
+
+<h4 id="web-development-quality-checklists">Web development quality checklists</h4>
+
+<p>All of our projects abide by the same <a href="https://github.com/springload/frontend-starter-kit/blob/master/docs/frontend-launch-checklist.md">quality standards</a>, based on web standards (valid HTML and CSS, <a href="https://www.w3.org/WAI/intro/wcag.php">WCAG</a>, <a href="http://www.gcsb.govt.nz/publications/the-nz-information-security-manual/">NZISM compliance</a>, etc), and industry best practice (programming style guides, CSS architecture practices like ITCSS and BEM, etc).</p>
+
+<h4 id="state-of-the-art-tooling">State of the art tooling</h4>
+
+<p>This includes, for example, static analysis in every developer’s environment that checks our code’s compliance with the standards we set for ourselves. Our interfaces are audited for common accessibility, performance and compatibility pitfalls. See <a href="https://github.com/airbnb/javascript">Airbnb JavaScript style guide</a> for JavaScript, and <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a> for Python.</p>
+
+<h4 id="pair-programming">Pair programming</h4>
+
+<p>Frequent pair programming sessions are a good way to provide peer review, reinforce our development culture, and ensure knowledge retention on the project stays high. When doing this remotely, we use the wonderful <a href="https://screenhero.com/">Screenhero</a>.</p>
+
+<h4 id="code-reviews">Code reviews</h4>
+
+<p>As part of our broader quality assurance practice, the work of individual developers is reviewed by their peers within our code repositories. Those reviews are enforced to ensure that our principles are respected on every project.</p>
+
+<p><img src="/images/code-review.png" alt="Screenshot of a sample Pull Request review on GitHub" /></p>
+
+<blockquote>
+  <p>Here’s what a GitHub Pull Request (PR) review looks like.</p>
+</blockquote>
+
+<p>And that’s our secret to creating a great development workflow and why we scored 11/12 on the Joel Test.</p>
+
+<p><em>Image by <a href="http://www.flickr.com/photos/craigoneal/485352145">Craig ONeal</a> - using the famous Billy Joel as an oblique reference to the “Joel Test” (no relation).</em></p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2017-08-01T09:35:03+01:00" pubdate data-updated="true">2017-08-01 09:35</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/springload/">Springload</a>,
+    
+      <a class="category" href="/categories/resources/">Resources</a>,
+    
+      <a class="category" href="/categories/code/">Code</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/exploring-uncharted-datasets" title="Previous Post: Exploring uncharted datasets">&laquo; Exploring uncharted datasets</a>
+      
+      
+        <a class="basic-alignment right" href="/first-draft-data-quality-checklist-for-dataviz-projects" title="Next Post: First draft – Data quality checklist for dataviz projects">First draft – Data quality checklist for dataviz projects &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

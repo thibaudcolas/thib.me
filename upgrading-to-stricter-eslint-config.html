@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Upgrading to a stricter ESLint config - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Updating a codebase from one ESLint config to another can be daunting, especially if switching to something more strict. This post proposes a methodology to ...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/upgrading-to-stricter-eslint-config">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/upgrading-to-stricter-eslint-config">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Upgrading to a stricter ESLint config">
+  <meta property="og:description" content="Updating a codebase from one ESLint config to another can be daunting, especially if switching to something more strict. This post proposes a methodology to ...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-01-13-upgrading-to-stricter-eslint-config.md">Edit</a>
+      <h1 class="entry-title">Upgrading to a stricter ESLint config</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-01-13T00:18:03+00:00" pubdate data-updated="true">2020-01-13 00:18</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Updating a codebase from one <a href="https://eslint.org/">ESLint</a> config to another can be daunting, especially if switching to something more strict. This post proposes a methodology to do those config overhauls step by step, and get the benefits of a new config without putting in all of the effort upfront.</p>
+
+<!-- more -->
+
+<p>As an example of such a switch, consider moving from <a href="https://www.npmjs.com/package/eslint-config-react-app">Create React App’s ESLint config</a> to something more opinionated like <a href="https://github.com/airbnb/javascript">airbnb/javascript</a>, my own <a href="https://github.com/thibaudcolas/eslint-plugin-cookbook">eslint-plugin-cookbook</a>, or Torchbox’s <a href="https://github.com/torchbox/eslint-config-torchbox">eslint-config-torchbox</a>.</p>
+
+<h2 id="retrofitting-strict-rules-on-existing-projects">Retrofitting strict rules on existing projects</h2>
+
+<p>First, let’s remove the project’s existing ESLint-related dependencies (inspect the <code class="language-plaintext highlighter-rouge">package.json</code> to determine what they are for your project), and upgrade ESLint to the latest version.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm uninstall <span class="nt">--save-dev</span> eslint-config-prettier eslint-plugin-react
+npm <span class="nb">install</span> <span class="nt">--save-dev</span> eslint@latest
+</code></pre></div></div>
+
+<p>Then, install the config as described in its documentation and replace the project’s config file with one that just extends the installed config. Once you’re done, now is a good time to commit the work so far. Here is what this would look like with <a href="https://github.com/torchbox/eslint-config-torchbox">eslint-config-torchbox</a>:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npx install-peerdeps <span class="nt">--dev</span> eslint-config-torchbox@latest
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1">// See https://github.com/torchbox/eslint-config-torchbox for rules.</span>
+  <span class="na">extends</span><span class="p">:</span> <span class="dl">"</span><span class="s2">torchbox</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>In all likelihood, this configuration is more opinionated / checks more aspects of the code than what the project was using before, and ESLint now reports a lot of errors. This is good! It means that the project will benefit from having a newer, stricter config in place, and as a developer you get to learn about more JavaScript anti-patterns.</p>
+
+<p>For ESLint and the new config to be useful, we need them to be put to use as soon as possible, and to fail CI builds whenever issues are reported – it’s not good to work on a project where ESLint reports countless issues. So, our goal is to get to 0 errors and warnings reported by ESLint.</p>
+
+<h2 id="initial-cleanup">Initial cleanup</h2>
+
+<h3 id="autofix">Autofix</h3>
+
+<p>Let’s start by doing what ESLint suggests in its output – using its auto-fixing capabilities!</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># At the root of the project to automatically apply ESLint’s fixes:</span>
+npx eslint <span class="nb">.</span> <span class="nt">--fix</span>
+<span class="c"># If your project uses Prettier, also run it afterwards,</span>
+<span class="c"># to guarantee that ESLint’s changes still match your formatting.</span>
+npm run format
+<span class="c"># Or if your project has Prettier set up differently,</span>
+npx prettier <span class="nt">--write</span> <span class="s1">'&lt;where your JS files are&gt;/**/*.js'</span>
+<span class="c"># Or if you want to reformat **all** of your project’s JS files.</span>
+npx prettier <span class="nt">--write</span> <span class="s1">'**/?(.)*.{js,ts,jsx,tsx}'</span>
+</code></pre></div></div>
+
+<p>Autofixes are aware of the syntax, and generally can be considered highly reliable – review the changes, <strong>commit them</strong>, and let’s move on to the next phase.</p>
+
+<h4 id="disable-problematic-rules">Disable problematic rules</h4>
+
+<p>Now, let’s look at the remaining problems, and extract a list of the rules they relate to, using some command-line magic:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npx eslint <span class="nb">.</span> <span class="nt">--format</span> tap | <span class="nb">grep </span>ruleId | <span class="nb">cut</span> <span class="nt">-d</span> <span class="s1">':'</span> <span class="nt">-f</span> 2 | <span class="nb">cut</span> <span class="nt">-c</span> 2- | <span class="nb">sort</span> | <span class="nb">uniq
+</span>class-methods-use-this
+consistent-return
+<span class="o">[</span>...]
+react/prop-types
+</code></pre></div></div>
+
+<p>Let’s add this list to our <code class="language-plaintext highlighter-rouge">.eslintrc.js</code> config, disabling all of the rules that were reporting problems:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">legacyCode</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">class-methods-use-this</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">consistent-return</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="c1">// [...]</span>
+  <span class="dl">"</span><span class="s2">react/prop-types</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1">// See https://github.com/torchbox/eslint-config-torchbox for rules.</span>
+  <span class="na">extends</span><span class="p">:</span> <span class="dl">"</span><span class="s2">torchbox</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">rules</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">legacyCode</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>Note how we put the rules in a “legacyCode” bucket, so we can clearly distinguish between rules we choose to configure differently from this project, and the ones that are enforced by the new config but we’re not ready to turn on yet.</p>
+
+<p>Running ESLint again, there shouldn’t be any errors reported 🎉.</p>
+
+<h3 id="calling-it-a-day">Calling it a day</h3>
+
+<p><strong>Now is a good time to commit – and potentially stop there</strong>. We’ve upgraded the config, disabled all of the rules and got our linting back to 0 problems reported. 🌈 We might not be leveraging all of the checks that the new config comes with, but we don’t necessarily need to do this right away. And your project can already benefit from the work done so far!</p>
+
+<h2 id="extra-cleanup---group-disabled-rules">Extra cleanup - group disabled rules</h2>
+
+<blockquote>
+  <p>🚧 To proceed, you will need a good amount of knowledge of ESLint rules, or time set aside to investigate rules one by one.</p>
+</blockquote>
+
+<p>Now, if there is time, the ideal next step is to re-enable all of the disabled rules to ensure we make the most of the linting. Proceeding with this is generally very time-consuming, so we’ll go through it gradually – the first step is for us to assess how big of an investment is ahead of us, and what the benefits may be. Let’s assess the rules we’ve just disabled, and group them into meaningful chunks.</p>
+
+<p>Here are starting groups I would recommend:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Rules which should ideally be re-enabled, that are about consistent code style more than anything.</span>
+<span class="kd">const</span> <span class="nx">legacyConventions</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">class-methods-use-this</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">react/prefer-stateless-function</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">react/sort-comp</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="c1">// Rules which are not necessarily issues on their own but can make the code confusing or hard to troubleshoot, leading to bugs.</span>
+<span class="kd">const</span> <span class="nx">codeSmells</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">import/no-named-as-default</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">prefer-const</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">prefer-template</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="c1">// Rules which point out patterns that are commonly sources of bugs.</span>
+<span class="kd">const</span> <span class="nx">sourcesOfBugs</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">eqeqeq</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">react/button-has-type</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="na">radix</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">parser</span><span class="p">:</span> <span class="dl">"</span><span class="s2">babel-eslint</span><span class="dl">"</span><span class="p">,</span>
+  <span class="c1">// See https://github.com/torchbox/eslint-config-torchbox for rules.</span>
+  <span class="na">extends</span><span class="p">:</span> <span class="dl">"</span><span class="s2">torchbox</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">rules</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">legacyConventions</span><span class="p">,</span>
+    <span class="p">...</span><span class="nx">codeSmells</span><span class="p">,</span>
+    <span class="p">...</span><span class="nx">sourcesOfBugs</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>When deciding in what group a given rule belongs, it’s useful to think of:</p>
+
+<ul>
+  <li>The effort it would take to fix all of the violations of the rules,
+    <ul>
+      <li>Is the code’s behavior going to be different, or identical? If identical this should be a safe change.</li>
+      <li>Can the change be done semi-automatically, e.g. with a search-and-replace?</li>
+      <li>How many places in the codebase are there that violate this rule?</li>
+      <li>Does the project have tests, types, or another form of static analysis that would make it easy to tell if something broke because of the changes?</li>
+    </ul>
+  </li>
+  <li>The impact of fixing the violations to the rule,
+    <ul>
+      <li>Does enforcing the rule protect us from a certain type of bugs?</li>
+      <li>Would using a more consistent code style make it easier for people to understand the code?</li>
+    </ul>
+  </li>
+</ul>
+
+<p>In terms of impact and effort, the three groups above generally fall into the following areas:</p>
+
+<pre><code class="language-txt">        ▲
+        │                                    ┌───────────────┐
+        │                            │       │               │
+        │                                    │    Sources    │
+        │                            │       │      of       │
+ High   │                                    │     bugs      │
+ impact │                            │       │               │
+        │                                    └───────────────┘
+        │                            │
+        │
+        │                            │
+        │                ┌───────────────┐
+        │                │               │
+        │ ─ ─ ─ ─ ─ ─ ─ ─│               │─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+        │                │  Code smells  │
+        │                │               │
+        │                │               │    ┌───────────────┐
+        │                └───────────────┘    │               │
+        │                            │        │    Legacy     │
+ Low    │                                     │  conventions  │
+ impact │                            │        │               │
+        │                                     │               │
+        │                            │        └───────────────┘
+        │
+        │                            │
+        │
+        │                            │
+        └────────────────────────────────────────────────────────▶
+                   Low effort                High effort
+</code></pre>
+
+<ul>
+  <li>Addressing sources of bugs generally has a high impact on the project, but generally involves changes that might alter the behavior of the programme (if there are actual bugs!), so takes a high effort.</li>
+  <li>Refactoring project conventions generally takes a high effort compared to the impact on the project (too many conventions / outdated conventions).</li>
+  <li>Code smells are a mixed bag, can generally be addressed safely but might take a lot of manual work.</li>
+</ul>
+
+<p>The “High impact, low effort” area of our chart feels a bit empty – in practice there are a few rules in there, from all three categories, and that’s the rules we will want to identify next and have a look at fixing.</p>
+
+<hr />
+
+<p>For now – <strong>this is a good time to commit</strong>. If you’re working on the project with other people, now is also a good time to make a pull request, and get it reviewed and merged. Further cleanup requires making changes to the code that go beyond what autofixing does, and will be trickier to review – so let’s get the config to be used first.</p>
+
+<h2 id="going-further">Going further</h2>
+
+<blockquote>
+  <p>🚧 To proceed, you will need a good amount of knowledge of JavaScript.</p>
+</blockquote>
+
+<p>If you have more time than strictly needed for the initial cleanup, let’s go further. Our goal from now on is to remove all legacy rule overrides we added during the initial setup, while making sure linting still passes. There are a few different ways to approach this depending on the rule:</p>
+
+<ul>
+  <li>Refactoring the code in a safe way</li>
+  <li>Disabling rules via inline code comments</li>
+  <li>Disabling rules with nested ESLint configs</li>
+  <li>Changing the code and its behavior</li>
+  <li>Doing nothing (😄)</li>
+</ul>
+
+<p>Which of these is appropriate is for you to determine case-by-case. The general workflow from now on is:</p>
+
+<ol>
+  <li>Run ESLint and get 0 problems reported.</li>
+  <li>Comment out one of the rules overrides from our <code class="language-plaintext highlighter-rouge">.eslintrc.js</code>, for example <code class="language-plaintext highlighter-rouge">// "consistent-return": 0,</code>.</li>
+  <li>Run ESLint and get problems from the commented-out rules reported.</li>
+  <li>Decide which approach to take for what was reported.</li>
+  <li>Apply your changes if any.</li>
+  <li>Fully remove the commented-out rule override, or add back the line un-commented.</li>
+  <li>Run ESLint again and get 0 problems reported.</li>
+  <li>Commit your changes if any.</li>
+</ol>
+
+<p>We can go through all of the rule overrides like this, or stop when time is up. Here is a one-liner to automatically watch files and re-run ESLint for us that will help speed up the process:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> nodemon@latest
+nodemon <span class="nt">-w</span> <span class="s1">'&lt;path to our project’s JS files&gt;/**/*.js'</span> <span class="nt">-w</span> .eslintrc.js <span class="nt">--exec</span> <span class="s1">'npx eslint .'</span>
+</code></pre></div></div>
+
+<h3 id="refactoring-the-code-in-a-safe-way">Refactoring the code in a safe way</h3>
+
+<p>It’s not always possible to refactor code without altering its behaviour, and realising where this is an option requires a high level of JavaScript (and DOM) expertise. If in doubt, this isn’t a good option – it would be too time-consuming to re-test working software for each and every change.</p>
+
+<p>Here’s an example of a change that could be considered a safe refactoring:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">params</span> <span class="o">=</span> <span class="nx">getParams</span><span class="p">();</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">getCategoryURL</span> <span class="o">=</span> <span class="p">(</span><span class="nx">category</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">params</span> <span class="o">=</span> <span class="nx">getParams</span><span class="p">();</span>
+    <span class="nx">params</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">'</span><span class="s1">category</span><span class="dl">'</span><span class="p">,</span> <span class="nx">category</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">getURL</span><span class="p">(</span><span class="nx">params</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">params</code> variable inside <code class="language-plaintext highlighter-rouge">getCategoryURL</code> raises a problem with <a href="https://eslint.org/docs/rules/no-shadow"><code class="language-plaintext highlighter-rouge">no-shadow</code></a>. We can remove the shadowing by renaming the local variable:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">params</span> <span class="o">=</span> <span class="nx">getParams</span><span class="p">();</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">getCategoryURL</span> <span class="o">=</span> <span class="p">(</span><span class="nx">category</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">getParams</span><span class="p">();</span>
+    <span class="nx">p</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">'</span><span class="s1">category</span><span class="dl">'</span><span class="p">,</span> <span class="nx">category</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">getURL</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="disabling-rules-via-code-comments">Disabling rules via code comments</h3>
+
+<p>This is the next best option – if a rule doesn’t raise too many problems around the codebase, adding <a href="https://eslint.org/docs/user-guide/configuring#disabling-rules-with-inline-comments"><code class="language-plaintext highlighter-rouge">eslint-disable</code></a> comments where relevant makes it possible to only disable the rule for a few lines of legacy code, rather than the whole codebase.</p>
+
+<p>This is always completely safe, and the only drawback is the manual effort involved. Here is an example:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// eslint-disable-next-line eqeqeq</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span> <span class="o">!=</span> <span class="k">this</span><span class="p">.</span><span class="nx">windowWidth</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Update the window width for next time</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">windowWidth</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Here, we’re not really interested in figuring out whether it’s safe to replace <code class="language-plaintext highlighter-rouge">!=</code> with <code class="language-plaintext highlighter-rouge">!==</code> – we just want to move on and be able to benefit from <a href="https://eslint.org/docs/rules/eqeqeq"><code class="language-plaintext highlighter-rouge">eqeqeq</code></a> elsewhere in the code.</p>
+
+<h3 id="disabling-rules-for-a-group-of-files">Disabling rules for a group of files</h3>
+
+<p>ESLint supports overrides for only some of the files in the project: <a href="https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files">Disallowing Rules Only for a Group of Files</a>. Generally I would recommend using inline comments instead of config-level overrides. The overrides might seem a bit cleaner (we don’t have to change the code, and litter it with comments), but they are harder to keep track of since they are decoupled from the code they are for.</p>
+
+<h3 id="changing-the-code-and-its-behavior">Changing the code and its behavior</h3>
+
+<p>If an option, this can be a great way to progress – but it requires good knowledge of the project, and time to test. Here is an example:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">itemLevel</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">navItem</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">navLevel</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Here, ESLint expects <code class="language-plaintext highlighter-rouge">parseInt</code> to be provided with a <a href="https://eslint.org/docs/rules/radix"><code class="language-plaintext highlighter-rouge">radix</code></a> parameter instead of relying on the default behavior, which can be confusing or a source of bug. While it might seem harmless enough to add a radix of 10 as a parameter, we can’t really tell from the code alone whether <code class="language-plaintext highlighter-rouge">navLevel</code> is indeed in base 10 – so we would effectively be changing the code in a way that could be very significant.</p>
+
+<h3 id="doing-nothing-">Doing nothing (😄)</h3>
+
+<p>Again, if none of those options seem appropriate – it’s also perfectly fine to leave the newly updated config with its overrides and move on. Updating the config, even if only partially, already goes towards addressing technical debt and raising quality standards.</p>
+
+<h2 id="wrapping-up">Wrapping up</h2>
+
+<p>Beyond updating the config, here are additional steps you should consider to make the most of ESLint on your project:</p>
+
+<ul>
+  <li>Use <a href="https://prettier.io/">Prettier</a>, if you aren’t already. With Prettier’s great support for many languages, in 2020 formatting code manually is a complete waste of time.</li>
+  <li>Make sure you and your team have editor / IDE extensions for ESLint. This will make it much easier for everyone to understand the new config and address problems as they arise.</li>
+  <li>Consider using <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">pre-commit hooks</a> on your project. While these might seem annoying at first, they can save you a lot of back-and-forth with CI (and code reviews!).</li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-01-13T00:18:03+00:00" pubdate data-updated="true">2020-01-13 00:18</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/javascript/">JavaScript</a>,
+    
+      <a class="category" href="/categories/code/">Code</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/python-static-type-checking-field-test" title="Previous Post: Python static type checking: field test">&laquo; Python static type checking: field test</a>
+      
+      
+        <a class="basic-alignment right" href="/react-training-goals-for-front-end-developers" title="Next Post: React training goals for front-end developers">React training goals for front-end developers &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

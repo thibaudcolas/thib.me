@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Accessibility wins for Wagtail projects - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="I recently gave a talk at Wagtail Space US 2020 about the accessibility of Wagtail websites – following on last year’s talk about the accessibility of the Wa...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/accessibility-wins-for-wagtail-projects">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/accessibility-wins-for-wagtail-projects">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Accessibility wins for Wagtail projects">
+  <meta property="og:description" content="I recently gave a talk at Wagtail Space US 2020 about the accessibility of Wagtail websites – following on last year’s talk about the accessibility of the Wa...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-07-30-accessibility-wins-for-wagtail-projects.md">Edit</a>
+      <h1 class="entry-title">Accessibility wins for Wagtail projects</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-07-30T02:15:22+01:00" pubdate data-updated="true">2020-07-30 02:15</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>I recently gave a talk at <a href="https://us.wagtail.space/">Wagtail Space US 2020</a> about the accessibility of Wagtail websites – following on last year’s talk about the <a href="/making-wagtail-accessible">accessibility of the Wagtail admin</a>.</p>
+
+<!-- more -->
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZcHfUu_u4e0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Slides: <a href="https://docs.google.com/presentation/d/14iSPklZmrjlMZlaFOBP1Mavt_tmz6vcF_t6cHVCCek8/edit">Wagtail Space US 2020 - Accessibility wins for Wagtail projects</a></p>
+
+<hr />
+
+<h2 id="why-accessibility-matters">Why accessibility matters</h2>
+
+<h3 id="inclusive-experiences">Inclusive experiences</h3>
+
+<ul>
+  <li>We want all users to have a great experience, no matter how they use the web.</li>
+  <li>Accessibility improvements lead to usability improvements for all.</li>
+</ul>
+
+<p>Search: “Curb cut effect”</p>
+
+<h3 id="accessibility-is-not-an-optional-extra">Accessibility is not an optional extra</h3>
+
+<p>USA:</p>
+
+<ul>
+  <li><a href="https://section508.gov/">Section 508</a> for recipients of federal funding, <a href="https://www.ada.gov/">ADA</a> for all*.</li>
+</ul>
+
+<p>EU/UK:</p>
+
+<ul>
+  <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016L2102">EU Directive 2016/2102</a> for the public sector, UK <a href="https://www.legislation.gov.uk/ukpga/2010/15/contents">Equality Act 2010</a> for all.</li>
+</ul>
+
+<p>In the end it’s all based on <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 AA</a>.</p>
+
+<p>* I’m not a lawyer. See <a href="https://gizmodo.com/gimlet-media-sued-for-not-making-podcasts-accessible-to-1844369021">Gimlet Media lawsuit</a></p>
+
+<h3 id="oh-and-its-not-just-about-wagtail-sites">Oh and it’s not just about Wagtail sites</h3>
+
+<p>Intranets, CRMs, ERPs, dashboards. Django admin.</p>
+
+<p>Internal-only tools shouldn’t compromise on accessibility just because their audience is smaller.</p>
+
+<p><a href="https://alistapart.com/article/building-the-woke-web/">alistapart.com/article/building-the-woke-web</a></p>
+
+<h2 id="common-wagtail-issues">Common* Wagtail issues</h2>
+
+<p>* Very common. Go check your sites after the talk</p>
+
+<h3 id="alt-text-for-images">Alt text for images</h3>
+
+<ol>
+  <li>Images’ Title fields are auto-populated with file names on upload</li>
+  <li>Wagtail sets alt text based on image Title by default</li>
+  <li>????</li>
+</ol>
+
+<p>Solution: always have an “alt text” field wherever an image is used.</p>
+
+<p><a href="https://github.com/wagtail/rfcs/pull/51">RFC #51</a>, <a href="https://github.com/wagtail/wagtail/issues/4945">#4945</a>, <a href="https://github.com/wagtail/rfcs/pull/44">RFC #44</a>, <a href="https://github.com/wagtail/wagtail/pull/5789">#5789</a></p>
+
+<h3 id="alt-text-for-images-2">Alt text for images, #2</h3>
+
+<ul>
+  <li>Have a mandatory alt text field when images aren’t decorative…</li>
+  <li>Display it</li>
+</ul>
+
+<p>Solution: always have an “alt text” field wherever an image is used.</p>
+
+<p><a href="https://github.com/wagtail/rfcs/pull/51">RFC #51</a>, <a href="https://github.com/wagtail/wagtail/issues/4945">#4945</a>, <a href="https://github.com/wagtail/rfcs/pull/44">RFC #44</a>, <a href="https://github.com/wagtail/wagtail/pull/5789">#5789</a></p>
+
+<h3 id="alt-text-for-images-3">Alt text for images, #3</h3>
+
+<ul>
+  <li>Always have an alt text field for each usage of an image</li>
+  <li>Make sure the field is optional when appropriate so decorative images can be hidden</li>
+  <li>Give appropriate guidance to editors, <a href="https://axesslab.com/alt-texts/">axesslab.com/alt-texts</a></li>
+  <li>Wagtail’s rich text images alt text needs to become optional</li>
+</ul>
+
+<p>Solution: always have an “alt text” field wherever an image is used.</p>
+
+<p><a href="https://github.com/wagtail/rfcs/pull/51">RFC #51</a>, <a href="https://github.com/wagtail/wagtail/issues/4945">#4945</a>, <a href="https://github.com/wagtail/rfcs/pull/44">RFC #44</a>, <a href="https://github.com/wagtail/wagtail/pull/5789">#5789</a></p>
+
+<h3 id="embed-titles">Embed titles</h3>
+
+<ul>
+  <li>In some cases, Wagtail embeds don’t have a title attribute set</li>
+  <li>Screen reader users need it to know what the embed is, and decide to browse it, or skip it</li>
+</ul>
+
+<p>Solution: either check your embed provider returns a title in 100% of the cases, or add a mandatory “Title” field for all embeds.</p>
+
+<p><a href="https://github.com/wagtail/wagtail/issues/5982">#5982</a></p>
+
+<h3 id="heading-levels">Heading levels</h3>
+
+<p>Screen reader users rely on logical, lean heading outlines to navigate pages</p>
+
+<ul>
+  <li>Wagtail makes it easy to restrict which heading levels are available in any rich text field. Do it.</li>
+  <li>Also restrict which heading levels are available via StreamField</li>
+  <li>Keep your templates in check too.</li>
+</ul>
+
+<p>Solution: <a href="https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field">Limiting features in a rich text field</a>. Use <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a>.</p>
+
+<h3 id="heading-levels-2">Heading levels, #2</h3>
+
+<p>Heading levels</p>
+
+<p>Screen reader users rely on logical, lean heading outlines to navigate pages</p>
+
+<ul>
+  <li>Validate that no heading is left empty</li>
+  <li>Or, consider hiding empty headings with CSS (h2:empty { display: none; })</li>
+</ul>
+
+<p>Solution: <a href="https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field">Limiting features in a rich text field</a>. Use <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a>.</p>
+
+<p>In the future – rich text rewriting to remove empty headings? <a href="https://github.com/wagtail/wagtail/issues/4223">#4223</a></p>
+
+<h3 id="other-issues-worth-knowing-about">Other issues worth knowing about</h3>
+
+<ul>
+  <li>TableBlock
+    <ul>
+      <li>The Caption field should be mandatory</li>
+      <li>The header cells field should be mandatory (<a href="https://github.com/wagtail/wagtail/issues/5989">#5989</a>)</li>
+    </ul>
+  </li>
+  <li>Links
+    <ul>
+      <li>We need a way to flag / validate link text to avoid “Read more”, “Click here”, “Find out more”</li>
+      <li>Or having a way to add custom aria-label where relevant</li>
+      <li>Broken links should be user-friendly, not href=”None”.</li>
+    </ul>
+  </li>
+  <li>Forms
+    <ul>
+      <li>Avoid Django’s as_table, as_ul rendering.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="content-wins">Content wins</h2>
+
+<ul>
+  <li><a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a> (based on <a href="https://khan.github.io/tota11y/">tota11y</a>)</li>
+  <li>help_text (example: <a href="https://github.com/nhsuk/wagtail-nhsuk-frontend">wagtail-nhsuk-frontend</a>)</li>
+  <li><a href="https://docs.wagtail.io/en/stable/reference/pages/panels.html#helppanel">HelpPanel</a> – help_text but bigger</li>
+  <li><a href="https://vixdigital.github.io/draftail-plugins/">wagtail-readinglevel</a></li>
+  <li>Rich text experiments: guidelines-aware spellcheck</li>
+  <li>Rich text experiments: sentence length, <a href="https://wooorm.com/readability/">wooorm.com/readability</a></li>
+</ul>
+
+<h2 id="developer-wins">Developer wins</h2>
+
+<p><a href="https://torchbox.com/blog/accessibility-audits/">Accessibility audits: getting started</a></p>
+
+<h3 id="django-html-validator"><a href="https://github.com/peterbe/django-html-validator">django-html-validator</a></h3>
+
+<p>Based on the official v.Nu validator. Very easy to integrate into your workflow with Docker.</p>
+
+<ul>
+  <li>
+    <p>Finds <a href="https://alphagov.github.io/accessibility-tool-audit/">about 15% of issues</a></p>
+  </li>
+  <li>
+    <p>v.Nu also has a CLI which I recommend as part of accessibility audits</p>
+  </li>
+</ul>
+
+<h3 id="static-analysis">Static analysis</h3>
+
+<ul>
+  <li>React: <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a></li>
+  <li>Vue: <a href="https://github.com/maranran/eslint-plugin-vue-a11y">eslint-plugin-vue-a11y</a></li>
+  <li>Styles: <a href="https://github.com/YozhikM/stylelint-a11y">stylelint-a11y</a></li>
+</ul>
+
+<h3 id="curlylint">Curlylint</h3>
+
+<h3 id="learn-how-to-use-a-screen-reader">Learn how to use a screen reader</h3>
+
+<p>On a Mac with VoiceOver,</p>
+
+<ul>
+  <li>Cmd + F5 to open VoiceOver. Same to close it.</li>
+  <li>Ctrl to silence it</li>
+  <li>Ctrl + U to open the rotor</li>
+</ul>
+
+<p>That’s it.</p>
+
+<p>Even simpler on iOS.</p>
+
+<p><a href="https://a11ysupport.io/learn/">a11ysupport.io / learn</a></p>
+
+<h2 id="community-wins">Community wins</h2>
+
+<p>A cultural shift?</p>
+
+<h3 id="you-can-be-the-person-on-your-team-who-advocates-for-those-issues-to-be-fixed">You can be the person on your team who advocates for those issues to be fixed</h3>
+
+<p>It matters on all projects, all audiences</p>
+
+<p>There are well-defined standards, and readily available tools.</p>
+
+<p>You can be the person who knows how to use a screen reader and shows others how to do it.</p>
+
+<p><a href="https://alistapart.com/article/building-the-woke-web/">alistapart.com/article/building-the-woke-web</a></p>
+
+<h3 id="wagtail-can-be-a-cms-thats-part-of-the-solution">Wagtail can be a CMS that’s part of the solution</h3>
+
+<p>The <a href="https://webaim.org/projects/million/">WebAIM Million</a> keeps track of the accessibility of 1M websites’ homepages</p>
+
+<ul>
+  <li>Numbers are appalling</li>
+  <li>We can do better</li>
+  <li>Wagtail can help people make accessible websites – better defaults, starter templates, documentation</li>
+</ul>
+
+<h3 id="accessibility-team-">Accessibility team 🌈</h3>
+
+<p>The <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team">accessibility team</a> focuses on improvements to the accessibility of Wagtail, and of websites built with Wagtail. Everyone is welcome regardless of skill level or background.</p>
+
+<p>Find us on the Wagtail Slack in <a href="https://github.com/wagtail/wagtail/wiki/Slack">#accessibility</a></p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-07-30T02:15:22+01:00" pubdate data-updated="true">2020-07-30 02:15</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/curlylint-accessibility-linting-rules" title="Previous Post: Curlylint: Accessibility linting rules">&laquo; Curlylint: Accessibility linting rules</a>
+      
+      
+        <a class="basic-alignment right" href="/reusable-ui-components-journey-from-react-to-wagtail" title="Next Post: Reusable UI components – A journey from React to Wagtail">Reusable UI components – A journey from React to Wagtail &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

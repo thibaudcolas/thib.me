@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Modern front-end architectures with React - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="One year ago, I was writing about my choice of React as a robust platform for advanced UI development. The JavaScript community has evolved a lot since then,...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/modern-front-end-architectures-with-react">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/modern-front-end-architectures-with-react">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Modern front-end architectures with React">
+  <meta property="og:description" content="One year ago, I was writing about my choice of React as a robust platform for advanced UI development. The JavaScript community has evolved a lot since then,...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2017-10-04-modern-front-end-architectures-with-react.md">Edit</a>
+      <h1 class="entry-title">Modern front-end architectures with React</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2016-08-10T11:47:07+01:00" pubdate data-updated="true">2016-08-10 11:47</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>One year ago, I was writing about <a href="/a-stable-front-end-stack-for-2016">my choice of React</a> as a robust platform for advanced UI development. The JavaScript community has evolved a lot since then, but React still is one of the most mature UI frameworks out there and we do not see this changing for the foreseeable future. Today, let’s have a look into how we use it to build modern web applications.</p>
+
+<!-- more -->
+
+<h2 id="why-i-like-react-so-much">Why I like React so much</h2>
+
+<p>Over the years, Springload has experimented with a lot of front-end frameworks. <a href="https://facebook.github.io/react/">React</a> is now our de-facto standard to build rich user interfaces. Its main architectural pattern of declarative component hierarchies with a functional programming flavor is very well suited for modern UIs with a lot of moving parts. We particularly like:</p>
+
+<ul>
+  <li>The<strong>component reuse</strong> capabilities. Components clearly define their data requirements, making it very simple to reuse them across the UI.</li>
+  <li>Its focus on<strong>performance</strong>. React apps have great performance out of the box, and it is very simple to optimise further for larger deployments.</li>
+  <li>Its<strong>testability</strong>, and overall <strong><a href="https://github.com/facebook/react-devtools">developer experience</a></strong>. Writing tests for React components is surprisingly simple, and React comes with great developer tools that facilitate debugging.</li>
+</ul>
+
+<p>React also does a great job at being relevant in a wide range of scenarios:</p>
+
+<ul>
+  <li>Its <strong>server-side rendering</strong> capabilities mean it can be used for apps where SEO is a concern, or to gain a performance edge on the first page load.</li>
+  <li><strong>Integration with other libraries</strong> like D3 (data visualisation) is <a href="https://github.com/springload/react-d3-integration">very simple</a>. With simple hooks into React’s component lifecycle, the separation of concerns is very clear between propagating data updates for React, and rendering the charts for D3.</li>
+  <li>The component model is relevant for large-scale apps, but also for one-off widgets across otherwise page-based sites.</li>
+</ul>
+
+<p>We are so invested in React as a tool that we frequently create and package ready-made components like <a href="https://github.com/springload/react-portal-popover">popovers</a>, <a href="https://github.com/springload/react-simpler-select">dropdowns</a>, <a href="https://github.com/springload/react-svg-icon">icons</a>. Here is our latest creation: a fully <a href="https://github.com/springload/react-accessible-accordion">accessible accordion component</a>.</p>
+
+<p><img src="/images/blog/modern-front-end-architectures-with-react/react-accessible-accordion.png" alt="Screenshot of the react-accessible-accordion website, with a demo accordion" /></p>
+
+<p>Where React falls short is in managing data updates across large-scale interfaces with a lot of state. Luckily, <a href="https://github.com/reduxjs/redux">Redux</a> is a library that is meant to be used alongside React as a state container. Redux takes the component hierarchy idea of React to state management, and keeps the coupling between interface elements and business logic as low as possible.</p>
+
+<p>To further reduce the coupling between logic and UI, we heavily rely on APIs for integration between front-end and back-end.</p>
+
+<h2 id="api-driven-development">API-driven development</h2>
+
+<p>API-driven applications have emerged from the need of data sources for mobile apps, and there is no reason for websites to be more than yet another API client. Our preferred flavour is RESTful APIs consumed by standalone front-ends.</p>
+
+<p>We primarily work with <a href="https://www.djangoproject.com/">Django</a>, and occasionally use more lightweight tools such as <a href="https://palletsprojects.com/p/flask/">Flask</a> and <a href="https://nodejs.org/">Node</a> (Express). More recently, we have been leveraging Cloud based platforms – <a href="https://aws.amazon.com/">AWS</a> in particular – to deliver API driven solutions. We are exploring serverless architecture with <a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html">AWS Lambda</a>.</p>
+
+<p>None of those platforms work particularly better with React than with other JS frameworks, but they all provide great support for APIs as first-class views. This is what enables our architecture and workflow, with healthy separation between the presentation layer (front-end developers, client-side, JS/HTML/CSS) and the rest of the stack. We are also excited about other additions to this toolkit like <a href="https://graphql.org/">GraphQL</a> and <a href="https://facebook.github.io/relay/">Relay</a>, that take the React philosophy further towards back-end development and simplify API data requirements by making it more declarative.</p>
+
+<h2 id="overview-of-the-resulting-architecture">Overview of the resulting architecture</h2>
+
+<p>The following diagram details how all of those components fit together as part of a client-side web application:</p>
+
+<p><img src="/images/blog/modern-front-end-architectures-with-react/react-architecture.png" alt="Architecture diagram showing the separation of concerns between front-end and back-end, and data flow. Admin-specific data flows are omitted, apart from the debug app" /></p>
+
+<p>On this diagram, we can see:</p>
+
+<ul>
+  <li>Two types of users accessing different views.</li>
+  <li>The content-only pages of the site being served by a CMS, since those requirements are very different from that of the app.</li>
+  <li>The structure of the client-side components (bulk of the code), where Redux enforces a separation between UI and logic.</li>
+</ul>
+
+<p>Client-side, the architectural foundation is the use of <a href="https://facebook.github.io/react/">React</a> to structure the UI component tree, and <a href="https://redux.js.org/">Redux</a> to structure data flows. This is a modern alternative to MVC popularised by React, which puts more emphasis on the data flow (and the fact it is unidirectional). This “client-heavy” architecture is also supported by client-side routing and <a href="https://webpack.github.io/docs/code-splitting.html">code splitting</a>, which make it possible to only load the parts of the app that users actually need.</p>
+
+<p>Finally, since the bulk of the application code is executed in the user’s browser the server-side parts of the stack can be very lean.</p>
+
+<h2 id="rebuilding-wagtails-page-explorer-with-react">Rebuilding Wagtail’s page explorer with React</h2>
+
+<p>A good demonstration of this approach is how we are <a href="https://github.com/wagtail/wagtail/pull/3012">rebuilding Wagtail’s page explorer</a> with React, on top of an API.</p>
+
+<p>This allows us to take presentation concerns away from the back-end, with a clear API contracts that facilitates iterations on both sides.</p>
+
+<p>We were also able to bring the UI code under similar amounts of testing as to the back-end:</p>
+
+<p><img src="/images/blog/modern-front-end-architectures-with-react/wagtail-react-coverage.png" alt="Screenshot of a test coverage report for the new React explorer" /></p>
+
+<p>In the future, we will continue this effort in other parts of the CMS and expect to reap the same benefits. Since Wagtail is an open-source project, we will also make all of the components easily reusable by third-party developers to facilitate the creation of new interfaces for site administration.</p>
+
+<h2 id="react-beyond-web-apps">React beyond web apps</h2>
+
+<p>If React’s current capabilities as a UI framework for web apps weren’t enough, the last thing that gets us excited is how Facebook and the overall community are constantly finding new use cases for it. Following React’s philosophy of “Learn once, write anywhere”, we now have <a href="https://facebook.github.io/react-native/">React Native</a> that completely changes the possibilities for mobile apps on iOS and Android. <a href="https://facebook.github.io/react-vr/">React VR</a> applies the same approach to virtual reality. The team at Airbnb recently released <a href="https://github.com/airbnb/react-sketchapp">React Sketch.app</a>, allowing React to be used to create UIs in Sketch, once again completely redefining what is possible in the design + code landscape.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2016-08-10T11:47:07+01:00" pubdate data-updated="true">2016-08-10 11:47</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/react/">React</a>,
+    
+      <a class="category" href="/categories/springload/">Springload</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/react-patents-grant" title="Previous Post: React’s patents grant">&laquo; React’s patents grant</a>
+      
+      
+        <a class="basic-alignment right" href="/waffle-vs-trello" title="Next Post: Waffle vs Trello">Waffle vs Trello &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

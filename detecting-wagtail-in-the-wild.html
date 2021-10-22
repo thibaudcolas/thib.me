@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Detecting Wagtail in the wild - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="How can you tell if a site is made with Wagtail or not? There are more ways than people might think at first sight, and after a few years of toying with the ...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/detecting-wagtail-in-the-wild">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/detecting-wagtail-in-the-wild">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Detecting Wagtail in the wild">
+  <meta property="og:description" content="How can you tell if a site is made with Wagtail or not? There are more ways than people might think at first sight, and after a few years of toying with the ...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-11-18-detecting-wagtail-in-the-wild.md">Edit</a>
+      <h1 class="entry-title">Detecting Wagtail in the wild</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-11-18T15:15:22+00:00" pubdate data-updated="true">2020-11-18 15:15</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>How can you tell if a site is made with Wagtail or not? There are more ways than people might think at first sight, and after a few years of toying with the idea I finally put together a way to detect Wagtail sites, that strikes a good balance between reliability and convenience. Let’s go birdwatching.</p>
+
+<!-- more -->
+
+<h2 id="ways-to-detect-wagtail">Ways to detect Wagtail</h2>
+
+<p>I could think of a few <a href="https://github.com/springload/madewithwagtail/issues/62">when I first started thinking of this problem</a>:</p>
+
+<ul>
+  <li>Determine if the site is <a href="https://stackoverflow.com/questions/721934/how-can-you-tell-if-a-site-has-been-made-with-django">built with Django</a>. That’s a start</li>
+  <li>Check if the site uses a <a href="https://wagtail.io/wagtail-badges/">Wagtail badge</a>. Cute, but not used much in practice.</li>
+  <li>Load <code class="language-plaintext highlighter-rouge">/admin/login</code> and check for “wagtail” in the response – that would surely be an almost certain match.</li>
+</ul>
+
+<p>The problem with a lot of those approaches is their relance on crawling the site, which is quite invasive, not very reliable, and can be time-consuming across a lot of sites. It’s also unclear how common those cues would be across the breadth of Wagtail sites out there.</p>
+
+<p>The ideal approach would be HTTP response headers – which could be obtained from any page with a lightweight HEAD request. Wagtail unfortunately doesn’t have any custom header, so the next best thing is to inspect the pages’ markup:</p>
+
+<ul>
+  <li>Wagtail’s (legacy) rich text uses the <code class="language-plaintext highlighter-rouge">rich-text</code> class to wrap the HTML of rich text fields</li>
+  <li>Rich text images use hard-coded classes like <a href="https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/images/formats.py#L91-L94"><code class="language-plaintext highlighter-rouge">richtext-image full-width</code></a></li>
+  <li>Wagtail’s documents are served from a <a href="https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/documents/urls.py#L6"><code class="language-plaintext highlighter-rouge">/documents/</code></a> sub-path.</li>
+  <li>And last but not least, <a href="https://docs.wagtail.io/en/stable/topics/images.html?highlight=renditions#generating-image-renditions-in-python">image renditions</a>.</li>
+</ul>
+
+<p>Image renditions are very common on Wagtail sites. The detection would only work for pages that have user-uploaded images, but lucky for us a site’s homepage tends to be the type of high-value page where there are CMS-managed images. Here are a few examples of URLs from renditions:</p>
+
+<pre><code class="language-txt">https://www.jazzfestival.nz/media/images/video-fallback-image_1.width-1920.png
+
+/media/images/bevi_3_mob.original.format-png.png
+
+/media/original_images/Social_Distancing_Dashboard_-_image_1_TU_DelftAMS_Institute.png
+
+https://buckup-ff-stories.s3.amazonaws.com/original_images/Lockup_Logo_-_JPEG-1.png
+
+/media/images/UE4LowPolyVehicleTh.2e16d0ba.fill-960x540-c0.jpg
+</code></pre>
+
+<p>The distinctive features are the folders – always either <code class="language-plaintext highlighter-rouge">images</code> or <code class="language-plaintext highlighter-rouge">original_images</code>, and frequently either placed directly at the root of a site, or from a <code class="language-plaintext highlighter-rouge">/media</code> subfolder at the root, or a single level up. And then the fact that all of the site’s images are placed in those two folders without any additional sub-folders, with file name suffixes following a set format for all files under <code class="language-plaintext highlighter-rouge">images/</code> like <code class="language-plaintext highlighter-rouge">.width-1920</code> or <code class="language-plaintext highlighter-rouge">.fill-960x450-c0</code> above. I came up with the particular regex used here after trying out different variations on 800’000 homepages from the <a href="https://majestic.com/reports/majestic-million">Majestic Million</a> list of domains.</p>
+
+<h2 id="the-regex">The regex</h2>
+
+<p>Here is a simplified diagram of the logic (created with <a href="https://regexper.com/#%5C%2F%28original_images%5C%2F%5B%5Cw-%5D%2B%5C.%7Cimages%5C%2F%5B%5Cw-.%5D%2B%5C.%28%28fill%7Cmax%7Cmin%7Cwidth%7Cheight%7Cscale%29-%5Cd%7Coriginal%29%29">regexper</a>):</p>
+
+<p><img src="/images/blog/detecting-wagtail-in-the-wild/regexper-diagram.svg" alt="regexper train diagram of Wagtail regular expressions" /></p>
+
+<h2 id="real-world-usage">Real-world usage</h2>
+
+<p>The regex could be more complex and precise but this wouldn’t actually change much to its real-world usefulness, so I gradually simplified it to the above. With this in place, we can then create different ways to run this detection on arbitrary websites:</p>
+
+<ul>
+  <li>An online website, <a href="https://detect-wagtail.netlify.app/">detect-wagtail.netlify.app</a>.</li>
+  <li>A bookmarket, also available from <a href="https://detect-wagtail.netlify.app/">detect-wagtail.netlify.app</a>.</li>
+  <li>A browser extension thanks to <a href="https://github.com/AliasIO/wappalyzer">Wappalyzer</a>.</li>
+  <li>A Node CLI, also thanks to <a href="https://github.com/AliasIO/wappalyzer">Wappalyzer</a>.</li>
+  <li>As an npm package for more custom needs, <a href="https://www.npmjs.com/package/detect-wagtail">detect-wagtail</a></li>
+</ul>
+
+<p>With Wappalyzer in particular, they also offer additional services based on anonymous data reporting from their detection tools. Here is their page that aggregates Wagtail usage data: <a href="https://www.wappalyzer.com/technologies/cms/wagtail/">Websites using Wagtail</a>.</p>
+
+<p>If you’re unsure which of these to use – the Wappalyzer checks are the strictest, so best used if you don’t want to manually confirm the results by inspecting the pages’ HTML.</p>
+
+<h2 id="real-world-data">Real-world data</h2>
+
+<p>With this regex in place, I tried it out on a few lists of websites. See <a href="https://github.com/thibaudcolas/detect-wagtail/tree/main/docs/analysis">detect-wagtail/docs/analysis</a> for the full details.</p>
+
+<h3 id="eu-public-sector-websites">EU public sector websites</h3>
+
+<p>Dataset from <a href="https://www.funka.com/en/projekt/we4authors/">We4authors</a>. Based on this analysis, I could find 3 national EU public sector websites built with Wagtail:</p>
+
+<pre><code class="language-txt">www.danepubliczne.gov.pl
+www.nhs.uk
+www.nesta.org.uk
+</code></pre>
+
+<p>There are many more public sector websites built with Wagtail at the national and regional / local level, but this type of analysis already shows the value in having the ability to detect Wagtail – the CMS could be part of <a href="https://www.funka.com/en/projekt/we4authors/we4authors-main-activities-and-results/market-analysis-and-benchmarking-process-of-existing-cms/">market analysis</a> for research projects like We4authors, from which we can learn a lot.</p>
+
+<h3 id="us-federal-websites">US federal websites</h3>
+
+<p>Analysis of the US federal websites from the <a href="https://github.com/GSA/digitalgov.gov/blob/main/content/resources/content-management-systems-used-by-government-agencies.md">digital.gov list</a>.</p>
+
+<pre><code class="language-txt">fec.gov
+www.peacecorps.gov
+www.consumerfinance.gov
+</code></pre>
+
+<h3 id="made-with-wagtail">Made with Wagtail</h3>
+
+<p><a href="https://madewithwagtail.org/">Made with Wagtail</a> is a showcase of a lot of Wagtail sites and apps. About two thirds of sites listed are detected with the following regular expressions.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min|width|height|scale)-\d|original))'</span> mww <span class="nt">--stats-only</span>
+<span class="c"># 382 files contained matches</span>
+ag <span class="s1">'\/media\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min)-\d+x\d+(-c\d+)?|(width|height|scale)-\d+|original)\.)'</span> mww <span class="nt">--stats-only</span>
+<span class="c"># 292 files contained matches</span>
+</code></pre></div></div>
+
+<p>The remaining third are largely made up of sites that… actually aren’t made with Wagtail, either because Wagtail is only used for a specific section of a site (and not the homepage), or because the site got rebuilt with another technology since being listed there.</p>
+
+<h3 id="majestic-million">Majestic Million</h3>
+
+<p>The <a href="https://majestic.com/reports/majestic-million">Majestic Million</a> is a dataset of 1M domain names ordered by popularity. We can also use the above methodology to assess how many websites are made with Wagtail on this list (about 0.05%).</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ag <span class="s1">'\/media\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min)-\d+x\d+(-c\d+)?|(width|height|scale)-\d+|original)\.)'</span> million <span class="nt">--stats-only</span>
+<span class="c"># 296 files contained matches</span>
+ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min|width|height|scale)-\d|original))'</span> ../detect-wagtail-data/million <span class="nt">--stats-only</span>
+<span class="c"># 528 files contained matches</span>
+</code></pre></div></div>
+
+<p>Those numbers neatly match those of <a href="https://whatcms.org/c/Wagtail">WhatCMS</a>.</p>
+
+<h2 id="security-implications">Security implications</h2>
+
+<p>Telling whether a given site is built with Wagtail or not really doesn’t take that much effort. The image renditions methodology also shows it’s very easy to do at scale. There is nothing here that can prevent bad actors from scanning the web for vulnerable Wagtail sites, as is commonplace for other platforms. For all intents and purposes, you should assume this is happening already.</p>
+
+<p>What should we do then? For a start, don’t rely on <a href="https://en.wikipedia.org/wiki/Security_through_obscurity">security through obscurity</a>. Take the time to establish a threat model for your site, and protect it accordingly by restricting access to anything exploitable, and implementing brute force protections where relevant. Take a multi-layered approach to security – with defenses at the network level (e.g. a WAF), application level (e.g. rate limiting, defensive programming, handling of untrusted input, etc.), and also monitoring (logs analysis).</p>
+
+<p>An old but still relevant example of this in the Wagtail world is <a href="https://github.com/springload/wagtailenforcer">WagtailEnforcer</a>.</p>
+
+<p>And of course, keep your site up-to-date with security fixes for all its dependencies. While the approach described here doesn’t make it possible to determine which version of Wagtail is used – there are other very viable approaches that make this equally as easy (see <a href="https://github.com/caioariede/detect-django-version">detect-django-version</a> for inspiration).</p>
+
+<h2 id="applications">Applications</h2>
+
+<p>There are a lot more applications to being able to detect Wagtail websites than just knowing how many there are out there. <a href="WhatCMS.org">WhatCMS.org</a> has had some amount of Wagtail data for years and is a good example of the potential for market analysis. For me, I’m more interested in seeing how Wagtail is used in the wild. Here are interesting questions this can help answer:</p>
+
+<ul>
+  <li>Wagtail headless usage – which static site generators are the most common with Wagtail, that would be worth documenting the usage of better. In my analysis, I found a lot of Next and Gatsby websites in particular.</li>
+  <li>Security best practices – how many websites have the Wagtail admin accessible from any IP vs being restricted.</li>
+  <li>Accessibility – how accessible Wagtail sites are.</li>
+</ul>
+
+<p>This last point is the one I’m the most interested in – in particular, comparing Wagtail’s results to those of other technologies in the <a href="https://webaim.org/projects/million/">WebAIM Million</a>. We’ll see how that goes!</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-11-18T15:15:22+00:00" pubdate data-updated="true">2020-11-18 15:15</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/automation/">Automation</a>,
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/experiments/">Experiments</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/accessibility-wins-for-django-projects" title="Previous Post: Accessibility wins for Django projects">&laquo; Accessibility wins for Django projects</a>
+      
+      
+        <a class="basic-alignment right" href="/pattern-lab-goes-django" title="Next Post: Pattern Lab goes Django">Pattern Lab goes Django &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dspl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.google.com/dspl/2010" xmlns:time="http://www.google.com/publicdata/dataset/google/time" xmlns:geo="http://www.google.com/publicdata/dataset/google/geo" xmlns:entity="http://www.google.com/publicdata/dataset/google/entity" xmlns:quantity="http://www.google.com/publicdata/dataset/google/quantity">
+	<import namespace="http://www.google.com/publicdata/dataset/google/time"/>
+	<import namespace="http://www.google.com/publicdata/dataset/google/entity"/>
+	<import namespace="http://www.google.com/publicdata/dataset/google/geo"/>
+	<import namespace="http://www.google.com/publicdata/dataset/google/quantity"/>
+	<info>
+		<name>
+			<value>Français résidant à l'étranger au 31/12/2011</value>
+		</name>
+		<description>
+			<value>Ce jeu de données est un export des données démographiques sur les Français résidant à l'étranger et inscrits au Registre du réseau consulaire</value>
+		</description>
+	</info>
+	<provider>
+		<name>
+			<value>Ministère des Affaires Etrangères et Européenne</value>
+		</name>
+		<url>
+			<value>https://www.diplomatie.gouv.fr/</value>
+		</url>
+	</provider>
+	<concepts>
+		<concept id="population">
+			<info>
+				<name>
+					<value>Population</value>
+				</name>
+			</info>
+			<type ref="integer"/>
+		</concept>
+	</concepts>
+	<slices>
+		<slice id="countries_slice">
+			<dimension concept="geo:country"/>
+			<dimension concept="time:year"/>
+			<metric concept="population"/>
+			<table ref="countries_slice_table"/>
+		</slice>
+	</slices>
+	<tables>
+		<table id="countries_table">
+		      <column id="country" type="string"/>
+		      <column id="latitude" type="float"/>
+		      <column id="longitude" type="float"/>
+		      <column id="name" type="string"/>
+		      <data>
+		        <file format="csv" encoding="utf-8">countries.csv</file>
+		      </data>
+		    </table>
+
+		<table id="countries_slice_table">
+			<column id="country" type="string"/>
+			<column id="year" type="date" format="yyyy"/>
+			<column id="population" type="integer"/>
+			<data>
+				<file format="csv" encoding="utf-8">country_slice.csv</file>
+			</data>
+		</table>
+	</tables>
+</dspl>

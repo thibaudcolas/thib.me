@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>FranceJS.in(Toulouse) : Compte-rendu - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Il y a quelques jours s’est tenue la première édition de la conférence FranceJS. Voici un petit compte-rendu de ces deux jours autour de JavaScript.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/francejs-toulouse-compte-rendu">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/francejs-toulouse-compte-rendu">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="FranceJS.in(Toulouse) : Compte-rendu">
+  <meta property="og:description" content="Il y a quelques jours s’est tenue la première édition de la conférence FranceJS. Voici un petit compte-rendu de ces deux jours autour de JavaScript.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2013-12-06-francejs-toulouse-compte-rendu.md">Edit</a>
+      <h1 class="entry-title">FranceJS.in(Toulouse) : Compte-rendu</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2013-12-06T06:12:40+00:00" pubdate data-updated="true">2013-12-06 06:12</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Il y a quelques jours s’est tenue la première édition de la conférence <a href="http://francejs.org/conf2013.html">FranceJS</a>. Voici un petit compte-rendu de ces deux jours autour de JavaScript.</p>
+
+<!-- more -->
+
+<p>De nombreuses présentations étaient consacrés à <a href="http://nodejs.org/">Node</a>. J’en retiens que cette plateforme a gagné énormément de traction, des applications Node sont maintenant déployées en production chez de (très) grands groupes.</p>
+
+<ul>
+  <li>Exemple : PayPal, Wallmart, eBay, IBM, Linked In</li>
+  <li>Voici une <a href="https://strongloop.com/wp-content/uploads/2015/02/final-node-infographic-3-18-15v1.pdf">excellente infographie</a> qui présente l’essor de la plateforme</li>
+  <li>Les slides d’un <a href="http://delicious-insights.com/francejs-node/">excellent talk</a> sur le sujet, par Christophe Porteneuve.</li>
+</ul>
+
+<p>Côté outils, l’écosystème JavaScript a maintenant un task runner favori (équivalent de ant, make, etc) : <a href="http://gruntjs.com/">Grunt</a>. Par rapport à ses équivalents d’autres plateformes, Grunt se distingue surtout par sa communauté : scripter le build de son projet avec Grunt, c’est bien plus souvent rechercher des tâches de build préexistantes qu’en écrire soi-même.</p>
+
+<p>Troisième thématique abordée : les Single Page Applications. Nous avons pu assister à des ateliers sur <a href="http://angularjs.org/">AngularJS</a> et <a href="http://backbonejs.org/">Backbone</a>. Là encore, pour la communauté JavaScript il n’y a plus aucun doute quant à l’avenir de ces solutions. Il est certain que jQuery en tant que framework a du soucis à se faire (et tant mieux).</p>
+
+<p>Plutôt que de vous orienter vers des slides, le mieux pour découvrir ce qui se cache derrière le concept de SPA est d’aller regarder le code d’une implémentation de référence, <a href="http://todomvc.com/">Todo MVC</a>. Cette application est implémentée avec plusieurs frameworks, et je vous conseille d’aller jeter un coup d’œil en priorité aux versions suivantes :</p>
+
+<ul>
+  <li><a href="https://github.com/tastejs/todomvc/tree/master/examples/angularjs">AngularJS</a></li>
+  <li><a href="https://github.com/tastejs/todomvc/tree/master/examples/jquery">jQuery (comme point de comparaison)</a></li>
+  <li><a href="https://github.com/tastejs/todomvc/tree/master/examples/knockoutjs_require">Knockout + RequireJS</a></li>
+  <li><a href="https://github.com/tastejs/todomvc/tree/master/examples/emberjs">EmberJS</a></li>
+</ul>
+
+<p>Enfin, j’ai également apprécié deux excellentes présentations plus originales :</p>
+
+<ul>
+  <li>Une démo de <a href="http://www.babylonjs.com/">Babylon.JS</a>, un moteur 3D basé sur WebGL (<a href="http://fr.slideshare.net/davrous/raliser-un-jeu-cross-plateformes-avec-webgl-et-babylonjs">slides</a>)</li>
+  <li>Une <a href="http://ljouanneau.com/standards/francejs2013/webcomponents.pdf">présentation hyper avant-gardiste</a> de la spécification Web Components, le futur du développement Web (attention, assez théorique)</li>
+</ul>
+
+<p>Merci aux <a href="http://francejs.org/why.html">organisateurs</a> pour leur travail autour de cet excellent évènement.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2013-12-06T06:12:40+00:00" pubdate data-updated="true">2013-12-06 06:12</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/events/">Events</a>,
+    
+      <a class="category" href="/categories/javascript/">JavaScript</a>,
+    
+      <a class="category" href="/categories/report/">Report</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/veille-technologique" title="Next Post: Veille technologique">Veille technologique &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

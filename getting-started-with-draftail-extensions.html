@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Getting started with Draftail extensions - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Do you want to write extensions for Draftail? This is a good place to start. I’ll first try to discourage you from doing it (rich text is messy and unforgivi...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://www.draftail.org/docs/getting-started-with-extensions">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.draftail.org/docs/getting-started-with-extensions">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Getting started with Draftail extensions">
+  <meta property="og:description" content="Do you want to write extensions for Draftail? This is a good place to start. I’ll first try to discourage you from doing it (rich text is messy and unforgivi...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2018-06-01-getting-started-with-draftail-extensions.md">Edit</a>
+      <h1 class="entry-title">Getting started with Draftail extensions</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2018-06-01T21:55:03+01:00" pubdate data-updated="true">2018-06-01 21:55</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Do you want to write extensions for <a href="https://www.draftail.org/">Draftail</a>? This is a good place to start. I’ll first try to discourage you from doing it (rich text is messy and unforgiving), then tell what you need to know, and how to proceed.</p>
+
+<!-- more -->
+
+<h2 id="why-you-shouldnt-mess-with-rich-text-editors">Why you shouldn’t mess with rich text editors</h2>
+
+<p>It all comes down to <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content"><code class="language-plaintext highlighter-rouge">contenteditable</code></a>, which is very hard to make work. <a href="https://draftjs.org/">Draft.js</a> partly saves us from this. If you want to know more, read on <a href="https://www.draftail.org/blog/2018/03/05/why-wagtail-new-editor-is-built-with-draft-js">Why Wagtail’s new editor is built with Draft.js</a>.</p>
+
+<p>The TL;DR; is that there are a lot of issues with specific interactions within <code class="language-plaintext highlighter-rouge">contenteditable</code>. I made a list of the <a href="https://github.com/springload/draftail/issues/138">issues I know about in Draft.js / Draftail</a>. Here are the high-level problems you will have to make peace with:</p>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Input_method">Support for IMEs (Input Method Editor)</a>. which is how <a href="https://en.wikipedia.org/wiki/CJK_characters">CJK characters</a> are entered, and how OS-level autocomplete and autocorrect works. Differently in each OS/browser, of course.</li>
+  <li>Mobile support. For Draft.js, Android Chrome is particularly problematic – because of its implementation of text input as IME in all languages that does not match with other browsers (including Chrome desktop).</li>
+  <li>Copy-pasting. Some things will paste fine, some won’t. Thankfully, Draftail is built to never allow unwanted formatting.</li>
+  <li>Focus management. Not strictly an issue, but something that actually needs to be taken care of for the rich text experience to feel good.</li>
+</ul>
+
+<h3 id="draftail-vs-streamfield">Draftail vs StreamField</h3>
+
+<p>Within Wagtail, <a href="https://docs.wagtail.io/en/stable/topics/streamfield.html">StreamField</a> already delivers when it comes to free-form content. Sure, it’s not rich text, but it’s very usable for block-level content. Here is my rule of thumb for when to use one over the other:</p>
+
+<ul>
+  <li>If it’s text, use rich text.</li>
+  <li>If it’s inline text formatting (bold, strikethrough, etc), use rich text.</li>
+  <li>If it’s block text formatting (h2, blockquote, ul), you get to choose, I personally prefer Draftail because it’s nicer (faster) to use than the StreamField UI.</li>
+  <li>If it’s a block with more than just text, use StreamField.</li>
+</ul>
+
+<p>There may be an opportunity for Draftail to support blocks better in the future, but in the meantime <a href="https://www.kickstarter.com/projects/noripyt/wagtails-first-hatch">StreamField is already getting better</a> thanks to the work of NoriPyt’s Bertrand.</p>
+
+<h2 id="when-you-should-use-draftail">When you should use Draftail</h2>
+
+<p>With the presentations out of the way, we can now talk about the areas where Draftail extensions can help.</p>
+
+<p>There are three categories of extensions I can think of:</p>
+
+<ol>
+  <li>Custom links – things that enhance textual content with added data.</li>
+  <li>Tokens, IMEs, autocompletes – help entering content, with or without extra data.</li>
+  <li>Editor metrics, highlighting, helpers – help without necessarily altering content.</li>
+</ol>
+
+<h3 id="custom-links">Custom links</h3>
+
+<p>Any kind of custom “link” feature is a good fit for a Draftail extension. This can be:</p>
+
+<ul>
+  <li>Links to specific entities from the domain model of your site. This could be links that have a specific icon next to them to denote their target is special, like branches of an chain store.</li>
+  <li>Links that are not supported by the traditional “Link” feature. Anchor links come to mind.</li>
+  <li>Enhanced links with embedded content, or inline previews. The official <a href="httsp://docs.wagtail.io/en/stable/advanced_topics/customisation/extending_draftail.html#creating-new-entities">“stock” example</a> is one of those. Here is what its attached quote card looked like on the Forbes website:</li>
+</ul>
+
+<p><a href="https://www.forbes.com/sites/jasonbloomberg/2018/02/04/the-real-reason-red-hat-is-acquiring-coreos/#70a79bf05c4d"><img src="/images/forbes-quotecard-expanded.png" alt="Screenshot of a quote card in a Forbes article. The quote card expands from the word &quot;Google&quot; in the text, showing Google's stock and relevant articles." /></a></p>
+
+<blockquote>
+  <p>Quote cards enrich Forbes articles with stock information, and also show related content that readers might find helpful.</p>
+</blockquote>
+
+<h3 id="tokens-imes-autocompletes">Tokens, IMEs, autocompletes</h3>
+
+<p>By “token”, I mean any content that could be confused with other plain text if it did not have a <a href="https://en.wikipedia.org/wiki/Lexical_analysis#Token">particular meaning</a>. IMEs and autocompletes are simply ways to insert content. Some examples include:</p>
+
+<ul>
+  <li>Emojis, with an emoji picker, and potentially an interface to enter alternative labels for screen readers.</li>
+  <li>Hashtags, with or without an aucomplete or other IME.</li>
+  <li>Predefined keywords, tags, or entries from a taxonomy.</li>
+  <li>Mentions, most likely with an autocomplete that turns them into links.</li>
+  <li>Any set of values specific to the site’s purpose. For example, a web design website might want a way to easily insert color codes into their content: <code class="language-plaintext highlighter-rouge">#E75480</code>.</li>
+</ul>
+
+<p><a href="https://www.draft-js-plugins.com/plugin/mention"><img src="/images/draftjs-plugin-mention.png" alt="Screenshot of a mention UI in Draft.js, where the text @j triggers an autocomplete UI" /></a></p>
+
+<blockquote>
+  <p><a href="https://www.draft-js-plugins.com/plugin/mention">Draft.js plugin</a> for a mention feature, where <code class="language-plaintext highlighter-rouge">@</code> triggers the autocomplete UI.</p>
+</blockquote>
+
+<h3 id="editor-metrics-highlighting-helpers">Editor metrics, highlighting, helpers</h3>
+
+<p>Anything that helps the end user without necessarily changing the content. The folks from VIX Digital have some great examples from this category: <a href="https://github.com/vixdigital/draftail-plugins">vixdigital/draftail-plugins</a>.</p>
+
+<ul>
+  <li>Text metrics – content length, readability, reading time, and much more.</li>
+  <li>Highlighting – be it syntax highlighting for programmers, or highlighting of specific words that are particularly important in the content.</li>
+  <li>Spellcheckers and writing assistants. They will highlight content, as well as offer alternative text.</li>
+</ul>
+
+<p><a href="https://vixdigital.github.io/draftail-plugins/"><img src="/images/reading-level-plugin.gif" alt="Screenshot of the reading level plugin, with readability metrics updating as the user types in the editor" /></a></p>
+
+<blockquote>
+  <p>The Reading Level plugin from VIX Digital is a great example. The metrics help you understand your content better, without interrupting the writing flow.
+Better yet, it updates as you type, and is helpful regardless of whether your content is rich text or not.</p>
+</blockquote>
+
+<h2 id="building-a-content-extension">Building a content extension</h2>
+
+<p>You’re ready to wrangle with rich text. StreamField definitely won’t cut it for your specific problem. The examples above sound similar to your use case. Here are initial considerations before you get building:</p>
+
+<ul>
+  <li><strong>How will the extension behave in the editor?</strong>
+    <ul>
+      <li>Will it be an additional toolbar button? What happens when you click on it?</li>
+      <li>If you create custom entities (say a <code class="language-plaintext highlighter-rouge">STOCK</code>), how are they meant to behave once inserted in the editor? Can they be edited? Deleted?</li>
+      <li>What does the your custom content look like when displayed in the editor?</li>
+    </ul>
+  </li>
+  <li><strong>How will the custom format be stored within rich text?</strong>
+    <ul>
+      <li>Will it have its own HTML tag, perhaps with specific attributes?</li>
+      <li>Will it risk clashing with the storage format of other rich text content?</li>
+      <li>Which parts of your rich text markup are semantic? Which are presentational? Can those not be stored?</li>
+      <li>Is there a potential need for migration of this content in the future? Can you make this easier on yourself?</li>
+    </ul>
+  </li>
+  <li><strong>What will the content look like on the site’s front-end?</strong>
+    <ul>
+      <li>Will you need the storage to be done in a specific way to render a no-JS fallback?</li>
+      <li>What will the differences be between stored content and rendered content?</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Some of those questions can be hard to answer if you don’t have experience building rich text extensions. My preferred approach is to get prototyping and build a <a href="https://en.wikipedia.org/wiki/Proof_of_concept">proof of concept (PoC)</a>.</p>
+
+<h3 id="prototyping-extensions">Prototyping extensions</h3>
+
+<p>Generally, the hardest part to build when creating a content extension is the editing UI (think: choosers as forms within modals, tooltips). Then, content storage and conversion is the most important part to “get right” from the beginning, since changes there will create stale content that can be hard to deal with. Here are my tips:</p>
+
+<ol>
+  <li>Get your extension to display in the toolbar, and use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt"><code class="language-plaintext highlighter-rouge">window.prompt()</code></a> as a crude data entry modal.</li>
+  <li>Make a simple decorator component displaying your custom content as bold (or any other very basic style) to see where your data is.</li>
+  <li>Play with content conversion and storage, and get this right as soon as possible.</li>
+  <li>Quickly prototype the front-end rendering of your new rich text content.</li>
+</ol>
+
+<h2 id="going-further">Going further</h2>
+
+<p><a href="https://github.com/draft-js-plugins/draft-js-plugins">Draft.js Plugins</a> also offers a lot of general-purpose extensions for Draft.js. For Draftail in particular, as of today, the most advanced extensions to learn from are Wagtail’s built-in <a href="https://github.com/wagtail/wagtail/blob/607f2ec0673814a54bd8c35f7cda42a4b37f73f2/client/src/components/Draftail/decorators/Link.js">Link, Document, Image, and Embed</a>. They use the same APIs as any custom extension would, and offer quite good rich text interactions. To learn even more about making extensions, you might also enjoy a video tutorial where I go through the official “stock” example from start to finish, explaining what is going on along the way:</p>
+
+<iframe src="https://player.twitch.tv/?autoplay=false&amp;video=v266474479" frameborder="0" allowfullscreen="true" scrolling="no" height="315" width="560"></iframe>
+
+<hr />
+
+<p>If you want to know more about specific extension types, please get in touch on Twitter (<a href="https://twitter.com/thibaud_colas">@thibaud_colas</a>) – I’m looking for ideas for what to cover next as part of my <a href="https://www.patreon.com/thibaud_colas">Patreon</a>.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2018-06-01T21:55:03+01:00" pubdate data-updated="true">2018-06-01 21:55</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/draftjs/">Draftjs</a>,
+    
+      <a class="category" href="/categories/draftail/">Draftail</a>,
+    
+      <a class="category" href="/categories/resources/">Resources</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/funding-oulu-web-development-meetup" title="Previous Post: Funding Oulu’s Web Development Meetup">&laquo; Funding Oulu’s Web Development Meetup</a>
+      
+      
+        <a class="basic-alignment right" href="/live-coding-draftjs-copy-paste-fix" title="Next Post: Live coding – Draft.js copy-paste fix">Live coding – Draft.js copy-paste fix &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

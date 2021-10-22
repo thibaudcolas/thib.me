@@ -1,0 +1,31 @@
+.reveal .progress {
+  height: 15px;
+}
+
+.reveal .slide-number {
+  font-size: 25px;
+  color: #333;
+}
+
+.reveal .progress span {
+  background-color: #336588;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: none !important;
+}
+
+.inline-img {
+  border: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  top: 35px !important;
+}
+
+pre code {
+  font-size: 140% !important;
+  line-height: 1.1 !important;
+  max-height: 700px !important;
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Testing accessibility in Continuous Integration with Pa11y and beyond - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Here are tools I recommend to test for accessibility issues in continuous integration, where automation is the only option, and reliability is paramount.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/testing-accessibility-in-ci-with-pa11y-and-beyond">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/testing-accessibility-in-ci-with-pa11y-and-beyond">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Testing accessibility in Continuous Integration with Pa11y and beyond">
+  <meta property="og:description" content="Here are tools I recommend to test for accessibility issues in continuous integration, where automation is the only option, and reliability is paramount.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-08-13-testing-accessibility-in-ci-with-pa11y-and-beyond.md">Edit</a>
+      <h1 class="entry-title">Testing accessibility in Continuous Integration with Pa11y and beyond</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-08-13T22:21:08+01:00" pubdate data-updated="true">2020-08-13 22:21</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Here are tools I recommend to test for accessibility issues in continuous integration, where automation is the only option, and reliability is paramount.</p>
+
+<!-- more -->
+
+<h2 id="the-requirements-of-ci">The requirements of CI</h2>
+
+<p>It’s worth pointing out early – no accessibility testing tool can <a href="https://alphagov.github.io/accessibility-tool-audit/">find all issues</a> . With this in mind, in CI, we need to focus on tools that find as much as possible… but don’t create false positives, which are very damaging when they fail your build. It’s more important for a tool to have a <a href="https://en.wikipedia.org/wiki/Precision_and_recall">high precision, than a high recall</a>).</p>
+
+<h2 id="static-analysis">Static analysis</h2>
+
+<p>This is always a valuable first line of defense.</p>
+
+<ul>
+  <li>
+    <p>Basic checks for stylesheets: <a href="https://github.com/YozhikM/stylelint-a11y">stylelint-a11y</a></p>
+  </li>
+  <li>Relatively advanced checks for React code: <a href="https://github.com/yannickcr/eslint-plugin-react">eslint-plugin-react</a>, <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a></li>
+  <li>And a Vue equivalent: <a href="https://github.com/maranran/eslint-plugin-vue-a11y">eslint-plugin-vue-a11y</a></li>
+  <li>For HTML templates, you can try my own experimental HTML templates linter, <a href="https://github.com/thibaudcolas/curlylint">Curlylint</a>.</li>
+</ul>
+
+<h2 id="accessibility-tests-in-unit-and-integration-tests">Accessibility tests in unit and integration tests</h2>
+
+<p>Here are the options, from simplest to most complex:</p>
+
+<ul>
+  <li><a href="https://github.com/nickcolley/jest-axe">jest-axe</a> in jsdom for React projects. It’s very lightweight to set up, and gives surprisingly good results.</li>
+  <li><a href="https://github.com/nickcolley/jest-axe">jest-axe</a> in Puppeteer. It’s not lightweight to set up, far from it, but does a bit more.</li>
+  <li><a href="https://pa11y.org/">Pa11y</a>, or <a href="https://github.com/pa11y/pa11y-ci">pa11y-ci</a>. Not lightweight either, but simple to configure.</li>
+  <li>Google’s Lighthouse also has a <a href="https://github.com/GoogleChrome/lighthouse-ci">Lighthouse CI</a> variant which may be useful when also wanting to have performance and best practice checks.</li>
+  <li>An alternative could also be to run HTML validation with <a href="https://validator.github.io/validator/">V.Nu HTML5 validator</a>.</li>
+</ul>
+
+<h2 id="what-to-test">What to test</h2>
+
+<p>It’s not always easy to have test content to run the checks against of in CI. My personal preference is to run the tests against a pattern library’s components, for example <a href="https://storybook.js.org/">Storybook</a> or <a href="https://github.com/torchbox/django-pattern-library">django-pattern-library</a>. As part of creating the components, we naturally create test data for them similarly to unit tests (TDD or not) – this test content can then be used to test the components’ variations for accessibility issues.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-08-13T22:21:08+01:00" pubdate data-updated="true">2020-08-13 22:21</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>,
+    
+      <a class="category" href="/categories/automation/">Automation</a>,
+    
+      <a class="category" href="/categories/methodology/">Methodology</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/reusable-ui-components-journey-from-react-to-wagtail" title="Previous Post: Reusable UI components – A journey from React to Wagtail">&laquo; Reusable UI components – A journey from React to Wagtail</a>
+      
+      
+        <a class="basic-alignment right" href="/accessibility-wins-for-django-projects" title="Next Post: Accessibility wins for Django projects">Accessibility wins for Django projects &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

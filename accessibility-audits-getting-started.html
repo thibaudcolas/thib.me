@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Accessibility audits: getting started - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Accessibility audits can be daunting to get started with. Here are my recipes to deliver accessibility audits for web projects, combining multiple layers of ...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://torchbox.com/blog/accessibility-audits/">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://torchbox.com/blog/accessibility-audits/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Accessibility audits: getting started">
+  <meta property="og:description" content="Accessibility audits can be daunting to get started with. Here are my recipes to deliver accessibility audits for web projects, combining multiple layers of ...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2020-05-01-accessibility-audits-getting-started.md">Edit</a>
+      <h1 class="entry-title">Accessibility audits: getting started</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2020-05-01T19:15:08+01:00" pubdate data-updated="true">2020-05-01 19:15</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Accessibility audits can be daunting to get started with. Here are my recipes to deliver accessibility audits for web projects, combining multiple layers of automation with manual testing to get the best of both worlds.</p>
+
+<!-- more -->
+
+<h2 id="auditing-strategy">Auditing strategy</h2>
+
+<p>First, determine what standard to audit for. <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag">WCAG 2.1 AA</a> is generally a good start, as the standard that underlines many countries’ regulations. Don’t stop at any given standard though – the goal of an audit really is to identify improvements, rather than compliance box ticking.</p>
+
+<p>With this in mind, start with automated tools to find as many issues as possible. Then, we can dedicate more time to more thorough manual testing of specific pages or components.</p>
+
+<p>As a developer, I like the audit to be based on tools that can be used in automated test suites. Continuous integration capabilities are a big plus too, making it much easier for the site to keep being tested consistently after the auditing work is over.</p>
+
+<h2 id="accessibility-audits-for-beginners">Accessibility audits for beginners</h2>
+
+<p>It’s worth pointing out early – while some parts of my approach are very beginner-friendly – others rely on years of experience with accessibility guidelines and usability best practices. If you don’t know where to start, here are the easiest first steps:</p>
+
+<ul>
+  <li>If you’re familiar with command-line tools and want something quick, grab <a href="https://github.com/pa11y/pa11y">Pa11y</a> and point it at pages.</li>
+  <li>If you want to analyse a page more thoroughly, use <a href="https://accessibilityinsights.io/">Accessibility Insights</a>.</li>
+  <li>If you have money, get <a href="https://www.powermapper.com/products/sortsite/">SortSite</a> or <a href="https://tenon.io/">Tenon</a>. I haven’t used these myself, those recommendations are only based on the invaluable <a href="https://alphagov.github.io/accessibility-tool-audit/">GDS accessibility tools audit</a>.</li>
+</ul>
+
+<p><img src="/images/blog/accessibility-audits-getting-started/accessibility-insights-tab-stops.png" alt="Screenshot of Accessibility Insights tab stops" /></p>
+
+<blockquote>
+  <p>Accessibility Insights’ tab stops tool is invaluable to identify strange tab orders, and optimise keyboard navigation</p>
+</blockquote>
+
+<h2 id="intermediate-level-auditing">Intermediate-level auditing</h2>
+
+<h3 id="source-code-analysis">Source code analysis</h3>
+
+<p>If possible, this is always a valuable first step. Identifying issues directly in the code will make them much easier to fix, and improves your chances of finding issues that might not be identifiable during manual testing because they rely on a specific state of the app or site.</p>
+
+<p>Linters are very useful here:</p>
+
+<ul>
+  <li><a href="https://github.com/yannickcr/eslint-plugin-react">eslint-plugin-react</a>, <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a> for React, which has the most advanced static analysis tools of any front-end stack.</li>
+  <li><a href="https://github.com/thibaudcolas/curlylint">curlylint</a> for HTML templates, my (experimental! 💥) attempt at bridging that gap.</li>
+</ul>
+
+<p>I also audit code manually, by searching the project’s source. Here are common patterns I search for:</p>
+
+<ul>
+  <li>Usage of the <code class="language-plaintext highlighter-rouge">role</code> attribute. It’s very easy to misuse – roles that don’t exist, that need specific parents or children, that are redundant with the element’s intrinsic role. Roles that have no practical impact without further ARIA attributes (most commonly labels, or state).</li>
+  <li>Usage of ARIA attributes. They are also <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#no_aria_better_bad_aria">easy to misuse</a>.</li>
+  <li>Tables markup. Tables need a caption, and headers that define their scope.</li>
+  <li>Button markup. Misusing anchor tags for buttons.</li>
+  <li>Forms markup. Making sure they use the correct native controls, with sensible attributes.</li>
+  <li>Tabs, menus, dropdowns, toggles. It’s quick to check whether they have any kind of keyboard navigation implemented, and whether they have the correct ARIA attributes set for any given state.</li>
+</ul>
+
+<h3 id="bulk-page-checks">Bulk page checks</h3>
+
+<p>After looking at the source, the next step is to look at pages in “bulk” mode – running automated tools that scan as much of the site as possible. My preference is for:</p>
+
+<ul>
+  <li>The <a href="https://validator.github.io/validator/">V.Nu HTML5 validator</a>. Either the Docker image, or the pre-compiled CLI binaries, <code class="language-plaintext highlighter-rouge">vnu &lt;url&gt;</code>. Generally I will either do this for the whole sitemap, or a subset of URLs.</li>
+  <li><a href="https://github.com/pa11y/pa11y-ci">pa11y-ci</a>, or Pa11y directly, for the whole sitemap or a subset of URLs if there is a need for further automation. <code class="language-plaintext highlighter-rouge">pa11y-ci --config &lt;my config&gt; --sitemap &lt;project sitemap&gt; --json &gt; sitemap-report.json</code>.</li>
+</ul>
+
+<p>Pa11y is worth a special mention here. Pa11y is a wrapper of <a href="https://github.com/dequelabs/axe-core">Axe</a> and <a href="https://github.com/squizlabs/HTML_CodeSniffer">HTML_CodeSniffer</a>, which do the actual accessibility checks. It allows those tools to be run in bulk mode, over many pages, or at different states of a page by interacting with it automatically.</p>
+
+<p><img src="/images/blog/accessibility-audits-getting-started/pa11y-ci-sitemap-mode.png" alt="Screenshot of pa11y-ci output in sitemap mode" /></p>
+
+<blockquote>
+  <p>Testing hundreds of a pages in a one-liner – thanks pa11y-ci!</p>
+</blockquote>
+
+<p>Here is a basic configuration file, summarising how I tend to use it:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">urls</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="na">label</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Homepage</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.example.com/</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="kd">const</span> <span class="nx">basicAuth</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">username:password</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">defaults</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">Authorization</span><span class="p">:</span> <span class="s2">`Basic </span><span class="p">${</span><span class="nx">Buffer</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="nx">basicAuth</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="dl">"</span><span class="s2">base64</span><span class="dl">"</span><span class="p">)}</span><span class="s2">`</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="na">standard</span><span class="p">:</span> <span class="dl">"</span><span class="s2">WCAG2AAA</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">runners</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">axe</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">htmlcs</span><span class="dl">"</span><span class="p">],</span>
+  <span class="p">},</span>
+
+  <span class="na">urls</span><span class="p">:</span> <span class="nx">urls</span><span class="p">.</span><span class="nx">map</span><span class="p">(({</span> <span class="nx">url</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="nx">url</span><span class="p">),</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>🚧 Head over to <a href="https://github.com/thibaudcolas/wagtail-tooling">wagtail-tooling</a> for a more advanced example of using Pa11y on a large-scale project.</p>
+</blockquote>
+
+<h3 id="single-page-checks">Single-page checks</h3>
+
+<p>Now let’s look at intermediate techniques to apply per page. Depending on the site’s size, number of different page types, and budget for the audit, I would generally apply those checks on a sample of between five to ten page types. First,</p>
+
+<ul>
+  <li><a href="https://github.com/pa11y/pa11y">Pa11y</a>, if not already used in CI mode. Make sure it runs both HTML_CodeSniffer and Axe.</li>
+  <li>The <a href="https://accessibilityinsights.io/">Accessibility Insights</a> extension from Microsoft, with its FastPass mode, which also uses Axe under the hood.</li>
+</ul>
+
+<p>Then in the browser, there are a lot of semi-automated tests worth doing:</p>
+
+<ul>
+  <li>With Accessibility Insights – use the colour, heading, landmark tools to quickly visualise the page structure and spot issues.</li>
+  <li>With a screen reader’s navigation (e.g. <a href="https://accessibility.psu.edu/screenreaders/voiceover/">VoiceOver Rotor</a>), inspect all of the page’s landmarks, headings, images, tables, frames, form elements, links and buttons.</li>
+</ul>
+
+<p>Only about <a href="https://alphagov.github.io/accessibility-tool-audit/">30 to 40%</a> of accessibility issues can be found with fully automated tools, so these semi-automated checks are a great way to go beyond that, without having to spend hours manually navigating pages.</p>
+
+<p><img src="/images/blog/accessibility-audits-getting-started/voiceover-rotor-safari.png" alt="Screenshot of the VoiceOver Rotor, in Safari, show a list of landmarks for a site’s homepage. Some landmarks have custom labels." /></p>
+
+<blockquote>
+  <p>The VoiceOver rotor is a very convenient way to get started with screen reader testing for beginners.</p>
+</blockquote>
+
+<h3 id="manual-testing-for-high-value-pages">Manual testing for high-value pages</h3>
+
+<p>Manual tests are the most time-consuming and require the most expertise. We want to navigate the site site in the same way a user of assistive technology would, focusing on parts of the experience that automated tests cannot assess. I generally advise to try the following:</p>
+
+<h4 id="zoom-level">Zoom level</h4>
+
+<ul>
+  <li>Is the whole page usable with 200% to 400% page-level zoom?</li>
+  <li>Does the site support browsers’ font resizing features?</li>
+  <li>Are there any issues when using an on-screen magnifier?</li>
+  <li>Are there areas of the site that require bidirectional scrolling because of the zoom level?</li>
+</ul>
+
+<h4 id="colour">Colour</h4>
+
+<ul>
+  <li>Are there any non-text UI elements for which the contrast is too low?</li>
+  <li>Any :focus or other active states that are reliant on colour alone, or too low contrast?</li>
+</ul>
+
+<h4 id="keyboard-navigation">Keyboard navigation</h4>
+
+<ul>
+  <li>Can the whole page be used with a keyboard only?</li>
+  <li>Are there <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html">keyboard traps</a>?</li>
+  <li>Are there parts of the page where focus should be trapped but isn’t?</li>
+  <li>Are the tab stops logical?</li>
+</ul>
+
+<h4 id="screen-reader-navigation">Screen reader navigation</h4>
+
+<ul>
+  <li>Can the whole page be navigated with a screen reader?</li>
+  <li>Are there relevant things on the page that aren’t being announced?</li>
+  <li>Or things that shouldn’t be announced? E.g. decorative images, or repetitive text.</li>
+</ul>
+
+<h4 id="pointer-touch-and-click-navigation">Pointer (touch and click) navigation</h4>
+
+<ul>
+  <li>Are pointer targets big enough, and not too close to one another?</li>
+  <li>Are there areas of the page that are hard to scroll (especially on mobile)?</li>
+  <li>Are there areas on the page that require horizontal scrolling (especially on mobile)?</li>
+</ul>
+
+<p><strong>This barely scratches the surface</strong>, especially when it comes to screen reader usage. Test with <a href="https://docs.wagtail.io/en/stable/contributing/developing.html#accessibility-targets">multiple screen readers</a> if possible – my go-tos being VoiceOver with Safari on macOS &amp; iOS, and NVDA with Firefox on Windows.</p>
+
+<h2 id="expert-level-accessibility-compliance-testing">Expert-level accessibility compliance testing</h2>
+
+<p>All of the above is great in order to make a website accessible, but to assess compliance with standards, you need to know the actual standards, and test for each of the compliance criteria. For WCAG 2.1, I recommend to:</p>
+
+<ul>
+  <li>Know all of the WCAG2.1 A, AA, AAA success criteria – refer to the <a href="https://alphagov.github.io/wcag-primer/all.html#common-mistakes">GOV.UK WCAG 2.1 Primer</a> for a “cheatsheet” version.</li>
+  <li>For each commonly-used component, know which success criteria are relevant – refer to the official <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG2.1 quick reference</a>.</li>
+  <li>Know about established <a href="https://www.w3.org/TR/wai-aria-practices-1.1/">ARIA practices</a>, and their respective browser support</li>
+</ul>
+
+<p>Once you’re ready, dive through Accessibility Insights’ <a href="https://accessibilityinsights.io/docs/en/web/getstarted/assessment">Assessment tool</a>, which is by far the most advanced freely available accessibility compliance testing tool there is.</p>
+
+<h2 id="beyond-audits">Beyond audits</h2>
+
+<p>Congratulations, you’re now equipped to audit websites! Make the most of those skills to identify improvements on the sites you build and use – but keep in mind that no single audit can deliver ongoing, sustainable accessibility.</p>
+
+<p>Going beyond audits, it’s worth investing into training to create accessible experiences as a default. Also look into opportunities to have accessibility be part of your normal process – whether that’s by having <a href="https://github.com/storybookjs/storybook/tree/master/addons/a11y">tests in your UI library</a> as a developer, or <a href="https://github.com/neon-jungle/wagtail-accessibility">accessibility features in the CMS</a> as an editor. More on that in a future post!</p>
+
+<hr />
+
+<p>Thank you to Jane, Paul, Tom, and Steven for their help with this post.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2020-05-01T19:15:08+01:00" pubdate data-updated="true">2020-05-01 19:15</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/tools/">Tools</a>,
+    
+      <a class="category" href="/categories/automation/">Automation</a>,
+    
+      <a class="category" href="/categories/methodology/">Methodology</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/conventions-to-organize-react-projects" title="Previous Post: Conventions to organize React projects">&laquo; Conventions to organize React projects</a>
+      
+      
+        <a class="basic-alignment right" href="/timing-attacks-everywhere" title="Next Post: Timing attacks, everywhere">Timing attacks, everywhere &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-field-notes">DjangoCon Europe 2021 field notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>
