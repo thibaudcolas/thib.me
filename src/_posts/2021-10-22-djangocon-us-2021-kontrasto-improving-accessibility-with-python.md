@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DjangoCon US 2021: Kontrasto – improving accessibility with Python"
-date: 2021-10-22 17:11:32 +0100
+date: 2021-10-22 17:01:32 +0100
 comments: true
 categories: [Accessibility, Talks, Kontrasto]
 redirect_from:
