@@ -103,6 +103,7 @@
 <ol>
   <li>Make a fork of the project to review, and from then on use that fork for the reviews</li>
   <li>Create an empty branch with <code class="language-plaintext highlighter-rouge">git checkout --orphan</code>, for example <code class="language-plaintext highlighter-rouge">git checkout --orphan review-1-target</code></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">git status</code> and note that all files are staged. Remove all files by unstaging them first with <code class="language-plaintext highlighter-rouge">git reset .</code> and, after, cleanning them with <code class="language-plaintext highlighter-rouge">git clean -df</code>.</li>
   <li>On the empty branch, create an empty commit with <code class="language-plaintext highlighter-rouge">git commit --allow-empty -m 'Empty commit'</code></li>
   <li>Push the empty branch to our fork, <code class="language-plaintext highlighter-rouge">git push -u origin review-1-target</code></li>
   <li>Now let’s go to the branch we want to review (say <code class="language-plaintext highlighter-rouge">master</code>), and create a new branch from it: <code class="language-plaintext highlighter-rouge">git checkout -b review-1</code>.</li>
