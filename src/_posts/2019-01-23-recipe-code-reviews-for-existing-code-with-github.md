@@ -22,11 +22,12 @@ We’ll simply make a pull request, with **all** of the project’s code in it. 
 
 1. Make a fork of the project to review, and from then on use that fork for the reviews
 2. Create an empty branch with `git checkout --orphan`, for example `git checkout --orphan review-1-target`
-3. On the empty branch, create an empty commit with `git commit --allow-empty -m 'Empty commit'`
-4. Push the empty branch to our fork, `git push -u origin review-1-target`
-5. Now let’s go to the branch we want to review (say `master`), and create a new branch from it: `git checkout -b review-1`.
-6. We then want to rebase from our empty/target branch. Make sure to place the empty commit as the first commit on the branch, `git rebase -i review-1-target`
-7. Push the branch to the fork, `git push -u origin review-1`
+3. Run `git status` and note that all files are staged. Remove all files by unstaging them first with `git reset .` and, after, cleanning them with `git clean -df`.
+4. On the empty branch, create an empty commit with `git commit --allow-empty -m 'Empty commit'`
+5. Push the empty branch to our fork, `git push -u origin review-1-target`
+6. Now let’s go to the branch we want to review (say `master`), and create a new branch from it: `git checkout -b review-1`.
+7. We then want to rebase from our empty/target branch. Make sure to place the empty commit as the first commit on the branch, `git rebase -i review-1-target`
+8. Push the branch to the fork, `git push -u origin review-1`
 
 That’is it! You should now be able to create a pull request for the branch, targeting the `review-1-target` branch on your fork so no changes risk making their way to the main repository.
 
