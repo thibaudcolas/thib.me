@@ -1,4 +1,217 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-01-08T03:57:25+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">DjangoCon US 2021: Kontrasto – improving accessibility with Python</title><link href="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python" rel="alternate" type="text/html" title="DjangoCon US 2021: Kontrasto – improving accessibility with Python" /><published>2021-10-22T09:01:32+00:00</published><updated>2021-10-22T09:01:32+00:00</updated><id>https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python</id><content type="html" xml:base="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python">&lt;p&gt;Slides for my &lt;a href=&quot;https://2021.djangocon.us/talks/kontrasto-improving-accessibility-with/&quot;&gt;DjangoCon US 2021 talk&lt;/a&gt; on &lt;a href=&quot;https://kontrasto.netlify.app/&quot;&gt;Kontrasto&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-01-09T00:41:49+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">2022 web conferences</title><link href="https://thib.me/2022-web-conferences" rel="alternate" type="text/html" title="2022 web conferences" /><published>2022-01-08T17:42:03+00:00</published><updated>2022-01-08T17:42:03+00:00</updated><id>https://thib.me/2022-web-conferences</id><content type="html" xml:base="https://thib.me/2022-web-conferences">&lt;p&gt;Here is a small list of conferences I put together for 2022, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;uk-govcamp-2022&quot;&gt;UK GovCamp 2022&lt;/h2&gt;
+
+&lt;p&gt;20th-22nd January 2022. Unconference, CFP on the day.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ukgovcamp.com/2021/11/13/announcing-ukgovcamp-2022/&quot;&gt;https://www.ukgovcamp.com/2021/11/13/announcing-ukgovcamp-2022/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;djangoday-cph-2021-2022&quot;&gt;DjangoDay CPH 2021 2022&lt;/h2&gt;
+
+&lt;p&gt;April/May 2022. No CFP currently.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://2021.djangoday.dk/&quot;&gt;https://2021.djangoday.dk/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pycon-us-2022&quot;&gt;PyCon US 2022&lt;/h2&gt;
+
+&lt;p&gt;April 27, 2022 - May 3, 2022. Salt Lake City. CFP already closed.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://us.pycon.org/2022/&quot;&gt;https://us.pycon.org/2022/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;wagtail-space-us-2022&quot;&gt;Wagtail Space US 2022&lt;/h2&gt;
+
+&lt;p&gt;March 24-26 2022. Cleveland. CFP online, no end date stated.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://us.wagtail.space/&quot;&gt;https://us.wagtail.space/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cityjs-london&quot;&gt;CityJS London&lt;/h2&gt;
+
+&lt;p&gt;March 23-25th 2022. London. CFP online, ending 15/01/2022&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cityjsconf.org/speakers&quot;&gt;https://cityjsconf.org/speakers&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;python-web-conf&quot;&gt;Python Web Conf&lt;/h2&gt;
+
+&lt;p&gt;March 21 - 25 2022. Online. No CFP.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://2022.pythonwebconf.com/&quot;&gt;https://2022.pythonwebconf.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;web-directions-hover&quot;&gt;Web Directions Hover&lt;/h2&gt;
+
+&lt;p&gt;April 1 &amp;amp; 8. Focussed on CSS, in March 2022, CFP closes Dec 31 2021&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mixit-2022&quot;&gt;MiXiT 2022&lt;/h2&gt;
+
+&lt;p&gt;May 24th 25th, 2022, Lyon, France. CFP deadline: 02/02/2022 &lt;a href=&quot;https://www.papercall.io/mixit2022&quot;&gt;https://www.papercall.io/mixit2022&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mixitconf.org/en/&quot;&gt;https://mixitconf.org/en/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;web-directions-lazy-load&quot;&gt;Web Directions Lazy Load&lt;/h2&gt;
+
+&lt;p&gt;May 20 &amp;amp; 27. Focussed on front end performance in May 2022, CFP closes Jan 31 2022&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pycon-italy-2022&quot;&gt;PyCon Italy 2022&lt;/h2&gt;
+
+&lt;p&gt;2-5 June 2022. Florence. CFP deadline: 09/01/2022&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pycon.it/en&quot;&gt;https://pycon.it/en&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jsconf-budapest-2021-2022&quot;&gt;JSConf Budapest 2021 2022&lt;/h2&gt;
+
+&lt;p&gt;2-3 June 2022, Budapest. No CFP currently.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jsconfbp.com/&quot;&gt;https://jsconfbp.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pixel-pioneers-2020-2022&quot;&gt;Pixel Pioneers 2020 2022&lt;/h2&gt;
+
+&lt;p&gt;10 June 2022, Bristol. No CFP.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pixelpioneers.co/&quot;&gt;https://pixelpioneers.co/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;halfstack-newquay-2022&quot;&gt;HalfStack Newquay 2022&lt;/h2&gt;
+
+&lt;p&gt;Friday 1st July 2022, Newquay (/ˈnjuːki/) (UK). CFP under way, no deadline.&lt;/p&gt;
+
+&lt;p&gt;Creative JavaScript and web development.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://halfstackconf.com/newquay/&quot;&gt;https://halfstackconf.com/newquay/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;web-directions-global-scope&quot;&gt;Web Directions Global Scope&lt;/h2&gt;
+
+&lt;p&gt;July 1 &amp;amp; 8. Focused exclusively on JavaScript, in June 2022, CFP closes March 31st 2022&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;halfstack-new-york-2022&quot;&gt;HalfStack New York 2022&lt;/h2&gt;
+
+&lt;p&gt;August 2022, New York. CFP under way, no deadline.&lt;/p&gt;
+
+&lt;p&gt;Creative JavaScript and web development.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://halfstackconf.com/newyork/&quot;&gt;https://halfstackconf.com/newyork/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;web-directions-code&quot;&gt;Web Directions Code&lt;/h2&gt;
+
+&lt;p&gt;September 2 &amp;amp; 9 Focussed on the Web Platform and PWAs in September 2022, CFP closes May 30 2022&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;halfstack-london-2021-2022&quot;&gt;HalfStack London 2021 2022&lt;/h2&gt;
+
+&lt;p&gt;Friday 23rd September 2022, London. CFP under way, no deadline.&lt;/p&gt;
+
+&lt;p&gt;Creative JavaScript and web development.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://halfstackconf.com/london/&quot;&gt;https://halfstackconf.com/london/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;nordic-js-2022&quot;&gt;Nordic JS 2022&lt;/h2&gt;
+
+&lt;p&gt;6-7 October 2022, Stockholm. CFP under way (ish?), no deadline.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nordicjs.com/call-for-speakers&quot;&gt;https://nordicjs.com/call-for-speakers&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;web-directions-aaa&quot;&gt;Web Directions AAA&lt;/h2&gt;
+
+&lt;p&gt;October 21 &amp;amp; 28. Focussed on accessibility for front end developers in October 2022, CFP closes June 30 2022&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;canux-2022&quot;&gt;CanUX 2022&lt;/h2&gt;
+
+&lt;p&gt;3-6 Nov 2022, Ottawa, Canada. No CFP announced yet&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://canux.io/&quot;&gt;https://canux.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ffconf-2022&quot;&gt;ffconf 2022&lt;/h2&gt;
+
+&lt;p&gt;Friday 11 Nov 2022. Brighton. No CFP announced yet&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ffconf.org/&quot;&gt;https://ffconf.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;web-directions-code-leaders&quot;&gt;Web Directions Code Leaders&lt;/h2&gt;
+
+&lt;p&gt;November 30 2022 Code Leaders is a one day focussed engineering leadership conference taking place the day before our Summit. CFPs close July 31.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;web-directions-summit&quot;&gt;Web Directions Summit&lt;/h2&gt;
+
+&lt;p&gt;December 1 &amp;amp; 2. Web Directions Summit takes place in early December in Sydney, and features several tracks–front end engineering, design and product management. CFPs close June 30 2022&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;web-directions-safe&quot;&gt;Web Directions Safe&lt;/h2&gt;
+
+&lt;p&gt;Dec. 9 &amp;amp; 16 2022. Focussed on privacy, security and identity for front end developers in December 2022, CFP closes July 31 2022&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;halfstack-phoenix-2022---2023&quot;&gt;HalfStack Phoenix 2022 - 2023&lt;/h2&gt;
+
+&lt;p&gt;2022 - 2023, Phoenix. CFP under way, ending 15/09/2021.&lt;/p&gt;
+
+&lt;p&gt;Creative JavaScript and web development.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://halfstackconf.com/phoenix/&quot;&gt;https://halfstackconf.com/phoenix/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;halfstack-vienna-2022&quot;&gt;HalfStack Vienna 2022&lt;/h2&gt;
+
+&lt;p&gt;2022 - 2023, Vienna. CFP under way, no deadline.&lt;/p&gt;
+
+&lt;p&gt;Creative JavaScript and web development.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://halfstackconf.com/vienna/&quot;&gt;https://halfstackconf.com/vienna/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;djangocon-us-2022&quot;&gt;DjangoCon US 2022&lt;/h2&gt;
+
+&lt;p&gt;No announcement yet. Expected: San Diego fall 2022.&lt;/p&gt;
+
+&lt;h2 id=&quot;pycon-uk-2020-2021-2022&quot;&gt;PyCon UK 2020 2021 2022?&lt;/h2&gt;
+
+&lt;p&gt;No date announced except for “2021”. Cardiff. No CFP announced yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://2020.pyconuk.org/&quot;&gt;https://2020.pyconuk.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;djangocon-eu-2022&quot;&gt;DjangoCon EU 2022&lt;/h2&gt;
+
+&lt;p&gt;No plans as of yet&lt;/p&gt;
+
+&lt;h2 id=&quot;jamstack-2022&quot;&gt;Jamstack 2022&lt;/h2&gt;
+
+&lt;p&gt;No plans as of yet&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jamstackconf.com/&quot;&gt;https://jamstackconf.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pycon-lithuania-2022&quot;&gt;PyCon Lithuania 2022&lt;/h2&gt;
+
+&lt;p&gt;No plans as of yet&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.pycon.lt/&quot;&gt;https://www.pycon.lt/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;webrebels-2020-2021-2022&quot;&gt;WebRebels 2020 2021 2022&lt;/h2&gt;
+
+&lt;p&gt;No plans as of yet&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.webrebels.org/&quot;&gt;https://www.webrebels.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;europython-2022&quot;&gt;EuroPython 2022&lt;/h2&gt;
+
+&lt;p&gt;No plans as of yet&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ep2021.europython.eu/&quot;&gt;https://ep2021.europython.eu/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;other-lists&quot;&gt;Other lists&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://confs.tech/&quot;&gt;https://confs.tech/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://frontendfront.com/conferences/&quot;&gt;https://frontendfront.com/conferences/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here is a small list of conferences I put together for 2022, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!</summary></entry><entry><title type="html">DjangoCon US 2021: Kontrasto – improving accessibility with Python</title><link href="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python" rel="alternate" type="text/html" title="DjangoCon US 2021: Kontrasto – improving accessibility with Python" /><published>2021-10-22T09:01:32+00:00</published><updated>2021-10-22T09:01:32+00:00</updated><id>https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python</id><content type="html" xml:base="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python">&lt;p&gt;Slides for my &lt;a href=&quot;https://2021.djangocon.us/talks/kontrasto-improving-accessibility-with/&quot;&gt;DjangoCon US 2021 talk&lt;/a&gt; on &lt;a href=&quot;https://kontrasto.netlify.app/&quot;&gt;Kontrasto&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -591,53 +804,4 @@ parsy = &quot;1.1.0&quot;&lt;/span&gt;
 
 &lt;h2 id=&quot;halfstack-vienna-2022&quot;&gt;HalfStack Vienna 2022&lt;/h2&gt;
 
-&lt;p&gt;September 2022, Vienna. &lt;a href=&quot;https://halfstackconf.com/vienna/&quot;&gt;CFP under way&lt;/a&gt;, ending 31/05/2022.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here is a small list of conferences I put together for 2021, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!</summary></entry><entry><title type="html">Accessibility team reloaded</title><link href="https://thib.me/wagtail-accessibility-team-reloaded" rel="alternate" type="text/html" title="Accessibility team reloaded" /><published>2021-02-24T07:42:03+00:00</published><updated>2021-02-24T07:42:03+00:00</updated><id>https://thib.me/wagtail-accessibility-team-reloaded</id><content type="html" xml:base="https://thib.me/wagtail-accessibility-team-reloaded">&lt;p&gt;After &lt;a href=&quot;https://wagtail.io/blog/announcing-wagtail-sub-teams/&quot;&gt;6 months of operations&lt;/a&gt;, we reflect on the progress our &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility&quot;&gt;accessibility team&lt;/a&gt; has made, and go on the lookout for new contributors.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;progress-to-date&quot;&gt;Progress to date&lt;/h2&gt;
-
-&lt;p&gt;Early on, &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Accessibility-team#2020-07-17&quot;&gt;we chose&lt;/a&gt; to give priority to improvements we could make to sites built with Wagtail, rather than the Wagtail admin. Practically, this meant:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Putting together &lt;a href=&quot;https://docs.wagtail.io/en/latest/advanced_topics/accessibility_considerations.html&quot;&gt;Wagtail’s accessibility considerations documentation&lt;/a&gt;, as most of the accessibility issues we identified were either dependent on how Wagtail is used, or could be worked around by implementers.&lt;/li&gt;
-  &lt;li&gt;From this list, we also created a &lt;a href=&quot;https://github.com/wagtail/wagtail/projects/10&quot;&gt;backlog of known accessibility issues&lt;/a&gt;, which we would then proceed to fixing.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Along the way, we also kept working on the &lt;a href=&quot;https://github.com/wagtail/wagtail/issues/6107&quot;&gt;SVG icons&lt;/a&gt; refactoring for the admin, bit by bit.&lt;/p&gt;
-
-&lt;h2 id=&quot;team-operations&quot;&gt;Team operations&lt;/h2&gt;
-
-&lt;p&gt;We ran a short &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Accessibility-team#2021-01-22----team-retrospective&quot;&gt;retrospective&lt;/a&gt; to reflect on the team’s way of working over the last 6 months.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;There were a total of 5 people involved at some point over the 6 months (Scott, Andreas, Nick, Helen, and Thibaud), but only 2 people attended each meeting on average. Not as much as we’d ideally want to.&lt;/li&gt;
-  &lt;li&gt;We met 9 times, for 30min each, scheduled once every two weeks.&lt;/li&gt;
-  &lt;li&gt;Overall we’re happy with what we’ve achieved and how the team works.&lt;/li&gt;
-  &lt;li&gt;We were keen to do more automated tests and manual auditing but didn’t get around to it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;the-future&quot;&gt;The future&lt;/h2&gt;
-
-&lt;p&gt;There are a few changes we will want to see over the next 6-month tenure of the team.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;We’ll want to do a new, comprehensive accessibility audit of Wagtail&lt;/strong&gt;, either for WCAG 2.2 AA or ATAG 2.0. We want to have a clear, public record of how we’re doing.&lt;/p&gt;
-
-&lt;p&gt;We’ll review our contribution guidelines &lt;strong&gt;so accessibility is part and parcel of making changes to Wagtail&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;And we’ll also investigate having &lt;strong&gt;automated accessibility tests built into Wagtail&lt;/strong&gt;. &lt;a href=&quot;https://github.com/neon-jungle/wagtail-accessibility&quot;&gt;wagtail-accessibility&lt;/a&gt; is one of the most popular third-party packages out there, and we want to double down on having this be one of Wagtail’s strengths.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;we-also-want-to-involve-more-people&quot;&gt;We also want to involve more people&lt;/h3&gt;
-
-&lt;p&gt;There’s only so much we can do with two to three of us actively involved – ideally we’d want a team twice that size! All are welcome regardless of skill level or background, and the time commitment is very reasonable. We’re particularly keen to work with people who:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Have personal experience of access and functional needs, or who are regular users of assistive technologies.&lt;/li&gt;
-  &lt;li&gt;Work on User Experience, design, or content – and can help us understand the needs of our users.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And of course web developers who want to have a practical impact on making the web more accessible!&lt;/p&gt;
-
-&lt;p&gt;Does this sound like your kind of jam? If you’re keen to learn more, &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Slack&quot;&gt;reach out to us on Slack&lt;/a&gt; in #accessibility.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">After 6 months of operations, we reflect on the progress our accessibility team has made, and go on the lookout for new contributors.</summary></entry></feed>
+&lt;p&gt;September 2022, Vienna. &lt;a href=&quot;https://halfstackconf.com/vienna/&quot;&gt;CFP under way&lt;/a&gt;, ending 31/05/2022.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here is a small list of conferences I put together for 2021, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!</summary></entry></feed>
