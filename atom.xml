@@ -4,13 +4,69 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2022-01-13T00:45:29+00:00</updated>
+  <updated>2022-01-13T07:55:29+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Wagtail developer jobs: where to look]]></title>
+    <link href="https://thib.me/wagtail-developer-jobs-where-to-look"/>
+    <updated>2022-01-13T06:21:09+00:00</updated>
+    <id>https://thib.me/wagtail-developer-jobs-where-to-look</id>
+    <content type="html"><![CDATA[<p>Looking for a Wagtail job? Or to hire a developer? Here are good places to check.</p>
+
+<!-- more -->
+
+<p>There are more options than you might think! Wagtail being based on Django, anyone with a Django skillset will be productive with Wagtail. As such, this list is equally relevant when searching for or advertising Django developer jobs.</p>
+
+<h2 id="chat">Chat</h2>
+
+<p>This is my favourite option by far, with the #jobs channel in the <a href="https://github.com/wagtail/wagtail/wiki/Slack">Wagtail Slack</a>. Our Slack workspace is very active, with #jobs being one of the most viewed channels. Using chat also makes it much simpler for people to have a conversation about a given job offer.</p>
+
+<p>Here is a screenshot of the workspace’s statistics, showing 250 weekly active users:</p>
+
+<p><a href="/images/blog/wagtail-developer-jobs-where-to-look/wagtailcms-stats-slack.png"><img src="/images/blog/wagtail-developer-jobs-where-to-look/wagtailcms-stats-slack.png" alt="Line chart of Weekly active members and messages posted, over December 2021 and January 2022. For Monday 10/01, there were 247 active members and 55 who posted messages" /></a></p>
+
+<h2 id="newsletters">Newsletters</h2>
+
+<p>This is a good option but the lead time is high, as there are only a few ad placements available per week.</p>
+
+<ul>
+  <li><a href="https://django-news.com/">Django News</a> – regularly includes Wagtail content.</li>
+  <li><a href="https://pycoders.com/">PyCoder’s Weekly</a> – occasional mentions of Wagtail.</li>
+</ul>
+
+<h2 id="conferences">Conferences</h2>
+
+<p>There are a lot of great options here, with a good number of events recurring every year.</p>
+
+<ul>
+  <li><a href="https://www.wagtail.space/">Wagtail Space</a>, and <a href="https://us.wagtail.space/">Wagtail Space US</a></li>
+  <li><a href="https://2021.djangocon.eu/">DjangoCon Europe</a></li>
+  <li><a href="https://djangocon.us/">DjangoCon US</a></li>
+  <li><a href="https://2022.pythonwebconf.com/">Python Web Conference</a> (coming up soon!)</li>
+  <li><a href="https://djangoday.dk/">Django Day Copenhagen</a> (also coming up soon)</li>
+</ul>
+
+<h2 id="job-listings">Job listings</h2>
+
+<p>General-purpose job sites are always worth looking at for job offers matching “Wagtail” or “Django”. There are also a few specialised job boards:</p>
+
+<ul>
+  <li><a href="https://www.djangoproject.com/community/jobs/">Django jobs RSS</a>, aggregating other job boards.</li>
+  <li><a href="https://djangojobs.net/">https://djangojobs.net/</a></li>
+  <li><a href="https://djangogigs.com/">https://djangogigs.com/</a></li>
+</ul>
+
+<h2 id="wagtail-developers">Wagtail developers</h2>
+
+<p>Last but not least, <a href="https://madewithwagtail.org/developers/">Made with Wagtail developer profiles</a> list 200+ organisations that create Wagtail sites, some of which likely will be hiring. The profiles are ordered by number of Wagtail sites published, which helps getting a sense of the size of an organisation’s Wagtail practice.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[aria-invalid="true" with aria-describedby]]></title>
@@ -1835,52 +1891,6 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
 <p>The <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team">accessibility team</a> focuses on improvements to the accessibility of Wagtail, and of websites built with Wagtail. Everyone is welcome regardless of skill level or background.</p>
 
 <p>Find us on the Wagtail Slack in <a href="https://github.com/wagtail/wagtail/wiki/Slack">#accessibility</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Curlylint: Accessibility linting rules]]></title>
-    <link href="https://thib.me/curlylint-accessibility-linting-rules"/>
-    <updated>2020-07-26T02:22:49+00:00</updated>
-    <id>https://thib.me/curlylint-accessibility-linting-rules</id>
-    <content type="html"><![CDATA[<p>Curlylint now comes with 7 accessibility-related rules, ready to use in HTML templates. See <a href="https://www.curlylint.org/docs/rules/all">All rules</a> for details about the individual rules.</p>
-
-<!-- more -->
-
-<p>This is an important milestone for the linter – essentially demonstrating its usefulness once and for all, if that was still needed.</p>
-
-<h2 id="html-best-practices">HTML best practices</h2>
-
-<p>Most of the rules Curlylint currently ships with are very simple “HTML linting” rules for accessibility, based on established best practice:</p>
-
-<ul>
-  <li><a href="https://www.curlylint.org/docs/rules/aria_role"><code class="language-plaintext highlighter-rouge">aria_role</code></a> just checks that <code class="language-plaintext highlighter-rouge">role</code> attributes are valid.</li>
-  <li>Same for <a href="https://www.curlylint.org/docs/rules/html_has_lang"><code class="language-plaintext highlighter-rouge">html_has_lang</code></a>, for the <code class="language-plaintext highlighter-rouge">html</code> <code class="language-plaintext highlighter-rouge">lang</code> attribute.</li>
-  <li>Same for <a href="https://www.curlylint.org/docs/rules/image_alt"><code class="language-plaintext highlighter-rouge">image_alt</code></a>, <a href="https://www.curlylint.org/docs/rules/meta_viewport"><code class="language-plaintext highlighter-rouge">meta_viewport</code></a>, <a href="https://www.curlylint.org/docs/rules/no_autofocus"><code class="language-plaintext highlighter-rouge">no_autofocus</code></a>, <a href="https://www.curlylint.org/docs/rules/tabindex_no_positive"><code class="language-plaintext highlighter-rouge">tabindex_no_positive</code></a>!</li>
-</ul>
-
-<p>See a pattern? All of these are variations on the same theme of “HTML attributes should only contain a limited range of values based on established best practices”. This is great news for this project – it means there can be quite a lot of results achieved with minimal complexity when it comes to creating individual rules.</p>
-
-<p>In the future, this could easily be taken further to cover:</p>
-
-<ul>
-  <li>Security best practices, for example <code class="language-plaintext highlighter-rouge">rel="noopener"</code>, or disallowing <code class="language-plaintext highlighter-rouge">javascript:</code> URLs in <code class="language-plaintext highlighter-rouge">href</code>.</li>
-  <li>HTML maintainability best practices, for example disallowing duplicate class attributes.</li>
-  <li>And of course, more accessibility and ARIA best practices.</li>
-</ul>
-
-<p>Obligatory mention of <a href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a>, which has been a huge source of inspiration. Generally, modern React tooling has this figured out, with extensive static analysis available. For me, this isn’t just a nice-to-have – it’s hard to always keel all of those best practices in mind, and linting is there to automate this for you. Note this isn’t just React – Vue has its <a href="https://github.com/maranran/eslint-plugin-vue-a11y">eslint-plugin-vue-a11y</a> too!</p>
-
-<h2 id="templates-best-practices">Templates best practices</h2>
-
-<p>This doesn’t have to stop at HTML. Curlylint already supports parsing template syntax, attempting to be usable as a linter for Jinja, Twig, Liquid, <a href="https://www.curlylint.org/docs/template-languages">and the likes</a>. We can also have rules to enforce best practices for this template syntax.</p>
-
-<p>The first example of such a rule is <a href="https://www.curlylint.org/docs/rules/django_forms_rendering"><code class="language-plaintext highlighter-rouge">django_forms_rendering</code></a>, which restricts how forms can be rendered in Django projects, for accessibility reasons. I’m very excited about opportunities like this to codify and share best practices in a way that scales well.</p>
-
-<ul>
-  <li>Hopefully there will be more <a href="https://github.com/django/deps/pull/69">linting rules for Django</a> coming in the future.</li>
-  <li>And more linting rules <a href="https://github.com/wagtail/wagtail/issues/6090">for Wagtail</a> as well.</li>
-</ul>
 ]]></content>
   </entry>
   

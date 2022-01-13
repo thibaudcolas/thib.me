@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-01-13T00:45:29+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">aria-invalid=”true” with aria-describedby</title><link href="https://thib.me/aria-invalid-true-with-aria-describedby" rel="alternate" type="text/html" title="aria-invalid=&quot;true&quot; with aria-describedby" /><published>2022-01-12T22:42:03+00:00</published><updated>2022-01-12T22:42:03+00:00</updated><id>https://thib.me/aria-invalid-true-with-aria-describedby</id><content type="html" xml:base="https://thib.me/aria-invalid-true-with-aria-describedby">&lt;p&gt;As part of Django’s &lt;a href=&quot;https://github.com/django/deps/blob/main/accepted/0011-accessibility-team.rst&quot;&gt;accessibility team&lt;/a&gt;, I’ve been doing a lot of research into specific patterns. Today – &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-required=&quot;true&quot;&lt;/code&gt; combined with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; for error messages! Is it good? Is it redundant? What do authorative sources say?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-01-13T07:55:29+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Wagtail developer jobs: where to look</title><link href="https://thib.me/wagtail-developer-jobs-where-to-look" rel="alternate" type="text/html" title="Wagtail developer jobs: where to look" /><published>2022-01-13T06:21:09+00:00</published><updated>2022-01-13T06:21:09+00:00</updated><id>https://thib.me/wagtail-developer-jobs-where-to-look</id><content type="html" xml:base="https://thib.me/wagtail-developer-jobs-where-to-look">&lt;p&gt;Looking for a Wagtail job? Or to hire a developer? Here are good places to check.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;There are more options than you might think! Wagtail being based on Django, anyone with a Django skillset will be productive with Wagtail. As such, this list is equally relevant when searching for or advertising Django developer jobs.&lt;/p&gt;
+
+&lt;h2 id=&quot;chat&quot;&gt;Chat&lt;/h2&gt;
+
+&lt;p&gt;This is my favourite option by far, with the #jobs channel in the &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Slack&quot;&gt;Wagtail Slack&lt;/a&gt;. Our Slack workspace is very active, with #jobs being one of the most viewed channels. Using chat also makes it much simpler for people to have a conversation about a given job offer.&lt;/p&gt;
+
+&lt;p&gt;Here is a screenshot of the workspace’s statistics, showing 250 weekly active users:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/wagtail-developer-jobs-where-to-look/wagtailcms-stats-slack.png&quot;&gt;&lt;img src=&quot;/images/blog/wagtail-developer-jobs-where-to-look/wagtailcms-stats-slack.png&quot; alt=&quot;Line chart of Weekly active members and messages posted, over December 2021 and January 2022. For Monday 10/01, there were 247 active members and 55 who posted messages&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;newsletters&quot;&gt;Newsletters&lt;/h2&gt;
+
+&lt;p&gt;This is a good option but the lead time is high, as there are only a few ad placements available per week.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://django-news.com/&quot;&gt;Django News&lt;/a&gt; – regularly includes Wagtail content.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pycoders.com/&quot;&gt;PyCoder’s Weekly&lt;/a&gt; – occasional mentions of Wagtail.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conferences&quot;&gt;Conferences&lt;/h2&gt;
+
+&lt;p&gt;There are a lot of great options here, with a good number of events recurring every year.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.wagtail.space/&quot;&gt;Wagtail Space&lt;/a&gt;, and &lt;a href=&quot;https://us.wagtail.space/&quot;&gt;Wagtail Space US&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://2021.djangocon.eu/&quot;&gt;DjangoCon Europe&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://djangocon.us/&quot;&gt;DjangoCon US&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://2022.pythonwebconf.com/&quot;&gt;Python Web Conference&lt;/a&gt; (coming up soon!)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://djangoday.dk/&quot;&gt;Django Day Copenhagen&lt;/a&gt; (also coming up soon)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;job-listings&quot;&gt;Job listings&lt;/h2&gt;
+
+&lt;p&gt;General-purpose job sites are always worth looking at for job offers matching “Wagtail” or “Django”. There are also a few specialised job boards:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.djangoproject.com/community/jobs/&quot;&gt;Django jobs RSS&lt;/a&gt;, aggregating other job boards.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://djangojobs.net/&quot;&gt;https://djangojobs.net/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://djangogigs.com/&quot;&gt;https://djangogigs.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;wagtail-developers&quot;&gt;Wagtail developers&lt;/h2&gt;
+
+&lt;p&gt;Last but not least, &lt;a href=&quot;https://madewithwagtail.org/developers/&quot;&gt;Made with Wagtail developer profiles&lt;/a&gt; list 200+ organisations that create Wagtail sites, some of which likely will be hiring. The profiles are ordered by number of Wagtail sites published, which helps getting a sense of the size of an organisation’s Wagtail practice.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Looking for a Wagtail job? Or to hire a developer? Here are good places to check.</summary></entry><entry><title type="html">aria-invalid=”true” with aria-describedby</title><link href="https://thib.me/aria-invalid-true-with-aria-describedby" rel="alternate" type="text/html" title="aria-invalid=&quot;true&quot; with aria-describedby" /><published>2022-01-12T22:42:03+00:00</published><updated>2022-01-12T22:42:03+00:00</updated><id>https://thib.me/aria-invalid-true-with-aria-describedby</id><content type="html" xml:base="https://thib.me/aria-invalid-true-with-aria-describedby">&lt;p&gt;As part of Django’s &lt;a href=&quot;https://github.com/django/deps/blob/main/accepted/0011-accessibility-team.rst&quot;&gt;accessibility team&lt;/a&gt;, I’ve been doing a lot of research into specific patterns. Today – &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-required=&quot;true&quot;&lt;/code&gt; combined with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; for error messages! Is it good? Is it redundant? What do authorative sources say?&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -774,75 +821,4 @@ so yeah there is legislation in the US, in the EU, and really all around the wor
 
 &lt;h3 id=&quot;thank-you-️&quot;&gt;Thank you! ❤️&lt;/h3&gt;
 
-&lt;p&gt;Thank you I hope you enjoyed this and I’ll definitely be available later on to answer any questions.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">This is a lightning talk I gave at PyCon US 2021’s Maintainers Summit, intended for an audience of project maintainers / open-source contributors.</summary></entry><entry><title type="html">Curlylint: Quality-of-life improvements</title><link href="https://thib.me/curlylint-quality-of-life-improvements" rel="alternate" type="text/html" title="Curlylint: Quality-of-life improvements" /><published>2021-04-25T09:22:49+00:00</published><updated>2021-04-25T09:22:49+00:00</updated><id>https://thib.me/curlylint-quality-of-life-improvements</id><content type="html" xml:base="https://thib.me/curlylint-quality-of-life-improvements">&lt;p&gt;Curlylint v0.13.0 is out. It’s a relatively minor release, but comes with a few nice-to-haves for users, and a lot of behind-the-scenes project changes.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;modern-python-support&quot;&gt;Modern Python support&lt;/h2&gt;
-
-&lt;p&gt;Curlylint now officially supports Python 3.9, and (tentatively) Python 3.10, based on the 6th alpha release. From now on, you can expect support for all Python versions &lt;a href=&quot;https://devguide.python.org/#status-of-python-branches&quot;&gt;actively supported by CPython maintainers&lt;/a&gt;. In the future, this will also mean actively removing support for Python versions that reach their scheduled end-of-life.&lt;/p&gt;
-
-&lt;h2 id=&quot;removed-extras-for-development-dependencies&quot;&gt;Removed extras for development dependencies&lt;/h2&gt;
-
-&lt;p&gt;Python packaging is very messy. I’ve recently started using the &lt;a href=&quot;https://python-poetry.org/&quot;&gt;Poetry&lt;/a&gt; package manager at work, primarily for the benefit of having lockfiles to pin transitive dependencies on application-style projects (a must, in my opinion). Here is an excerpt of what installing curlylint looks like in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;poetry.lock&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-ini highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;[[package]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;curlylint&quot;&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;0.12.2&quot;&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;description&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; Experimental HTML templates linting for Jinja, Nunjucks, Django templates, Twig, Liquid&quot;&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;category&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;main&quot;&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;python-versions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;=3.6&quot;&lt;/span&gt;
-
-&lt;span class=&quot;nn&quot;&gt;[package.dependencies]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;attrs&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;=17.2.0&quot;&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;click&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;=6.5&quot;&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;dataclasses&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;{version = &quot;&amp;gt;=0.6&quot;, markers = &quot;python_version &amp;lt; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3.7&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;}
-parsy = &quot;1.1.0&quot;&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;pathspec&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;=0.6,&amp;lt;1&quot;&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;toml&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;=0.9.4&quot;&lt;/span&gt;
-
-&lt;span class=&quot;nn&quot;&gt;[package.extras]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;[&quot;black (==19.10b0)&quot;, &quot;flake8 (==3.8.4)&quot;, &quot;mypy (==0.812)&quot;, &quot;pytest (==6.2.2)&quot;, &quot;coverage (==5.4)&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I find this last line very puzzling – there really should be no need for dependencies intended only for development to be visible in the published package. I don’t want curlylint’s development dependencies changing from release to release to cause noise in upgrade diffs, hence why the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dev&lt;/code&gt; extra has been removed.&lt;/p&gt;
-
-&lt;p&gt;It’s worth saying Poetry has otherwise been a pleasure to work with, with only a few minor inconveniences like this one. I would happily recommend it to people wanting more out of their Python package management.&lt;/p&gt;
-
-&lt;h2 id=&quot;new---template-tags-cli-flag&quot;&gt;New &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--template-tags&lt;/code&gt; CLI flag&lt;/h2&gt;
-
-&lt;p&gt;As the &lt;a href=&quot;https://www.curlylint.org/docs/command-line-usage#--template-tags&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--template-tags&lt;/code&gt; documentation&lt;/a&gt; now states, this makes Curlylint aware of custom tags used in templates, so the parser can understand they contain HTML content to go through.&lt;/p&gt;
-
-&lt;p&gt;This option was previously only available via a TOML configuration file, via the (now deprecated) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jinja-custom-elements-names&lt;/code&gt; / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jinja_custom_elements_names&lt;/code&gt; setting. The new setting works the same, but can also be set via CLI flags.&lt;/p&gt;
-
-&lt;h2 id=&quot;behind-the-scenes-changes&quot;&gt;Behind-the-scenes changes&lt;/h2&gt;
-
-&lt;p&gt;There really is only one I want to highlight – improvements to Curlylint’s test suite, which have resulted in a &lt;a href=&quot;https://coveralls.io/github/thibaudcolas/curlylint?branch=main&quot;&gt;14% increase in test coverage&lt;/a&gt;. While test coverage percentages generally don’t mean much, in this case this means:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The command line interface now has unit tests. While relatively basic in the current iteration, they should be very easy to add to.&lt;/li&gt;
-  &lt;li&gt;The parser has more unit tests, and they are now in line with the rest of the test suite.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://coveralls.io/github/thibaudcolas/curlylint&quot;&gt;&lt;img src=&quot;/images/blog/curlylint-quality-of-life-improvements/coverage-over-time.png&quot; alt=&quot;Screen capture of the Coveralls coverage score over time as an area chart, from 59% in early March to 74% now&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://coveralls.io/&quot;&gt;Coveralls&lt;/a&gt; shows coverage increasing from 59.39% in early March to 74% in late April.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Having comprehensive unit tests really matters to me as a maintainer, and from now on it should be much more realistic to expect all changes to the project to come with corresponding unit tests.&lt;/p&gt;
-
-&lt;h2 id=&quot;up-next&quot;&gt;Up next&lt;/h2&gt;
-
-&lt;p&gt;There are a lot of &lt;a href=&quot;https://github.com/thibaudcolas/curlylint/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Aparser&quot;&gt;parser bugs&lt;/a&gt; I will now feel much more comfortable approaching, due to having a way to easily write tests for them.&lt;/p&gt;
-
-&lt;p&gt;Short-term, I want to make sure to get to all of the open pull request, hopefully fully clearing the backlog. I can see people are responding very well to Curlylint despite its experimental nature, and are eager to help making it more useful:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/thibaudcolas/curlylint/pull/53&quot;&gt;#53 Optional HTML container parsing for if-else-endif type code&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/thibaudcolas/curlylint/pull/75&quot;&gt;#75 Add test for unresolved missing alt attribute inside django block (#72)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/thibaudcolas/curlylint/pull/76&quot;&gt;#76 Use types_or directive for hook instead of files&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For me, the most immediate next step will be presenting Curlylint at &lt;a href=&quot;https://us.pycon.org/2021/&quot;&gt;PyCon US 2021&lt;/a&gt;! I hope to get critical feedback on the tool, and am also working on an “online playground” version to try lint templates without installing anything, we should make it simpler for people to try out the linter.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Curlylint v0.13.0 is out. It’s a relatively minor release, but comes with a few nice-to-haves for users, and a lot of behind-the-scenes project changes.</summary></entry></feed>
+&lt;p&gt;Thank you I hope you enjoyed this and I’ll definitely be available later on to answer any questions.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">This is a lightning talk I gave at PyCon US 2021’s Maintainers Summit, intended for an audience of project maintainers / open-source contributors.</summary></entry></feed>
