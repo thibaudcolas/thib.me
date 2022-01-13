@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wagtail developer jobs: where to look"
-date: 2022-01-13 13:21:09 +0000
+date: 2022-01-13 06:21:09 +0000
 comments: true
 categories: [Careers, Community, Wagtail, Django]
 canonical: https://wagtail.io/blog/wagtail-developer-jobs-where-to-look/
