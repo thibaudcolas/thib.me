@@ -4,13 +4,111 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2022-01-09T19:29:50+00:00</updated>
+  <updated>2022-01-13T00:45:29+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[aria-invalid="true" with aria-describedby]]></title>
+    <link href="https://thib.me/aria-invalid-true-with-aria-describedby"/>
+    <updated>2022-01-12T22:42:03+00:00</updated>
+    <id>https://thib.me/aria-invalid-true-with-aria-describedby</id>
+    <content type="html"><![CDATA[<p>As part of Django’s <a href="https://github.com/django/deps/blob/main/accepted/0011-accessibility-team.rst">accessibility team</a>, I’ve been doing a lot of research into specific patterns. Today – <code class="language-plaintext highlighter-rouge">aria-required="true"</code> combined with <code class="language-plaintext highlighter-rouge">aria-describedby</code> for error messages! Is it good? Is it redundant? What do authorative sources say?</p>
+
+<!-- more -->
+
+<p><em>This is a copy of my <a href="https://github.com/django/django/pull/15036#issuecomment-1008738687">GitHub comment on django/django#15036</a> to keep for future reference</em>.</p>
+
+<h2 id="tldr">TL;DR;</h2>
+
+<p>TL;DR; “<code class="language-plaintext highlighter-rouge">aria-invalid ="true"</code> + <code class="language-plaintext highlighter-rouge">aria-describedby</code> pointing at error message” seems to me like it would be the best for Django. It’s recommended in the non-normative <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21">ARIA21</a> technique, and by a renowned expert in the field. I found one pattern that seems better than it in some cases, but I don’t think it’s as good of a fit for Django.</p>
+
+<h2 id="recommendations-for-the-pattern">Recommendations for the pattern</h2>
+
+<p>I could find the following sources recommending <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> usage alongside <code class="language-plaintext highlighter-rouge">aria-describedby</code>:</p>
+
+<ul>
+  <li>The official (non-normative) <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21">ARIA21 Using Aria-Invalid to Indicate An Error Field</a> technique from WCAG:</li>
+</ul>
+
+<blockquote>
+  <p>When visible text is used to programmatically identify a failed field and / or convey how the error can be corrected, setting aria-invalid to “true” is not required from a strict compliance standpoint but may still provide helpful information for users.</p>
+</blockquote>
+
+<ul>
+  <li>A <a href="https://web-a11y.slack.com/archives/C042TSFGN/p1557348802029700">post from Léonie Watson on the web-a11y Slack</a>:</li>
+</ul>
+
+<blockquote>
+  <p>[…]
+Or you can use aria-describedby to make the association, like this:
+[…] &gt; <code class="language-plaintext highlighter-rouge">&lt;input type="text" id="this" aria-describedby="error" ...&gt;</code> &gt; […] &gt; <code class="language-plaintext highlighter-rouge">&lt;p id="error"&gt;Don't forget to enter your first name!&lt;/p&gt;</code></p>
+
+  <p>You can also use aria-invalid=”true” on the input, as you have done, for belt and braces information.</p>
+</blockquote>
+
+<p>Those two sources indicate <code class="language-plaintext highlighter-rouge">aria-describedby</code> pointing at the error message could be sufficient. Using <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> basically just helps unambiguously identifying fields that are in error, rather than relying on the wording of the error messages conveyed via <code class="language-plaintext highlighter-rouge">aria-describedby</code> only.</p>
+
+<h2 id="alternative">Alternative</h2>
+
+<p>I couldn’t find anyone actively recommending against this combination, however the GOV.UK design system <a href="https://github.com/alphagov/govuk-frontend/issues/1168">decided not to use it</a>. They instead added an <a href="https://design-system.service.gov.uk/components/error-message/#label">“Error:” prefix for all error messages</a>, as visually hidden / screen-reader-only text:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[…]
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"national-insurance-number-error"</span> <span class="na">class=</span><span class="s">"govuk-error-message"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"govuk-visually-hidden"</span><span class="nt">&gt;</span>Error:<span class="nt">&lt;/span&gt;</span> Enter a National Insurance
+  number in the correct format
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;input</span>
+  <span class="na">class=</span><span class="s">"govuk-input govuk-input--error"</span>
+  <span class="na">id=</span><span class="s">"national-insurance-number"</span>
+  <span class="na">name=</span><span class="s">"national-insurance-number"</span>
+  <span class="na">type=</span><span class="s">"text"</span>
+  <span class="na">aria-describedby=</span><span class="s">"national-insurance-number-hint national-insurance-number-error"</span>
+<span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>I can see some clear advantages to this:</p>
+
+<ul>
+  <li>It’s equally as unambiguous for screen reader users that the fields are in error (compare Django’s <code class="language-plaintext highlighter-rouge">This field is required.</code> message or <code class="language-plaintext highlighter-rouge">Enter a whole number.</code> with <code class="language-plaintext highlighter-rouge">Error: This field is required.</code> or <code class="language-plaintext highlighter-rouge">Error: Enter a whole number.</code>).</li>
+  <li>“Error:” is more plain language than “Invalid entry”</li>
+  <li>Since this doesn’t rely on ARIA, screen reader support for this is better than <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code></li>
+</ul>
+
+<p>I can also see some issues:</p>
+
+<ul>
+  <li>It’s more opinionated markup to maintain / less “by-the-book semantic HTML”</li>
+  <li>Django’s error messages are meant to be customized with no oversight on how implementers will ultimately word them, so adding a prefix wouldn’t always be appropriate.</li>
+  <li>It’s one more string that will need translations (not necessarily a big deal for such a generic word but does constraint the languages with which Django’s forms rendering could be used).</li>
+</ul>
+
+<h2 id="recommendation-for-django">Recommendation for Django</h2>
+
+<p>Based on this, for Django, I’d still recommend <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> wherever possible, and <code class="language-plaintext highlighter-rouge">aria-describedby</code> for the error message wherever possible. So both together, wherever possible. It’s a more established pattern than bespoke error message prefixes, and lower maintenance. <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> support isn’t as good, but good enough for something that’s used <em>in addition to</em> <code class="language-plaintext highlighter-rouge">aria-describedby</code>.</p>
+
+<h2 id="caveats">Caveats</h2>
+
+<ul>
+  <li>This is based on <a href="https://a11ysupport.io/">a11ysupport.io</a> data, which only tested support on <code class="language-plaintext highlighter-rouge">&lt;input type="text"&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;select&gt;</code>.</li>
+  <li>I only looked at <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code>. There are other <code class="language-plaintext highlighter-rouge">aria-invalid</code> values, which are harder to use and I wouldn’t recommend at this time.</li>
+</ul>
+
+<hr />
+
+<p>Further references:</p>
+
+<ul>
+  <li><a href="https://a11ysupport.io/tech/aria/aria-invalid_attribute">a11ysupport.io support data for aria-invalid</a></li>
+  <li><a href="https://a11ysupport.io/tech/aria/aria-describedby_attribute">a11ysupport.io support data for aria-describedby</a></li>
+  <li><a href="https://www.powermapper.com/tests/screen-readers/aria/">PowerMapper support data for aria-describedby</a></li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[2022 web conferences]]></title>
@@ -1783,122 +1881,6 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
   <li>Hopefully there will be more <a href="https://github.com/django/deps/pull/69">linting rules for Django</a> coming in the future.</li>
   <li>And more linting rules <a href="https://github.com/wagtail/wagtail/issues/6090">for Wagtail</a> as well.</li>
 </ul>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Curlylint: Brand new rules documentation]]></title>
-    <link href="https://thib.me/curlylint-brand-new-rules-documentation"/>
-    <updated>2020-07-18T22:05:21+00:00</updated>
-    <id>https://thib.me/curlylint-brand-new-rules-documentation</id>
-    <content type="html"><![CDATA[<p>Have I mentioned <a href="/welcome-to-curlylint">how important I think it is for a linter to have great docs</a>? Well, now is the time for Curlylint to live up to this!</p>
-
-<!-- more -->
-
-<h2 id="new-documentation-format-for-rules">New documentation format for rules</h2>
-
-<p>Up until now the rules’ documentation was pretty sad, essentially limited to what could fit in the project’s README. Now… take a look:</p>
-
-<p><a href="https://www.curlylint.org/docs/rules/image_alt"><img src="/images/blog/curlylint-brand-new-rules-documentation/new-rules-docs.png" alt="Screen capture of the image_alt rule’s documentation" /></a></p>
-
-<ul>
-  <li>The rule’s different configuration options are clearly visible, copy-pasteable, each with a description.</li>
-  <li>Cases where the rule check “succeeds” are well documented, alongside a comment, and matching configuration.</li>
-  <li>Same for problematic cases, which even show the actual error message!</li>
-  <li>All of this is toggle-able between the different configuration formats supported by Curlylint!</li>
-  <li>There are follow-up resources available for developers who want more information about the rule.</li>
-</ul>
-
-<p>This feels like a pretty big step up compared to the previous documentation, and should hopefully make it as easy as possible for people to start using the linter for their templates.</p>
-
-<h2 id="how-this-works">How this works</h2>
-
-<p>The majority of the rules’ documentation is generated from their metadata:</p>
-
-<h3 id="json-schema">JSON Schema</h3>
-
-<p>The configuration options are all defined with <a href="https://json-schema.org/">JSON Schema</a>.Currently this is only used to generate the documentation, but in the future I would also like to make this validate configurations as Curlylint runs.</p>
-
-<p>JSON Schema is particularly good for this because it has built-in support for the schema to be self-documenting – adding titles, descriptions, and examples, which are all used to generate the documentation. Here is the schema of the <a href="https://www.curlylint.org/docs/rules/html_has_lang"><code class="language-plaintext highlighter-rouge">html_has_lang</code></a> rule as an example:</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"const"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The `lang` attribute must be present."</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"examples"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">true</span><span class="p">]</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The `lang` attribute must match the configured language tag."</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"examples"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"en-US"</span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<h3 id="test-cases">Test cases</h3>
-
-<p>The success / fail sections are simply coming from the project’s test suite! I always prefer to invest time writing extensive unit tests for projects of this kind. Some of the test cases simply have a flag marking them as “documentation examples”:</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check lang is present"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html lang=</span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">&gt;&lt;/html&gt;"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"example"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"config"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"output"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<p>It’s the same story for “fail” cases, where the annotations are simply generated from the expected output (issues):</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Missing"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html&gt;&lt;/html&gt;"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"example"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"config"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"output"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test.html"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"column"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"line"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"html_has_lang"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The `&lt;html&gt;` tag should have a `lang` attribute with a valid value, describing the main language of the page"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<h3 id="mdx">MDX</h3>
-
-<p>All of this comes together with <a href="https://mdxjs.com/">MDX</a>, a Markdown-inspired syntax which makes it possible to use JSX directly inside documents, thereby making it possible to use React components, like the language tabs and code snippets with annotations:</p>
-
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Tabs</span>
-  <span class="na">groupId</span><span class="p">=</span><span class="s">"config-language"</span>
-  <span class="na">defaultValue</span><span class="p">=</span><span class="s">"toml"</span>
-  <span class="na">values</span><span class="p">=</span><span class="si">{</span><span class="p">[</span>
-    <span class="p">{</span> <span class="na">label</span><span class="p">:</span> <span class="dl">"</span><span class="s2">TOML</span><span class="dl">"</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="dl">"</span><span class="s2">toml</span><span class="dl">"</span> <span class="p">},</span>
-    <span class="p">{</span> <span class="na">label</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Shell</span><span class="dl">"</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="dl">"</span><span class="s2">shell</span><span class="dl">"</span> <span class="p">},</span>
-  <span class="p">]</span><span class="si">}</span>
-<span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nc">TabItem</span> <span class="na">value</span><span class="p">=</span><span class="s">"toml"</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nc">CodeSnippet</span>
-      <span class="na">snippet</span><span class="p">=</span><span class="si">{</span><span class="s2">`# The </span><span class="se">\`</span><span class="s2">alt</span><span class="se">\`</span><span class="s2"> attribute must be present.\nimage_alt = true`</span><span class="si">}</span>
-      <span class="na">annotations</span><span class="p">=</span><span class="si">{</span><span class="p">[]</span><span class="si">}</span>
-      <span class="na">lang</span><span class="p">=</span><span class="s">"toml"</span>
-    <span class="p">/&gt;</span>
-  <span class="p">&lt;/</span><span class="nc">TabItem</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nc">TabItem</span> <span class="na">value</span><span class="p">=</span><span class="s">"shell"</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nc">CodeSnippet</span>
-      <span class="na">snippet</span><span class="p">=</span><span class="si">{</span><span class="s2">`# The </span><span class="se">\`</span><span class="s2">alt</span><span class="se">\`</span><span class="s2"> attribute must be present.\ncurlylint --rule 'image_alt: true' .`</span><span class="si">}</span>
-      <span class="na">annotations</span><span class="p">=</span><span class="si">{</span><span class="p">[]</span><span class="si">}</span>
-      <span class="na">lang</span><span class="p">=</span><span class="s">"shell"</span>
-    <span class="p">/&gt;</span>
-  <span class="p">&lt;/</span><span class="nc">TabItem</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nc">Tabs</span><span class="p">&gt;</span>
-</code></pre></div></div>
-
-<p>Docusaurus supports MDX out of the box, and provides the “Tabs” components. The CodeSnippet component is originally from Docusaurus but has been customized to support basic annotations.</p>
 ]]></content>
   </entry>
   

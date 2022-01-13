@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-01-09T19:29:50+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">2022 web conferences</title><link href="https://thib.me/2022-web-conferences" rel="alternate" type="text/html" title="2022 web conferences" /><published>2022-01-08T17:42:03+00:00</published><updated>2022-01-08T17:42:03+00:00</updated><id>https://thib.me/2022-web-conferences</id><content type="html" xml:base="https://thib.me/2022-web-conferences">&lt;p&gt;Here is a small list of conferences I put together for 2022, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-01-13T00:45:29+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">aria-invalid=”true” with aria-describedby</title><link href="https://thib.me/aria-invalid-true-with-aria-describedby" rel="alternate" type="text/html" title="aria-invalid=&quot;true&quot; with aria-describedby" /><published>2022-01-12T22:42:03+00:00</published><updated>2022-01-12T22:42:03+00:00</updated><id>https://thib.me/aria-invalid-true-with-aria-describedby</id><content type="html" xml:base="https://thib.me/aria-invalid-true-with-aria-describedby">&lt;p&gt;As part of Django’s &lt;a href=&quot;https://github.com/django/deps/blob/main/accepted/0011-accessibility-team.rst&quot;&gt;accessibility team&lt;/a&gt;, I’ve been doing a lot of research into specific patterns. Today – &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-required=&quot;true&quot;&lt;/code&gt; combined with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; for error messages! Is it good? Is it redundant? What do authorative sources say?&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;em&gt;This is a copy of my &lt;a href=&quot;https://github.com/django/django/pull/15036#issuecomment-1008738687&quot;&gt;GitHub comment on django/django#15036&lt;/a&gt; to keep for future reference&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;tldr&quot;&gt;TL;DR;&lt;/h2&gt;
+
+&lt;p&gt;TL;DR; “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid =&quot;true&quot;&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; pointing at error message” seems to me like it would be the best for Django. It’s recommended in the non-normative &lt;a href=&quot;https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21&quot;&gt;ARIA21&lt;/a&gt; technique, and by a renowned expert in the field. I found one pattern that seems better than it in some cases, but I don’t think it’s as good of a fit for Django.&lt;/p&gt;
+
+&lt;h2 id=&quot;recommendations-for-the-pattern&quot;&gt;Recommendations for the pattern&lt;/h2&gt;
+
+&lt;p&gt;I could find the following sources recommending &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt; usage alongside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The official (non-normative) &lt;a href=&quot;https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21&quot;&gt;ARIA21 Using Aria-Invalid to Indicate An Error Field&lt;/a&gt; technique from WCAG:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;When visible text is used to programmatically identify a failed field and / or convey how the error can be corrected, setting aria-invalid to “true” is not required from a strict compliance standpoint but may still provide helpful information for users.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A &lt;a href=&quot;https://web-a11y.slack.com/archives/C042TSFGN/p1557348802029700&quot;&gt;post from Léonie Watson on the web-a11y Slack&lt;/a&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[…]
+Or you can use aria-describedby to make the association, like this:
+[…] &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;input type=&quot;text&quot; id=&quot;this&quot; aria-describedby=&quot;error&quot; ...&amp;gt;&lt;/code&gt; &amp;gt; […] &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;p id=&quot;error&quot;&amp;gt;Don&apos;t forget to enter your first name!&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+  &lt;p&gt;You can also use aria-invalid=”true” on the input, as you have done, for belt and braces information.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Those two sources indicate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; pointing at the error message could be sufficient. Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt; basically just helps unambiguously identifying fields that are in error, rather than relying on the wording of the error messages conveyed via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; only.&lt;/p&gt;
+
+&lt;h2 id=&quot;alternative&quot;&gt;Alternative&lt;/h2&gt;
+
+&lt;p&gt;I couldn’t find anyone actively recommending against this combination, however the GOV.UK design system &lt;a href=&quot;https://github.com/alphagov/govuk-frontend/issues/1168&quot;&gt;decided not to use it&lt;/a&gt;. They instead added an &lt;a href=&quot;https://design-system.service.gov.uk/components/error-message/#label&quot;&gt;“Error:” prefix for all error messages&lt;/a&gt;, as visually hidden / screen-reader-only text:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[…]
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;national-insurance-number-error&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;govuk-error-message&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;govuk-visually-hidden&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Error:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; Enter a National Insurance
+  number in the correct format
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;govuk-input govuk-input--error&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;national-insurance-number&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;national-insurance-number&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;aria-describedby=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;national-insurance-number-hint national-insurance-number-error&quot;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I can see some clear advantages to this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It’s equally as unambiguous for screen reader users that the fields are in error (compare Django’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;This field is required.&lt;/code&gt; message or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enter a whole number.&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Error: This field is required.&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Error: Enter a whole number.&lt;/code&gt;).&lt;/li&gt;
+  &lt;li&gt;“Error:” is more plain language than “Invalid entry”&lt;/li&gt;
+  &lt;li&gt;Since this doesn’t rely on ARIA, screen reader support for this is better than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I can also see some issues:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It’s more opinionated markup to maintain / less “by-the-book semantic HTML”&lt;/li&gt;
+  &lt;li&gt;Django’s error messages are meant to be customized with no oversight on how implementers will ultimately word them, so adding a prefix wouldn’t always be appropriate.&lt;/li&gt;
+  &lt;li&gt;It’s one more string that will need translations (not necessarily a big deal for such a generic word but does constraint the languages with which Django’s forms rendering could be used).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;recommendation-for-django&quot;&gt;Recommendation for Django&lt;/h2&gt;
+
+&lt;p&gt;Based on this, for Django, I’d still recommend &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt; wherever possible, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; for the error message wherever possible. So both together, wherever possible. It’s a more established pattern than bespoke error message prefixes, and lower maintenance. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt; support isn’t as good, but good enough for something that’s used &lt;em&gt;in addition to&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;caveats&quot;&gt;Caveats&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This is based on &lt;a href=&quot;https://a11ysupport.io/&quot;&gt;a11ysupport.io&lt;/a&gt; data, which only tested support on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;input type=&quot;text&quot;&amp;gt;&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;select&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;I only looked at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt;. There are other &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid&lt;/code&gt; values, which are harder to use and I wouldn’t recommend at this time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Further references:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://a11ysupport.io/tech/aria/aria-invalid_attribute&quot;&gt;a11ysupport.io support data for aria-invalid&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://a11ysupport.io/tech/aria/aria-describedby_attribute&quot;&gt;a11ysupport.io support data for aria-describedby&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.powermapper.com/tests/screen-readers/aria/&quot;&gt;PowerMapper support data for aria-describedby&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">As part of Django’s accessibility team, I’ve been doing a lot of research into specific patterns. Today – aria-required=&quot;true&quot; combined with aria-describedby for error messages! Is it good? Is it redundant? What do authorative sources say?</summary></entry><entry><title type="html">2022 web conferences</title><link href="https://thib.me/2022-web-conferences" rel="alternate" type="text/html" title="2022 web conferences" /><published>2022-01-08T17:42:03+00:00</published><updated>2022-01-08T17:42:03+00:00</updated><id>https://thib.me/2022-web-conferences</id><content type="html" xml:base="https://thib.me/2022-web-conferences">&lt;p&gt;Here is a small list of conferences I put together for 2022, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -756,52 +845,4 @@ parsy = &quot;1.1.0&quot;&lt;/span&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/thibaudcolas/curlylint/pull/76&quot;&gt;#76 Use types_or directive for hook instead of files&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;For me, the most immediate next step will be presenting Curlylint at &lt;a href=&quot;https://us.pycon.org/2021/&quot;&gt;PyCon US 2021&lt;/a&gt;! I hope to get critical feedback on the tool, and am also working on an “online playground” version to try lint templates without installing anything, we should make it simpler for people to try out the linter.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Curlylint v0.13.0 is out. It’s a relatively minor release, but comes with a few nice-to-haves for users, and a lot of behind-the-scenes project changes.</summary></entry><entry><title type="html">2021 web conferences accepting talks</title><link href="https://thib.me/2021-web-conferences-accepting-talks" rel="alternate" type="text/html" title="2021 web conferences accepting talks" /><published>2021-03-04T07:42:03+00:00</published><updated>2021-03-04T07:42:03+00:00</updated><id>https://thib.me/2021-web-conferences-accepting-talks</id><content type="html" xml:base="https://thib.me/2021-web-conferences-accepting-talks">&lt;p&gt;Here is a small list of conferences I put together for 2021, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;djangocon-eu-2021&quot;&gt;DjangoCon EU 2021&lt;/h2&gt;
-
-&lt;p&gt;02-06 June 2021, remote. &lt;a href=&quot;https://2021.djangocon.eu/talks/cfp/&quot;&gt;CFP under way&lt;/a&gt;, ending 2020-04-01 23h59 UTC.&lt;/p&gt;
-
-&lt;p&gt;Also &lt;a href=&quot;https://www.djangoproject.com/weblog/2021/feb/16/djangocon-europe-2021-announcement/&quot;&gt;looking for volunteers&lt;/a&gt; to help organise &amp;amp; run the event.&lt;/p&gt;
-
-&lt;h2 id=&quot;jsconf-budapest-2021&quot;&gt;JSConf Budapest 2021&lt;/h2&gt;
-
-&lt;p&gt;23-24 September 2021, Budapest. &lt;a href=&quot;https://jsconfbp.com/call-for-speakers-2021/&quot;&gt;CFP under way&lt;/a&gt;, ending March 31th 2021.&lt;/p&gt;
-
-&lt;h2 id=&quot;djangocon-us-2021&quot;&gt;DjangoCon US 2021&lt;/h2&gt;
-
-&lt;p&gt;October 2021, remote. &lt;a href=&quot;https://2021.djangocon.us/&quot;&gt;No CFP announced yet&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;pycon-uk-2021&quot;&gt;PyCon UK 2021&lt;/h2&gt;
-
-&lt;p&gt;No date announced except for “2021”. Cardiff. &lt;a href=&quot;https://2020.pyconuk.org/&quot;&gt;No CFP announced yet&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;nordic-js-2021&quot;&gt;Nordic JS 2021&lt;/h2&gt;
-
-&lt;p&gt;October 2021, Stockholm. &lt;a href=&quot;https://nordicjs.com/call-for-speakers&quot;&gt;CFP under way&lt;/a&gt;, no deadline.&lt;/p&gt;
-
-&lt;h2 id=&quot;mixit&quot;&gt;MiXiT&lt;/h2&gt;
-
-&lt;p&gt;18-20 May 2021, Lyon, France. Looks like there might not be &lt;a href=&quot;https://mixitconf.org/&quot;&gt;any CFP this year&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;halfstack-london-2021&quot;&gt;HalfStack London 2021&lt;/h2&gt;
-
-&lt;p&gt;November 2021, London. &lt;a href=&quot;https://halfstackconf.com/london/&quot;&gt;CFP under way&lt;/a&gt;, no deadline.&lt;/p&gt;
-
-&lt;h2 id=&quot;halfstack-phoenix-2022&quot;&gt;HalfStack Phoenix 2022&lt;/h2&gt;
-
-&lt;p&gt;January 2022, Phoenix. &lt;a href=&quot;https://halfstackconf.com/phoenix/&quot;&gt;CFP under way&lt;/a&gt;, ending 15/09/2021.&lt;/p&gt;
-
-&lt;h2 id=&quot;halfstack-newquay-2022&quot;&gt;HalfStack Newquay 2022&lt;/h2&gt;
-
-&lt;p&gt;July 2022, Newquay (/ˈnjuːki/) (UK). &lt;a href=&quot;https://halfstackconf.com/newquay/&quot;&gt;CFP under way&lt;/a&gt;, no deadline.&lt;/p&gt;
-
-&lt;h2 id=&quot;halfstack-new-york-2022&quot;&gt;HalfStack New York 2022&lt;/h2&gt;
-
-&lt;p&gt;August 2022, New York. &lt;a href=&quot;https://halfstackconf.com/newyork/&quot;&gt;CFP under way&lt;/a&gt;, ending 30/04/2022.&lt;/p&gt;
-
-&lt;h2 id=&quot;halfstack-vienna-2022&quot;&gt;HalfStack Vienna 2022&lt;/h2&gt;
-
-&lt;p&gt;September 2022, Vienna. &lt;a href=&quot;https://halfstackconf.com/vienna/&quot;&gt;CFP under way&lt;/a&gt;, ending 31/05/2022.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here is a small list of conferences I put together for 2021, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!</summary></entry></feed>
+&lt;p&gt;For me, the most immediate next step will be presenting Curlylint at &lt;a href=&quot;https://us.pycon.org/2021/&quot;&gt;PyCon US 2021&lt;/a&gt;! I hope to get critical feedback on the tool, and am also working on an “online playground” version to try lint templates without installing anything, we should make it simpler for people to try out the linter.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Curlylint v0.13.0 is out. It’s a relatively minor release, but comes with a few nice-to-haves for users, and a lot of behind-the-scenes project changes.</summary></entry></feed>

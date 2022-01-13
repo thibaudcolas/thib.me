@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>aria-invalid="true" with aria-describedby - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="As part of Django’s accessibility team, I’ve been doing a lot of research into specific patterns. Today – aria-required="true" combined with aria-describedby...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/aria-invalid-true-with-aria-describedby">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/aria-invalid-true-with-aria-describedby">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="aria-invalid="true" with aria-describedby">
+  <meta property="og:description" content="As part of Django’s accessibility team, I’ve been doing a lot of research into specific patterns. Today – aria-required="true" combined with aria-describedby...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2022-01-12-aria-invalid-true-with-aria-describedby.md">Edit</a>
+      <h1 class="entry-title">aria-invalid="true" with aria-describedby</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2022-01-12T22:42:03+00:00" pubdate data-updated="true">2022-01-12 22:42</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>As part of Django’s <a href="https://github.com/django/deps/blob/main/accepted/0011-accessibility-team.rst">accessibility team</a>, I’ve been doing a lot of research into specific patterns. Today – <code class="language-plaintext highlighter-rouge">aria-required="true"</code> combined with <code class="language-plaintext highlighter-rouge">aria-describedby</code> for error messages! Is it good? Is it redundant? What do authorative sources say?</p>
+
+<!-- more -->
+
+<p><em>This is a copy of my <a href="https://github.com/django/django/pull/15036#issuecomment-1008738687">GitHub comment on django/django#15036</a> to keep for future reference</em>.</p>
+
+<h2 id="tldr">TL;DR;</h2>
+
+<p>TL;DR; “<code class="language-plaintext highlighter-rouge">aria-invalid ="true"</code> + <code class="language-plaintext highlighter-rouge">aria-describedby</code> pointing at error message” seems to me like it would be the best for Django. It’s recommended in the non-normative <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21">ARIA21</a> technique, and by a renowned expert in the field. I found one pattern that seems better than it in some cases, but I don’t think it’s as good of a fit for Django.</p>
+
+<h2 id="recommendations-for-the-pattern">Recommendations for the pattern</h2>
+
+<p>I could find the following sources recommending <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> usage alongside <code class="language-plaintext highlighter-rouge">aria-describedby</code>:</p>
+
+<ul>
+  <li>The official (non-normative) <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21">ARIA21 Using Aria-Invalid to Indicate An Error Field</a> technique from WCAG:</li>
+</ul>
+
+<blockquote>
+  <p>When visible text is used to programmatically identify a failed field and / or convey how the error can be corrected, setting aria-invalid to “true” is not required from a strict compliance standpoint but may still provide helpful information for users.</p>
+</blockquote>
+
+<ul>
+  <li>A <a href="https://web-a11y.slack.com/archives/C042TSFGN/p1557348802029700">post from Léonie Watson on the web-a11y Slack</a>:</li>
+</ul>
+
+<blockquote>
+  <p>[…]
+Or you can use aria-describedby to make the association, like this:
+[…] &gt; <code class="language-plaintext highlighter-rouge">&lt;input type="text" id="this" aria-describedby="error" ...&gt;</code> &gt; […] &gt; <code class="language-plaintext highlighter-rouge">&lt;p id="error"&gt;Don't forget to enter your first name!&lt;/p&gt;</code></p>
+
+  <p>You can also use aria-invalid=”true” on the input, as you have done, for belt and braces information.</p>
+</blockquote>
+
+<p>Those two sources indicate <code class="language-plaintext highlighter-rouge">aria-describedby</code> pointing at the error message could be sufficient. Using <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> basically just helps unambiguously identifying fields that are in error, rather than relying on the wording of the error messages conveyed via <code class="language-plaintext highlighter-rouge">aria-describedby</code> only.</p>
+
+<h2 id="alternative">Alternative</h2>
+
+<p>I couldn’t find anyone actively recommending against this combination, however the GOV.UK design system <a href="https://github.com/alphagov/govuk-frontend/issues/1168">decided not to use it</a>. They instead added an <a href="https://design-system.service.gov.uk/components/error-message/#label">“Error:” prefix for all error messages</a>, as visually hidden / screen-reader-only text:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[…]
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"national-insurance-number-error"</span> <span class="na">class=</span><span class="s">"govuk-error-message"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"govuk-visually-hidden"</span><span class="nt">&gt;</span>Error:<span class="nt">&lt;/span&gt;</span> Enter a National Insurance
+  number in the correct format
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;input</span>
+  <span class="na">class=</span><span class="s">"govuk-input govuk-input--error"</span>
+  <span class="na">id=</span><span class="s">"national-insurance-number"</span>
+  <span class="na">name=</span><span class="s">"national-insurance-number"</span>
+  <span class="na">type=</span><span class="s">"text"</span>
+  <span class="na">aria-describedby=</span><span class="s">"national-insurance-number-hint national-insurance-number-error"</span>
+<span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>I can see some clear advantages to this:</p>
+
+<ul>
+  <li>It’s equally as unambiguous for screen reader users that the fields are in error (compare Django’s <code class="language-plaintext highlighter-rouge">This field is required.</code> message or <code class="language-plaintext highlighter-rouge">Enter a whole number.</code> with <code class="language-plaintext highlighter-rouge">Error: This field is required.</code> or <code class="language-plaintext highlighter-rouge">Error: Enter a whole number.</code>).</li>
+  <li>“Error:” is more plain language than “Invalid entry”</li>
+  <li>Since this doesn’t rely on ARIA, screen reader support for this is better than <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code></li>
+</ul>
+
+<p>I can also see some issues:</p>
+
+<ul>
+  <li>It’s more opinionated markup to maintain / less “by-the-book semantic HTML”</li>
+  <li>Django’s error messages are meant to be customized with no oversight on how implementers will ultimately word them, so adding a prefix wouldn’t always be appropriate.</li>
+  <li>It’s one more string that will need translations (not necessarily a big deal for such a generic word but does constraint the languages with which Django’s forms rendering could be used).</li>
+</ul>
+
+<h2 id="recommendation-for-django">Recommendation for Django</h2>
+
+<p>Based on this, for Django, I’d still recommend <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> wherever possible, and <code class="language-plaintext highlighter-rouge">aria-describedby</code> for the error message wherever possible. So both together, wherever possible. It’s a more established pattern than bespoke error message prefixes, and lower maintenance. <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> support isn’t as good, but good enough for something that’s used <em>in addition to</em> <code class="language-plaintext highlighter-rouge">aria-describedby</code>.</p>
+
+<h2 id="caveats">Caveats</h2>
+
+<ul>
+  <li>This is based on <a href="https://a11ysupport.io/">a11ysupport.io</a> data, which only tested support on <code class="language-plaintext highlighter-rouge">&lt;input type="text"&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;select&gt;</code>.</li>
+  <li>I only looked at <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code>. There are other <code class="language-plaintext highlighter-rouge">aria-invalid</code> values, which are harder to use and I wouldn’t recommend at this time.</li>
+</ul>
+
+<hr />
+
+<p>Further references:</p>
+
+<ul>
+  <li><a href="https://a11ysupport.io/tech/aria/aria-invalid_attribute">a11ysupport.io support data for aria-invalid</a></li>
+  <li><a href="https://a11ysupport.io/tech/aria/aria-describedby_attribute">a11ysupport.io support data for aria-describedby</a></li>
+  <li><a href="https://www.powermapper.com/tests/screen-readers/aria/">PowerMapper support data for aria-describedby</a></li>
+</ul>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2022-01-12T22:42:03+00:00" pubdate data-updated="true">2022-01-12 22:42</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/django/">Django</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2022-web-conferences" title="Previous Post: 2022 web conferences">&laquo; 2022 web conferences</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/aria-invalid-true-with-aria-describedby">aria-invalid="true" with aria-describedby</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2022-web-conferences">2022 web conferences</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-us-2021-kontrasto-improving-accessibility-with-python">DjangoCon US 2021: Kontrasto – improving accessibility with Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wcag-22-accessibility-guidelines">WCAG 2.2: new accessibility guidelines on the way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>
