@@ -6,7 +6,7 @@ comments: true
 categories: [Accessibility, Wagtail, Community]
 ---
 
-After [6 months of operations](https://wagtail.io/blog/announcing-wagtail-sub-teams/), we reflect on the progress our [accessibility team](https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility) has made, and go on the lookout for new contributors.
+After [6 months of operations](https://wagtail.org/blog/announcing-wagtail-sub-teams/), we reflect on the progress our [accessibility team](https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility) has made, and go on the lookout for new contributors.
 
 <!-- more -->
 
@@ -14,7 +14,7 @@ After [6 months of operations](https://wagtail.io/blog/announcing-wagtail-sub-te
 
 Early on, [we chose](https://github.com/wagtail/wagtail/wiki/Accessibility-team#2020-07-17) to give priority to improvements we could make to sites built with Wagtail, rather than the Wagtail admin. Practically, this meant:
 
-- Putting together [Wagtail’s accessibility considerations documentation](https://docs.wagtail.io/en/latest/advanced_topics/accessibility_considerations.html), as most of the accessibility issues we identified were either dependent on how Wagtail is used, or could be worked around by implementers.
+- Putting together [Wagtail’s accessibility considerations documentation](https://docs.wagtail.org/en/latest/advanced_topics/accessibility_considerations.html), as most of the accessibility issues we identified were either dependent on how Wagtail is used, or could be worked around by implementers.
 - From this list, we also created a [backlog of known accessibility issues](https://github.com/wagtail/wagtail/projects/10), which we would then proceed to fixing.
 
 Along the way, we also kept working on the [SVG icons](https://github.com/wagtail/wagtail/issues/6107) refactoring for the admin, bit by bit.

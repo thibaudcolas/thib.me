@@ -100,7 +100,7 @@ Screen reader users rely on logical, lean heading outlines to navigate pages
 - Also restrict which heading levels are available via StreamField
 - Keep your templates in check too.
 
-Solution: [Limiting features in a rich text field](https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field). Use [wagtail-accessibility](https://github.com/neon-jungle/wagtail-accessibility).
+Solution: [Limiting features in a rich text field](https://docs.wagtail.org/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field). Use [wagtail-accessibility](https://github.com/neon-jungle/wagtail-accessibility).
 
 ### Heading levels, #2
 
@@ -111,7 +111,7 @@ Screen reader users rely on logical, lean heading outlines to navigate pages
 - Validate that no heading is left empty
 - Or, consider hiding empty headings with CSS (h2:empty { display: none; })
 
-Solution: [Limiting features in a rich text field](https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field). Use [wagtail-accessibility](https://github.com/neon-jungle/wagtail-accessibility).
+Solution: [Limiting features in a rich text field](https://docs.wagtail.org/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field). Use [wagtail-accessibility](https://github.com/neon-jungle/wagtail-accessibility).
 
 In the future -- rich text rewriting to remove empty headings? [#4223](https://github.com/wagtail/wagtail/issues/4223)
 
@@ -131,7 +131,7 @@ In the future -- rich text rewriting to remove empty headings? [#4223](https://g
 
 - [wagtail-accessibility](https://github.com/neon-jungle/wagtail-accessibility) (based on [tota11y](https://khan.github.io/tota11y/))
 - help_text (example: [wagtail-nhsuk-frontend](https://github.com/nhsuk/wagtail-nhsuk-frontend))
-- [HelpPanel](https://docs.wagtail.io/en/stable/reference/pages/panels.html#helppanel) -- help_text but bigger
+- [HelpPanel](https://docs.wagtail.org/en/stable/reference/pages/panels.html#helppanel) -- help_text but bigger
 - [wagtail-readinglevel](https://vixdigital.github.io/draftail-plugins/)
 - Rich text experiments: guidelines-aware spellcheck
 - Rich text experiments: sentence length, [wooorm.com/readability](https://wooorm.com/readability/)

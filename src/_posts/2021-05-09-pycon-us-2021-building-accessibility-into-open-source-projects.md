@@ -121,7 +121,7 @@ And back on the Wagtail side we tend to invest more into manual audits just beca
 
 And yes for larger projects I definitely recommend having a dedicated team for this of subject matter experts so we have the example of the Wagtail team here but yeah for example Jupyter notebooks as well do have a team like this that looks after the accessibility of the actual notebooks which as they are used in classroom environments is very important.
 
-[Wagtail's team](https://wagtail.io/blog/accessibility-team-reloaded/) = 5 people committed for 6 months. Thank you Storm, Jesse, Kyle, Scott!
+[Wagtail's team](https://wagtail.org/blog/accessibility-team-reloaded/) = 5 people committed for 6 months. Thank you Storm, Jesse, Kyle, Scott!
 
 ### Open-source can lead the way
 

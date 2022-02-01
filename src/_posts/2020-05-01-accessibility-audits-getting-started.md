@@ -144,7 +144,7 @@ Manual tests are the most time-consuming and require the most expertise. We want
 - Are there areas of the page that are hard to scroll (especially on mobile)?
 - Are there areas on the page that require horizontal scrolling (especially on mobile)?
 
-**This barely scratches the surface**, especially when it comes to screen reader usage. Test with [multiple screen readers](https://docs.wagtail.io/en/stable/contributing/developing.html#accessibility-targets) if possible – my go-tos being VoiceOver with Safari on macOS & iOS, and NVDA with Firefox on Windows.
+**This barely scratches the surface**, especially when it comes to screen reader usage. Test with [multiple screen readers](https://docs.wagtail.org/en/stable/contributing/developing.html#accessibility-targets) if possible – my go-tos being VoiceOver with Safari on macOS & iOS, and NVDA with Firefox on Windows.
 
 ## Expert-level accessibility compliance testing
 

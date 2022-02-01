@@ -73,7 +73,7 @@ There are a few other authoring tools that have some accessibility / ATAG-releva
 
 - [Wix accessibility tools & guides](https://www.wix.com/accessibility)
 - [Accessibility at SurveyMonkey](https://help.surveymonkey.com/articles/en_US/kb/Accessibility-at-SurveyMonkey)
-- One I put together for Wagtail: [Wagtail accessibility considerations](https://docs.wagtail.io/en/latest/advanced_topics/accessibility_considerations.html)
+- One I put together for Wagtail: [Wagtail accessibility considerations](https://docs.wagtail.org/en/latest/advanced_topics/accessibility_considerations.html)
 
 ## ATAG examples
 

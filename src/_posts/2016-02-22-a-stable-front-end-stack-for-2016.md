@@ -31,7 +31,7 @@ While not in use yet, we are quite excited about things like [CSS modules](http
 
 [Django](https://www.djangoproject.com/) is our preferred web framework. It’s very pragmatic, and has a good level of abstraction while giving access to the details when necessary. It does modules and code reuse very well with its concept of [apps](https://www.djangopackages.com/categories/apps/). And the Python community is thriving.
 
-Springload’s CMS of choice is [Wagtail](https://wagtail.io/). It offers a great content-editing experience out of the box, and its architecture makes it easy to create new administration features or tailored components. Haven’t heard of it before? Have a look at Wagtail’s [StreamField](https://wagtail.io/features/streamfield/) concept and you won’t want to use Drupal’s regions ever again.
+Springload’s CMS of choice is [Wagtail](https://wagtail.org/). It offers a great content-editing experience out of the box, and its architecture makes it easy to create new administration features or tailored components. Haven’t heard of it before? Have a look at Wagtail’s [StreamField](https://wagtail.org/features/streamfield/) concept and you won’t want to use Drupal’s regions ever again.
 
 ![](/images/wagtail-streamfield.png)
 

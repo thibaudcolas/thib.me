@@ -122,7 +122,7 @@ As a bonus, here is a recording of testing Wagtail 2.5 with a screen reader:
 
 ## What we fixed
 
-Quite simply, we went from 336 to 172 issues, with the remainder essentially on parts of Wagtail we chose not to cover (yet!). The [Wagtail 2.6 release notes](https://docs.wagtail.io/en/latest/releases/2.6.html) have more information about the fixes:
+Quite simply, we went from 336 to 172 issues, with the remainder essentially on parts of Wagtail we chose not to cover (yet!). The [Wagtail 2.6 release notes](https://docs.wagtail.org/en/latest/releases/2.6.html) have more information about the fixes:
 
 - Better text-to-background color contrast across the whole CMS
 - Increased font size across the board as well
@@ -142,7 +142,7 @@ We’re not there yet, but you can follow our progress and get involved by:
 - Reviewing our backlog: [WCAG2.1 AA compliance](https://github.com/wagtail/wagtail/projects/5) project on GitHub.
 - Joining us on [Wagtail’s Slack workspace](https://github.com/wagtail/wagtail/wiki/Slack), in the #accessibility channel.
 
-And last but not least, this year we are organising a [Wagtail sprint focused on accessibility](https://wagtail.io/blog/bristol-sprint-2020/) in Bristol.
+And last but not least, this year we are organising a [Wagtail sprint focused on accessibility](https://wagtail.org/blog/bristol-sprint-2020/) in Bristol.
 
 ---
 
@@ -173,7 +173,7 @@ And last but not least, this year we are organising a [Wagtail sprint focused on
 - [Pa11y: your automated accessibility testing pal][10]
 - [A maturity model for design systems][11]
 - [Deque: What is Shift Left Accessibility Testing?][12]
-- [Wagtail 2.6 release notes](https://docs.wagtail.io/en/latest/releases/2.6.html)
+- [Wagtail 2.6 release notes](https://docs.wagtail.org/en/latest/releases/2.6.html)
 - [WCAG2.1 AA compliance roadmap](https://github.com/wagtail/wagtail/projects/5)
 - [Accessibility support targets & tooling setup (#4871) #5245](https://github.com/wagtail/wagtail/pull/5245)
 - [RFC 37: Making Wagtail Accessible for users of assistive technologies](https://github.com/wagtail/rfcs/pull/37)

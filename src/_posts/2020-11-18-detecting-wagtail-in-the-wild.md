@@ -15,7 +15,7 @@ How can you tell if a site is made with Wagtail or not? There are more ways than
 I could think of a few [when I first started thinking of this problem](https://github.com/springload/madewithwagtail/issues/62):
 
 - Determine if the site is [built with Django](https://stackoverflow.com/questions/721934/how-can-you-tell-if-a-site-has-been-made-with-django). That’s a start
-- Check if the site uses a [Wagtail badge](https://wagtail.io/wagtail-badges/). Cute, but not used much in practice.
+- Check if the site uses a [Wagtail badge](https://wagtail.org/wagtail-badges/). Cute, but not used much in practice.
 - Load `/admin/login` and check for "wagtail" in the response – that would surely be an almost certain match.
 
 The problem with a lot of those approaches is their relance on crawling the site, which is quite invasive, not very reliable, and can be time-consuming across a lot of sites. It’s also unclear how common those cues would be across the breadth of Wagtail sites out there.
@@ -25,7 +25,7 @@ The ideal approach would be HTTP response headers – which could be obtained f
 - Wagtail’s (legacy) rich text uses the `rich-text` class to wrap the HTML of rich text fields
 - Rich text images use hard-coded classes like [`richtext-image full-width`](https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/images/formats.py#L91-L94)
 - Wagtail’s documents are served from a [`/documents/`](https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/documents/urls.py#L6) sub-path.
-- And last but not least, [image renditions](https://docs.wagtail.io/en/stable/topics/images.html?highlight=renditions#generating-image-renditions-in-python).
+- And last but not least, [image renditions](https://docs.wagtail.org/en/stable/topics/images.html?highlight=renditions#generating-image-renditions-in-python).
 
 Image renditions are very common on Wagtail sites. The detection would only work for pages that have user-uploaded images, but lucky for us a site’s homepage tends to be the type of high-value page where there are CMS-managed images. Here are a few examples of URLs from renditions:
 
