@@ -96,7 +96,7 @@
 
 <ul>
   <li>Determine if the site is <a href="https://stackoverflow.com/questions/721934/how-can-you-tell-if-a-site-has-been-made-with-django">built with Django</a>. That’s a start</li>
-  <li>Check if the site uses a <a href="https://wagtail.io/wagtail-badges/">Wagtail badge</a>. Cute, but not used much in practice.</li>
+  <li>Check if the site uses a <a href="https://wagtail.org/wagtail-badges/">Wagtail badge</a>. Cute, but not used much in practice.</li>
   <li>Load <code class="language-plaintext highlighter-rouge">/admin/login</code> and check for “wagtail” in the response – that would surely be an almost certain match.</li>
 </ul>
 
@@ -108,7 +108,7 @@
   <li>Wagtail’s (legacy) rich text uses the <code class="language-plaintext highlighter-rouge">rich-text</code> class to wrap the HTML of rich text fields</li>
   <li>Rich text images use hard-coded classes like <a href="https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/images/formats.py#L91-L94"><code class="language-plaintext highlighter-rouge">richtext-image full-width</code></a></li>
   <li>Wagtail’s documents are served from a <a href="https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/documents/urls.py#L6"><code class="language-plaintext highlighter-rouge">/documents/</code></a> sub-path.</li>
-  <li>And last but not least, <a href="https://docs.wagtail.io/en/stable/topics/images.html?highlight=renditions#generating-image-renditions-in-python">image renditions</a>.</li>
+  <li>And last but not least, <a href="https://docs.wagtail.org/en/stable/topics/images.html?highlight=renditions#generating-image-renditions-in-python">image renditions</a>.</li>
 </ul>
 
 <p>Image renditions are very common on Wagtail sites. The detection would only work for pages that have user-uploaded images, but lucky for us a site’s homepage tends to be the type of high-value page where there are CMS-managed images. Here are a few examples of URLs from renditions:</p>

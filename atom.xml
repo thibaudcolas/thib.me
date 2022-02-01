@@ -4,7 +4,7 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2022-01-15T02:22:02+00:00</updated>
+  <updated>2022-02-01T11:37:49+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
@@ -913,7 +913,7 @@ so yeah there is legislation in the US, in the EU, and really all around the wor
 
 <p>And yes for larger projects I definitely recommend having a dedicated team for this of subject matter experts so we have the example of the Wagtail team here but yeah for example Jupyter notebooks as well do have a team like this that looks after the accessibility of the actual notebooks which as they are used in classroom environments is very important.</p>
 
-<p><a href="https://wagtail.io/blog/accessibility-team-reloaded/">Wagtail’s team</a> = 5 people committed for 6 months. Thank you Storm, Jesse, Kyle, Scott!</p>
+<p><a href="https://wagtail.org/blog/accessibility-team-reloaded/">Wagtail’s team</a> = 5 people committed for 6 months. Thank you Storm, Jesse, Kyle, Scott!</p>
 
 <h3 id="open-source-can-lead-the-way">Open-source can lead the way</h3>
 
@@ -1067,7 +1067,7 @@ parsy = "1.1.0"</span>
     <link href="https://thib.me/wagtail-accessibility-team-reloaded"/>
     <updated>2021-02-24T07:42:03+00:00</updated>
     <id>https://thib.me/wagtail-accessibility-team-reloaded</id>
-    <content type="html"><![CDATA[<p>After <a href="https://wagtail.io/blog/announcing-wagtail-sub-teams/">6 months of operations</a>, we reflect on the progress our <a href="https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility">accessibility team</a> has made, and go on the lookout for new contributors.</p>
+    <content type="html"><![CDATA[<p>After <a href="https://wagtail.org/blog/announcing-wagtail-sub-teams/">6 months of operations</a>, we reflect on the progress our <a href="https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility">accessibility team</a> has made, and go on the lookout for new contributors.</p>
 
 <!-- more -->
 
@@ -1076,7 +1076,7 @@ parsy = "1.1.0"</span>
 <p>Early on, <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team#2020-07-17">we chose</a> to give priority to improvements we could make to sites built with Wagtail, rather than the Wagtail admin. Practically, this meant:</p>
 
 <ul>
-  <li>Putting together <a href="https://docs.wagtail.io/en/latest/advanced_topics/accessibility_considerations.html">Wagtail’s accessibility considerations documentation</a>, as most of the accessibility issues we identified were either dependent on how Wagtail is used, or could be worked around by implementers.</li>
+  <li>Putting together <a href="https://docs.wagtail.org/en/latest/advanced_topics/accessibility_considerations.html">Wagtail’s accessibility considerations documentation</a>, as most of the accessibility issues we identified were either dependent on how Wagtail is used, or could be worked around by implementers.</li>
   <li>From this list, we also created a <a href="https://github.com/wagtail/wagtail/projects/10">backlog of known accessibility issues</a>, which we would then proceed to fixing.</li>
 </ul>
 
@@ -1218,7 +1218,7 @@ parsy = "1.1.0"</span>
 <ul>
   <li><a href="https://www.wix.com/accessibility">Wix accessibility tools &amp; guides</a></li>
   <li><a href="https://help.surveymonkey.com/articles/en_US/kb/Accessibility-at-SurveyMonkey">Accessibility at SurveyMonkey</a></li>
-  <li>One I put together for Wagtail: <a href="https://docs.wagtail.io/en/latest/advanced_topics/accessibility_considerations.html">Wagtail accessibility considerations</a></li>
+  <li>One I put together for Wagtail: <a href="https://docs.wagtail.org/en/latest/advanced_topics/accessibility_considerations.html">Wagtail accessibility considerations</a></li>
 </ul>
 
 <h2 id="atag-examples">ATAG examples</h2>
@@ -1317,7 +1317,7 @@ parsy = "1.1.0"</span>
 
 <ul>
   <li>Determine if the site is <a href="https://stackoverflow.com/questions/721934/how-can-you-tell-if-a-site-has-been-made-with-django">built with Django</a>. That’s a start</li>
-  <li>Check if the site uses a <a href="https://wagtail.io/wagtail-badges/">Wagtail badge</a>. Cute, but not used much in practice.</li>
+  <li>Check if the site uses a <a href="https://wagtail.org/wagtail-badges/">Wagtail badge</a>. Cute, but not used much in practice.</li>
   <li>Load <code class="language-plaintext highlighter-rouge">/admin/login</code> and check for “wagtail” in the response – that would surely be an almost certain match.</li>
 </ul>
 
@@ -1329,7 +1329,7 @@ parsy = "1.1.0"</span>
   <li>Wagtail’s (legacy) rich text uses the <code class="language-plaintext highlighter-rouge">rich-text</code> class to wrap the HTML of rich text fields</li>
   <li>Rich text images use hard-coded classes like <a href="https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/images/formats.py#L91-L94"><code class="language-plaintext highlighter-rouge">richtext-image full-width</code></a></li>
   <li>Wagtail’s documents are served from a <a href="https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/documents/urls.py#L6"><code class="language-plaintext highlighter-rouge">/documents/</code></a> sub-path.</li>
-  <li>And last but not least, <a href="https://docs.wagtail.io/en/stable/topics/images.html?highlight=renditions#generating-image-renditions-in-python">image renditions</a>.</li>
+  <li>And last but not least, <a href="https://docs.wagtail.org/en/stable/topics/images.html?highlight=renditions#generating-image-renditions-in-python">image renditions</a>.</li>
 </ul>
 
 <p>Image renditions are very common on Wagtail sites. The detection would only work for pages that have user-uploaded images, but lucky for us a site’s homepage tends to be the type of high-value page where there are CMS-managed images. Here are a few examples of URLs from renditions:</p>
@@ -1768,7 +1768,7 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
   <li>Keep your templates in check too.</li>
 </ul>
 
-<p>Solution: <a href="https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field">Limiting features in a rich text field</a>. Use <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a>.</p>
+<p>Solution: <a href="https://docs.wagtail.org/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field">Limiting features in a rich text field</a>. Use <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a>.</p>
 
 <h3 id="heading-levels-2">Heading levels, #2</h3>
 
@@ -1781,7 +1781,7 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
   <li>Or, consider hiding empty headings with CSS (h2:empty { display: none; })</li>
 </ul>
 
-<p>Solution: <a href="https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field">Limiting features in a rich text field</a>. Use <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a>.</p>
+<p>Solution: <a href="https://docs.wagtail.org/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field">Limiting features in a rich text field</a>. Use <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a>.</p>
 
 <p>In the future – rich text rewriting to remove empty headings? <a href="https://github.com/wagtail/wagtail/issues/4223">#4223</a></p>
 
@@ -1813,7 +1813,7 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
 <ul>
   <li><a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a> (based on <a href="https://khan.github.io/tota11y/">tota11y</a>)</li>
   <li>help_text (example: <a href="https://github.com/nhsuk/wagtail-nhsuk-frontend">wagtail-nhsuk-frontend</a>)</li>
-  <li><a href="https://docs.wagtail.io/en/stable/reference/pages/panels.html#helppanel">HelpPanel</a> – help_text but bigger</li>
+  <li><a href="https://docs.wagtail.org/en/stable/reference/pages/panels.html#helppanel">HelpPanel</a> – help_text but bigger</li>
   <li><a href="https://vixdigital.github.io/draftail-plugins/">wagtail-readinglevel</a></li>
   <li>Rich text experiments: guidelines-aware spellcheck</li>
   <li>Rich text experiments: sentence length, <a href="https://wooorm.com/readability/">wooorm.com/readability</a></li>
