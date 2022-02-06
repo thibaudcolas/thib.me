@@ -4,13 +4,260 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2022-02-05T03:24:22+00:00</updated>
+  <updated>2022-02-06T22:08:23+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Adding Prettier onto an existing project]]></title>
+    <link href="https://thib.me/adding-prettier-existing-project"/>
+    <updated>2022-02-04T21:18:03+00:00</updated>
+    <id>https://thib.me/adding-prettier-existing-project</id>
+    <content type="html"><![CDATA[<p><a href="https://prettier.io/">Prettier</a> is good. So good, it’s easy to get used to it, and subsequently want to retrofit it onto existing projects. Here’s a step-by-step guide and example: configuring and documenting Prettier and reformatting existing code, all the while making sure not to break other people’s work.</p>
+
+<!-- more -->
+
+<h2 id="the-example">The example</h2>
+
+<p>All the steps described below are demonstrated publicly in a real-world project: Wagtail, via issue <a href="https://github.com/wagtail/wagtail/issues/6059">#6059 Automatic code formatting with Prettier</a>. The implementation was split into two PRs: <a href="https://github.com/wagtail/wagtail/pull/7908">#7908 Add Prettier configuration &amp; documentation</a>, <a href="https://github.com/wagtail/wagtail/pull/7912">#7912 Prettier reformatting</a>, and finally one extra commit, <a href="https://github.com/wagtail/wagtail/commit/7eb8730d7372dc6b4752308a7e3354b36810f32e">7eb8730d7372dc6b4752308a7e3354b36810f32e</a>.</p>
+
+<p>Finally, here are <a href="https://github.com/wagtail/wagtail/issues/6059#issuecomment-1029941428">instructions on resolving conflicts</a> that weren’t directly stored in the repository (as this is a one-off task).</p>
+
+<h2 id="why-two-prs-and-a-commit">Why two PRs and a commit</h2>
+
+<p>I recommend always splitting the addition of any formatting tool into at least two PRs and the extra commit:</p>
+
+<ol>
+  <li>The first PR takes care of anything that requires careful review – configuration, integrations, documentation.</li>
+  <li>The second PR takes care of the actual reformatting.</li>
+  <li>Finally, the final commit is just there to finish setting up the <a href="https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt"><code class="language-plaintext highlighter-rouge">.git-blame-ignore-revs</code> file for git’s <code class="language-plaintext highlighter-rouge">ignoreRevsFile</code></a>.</li>
+</ol>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>This is actually the simplest step.</p>
+
+<ul>
+  <li>Update the project’s <code class="language-plaintext highlighter-rouge">.editorconfig</code> first, as Prettier reads it (<a href="https://github.com/thibaudcolas/cookbook/blob/main/.editorconfig">here’s an example</a>).</li>
+  <li>Create a <code class="language-plaintext highlighter-rouge">prettier.config.js</code> with any desired options.</li>
+  <li>Create a <code class="language-plaintext highlighter-rouge">.prettierignore</code>. I’d recommend to add large folders in here to speed up Prettier looking for files when using very broad glob patterns.</li>
+</ul>
+
+<p>Personally I’ll always prefer to set all configuration options, even when using defaults. This saves having to remember what options are available that might not be set on the particular project when re-reviewing the configuration. I also always prefer using JavaScript for configuration – syntax highlighting and auto-formatting are dependable.</p>
+
+<h3 id="which-languages-should-i-use-prettier-for">Which languages should I use Prettier for?</h3>
+
+<p>I’d recommend all languages that Prettier supports, potentially with the exception of Markdown. Although the reformatting is excellent, enforcing a single format for documentation often feels cumbersome – particularly if the project’s documentation might often be updated by contributors with little knowledge of the project’s tooling.</p>
+
+<p>If a supported language isn’t used, make sure to add its extension to the <code class="language-plaintext highlighter-rouge">.prettierignore</code> so the files are consistently skipped. Here’s an example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Irrelevant files ignored for performance reasons.</span>
+node_modules
+public/
+coverage/
+vendor/
+static
+_build
+<span class="c"># File types which Prettier supports but we don’t want auto-formatting.</span>
+<span class="k">*</span>.md
+<span class="c"># Files which contain incompatible syntax.</span>
+<span class="k">*</span>.html
+wagtail/admin/templates/wagtailadmin/edit_handlers/inline_panel.js
+</code></pre></div></div>
+
+<h2 id="integrations">Integrations</h2>
+
+<p>I’ll always start with the same two commands:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prettier --write '**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml}'"</span><span class="err">,</span><span class="w">
+  </span><span class="nl">"lint:format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prettier --check '**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml}'"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The glob pattern might seem complicated – it’s wrapped in single quotes to prevent shell globbing (thus making it consistent cross-platform). It uses <code class="language-plaintext highlighter-rouge">**/?(.)*</code> so files are checked at all directory levels in the current folder, and regardless of whether file names start with a dot or not.</p>
+
+<p>As to where those commands should run – generally in continuous integration, potentially in Git pre-commit hooks.</p>
+
+<h3 id="pre-commit">pre-commit</h3>
+
+<p>With the confusingly-named <a href="https://pre-commit.com/">pre-commit framework</a>, it looks like:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">repo</span><span class="pi">:</span> <span class="s">https://github.com/pre-commit/mirrors-prettier</span>
+  <span class="na">rev</span><span class="pi">:</span> <span class="s">v2.5.1</span>
+  <span class="na">hooks</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">prettier</span>
+      <span class="na">types_or</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">css</span><span class="pi">,</span> <span class="nv">scss</span><span class="pi">,</span> <span class="nv">javascript</span><span class="pi">,</span> <span class="nv">ts</span><span class="pi">,</span> <span class="nv">tsx</span><span class="pi">,</span> <span class="nv">json</span><span class="pi">,</span> <span class="nv">yaml</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<p>Note <code class="language-plaintext highlighter-rouge">types_or</code> aren’t always file extensions, they’re <a href="https://github.com/pre-commit/identify/blob/master/identify/extensions.py">arbitrary identifiers</a> for some languages.</p>
+
+<p>Here’s what I personally prefer – just bash:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+
+<span class="c"># Fail on first line that fails.</span>
+<span class="nb">set</span> <span class="nt">-e</span>
+
+<span class="c"># Only keep staged files that are added (A), copied (C) or modified (M).</span>
+<span class="nv">STAGED</span><span class="o">=</span><span class="si">$(</span>git <span class="nt">--no-pager</span> diff <span class="nt">--name-only</span> <span class="nt">--cached</span> <span class="nt">--diff-filter</span><span class="o">=</span>ACM<span class="si">)</span>
+<span class="c"># Files which are only partly staged (eg. git add --patch).</span>
+<span class="nv">PATCH_STAGED</span><span class="o">=</span><span class="si">$(</span>git <span class="nt">--no-pager</span> diff <span class="nt">--name-only</span> <span class="nt">--diff-filter</span><span class="o">=</span>ACM <span class="nv">$STAGED</span><span class="si">)</span>
+<span class="c"># Files which are fully staged.</span>
+<span class="nv">FULLY_STAGED</span><span class="o">=</span><span class="si">$(</span><span class="nb">comm</span> <span class="nt">-23</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$STAGED</span><span class="s2">"</span><span class="o">)</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$PATCH_STAGED</span><span class="s2">"</span><span class="o">)</span><span class="si">)</span>
+
+<span class="nv">PRETTIER_STAGED</span><span class="o">=</span><span class="si">$(</span><span class="nb">grep</span> <span class="nt">-E</span> <span class="s1">'.(css|scss|js|ts|tsx|json|yaml|yml)$'</span> <span class="o">&lt;&lt;&lt;</span> <span class="s2">"</span><span class="nv">$STAGED</span><span class="s2">"</span> <span class="o">||</span> <span class="nb">true</span><span class="si">)</span>
+<span class="nv">PRETTIER_FULLY_STAGED</span><span class="o">=</span><span class="si">$(</span><span class="nb">grep</span> <span class="nt">-E</span> <span class="s1">'.(css|scss|js|ts|tsx|json|yaml|yml)$'</span> <span class="o">&lt;&lt;&lt;</span> <span class="s2">"</span><span class="nv">$FULLY_STAGED</span><span class="s2">"</span> <span class="o">||</span> <span class="nb">true</span><span class="si">)</span>
+
+<span class="c"># Format and re-stage fully staged files only.</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-n</span> <span class="s2">"</span><span class="nv">$PRETTIER_FULLY_STAGED</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span>
+<span class="k">then
+  </span>npx prettier <span class="nt">--write</span> <span class="nv">$PRETTIER_FULLY_STAGED</span>
+  git add <span class="nv">$PRETTIER_FULLY_STAGED</span>
+<span class="k">fi</span>
+
+<span class="c"># Lint all staged files.</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-n</span> <span class="s2">"</span><span class="nv">$PRETTIER_STAGED</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span>
+<span class="k">then
+  </span>npx prettier <span class="nt">--check</span> <span class="nv">$PRETTIER_STAGED</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<h3 id="ides">IDEs</h3>
+
+<p>VS Code has excellent Prettier support. Use it. I personally prefer to default to <code class="language-plaintext highlighter-rouge">editor.formatOnSave</code> turned on, and only disable it per project that doesn’t have Prettier.</p>
+
+<h3 id="continuous-integration">Continuous integration</h3>
+
+<p>We want to make sure we run <code class="language-plaintext highlighter-rouge">npm run lint:format</code> on CI. Simple as that. Worth mentioning <a href="https://pre-commit.ci/">pre-commit.ci</a>, compatible with the same pre-commit framework as above, which runs formatting on your behalf and commits the changes to PRs. I personally don’t use it, but it works.</p>
+
+<p>A common gotcha when setting up Prettier in CI is if your builds are optimised to only run when specific folders are changed – by definition, the Prettier checks will have to run whenever any file supported by Prettier changes.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>Make sure your contributors are aware Prettier is in use, and that there is a <code class="language-plaintext highlighter-rouge">npm run format</code> command available for cases where Prettier formatting doesn’t get automatically applied in an editor.</p>
+
+<h2 id="git-blame-compatibility">Git blame compatibility</h2>
+
+<p>GitHub makes it easy to skip a commit in the blame view. For git itself, we can use a <code class="language-plaintext highlighter-rouge">.git-blame-ignore-revs</code> file. <a href="https://github.com/prettier/prettier/blob/main/.git-blame-ignore-revs">Prettier itself</a> has an excellent example, which is self-documenting:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># git-blame ignored revisions</span>
+<span class="c"># To configure, run</span>
+<span class="c">#   git config blame.ignoreRevsFile .git-blame-ignore-revs</span>
+<span class="c"># Requires Git &gt; 2.23</span>
+<span class="c"># See https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt</span>
+
+<span class="c"># Prettier bump after release</span>
+<span class="c"># 2.5.1</span>
+4683a6284d53b913f129694a5be666fc55b06982
+<span class="c"># 2.5.0</span>
+846dbdd7e8c9deb315b3e663b3103c559e798a89
+<span class="o">[</span>…]
+</code></pre></div></div>
+
+<h2 id="the-initial-reformatting">The initial reformatting</h2>
+
+<p>All of the above steps should be done in the first PR, so they can easily be code reviewed. In the second PR, we can make the actual formatting changes. Run your <code class="language-plaintext highlighter-rouge">npm run format</code> now, and commit the results.</p>
+
+<p>If your auto-formatting creates a lot of changes and you’ll want to review them manually – you could consider starting from a Prettier configuration that does fewer changes, commit the formatting, and add more changes gradually. This makes it easier to review different formatting changes overall.</p>
+
+<h3 id="manual-issues-to-fix">Manual issues to fix</h3>
+
+<p>If your project uses per-line linting disable comments, make sure the comments still target the correct lines after the reformatting. ESLint has an excellent <code class="language-plaintext highlighter-rouge">--report-unused-disable-directives</code> which helps a lot. Here’s an example where this happened:</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">-  // eslint-disable-next-line func-names
+</span>  $(
+    '#new a.task-type-choice, #new a.choose-different-task-type',
+    modal.body,
+<span class="gd">-  ).on('click', function () {
+</span><span class="gi">+  ).on('click', function onClickNew() {
+</span></code></pre></div></div>
+
+<p>There can be other compatibility issues with other static analysis tools, although that’s very rare. For example, I had to disable Prettier for a line where a Stylelint plugin wasn’t producing the expected output anymore – I’d suspect it’s the plugin’s analysis that’s causing the actual issue:</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">-  --#{$name}: hsl(
+-    #{var(--#{$name}-hue),
+-    var(--#{$name}-saturation),
+-    var(--#{$name}-lightness)}
+-  );
+</span><span class="gi">+  // Prettier causes a linting issue when reformatting this.
++  /* prettier-ignore */
++  --#{$name}: hsl(#{ var(--#{$name}-hue), var(--#{$name}-saturation), var(--#{$name}-lightness) });
+</span></code></pre></div></div>
+
+<p>I’ve never encountered a case where Prettier changed the semantics of the code at runtime, except perhaps for <a href="https://prettier.io/docs/en/options.html#trailing-commas">trailing commas in function parameters</a>, which should be watched out for on projects that support legacy browsers.</p>
+
+<h2 id="after-the-reformatting">After the reformatting</h2>
+
+<p>Merge it all, making sure CI is linting for Prettier formatting, and passes. Then edit your project’s <code class="language-plaintext highlighter-rouge">.git-blame-ignore-revs</code> with the correct reformatting commit, and that’s it.</p>
+
+<p>For projects with other contributors – make sure to let them know there will be conflicts, and how to resolve them. Here are instructions I made for Wagtail:</p>
+
+<hr />
+
+<h2 id="instructions-to-rebase-in-progress-prs">Instructions to rebase in-progress PRs</h2>
+
+<p>Here are the high-level steps:</p>
+
+<ol>
+  <li>Rebase onto the commit before the reformatting (11ccf30f0044a326abef2a5c5568f373ffe46188, or can also be defined as <code class="language-plaintext highlighter-rouge">af942a27e41b47e257b6cd46c01a13cd381fed04^1</code>, note the <code class="language-plaintext highlighter-rouge">^1</code> suffix), with your usual rebasing methodology.</li>
+  <li>Rebase onto the reformatting commit (af942a27e41b47e257b6cd46c01a13cd381fed04 / <code class="language-plaintext highlighter-rouge">af942a27e41b47e257b6cd46c01a13cd381fed04</code>), always favouring your branch’s changes, and auto-applying Prettier reformatting.</li>
+  <li>Rebase onto <code class="language-plaintext highlighter-rouge">main</code> with your usual rebasing methodology.</li>
+</ol>
+
+<p>Here are step-by-step commands, tested on macOS with zsh:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Make a copy of your branch</span>
+git branch save/my-existing-branch my-existing-branch
+<span class="c"># Make sure you have the latest `main` from Wagtail</span>
+git remote add upstream git@github.com:wagtail/wagtail.git
+git checkout main
+git pull upstream main
+<span class="c"># Rebase onto the commit preceding the reformatting to resolve conflicts that would have been present anyway.</span>
+git checkout my-existing-branch
+git rebase af942a27e41b47e257b6cd46c01a13cd381fed04^1
+<span class="c"># Install Prettier and other Wagtail development dependencies</span>
+<span class="c"># Make sure you use Node v16 and npm v8</span>
+node <span class="nt">--version</span>
+npm <span class="nt">--version</span>
+npm <span class="nb">install</span>
+<span class="c"># Test-run Prettier – this should show formatting errors.</span>
+npm run lint:format
+<span class="c"># Rebase again, this time with the reformatting as the base,</span>
+<span class="c"># always preserving your changes in case of conflicts, and automatically reformatting with Prettier.</span>
+git rebase <span class="nt">--strategy-option</span><span class="o">=</span>theirs <span class="nt">--exec</span> <span class="s1">'(npm run format || true) &amp;&amp; git add . &amp;&amp; git commit --amend --no-edit --no-verify'</span> af942a27e41b47e257b6cd46c01a13cd381fed04
+<span class="c"># Test-run Prettier – this should show no formatting errors.</span>
+npm run lint:format
+<span class="c"># Finally rebase onto the latest version from Wagtail main, as per usual.</span>
+git rebase main
+</code></pre></div></div>
+
+<p>That’s it! There’s a small chance (see below) there may be conflicts with our linters, requiring further manual intervention. Run a final <code class="language-plaintext highlighter-rouge">npm run lint</code> if you want to be sure.</p>
+
+<p>There are a few things worth noting:</p>
+
+<h3 id="its-a-bit-slow">It’s a bit slow</h3>
+
+<p>This will reformat the whole project for every commit to be rebased, so it’s slow for PRs with lots of commits. It’d have been possible for us to only reformat the files changed by a given commit, but I was having trouble doing this in a cross-shell-compatible way.</p>
+
+<h3 id="cases-where-manual-changes-will-be-needed">Cases where manual changes will be needed</h3>
+
+<p>Once this is applied, there is still a risk there’ll be code that clashes with Prettier reformatting, which will need manual intervention. See for example <a href="https://github.com/wagtail/wagtail/commit/37026d521f818bab3724c74df93e9e690e93a9d5">37026d521f818bab3724c74df93e9e690e93a9d5</a>. I would expect this to be rare. As part of our main refactoring, there were two kinds of issues:</p>
+
+<ul>
+  <li>1 conflict with Stylelint, where Prettier splitting a long expression into multiple lines changes how the expression is interpreted by our linting.</li>
+  <li>8 conflicts with ESLint, where Prettier moved <code class="language-plaintext highlighter-rouge">eslint-disable</code> comments in places where they no longer applied to the correct line.</li>
+</ul>
+
+<p>If in doubt, run <code class="language-plaintext highlighter-rouge">npm run lint</code> to check for any issues of this nature.</p>
+
+<h2 id="git-blame">git blame</h2>
+
+<p>For people who use <code class="language-plaintext highlighter-rouge">git blame</code>, we have introduced a <code class="language-plaintext highlighter-rouge">.git-blame-ignore-revs</code> which allows you to ignore the reformatting. See <a href="https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt">the official documentation</a> and the file in question for further information.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Wagtail developer jobs: where to look]]></title>
@@ -1652,245 +1899,6 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
 <h2 id="thank-you">Thank you!</h2>
 
 <p>Thank you to Dan, Tom, William, Nick for helping us rehearse!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Accessibility wins for Wagtail projects]]></title>
-    <link href="https://thib.me/accessibility-wins-for-wagtail-projects"/>
-    <updated>2020-07-30T01:15:22+00:00</updated>
-    <id>https://thib.me/accessibility-wins-for-wagtail-projects</id>
-    <content type="html"><![CDATA[<p>I recently gave a talk at <a href="https://us.wagtail.space/">Wagtail Space US 2020</a> about the accessibility of Wagtail websites – following on last year’s talk about the <a href="/making-wagtail-accessible">accessibility of the Wagtail admin</a>.</p>
-
-<!-- more -->
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZcHfUu_u4e0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<p>Slides: <a href="https://docs.google.com/presentation/d/14iSPklZmrjlMZlaFOBP1Mavt_tmz6vcF_t6cHVCCek8/edit">Wagtail Space US 2020 - Accessibility wins for Wagtail projects</a></p>
-
-<hr />
-
-<h2 id="why-accessibility-matters">Why accessibility matters</h2>
-
-<h3 id="inclusive-experiences">Inclusive experiences</h3>
-
-<ul>
-  <li>We want all users to have a great experience, no matter how they use the web.</li>
-  <li>Accessibility improvements lead to usability improvements for all.</li>
-</ul>
-
-<p>Search: “Curb cut effect”</p>
-
-<h3 id="accessibility-is-not-an-optional-extra">Accessibility is not an optional extra</h3>
-
-<p>USA:</p>
-
-<ul>
-  <li><a href="https://section508.gov/">Section 508</a> for recipients of federal funding, <a href="https://www.ada.gov/">ADA</a> for all*.</li>
-</ul>
-
-<p>EU/UK:</p>
-
-<ul>
-  <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016L2102">EU Directive 2016/2102</a> for the public sector, UK <a href="https://www.legislation.gov.uk/ukpga/2010/15/contents">Equality Act 2010</a> for all.</li>
-</ul>
-
-<p>In the end it’s all based on <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 AA</a>.</p>
-
-<p>* I’m not a lawyer. See <a href="https://gizmodo.com/gimlet-media-sued-for-not-making-podcasts-accessible-to-1844369021">Gimlet Media lawsuit</a></p>
-
-<h3 id="oh-and-its-not-just-about-wagtail-sites">Oh and it’s not just about Wagtail sites</h3>
-
-<p>Intranets, CRMs, ERPs, dashboards. Django admin.</p>
-
-<p>Internal-only tools shouldn’t compromise on accessibility just because their audience is smaller.</p>
-
-<p><a href="https://alistapart.com/article/building-the-woke-web/">alistapart.com/article/building-the-woke-web</a></p>
-
-<h2 id="common-wagtail-issues">Common* Wagtail issues</h2>
-
-<p>* Very common. Go check your sites after the talk</p>
-
-<h3 id="alt-text-for-images">Alt text for images</h3>
-
-<ol>
-  <li>Images’ Title fields are auto-populated with file names on upload</li>
-  <li>Wagtail sets alt text based on image Title by default</li>
-  <li>????</li>
-</ol>
-
-<p>Solution: always have an “alt text” field wherever an image is used.</p>
-
-<p><a href="https://github.com/wagtail/rfcs/pull/51">RFC #51</a>, <a href="https://github.com/wagtail/wagtail/issues/4945">#4945</a>, <a href="https://github.com/wagtail/rfcs/pull/44">RFC #44</a>, <a href="https://github.com/wagtail/wagtail/pull/5789">#5789</a></p>
-
-<h3 id="alt-text-for-images-2">Alt text for images, #2</h3>
-
-<ul>
-  <li>Have a mandatory alt text field when images aren’t decorative…</li>
-  <li>Display it</li>
-</ul>
-
-<p>Solution: always have an “alt text” field wherever an image is used.</p>
-
-<p><a href="https://github.com/wagtail/rfcs/pull/51">RFC #51</a>, <a href="https://github.com/wagtail/wagtail/issues/4945">#4945</a>, <a href="https://github.com/wagtail/rfcs/pull/44">RFC #44</a>, <a href="https://github.com/wagtail/wagtail/pull/5789">#5789</a></p>
-
-<h3 id="alt-text-for-images-3">Alt text for images, #3</h3>
-
-<ul>
-  <li>Always have an alt text field for each usage of an image</li>
-  <li>Make sure the field is optional when appropriate so decorative images can be hidden</li>
-  <li>Give appropriate guidance to editors, <a href="https://axesslab.com/alt-texts/">axesslab.com/alt-texts</a></li>
-  <li>Wagtail’s rich text images alt text needs to become optional</li>
-</ul>
-
-<p>Solution: always have an “alt text” field wherever an image is used.</p>
-
-<p><a href="https://github.com/wagtail/rfcs/pull/51">RFC #51</a>, <a href="https://github.com/wagtail/wagtail/issues/4945">#4945</a>, <a href="https://github.com/wagtail/rfcs/pull/44">RFC #44</a>, <a href="https://github.com/wagtail/wagtail/pull/5789">#5789</a></p>
-
-<h3 id="embed-titles">Embed titles</h3>
-
-<ul>
-  <li>In some cases, Wagtail embeds don’t have a title attribute set</li>
-  <li>Screen reader users need it to know what the embed is, and decide to browse it, or skip it</li>
-</ul>
-
-<p>Solution: either check your embed provider returns a title in 100% of the cases, or add a mandatory “Title” field for all embeds.</p>
-
-<p><a href="https://github.com/wagtail/wagtail/issues/5982">#5982</a></p>
-
-<h3 id="heading-levels">Heading levels</h3>
-
-<p>Screen reader users rely on logical, lean heading outlines to navigate pages</p>
-
-<ul>
-  <li>Wagtail makes it easy to restrict which heading levels are available in any rich text field. Do it.</li>
-  <li>Also restrict which heading levels are available via StreamField</li>
-  <li>Keep your templates in check too.</li>
-</ul>
-
-<p>Solution: <a href="https://docs.wagtail.org/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field">Limiting features in a rich text field</a>. Use <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a>.</p>
-
-<h3 id="heading-levels-2">Heading levels, #2</h3>
-
-<p>Heading levels</p>
-
-<p>Screen reader users rely on logical, lean heading outlines to navigate pages</p>
-
-<ul>
-  <li>Validate that no heading is left empty</li>
-  <li>Or, consider hiding empty headings with CSS (h2:empty { display: none; })</li>
-</ul>
-
-<p>Solution: <a href="https://docs.wagtail.org/en/stable/advanced_topics/customisation/page_editing_interface.html#limiting-features-in-a-rich-text-field">Limiting features in a rich text field</a>. Use <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a>.</p>
-
-<p>In the future – rich text rewriting to remove empty headings? <a href="https://github.com/wagtail/wagtail/issues/4223">#4223</a></p>
-
-<h3 id="other-issues-worth-knowing-about">Other issues worth knowing about</h3>
-
-<ul>
-  <li>TableBlock
-    <ul>
-      <li>The Caption field should be mandatory</li>
-      <li>The header cells field should be mandatory (<a href="https://github.com/wagtail/wagtail/issues/5989">#5989</a>)</li>
-    </ul>
-  </li>
-  <li>Links
-    <ul>
-      <li>We need a way to flag / validate link text to avoid “Read more”, “Click here”, “Find out more”</li>
-      <li>Or having a way to add custom aria-label where relevant</li>
-      <li>Broken links should be user-friendly, not href=”None”.</li>
-    </ul>
-  </li>
-  <li>Forms
-    <ul>
-      <li>Avoid Django’s as_table, as_ul rendering.</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="content-wins">Content wins</h2>
-
-<ul>
-  <li><a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a> (based on <a href="https://khan.github.io/tota11y/">tota11y</a>)</li>
-  <li>help_text (example: <a href="https://github.com/nhsuk/wagtail-nhsuk-frontend">wagtail-nhsuk-frontend</a>)</li>
-  <li><a href="https://docs.wagtail.org/en/stable/reference/pages/panels.html#helppanel">HelpPanel</a> – help_text but bigger</li>
-  <li><a href="https://vixdigital.github.io/draftail-plugins/">wagtail-readinglevel</a></li>
-  <li>Rich text experiments: guidelines-aware spellcheck</li>
-  <li>Rich text experiments: sentence length, <a href="https://wooorm.com/readability/">wooorm.com/readability</a></li>
-</ul>
-
-<h2 id="developer-wins">Developer wins</h2>
-
-<p><a href="https://torchbox.com/blog/accessibility-audits/">Accessibility audits: getting started</a></p>
-
-<h3 id="django-html-validator"><a href="https://github.com/peterbe/django-html-validator">django-html-validator</a></h3>
-
-<p>Based on the official v.Nu validator. Very easy to integrate into your workflow with Docker.</p>
-
-<ul>
-  <li>
-    <p>Finds <a href="https://alphagov.github.io/accessibility-tool-audit/">about 15% of issues</a></p>
-  </li>
-  <li>
-    <p>v.Nu also has a CLI which I recommend as part of accessibility audits</p>
-  </li>
-</ul>
-
-<h3 id="static-analysis">Static analysis</h3>
-
-<ul>
-  <li>React: <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a></li>
-  <li>Vue: <a href="https://github.com/maranran/eslint-plugin-vue-a11y">eslint-plugin-vue-a11y</a></li>
-  <li>Styles: <a href="https://github.com/YozhikM/stylelint-a11y">stylelint-a11y</a></li>
-</ul>
-
-<h3 id="curlylint">Curlylint</h3>
-
-<h3 id="learn-how-to-use-a-screen-reader">Learn how to use a screen reader</h3>
-
-<p>On a Mac with VoiceOver,</p>
-
-<ul>
-  <li>Cmd + F5 to open VoiceOver. Same to close it.</li>
-  <li>Ctrl to silence it</li>
-  <li>Ctrl + U to open the rotor</li>
-</ul>
-
-<p>That’s it.</p>
-
-<p>Even simpler on iOS.</p>
-
-<p><a href="https://a11ysupport.io/learn/">a11ysupport.io / learn</a></p>
-
-<h2 id="community-wins">Community wins</h2>
-
-<p>A cultural shift?</p>
-
-<h3 id="you-can-be-the-person-on-your-team-who-advocates-for-those-issues-to-be-fixed">You can be the person on your team who advocates for those issues to be fixed</h3>
-
-<p>It matters on all projects, all audiences</p>
-
-<p>There are well-defined standards, and readily available tools.</p>
-
-<p>You can be the person who knows how to use a screen reader and shows others how to do it.</p>
-
-<p><a href="https://alistapart.com/article/building-the-woke-web/">alistapart.com/article/building-the-woke-web</a></p>
-
-<h3 id="wagtail-can-be-a-cms-thats-part-of-the-solution">Wagtail can be a CMS that’s part of the solution</h3>
-
-<p>The <a href="https://webaim.org/projects/million/">WebAIM Million</a> keeps track of the accessibility of 1M websites’ homepages</p>
-
-<ul>
-  <li>Numbers are appalling</li>
-  <li>We can do better</li>
-  <li>Wagtail can help people make accessible websites – better defaults, starter templates, documentation</li>
-</ul>
-
-<h3 id="accessibility-team-">Accessibility team 🌈</h3>
-
-<p>The <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team">accessibility team</a> focuses on improvements to the accessibility of Wagtail, and of websites built with Wagtail. Everyone is welcome regardless of skill level or background.</p>
-
-<p>Find us on the Wagtail Slack in <a href="https://github.com/wagtail/wagtail/wiki/Slack">#accessibility</a></p>
 ]]></content>
   </entry>
   

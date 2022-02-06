@@ -1,4 +1,242 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-02-05T03:24:22+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Wagtail developer jobs: where to look</title><link href="https://thib.me/wagtail-developer-jobs-where-to-look" rel="alternate" type="text/html" title="Wagtail developer jobs: where to look" /><published>2022-01-13T06:21:09+00:00</published><updated>2022-01-13T06:21:09+00:00</updated><id>https://thib.me/wagtail-developer-jobs-where-to-look</id><content type="html" xml:base="https://thib.me/wagtail-developer-jobs-where-to-look">&lt;p&gt;Looking for a Wagtail job? Or to hire a developer? Here are good places to check.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-02-06T22:08:23+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Adding Prettier onto an existing project</title><link href="https://thib.me/adding-prettier-existing-project" rel="alternate" type="text/html" title="Adding Prettier onto an existing project" /><published>2022-02-04T21:18:03+00:00</published><updated>2022-02-04T21:18:03+00:00</updated><id>https://thib.me/adding-prettier-existing-project</id><content type="html" xml:base="https://thib.me/adding-prettier-existing-project">&lt;p&gt;&lt;a href=&quot;https://prettier.io/&quot;&gt;Prettier&lt;/a&gt; is good. So good, it’s easy to get used to it, and subsequently want to retrofit it onto existing projects. Here’s a step-by-step guide and example: configuring and documenting Prettier and reformatting existing code, all the while making sure not to break other people’s work.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;the-example&quot;&gt;The example&lt;/h2&gt;
+
+&lt;p&gt;All the steps described below are demonstrated publicly in a real-world project: Wagtail, via issue &lt;a href=&quot;https://github.com/wagtail/wagtail/issues/6059&quot;&gt;#6059 Automatic code formatting with Prettier&lt;/a&gt;. The implementation was split into two PRs: &lt;a href=&quot;https://github.com/wagtail/wagtail/pull/7908&quot;&gt;#7908 Add Prettier configuration &amp;amp; documentation&lt;/a&gt;, &lt;a href=&quot;https://github.com/wagtail/wagtail/pull/7912&quot;&gt;#7912 Prettier reformatting&lt;/a&gt;, and finally one extra commit, &lt;a href=&quot;https://github.com/wagtail/wagtail/commit/7eb8730d7372dc6b4752308a7e3354b36810f32e&quot;&gt;7eb8730d7372dc6b4752308a7e3354b36810f32e&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Finally, here are &lt;a href=&quot;https://github.com/wagtail/wagtail/issues/6059#issuecomment-1029941428&quot;&gt;instructions on resolving conflicts&lt;/a&gt; that weren’t directly stored in the repository (as this is a one-off task).&lt;/p&gt;
+
+&lt;h2 id=&quot;why-two-prs-and-a-commit&quot;&gt;Why two PRs and a commit&lt;/h2&gt;
+
+&lt;p&gt;I recommend always splitting the addition of any formatting tool into at least two PRs and the extra commit:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The first PR takes care of anything that requires careful review – configuration, integrations, documentation.&lt;/li&gt;
+  &lt;li&gt;The second PR takes care of the actual reformatting.&lt;/li&gt;
+  &lt;li&gt;Finally, the final commit is just there to finish setting up the &lt;a href=&quot;https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git-blame-ignore-revs&lt;/code&gt; file for git’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ignoreRevsFile&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;configuration&quot;&gt;Configuration&lt;/h2&gt;
+
+&lt;p&gt;This is actually the simplest step.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Update the project’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.editorconfig&lt;/code&gt; first, as Prettier reads it (&lt;a href=&quot;https://github.com/thibaudcolas/cookbook/blob/main/.editorconfig&quot;&gt;here’s an example&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prettier.config.js&lt;/code&gt; with any desired options.&lt;/li&gt;
+  &lt;li&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.prettierignore&lt;/code&gt;. I’d recommend to add large folders in here to speed up Prettier looking for files when using very broad glob patterns.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Personally I’ll always prefer to set all configuration options, even when using defaults. This saves having to remember what options are available that might not be set on the particular project when re-reviewing the configuration. I also always prefer using JavaScript for configuration – syntax highlighting and auto-formatting are dependable.&lt;/p&gt;
+
+&lt;h3 id=&quot;which-languages-should-i-use-prettier-for&quot;&gt;Which languages should I use Prettier for?&lt;/h3&gt;
+
+&lt;p&gt;I’d recommend all languages that Prettier supports, potentially with the exception of Markdown. Although the reformatting is excellent, enforcing a single format for documentation often feels cumbersome – particularly if the project’s documentation might often be updated by contributors with little knowledge of the project’s tooling.&lt;/p&gt;
+
+&lt;p&gt;If a supported language isn’t used, make sure to add its extension to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.prettierignore&lt;/code&gt; so the files are consistently skipped. Here’s an example:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Irrelevant files ignored for performance reasons.&lt;/span&gt;
+node_modules
+public/
+coverage/
+vendor/
+static
+_build
+&lt;span class=&quot;c&quot;&gt;# File types which Prettier supports but we don’t want auto-formatting.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.md
+&lt;span class=&quot;c&quot;&gt;# Files which contain incompatible syntax.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.html
+wagtail/admin/templates/wagtailadmin/edit_handlers/inline_panel.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;integrations&quot;&gt;Integrations&lt;/h2&gt;
+
+&lt;p&gt;I’ll always start with the same two commands:&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;format&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prettier --write &apos;**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml}&apos;&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;lint:format&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prettier --check &apos;**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml}&apos;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The glob pattern might seem complicated – it’s wrapped in single quotes to prevent shell globbing (thus making it consistent cross-platform). It uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;**/?(.)*&lt;/code&gt; so files are checked at all directory levels in the current folder, and regardless of whether file names start with a dot or not.&lt;/p&gt;
+
+&lt;p&gt;As to where those commands should run – generally in continuous integration, potentially in Git pre-commit hooks.&lt;/p&gt;
+
+&lt;h3 id=&quot;pre-commit&quot;&gt;pre-commit&lt;/h3&gt;
+
+&lt;p&gt;With the confusingly-named &lt;a href=&quot;https://pre-commit.com/&quot;&gt;pre-commit framework&lt;/a&gt;, it looks like:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://github.com/pre-commit/mirrors-prettier&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;rev&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;v2.5.1&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;hooks&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;prettier&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;types_or&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;scss&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;javascript&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tsx&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;yaml&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;types_or&lt;/code&gt; aren’t always file extensions, they’re &lt;a href=&quot;https://github.com/pre-commit/identify/blob/master/identify/extensions.py&quot;&gt;arbitrary identifiers&lt;/a&gt; for some languages.&lt;/p&gt;
+
+&lt;p&gt;Here’s what I personally prefer – just bash:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env bash&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Fail on first line that fails.&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Only keep staged files that are added (A), copied (C) or modified (M).&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;STAGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;git &lt;span class=&quot;nt&quot;&gt;--no-pager&lt;/span&gt; diff &lt;span class=&quot;nt&quot;&gt;--name-only&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--cached&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--diff-filter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ACM&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Files which are only partly staged (eg. git add --patch).&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PATCH_STAGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;git &lt;span class=&quot;nt&quot;&gt;--no-pager&lt;/span&gt; diff &lt;span class=&quot;nt&quot;&gt;--name-only&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--diff-filter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ACM &lt;span class=&quot;nv&quot;&gt;$STAGED&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Files which are fully staged.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;FULLY_STAGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;comm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-23&lt;/span&gt; &amp;lt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &amp;lt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATCH_STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;PRETTIER_STAGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-E&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;.(css|scss|js|ts|tsx|json|yaml|yml)$&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PRETTIER_FULLY_STAGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-E&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;.(css|scss|js|ts|tsx|json|yaml|yml)$&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$FULLY_STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Format and re-stage fully staged files only.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PRETTIER_FULLY_STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;then
+  &lt;/span&gt;npx prettier &lt;span class=&quot;nt&quot;&gt;--write&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PRETTIER_FULLY_STAGED&lt;/span&gt;
+  git add &lt;span class=&quot;nv&quot;&gt;$PRETTIER_FULLY_STAGED&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Lint all staged files.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PRETTIER_STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;then
+  &lt;/span&gt;npx prettier &lt;span class=&quot;nt&quot;&gt;--check&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PRETTIER_STAGED&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;ides&quot;&gt;IDEs&lt;/h3&gt;
+
+&lt;p&gt;VS Code has excellent Prettier support. Use it. I personally prefer to default to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;editor.formatOnSave&lt;/code&gt; turned on, and only disable it per project that doesn’t have Prettier.&lt;/p&gt;
+
+&lt;h3 id=&quot;continuous-integration&quot;&gt;Continuous integration&lt;/h3&gt;
+
+&lt;p&gt;We want to make sure we run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm run lint:format&lt;/code&gt; on CI. Simple as that. Worth mentioning &lt;a href=&quot;https://pre-commit.ci/&quot;&gt;pre-commit.ci&lt;/a&gt;, compatible with the same pre-commit framework as above, which runs formatting on your behalf and commits the changes to PRs. I personally don’t use it, but it works.&lt;/p&gt;
+
+&lt;p&gt;A common gotcha when setting up Prettier in CI is if your builds are optimised to only run when specific folders are changed – by definition, the Prettier checks will have to run whenever any file supported by Prettier changes.&lt;/p&gt;
+
+&lt;h2 id=&quot;documentation&quot;&gt;Documentation&lt;/h2&gt;
+
+&lt;p&gt;Make sure your contributors are aware Prettier is in use, and that there is a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm run format&lt;/code&gt; command available for cases where Prettier formatting doesn’t get automatically applied in an editor.&lt;/p&gt;
+
+&lt;h2 id=&quot;git-blame-compatibility&quot;&gt;Git blame compatibility&lt;/h2&gt;
+
+&lt;p&gt;GitHub makes it easy to skip a commit in the blame view. For git itself, we can use a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git-blame-ignore-revs&lt;/code&gt; file. &lt;a href=&quot;https://github.com/prettier/prettier/blob/main/.git-blame-ignore-revs&quot;&gt;Prettier itself&lt;/a&gt; has an excellent example, which is self-documenting:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# git-blame ignored revisions&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# To configure, run&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   git config blame.ignoreRevsFile .git-blame-ignore-revs&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Requires Git &amp;gt; 2.23&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# See https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Prettier bump after release&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 2.5.1&lt;/span&gt;
+4683a6284d53b913f129694a5be666fc55b06982
+&lt;span class=&quot;c&quot;&gt;# 2.5.0&lt;/span&gt;
+846dbdd7e8c9deb315b3e663b3103c559e798a89
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;…]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-initial-reformatting&quot;&gt;The initial reformatting&lt;/h2&gt;
+
+&lt;p&gt;All of the above steps should be done in the first PR, so they can easily be code reviewed. In the second PR, we can make the actual formatting changes. Run your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm run format&lt;/code&gt; now, and commit the results.&lt;/p&gt;
+
+&lt;p&gt;If your auto-formatting creates a lot of changes and you’ll want to review them manually – you could consider starting from a Prettier configuration that does fewer changes, commit the formatting, and add more changes gradually. This makes it easier to review different formatting changes overall.&lt;/p&gt;
+
+&lt;h3 id=&quot;manual-issues-to-fix&quot;&gt;Manual issues to fix&lt;/h3&gt;
+
+&lt;p&gt;If your project uses per-line linting disable comments, make sure the comments still target the correct lines after the reformatting. ESLint has an excellent &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--report-unused-disable-directives&lt;/code&gt; which helps a lot. Here’s an example where this happened:&lt;/p&gt;
+
+&lt;div class=&quot;language-diff highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gd&quot;&gt;-  // eslint-disable-next-line func-names
+&lt;/span&gt;  $(
+    &apos;#new a.task-type-choice, #new a.choose-different-task-type&apos;,
+    modal.body,
+&lt;span class=&quot;gd&quot;&gt;-  ).on(&apos;click&apos;, function () {
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+  ).on(&apos;click&apos;, function onClickNew() {
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There can be other compatibility issues with other static analysis tools, although that’s very rare. For example, I had to disable Prettier for a line where a Stylelint plugin wasn’t producing the expected output anymore – I’d suspect it’s the plugin’s analysis that’s causing the actual issue:&lt;/p&gt;
+
+&lt;div class=&quot;language-diff highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gd&quot;&gt;-  --#{$name}: hsl(
+-    #{var(--#{$name}-hue),
+-    var(--#{$name}-saturation),
+-    var(--#{$name}-lightness)}
+-  );
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+  // Prettier causes a linting issue when reformatting this.
++  /* prettier-ignore */
++  --#{$name}: hsl(#{ var(--#{$name}-hue), var(--#{$name}-saturation), var(--#{$name}-lightness) });
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I’ve never encountered a case where Prettier changed the semantics of the code at runtime, except perhaps for &lt;a href=&quot;https://prettier.io/docs/en/options.html#trailing-commas&quot;&gt;trailing commas in function parameters&lt;/a&gt;, which should be watched out for on projects that support legacy browsers.&lt;/p&gt;
+
+&lt;h2 id=&quot;after-the-reformatting&quot;&gt;After the reformatting&lt;/h2&gt;
+
+&lt;p&gt;Merge it all, making sure CI is linting for Prettier formatting, and passes. Then edit your project’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git-blame-ignore-revs&lt;/code&gt; with the correct reformatting commit, and that’s it.&lt;/p&gt;
+
+&lt;p&gt;For projects with other contributors – make sure to let them know there will be conflicts, and how to resolve them. Here are instructions I made for Wagtail:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;instructions-to-rebase-in-progress-prs&quot;&gt;Instructions to rebase in-progress PRs&lt;/h2&gt;
+
+&lt;p&gt;Here are the high-level steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Rebase onto the commit before the reformatting (11ccf30f0044a326abef2a5c5568f373ffe46188, or can also be defined as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;af942a27e41b47e257b6cd46c01a13cd381fed04^1&lt;/code&gt;, note the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;^1&lt;/code&gt; suffix), with your usual rebasing methodology.&lt;/li&gt;
+  &lt;li&gt;Rebase onto the reformatting commit (af942a27e41b47e257b6cd46c01a13cd381fed04 / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;af942a27e41b47e257b6cd46c01a13cd381fed04&lt;/code&gt;), always favouring your branch’s changes, and auto-applying Prettier reformatting.&lt;/li&gt;
+  &lt;li&gt;Rebase onto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; with your usual rebasing methodology.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here are step-by-step commands, tested on macOS with zsh:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Make a copy of your branch&lt;/span&gt;
+git branch save/my-existing-branch my-existing-branch
+&lt;span class=&quot;c&quot;&gt;# Make sure you have the latest `main` from Wagtail&lt;/span&gt;
+git remote add upstream git@github.com:wagtail/wagtail.git
+git checkout main
+git pull upstream main
+&lt;span class=&quot;c&quot;&gt;# Rebase onto the commit preceding the reformatting to resolve conflicts that would have been present anyway.&lt;/span&gt;
+git checkout my-existing-branch
+git rebase af942a27e41b47e257b6cd46c01a13cd381fed04^1
+&lt;span class=&quot;c&quot;&gt;# Install Prettier and other Wagtail development dependencies&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Make sure you use Node v16 and npm v8&lt;/span&gt;
+node &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+npm &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Test-run Prettier – this should show formatting errors.&lt;/span&gt;
+npm run lint:format
+&lt;span class=&quot;c&quot;&gt;# Rebase again, this time with the reformatting as the base,&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# always preserving your changes in case of conflicts, and automatically reformatting with Prettier.&lt;/span&gt;
+git rebase &lt;span class=&quot;nt&quot;&gt;--strategy-option&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;theirs &lt;span class=&quot;nt&quot;&gt;--exec&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;(npm run format || true) &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit --amend --no-edit --no-verify&apos;&lt;/span&gt; af942a27e41b47e257b6cd46c01a13cd381fed04
+&lt;span class=&quot;c&quot;&gt;# Test-run Prettier – this should show no formatting errors.&lt;/span&gt;
+npm run lint:format
+&lt;span class=&quot;c&quot;&gt;# Finally rebase onto the latest version from Wagtail main, as per usual.&lt;/span&gt;
+git rebase main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s it! There’s a small chance (see below) there may be conflicts with our linters, requiring further manual intervention. Run a final &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm run lint&lt;/code&gt; if you want to be sure.&lt;/p&gt;
+
+&lt;p&gt;There are a few things worth noting:&lt;/p&gt;
+
+&lt;h3 id=&quot;its-a-bit-slow&quot;&gt;It’s a bit slow&lt;/h3&gt;
+
+&lt;p&gt;This will reformat the whole project for every commit to be rebased, so it’s slow for PRs with lots of commits. It’d have been possible for us to only reformat the files changed by a given commit, but I was having trouble doing this in a cross-shell-compatible way.&lt;/p&gt;
+
+&lt;h3 id=&quot;cases-where-manual-changes-will-be-needed&quot;&gt;Cases where manual changes will be needed&lt;/h3&gt;
+
+&lt;p&gt;Once this is applied, there is still a risk there’ll be code that clashes with Prettier reformatting, which will need manual intervention. See for example &lt;a href=&quot;https://github.com/wagtail/wagtail/commit/37026d521f818bab3724c74df93e9e690e93a9d5&quot;&gt;37026d521f818bab3724c74df93e9e690e93a9d5&lt;/a&gt;. I would expect this to be rare. As part of our main refactoring, there were two kinds of issues:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1 conflict with Stylelint, where Prettier splitting a long expression into multiple lines changes how the expression is interpreted by our linting.&lt;/li&gt;
+  &lt;li&gt;8 conflicts with ESLint, where Prettier moved &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eslint-disable&lt;/code&gt; comments in places where they no longer applied to the correct line.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If in doubt, run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm run lint&lt;/code&gt; to check for any issues of this nature.&lt;/p&gt;
+
+&lt;h2 id=&quot;git-blame&quot;&gt;git blame&lt;/h2&gt;
+
+&lt;p&gt;For people who use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git blame&lt;/code&gt;, we have introduced a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git-blame-ignore-revs&lt;/code&gt; which allows you to ignore the reformatting. See &lt;a href=&quot;https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt&quot;&gt;the official documentation&lt;/a&gt; and the file in question for further information.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Prettier is good. So good, it’s easy to get used to it, and subsequently want to retrofit it onto existing projects. Here’s a step-by-step guide and example: configuring and documenting Prettier and reformatting existing code, all the while making sure not to break other people’s work.</summary></entry><entry><title type="html">Wagtail developer jobs: where to look</title><link href="https://thib.me/wagtail-developer-jobs-where-to-look" rel="alternate" type="text/html" title="Wagtail developer jobs: where to look" /><published>2022-01-13T06:21:09+00:00</published><updated>2022-01-13T06:21:09+00:00</updated><id>https://thib.me/wagtail-developer-jobs-where-to-look</id><content type="html" xml:base="https://thib.me/wagtail-developer-jobs-where-to-look">&lt;p&gt;Looking for a Wagtail job? Or to hire a developer? Here are good places to check.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -694,131 +932,4 @@ Or you can use aria-describedby to make the association, like this:
   &lt;li&gt;GitHub: &lt;a href=&quot;https://github.com/thibaudcolas/accessibility-loves-python&quot;&gt;thibaudcolas/accessibility-loves-python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The poster explains what the two projects are, and offers interactive demos. For Curlylint, the demo allows linting any templates with basic configuration. For Kontrasto, users can upload an image and get the Kontrasto results.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">This is a poster presentation for PyCon US 2021, which covers two separate projects: Curlylint, an experimental linter for HTML templates focusing on accessibility issues. Kontrasto, a library automatically improving the contrast of text over images.</summary></entry><entry><title type="html">PyCon US 2021: Building accessibility into open-source projects</title><link href="https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects" rel="alternate" type="text/html" title="PyCon US 2021: Building accessibility into open-source projects" /><published>2021-05-09T15:03:21+00:00</published><updated>2021-05-09T15:03:21+00:00</updated><id>https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects</id><content type="html" xml:base="https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects">&lt;p&gt;This is a lightning talk I gave at PyCon US 2021’s &lt;a href=&quot;https://us.pycon.org/2021/summits/maintainers/&quot;&gt;Maintainers Summit&lt;/a&gt;, intended for an audience of project maintainers / open-source contributors.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Video:&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/9XI-8ZvU2w0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Slides:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1qjHKEWoExYY-fG4qbRBQP_EN5fxs_8z7csVIpy9bWlg/edit&quot;&gt;Google Slides: PyCon US 2021 - Building accessibility into open-source projects&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1hN554kNicuEvBcWK_VsiRazBTfbBGt6X/view&quot;&gt;PDF: PyCon US 2021 - Building accessibility into open-source projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;transcript&quot;&gt;Transcript&lt;/h2&gt;
-
-&lt;p&gt;Hi PyCon, thanks for having me, I’m Thibaud my pronouns are he/him and I’m a developer at Torchbox in the UK.&lt;/p&gt;
-
-&lt;p&gt;Today I’m here to talk to you about building accessibility into open source projects, and in particular coming to you with our learnings from Wagtail; I’m a core developer of this CMS called Wagtail built on Python and Django and I also contribute to Django’s accessibility team so I’m here to share with you the learnings from those two projects.&lt;/p&gt;
-
-&lt;h3 id=&quot;a-wagtail-story&quot;&gt;A Wagtail story&lt;/h3&gt;
-
-&lt;p&gt;So Wagtail is a CMS that people use to build websites.&lt;/p&gt;
-
-&lt;h4 id=&quot;why-accessibility-matters-to-us&quot;&gt;Why accessibility matters to us&lt;/h4&gt;
-
-&lt;p&gt;When it comes to why we care about accessibility there are essentially two reasons.&lt;/p&gt;
-
-&lt;p&gt;One of them is we want the Wagtail admin to be accessible to as many people as possible and the other is we want the sites actually built with Wagtail to be as accessible as possible so these are the two main reasons for end users.&lt;/p&gt;
-
-&lt;h4 id=&quot;other-reasons-to-care&quot;&gt;Other reasons to care&lt;/h4&gt;
-
-&lt;p&gt;And then as a project there are definitely a few more reasons – the big one is legislation and procurement our clients and people who pick Wagtail as a CMS definitely have very specific expectations from projects and they would pick one or the other based on requirements like this.
-so yeah there is legislation in the US, in the EU, and really all around the world it’s not just those two countries.&lt;/p&gt;
-
-&lt;p&gt;One thing we do have going for ourselves is that all of those laws are based on the same standard called WCAG 2.1, the AA level being the most recent and widespread version of it.&lt;/p&gt;
-
-&lt;h4 id=&quot;its-not-just-wagtail&quot;&gt;It’s not just Wagtail&lt;/h4&gt;
-
-&lt;p&gt;And yeah it’s not just Wagtail obviously it’s not just CMSes, all types of online tools, apps, sites we build have to follow those same standards.&lt;/p&gt;
-
-&lt;p&gt;And really as developers I want to make the points that this isn’t just those projects it’s also the building blocks of those projects, the frameworks, the database modeling, the development tools, even the READMEs have to follow those same standards.&lt;/p&gt;
-
-&lt;p&gt;But yeah I don’t want this to be too negative either, so let’s look at some practical examples of where accessibility matters in the Python ecosystem in particular.&lt;/p&gt;
-
-&lt;h3 id=&quot;where-accessibility-matters&quot;&gt;Where accessibility matters&lt;/h3&gt;
-
-&lt;p&gt;I went through the &lt;a href=&quot;https://hugovk.github.io/top-pypi-packages/&quot;&gt;top 1000 Python packages on PyPI&lt;/a&gt; and thought I’d pick a few examples of where you might not think of accessibility but actually there are very clear considerations to be had.&lt;/p&gt;
-
-&lt;h4 id=&quot;data-science&quot;&gt;Data science&lt;/h4&gt;
-
-&lt;p&gt;So the first one is data science, and alt text for dataviz.&lt;/p&gt;
-
-&lt;p&gt;As part of studying data you will very likely have to visualise it at some point and that might include producing images that you do want to be accessible to people who can’t actually see the visuals.&lt;/p&gt;
-
-&lt;p&gt;Of course they might not get the whole interactivity and interaction that might not be the point of your exercise but just having some form of alternative text would be useful.&lt;/p&gt;
-
-&lt;h4 id=&quot;data-science-example-alt-text&quot;&gt;Data science example: alt text&lt;/h4&gt;
-
-&lt;p&gt;So this example in particular, that comes from Matplotlib and the alt text they have defined in their example basically just restates the caption at the top of the chart.&lt;/p&gt;
-
-&lt;p&gt;Which is, well, definitely better than nothing, but to the right I have an example of what it might look like for you to consider actually going through the whole data for people who can’t see the visuals.&lt;/p&gt;
-
-&lt;p&gt;And yeah not saying this is always appropriate again but definitely something to consider and if you happen to work with one of those dataviz projects it’s important I think for this to be considered in the docs in the actual framework of how you create the visualizations, and yeah just making sure that this is taken into account.&lt;/p&gt;
-
-&lt;h4 id=&quot;web-development&quot;&gt;Web development&lt;/h4&gt;
-
-&lt;p&gt;Another important part of the Python ecosystem is web development with big frameworks that I’m sure you all have heard of before, and templating languages, and here as well, basically even though those frameworks might not always be very opinionated about HTML they do have for example code snippets in their docs that really should take accessibility into account.&lt;/p&gt;
-
-&lt;p&gt;So it’s very common for me to look at those documentation code snippets and see very basic HTML issues.&lt;/p&gt;
-
-&lt;h4 id=&quot;web-development-examples-html-bad-practices&quot;&gt;Web development examples: HTML bad practices&lt;/h4&gt;
-
-&lt;p&gt;So for example to the left here this is missing a “lang” attribute on the HTML tag.&lt;/p&gt;
-
-&lt;h4 id=&quot;pdf-generation&quot;&gt;PDF generation&lt;/h4&gt;
-
-&lt;p&gt;And here a third topic in Python in particular is PDF generation, there are lots of those projects out there and something that people might overlook is that even though the source for those PDFs is HTML, the PDF itself might not be structured at all and it might not be usable by people with screen readers, so the key feature here that I have to look for is called “tagged PDFs” and it’s a requirement that very few of those projects actually have.&lt;/p&gt;
-
-&lt;p&gt;Yeah I’m trying my best not to have this be too negative, so just to finish on a more positive note I wanted to showcase different ways you could foster those accessibility contributions on your own projects.&lt;/p&gt;
-
-&lt;h3 id=&quot;fostering-contributions&quot;&gt;Fostering contributions&lt;/h3&gt;
-
-&lt;h4 id=&quot;define-your-target&quot;&gt;Define your target&lt;/h4&gt;
-
-&lt;p&gt;The first thing to do is obviously to pick a target for what you support.&lt;/p&gt;
-
-&lt;p&gt;WCAG 2.1 at the AA level being the obvious thing to start from, and just not stop at picking the target but actually documenting it and documenting practical code review and testing steps, I think it’s very important.&lt;/p&gt;
-
-&lt;p&gt;I have added a few examples of this should you want to look into this further.&lt;/p&gt;
-
-&lt;h4 id=&quot;leverage-automated-tools&quot;&gt;Leverage automated tools&lt;/h4&gt;
-
-&lt;p&gt;And yeah now that you have this target actually doing some testing, there are lots of great automated tools out there they won’t find all of the issues but they definitely find plenty enough to get going with so I’d highly recommend looking into this.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.deque.com/axe/&quot;&gt;Axe&lt;/a&gt; – Accessibility rules engine with support for WCAG &amp;amp; Section 508&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://accessibilityinsights.io/docs/en/web/overview&quot;&gt;Accessibility Insights&lt;/a&gt; – Browser extension with Axe and more&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pa11y.org/&quot;&gt;Pa11y&lt;/a&gt; – Command line tool for accessibility checks with Axe &amp;amp; HTML_CS&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/evcohen/eslint-plugin-jsx-a11y&quot;&gt;eslint-plugin-jsx-a11y&lt;/a&gt;, &lt;a href=&quot;https://github.com/maranran/eslint-plugin-vue-a11y&quot;&gt;eslint-plugin-vue-a11y&lt;/a&gt;, &lt;a href=&quot;https://github.com/YozhikM/stylelint-a11y&quot;&gt;stylelint-a11y&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;leverage-automated-tools-django-example&quot;&gt;Leverage automated tools: Django example&lt;/h4&gt;
-
-&lt;p&gt;And this is an example from Django in particular where we have this very big report that takes screenshots and logs all of the accessibility issues for different parts of the Django admin and you can just look at this and get a sense of a snapshot of how Django itself is doing.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Pa11y example: &lt;a href=&quot;https://github.com/thibaudcolas/django_admin_tests&quot;&gt;github.com / thibaudcolas / django_admin_tests&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;manual-audits&quot;&gt;Manual audits&lt;/h4&gt;
-
-&lt;p&gt;And back on the Wagtail side we tend to invest more into manual audits just because we have the expertise to do this so these are definitely much more complex to put together and I won’t be talking about this much further but if you’re interested I can definitely talk to that a bit more.&lt;/p&gt;
-
-&lt;h4 id=&quot;for-larger-projects-have-an-accessibility-team&quot;&gt;For larger projects: have an accessibility team&lt;/h4&gt;
-
-&lt;p&gt;And yes for larger projects I definitely recommend having a dedicated team for this of subject matter experts so we have the example of the Wagtail team here but yeah for example Jupyter notebooks as well do have a team like this that looks after the accessibility of the actual notebooks which as they are used in classroom environments is very important.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://wagtail.org/blog/accessibility-team-reloaded/&quot;&gt;Wagtail’s team&lt;/a&gt; = 5 people committed for 6 months. Thank you Storm, Jesse, Kyle, Scott!&lt;/p&gt;
-
-&lt;h3 id=&quot;open-source-can-lead-the-way&quot;&gt;Open-source can lead the way&lt;/h3&gt;
-
-&lt;p&gt;So the last point I want to make really is that there are a few areas in software development like security for example where open source leads the way and shows us how it’s meant to be done basically, and I really think accessibility could be one of those areas, it really is something that matters on all projects no matter their size, and yeah that matters to a huge number of people that developers often underestimate just the sheer size of the people who can benefit from this, and yes there are well-defined standards and readily-available tools.&lt;/p&gt;
-
-&lt;h3 id=&quot;thank-you-️&quot;&gt;Thank you! ❤️&lt;/h3&gt;
-
-&lt;p&gt;Thank you I hope you enjoyed this and I’ll definitely be available later on to answer any questions.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">This is a lightning talk I gave at PyCon US 2021’s Maintainers Summit, intended for an audience of project maintainers / open-source contributors.</summary></entry></feed>
+&lt;p&gt;The poster explains what the two projects are, and offers interactive demos. For Curlylint, the demo allows linting any templates with basic configuration. For Kontrasto, users can upload an image and get the Kontrasto results.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">This is a poster presentation for PyCon US 2021, which covers two separate projects: Curlylint, an experimental linter for HTML templates focusing on accessibility issues. Kontrasto, a library automatically improving the contrast of text over images.</summary></entry></feed>
