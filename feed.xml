@@ -1,4 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-02-28T11:55:32+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Adding Prettier onto an existing project</title><link href="https://thib.me/adding-prettier-existing-project" rel="alternate" type="text/html" title="Adding Prettier onto an existing project" /><published>2022-02-04T21:18:03+00:00</published><updated>2022-02-04T21:18:03+00:00</updated><id>https://thib.me/adding-prettier-existing-project</id><content type="html" xml:base="https://thib.me/adding-prettier-existing-project">&lt;p&gt;&lt;a href=&quot;https://prettier.io/&quot;&gt;Prettier&lt;/a&gt; is good. So good, it’s easy to get used to it, and subsequently want to retrofit it onto existing projects. Here’s a step-by-step guide and example: configuring and documenting Prettier and reformatting existing code, all the while making sure not to break other people’s work.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-02-28T12:04:34+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">State of Wagtail’s accessibility</title><link href="https://thib.me/state-of-wagtail-accessibility" rel="alternate" type="text/html" title="State of Wagtail’s accessibility" /><published>2022-02-28T07:42:03+00:00</published><updated>2022-02-28T07:42:03+00:00</updated><id>https://thib.me/state-of-wagtail-accessibility</id><content type="html" xml:base="https://thib.me/state-of-wagtail-accessibility">&lt;p&gt;After &lt;a href=&quot;https://wagtail.org/blog/announcing-wagtail-sub-teams/&quot;&gt;6 months of operations&lt;/a&gt;, we reflect on the progress our &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility&quot;&gt;accessibility team&lt;/a&gt; has made, and go on the lookout for new contributors.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Accessibility has been on Wagtail’s roadmap for quite some time, and we’ve &lt;a href=&quot;https://wagtail.org/blog/accessibility-team-reloaded/&quot;&gt;reflected on our progress&lt;/a&gt; in the past. Now’s a good time for us to do this again, and share our plans for the next few years.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-we-achieved-in-2021&quot;&gt;What we achieved in 2021&lt;/h3&gt;
+
+&lt;p&gt;2021 has been a busy year for Wagtail’s &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Accessibility-team&quot;&gt;accessibility team&lt;/a&gt;. With 5 members on board last February, and &lt;a href=&quot;https://github.com/SaptakS&quot;&gt;Saptak Sengupta&lt;/a&gt; joining us in July, we went through a lot of long-awaited changes.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We now have an &lt;a href=&quot;https://wagtail.org/accessibility/&quot;&gt;official accessibility statement&lt;/a&gt;. This was the first time we publicly stated ATAG 2.0 as a conformance goal.&lt;/li&gt;
+  &lt;li&gt;We also published our &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1l7tnpEyJiC5BWE_JX0XCkknyrjxYA5T2aee5JgPnmi4/edit#gid=1433484179&quot;&gt;(work in progress) accessibility audit&lt;/a&gt;. It’s far from complete, but has already helped us prioritise specific improvements to the CMS.&lt;/li&gt;
+  &lt;li&gt;We made a big push to improve support for Windows high contrast mode as part of &lt;a href=&quot;https://docs.wagtail.org/en/stable/releases/2.15.html#windows-high-contrast-support&quot;&gt;Wagtail 2.15&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;We were also involved with the development of large features, earlier than might have been the case in the past.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;windows-high-contrast-mode&quot;&gt;Windows high-contrast mode&lt;/h3&gt;
+
+&lt;p&gt;This significant effort is worth highlighting for a few reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The whole backlog of improvement came from a &lt;a href=&quot;https://trello.com/b/MnlPSvkD/wagtail-high-contrast&quot;&gt;large audit&lt;/a&gt; by &lt;a href=&quot;https://github.com/kbayliss&quot;&gt;Kyle Bayliss&lt;/a&gt;, which allowed us to understand the bigger picture of which practices in our development might be causing issues.&lt;/li&gt;
+  &lt;li&gt;In contrast, we were able to split the fixes &lt;a href=&quot;https://github.com/wagtail/wagtail/issues?q=is%3Aissue+sort%3Aupdated-desc+label%3A%22good+first+issue%22+label%3AAccessibility+is%3Aclosed+High-contrast+mode&quot;&gt;over multiple tickets&lt;/a&gt; to make those potential contributions more accessible to newcomers (in total, 12 people participated in those changes!).&lt;/li&gt;
+  &lt;li&gt;We got a sponsorship from &lt;a href=&quot;https://assistivlabs.com/&quot;&gt;Assistiv Labs&lt;/a&gt; to simplify testing of Wagtail with different assistive technologies. Windows high contrast mode in particular was very hard for us to test until then.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is still a long way to go for us to achieve full support, but we feel better able to deliver this than ever. Here is what Windows high contrast mode looks like in Wagtail currently, tested via Assistiv Labs:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/state-of-wagtail-accessibility/whcm-wagtail.png&quot;&gt;&lt;img src=&quot;/images/blog/state-of-wagtail-accessibility/whcm-wagtail.png&quot; alt=&quot;Screenshot of Windows high contrast mode in Assistiv Labs, with the main navigation opened over page listings&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-we-didnt-achieve&quot;&gt;What we didn’t achieve&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We were hoping to have accessibility team &lt;a href=&quot;https://simonwillison.net/2021/Feb/19/office-hours/&quot;&gt;office hours&lt;/a&gt;, and never got round to starting this. If you would be interested, please &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Slack&quot;&gt;let us know on Slack in #accessibility&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;One of the key features we wanted to scope was accessibility testing built into the CMS – we made plans internally, but didn’t draft a formal proposal as we had hoped. More on that soon!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-year-ahead&quot;&gt;The year ahead&lt;/h2&gt;
+
+&lt;p&gt;The elephant in the room for Wagtail’s accessibility improvements is the &lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/7739&quot;&gt;Page editor 2022&lt;/a&gt; project, which accessibility team members are heavily involved with. This marks a clear transition for us: from frequently fixing issues piecemeal after the fact; to being involved in every feature’s planning, making sure accessibility is considered.&lt;/p&gt;
+
+&lt;p&gt;We also get to direct the scope of the project – for example, recommending a wholesale replacement of the current datepicker, rather than a restyling.&lt;/p&gt;
+
+&lt;p&gt;A practical example of our involvement is the production of annotations for UI semantics and behavior, following the &lt;a href=&quot;https://dribbble.com/shots/6269661-Accessibility-Bluelines&quot;&gt;Accessibility Bluelines&lt;/a&gt; methodology:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/state-of-wagtail-accessibility/accessibility-bluelines.png&quot;&gt;&lt;img src=&quot;/images/blog/state-of-wagtail-accessibility/accessibility-bluelines.png&quot; alt=&quot;Accessibility bluelines example for Wagtail, annotating the sidebar and top of the page editor&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;accessibility-of-the-cms&quot;&gt;Accessibility of the CMS&lt;/h3&gt;
+
+&lt;p&gt;We are and will be going through a lot of improvements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Liaising with the Page editor 2022 project, and other features development, so accessibility requirements are included.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wagtail/wagtail/pull/7751&quot;&gt;Automated accessibility testing&lt;/a&gt; of all pull requests, so ongoing QA isn’t as reliant on manual testing.&lt;/li&gt;
+  &lt;li&gt;Rolling out the most important accessibility-related changes from the page editor project, to the rest of the CMS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will also keep up with &lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/&quot;&gt;WCAG 2.2&lt;/a&gt;’s publication, and drafts of &lt;a href=&quot;https://w3c.github.io/silver/guidelines/&quot;&gt;WCAG 3.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;accessibility-of-sites-built-with-wagtail&quot;&gt;Accessibility of sites built with Wagtail&lt;/h3&gt;
+
+&lt;p&gt;The biggest change here will be the inclusion of built-in accessibility tests, as part of page previews when editing content. This is par for the course of ATAG 2.0 conformance, and we’re also gradually integrating findings from the &lt;a href=&quot;https://accessibilitycluster.com/&quot;&gt;We4Authors Cluster&lt;/a&gt; research project, which details the most important accessibility features in content management systems.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-you-can-help&quot;&gt;How you can help&lt;/h2&gt;
+
+&lt;p&gt;Two things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Regularly &lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/7739&quot;&gt;provide feedback on the Page editor 2022&lt;/a&gt; project, based on your experience with Wagtail and other content management systems.&lt;/li&gt;
+  &lt;li&gt;Consider joining our accessibility team! We are looking for new members for the next 6 months or so, from all backgrounds, all skillsets.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In both cases, we’re particularly keen to hear from people who:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Have personal experience of access and functional needs, or who are regular users of assistive technologies.&lt;/li&gt;
+  &lt;li&gt;Work on UX, design, or content – and can help us understand the needs of our users.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To chat to the accessibility team directly, reach out to us &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Slack&quot;&gt;on Slack in #accessibility&lt;/a&gt;.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">After 6 months of operations, we reflect on the progress our accessibility team has made, and go on the lookout for new contributors.</summary></entry><entry><title type="html">Adding Prettier onto an existing project</title><link href="https://thib.me/adding-prettier-existing-project" rel="alternate" type="text/html" title="Adding Prettier onto an existing project" /><published>2022-02-04T21:18:03+00:00</published><updated>2022-02-04T21:18:03+00:00</updated><id>https://thib.me/adding-prettier-existing-project</id><content type="html" xml:base="https://thib.me/adding-prettier-existing-project">&lt;p&gt;&lt;a href=&quot;https://prettier.io/&quot;&gt;Prettier&lt;/a&gt; is good. So good, it’s easy to get used to it, and subsequently want to retrofit it onto existing projects. Here’s a step-by-step guide and example: configuring and documenting Prettier and reformatting existing code, all the while making sure not to break other people’s work.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -918,18 +998,4 @@ Or you can use aria-describedby to make the association, like this:
 &lt;p&gt;&lt;a href=&quot;https://github.com/adamghill/djangocon-eu-2021-conference-talk&quot;&gt;https://github.com/adamghill/djangocon-eu-2021-conference-talk&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://code.djangoproject.com/ticket/32819&quot;&gt;https://code.djangoproject.com/ticket/32819&lt;/a&gt;
-&lt;a href=&quot;https://code.djangoproject.com/ticket/32820&quot;&gt;https://code.djangoproject.com/ticket/32820&lt;/a&gt;&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Notes from the conference.</summary></entry><entry><title type="html">PyCon US 2021: Web Accessibility ♥ Python</title><link href="https://thib.me/pycon-us-2021-python-accessibility-ftw" rel="alternate" type="text/html" title="PyCon US 2021: Web Accessibility ♥ Python" /><published>2021-05-13T06:43:49+00:00</published><updated>2021-05-13T06:43:49+00:00</updated><id>https://thib.me/pycon-us-2021-python-accessibility-ftw</id><content type="html" xml:base="https://thib.me/pycon-us-2021-python-accessibility-ftw">&lt;p&gt;This is a poster presentation for &lt;a href=&quot;https://us.pycon.org/2021/&quot;&gt;PyCon US 2021&lt;/a&gt;, which covers two separate projects:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.curlylint.org/&quot;&gt;Curlylint&lt;/a&gt;, an experimental linter for HTML templates focusing on accessibility issues.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://kontrasto.netlify.app/&quot;&gt;Kontrasto&lt;/a&gt;, a library automatically improving the contrast of text over images.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Demo site: &lt;a href=&quot;https://accessibility-loves-python.vercel.app/&quot;&gt;accessibility-loves-python.vercel.app&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;GitHub: &lt;a href=&quot;https://github.com/thibaudcolas/accessibility-loves-python&quot;&gt;thibaudcolas/accessibility-loves-python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The poster explains what the two projects are, and offers interactive demos. For Curlylint, the demo allows linting any templates with basic configuration. For Kontrasto, users can upload an image and get the Kontrasto results.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">This is a poster presentation for PyCon US 2021, which covers two separate projects: Curlylint, an experimental linter for HTML templates focusing on accessibility issues. Kontrasto, a library automatically improving the contrast of text over images.</summary></entry></feed>
+&lt;a href=&quot;https://code.djangoproject.com/ticket/32820&quot;&gt;https://code.djangoproject.com/ticket/32820&lt;/a&gt;&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Notes from the conference.</summary></entry></feed>

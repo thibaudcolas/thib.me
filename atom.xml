@@ -4,13 +4,102 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2022-02-28T11:55:32+00:00</updated>
+  <updated>2022-02-28T12:04:34+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[State of Wagtail’s accessibility]]></title>
+    <link href="https://thib.me/state-of-wagtail-accessibility"/>
+    <updated>2022-02-28T07:42:03+00:00</updated>
+    <id>https://thib.me/state-of-wagtail-accessibility</id>
+    <content type="html"><![CDATA[<p>After <a href="https://wagtail.org/blog/announcing-wagtail-sub-teams/">6 months of operations</a>, we reflect on the progress our <a href="https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility">accessibility team</a> has made, and go on the lookout for new contributors.</p>
+
+<!-- more -->
+
+<p>Accessibility has been on Wagtail’s roadmap for quite some time, and we’ve <a href="https://wagtail.org/blog/accessibility-team-reloaded/">reflected on our progress</a> in the past. Now’s a good time for us to do this again, and share our plans for the next few years.</p>
+
+<h3 id="what-we-achieved-in-2021">What we achieved in 2021</h3>
+
+<p>2021 has been a busy year for Wagtail’s <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team">accessibility team</a>. With 5 members on board last February, and <a href="https://github.com/SaptakS">Saptak Sengupta</a> joining us in July, we went through a lot of long-awaited changes.</p>
+
+<ul>
+  <li>We now have an <a href="https://wagtail.org/accessibility/">official accessibility statement</a>. This was the first time we publicly stated ATAG 2.0 as a conformance goal.</li>
+  <li>We also published our <a href="https://docs.google.com/spreadsheets/d/1l7tnpEyJiC5BWE_JX0XCkknyrjxYA5T2aee5JgPnmi4/edit#gid=1433484179">(work in progress) accessibility audit</a>. It’s far from complete, but has already helped us prioritise specific improvements to the CMS.</li>
+  <li>We made a big push to improve support for Windows high contrast mode as part of <a href="https://docs.wagtail.org/en/stable/releases/2.15.html#windows-high-contrast-support">Wagtail 2.15</a>.</li>
+  <li>We were also involved with the development of large features, earlier than might have been the case in the past.</li>
+</ul>
+
+<h3 id="windows-high-contrast-mode">Windows high-contrast mode</h3>
+
+<p>This significant effort is worth highlighting for a few reasons:</p>
+
+<ul>
+  <li>The whole backlog of improvement came from a <a href="https://trello.com/b/MnlPSvkD/wagtail-high-contrast">large audit</a> by <a href="https://github.com/kbayliss">Kyle Bayliss</a>, which allowed us to understand the bigger picture of which practices in our development might be causing issues.</li>
+  <li>In contrast, we were able to split the fixes <a href="https://github.com/wagtail/wagtail/issues?q=is%3Aissue+sort%3Aupdated-desc+label%3A%22good+first+issue%22+label%3AAccessibility+is%3Aclosed+High-contrast+mode">over multiple tickets</a> to make those potential contributions more accessible to newcomers (in total, 12 people participated in those changes!).</li>
+  <li>We got a sponsorship from <a href="https://assistivlabs.com/">Assistiv Labs</a> to simplify testing of Wagtail with different assistive technologies. Windows high contrast mode in particular was very hard for us to test until then.</li>
+</ul>
+
+<p>There is still a long way to go for us to achieve full support, but we feel better able to deliver this than ever. Here is what Windows high contrast mode looks like in Wagtail currently, tested via Assistiv Labs:</p>
+
+<p><a href="/images/blog/state-of-wagtail-accessibility/whcm-wagtail.png"><img src="/images/blog/state-of-wagtail-accessibility/whcm-wagtail.png" alt="Screenshot of Windows high contrast mode in Assistiv Labs, with the main navigation opened over page listings" /></a></p>
+
+<h3 id="what-we-didnt-achieve">What we didn’t achieve</h3>
+
+<ul>
+  <li>We were hoping to have accessibility team <a href="https://simonwillison.net/2021/Feb/19/office-hours/">office hours</a>, and never got round to starting this. If you would be interested, please <a href="https://github.com/wagtail/wagtail/wiki/Slack">let us know on Slack in #accessibility</a>!</li>
+  <li>One of the key features we wanted to scope was accessibility testing built into the CMS – we made plans internally, but didn’t draft a formal proposal as we had hoped. More on that soon!</li>
+</ul>
+
+<h2 id="the-year-ahead">The year ahead</h2>
+
+<p>The elephant in the room for Wagtail’s accessibility improvements is the <a href="https://github.com/wagtail/wagtail/discussions/7739">Page editor 2022</a> project, which accessibility team members are heavily involved with. This marks a clear transition for us: from frequently fixing issues piecemeal after the fact; to being involved in every feature’s planning, making sure accessibility is considered.</p>
+
+<p>We also get to direct the scope of the project – for example, recommending a wholesale replacement of the current datepicker, rather than a restyling.</p>
+
+<p>A practical example of our involvement is the production of annotations for UI semantics and behavior, following the <a href="https://dribbble.com/shots/6269661-Accessibility-Bluelines">Accessibility Bluelines</a> methodology:</p>
+
+<p><a href="/images/blog/state-of-wagtail-accessibility/accessibility-bluelines.png"><img src="/images/blog/state-of-wagtail-accessibility/accessibility-bluelines.png" alt="Accessibility bluelines example for Wagtail, annotating the sidebar and top of the page editor" /></a></p>
+
+<h3 id="accessibility-of-the-cms">Accessibility of the CMS</h3>
+
+<p>We are and will be going through a lot of improvements:</p>
+
+<ul>
+  <li>Liaising with the Page editor 2022 project, and other features development, so accessibility requirements are included.</li>
+  <li><a href="https://github.com/wagtail/wagtail/pull/7751">Automated accessibility testing</a> of all pull requests, so ongoing QA isn’t as reliant on manual testing.</li>
+  <li>Rolling out the most important accessibility-related changes from the page editor project, to the rest of the CMS.</li>
+</ul>
+
+<p>We will also keep up with <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/">WCAG 2.2</a>’s publication, and drafts of <a href="https://w3c.github.io/silver/guidelines/">WCAG 3.0</a>.</p>
+
+<h3 id="accessibility-of-sites-built-with-wagtail">Accessibility of sites built with Wagtail</h3>
+
+<p>The biggest change here will be the inclusion of built-in accessibility tests, as part of page previews when editing content. This is par for the course of ATAG 2.0 conformance, and we’re also gradually integrating findings from the <a href="https://accessibilitycluster.com/">We4Authors Cluster</a> research project, which details the most important accessibility features in content management systems.</p>
+
+<h2 id="how-you-can-help">How you can help</h2>
+
+<p>Two things:</p>
+
+<ul>
+  <li>Regularly <a href="https://github.com/wagtail/wagtail/discussions/7739">provide feedback on the Page editor 2022</a> project, based on your experience with Wagtail and other content management systems.</li>
+  <li>Consider joining our accessibility team! We are looking for new members for the next 6 months or so, from all backgrounds, all skillsets.</li>
+</ul>
+
+<p>In both cases, we’re particularly keen to hear from people who:</p>
+
+<ul>
+  <li>Have personal experience of access and functional needs, or who are regular users of assistive technologies.</li>
+  <li>Work on UX, design, or content – and can help us understand the needs of our users.</li>
+</ul>
+
+<p>To chat to the accessibility team directly, reach out to us <a href="https://github.com/wagtail/wagtail/wiki/Slack">on Slack in #accessibility</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Adding Prettier onto an existing project]]></title>
@@ -1745,160 +1834,6 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
 <h2 id="what-to-test">What to test</h2>
 
 <p>It’s not always easy to have test content to run the checks against of in CI. My personal preference is to run the tests against a pattern library’s components, for example <a href="https://storybook.js.org/">Storybook</a> or <a href="https://github.com/torchbox/django-pattern-library">django-pattern-library</a>. As part of creating the components, we naturally create test data for them similarly to unit tests (TDD or not) – this test content can then be used to test the components’ variations for accessibility issues.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Reusable UI components – A journey from React to Wagtail]]></title>
-    <link href="https://thib.me/reusable-ui-components-journey-from-react-to-wagtail"/>
-    <updated>2020-07-31T01:15:22+00:00</updated>
-    <id>https://thib.me/reusable-ui-components-journey-from-react-to-wagtail</id>
-    <content type="html"><![CDATA[<p>This is Ben Dickinson and I’s joint <a href="https://us.wagtail.space/">Wagtail Space US 2020</a> talk about pattern libraries at Torchbox, introducing <a href="https://github.com/torchbox/django-pattern-library">django-pattern-library</a>.</p>
-
-<!-- more -->
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/isrOufI7TKc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<p>Slides: <a href="https://docs.google.com/presentation/d/1pZAbunn0Ci8B9NR0mS5taOPe7BMdAiDrKNIcd9xBWO4/edit">Wagtail Space US 2020 - Reusable UI components – A journey from React to Wagtail</a></p>
-
-<hr />
-
-<h2 id="pattern-libraries-as-a-methodology">Pattern libraries as a methodology</h2>
-
-<h3 id="atomic-design">Atomic Design</h3>
-
-<h3 id="pattern-lab">Pattern Lab</h3>
-
-<h2 id="react">React</h2>
-
-<h3 id="a-paradigm-shift">A paradigm shift</h3>
-
-<ul>
-  <li>Component-driven UIs</li>
-  <li>Functional programming for UIs</li>
-  <li>Not a template language</li>
-</ul>
-
-<h3 id="what-makes-react-good-in-practice">What makes React good in practice</h3>
-
-<ul>
-  <li>Nice developer experience</li>
-  <li>Reusable components</li>
-  <li>Maintainable, testable code</li>
-  <li>Component-driven development with Storybook</li>
-</ul>
-
-<h3 id="pattern-libraries-at-torchbox">Pattern libraries at Torchbox</h3>
-
-<p>The codified interface between front-end and back-end work</p>
-
-<ul>
-  <li>Clarifies responsibilities, separates concerns, both in code, and as members of a development team</li>
-  <li>If needed, makes it possible for front-end developers to work on pages and block templates before the models are done</li>
-  <li>Encourages code reuse – defining independent UI components, easy to port to other projects</li>
-</ul>
-
-<h3 id="current-trends-design-systems">Current trends: design systems</h3>
-
-<ul>
-  <li><a href="https://designsystem.digital.gov/">USWDS</a></li>
-  <li><a href="https://design-system.service.gov.uk/">GOV.UK Design System</a></li>
-  <li><a href="https://luna.sainsburys.co.uk/">Sainsbury’s Luna</a></li>
-  <li><a href="https://decanter.stanford.edu/">Stanford’s Decanter</a></li>
-</ul>
-
-<h2 id="why-develop-another-pattern-library-tool">Why develop another pattern library tool?</h2>
-
-<h3 id="challenges">Challenges</h3>
-
-<ul>
-  <li>Most of our projects are not API-driven React SPAs - they’re vanilla Django/Wagtail</li>
-  <li>Django has a proprietary template language</li>
-  <li>Translating non-Django templates from a pattern library is time-consuming and error-prone</li>
-  <li>Duplicating templates is a maintenance burden and often leads to divergence</li>
-</ul>
-
-<h3 id="more-challenges">More challenges!</h3>
-
-<ul>
-  <li>Template tags are great, but are discouraged by using a pattern library that doesn’t support them</li>
-  <li>Tags often depend on the database (e.g. <code class="language-plaintext highlighter-rouge">include_block foo</code>)</li>
-  <li>Visual testing requires time-consuming manual setup</li>
-  <li>Django’s native testing tools are inadequate for visual testing - especially cross-browser</li>
-</ul>
-
-<h3 id="pattern-lab-goes-django">Pattern Lab goes Django!</h3>
-
-<p>pip install django-pattern-library</p>
-
-<h3 id="features">Features</h3>
-
-<ul>
-  <li>Component playground for Django template partials</li>
-  <li>Mock template context from YAML files</li>
-  <li>Template documentation in markdown</li>
-  <li>Mock out template tags (both built-in and user-defined tags)</li>
-</ul>
-
-<h3 id="advantages">Advantages</h3>
-
-<ul>
-  <li>No duplication of templates - the pattern library uses the real templates</li>
-  <li>All components can be viewed in one place</li>
-  <li>Easier visual testing</li>
-  <li>No need for content in the DB</li>
-  <li>Front-end development can happen before the models are ready</li>
-</ul>
-
-<h3 id="known-issues">Known issues</h3>
-
-<ul>
-  <li>Documentation is good but could be much better</li>
-  <li>Context merging is fragile and requires some repetition in YAML files</li>
-  <li>Template tag mocking is not flexible enough</li>
-  <li>No support for mocking filters yet</li>
-  <li>Richer objects are fiddly to mock (e.g. ``)</li>
-</ul>
-
-<h2 id="demo-time">Demo time!</h2>
-
-<h3 id="first-demo">First demo</h3>
-
-<h3 id="second-demo">Second demo</h3>
-
-<p><a href="https://storybook-django.herokuapp.com/?path=/docs/django-patterns-streamfield-quote-block--default">storybook-django</a></p>
-
-<h2 id="takeaways-">Takeaways 🌈</h2>
-
-<h3 id="why-we-recommend-this-approach">Why we recommend this approach</h3>
-
-<ul>
-  <li>As a methodology: speeds up the process for medium to large sites</li>
-  <li>Reusable components: Encourages code reuse and UI consistency across the site</li>
-  <li>Testing opportunities: Manual “unit tests” for UI components, &amp; opportunities for automated visual regression / E2E / accessibility tests</li>
-</ul>
-
-<h3 id="ready-to-use">Ready to use</h3>
-
-<ul>
-  <li>Used for all production Wagtail sites at Torchbox: <a href="https://github.com/torchbox/django-pattern-library">django-pattern-library</a></li>
-  <li>Experimental, used on two projects, feedback welcome: <a href="https://github.com/torchbox/storybook-django">storybook-django</a></li>
-  <li>For all our React projects: <a href="https://storybook.js.org/">Storybook</a></li>
-</ul>
-
-<h3 id="ready-for-contributions-">Ready for contributions 😬</h3>
-
-<ul>
-  <li>Open-sourced <a href="https://github.com/torchbox/django-pattern-library">django-pattern-library</a> a few months ago</li>
-  <li><a href="https://github.com/torchbox/storybook-django">storybook-django</a> still very experimental</li>
-  <li>Feedback welcome</li>
-</ul>
-
-<p>Backlog for the next three months: <a href="https://github.com/torchbox/django-pattern-library/projects/3">github.com/torchbox/django-pattern-library/projects/3</a></p>
-
-<h2 id="thank-you">Thank you!</h2>
-
-<p>Thank you to Dan, Tom, William, Nick for helping us rehearse!</p>
 ]]></content>
   </entry>
   

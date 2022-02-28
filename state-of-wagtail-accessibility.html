@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>State of Wagtail’s accessibility - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="After 6 months of operations, we reflect on the progress our accessibility team has made, and go on the lookout for new contributors.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://wagtail.org/blog/state-of-wagtail-accessibility/">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://wagtail.org/blog/state-of-wagtail-accessibility/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="State of Wagtail’s accessibility">
+  <meta property="og:description" content="After 6 months of operations, we reflect on the progress our accessibility team has made, and go on the lookout for new contributors.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2022-02-28-state-of-wagtail-accessibility.md">Edit</a>
+      <h1 class="entry-title">State of Wagtail’s accessibility</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2022-02-28T07:42:03+00:00" pubdate data-updated="true">2022-02-28 07:42</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>After <a href="https://wagtail.org/blog/announcing-wagtail-sub-teams/">6 months of operations</a>, we reflect on the progress our <a href="https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility">accessibility team</a> has made, and go on the lookout for new contributors.</p>
+
+<!-- more -->
+
+<p>Accessibility has been on Wagtail’s roadmap for quite some time, and we’ve <a href="https://wagtail.org/blog/accessibility-team-reloaded/">reflected on our progress</a> in the past. Now’s a good time for us to do this again, and share our plans for the next few years.</p>
+
+<h3 id="what-we-achieved-in-2021">What we achieved in 2021</h3>
+
+<p>2021 has been a busy year for Wagtail’s <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team">accessibility team</a>. With 5 members on board last February, and <a href="https://github.com/SaptakS">Saptak Sengupta</a> joining us in July, we went through a lot of long-awaited changes.</p>
+
+<ul>
+  <li>We now have an <a href="https://wagtail.org/accessibility/">official accessibility statement</a>. This was the first time we publicly stated ATAG 2.0 as a conformance goal.</li>
+  <li>We also published our <a href="https://docs.google.com/spreadsheets/d/1l7tnpEyJiC5BWE_JX0XCkknyrjxYA5T2aee5JgPnmi4/edit#gid=1433484179">(work in progress) accessibility audit</a>. It’s far from complete, but has already helped us prioritise specific improvements to the CMS.</li>
+  <li>We made a big push to improve support for Windows high contrast mode as part of <a href="https://docs.wagtail.org/en/stable/releases/2.15.html#windows-high-contrast-support">Wagtail 2.15</a>.</li>
+  <li>We were also involved with the development of large features, earlier than might have been the case in the past.</li>
+</ul>
+
+<h3 id="windows-high-contrast-mode">Windows high-contrast mode</h3>
+
+<p>This significant effort is worth highlighting for a few reasons:</p>
+
+<ul>
+  <li>The whole backlog of improvement came from a <a href="https://trello.com/b/MnlPSvkD/wagtail-high-contrast">large audit</a> by <a href="https://github.com/kbayliss">Kyle Bayliss</a>, which allowed us to understand the bigger picture of which practices in our development might be causing issues.</li>
+  <li>In contrast, we were able to split the fixes <a href="https://github.com/wagtail/wagtail/issues?q=is%3Aissue+sort%3Aupdated-desc+label%3A%22good+first+issue%22+label%3AAccessibility+is%3Aclosed+High-contrast+mode">over multiple tickets</a> to make those potential contributions more accessible to newcomers (in total, 12 people participated in those changes!).</li>
+  <li>We got a sponsorship from <a href="https://assistivlabs.com/">Assistiv Labs</a> to simplify testing of Wagtail with different assistive technologies. Windows high contrast mode in particular was very hard for us to test until then.</li>
+</ul>
+
+<p>There is still a long way to go for us to achieve full support, but we feel better able to deliver this than ever. Here is what Windows high contrast mode looks like in Wagtail currently, tested via Assistiv Labs:</p>
+
+<p><a href="/images/blog/state-of-wagtail-accessibility/whcm-wagtail.png"><img src="/images/blog/state-of-wagtail-accessibility/whcm-wagtail.png" alt="Screenshot of Windows high contrast mode in Assistiv Labs, with the main navigation opened over page listings" /></a></p>
+
+<h3 id="what-we-didnt-achieve">What we didn’t achieve</h3>
+
+<ul>
+  <li>We were hoping to have accessibility team <a href="https://simonwillison.net/2021/Feb/19/office-hours/">office hours</a>, and never got round to starting this. If you would be interested, please <a href="https://github.com/wagtail/wagtail/wiki/Slack">let us know on Slack in #accessibility</a>!</li>
+  <li>One of the key features we wanted to scope was accessibility testing built into the CMS – we made plans internally, but didn’t draft a formal proposal as we had hoped. More on that soon!</li>
+</ul>
+
+<h2 id="the-year-ahead">The year ahead</h2>
+
+<p>The elephant in the room for Wagtail’s accessibility improvements is the <a href="https://github.com/wagtail/wagtail/discussions/7739">Page editor 2022</a> project, which accessibility team members are heavily involved with. This marks a clear transition for us: from frequently fixing issues piecemeal after the fact; to being involved in every feature’s planning, making sure accessibility is considered.</p>
+
+<p>We also get to direct the scope of the project – for example, recommending a wholesale replacement of the current datepicker, rather than a restyling.</p>
+
+<p>A practical example of our involvement is the production of annotations for UI semantics and behavior, following the <a href="https://dribbble.com/shots/6269661-Accessibility-Bluelines">Accessibility Bluelines</a> methodology:</p>
+
+<p><a href="/images/blog/state-of-wagtail-accessibility/accessibility-bluelines.png"><img src="/images/blog/state-of-wagtail-accessibility/accessibility-bluelines.png" alt="Accessibility bluelines example for Wagtail, annotating the sidebar and top of the page editor" /></a></p>
+
+<h3 id="accessibility-of-the-cms">Accessibility of the CMS</h3>
+
+<p>We are and will be going through a lot of improvements:</p>
+
+<ul>
+  <li>Liaising with the Page editor 2022 project, and other features development, so accessibility requirements are included.</li>
+  <li><a href="https://github.com/wagtail/wagtail/pull/7751">Automated accessibility testing</a> of all pull requests, so ongoing QA isn’t as reliant on manual testing.</li>
+  <li>Rolling out the most important accessibility-related changes from the page editor project, to the rest of the CMS.</li>
+</ul>
+
+<p>We will also keep up with <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/">WCAG 2.2</a>’s publication, and drafts of <a href="https://w3c.github.io/silver/guidelines/">WCAG 3.0</a>.</p>
+
+<h3 id="accessibility-of-sites-built-with-wagtail">Accessibility of sites built with Wagtail</h3>
+
+<p>The biggest change here will be the inclusion of built-in accessibility tests, as part of page previews when editing content. This is par for the course of ATAG 2.0 conformance, and we’re also gradually integrating findings from the <a href="https://accessibilitycluster.com/">We4Authors Cluster</a> research project, which details the most important accessibility features in content management systems.</p>
+
+<h2 id="how-you-can-help">How you can help</h2>
+
+<p>Two things:</p>
+
+<ul>
+  <li>Regularly <a href="https://github.com/wagtail/wagtail/discussions/7739">provide feedback on the Page editor 2022</a> project, based on your experience with Wagtail and other content management systems.</li>
+  <li>Consider joining our accessibility team! We are looking for new members for the next 6 months or so, from all backgrounds, all skillsets.</li>
+</ul>
+
+<p>In both cases, we’re particularly keen to hear from people who:</p>
+
+<ul>
+  <li>Have personal experience of access and functional needs, or who are regular users of assistive technologies.</li>
+  <li>Work on UX, design, or content – and can help us understand the needs of our users.</li>
+</ul>
+
+<p>To chat to the accessibility team directly, reach out to us <a href="https://github.com/wagtail/wagtail/wiki/Slack">on Slack in #accessibility</a>.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2022-02-28T07:42:03+00:00" pubdate data-updated="true">2022-02-28 07:42</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/community/">Community</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/adding-prettier-existing-project" title="Previous Post: Adding Prettier onto an existing project">&laquo; Adding Prettier onto an existing project</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/state-of-wagtail-accessibility">State of Wagtail’s accessibility</a>
+      </li>
+    
+      <li class="post">
+        <a href="/adding-prettier-existing-project">Adding Prettier onto an existing project</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wagtail-developer-jobs-where-to-look">Wagtail developer jobs: where to look</a>
+      </li>
+    
+      <li class="post">
+        <a href="/aria-invalid-true-with-aria-describedby">aria-invalid="true" with aria-describedby</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2022-web-conferences">2022 web conferences</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>
