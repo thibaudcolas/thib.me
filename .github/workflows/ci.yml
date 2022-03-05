@@ -8,7 +8,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           persist-credentials: false
       - uses: ruby/setup-ruby@v1
@@ -20,7 +20,7 @@ jobs:
       - run: bundle install
       - run: npm install --no-optional --no-audit --no-fund --progress=false
       - run: npm run dist
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: dist
           path: dist
@@ -30,8 +30,8 @@ jobs:
     needs: test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
       - run: ls
       - run: ls dist
       - uses: JamesIves/github-pages-deploy-action@v4.2.5
