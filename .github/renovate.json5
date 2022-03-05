@@ -26,6 +26,12 @@
   schedule: ["every weekend"],
   // Silently merge updates without PRs
   automergeType: "branch",
+  ruby: {
+    major: {
+      enabled: true,
+    },
+    supportPolicy: ["current"],
+  },
   node: {
     major: {
       enabled: true,
@@ -74,6 +80,11 @@
     {
       packageNames: ["JamesIves/github-pages-deploy-action"],
       groupName: "JamesIves/github-pages-deploy-action",
+      automerge: true,
+    },
+    {
+      packagePatterns: ["^actions/"],
+      groupName: "actions",
       automerge: true,
     },
   ],
