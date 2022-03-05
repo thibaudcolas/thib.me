@@ -20,7 +20,7 @@ jobs:
       - run: bundle install
       - run: npm install --no-optional --no-audit --no-fund --progress=false
       - run: npm run dist
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: dist
           path: dist
