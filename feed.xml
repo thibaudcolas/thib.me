@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-03-26T03:16:53+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">State of Wagtail’s accessibility</title><link href="https://thib.me/state-of-wagtail-accessibility" rel="alternate" type="text/html" title="State of Wagtail’s accessibility" /><published>2022-02-28T07:42:03+00:00</published><updated>2022-02-28T07:42:03+00:00</updated><id>https://thib.me/state-of-wagtail-accessibility</id><content type="html" xml:base="https://thib.me/state-of-wagtail-accessibility">&lt;p&gt;After &lt;a href=&quot;https://wagtail.org/blog/announcing-wagtail-sub-teams/&quot;&gt;6 months of operations&lt;/a&gt;, we reflect on the progress our &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility&quot;&gt;accessibility team&lt;/a&gt; has made, and go on the lookout for new contributors.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-03-30T23:35:01+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">The State of Wagtail - Wagtail Space US 2022</title><link href="https://thib.me/state-of-wagtail-wagtail-space-us-2022" rel="alternate" type="text/html" title="The State of Wagtail - Wagtail Space US 2022" /><published>2022-03-24T16:20:00+00:00</published><updated>2022-03-24T16:20:00+00:00</updated><id>https://thib.me/state-of-wagtail-wagtail-space-us-2022</id><content type="html" xml:base="https://thib.me/state-of-wagtail-wagtail-space-us-2022">&lt;p&gt;Here are the slides and my notes for my &lt;a href=&quot;https://us.wagtail.space/&quot;&gt;Wagtail Space US 2022&lt;/a&gt; talk &lt;a href=&quot;https://youtu.be/tttOiW_bSYM&quot;&gt;(my) &lt;/a&gt;.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Slides:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1vHy_S8T-0kGDEVUJ9aAM54XxCHgdfHcgMuo09-EUaRk/edit&quot;&gt;Google Slides: State of Wagtail - Wagtail Space US 2022&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe title=&quot;(my) State of Wagtail – Thibaud Colas, Wagtail Space US 2022&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/tttOiW_bSYM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here are the slides and my notes for my Wagtail Space US 2022 talk (my) .</summary></entry><entry><title type="html">State of Wagtail’s accessibility</title><link href="https://thib.me/state-of-wagtail-accessibility" rel="alternate" type="text/html" title="State of Wagtail’s accessibility" /><published>2022-02-28T07:42:03+00:00</published><updated>2022-02-28T07:42:03+00:00</updated><id>https://thib.me/state-of-wagtail-accessibility</id><content type="html" xml:base="https://thib.me/state-of-wagtail-accessibility">&lt;p&gt;After &lt;a href=&quot;https://wagtail.org/blog/announcing-wagtail-sub-teams/&quot;&gt;6 months of operations&lt;/a&gt;, we reflect on the progress our &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility&quot;&gt;accessibility team&lt;/a&gt; has made, and go on the lookout for new contributors.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -924,78 +934,4 @@ Or you can use aria-describedby to make the association, like this:
   &lt;li&gt;RTD ads are particularly poorly done&lt;/li&gt;
   &lt;li&gt;There are two &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;h1&lt;/code&gt; in the index page. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;The RTD version picker is reachable, but impossible to open&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here are the results of an accessibility audit I did for Django Postgres Metrics, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics.</summary></entry><entry><title type="html">DjangoCon Europe 2021 field notes</title><link href="https://thib.me/djangocon-europe-field-notes" rel="alternate" type="text/html" title="DjangoCon Europe 2021 field notes" /><published>2021-06-04T06:43:49+00:00</published><updated>2021-06-04T06:43:49+00:00</updated><id>https://thib.me/djangocon-europe-field-notes</id><content type="html" xml:base="https://thib.me/djangocon-europe-field-notes">&lt;p&gt;Notes from the conference.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/mxsasha/lessobviouschecklist&quot;&gt;https://github.com/mxsasha/lessobviouschecklist&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;climate&quot;&gt;Climate&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=upiK4du5vUI&quot;&gt;https://www.youtube.com/watch?v=upiK4du5vUI&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://cloud.google.com/sustainability/region-carbon&quot;&gt;https://cloud.google.com/sustainability/region-carbon&lt;/a&gt;
-&lt;a href=&quot;https://pypi.org/project/energyusage/&quot;&gt;https://pypi.org/project/energyusage/&lt;/a&gt;
-&lt;a href=&quot;https://www.cloudcarbonfootprint.org/docs/gcp&quot;&gt;https://www.cloudcarbonfootprint.org/docs/gcp&lt;/a&gt;
-&lt;a href=&quot;https://codeascraft.com/2020/04/23/cloud-jewels-estimating-kwh-in-the-cloud/&quot;&gt;https://codeascraft.com/2020/04/23/cloud-jewels-estimating-kwh-in-the-cloud/&lt;/a&gt;
-&lt;a href=&quot;https://www.cloudcarbonfootprint.org/docs/methodology&quot;&gt;https://www.cloudcarbonfootprint.org/docs/methodology&lt;/a&gt;
-&lt;a href=&quot;https://github.com/hubblo-org/scaphandre&quot;&gt;https://github.com/hubblo-org/scaphandre&lt;/a&gt;
-&lt;a href=&quot;https://pypi.org/project/pyJoules&quot;&gt;https://pypi.org/project/pyJoules&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/responsibleproblemsolving/energy-usage/issues/16&quot;&gt;https://github.com/responsibleproblemsolving/energy-usage/issues/16&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;indexes&quot;&gt;Indexes&lt;/h2&gt;
-
-&lt;p&gt;db_index=True on fields&lt;/p&gt;
-
-&lt;p&gt;class-based indexes on classes&lt;/p&gt;
-
-&lt;p&gt;Functional indexes?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://adamj.eu/tech/2020/07/27/how-to-modernize-your-django-index-definitions/&quot;&gt;https://adamj.eu/tech/2020/07/27/how-to-modernize-your-django-index-definitions/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;database-migrations&quot;&gt;Database migrations&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/markush/writing-safe-database-migrations-djangocon-europe-2021&quot;&gt;https://speakerdeck.com/markush/writing-safe-database-migrations-djangocon-europe-2021&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;hunting-performance-in-django-code&quot;&gt;Hunting Performance in Django code&lt;/h2&gt;
-
-&lt;p&gt;Tracing profilers vs sampling profilers&lt;/p&gt;
-
-&lt;p&gt;Good overview of different profiler options for Python (for example the ones that support multi-threading)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/plasma-umass/scalene&quot;&gt;https://github.com/plasma-umass/scalene&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;dd-with-graphql-and-django&quot;&gt;DD with GraphQL and Django&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.cosmicpython.com/&quot;&gt;https://www.cosmicpython.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Leaner framework could be better? (FastAPI?)&lt;/p&gt;
-
-&lt;h2 id=&quot;django--sphinx&quot;&gt;Django + Sphinx&lt;/h2&gt;
-
-&lt;h2 id=&quot;clean-architecture-with-django&quot;&gt;Clean architecture with Django&lt;/h2&gt;
-
-&lt;p&gt;Best use case for Django&lt;/p&gt;
-
-&lt;p&gt;Dependency inversion&lt;/p&gt;
-
-&lt;h2 id=&quot;htmx-frontend-revolution&quot;&gt;HTMX: Frontend Revolution&lt;/h2&gt;
-
-&lt;h2 id=&quot;absolutely-no-javascript&quot;&gt;Absolutely no JavaScript&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adamghill/djangocon-eu-2021-conference-talk&quot;&gt;https://github.com/adamghill/djangocon-eu-2021-conference-talk&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;sprint&quot;&gt;Sprint&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/django/django/pull/14391&quot;&gt;https://github.com/django/django/pull/14391&lt;/a&gt;
-&lt;a href=&quot;https://github.com/django/django/pull/14389&quot;&gt;https://github.com/django/django/pull/14389&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/aeltanawy/Receptor&quot;&gt;https://github.com/aeltanawy/Receptor&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adamghill/djangocon-eu-2021-conference-talk&quot;&gt;https://github.com/adamghill/djangocon-eu-2021-conference-talk&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://code.djangoproject.com/ticket/32819&quot;&gt;https://code.djangoproject.com/ticket/32819&lt;/a&gt;
-&lt;a href=&quot;https://code.djangoproject.com/ticket/32820&quot;&gt;https://code.djangoproject.com/ticket/32820&lt;/a&gt;&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Notes from the conference.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here are the results of an accessibility audit I did for Django Postgres Metrics, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics.</summary></entry></feed>

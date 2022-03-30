@@ -4,13 +4,32 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2022-03-26T03:16:53+00:00</updated>
+  <updated>2022-03-30T23:35:01+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The State of Wagtail - Wagtail Space US 2022]]></title>
+    <link href="https://thib.me/state-of-wagtail-wagtail-space-us-2022"/>
+    <updated>2022-03-24T16:20:00+00:00</updated>
+    <id>https://thib.me/state-of-wagtail-wagtail-space-us-2022</id>
+    <content type="html"><![CDATA[<p>Here are the slides and my notes for my <a href="https://us.wagtail.space/">Wagtail Space US 2022</a> talk <a href="https://youtu.be/tttOiW_bSYM">(my) </a>.</p>
+
+<!-- more -->
+
+<p>Slides:</p>
+
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/1vHy_S8T-0kGDEVUJ9aAM54XxCHgdfHcgMuo09-EUaRk/edit">Google Slides: State of Wagtail - Wagtail Space US 2022</a></li>
+</ul>
+
+<iframe title="(my) State of Wagtail – Thibaud Colas, Wagtail Space US 2022" width="560" height="315" src="https://www.youtube-nocookie.com/embed/tttOiW_bSYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[State of Wagtail’s accessibility]]></title>
@@ -1790,50 +1809,6 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
   <li><a href="https://docs.google.com/presentation/d/1JWroGeYl7JlP2OHbG4a4h0SxSlMsWJvRTvDm0kFkqhQ/edit">Google Slides: DjangoCon EU 2020 - Accessibility wins for Django projects</a></li>
   <li><a href="https://drive.google.com/file/d/12tedghT8bRGhnZgWt7tXWv_qtvJ1YKCA/view?usp=sharing">PDF: DjangoCon EU 2020 - Accessibility wins for Django projects</a></li>
 </ul>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Testing accessibility in Continuous Integration with Pa11y and beyond]]></title>
-    <link href="https://thib.me/testing-accessibility-in-ci-with-pa11y-and-beyond"/>
-    <updated>2020-08-13T21:21:08+00:00</updated>
-    <id>https://thib.me/testing-accessibility-in-ci-with-pa11y-and-beyond</id>
-    <content type="html"><![CDATA[<p>Here are tools I recommend to test for accessibility issues in continuous integration, where automation is the only option, and reliability is paramount.</p>
-
-<!-- more -->
-
-<h2 id="the-requirements-of-ci">The requirements of CI</h2>
-
-<p>It’s worth pointing out early – no accessibility testing tool can <a href="https://alphagov.github.io/accessibility-tool-audit/">find all issues</a> . With this in mind, in CI, we need to focus on tools that find as much as possible… but don’t create false positives, which are very damaging when they fail your build. It’s more important for a tool to have a <a href="https://en.wikipedia.org/wiki/Precision_and_recall">high precision, than a high recall</a>).</p>
-
-<h2 id="static-analysis">Static analysis</h2>
-
-<p>This is always a valuable first line of defense.</p>
-
-<ul>
-  <li>
-    <p>Basic checks for stylesheets: <a href="https://github.com/YozhikM/stylelint-a11y">stylelint-a11y</a></p>
-  </li>
-  <li>Relatively advanced checks for React code: <a href="https://github.com/yannickcr/eslint-plugin-react">eslint-plugin-react</a>, <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a></li>
-  <li>And a Vue equivalent: <a href="https://github.com/maranran/eslint-plugin-vue-a11y">eslint-plugin-vue-a11y</a></li>
-  <li>For HTML templates, you can try my own experimental HTML templates linter, <a href="https://github.com/thibaudcolas/curlylint">Curlylint</a>.</li>
-</ul>
-
-<h2 id="accessibility-tests-in-unit-and-integration-tests">Accessibility tests in unit and integration tests</h2>
-
-<p>Here are the options, from simplest to most complex:</p>
-
-<ul>
-  <li><a href="https://github.com/nickcolley/jest-axe">jest-axe</a> in jsdom for React projects. It’s very lightweight to set up, and gives surprisingly good results.</li>
-  <li><a href="https://github.com/nickcolley/jest-axe">jest-axe</a> in Puppeteer. It’s not lightweight to set up, far from it, but does a bit more.</li>
-  <li><a href="https://pa11y.org/">Pa11y</a>, or <a href="https://github.com/pa11y/pa11y-ci">pa11y-ci</a>. Not lightweight either, but simple to configure.</li>
-  <li>Google’s Lighthouse also has a <a href="https://github.com/GoogleChrome/lighthouse-ci">Lighthouse CI</a> variant which may be useful when also wanting to have performance and best practice checks.</li>
-  <li>An alternative could also be to run HTML validation with <a href="https://validator.github.io/validator/">V.Nu HTML5 validator</a>.</li>
-</ul>
-
-<h2 id="what-to-test">What to test</h2>
-
-<p>It’s not always easy to have test content to run the checks against of in CI. My personal preference is to run the tests against a pattern library’s components, for example <a href="https://storybook.js.org/">Storybook</a> or <a href="https://github.com/torchbox/django-pattern-library">django-pattern-library</a>. As part of creating the components, we naturally create test data for them similarly to unit tests (TDD or not) – this test content can then be used to test the components’ variations for accessibility issues.</p>
 ]]></content>
   </entry>
   
