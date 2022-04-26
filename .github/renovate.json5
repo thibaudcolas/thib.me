@@ -4,7 +4,7 @@
   // https://renovatebot.com/docs/configuration-options/#commitbodytable
   commitBodyTable: true,
   // https://renovatebot.com/docs/configuration-options/#ignoredeps
-  ignoreDeps: [],
+  ignoreDeps: ["JamesIves/github-pages-deploy-action"],
   // https://renovatebot.com/docs/configuration-options/#labels
   labels: ["enhancement"],
   // https://renovatebot.com/docs/configuration-options/#prcreation
@@ -31,6 +31,7 @@
       enabled: true,
     },
     supportPolicy: ["current"],
+    automerge: true,
   },
   node: {
     major: {
@@ -38,6 +39,7 @@
     },
     // https://renovatebot.com/docs/node/#configuring-support-policy
     supportPolicy: ["current"],
+    automerge: true,
   },
   vulnerabilityAlerts: {
     automerge: true,
