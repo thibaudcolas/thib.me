@@ -4,7 +4,7 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2022-05-25T10:44:27+00:00</updated>
+  <updated>2022-05-25T10:59:09+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
@@ -22,39 +22,9 @@
 <!-- more -->
 
 <ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>[Google Slides: The 97.4% North Star</td>
-          <td>Thibaud Colas</td>
-          <td>MiXiT 2022](https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>[PDF export (4MB): The 97.4% North Star</td>
-          <td>Thibaud Colas</td>
-          <td>MiXiT 2022](https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>[Plain-text export: The 97.4% North Star</td>
-          <td>Thibaud Colas</td>
-          <td>MiXiT 2022](https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li><a href="https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing">Google Slides: The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
+  <li><a href="https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing">PDF export (4MB): The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
+  <li><a href="https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing">Plain-text export: The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
 </ul>
 ]]></content>
   </entry>
