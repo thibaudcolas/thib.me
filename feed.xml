@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-05-25T10:38:43+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">The State of Wagtail - Wagtail Space US 2022</title><link href="https://thib.me/state-of-wagtail-wagtail-space-us-2022" rel="alternate" type="text/html" title="The State of Wagtail - Wagtail Space US 2022" /><published>2022-03-24T16:20:00+00:00</published><updated>2022-03-24T16:20:00+00:00</updated><id>https://thib.me/state-of-wagtail-wagtail-space-us-2022</id><content type="html" xml:base="https://thib.me/state-of-wagtail-wagtail-space-us-2022">&lt;p&gt;Here are the slides and my notes for my &lt;a href=&quot;https://us.wagtail.space/&quot;&gt;Wagtail Space US 2022&lt;/a&gt; talk &lt;a href=&quot;https://youtu.be/tttOiW_bSYM&quot;&gt;State of Wagtail&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-05-25T10:44:27+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">MiXiT 2022: The 97.4% North Star</title><link href="https://thib.me/the-97-4-percent-north-star" rel="alternate" type="text/html" title="MiXiT 2022: The 97.4% North Star" /><published>2022-05-25T08:50:00+00:00</published><updated>2022-05-25T08:50:00+00:00</updated><id>https://thib.me/the-97-4-percent-north-star</id><content type="html" xml:base="https://thib.me/the-97-4-percent-north-star">&lt;p&gt;Slides for my &lt;a href=&quot;https://mixitconf.org/fr/2022/the-97-4-north-star&quot;&gt;MiXiT 2022 talk&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;[Google Slides: The 97.4% North Star&lt;/td&gt;
+          &lt;td&gt;Thibaud Colas&lt;/td&gt;
+          &lt;td&gt;MiXiT 2022](https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing)&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;[PDF export (4MB): The 97.4% North Star&lt;/td&gt;
+          &lt;td&gt;Thibaud Colas&lt;/td&gt;
+          &lt;td&gt;MiXiT 2022](https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing)&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;[Plain-text export: The 97.4% North Star&lt;/td&gt;
+          &lt;td&gt;Thibaud Colas&lt;/td&gt;
+          &lt;td&gt;MiXiT 2022](https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing)&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Slides for my MiXiT 2022 talk.</summary></entry><entry><title type="html">The State of Wagtail - Wagtail Space US 2022</title><link href="https://thib.me/state-of-wagtail-wagtail-space-us-2022" rel="alternate" type="text/html" title="The State of Wagtail - Wagtail Space US 2022" /><published>2022-03-24T16:20:00+00:00</published><updated>2022-03-24T16:20:00+00:00</updated><id>https://thib.me/state-of-wagtail-wagtail-space-us-2022</id><content type="html" xml:base="https://thib.me/state-of-wagtail-wagtail-space-us-2022">&lt;p&gt;Here are the slides and my notes for my &lt;a href=&quot;https://us.wagtail.space/&quot;&gt;Wagtail Space US 2022&lt;/a&gt; talk &lt;a href=&quot;https://youtu.be/tttOiW_bSYM&quot;&gt;State of Wagtail&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -770,169 +808,4 @@ Or you can use aria-describedby to make the association, like this:
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1900s&quot;&gt;31:40&lt;/a&gt; Looping animations&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1960s&quot;&gt;32:40&lt;/a&gt; Testing with VoiceOver in Safari&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=2160s&quot;&gt;36:00&lt;/a&gt; Performance issues with banner animation&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here are the results of an accessibility audit I did for the PyCon Lithuania website, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania’s website.</summary></entry><entry><title type="html">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</title><link href="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics" rel="alternate" type="text/html" title="DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics" /><published>2021-06-05T21:07:49+00:00</published><updated>2021-06-05T21:07:49+00:00</updated><id>https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics</id><content type="html" xml:base="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics">&lt;p&gt;Here are the results of an accessibility audit I did for &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/issues/57&quot;&gt;Django Postgres Metrics&lt;/a&gt;, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: &lt;a href=&quot;https://youtu.be/8pegTdRaUDg&quot;&gt;DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;iframe title=&quot;DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/8pegTdRaUDg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;tldr-011515&quot;&gt;TL;DR; &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=4515s&quot;&gt;01:15:15&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;TL;DR; in video form: &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=4515s&quot;&gt;01:15:15&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Most issues come from Django for the UI, and the RTD theme for the documentation&lt;/li&gt;
-  &lt;li&gt;Great effort on translations and RTL support! It’s wonderful to see this being done as a baseline&lt;/li&gt;
-  &lt;li&gt;Very semantic tables markup, which definitely matters for the metrics’ display&lt;/li&gt;
-  &lt;li&gt;Some issues from this package with dark mode support, which make the library potentially unusable for dark mode users. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/59&quot;&gt;#59&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;There are a few improvements for screen reader users to be done here and there&lt;/li&gt;
-  &lt;li&gt;Table sorting was particularly hard to follow with a screen reader, although I suspect this is the Django implementation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;about-the-audit-000105&quot;&gt;About the audit &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=65s&quot;&gt;00:01:05&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Scope:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTML templates in GitHub&lt;/li&gt;
-  &lt;li&gt;UI in the Django admin (minimal customisations)&lt;/li&gt;
-  &lt;li&gt;Documentation in README&lt;/li&gt;
-  &lt;li&gt;Documentation in Read the Docs (default sphinx-rtd theme)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Methodology:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Automated tests with Accessibility Insights with Chrome&lt;/li&gt;
-  &lt;li&gt;Keyboard navigation (tab stops)&lt;/li&gt;
-  &lt;li&gt;Color contrast&lt;/li&gt;
-  &lt;li&gt;Dark mode support&lt;/li&gt;
-  &lt;li&gt;RTL support&lt;/li&gt;
-  &lt;li&gt;Mobile support&lt;/li&gt;
-  &lt;li&gt;Screen reader navigation (VoiceOver in Safari)&lt;/li&gt;
-  &lt;li&gt;Other things picked up along the way&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;html-templates-000222&quot;&gt;HTML templates &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=142s&quot;&gt;00:02:22&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;There are a lot of links with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt; attribute being used in. This can be announced multiple times by some screen readers, so I would suggest not using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt; wherever it matches the visible label of the link&lt;/li&gt;
-  &lt;li&gt;Table markup for the navigation in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; looks great, however this would be much quicker to navigate with a screen reader by using simpler markup, for example &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ul&lt;/code&gt; with a list item for each link.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;table.html&lt;/code&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Place the breadcrumb in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;nav aria-label=&quot;Breadcrumbs&quot;&amp;gt;&amp;lt;/nav&amp;gt;&lt;/code&gt; landmark, so screen reader users can bypass it or reach it more easily&lt;/li&gt;
-  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-current=&quot;page&quot;&lt;/code&gt; to the current page so it’s announced as such. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;ui-000738&quot;&gt;UI &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=458s&quot;&gt;00:07:38&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;automated-tests-with-accessibility-insights-with-chrome&quot;&gt;Automated tests with Accessibility Insights with Chrome&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A lot of color contrast issues, but I believe they all come from Django itself&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;keyboard-navigation-001235&quot;&gt;Keyboard navigation &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=755s&quot;&gt;00:12:35&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Missing a skip link on all pages – Django issue&lt;/li&gt;
-  &lt;li&gt;On metric pages, I found it a bit odd how the tab focus moves from the breadcrumb, to the package’s nav to the right, and then back to the metrics on the left. It’d be better to go straight from breadcrumb to the metrics’ tables.&lt;/li&gt;
-  &lt;li&gt;Likely a Django issue – the tab order for sorting is unexpected (right-to-left)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;color-contrast&quot;&gt;Color contrast&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;In the package’s views in the “POSTGRESQL METRICS” nav, there isn’t enough contrast between the “active” menu item and the other ones, so people won’t be able to tell which menu item is active. This is both for the text, and the “selected” indicator”. I would suggest adding an underline to the text. &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=1584s&quot;&gt;00:26:24&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;dark-mode-001603&quot;&gt;Dark mode &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=963s&quot;&gt;00:16:03&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;None of the package’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ok&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;warning&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;critical&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;info&lt;/code&gt; states work in dark mode. They make the table’s contents completely unreadable. A solution would be to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@media (prefers-color-scheme: dark)&lt;/code&gt; styles like Django does, however I would recommend another approach that doesn’t rely on background color as the color also won’t be picked up by blind users – it’d be better to represent those 4 states with an icon, that could then have a text alternative, or just a label. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/59&quot;&gt;#59&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Illustration:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/images/blog/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics/django-postgres-metrics-dark-mode.png&quot;&gt;&lt;img src=&quot;/images/blog/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics/django-postgres-metrics-dark-mode.png&quot; alt=&quot;Screenshot of four highlighted rows in Django Postgres Metrics in dark mode. The rows aren’t readable&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;rtl-support-001920&quot;&gt;RTL support &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=1160s&quot;&gt;00:19:20&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;😐 I did all of my testing without having configured the language in Django settings, forgetting Django uses this to set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LANGUAGE_BIDI&lt;/code&gt; and load the correct stylesheet. As far as I can tell there are no issues here!&lt;/p&gt;
-
-&lt;h3 id=&quot;mobile-support-002415&quot;&gt;Mobile support &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=1455s&quot;&gt;00:24:15&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;(this is more “small browser” support really, I didn’t do any touch navigation testing)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;urlize&lt;/code&gt;d links cause the page to overflow and scroll in 2 directions at once. That’s bad. For this, and for screen readers, I’d recommend using proper link labels.&lt;/li&gt;
-  &lt;li&gt;Tables also cause the page to overflow and scroll in 2 directions. It would be better if they overflowed the page but the overflow was scrollable for the table separately (wrap the table in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;overflow: scroll&lt;/code&gt;).&lt;/li&gt;
-  &lt;li&gt;With the way tables resize currently, they cause some of the cells with long values to reflow, which makes big numbers harder to read in my opinion. Scroll would be better in this instance.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;screen-reader-navigation-voiceover-with-safari-003000&quot;&gt;Screen reader navigation (VoiceOver with Safari) &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=1800s&quot;&gt;00:30:00&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Dashboard:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Django issue – the views should be using ARIA landmarks to facilitate navigation.&lt;/li&gt;
-  &lt;li&gt;Prefer displaying “POSTGRESQL METRICS” in TitleCase or lowercase as much as possible, rather than uppercase, as TTS is prone to mispronounce PostgreSQL if it’s all uppercase.&lt;/li&gt;
-  &lt;li&gt;The “show” link need a more descriptive label for screen reader users (with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-label&lt;/code&gt;) so they can be understood without the visual context the links are in on the page. Alternatively, remove those links, as they do the same thing as the link next to them that has a better label already. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Django issue – duplicate h1 heading&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Metrics views:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;All of the custom views are missing a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;title&amp;gt;&lt;/code&gt; matching the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=915s&quot;&gt;00:15:15&lt;/a&gt;. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Prefer to use links with human-friendly labels over &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;urlize&lt;/code&gt; URLs. These don’t announce very well with screen reader text-to-speech unless the user knows how to navigate word-by-word or character-by-character &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=678s&quot;&gt;00:11:18&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Django issue (?) I found the table ordering to be very confusing&lt;/li&gt;
-  &lt;li&gt;Consider adding spaces around &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=&lt;/code&gt; signs in table captions so screen readers TTS have a better chance of pronouncing the text correctly&lt;/li&gt;
-  &lt;li&gt;Currently the warning/info/ok/critical status are invisible for screen reader users. I’d suggesting adding a screen-reader only label, or an icon + label&lt;/li&gt;
-  &lt;li&gt;Some of the larger numbers in the tables are pronounced as identifiers (“one three five”) rather than numbers (“one hundred thirty five”). Consider adding numeric separators to make numbers more readable for humans and text-to-speech.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;other-things-picked-up-along-the-way&quot;&gt;Other things picked up along the way&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The bigger values in tables are picked up by my browser as telephone numbers. This might warrant a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;/&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;docs-in-readme-005315&quot;&gt;Docs in README &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=3195s&quot;&gt;00:53:15&lt;/a&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The project’s name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;django-postgres-metrics&lt;/code&gt; is being read letter-by-letter by VoiceOver, unless I manually switch to word-by-word navigation. In the main heading, I would suggest switching to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Django Postgres Metrics&lt;/code&gt; to make it more likely for people to understand what the project is.&lt;/li&gt;
-  &lt;li&gt;The badges’ alt text should match the text on the images. This is likely impossible, but I’d suggest changing alt text to match the visible text more closely. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Python and Django versions badges should link to some place those versions are available in text format (or add the versions hard-coded in the alt text). Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;It would be nice to use more descriptive alt text for the screenshot. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;The “AT” and “DOT” in the email address are read as acronyms. Would be nice to replace with lowercase variants so they are read as words. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;documentation-in-read-the-docs-default-sphinx-rtd-theme-010045&quot;&gt;Documentation in Read the Docs (default sphinx-rtd theme) &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=3645s&quot;&gt;01:00:45&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;automated-tests-with-accessibility-insights-with-chrome-1&quot;&gt;Automated tests with Accessibility Insights with Chrome&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Too many issues for me to count, all with the theme itself I expect&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;keyboard-navigation-tab-stops&quot;&gt;Keyboard navigation (tab stops)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Missing a skip link&lt;/li&gt;
-  &lt;li&gt;The RTD version picker is impossible to reach&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;screen-reader-navigation-voiceover-with-safari-010545&quot;&gt;Screen reader navigation (VoiceOver with Safari) &lt;a href=&quot;https://www.youtube.com/watch?v=8pegTdRaUDg&amp;amp;t=3945s&quot;&gt;01:05:45&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A lot of RTD issues at the theme level&lt;/li&gt;
-  &lt;li&gt;RTD ads are particularly poorly done&lt;/li&gt;
-  &lt;li&gt;There are two &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;h1&lt;/code&gt; in the index page. Fixed in &lt;a href=&quot;https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58&quot;&gt;#58&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;The RTD version picker is reachable, but impossible to open&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here are the results of an accessibility audit I did for Django Postgres Metrics, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here are the results of an accessibility audit I did for the PyCon Lithuania website, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania’s website.</summary></entry></feed>

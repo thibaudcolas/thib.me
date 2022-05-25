@@ -4,13 +4,60 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2022-05-25T10:38:43+00:00</updated>
+  <updated>2022-05-25T10:44:27+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[MiXiT 2022: The 97.4% North Star]]></title>
+    <link href="https://thib.me/the-97-4-percent-north-star"/>
+    <updated>2022-05-25T08:50:00+00:00</updated>
+    <id>https://thib.me/the-97-4-percent-north-star</id>
+    <content type="html"><![CDATA[<p>Slides for my <a href="https://mixitconf.org/fr/2022/the-97-4-north-star">MiXiT 2022 talk</a>.</p>
+
+<!-- more -->
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Google Slides: The 97.4% North Star</td>
+          <td>Thibaud Colas</td>
+          <td>MiXiT 2022](https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[PDF export (4MB): The 97.4% North Star</td>
+          <td>Thibaud Colas</td>
+          <td>MiXiT 2022](https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Plain-text export: The 97.4% North Star</td>
+          <td>Thibaud Colas</td>
+          <td>MiXiT 2022](https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The State of Wagtail - Wagtail Space US 2022]]></title>
@@ -1794,22 +1841,6 @@ ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|mi
 </ul>
 
 <p>This last point is the one I’m the most interested in – in particular, comparing Wagtail’s results to those of other technologies in the <a href="https://webaim.org/projects/million/">WebAIM Million</a>. We’ll see how that goes!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Accessibility wins for Django projects]]></title>
-    <link href="https://thib.me/accessibility-wins-for-django-projects"/>
-    <updated>2020-09-15T22:15:22+00:00</updated>
-    <id>https://thib.me/accessibility-wins-for-django-projects</id>
-    <content type="html"><![CDATA[<p>Talk at DjangoCon EU 2020</p>
-
-<!-- more -->
-
-<ul>
-  <li><a href="https://docs.google.com/presentation/d/1JWroGeYl7JlP2OHbG4a4h0SxSlMsWJvRTvDm0kFkqhQ/edit">Google Slides: DjangoCon EU 2020 - Accessibility wins for Django projects</a></li>
-  <li><a href="https://drive.google.com/file/d/12tedghT8bRGhnZgWt7tXWv_qtvJ1YKCA/view?usp=sharing">PDF: DjangoCon EU 2020 - Accessibility wins for Django projects</a></li>
-</ul>
 ]]></content>
   </entry>
   
