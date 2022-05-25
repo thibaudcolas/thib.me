@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MiXiT 2022: The 97.4% North Star"
-date: 2022-05-25 14:50:00 +0200
+date: 2022-05-25 10:50:00 +0200
 comments: true
 categories: [Accessibility, Talks, Wagtail]
 redirect_from:
