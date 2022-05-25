@@ -4,7 +4,7 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2022-04-26T08:31:15+00:00</updated>
+  <updated>2022-05-25T07:40:20+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
@@ -17,14 +17,15 @@
     <link href="https://thib.me/state-of-wagtail-wagtail-space-us-2022"/>
     <updated>2022-03-24T16:20:00+00:00</updated>
     <id>https://thib.me/state-of-wagtail-wagtail-space-us-2022</id>
-    <content type="html"><![CDATA[<p>Here are the slides and my notes for my <a href="https://us.wagtail.space/">Wagtail Space US 2022</a> talk <a href="https://youtu.be/tttOiW_bSYM">(my) </a>.</p>
+    <content type="html"><![CDATA[<p>Here are the slides and my notes for my <a href="https://us.wagtail.space/">Wagtail Space US 2022</a> talk <a href="https://youtu.be/tttOiW_bSYM">State of Wagtail</a>.</p>
 
 <!-- more -->
 
 <p>Slides:</p>
 
 <ul>
-  <li><a href="https://docs.google.com/presentation/d/1vHy_S8T-0kGDEVUJ9aAM54XxCHgdfHcgMuo09-EUaRk/edit">Google Slides: State of Wagtail - Wagtail Space US 2022</a></li>
+  <li><a href="https://docs.google.com/presentation/d/1XHkr0ijLX9b0YwQIXdshL51-J8cSH07tPm3jPWIk_eA/edit">Google Slides: State of Wagtail - Wagtail Space US 2022</a></li>
+  <li><a href="https://drive.google.com/file/d/1rW_uhz4WuVOnv-KsvuldmLSO-r_DrVfu/view">PDF: State of Wagtail - Wagtail Space US 2022</a></li>
 </ul>
 
 <iframe title="(my) State of Wagtail – Thibaud Colas, Wagtail Space US 2022" width="560" height="315" src="https://www.youtube-nocookie.com/embed/tttOiW_bSYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
