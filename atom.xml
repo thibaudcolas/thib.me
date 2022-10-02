@@ -4,7 +4,7 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2022-06-18T05:43:09+00:00</updated>
+  <updated>2022-10-02T21:05:49+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
@@ -21,11 +21,13 @@
 
 <!-- more -->
 
-<ul>
-  <li><a href="https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing">Google Slides: The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
-  <li><a href="https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing">PDF export (4MB): The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
-  <li><a href="https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing">Plain-text export: The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
-</ul>
+<iframe src="https://player.vimeo.com/video/726166919?h=c0d26f9453&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+<p><a href="https://vimeo.com/726166919">
+
+- [Google Slides: The 97.4% North Star - Thibaud Colas - MiXiT 2022](https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing)
+- [PDF export (4MB): The 97.4% North Star - Thibaud Colas - MiXiT 2022](https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing)
+- [Plain-text export: The 97.4% North Star - Thibaud Colas - MiXiT 2022](https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing)
+</a></p>
 ]]></content>
   </entry>
   
