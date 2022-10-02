@@ -13,7 +13,6 @@ Slides for my [MiXiT 2022 talk](https://mixitconf.org/fr/2022/the-97-4-north-sta
 <!-- more -->
 
 <iframe src="https://player.vimeo.com/video/726166919?h=c0d26f9453&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/726166919">
 
 - [Google Slides: The 97.4% North Star - Thibaud Colas - MiXiT 2022](https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing)
 - [PDF export (4MB): The 97.4% North Star - Thibaud Colas - MiXiT 2022](https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing)
