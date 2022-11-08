@@ -4,13 +4,95 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2022-10-02T21:05:49+00:00</updated>
+  <updated>2022-11-08T23:42:52+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Outreachy: welcoming new contributors to open source]]></title>
+    <link href="https://thib.me/outreachy-welcoming-new-contributors-to-open-source"/>
+    <updated>2022-10-10T18:50:00+00:00</updated>
+    <id>https://thib.me/outreachy-welcoming-new-contributors-to-open-source</id>
+    <content type="html"><![CDATA[<p>For the first time, Wagtail is joining Outreachy’s open source internships program</p>
+
+<!-- more -->
+
+<p><img src="/images/blog/outreachy-welcoming-new-contributors-to-open-source/outreachy-banner.jpg" alt="Outreachy - Internships supporting diversity in Free and Open Source Software" /></p>
+
+<p>As an experienced open source contributor, onboarding newcomers into the world of open source is amongst the most rewarding tasks. After a successful participation to <a href="https://wagtail.org/blog/google-summer-of-code-2022-wagtail-midterm/">this year’s Google Summer of Code</a>, we’re back at it already with <a href="https://www.outreachy.org/">Outreachy</a>, joining their December 2022 cohort.</p>
+
+<h2 id="what-is-outreachy">What is Outreachy</h2>
+
+<p>Outreachy provides <strong>internships in open source and open science.</strong> The program provides internships to people subject to systemic bias and impacted by under-representation in the technical industry where they are living. Internships are fully remote, over 3 months, with interns receiving a fair stipend to support their work.</p>
+
+<p>For Wagtail, this type of program is one of the best ways to work with more diverse contributors. We’re elated to have been selected, and hope we’ll get to work with between one and three new contributors this year.</p>
+
+<h2 id="the-project-ideas">The project ideas</h2>
+
+<p>Compared to Google Summer of Code, Outreachy only allows mentors to propose project ideas, rather than candidates. We’ve earmarked three project ideas.</p>
+
+<h3 id="a-built-in-accessibility-checker-for-wagtail">A built-in accessibility checker for Wagtail</h3>
+
+<p>This project is fundamental to meeting our <a href="https://wagtail.org/accessibility/">accessibility commitments</a>. The primary goal is to integrate an existing accessibility test suite within the CMS in a way that takes advantage of the tool’s capabilities and Wagtail’s UI specificities. We envision this being part of Wagtail’s content previews: as the page content changes, authors see what the published page would look like, and get feedback on accessibility issues.</p>
+
+<p>Here is a sneak peak at our first prototype:</p>
+
+<p><img src="/images/blog/outreachy-welcoming-new-contributors-to-open-source/sa11y-prototype.png" alt="Screenshot of a prototype accessibility checker built into Wagtail's live preview" /></p>
+
+<p><em>For more information about this project, to ask questions and provide feedback, follow</em> <a href="https://github.com/wagtail/wagtail/discussions/9262"><em>discussion #9262 Built-in Accessibility Checker</em></a><em> on GitHub.</em></p>
+
+<h3 id="improving-wagtails-editor-guide">Improving Wagtail’s editor guide</h3>
+
+<p>This project follows through <a href="https://wagtail.org/blog/google-summer-of-code-wagtail-editor-guide/">Hitansh Shah’s GSoC project</a>, where he created a new site for the Editor Guide documentation, with support from the project mentors. The new site looks fabulous:</p>
+
+<p><img src="/images/blog/outreachy-welcoming-new-contributors-to-open-source/editor-guide.png" alt="Editor Guide landing page before-after" /></p>
+
+<p>Now the next step is simply to revamp the content! This wasn’t part of Hitansh’s project, and is the perfect follow-up. We’re also very happy to propose a project idea where there is <strong>no need for contributors to know how to code</strong>.</p>
+
+<p><em>For more information about this project, to ask questions and provide feedback, follow <a href="https://github.com/wagtail/guide/discussions/116">discussion #116 Outreachy: Improve user guide documentation for Wagtail</a>.</em></p>
+
+<h3 id="stimulus-for-interactive-widgets-in-wagtail">Stimulus for interactive widgets in Wagtail</h3>
+
+<p>Following the leadership of our contributor LB, our UI team has been carefully considering how to bring Wagtail’s JavaScript interactivity to modern standards. This project is the natural follow-up to LB’s excellent <a href="https://github.com/wagtail/rfcs/pull/78">RFC #78 for us to adopt Stimulus</a>: rolling it out across large swaths of the user interface.</p>
+
+<p>The RFC is still going through the last stages of validation, so is the best way to follow up or comment on this project!</p>
+
+<h2 id="how-to-participate">How to participate</h2>
+
+<p>For aspiring newcomers already accepted in the December 2022 Outreachy cohort, head over to our <a href="https://github.com/wagtail/wagtail/wiki/Outreachy-2022">Outreachy 2022 wiki page</a> for more information about Wagtail, good resources, and a list of initial tasks.</p>
+
+<p>For everyone else, we’d love to hear your thoughts on the project ideas, and are also actively looking for additional support so we can confidently take on all three projects. Join us in #outreachy on <a href="https://github.com/wagtail/wagtail/wiki/Slack">Wagtail’s Slack workspace</a>.</p>
+
+<h2 id="whats-next">What’s next</h2>
+
+<p>We hope to hear from a lot of newcomers through the <a href="https://www.outreachy.org/docs/community/#current-timeline">initial contribution period</a>, where candidates get to know different communities and apply to projects. We’ll make sure to share more information about projects that are going ahead and their respective contributors once details are confirmed, towards the end of November.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Google Summer of Code 2022 for Wagtail]]></title>
+    <link href="https://thib.me/google-summer-of-code-2022-for-wagtail"/>
+    <updated>2022-07-14T18:50:00+00:00</updated>
+    <id>https://thib.me/google-summer-of-code-2022-for-wagtail</id>
+    <content type="html"><![CDATA[<p>This year, Wagtail gets to take part in Google Summer of Code independently!</p>
+
+<!-- more -->
+
+<p>We are participating with three projects:</p>
+
+<ul>
+  <li><a href="https://github.com/wagtail/wagtail/discussions/8193">Contrast Themes by Anuja Raj Verma</a></li>
+  <li><a href="https://github.com/wagtail/wagtail/discussions/7824">Editor’s Guide - A standalone project by Hitansh Shah</a></li>
+  <li><a href="https://github.com/wagtail/wagtail/discussions/8156">Toolkit for StreamField data migrations in Wagtail by Sandil Ranasinghe</a></li>
+</ul>
+
+<p>And we have a fourth project independently sponsored by Torchbox: <a href="https://github.com/wagtail/wagtail/discussions/8158">UX Unification by Paarth Agarwal</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[MiXiT 2022: The 97.4% North Star]]></title>
@@ -22,12 +104,12 @@
 <!-- more -->
 
 <iframe src="https://player.vimeo.com/video/726166919?h=c0d26f9453&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
-<p><a href="https://vimeo.com/726166919">
 
-- [Google Slides: The 97.4% North Star - Thibaud Colas - MiXiT 2022](https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing)
-- [PDF export (4MB): The 97.4% North Star - Thibaud Colas - MiXiT 2022](https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing)
-- [Plain-text export: The 97.4% North Star - Thibaud Colas - MiXiT 2022](https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing)
-</a></p>
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing">Google Slides; The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
+  <li><a href="https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing">PDF export (4MB); The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
+  <li><a href="https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing">Plain-text export; The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
+</ul>
 ]]></content>
   </entry>
   
@@ -1142,6 +1224,61 @@ Or you can use aria-describedby to make the association, like this:
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Running remote workshops]]></title>
+    <link href="https://thib.me/remote-tech-workshop-tips"/>
+    <updated>2021-05-21T21:42:03+00:00</updated>
+    <id>https://thib.me/remote-tech-workshop-tips</id>
+    <content type="html"><![CDATA[<p>A few tips on running engaging remote training workshops, from my experience running short internal training sessions for remote teams.</p>
+
+<!-- more -->
+
+<h2 id="why-remote">Why remote</h2>
+
+<p>Workshops are much harder to run remotely than in person – helping any one attendee troubleshoot their problem is hard, and helping more than one person at a time is outright impossible. Nonetheless, there are clear advantages to running workshops remotely:</p>
+
+<ul>
+  <li>Attendees can join the workshop from anywhere in the world.</li>
+  <li>Even for people who are close-by, not having any travel time or logistics can be the difference between attending a session or missing it.</li>
+  <li>It’s simpler for people to arrive late, or leave early.</li>
+  <li>Recording is very straightforward, with all interactions happening over a video call.</li>
+  <li>With no travel time or logistics, running a session multiple times is as simple as offering multiple slots.</li>
+  <li>Similarly, it’s also very simple to split a curriculum over multiple smaller bookings, which might be easier to find time for than a big booking.</li>
+</ul>
+
+<p>There are specific issues to remote-ness worth highlighting as well:</p>
+
+<ul>
+  <li>Troubleshooting or offering help is hard</li>
+  <li>Tech issues can get in the way – both for attendees and organisers</li>
+</ul>
+
+<h2 id="making-it-work">Making it work</h2>
+
+<h2 id="setting-the-agenda">Setting the agenda</h2>
+
+<p>Take ample time to document all of the steps of the workshop, including the expected duration for each. This is especially important if you’re not used to running workshops, or if you’re not used to running them remotely.</p>
+
+<p>Remote attendance means lots of participants might be fitting the workshop around other engagements during the day, and won’t have any room for the workshop to overrun.</p>
+
+<h2 id="preparing-sessions">Preparing sessions</h2>
+
+<p>First and foremost, spend time getting as familiar as possible with your video call equipment and software. Spend more time with Zoom, trying out all of the options, and configuring waiting rooms, recording, and so on. Zoom has way more of those gotchas than the average video call software, so it’s good to be aware of them ahead of time.</p>
+
+<p>Additionally,</p>
+
+<ul>
+  <li>Consider rehearsing with someone else. You pick up so many more potential gotchas if there’s someone who isn’t as experienced with the material to notice things</li>
+  <li>Always share a workshop notes / supporting document ahead of time. Then you can put all the relevant links in there, as well as any specific instructions. Personally I also use that same doc as the outline of the workshop for myself. And that will be the doc I send around at the end with any extra links we discussed, and the recording if relevant. I’ll also take note of the time I expect to take for each section, so I have a sense of how I’m doing time-wise. You had slides, so it could also just be an extra “links” slide as well</li>
+  <li>Ideally also have a section in that same doc with everything people should do ahead of the workshop. People might not bother ahead of time, but for those that do the workshop will be a bit easier to follow.</li>
+</ul>
+
+<h2 id="during-the-session">During the session</h2>
+
+<p>Start on time, end on time! In-between, make sure to keep to your schedule.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[PyCon US 2021: Web Accessibility ♥ Python]]></title>
     <link href="https://thib.me/pycon-us-2021-python-accessibility-ftw"/>
     <updated>2021-05-13T06:43:49+00:00</updated>
@@ -1492,327 +1629,6 @@ parsy = "1.1.0"</span>
 <p>And of course web developers who want to have a practical impact on making the web more accessible!</p>
 
 <p>Does this sound like your kind of jam? If you’re keen to learn more, <a href="https://github.com/wagtail/wagtail/wiki/Slack">reach out to us on Slack</a> in #accessibility.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ATAG 2.0 getting started resources]]></title>
-    <link href="https://thib.me/atag-getting-started-resources"/>
-    <updated>2021-01-06T21:42:03+00:00</updated>
-    <id>https://thib.me/atag-getting-started-resources</id>
-    <content type="html"><![CDATA[<p>There aren’t many resources out there about <a href="https://www.w3.org/TR/ATAG20/">ATAG</a>. Here are the ones I have found and occasionally come back to.</p>
-
-<!-- more -->
-
-<h2 id="why-do-we-need-this">Why do we need this?</h2>
-
-<p>I often hear people question whether ATAG really is applicable to <code class="language-plaintext highlighter-rouge">&lt;insert name of tool&gt;</code>. In my experience the answer has so far always been “yes”. Here’s a quick step by step:</p>
-
-<ol>
-  <li>Does the tool allow creating content for the web? (any editing of content visible on a website)</li>
-  <li>That content needs to be accessible.</li>
-  <li>So the tool needs to make it possible to create accessible content.</li>
-</ol>
-
-<p>It’s as simple as that, regardless of whether the “tool” is a CMS, a text editor, an admin panel, or just a form with a few plain-text fields.</p>
-
-<p>Mitchell Evan also summarizes the need for ATAG in his excellent talk <a href="https://wpaccessibilityday.org/talks/if-its-true-it-aint-bragging-choosing-a-cms-for-accessibility/">If it’s true it ain’t bragging! Choosing a CMS for accessibility</a>:</p>
-
-<blockquote>
-  <p>Authoring Tool Accessibility Guidelines (ATAG): Who needs them?</p>
-
-  <ul>
-    <li>Nobody — because no law or regulation directly requires ATAG.</li>
-    <li><strong>Everybody — because ATAG reduces your risk of an inaccessible website.</strong></li>
-  </ul>
-</blockquote>
-
-<p>So – yes, there is no compliance requirement. But it’s no less relevant of a standard, and it is the de-facto goalpost for all authoring tools who care about accessibility out there. Oh and it will likely <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">be part of WCAG 3.0</a>, which will likely be a compliance requirement in the future.</p>
-
-<h2 id="official-resources">Official resources</h2>
-
-<p>There are very few unfortunately.</p>
-
-<ul>
-  <li><a href="https://www.w3.org/WAI/atag/report-tool/">ATAG report tool</a> is the official ATAG report generator.</li>
-  <li><a href="https://github.com/w3c/wai-authoring-tools">WAI Authoring Tools</a> is a very promising way to explore how different tools comply with ATAG, unfortunately the project seems to have stalled halfway through.
-    <ul>
-      <li>In particular, this project has a list of <a href="https://wai-authoring-tools.netlify.app/authoring-tools/selecting#features">accessibility features in authoring tools</a> which makes for a very good introduction to ATAG.</li>
-    </ul>
-  </li>
-  <li><a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI Guide</a> is a W3C project co-funded by the EU’s Horizon 2020 program, that might produce more resources in the future.</li>
-</ul>
-
-<h2 id="research">Research</h2>
-
-<p>There are a few research teams working on authoring tools’ accessibility. Here is the work that stood out the most for me.</p>
-
-<ul>
-  <li><a href="https://accessibilitycluster.com/">Accessibility Cluster</a> is another EU research project currently under way to look at accessibility in CMSes. There are interesting resources available from the project pilot, unfortunately doesn’t go very far beyond what ATAG already states:
-    <ul>
-      <li><a href="https://www.funka.com/en/projekt/we4authors/we4authors-main-activities-and-results/workshops-on-accessible-content-management-systems/workshops/">Workshops results</a></li>
-      <li><a href="https://www.funka.com/en/projekt/we4authors/we4authors-main-activities-and-results/accessibility-guidelines-for-the-cms-community-suppliers-and-public-governments/">Guidelines for stakeholders</a></li>
-      <li>Report for CMS tools in particular (but could apply to any kind of web publishing): <a href="https://www.funka.com/contentassets/c43f6521e7354c9a8f82e62402f10aad/guidelines_for_authoring_tools_producers.pdf">Guidelines for authoring tools producers</a></li>
-    </ul>
-  </li>
-  <li><a href="https://www.researchgate.net/profile/Tania_Acosta4/publication/322250312_Method_for_Accessibility_Assessment_of_Online_Content_Editors/links/5d6600faa6fdccc32cd67dbd/Method-for-Accessibility-Assessment-of-Online-Content-Editors.pdf">Method for accessibility assessment of online content editors (preprint)</a> covers which WCAG guidelines should likely be considered when evaluating ATAG for a CMS.</li>
-</ul>
-
-<h2 id="drupal-and-wordpress">Drupal and WordPress</h2>
-
-<p>In the CMS world, Drupal and WordPress have the most established resources when it comes to accessibility, and ATAG in particular.</p>
-
-<p>Drupal:</p>
-
-<ul>
-  <li><a href="https://www.drupal.org/docs/accessibility">Accessibility in Drupal</a></li>
-  <li><a href="https://www.drupal.org/node/2034909">Drupal - Track progress in ATAG 2.0 conformance</a>
-    <ul>
-      <li>Out of date but still interesting: <a href="https://groups.drupal.org/node/164389">Drupal compliance overview of ATAG 2.0</a></li>
-    </ul>
-  </li>
-  <li><a href="https://medium.com/@mgifford/web-accessibility-atag-drupal-8-4132bf3724ea">Web Accessibility, ATAG &amp; Drupal 8</a></li>
-  <li>Talk: <a href="https://drupal.tv/index.php/external-video/2017-08-26/why-we-should-get-excited-about-atag-20">Why We Should Get Excited About ATAG 2.0</a></li>
-</ul>
-
-<p>WordPress:</p>
-
-<ul>
-  <li><a href="https://wpaccessibilityday.org/">WP Accessibility Day</a>
-    <ul>
-      <li><a href="https://wpaccessibilityday.org/talks/your-cms-is-an-accessibility-assistant/">Your CMS is an Accessibility Assistant</a>, <a href="https://youtu.be/V0yJ_qJBvoc?t=7775">video</a></li>
-    </ul>
-  </li>
-  <li><a href="https://www.wpcampus.org/blog/2019/05/gutenberg-audit-results/">WPCampus releases results of the Gutenberg accessibility audit</a></li>
-</ul>
-
-<h2 id="other-platforms">Other platforms</h2>
-
-<p>There are a few other authoring tools that have some accessibility / ATAG-relevant resources:</p>
-
-<ul>
-  <li><a href="https://www.wix.com/accessibility">Wix accessibility tools &amp; guides</a></li>
-  <li><a href="https://help.surveymonkey.com/articles/en_US/kb/Accessibility-at-SurveyMonkey">Accessibility at SurveyMonkey</a></li>
-  <li>One I put together for Wagtail: <a href="https://docs.wagtail.org/en/latest/advanced_topics/accessibility_considerations.html">Wagtail accessibility considerations</a></li>
-</ul>
-
-<h2 id="atag-examples">ATAG examples</h2>
-
-<p>To round off this list, here are practical examples of checkers that can help meet ATAG’s Principle B.3: Authors are supported in improving the accessibility of existing content.</p>
-
-<ul>
-  <li><a href="https://www.tiny.cloud/docs/plugins/premium/a11ychecker/">TinyMCE’s accessibility checker</a></li>
-  <li><a href="https://khan.github.io/tota11y/">Tota11y</a>, particularly relevant for content management systems.
-    <ul>
-      <li><a href="https://github.com/neon-jungle/wagtail-accessibility">And its Wagtail implementation, wagtail-accessibility</a></li>
-    </ul>
-  </li>
-  <li><a href="https://support.microsoft.com/en-us/office/make-your-content-accessible-to-everyone-with-the-accessibility-checker-38059c2d-45ef-4830-9797-618f0e96f3ab">Microsoft Office 365 accessibility checker</a></li>
-</ul>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Pattern Lab goes Django]]></title>
-    <link href="https://thib.me/pattern-lab-goes-django"/>
-    <updated>2020-12-11T12:52:22+00:00</updated>
-    <id>https://thib.me/pattern-lab-goes-django</id>
-    <content type="html"><![CDATA[<p>If you’re into UI component reuse, you may have heard of <a href="https://atomicdesign.bradfrost.com/">Atomic Design</a> and <a href="https://patternlab.io/">Pattern Lab</a>. We’re big fans at Torchbox, but Pattern Lab is PHP or Node-based, while we decided long ago to <a href="https://torchbox.com/blog/alternatives-to-drupal/">leave the PHP / Drupal world behind</a>, and concentrate on Django. We took Pattern Lab with us, and built <a href="https://torchbox.github.io/django-pattern-library/">django-pattern-library</a> – a.k.a. Pattern Lab goes Django.</p>
-
-<!-- more -->
-
-<h2 id="pattern-libraries-at-torchbox">Pattern libraries at Torchbox</h2>
-
-<p>At Torchbox, pattern libraries are a way to separate concerns between front-end and back-end development. We’ve been using our Django pattern library package for a couple of years to:</p>
-
-<ul>
-  <li>Clarify responsibilities and separate concerns, both in code, and as members of a development team between front-end and back-end development.</li>
-  <li>As needed, enable for front-end developers to work on pages and block templates before any back-end development happens.</li>
-  <li>Encourage code reuse and components composition – defining independent UI components, reusable without markup copy-paste, and reusable on other projects like any Django app.</li>
-</ul>
-
-<p>Does this sound useful to you? Go and have a look at our introductory presentation from Wagtail Space US 2020, <a href="https://www.youtube.com/watch?v=isrOufI7TKc">Reusable UI components – A journey from React to Wagtail</a>:</p>
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/isrOufI7TKc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<p>Slides: <a href="https://docs.google.com/presentation/d/1pZAbunn0Ci8B9NR0mS5taOPe7BMdAiDrKNIcd9xBWO4/edit">Wagtail Space US 2020 - Reusable UI components – A journey from React to Wagtail</a></p>
-
-<h2 id="our-first-big-release">Our first big release</h2>
-
-<p>Pattern Lab has been around for a while, and so has our own <a href="https://torchbox.github.io/django-pattern-library/">django-pattern-library</a>, but we only open-sourced it a few months ago. Sadly it wasn’t as well documented or flexible as we would have liked it to be. This is starting to change with our most recent release. Here are the headline features:</p>
-
-<ul>
-  <li><a href="https://torchbox.github.io/django-pattern-library/getting-started/#compatibility">Support for Python 3.9, Django 3.0, 3.1, and tentatively 3.2</a>. We also started running the project’s tests against Django’s development branch for good measure.</li>
-  <li>A new <a href="https://torchbox.github.io/django-pattern-library/guides/automated-tests/#with-render_patterns"><em>render_patterns</em> management command</a>, so you can test whether all of your project’s patterns render successfully at once. Think of it as smoke tests for pattern library components.</li>
-  <li><a href="https://torchbox.github.io/django-pattern-library/reference/api/#override_tag">Optional default values for tag overrides</a>, so you no longer have to repeat specific overrides in all of your component mocks.</li>
-  <li><a href="https://torchbox.github.io/django-pattern-library/reference/api/#sections">Support for arbitrary template structures</a> – whether that’s across multiple apps or only one, however you want your templates to be structured.</li>
-</ul>
-
-<p>View the full <a href="https://github.com/torchbox/django-pattern-library/blob/master/CHANGELOG.md">CHANGELOG</a>. Along those shiny features, we also released two massive improvements to the project: a <a href="https://torchbox.github.io/django-pattern-library/">new documentation website</a>, with lots more content – guides, recipes, and reference info. And also a <a href="https://torchbox.github.io/django-pattern-library/demo/pattern-library/">new demo site</a>, so you can see for yourself how the project works (although note the public demo is <a href="https://torchbox.github.io/django-pattern-library/guides/static-site-export/">exported as a static site</a>).</p>
-
-<h3 id="template-structures">Template structures</h3>
-
-<p>Starting in v0.3.0, you may structure your project’s templates in however many folders you want. This feels like such an obvious need in hindsight, but the pattern library having only been an internal Torchbox project for a while, it didn’t really need to accommodate that many different structures!</p>
-
-<p>This is now possible thanks to the new <a href="https://torchbox.github.io/django-pattern-library/reference/api/#sections">SECTIONS</a> setting, with the previous predefined structure kept as the default for backwards compatibility. It also comes with a lot of black magic to decide which templates are partials and should be rendered in a base template, and which can be rendered as-is.</p>
-
-<h3 id="render_patterns">render_patterns</h3>
-
-<p>This new management command might or might not be relevant to you but it’s worth highlighting use cases this is intended to support:</p>
-
-<ul>
-  <li><a href="https://torchbox.github.io/django-pattern-library/guides/static-site-export/">Static exports of the pattern library</a>, for those cases where you want a simple way to share patterns publicly or host them alongside documentation, rather than alongside your site.</li>
-  <li><a href="https://torchbox.github.io/django-pattern-library/guides/automated-tests/">Automated tests of UI components</a>, particularly in continuous integration, where it might be problematic for you to get a Django server up and running depending on the project’s dependencies.</li>
-</ul>
-
-<p>Combined with tools like <a href="https://pa11y.org/">Pa11y and pa11y-ci</a>, this makes it much simpler to run site-wide automated accessibility tests for all of your project’s templates, making the most of the pattern library’s tightly controlled mock data:</p>
-
-<p><img src="/images/blog/pattern-lab-goes-django/gitlab-ci-pa11y-patterns.png" alt="Screenshot of pa11y-ci output in GitLab CI showing reported issues on pattern library templates" /></p>
-
-<p>There are still rough edges (for example the command will abort the whole test suite if only a single template fails to render!), but we hope you’ll find uses for this nonetheless.</p>
-
-<h2 id="whats-next">What’s next</h2>
-
-<p>Hopefully more of the above – new features, more stability, better documentation. We’re particulary keen on <a href="https://github.com/torchbox/django-pattern-library/issues/106">finding ways to mock templates with factories rather than plain data structures</a>, and <a href="https://github.com/torchbox/django-pattern-library/issues/103">combining our Django rendering features with Storybook’s developer experience</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Detecting Wagtail in the wild]]></title>
-    <link href="https://thib.me/detecting-wagtail-in-the-wild"/>
-    <updated>2020-11-18T15:15:22+00:00</updated>
-    <id>https://thib.me/detecting-wagtail-in-the-wild</id>
-    <content type="html"><![CDATA[<p>How can you tell if a site is made with Wagtail or not? There are more ways than people might think at first sight, and after a few years of toying with the idea I finally put together a way to detect Wagtail sites, that strikes a good balance between reliability and convenience. Let’s go birdwatching.</p>
-
-<!-- more -->
-
-<h2 id="ways-to-detect-wagtail">Ways to detect Wagtail</h2>
-
-<p>I could think of a few <a href="https://github.com/springload/madewithwagtail/issues/62">when I first started thinking of this problem</a>:</p>
-
-<ul>
-  <li>Determine if the site is <a href="https://stackoverflow.com/questions/721934/how-can-you-tell-if-a-site-has-been-made-with-django">built with Django</a>. That’s a start</li>
-  <li>Check if the site uses a <a href="https://wagtail.org/wagtail-badges/">Wagtail badge</a>. Cute, but not used much in practice.</li>
-  <li>Load <code class="language-plaintext highlighter-rouge">/admin/login</code> and check for “wagtail” in the response – that would surely be an almost certain match.</li>
-</ul>
-
-<p>The problem with a lot of those approaches is their relance on crawling the site, which is quite invasive, not very reliable, and can be time-consuming across a lot of sites. It’s also unclear how common those cues would be across the breadth of Wagtail sites out there.</p>
-
-<p>The ideal approach would be HTTP response headers – which could be obtained from any page with a lightweight HEAD request. Wagtail unfortunately doesn’t have any custom header, so the next best thing is to inspect the pages’ markup:</p>
-
-<ul>
-  <li>Wagtail’s (legacy) rich text uses the <code class="language-plaintext highlighter-rouge">rich-text</code> class to wrap the HTML of rich text fields</li>
-  <li>Rich text images use hard-coded classes like <a href="https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/images/formats.py#L91-L94"><code class="language-plaintext highlighter-rouge">richtext-image full-width</code></a></li>
-  <li>Wagtail’s documents are served from a <a href="https://github.com/wagtail/wagtail/blob/bb2e460c0b92fba802fc3f369730004d6b648e64/wagtail/documents/urls.py#L6"><code class="language-plaintext highlighter-rouge">/documents/</code></a> sub-path.</li>
-  <li>And last but not least, <a href="https://docs.wagtail.org/en/stable/topics/images.html?highlight=renditions#generating-image-renditions-in-python">image renditions</a>.</li>
-</ul>
-
-<p>Image renditions are very common on Wagtail sites. The detection would only work for pages that have user-uploaded images, but lucky for us a site’s homepage tends to be the type of high-value page where there are CMS-managed images. Here are a few examples of URLs from renditions:</p>
-
-<pre><code class="language-txt">https://www.jazzfestival.nz/media/images/video-fallback-image_1.width-1920.png
-
-/media/images/bevi_3_mob.original.format-png.png
-
-/media/original_images/Social_Distancing_Dashboard_-_image_1_TU_DelftAMS_Institute.png
-
-https://buckup-ff-stories.s3.amazonaws.com/original_images/Lockup_Logo_-_JPEG-1.png
-
-/media/images/UE4LowPolyVehicleTh.2e16d0ba.fill-960x540-c0.jpg
-</code></pre>
-
-<p>The distinctive features are the folders – always either <code class="language-plaintext highlighter-rouge">images</code> or <code class="language-plaintext highlighter-rouge">original_images</code>, and frequently either placed directly at the root of a site, or from a <code class="language-plaintext highlighter-rouge">/media</code> subfolder at the root, or a single level up. And then the fact that all of the site’s images are placed in those two folders without any additional sub-folders, with file name suffixes following a set format for all files under <code class="language-plaintext highlighter-rouge">images/</code> like <code class="language-plaintext highlighter-rouge">.width-1920</code> or <code class="language-plaintext highlighter-rouge">.fill-960x450-c0</code> above. I came up with the particular regex used here after trying out different variations on 800’000 homepages from the <a href="https://majestic.com/reports/majestic-million">Majestic Million</a> list of domains.</p>
-
-<h2 id="the-regex">The regex</h2>
-
-<p>Here is a simplified diagram of the logic (created with <a href="https://regexper.com/#%5C%2F%28original_images%5C%2F%5B%5Cw-%5D%2B%5C.%7Cimages%5C%2F%5B%5Cw-.%5D%2B%5C.%28%28fill%7Cmax%7Cmin%7Cwidth%7Cheight%7Cscale%29-%5Cd%7Coriginal%29%29">regexper</a>):</p>
-
-<p><img src="/images/blog/detecting-wagtail-in-the-wild/regexper-diagram.svg" alt="regexper train diagram of Wagtail regular expressions" /></p>
-
-<h2 id="real-world-usage">Real-world usage</h2>
-
-<p>The regex could be more complex and precise but this wouldn’t actually change much to its real-world usefulness, so I gradually simplified it to the above. With this in place, we can then create different ways to run this detection on arbitrary websites:</p>
-
-<ul>
-  <li>An online website, <a href="https://detect-wagtail.netlify.app/">detect-wagtail.netlify.app</a>.</li>
-  <li>A bookmarket, also available from <a href="https://detect-wagtail.netlify.app/">detect-wagtail.netlify.app</a>.</li>
-  <li>A browser extension thanks to <a href="https://github.com/AliasIO/wappalyzer">Wappalyzer</a>.</li>
-  <li>A Node CLI, also thanks to <a href="https://github.com/AliasIO/wappalyzer">Wappalyzer</a>.</li>
-  <li>As an npm package for more custom needs, <a href="https://www.npmjs.com/package/detect-wagtail">detect-wagtail</a></li>
-</ul>
-
-<p>With Wappalyzer in particular, they also offer additional services based on anonymous data reporting from their detection tools. Here is their page that aggregates Wagtail usage data: <a href="https://www.wappalyzer.com/technologies/cms/wagtail/">Websites using Wagtail</a>.</p>
-
-<p>If you’re unsure which of these to use – the Wappalyzer checks are the strictest, so best used if you don’t want to manually confirm the results by inspecting the pages’ HTML.</p>
-
-<h2 id="real-world-data">Real-world data</h2>
-
-<p>With this regex in place, I tried it out on a few lists of websites. See <a href="https://github.com/thibaudcolas/detect-wagtail/tree/main/docs/analysis">detect-wagtail/docs/analysis</a> for the full details.</p>
-
-<h3 id="eu-public-sector-websites">EU public sector websites</h3>
-
-<p>Dataset from <a href="https://www.funka.com/en/projekt/we4authors/">We4authors</a>. Based on this analysis, I could find 3 national EU public sector websites built with Wagtail:</p>
-
-<pre><code class="language-txt">www.danepubliczne.gov.pl
-www.nhs.uk
-www.nesta.org.uk
-</code></pre>
-
-<p>There are many more public sector websites built with Wagtail at the national and regional / local level, but this type of analysis already shows the value in having the ability to detect Wagtail – the CMS could be part of <a href="https://www.funka.com/en/projekt/we4authors/we4authors-main-activities-and-results/market-analysis-and-benchmarking-process-of-existing-cms/">market analysis</a> for research projects like We4authors, from which we can learn a lot.</p>
-
-<h3 id="us-federal-websites">US federal websites</h3>
-
-<p>Analysis of the US federal websites from the <a href="https://github.com/GSA/digitalgov.gov/blob/main/content/resources/content-management-systems-used-by-government-agencies.md">digital.gov list</a>.</p>
-
-<pre><code class="language-txt">fec.gov
-www.peacecorps.gov
-www.consumerfinance.gov
-</code></pre>
-
-<h3 id="made-with-wagtail">Made with Wagtail</h3>
-
-<p><a href="https://madewithwagtail.org/">Made with Wagtail</a> is a showcase of a lot of Wagtail sites and apps. About two thirds of sites listed are detected with the following regular expressions.</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min|width|height|scale)-\d|original))'</span> mww <span class="nt">--stats-only</span>
-<span class="c"># 382 files contained matches</span>
-ag <span class="s1">'\/media\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min)-\d+x\d+(-c\d+)?|(width|height|scale)-\d+|original)\.)'</span> mww <span class="nt">--stats-only</span>
-<span class="c"># 292 files contained matches</span>
-</code></pre></div></div>
-
-<p>The remaining third are largely made up of sites that… actually aren’t made with Wagtail, either because Wagtail is only used for a specific section of a site (and not the homepage), or because the site got rebuilt with another technology since being listed there.</p>
-
-<h3 id="majestic-million">Majestic Million</h3>
-
-<p>The <a href="https://majestic.com/reports/majestic-million">Majestic Million</a> is a dataset of 1M domain names ordered by popularity. We can also use the above methodology to assess how many websites are made with Wagtail on this list (about 0.05%).</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ag <span class="s1">'\/media\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min)-\d+x\d+(-c\d+)?|(width|height|scale)-\d+|original)\.)'</span> million <span class="nt">--stats-only</span>
-<span class="c"># 296 files contained matches</span>
-ag <span class="s1">'\/(original_images\/[\w-]+\.|images\/[\w-.]+\.((fill|max|min|width|height|scale)-\d|original))'</span> ../detect-wagtail-data/million <span class="nt">--stats-only</span>
-<span class="c"># 528 files contained matches</span>
-</code></pre></div></div>
-
-<p>Those numbers neatly match those of <a href="https://whatcms.org/c/Wagtail">WhatCMS</a>.</p>
-
-<h2 id="security-implications">Security implications</h2>
-
-<p>Telling whether a given site is built with Wagtail or not really doesn’t take that much effort. The image renditions methodology also shows it’s very easy to do at scale. There is nothing here that can prevent bad actors from scanning the web for vulnerable Wagtail sites, as is commonplace for other platforms. For all intents and purposes, you should assume this is happening already.</p>
-
-<p>What should we do then? For a start, don’t rely on <a href="https://en.wikipedia.org/wiki/Security_through_obscurity">security through obscurity</a>. Take the time to establish a threat model for your site, and protect it accordingly by restricting access to anything exploitable, and implementing brute force protections where relevant. Take a multi-layered approach to security – with defenses at the network level (e.g. a WAF), application level (e.g. rate limiting, defensive programming, handling of untrusted input, etc.), and also monitoring (logs analysis).</p>
-
-<p>An old but still relevant example of this in the Wagtail world is <a href="https://github.com/springload/wagtailenforcer">WagtailEnforcer</a>.</p>
-
-<p>And of course, keep your site up-to-date with security fixes for all its dependencies. While the approach described here doesn’t make it possible to determine which version of Wagtail is used – there are other very viable approaches that make this equally as easy (see <a href="https://github.com/caioariede/detect-django-version">detect-django-version</a> for inspiration).</p>
-
-<h2 id="applications">Applications</h2>
-
-<p>There are a lot more applications to being able to detect Wagtail websites than just knowing how many there are out there. <a href="WhatCMS.org">WhatCMS.org</a> has had some amount of Wagtail data for years and is a good example of the potential for market analysis. For me, I’m more interested in seeing how Wagtail is used in the wild. Here are interesting questions this can help answer:</p>
-
-<ul>
-  <li>Wagtail headless usage – which static site generators are the most common with Wagtail, that would be worth documenting the usage of better. In my analysis, I found a lot of Next and Gatsby websites in particular.</li>
-  <li>Security best practices – how many websites have the Wagtail admin accessible from any IP vs being restricted.</li>
-  <li>Accessibility – how accessible Wagtail sites are.</li>
-</ul>
-
-<p>This last point is the one I’m the most interested in – in particular, comparing Wagtail’s results to those of other technologies in the <a href="https://webaim.org/projects/million/">WebAIM Million</a>. We’ll see how that goes!</p>
 ]]></content>
   </entry>
   

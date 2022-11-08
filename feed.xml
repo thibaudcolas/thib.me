@@ -1,14 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-10-02T21:05:49+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">MiXiT 2022: The 97.4% North Star</title><link href="https://thib.me/the-97-4-percent-north-star" rel="alternate" type="text/html" title="MiXiT 2022: The 97.4% North Star" /><published>2022-05-25T08:50:00+00:00</published><updated>2022-05-25T08:50:00+00:00</updated><id>https://thib.me/the-97-4-percent-north-star</id><content type="html" xml:base="https://thib.me/the-97-4-percent-north-star">&lt;p&gt;Slides for my &lt;a href=&quot;https://mixitconf.org/fr/2022/the-97-4-north-star&quot;&gt;MiXiT 2022 talk&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2022-11-08T23:42:52+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Outreachy: welcoming new contributors to open source</title><link href="https://thib.me/outreachy-welcoming-new-contributors-to-open-source" rel="alternate" type="text/html" title="Outreachy: welcoming new contributors to open source" /><published>2022-10-10T18:50:00+00:00</published><updated>2022-10-10T18:50:00+00:00</updated><id>https://thib.me/outreachy-welcoming-new-contributors-to-open-source</id><content type="html" xml:base="https://thib.me/outreachy-welcoming-new-contributors-to-open-source">&lt;p&gt;For the first time, Wagtail is joining Outreachy’s open source internships program&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/outreachy-welcoming-new-contributors-to-open-source/outreachy-banner.jpg&quot; alt=&quot;Outreachy - Internships supporting diversity in Free and Open Source Software&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As an experienced open source contributor, onboarding newcomers into the world of open source is amongst the most rewarding tasks. After a successful participation to &lt;a href=&quot;https://wagtail.org/blog/google-summer-of-code-2022-wagtail-midterm/&quot;&gt;this year’s Google Summer of Code&lt;/a&gt;, we’re back at it already with &lt;a href=&quot;https://www.outreachy.org/&quot;&gt;Outreachy&lt;/a&gt;, joining their December 2022 cohort.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-outreachy&quot;&gt;What is Outreachy&lt;/h2&gt;
+
+&lt;p&gt;Outreachy provides &lt;strong&gt;internships in open source and open science.&lt;/strong&gt; The program provides internships to people subject to systemic bias and impacted by under-representation in the technical industry where they are living. Internships are fully remote, over 3 months, with interns receiving a fair stipend to support their work.&lt;/p&gt;
+
+&lt;p&gt;For Wagtail, this type of program is one of the best ways to work with more diverse contributors. We’re elated to have been selected, and hope we’ll get to work with between one and three new contributors this year.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-project-ideas&quot;&gt;The project ideas&lt;/h2&gt;
+
+&lt;p&gt;Compared to Google Summer of Code, Outreachy only allows mentors to propose project ideas, rather than candidates. We’ve earmarked three project ideas.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-built-in-accessibility-checker-for-wagtail&quot;&gt;A built-in accessibility checker for Wagtail&lt;/h3&gt;
+
+&lt;p&gt;This project is fundamental to meeting our &lt;a href=&quot;https://wagtail.org/accessibility/&quot;&gt;accessibility commitments&lt;/a&gt;. The primary goal is to integrate an existing accessibility test suite within the CMS in a way that takes advantage of the tool’s capabilities and Wagtail’s UI specificities. We envision this being part of Wagtail’s content previews: as the page content changes, authors see what the published page would look like, and get feedback on accessibility issues.&lt;/p&gt;
+
+&lt;p&gt;Here is a sneak peak at our first prototype:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/outreachy-welcoming-new-contributors-to-open-source/sa11y-prototype.png&quot; alt=&quot;Screenshot of a prototype accessibility checker built into Wagtail&apos;s live preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;For more information about this project, to ask questions and provide feedback, follow&lt;/em&gt; &lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/9262&quot;&gt;&lt;em&gt;discussion #9262 Built-in Accessibility Checker&lt;/em&gt;&lt;/a&gt;&lt;em&gt; on GitHub.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;improving-wagtails-editor-guide&quot;&gt;Improving Wagtail’s editor guide&lt;/h3&gt;
+
+&lt;p&gt;This project follows through &lt;a href=&quot;https://wagtail.org/blog/google-summer-of-code-wagtail-editor-guide/&quot;&gt;Hitansh Shah’s GSoC project&lt;/a&gt;, where he created a new site for the Editor Guide documentation, with support from the project mentors. The new site looks fabulous:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/outreachy-welcoming-new-contributors-to-open-source/editor-guide.png&quot; alt=&quot;Editor Guide landing page before-after&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the next step is simply to revamp the content! This wasn’t part of Hitansh’s project, and is the perfect follow-up. We’re also very happy to propose a project idea where there is &lt;strong&gt;no need for contributors to know how to code&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;For more information about this project, to ask questions and provide feedback, follow &lt;a href=&quot;https://github.com/wagtail/guide/discussions/116&quot;&gt;discussion #116 Outreachy: Improve user guide documentation for Wagtail&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;stimulus-for-interactive-widgets-in-wagtail&quot;&gt;Stimulus for interactive widgets in Wagtail&lt;/h3&gt;
+
+&lt;p&gt;Following the leadership of our contributor LB, our UI team has been carefully considering how to bring Wagtail’s JavaScript interactivity to modern standards. This project is the natural follow-up to LB’s excellent &lt;a href=&quot;https://github.com/wagtail/rfcs/pull/78&quot;&gt;RFC #78 for us to adopt Stimulus&lt;/a&gt;: rolling it out across large swaths of the user interface.&lt;/p&gt;
+
+&lt;p&gt;The RFC is still going through the last stages of validation, so is the best way to follow up or comment on this project!&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-participate&quot;&gt;How to participate&lt;/h2&gt;
+
+&lt;p&gt;For aspiring newcomers already accepted in the December 2022 Outreachy cohort, head over to our &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Outreachy-2022&quot;&gt;Outreachy 2022 wiki page&lt;/a&gt; for more information about Wagtail, good resources, and a list of initial tasks.&lt;/p&gt;
+
+&lt;p&gt;For everyone else, we’d love to hear your thoughts on the project ideas, and are also actively looking for additional support so we can confidently take on all three projects. Join us in #outreachy on &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Slack&quot;&gt;Wagtail’s Slack workspace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-next&quot;&gt;What’s next&lt;/h2&gt;
+
+&lt;p&gt;We hope to hear from a lot of newcomers through the &lt;a href=&quot;https://www.outreachy.org/docs/community/#current-timeline&quot;&gt;initial contribution period&lt;/a&gt;, where candidates get to know different communities and apply to projects. We’ll make sure to share more information about projects that are going ahead and their respective contributors once details are confirmed, towards the end of November.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">For the first time, Wagtail is joining Outreachy’s open source internships program</summary></entry><entry><title type="html">Google Summer of Code 2022 for Wagtail</title><link href="https://thib.me/google-summer-of-code-2022-for-wagtail" rel="alternate" type="text/html" title="Google Summer of Code 2022 for Wagtail" /><published>2022-07-14T18:50:00+00:00</published><updated>2022-07-14T18:50:00+00:00</updated><id>https://thib.me/google-summer-of-code-2022-for-wagtail</id><content type="html" xml:base="https://thib.me/google-summer-of-code-2022-for-wagtail">&lt;p&gt;This year, Wagtail gets to take part in Google Summer of Code independently!&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;We are participating with three projects:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/8193&quot;&gt;Contrast Themes by Anuja Raj Verma&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/7824&quot;&gt;Editor’s Guide - A standalone project by Hitansh Shah&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/8156&quot;&gt;Toolkit for StreamField data migrations in Wagtail by Sandil Ranasinghe&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And we have a fourth project independently sponsored by Torchbox: &lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/8158&quot;&gt;UX Unification by Paarth Agarwal&lt;/a&gt;.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">This year, Wagtail gets to take part in Google Summer of Code independently!</summary></entry><entry><title type="html">MiXiT 2022: The 97.4% North Star</title><link href="https://thib.me/the-97-4-percent-north-star" rel="alternate" type="text/html" title="MiXiT 2022: The 97.4% North Star" /><published>2022-05-25T08:50:00+00:00</published><updated>2022-05-25T08:50:00+00:00</updated><id>https://thib.me/the-97-4-percent-north-star</id><content type="html" xml:base="https://thib.me/the-97-4-percent-north-star">&lt;p&gt;Slides for my &lt;a href=&quot;https://mixitconf.org/fr/2022/the-97-4-north-star&quot;&gt;MiXiT 2022 talk&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
 &lt;iframe src=&quot;https://player.vimeo.com/video/726166919?h=c0d26f9453&amp;amp;title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;https://vimeo.com/726166919&quot;&gt;
 
-- [Google Slides: The 97.4% North Star - Thibaud Colas - MiXiT 2022](https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing)
-- [PDF export (4MB): The 97.4% North Star - Thibaud Colas - MiXiT 2022](https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing)
-- [Plain-text export: The 97.4% North Star - Thibaud Colas - MiXiT 2022](https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing)
-&lt;/a&gt;&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Slides for my MiXiT 2022 talk.</summary></entry><entry><title type="html">The State of Wagtail - Wagtail Space US 2022</title><link href="https://thib.me/state-of-wagtail-wagtail-space-us-2022" rel="alternate" type="text/html" title="The State of Wagtail - Wagtail Space US 2022" /><published>2022-03-24T16:20:00+00:00</published><updated>2022-03-24T16:20:00+00:00</updated><id>https://thib.me/state-of-wagtail-wagtail-space-us-2022</id><content type="html" xml:base="https://thib.me/state-of-wagtail-wagtail-space-us-2022">&lt;p&gt;Here are the slides and my notes for my &lt;a href=&quot;https://us.wagtail.space/&quot;&gt;Wagtail Space US 2022&lt;/a&gt; talk &lt;a href=&quot;https://youtu.be/tttOiW_bSYM&quot;&gt;State of Wagtail&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing&quot;&gt;Google Slides; The 97.4% North Star - Thibaud Colas - MiXiT 2022&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing&quot;&gt;PDF export (4MB); The 97.4% North Star - Thibaud Colas - MiXiT 2022&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing&quot;&gt;Plain-text export; The 97.4% North Star - Thibaud Colas - MiXiT 2022&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Slides for my MiXiT 2022 talk.</summary></entry><entry><title type="html">The State of Wagtail - Wagtail Space US 2022</title><link href="https://thib.me/state-of-wagtail-wagtail-space-us-2022" rel="alternate" type="text/html" title="The State of Wagtail - Wagtail Space US 2022" /><published>2022-03-24T16:20:00+00:00</published><updated>2022-03-24T16:20:00+00:00</updated><id>https://thib.me/state-of-wagtail-wagtail-space-us-2022</id><content type="html" xml:base="https://thib.me/state-of-wagtail-wagtail-space-us-2022">&lt;p&gt;Here are the slides and my notes for my &lt;a href=&quot;https://us.wagtail.space/&quot;&gt;Wagtail Space US 2022&lt;/a&gt; talk &lt;a href=&quot;https://youtu.be/tttOiW_bSYM&quot;&gt;State of Wagtail&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -694,90 +758,4 @@ Or you can use aria-describedby to make the association, like this:
   &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/10718N6sEdx37JqMrBaS4prVOs-kH9ad61lsRTzdNPmI/edit&quot;&gt;Google Slides: DjangoCon US 2021 - Kontrasto: improving accessibility with Python&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1L6UZbN8VdTX_i6yTKghwB-5FalCA05s8/view?usp=sharing&quot;&gt;PDF export&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1cwVsGcikJxG_K0Sy98WY5J6ajZXENoIP/view?usp=sharing&quot;&gt;Plain-text transcript&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Slides for my DjangoCon US 2021 talk on Kontrasto.</summary></entry><entry><title type="html">WCAG 2.2: new accessibility guidelines on the way</title><link href="https://thib.me/wcag-22-accessibility-guidelines" rel="alternate" type="text/html" title="WCAG 2.2: new accessibility guidelines on the way" /><published>2021-08-13T16:52:22+00:00</published><updated>2021-08-13T16:52:22+00:00</updated><id>https://thib.me/wcag-22-accessibility-guidelines</id><content type="html" xml:base="https://thib.me/wcag-22-accessibility-guidelines">&lt;p&gt;In web accessibility testing, WCAG 2.1 is the gold standard. But talk to experts – and they’ll be quick to tell you it’s a very low baseline. WCAG 2.2’s latest draft introduces new criteria, relevant for all websites.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;whats-new-in-wcag-22&quot;&gt;What’s new in WCAG 2.2&lt;/h2&gt;
-
-&lt;p&gt;Plenty of good things – there are 9 new success criteria:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Guideline 2.4 Navigable
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2411-focus-appearance-minimum-aa&quot;&gt;2.4.11 Focus Appearance (Minimum) (AA)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2412-focus-appearance-enhanced-aaa&quot;&gt;2.4.12 Focus Appearance (Enhanced) (AAA)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2413-page-break-navigation-a&quot;&gt;2.4.13 Page Break Navigation (A)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Guideline 2.5 Input Modalities
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#257-dragging-movements-aa&quot;&gt;2.5.7 Dragging Movements (AA)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#258-target-size-minimum-aa&quot;&gt;2.5.8 Target Size (Minimum) (AA)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Guideline 3.2 Predictable
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#326-consistent-help-a&quot;&gt;3.2.6 Consistent Help (A)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#327-visible-controls-aa&quot;&gt;3.2.7 Visible Controls (AA)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Guideline 3.3 Input Assistance
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#337-accessible-authentication-a&quot;&gt;3.3.7 Accessible Authentication (A)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#338-redundant-entry-a&quot;&gt;3.3.8 Redundant Entry (A)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As well as the normative guidelines, all criteria also use &lt;a href=&quot;https://www.w3.org/WAI/people-use-web/user-stories/&quot;&gt;stories of web users&lt;/a&gt; to better convey what problems we are trying to prevent with those guidelines – and what “success” looks like.&lt;/p&gt;
-
-&lt;p&gt;There are a lot of good resources covering the new criteria in much better detail than we ever could – we’d highly recommend taking a look at Alastair Campbell’s talk &lt;a href=&quot;https://www.youtube.com/watch?v=EZlqSwgKuZE&quot;&gt;WCAG 2.2: What’s new and what to do with it&lt;/a&gt; at the Virtua11y conference.&lt;/p&gt;
-
-&lt;h2 id=&quot;applying-wcag-22-to-sites&quot;&gt;Applying WCAG 2.2 to sites&lt;/h2&gt;
-
-&lt;p&gt;There won’t be any legal requirements to follow this new draft version for quite a while. That said, the new guidelines are so good they are well worth implementing and testing for right away.&lt;/p&gt;
-
-&lt;p&gt;WCAG 2.1 is a good baseline, but there are a lot of areas where it falls short and we should aim beyond. To illustrate – here is a color contrast fail, generated with &lt;a href=&quot;https://whocanuse.com/&quot;&gt;Who Can Use&lt;/a&gt;. According to WCAG 2.1 rules, the black text would be higher-contrast over this shade of blue than white text:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/blog/wcag-22-accessibility-guidelines/whocanuse-blue.png&quot; alt=&quot;Comparison of lorem copy in white and black, over a blue background (hex code #2E7CD6). White has a contrast ratio of 4.23:1, non-compliant, black has 4.97:1, passing level AA.&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Comparison of lorem copy in white and black, over a blue background (hex code #2E7CD6). White has a contrast ratio of 4.23:1, non-compliant, black has 4.97:1, passing level AA&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This is due to how basic the contrast calculations are in WCAG 2.1. This specific issue will – hopefully – be addressed in the upcoming &lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/&quot;&gt;WCAG 3.0&lt;/a&gt;. It’s still a very early draft, but is well worth being aware of as well if you’re critically thinking of where else WCAG 2.1 might be falling short.&lt;/p&gt;
-
-&lt;h2 id=&quot;we-can-help&quot;&gt;We can help&lt;/h2&gt;
-
-&lt;p&gt;Torchbox offers standalone &lt;a href=&quot;https://torchbox.com/digital-products/accessibility-testing/&quot;&gt;accessibility consulting services&lt;/a&gt;, with the goal of helping organisations aim beyond compliance. Don’t hesitate to get in touch if you want your site to get ahead of the curve.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">In web accessibility testing, WCAG 2.1 is the gold standard. But talk to experts – and they’ll be quick to tell you it’s a very low baseline. WCAG 2.2’s latest draft introduces new criteria, relevant for all websites.</summary></entry><entry><title type="html">DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania</title><link href="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania" rel="alternate" type="text/html" title="DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania" /><published>2021-06-07T18:21:03+00:00</published><updated>2021-06-07T18:21:03+00:00</updated><id>https://thib.me/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania</id><content type="html" xml:base="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-pycon-lithuania">&lt;p&gt;Here are the results of an accessibility audit I did for the &lt;a href=&quot;https://github.com/PyConLT/pyconlt.github.io/pull/12&quot;&gt;PyCon Lithuania website&lt;/a&gt;, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: &lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&quot;&gt;DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania’s website&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;iframe title=&quot;DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania’s website&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/NH4VWUguxUw&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;I think the most problematic issue was with the animating banner on Safari, which made it completely impossible to navigate the page with a screen reader. Other than this, most issues were relatively minor.&lt;/p&gt;
-
-&lt;p&gt;The main issues I didn’t get to are the ones with buttons / links – the fact having disabled buttons is confusing, and that there are lots of contrast issues with those disabled styles. The focus styles also have poor contrast for the buttons that are focusable.&lt;/p&gt;
-
-&lt;p&gt;My recommended fix for these would be to completely remove any button that’s currently disabled from the page, so there is no confusion.&lt;/p&gt;
-
-&lt;p&gt;Sections:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=0s&quot;&gt;00:00&lt;/a&gt; Intro&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=40s&quot;&gt;00:40&lt;/a&gt; Audit methodology&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=109s&quot;&gt;01:49&lt;/a&gt; HTML5 validation&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=260s&quot;&gt;04:20&lt;/a&gt; Reviewing HTML templates&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=780s&quot;&gt;13:00&lt;/a&gt; Alt text for photos&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1190s&quot;&gt;19:50&lt;/a&gt; Accessibility Insights automated checks&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1290s&quot;&gt;21:30&lt;/a&gt; Checking landmarks&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1380s&quot;&gt;23:00&lt;/a&gt; Color contrast checks&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1515s&quot;&gt;25:15&lt;/a&gt; Checking headings&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1605s&quot;&gt;26:45&lt;/a&gt; Using h123 for the document outline&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1665s&quot;&gt;27:45&lt;/a&gt; Tab stops&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1778s&quot;&gt;29:38&lt;/a&gt; Mobile support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1900s&quot;&gt;31:40&lt;/a&gt; Looping animations&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=1960s&quot;&gt;32:40&lt;/a&gt; Testing with VoiceOver in Safari&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NH4VWUguxUw&amp;amp;t=2160s&quot;&gt;36:00&lt;/a&gt; Performance issues with banner animation&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here are the results of an accessibility audit I did for the PyCon Lithuania website, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: DjangoCon Europe 2021 sprints – Accessibility review of PyCon Lithuania’s website.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Slides for my DjangoCon US 2021 talk on Kontrasto.</summary></entry></feed>
