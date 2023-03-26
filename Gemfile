@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "jekyll", "~> 4.2.0"
+gem "jekyll", "~> 4.3.0"
 
 gem 'pygments.rb', '~> 2.3.0'
 
