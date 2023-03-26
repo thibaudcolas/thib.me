@@ -1,761 +1,761 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-03-25T06:41:05+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Outreachy: welcoming new contributors to open source</title><link href="https://thib.me/outreachy-welcoming-new-contributors-to-open-source" rel="alternate" type="text/html" title="Outreachy: welcoming new contributors to open source" /><published>2022-10-10T18:50:00+00:00</published><updated>2022-10-10T18:50:00+00:00</updated><id>https://thib.me/outreachy-welcoming-new-contributors-to-open-source</id><content type="html" xml:base="https://thib.me/outreachy-welcoming-new-contributors-to-open-source">&lt;p&gt;For the first time, Wagtail is joining Outreachy’s open source internships program&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-03-26T20:21:55+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Outreachy: welcoming new contributors to open source</title><link href="https://thib.me/outreachy-welcoming-new-contributors-to-open-source" rel="alternate" type="text/html" title="Outreachy: welcoming new contributors to open source" /><published>2022-10-10T18:50:00+00:00</published><updated>2022-10-10T18:50:00+00:00</updated><id>https://thib.me/outreachy-welcoming-new-contributors-to-open-source</id><content type="html" xml:base="https://thib.me/outreachy-welcoming-new-contributors-to-open-source"><![CDATA[<p>For the first time, Wagtail is joining Outreachy’s open source internships program</p>
 
-&lt;!-- more --&gt;
+<!-- more -->
 
-&lt;p&gt;&lt;img src=&quot;/images/blog/outreachy-welcoming-new-contributors-to-open-source/outreachy-banner.jpg&quot; alt=&quot;Outreachy - Internships supporting diversity in Free and Open Source Software&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/blog/outreachy-welcoming-new-contributors-to-open-source/outreachy-banner.jpg" alt="Outreachy - Internships supporting diversity in Free and Open Source Software" /></p>
 
-&lt;p&gt;As an experienced open source contributor, onboarding newcomers into the world of open source is amongst the most rewarding tasks. After a successful participation to &lt;a href=&quot;https://wagtail.org/blog/google-summer-of-code-2022-wagtail-midterm/&quot;&gt;this year’s Google Summer of Code&lt;/a&gt;, we’re back at it already with &lt;a href=&quot;https://www.outreachy.org/&quot;&gt;Outreachy&lt;/a&gt;, joining their December 2022 cohort.&lt;/p&gt;
+<p>As an experienced open source contributor, onboarding newcomers into the world of open source is amongst the most rewarding tasks. After a successful participation to <a href="https://wagtail.org/blog/google-summer-of-code-2022-wagtail-midterm/">this year’s Google Summer of Code</a>, we’re back at it already with <a href="https://www.outreachy.org/">Outreachy</a>, joining their December 2022 cohort.</p>
 
-&lt;h2 id=&quot;what-is-outreachy&quot;&gt;What is Outreachy&lt;/h2&gt;
+<h2 id="what-is-outreachy">What is Outreachy</h2>
 
-&lt;p&gt;Outreachy provides &lt;strong&gt;internships in open source and open science.&lt;/strong&gt; The program provides internships to people subject to systemic bias and impacted by under-representation in the technical industry where they are living. Internships are fully remote, over 3 months, with interns receiving a fair stipend to support their work.&lt;/p&gt;
+<p>Outreachy provides <strong>internships in open source and open science.</strong> The program provides internships to people subject to systemic bias and impacted by under-representation in the technical industry where they are living. Internships are fully remote, over 3 months, with interns receiving a fair stipend to support their work.</p>
 
-&lt;p&gt;For Wagtail, this type of program is one of the best ways to work with more diverse contributors. We’re elated to have been selected, and hope we’ll get to work with between one and three new contributors this year.&lt;/p&gt;
+<p>For Wagtail, this type of program is one of the best ways to work with more diverse contributors. We’re elated to have been selected, and hope we’ll get to work with between one and three new contributors this year.</p>
 
-&lt;h2 id=&quot;the-project-ideas&quot;&gt;The project ideas&lt;/h2&gt;
+<h2 id="the-project-ideas">The project ideas</h2>
 
-&lt;p&gt;Compared to Google Summer of Code, Outreachy only allows mentors to propose project ideas, rather than candidates. We’ve earmarked three project ideas.&lt;/p&gt;
+<p>Compared to Google Summer of Code, Outreachy only allows mentors to propose project ideas, rather than candidates. We’ve earmarked three project ideas.</p>
 
-&lt;h3 id=&quot;a-built-in-accessibility-checker-for-wagtail&quot;&gt;A built-in accessibility checker for Wagtail&lt;/h3&gt;
+<h3 id="a-built-in-accessibility-checker-for-wagtail">A built-in accessibility checker for Wagtail</h3>
 
-&lt;p&gt;This project is fundamental to meeting our &lt;a href=&quot;https://wagtail.org/accessibility/&quot;&gt;accessibility commitments&lt;/a&gt;. The primary goal is to integrate an existing accessibility test suite within the CMS in a way that takes advantage of the tool’s capabilities and Wagtail’s UI specificities. We envision this being part of Wagtail’s content previews: as the page content changes, authors see what the published page would look like, and get feedback on accessibility issues.&lt;/p&gt;
+<p>This project is fundamental to meeting our <a href="https://wagtail.org/accessibility/">accessibility commitments</a>. The primary goal is to integrate an existing accessibility test suite within the CMS in a way that takes advantage of the tool’s capabilities and Wagtail’s UI specificities. We envision this being part of Wagtail’s content previews: as the page content changes, authors see what the published page would look like, and get feedback on accessibility issues.</p>
 
-&lt;p&gt;Here is a sneak peak at our first prototype:&lt;/p&gt;
+<p>Here is a sneak peak at our first prototype:</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/blog/outreachy-welcoming-new-contributors-to-open-source/sa11y-prototype.png&quot; alt=&quot;Screenshot of a prototype accessibility checker built into Wagtail&apos;s live preview&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/blog/outreachy-welcoming-new-contributors-to-open-source/sa11y-prototype.png" alt="Screenshot of a prototype accessibility checker built into Wagtail's live preview" /></p>
 
-&lt;p&gt;&lt;em&gt;For more information about this project, to ask questions and provide feedback, follow&lt;/em&gt; &lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/9262&quot;&gt;&lt;em&gt;discussion #9262 Built-in Accessibility Checker&lt;/em&gt;&lt;/a&gt;&lt;em&gt; on GitHub.&lt;/em&gt;&lt;/p&gt;
+<p><em>For more information about this project, to ask questions and provide feedback, follow</em> <a href="https://github.com/wagtail/wagtail/discussions/9262"><em>discussion #9262 Built-in Accessibility Checker</em></a><em> on GitHub.</em></p>
 
-&lt;h3 id=&quot;improving-wagtails-editor-guide&quot;&gt;Improving Wagtail’s editor guide&lt;/h3&gt;
+<h3 id="improving-wagtails-editor-guide">Improving Wagtail’s editor guide</h3>
 
-&lt;p&gt;This project follows through &lt;a href=&quot;https://wagtail.org/blog/google-summer-of-code-wagtail-editor-guide/&quot;&gt;Hitansh Shah’s GSoC project&lt;/a&gt;, where he created a new site for the Editor Guide documentation, with support from the project mentors. The new site looks fabulous:&lt;/p&gt;
+<p>This project follows through <a href="https://wagtail.org/blog/google-summer-of-code-wagtail-editor-guide/">Hitansh Shah’s GSoC project</a>, where he created a new site for the Editor Guide documentation, with support from the project mentors. The new site looks fabulous:</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/blog/outreachy-welcoming-new-contributors-to-open-source/editor-guide.png&quot; alt=&quot;Editor Guide landing page before-after&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/blog/outreachy-welcoming-new-contributors-to-open-source/editor-guide.png" alt="Editor Guide landing page before-after" /></p>
 
-&lt;p&gt;Now the next step is simply to revamp the content! This wasn’t part of Hitansh’s project, and is the perfect follow-up. We’re also very happy to propose a project idea where there is &lt;strong&gt;no need for contributors to know how to code&lt;/strong&gt;.&lt;/p&gt;
+<p>Now the next step is simply to revamp the content! This wasn’t part of Hitansh’s project, and is the perfect follow-up. We’re also very happy to propose a project idea where there is <strong>no need for contributors to know how to code</strong>.</p>
 
-&lt;p&gt;&lt;em&gt;For more information about this project, to ask questions and provide feedback, follow &lt;a href=&quot;https://github.com/wagtail/guide/discussions/116&quot;&gt;discussion #116 Outreachy: Improve user guide documentation for Wagtail&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+<p><em>For more information about this project, to ask questions and provide feedback, follow <a href="https://github.com/wagtail/guide/discussions/116">discussion #116 Outreachy: Improve user guide documentation for Wagtail</a>.</em></p>
 
-&lt;h3 id=&quot;stimulus-for-interactive-widgets-in-wagtail&quot;&gt;Stimulus for interactive widgets in Wagtail&lt;/h3&gt;
+<h3 id="stimulus-for-interactive-widgets-in-wagtail">Stimulus for interactive widgets in Wagtail</h3>
 
-&lt;p&gt;Following the leadership of our contributor LB, our UI team has been carefully considering how to bring Wagtail’s JavaScript interactivity to modern standards. This project is the natural follow-up to LB’s excellent &lt;a href=&quot;https://github.com/wagtail/rfcs/pull/78&quot;&gt;RFC #78 for us to adopt Stimulus&lt;/a&gt;: rolling it out across large swaths of the user interface.&lt;/p&gt;
+<p>Following the leadership of our contributor LB, our UI team has been carefully considering how to bring Wagtail’s JavaScript interactivity to modern standards. This project is the natural follow-up to LB’s excellent <a href="https://github.com/wagtail/rfcs/pull/78">RFC #78 for us to adopt Stimulus</a>: rolling it out across large swaths of the user interface.</p>
 
-&lt;p&gt;The RFC is still going through the last stages of validation, so is the best way to follow up or comment on this project!&lt;/p&gt;
+<p>The RFC is still going through the last stages of validation, so is the best way to follow up or comment on this project!</p>
 
-&lt;h2 id=&quot;how-to-participate&quot;&gt;How to participate&lt;/h2&gt;
+<h2 id="how-to-participate">How to participate</h2>
 
-&lt;p&gt;For aspiring newcomers already accepted in the December 2022 Outreachy cohort, head over to our &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Outreachy-2022&quot;&gt;Outreachy 2022 wiki page&lt;/a&gt; for more information about Wagtail, good resources, and a list of initial tasks.&lt;/p&gt;
+<p>For aspiring newcomers already accepted in the December 2022 Outreachy cohort, head over to our <a href="https://github.com/wagtail/wagtail/wiki/Outreachy-2022">Outreachy 2022 wiki page</a> for more information about Wagtail, good resources, and a list of initial tasks.</p>
 
-&lt;p&gt;For everyone else, we’d love to hear your thoughts on the project ideas, and are also actively looking for additional support so we can confidently take on all three projects. Join us in #outreachy on &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Slack&quot;&gt;Wagtail’s Slack workspace&lt;/a&gt;.&lt;/p&gt;
+<p>For everyone else, we’d love to hear your thoughts on the project ideas, and are also actively looking for additional support so we can confidently take on all three projects. Join us in #outreachy on <a href="https://github.com/wagtail/wagtail/wiki/Slack">Wagtail’s Slack workspace</a>.</p>
 
-&lt;h2 id=&quot;whats-next&quot;&gt;What’s next&lt;/h2&gt;
+<h2 id="whats-next">What’s next</h2>
 
-&lt;p&gt;We hope to hear from a lot of newcomers through the &lt;a href=&quot;https://www.outreachy.org/docs/community/#current-timeline&quot;&gt;initial contribution period&lt;/a&gt;, where candidates get to know different communities and apply to projects. We’ll make sure to share more information about projects that are going ahead and their respective contributors once details are confirmed, towards the end of November.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">For the first time, Wagtail is joining Outreachy’s open source internships program</summary></entry><entry><title type="html">Google Summer of Code 2022 for Wagtail</title><link href="https://thib.me/google-summer-of-code-2022-for-wagtail" rel="alternate" type="text/html" title="Google Summer of Code 2022 for Wagtail" /><published>2022-07-14T18:50:00+00:00</published><updated>2022-07-14T18:50:00+00:00</updated><id>https://thib.me/google-summer-of-code-2022-for-wagtail</id><content type="html" xml:base="https://thib.me/google-summer-of-code-2022-for-wagtail">&lt;p&gt;This year, Wagtail gets to take part in Google Summer of Code independently!&lt;/p&gt;
+<p>We hope to hear from a lot of newcomers through the <a href="https://www.outreachy.org/docs/community/#current-timeline">initial contribution period</a>, where candidates get to know different communities and apply to projects. We’ll make sure to share more information about projects that are going ahead and their respective contributors once details are confirmed, towards the end of November.</p>]]></content><author><name>Thibaud Colas</name></author><category term="Wagtail" /><category term="Outreach" /><category term="Accessibility" /><summary type="html"><![CDATA[For the first time, Wagtail is joining Outreachy’s open source internships program]]></summary></entry><entry><title type="html">Google Summer of Code 2022 for Wagtail</title><link href="https://thib.me/google-summer-of-code-2022-for-wagtail" rel="alternate" type="text/html" title="Google Summer of Code 2022 for Wagtail" /><published>2022-07-14T18:50:00+00:00</published><updated>2022-07-14T18:50:00+00:00</updated><id>https://thib.me/google-summer-of-code-2022-for-wagtail</id><content type="html" xml:base="https://thib.me/google-summer-of-code-2022-for-wagtail"><![CDATA[<p>This year, Wagtail gets to take part in Google Summer of Code independently!</p>
 
-&lt;!-- more --&gt;
+<!-- more -->
 
-&lt;p&gt;We are participating with three projects:&lt;/p&gt;
+<p>We are participating with three projects:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/8193&quot;&gt;Contrast Themes by Anuja Raj Verma&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/7824&quot;&gt;Editor’s Guide - A standalone project by Hitansh Shah&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/8156&quot;&gt;Toolkit for StreamField data migrations in Wagtail by Sandil Ranasinghe&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://github.com/wagtail/wagtail/discussions/8193">Contrast Themes by Anuja Raj Verma</a></li>
+  <li><a href="https://github.com/wagtail/wagtail/discussions/7824">Editor’s Guide - A standalone project by Hitansh Shah</a></li>
+  <li><a href="https://github.com/wagtail/wagtail/discussions/8156">Toolkit for StreamField data migrations in Wagtail by Sandil Ranasinghe</a></li>
+</ul>
 
-&lt;p&gt;And we have a fourth project independently sponsored by Torchbox: &lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/8158&quot;&gt;UX Unification by Paarth Agarwal&lt;/a&gt;.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">This year, Wagtail gets to take part in Google Summer of Code independently!</summary></entry><entry><title type="html">MiXiT 2022: The 97.4% North Star</title><link href="https://thib.me/the-97-4-percent-north-star" rel="alternate" type="text/html" title="MiXiT 2022: The 97.4% North Star" /><published>2022-05-25T08:50:00+00:00</published><updated>2022-05-25T08:50:00+00:00</updated><id>https://thib.me/the-97-4-percent-north-star</id><content type="html" xml:base="https://thib.me/the-97-4-percent-north-star">&lt;p&gt;Slides for my &lt;a href=&quot;https://mixitconf.org/fr/2022/the-97-4-north-star&quot;&gt;MiXiT 2022 talk&lt;/a&gt;.&lt;/p&gt;
+<p>And we have a fourth project independently sponsored by Torchbox: <a href="https://github.com/wagtail/wagtail/discussions/8158">UX Unification by Paarth Agarwal</a>.</p>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Wagtail" /><category term="Community" /><summary type="html"><![CDATA[This year, Wagtail gets to take part in Google Summer of Code independently!]]></summary></entry><entry><title type="html">MiXiT 2022: The 97.4% North Star</title><link href="https://thib.me/the-97-4-percent-north-star" rel="alternate" type="text/html" title="MiXiT 2022: The 97.4% North Star" /><published>2022-05-25T08:50:00+00:00</published><updated>2022-05-25T08:50:00+00:00</updated><id>https://thib.me/the-97-4-percent-north-star</id><content type="html" xml:base="https://thib.me/the-97-4-percent-north-star"><![CDATA[<p>Slides for my <a href="https://mixitconf.org/fr/2022/the-97-4-north-star">MiXiT 2022 talk</a>.</p>
 
-&lt;!-- more --&gt;
+<!-- more -->
 
-&lt;iframe src=&quot;https://player.vimeo.com/video/726166919?h=c0d26f9453&amp;amp;title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+<iframe src="https://player.vimeo.com/video/726166919?h=c0d26f9453&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing&quot;&gt;Google Slides; The 97.4% North Star - Thibaud Colas - MiXiT 2022&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing&quot;&gt;PDF export (4MB); The 97.4% North Star - Thibaud Colas - MiXiT 2022&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing&quot;&gt;Plain-text export; The 97.4% North Star - Thibaud Colas - MiXiT 2022&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Slides for my MiXiT 2022 talk.</summary></entry><entry><title type="html">The State of Wagtail - Wagtail Space US 2022</title><link href="https://thib.me/state-of-wagtail-wagtail-space-us-2022" rel="alternate" type="text/html" title="The State of Wagtail - Wagtail Space US 2022" /><published>2022-03-24T16:20:00+00:00</published><updated>2022-03-24T16:20:00+00:00</updated><id>https://thib.me/state-of-wagtail-wagtail-space-us-2022</id><content type="html" xml:base="https://thib.me/state-of-wagtail-wagtail-space-us-2022">&lt;p&gt;Here are the slides and my notes for my &lt;a href=&quot;https://us.wagtail.space/&quot;&gt;Wagtail Space US 2022&lt;/a&gt; talk &lt;a href=&quot;https://youtu.be/tttOiW_bSYM&quot;&gt;State of Wagtail&lt;/a&gt;.&lt;/p&gt;
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing">Google Slides; The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
+  <li><a href="https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing">PDF export (4MB); The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
+  <li><a href="https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing">Plain-text export; The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
+</ul>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Talks" /><category term="Wagtail" /><summary type="html"><![CDATA[Slides for my MiXiT 2022 talk.]]></summary></entry><entry><title type="html">The State of Wagtail - Wagtail Space US 2022</title><link href="https://thib.me/state-of-wagtail-wagtail-space-us-2022" rel="alternate" type="text/html" title="The State of Wagtail - Wagtail Space US 2022" /><published>2022-03-24T16:20:00+00:00</published><updated>2022-03-24T16:20:00+00:00</updated><id>https://thib.me/state-of-wagtail-wagtail-space-us-2022</id><content type="html" xml:base="https://thib.me/state-of-wagtail-wagtail-space-us-2022"><![CDATA[<p>Here are the slides and my notes for my <a href="https://us.wagtail.space/">Wagtail Space US 2022</a> talk <a href="https://youtu.be/tttOiW_bSYM">State of Wagtail</a>.</p>
 
-&lt;!-- more --&gt;
+<!-- more -->
 
-&lt;p&gt;Slides:&lt;/p&gt;
+<p>Slides:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1XHkr0ijLX9b0YwQIXdshL51-J8cSH07tPm3jPWIk_eA/edit&quot;&gt;Google Slides: State of Wagtail - Wagtail Space US 2022&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1rW_uhz4WuVOnv-KsvuldmLSO-r_DrVfu/view&quot;&gt;PDF: State of Wagtail - Wagtail Space US 2022&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/1XHkr0ijLX9b0YwQIXdshL51-J8cSH07tPm3jPWIk_eA/edit">Google Slides: State of Wagtail - Wagtail Space US 2022</a></li>
+  <li><a href="https://drive.google.com/file/d/1rW_uhz4WuVOnv-KsvuldmLSO-r_DrVfu/view">PDF: State of Wagtail - Wagtail Space US 2022</a></li>
+</ul>
 
-&lt;iframe title=&quot;(my) State of Wagtail – Thibaud Colas, Wagtail Space US 2022&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/tttOiW_bSYM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here are the slides and my notes for my Wagtail Space US 2022 talk State of Wagtail.</summary></entry><entry><title type="html">State of Wagtail’s accessibility</title><link href="https://thib.me/state-of-wagtail-accessibility" rel="alternate" type="text/html" title="State of Wagtail’s accessibility" /><published>2022-02-28T07:42:03+00:00</published><updated>2022-02-28T07:42:03+00:00</updated><id>https://thib.me/state-of-wagtail-accessibility</id><content type="html" xml:base="https://thib.me/state-of-wagtail-accessibility">&lt;p&gt;After &lt;a href=&quot;https://wagtail.org/blog/announcing-wagtail-sub-teams/&quot;&gt;6 months of operations&lt;/a&gt;, we reflect on the progress our &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility&quot;&gt;accessibility team&lt;/a&gt; has made, and go on the lookout for new contributors.&lt;/p&gt;
+<iframe title="(my) State of Wagtail – Thibaud Colas, Wagtail Space US 2022" width="560" height="315" src="https://www.youtube-nocookie.com/embed/tttOiW_bSYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Wagtail" /><category term="Community" /><summary type="html"><![CDATA[Here are the slides and my notes for my Wagtail Space US 2022 talk State of Wagtail.]]></summary></entry><entry><title type="html">State of Wagtail’s accessibility</title><link href="https://thib.me/state-of-wagtail-accessibility" rel="alternate" type="text/html" title="State of Wagtail’s accessibility" /><published>2022-02-28T07:42:03+00:00</published><updated>2022-02-28T07:42:03+00:00</updated><id>https://thib.me/state-of-wagtail-accessibility</id><content type="html" xml:base="https://thib.me/state-of-wagtail-accessibility"><![CDATA[<p>After <a href="https://wagtail.org/blog/announcing-wagtail-sub-teams/">6 months of operations</a>, we reflect on the progress our <a href="https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility">accessibility team</a> has made, and go on the lookout for new contributors.</p>
 
-&lt;!-- more --&gt;
+<!-- more -->
 
-&lt;p&gt;Accessibility has been on Wagtail’s roadmap for quite some time, and we’ve &lt;a href=&quot;https://wagtail.org/blog/accessibility-team-reloaded/&quot;&gt;reflected on our progress&lt;/a&gt; in the past. Now’s a good time for us to do this again, and share our plans for the next few years.&lt;/p&gt;
+<p>Accessibility has been on Wagtail’s roadmap for quite some time, and we’ve <a href="https://wagtail.org/blog/accessibility-team-reloaded/">reflected on our progress</a> in the past. Now’s a good time for us to do this again, and share our plans for the next few years.</p>
 
-&lt;h3 id=&quot;what-we-achieved-in-2021&quot;&gt;What we achieved in 2021&lt;/h3&gt;
+<h3 id="what-we-achieved-in-2021">What we achieved in 2021</h3>
 
-&lt;p&gt;2021 has been a busy year for Wagtail’s &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Accessibility-team&quot;&gt;accessibility team&lt;/a&gt;. With 5 members on board last February, and &lt;a href=&quot;https://github.com/SaptakS&quot;&gt;Saptak Sengupta&lt;/a&gt; joining us in July, we went through a lot of long-awaited changes.&lt;/p&gt;
+<p>2021 has been a busy year for Wagtail’s <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team">accessibility team</a>. With 5 members on board last February, and <a href="https://github.com/SaptakS">Saptak Sengupta</a> joining us in July, we went through a lot of long-awaited changes.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;We now have an &lt;a href=&quot;https://wagtail.org/accessibility/&quot;&gt;official accessibility statement&lt;/a&gt;. This was the first time we publicly stated ATAG 2.0 as a conformance goal.&lt;/li&gt;
-  &lt;li&gt;We also published our &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1l7tnpEyJiC5BWE_JX0XCkknyrjxYA5T2aee5JgPnmi4/edit#gid=1433484179&quot;&gt;(work in progress) accessibility audit&lt;/a&gt;. It’s far from complete, but has already helped us prioritise specific improvements to the CMS.&lt;/li&gt;
-  &lt;li&gt;We made a big push to improve support for Windows high contrast mode as part of &lt;a href=&quot;https://docs.wagtail.org/en/stable/releases/2.15.html#windows-high-contrast-support&quot;&gt;Wagtail 2.15&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;We were also involved with the development of large features, earlier than might have been the case in the past.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>We now have an <a href="https://wagtail.org/accessibility/">official accessibility statement</a>. This was the first time we publicly stated ATAG 2.0 as a conformance goal.</li>
+  <li>We also published our <a href="https://docs.google.com/spreadsheets/d/1l7tnpEyJiC5BWE_JX0XCkknyrjxYA5T2aee5JgPnmi4/edit#gid=1433484179">(work in progress) accessibility audit</a>. It’s far from complete, but has already helped us prioritise specific improvements to the CMS.</li>
+  <li>We made a big push to improve support for Windows high contrast mode as part of <a href="https://docs.wagtail.org/en/stable/releases/2.15.html#windows-high-contrast-support">Wagtail 2.15</a>.</li>
+  <li>We were also involved with the development of large features, earlier than might have been the case in the past.</li>
+</ul>
 
-&lt;h3 id=&quot;windows-high-contrast-mode&quot;&gt;Windows high-contrast mode&lt;/h3&gt;
+<h3 id="windows-high-contrast-mode">Windows high-contrast mode</h3>
 
-&lt;p&gt;This significant effort is worth highlighting for a few reasons:&lt;/p&gt;
+<p>This significant effort is worth highlighting for a few reasons:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;The whole backlog of improvement came from a &lt;a href=&quot;https://trello.com/b/MnlPSvkD/wagtail-high-contrast&quot;&gt;large audit&lt;/a&gt; by &lt;a href=&quot;https://github.com/kbayliss&quot;&gt;Kyle Bayliss&lt;/a&gt;, which allowed us to understand the bigger picture of which practices in our development might be causing issues.&lt;/li&gt;
-  &lt;li&gt;In contrast, we were able to split the fixes &lt;a href=&quot;https://github.com/wagtail/wagtail/issues?q=is%3Aissue+sort%3Aupdated-desc+label%3A%22good+first+issue%22+label%3AAccessibility+is%3Aclosed+High-contrast+mode&quot;&gt;over multiple tickets&lt;/a&gt; to make those potential contributions more accessible to newcomers (in total, 12 people participated in those changes!).&lt;/li&gt;
-  &lt;li&gt;We got a sponsorship from &lt;a href=&quot;https://assistivlabs.com/&quot;&gt;Assistiv Labs&lt;/a&gt; to simplify testing of Wagtail with different assistive technologies. Windows high contrast mode in particular was very hard for us to test until then.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>The whole backlog of improvement came from a <a href="https://trello.com/b/MnlPSvkD/wagtail-high-contrast">large audit</a> by <a href="https://github.com/kbayliss">Kyle Bayliss</a>, which allowed us to understand the bigger picture of which practices in our development might be causing issues.</li>
+  <li>In contrast, we were able to split the fixes <a href="https://github.com/wagtail/wagtail/issues?q=is%3Aissue+sort%3Aupdated-desc+label%3A%22good+first+issue%22+label%3AAccessibility+is%3Aclosed+High-contrast+mode">over multiple tickets</a> to make those potential contributions more accessible to newcomers (in total, 12 people participated in those changes!).</li>
+  <li>We got a sponsorship from <a href="https://assistivlabs.com/">Assistiv Labs</a> to simplify testing of Wagtail with different assistive technologies. Windows high contrast mode in particular was very hard for us to test until then.</li>
+</ul>
 
-&lt;p&gt;There is still a long way to go for us to achieve full support, but we feel better able to deliver this than ever. Here is what Windows high contrast mode looks like in Wagtail currently, tested via Assistiv Labs:&lt;/p&gt;
+<p>There is still a long way to go for us to achieve full support, but we feel better able to deliver this than ever. Here is what Windows high contrast mode looks like in Wagtail currently, tested via Assistiv Labs:</p>
 
-&lt;p&gt;&lt;a href=&quot;/images/blog/state-of-wagtail-accessibility/whcm-wagtail.png&quot;&gt;&lt;img src=&quot;/images/blog/state-of-wagtail-accessibility/whcm-wagtail.png&quot; alt=&quot;Screenshot of Windows high contrast mode in Assistiv Labs, with the main navigation opened over page listings&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<p><a href="/images/blog/state-of-wagtail-accessibility/whcm-wagtail.png"><img src="/images/blog/state-of-wagtail-accessibility/whcm-wagtail.png" alt="Screenshot of Windows high contrast mode in Assistiv Labs, with the main navigation opened over page listings" /></a></p>
 
-&lt;h3 id=&quot;what-we-didnt-achieve&quot;&gt;What we didn’t achieve&lt;/h3&gt;
+<h3 id="what-we-didnt-achieve">What we didn’t achieve</h3>
 
-&lt;ul&gt;
-  &lt;li&gt;We were hoping to have accessibility team &lt;a href=&quot;https://simonwillison.net/2021/Feb/19/office-hours/&quot;&gt;office hours&lt;/a&gt;, and never got round to starting this. If you would be interested, please &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Slack&quot;&gt;let us know on Slack in #accessibility&lt;/a&gt;!&lt;/li&gt;
-  &lt;li&gt;One of the key features we wanted to scope was accessibility testing built into the CMS – we made plans internally, but didn’t draft a formal proposal as we had hoped. More on that soon!&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>We were hoping to have accessibility team <a href="https://simonwillison.net/2021/Feb/19/office-hours/">office hours</a>, and never got round to starting this. If you would be interested, please <a href="https://github.com/wagtail/wagtail/wiki/Slack">let us know on Slack in #accessibility</a>!</li>
+  <li>One of the key features we wanted to scope was accessibility testing built into the CMS – we made plans internally, but didn’t draft a formal proposal as we had hoped. More on that soon!</li>
+</ul>
 
-&lt;h2 id=&quot;the-year-ahead&quot;&gt;The year ahead&lt;/h2&gt;
+<h2 id="the-year-ahead">The year ahead</h2>
 
-&lt;p&gt;The elephant in the room for Wagtail’s accessibility improvements is the &lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/7739&quot;&gt;Page editor 2022&lt;/a&gt; project, which accessibility team members are heavily involved with. This marks a clear transition for us: from frequently fixing issues piecemeal after the fact; to being involved in every feature’s planning, making sure accessibility is considered.&lt;/p&gt;
+<p>The elephant in the room for Wagtail’s accessibility improvements is the <a href="https://github.com/wagtail/wagtail/discussions/7739">Page editor 2022</a> project, which accessibility team members are heavily involved with. This marks a clear transition for us: from frequently fixing issues piecemeal after the fact; to being involved in every feature’s planning, making sure accessibility is considered.</p>
 
-&lt;p&gt;We also get to direct the scope of the project – for example, recommending a wholesale replacement of the current datepicker, rather than a restyling.&lt;/p&gt;
+<p>We also get to direct the scope of the project – for example, recommending a wholesale replacement of the current datepicker, rather than a restyling.</p>
 
-&lt;p&gt;A practical example of our involvement is the production of annotations for UI semantics and behavior, following the &lt;a href=&quot;https://dribbble.com/shots/6269661-Accessibility-Bluelines&quot;&gt;Accessibility Bluelines&lt;/a&gt; methodology:&lt;/p&gt;
+<p>A practical example of our involvement is the production of annotations for UI semantics and behavior, following the <a href="https://dribbble.com/shots/6269661-Accessibility-Bluelines">Accessibility Bluelines</a> methodology:</p>
 
-&lt;p&gt;&lt;a href=&quot;/images/blog/state-of-wagtail-accessibility/accessibility-bluelines.png&quot;&gt;&lt;img src=&quot;/images/blog/state-of-wagtail-accessibility/accessibility-bluelines.png&quot; alt=&quot;Accessibility bluelines example for Wagtail, annotating the sidebar and top of the page editor&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<p><a href="/images/blog/state-of-wagtail-accessibility/accessibility-bluelines.png"><img src="/images/blog/state-of-wagtail-accessibility/accessibility-bluelines.png" alt="Accessibility bluelines example for Wagtail, annotating the sidebar and top of the page editor" /></a></p>
 
-&lt;h3 id=&quot;accessibility-of-the-cms&quot;&gt;Accessibility of the CMS&lt;/h3&gt;
+<h3 id="accessibility-of-the-cms">Accessibility of the CMS</h3>
 
-&lt;p&gt;We are and will be going through a lot of improvements:&lt;/p&gt;
+<p>We are and will be going through a lot of improvements:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Liaising with the Page editor 2022 project, and other features development, so accessibility requirements are included.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/wagtail/wagtail/pull/7751&quot;&gt;Automated accessibility testing&lt;/a&gt; of all pull requests, so ongoing QA isn’t as reliant on manual testing.&lt;/li&gt;
-  &lt;li&gt;Rolling out the most important accessibility-related changes from the page editor project, to the rest of the CMS.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Liaising with the Page editor 2022 project, and other features development, so accessibility requirements are included.</li>
+  <li><a href="https://github.com/wagtail/wagtail/pull/7751">Automated accessibility testing</a> of all pull requests, so ongoing QA isn’t as reliant on manual testing.</li>
+  <li>Rolling out the most important accessibility-related changes from the page editor project, to the rest of the CMS.</li>
+</ul>
 
-&lt;p&gt;We will also keep up with &lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/&quot;&gt;WCAG 2.2&lt;/a&gt;’s publication, and drafts of &lt;a href=&quot;https://w3c.github.io/silver/guidelines/&quot;&gt;WCAG 3.0&lt;/a&gt;.&lt;/p&gt;
+<p>We will also keep up with <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/">WCAG 2.2</a>’s publication, and drafts of <a href="https://w3c.github.io/silver/guidelines/">WCAG 3.0</a>.</p>
 
-&lt;h3 id=&quot;accessibility-of-sites-built-with-wagtail&quot;&gt;Accessibility of sites built with Wagtail&lt;/h3&gt;
+<h3 id="accessibility-of-sites-built-with-wagtail">Accessibility of sites built with Wagtail</h3>
 
-&lt;p&gt;The biggest change here will be the inclusion of built-in accessibility tests, as part of page previews when editing content. This is par for the course of ATAG 2.0 conformance, and we’re also gradually integrating findings from the &lt;a href=&quot;https://accessibilitycluster.com/&quot;&gt;We4Authors Cluster&lt;/a&gt; research project, which details the most important accessibility features in content management systems.&lt;/p&gt;
+<p>The biggest change here will be the inclusion of built-in accessibility tests, as part of page previews when editing content. This is par for the course of ATAG 2.0 conformance, and we’re also gradually integrating findings from the <a href="https://accessibilitycluster.com/">We4Authors Cluster</a> research project, which details the most important accessibility features in content management systems.</p>
 
-&lt;h2 id=&quot;how-you-can-help&quot;&gt;How you can help&lt;/h2&gt;
+<h2 id="how-you-can-help">How you can help</h2>
 
-&lt;p&gt;Two things:&lt;/p&gt;
+<p>Two things:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Regularly &lt;a href=&quot;https://github.com/wagtail/wagtail/discussions/7739&quot;&gt;provide feedback on the Page editor 2022&lt;/a&gt; project, based on your experience with Wagtail and other content management systems.&lt;/li&gt;
-  &lt;li&gt;Consider joining our accessibility team! We are looking for new members for the next 6 months or so, from all backgrounds, all skillsets.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Regularly <a href="https://github.com/wagtail/wagtail/discussions/7739">provide feedback on the Page editor 2022</a> project, based on your experience with Wagtail and other content management systems.</li>
+  <li>Consider joining our accessibility team! We are looking for new members for the next 6 months or so, from all backgrounds, all skillsets.</li>
+</ul>
 
-&lt;p&gt;In both cases, we’re particularly keen to hear from people who:&lt;/p&gt;
+<p>In both cases, we’re particularly keen to hear from people who:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Have personal experience of access and functional needs, or who are regular users of assistive technologies.&lt;/li&gt;
-  &lt;li&gt;Work on UX, design, or content – and can help us understand the needs of our users.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Have personal experience of access and functional needs, or who are regular users of assistive technologies.</li>
+  <li>Work on UX, design, or content – and can help us understand the needs of our users.</li>
+</ul>
 
-&lt;p&gt;To chat to the accessibility team directly, reach out to us &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Slack&quot;&gt;on Slack in #accessibility&lt;/a&gt;.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">After 6 months of operations, we reflect on the progress our accessibility team has made, and go on the lookout for new contributors.</summary></entry><entry><title type="html">Adding Prettier onto an existing project</title><link href="https://thib.me/adding-prettier-existing-project" rel="alternate" type="text/html" title="Adding Prettier onto an existing project" /><published>2022-02-04T21:18:03+00:00</published><updated>2022-02-04T21:18:03+00:00</updated><id>https://thib.me/adding-prettier-existing-project</id><content type="html" xml:base="https://thib.me/adding-prettier-existing-project">&lt;p&gt;&lt;a href=&quot;https://prettier.io/&quot;&gt;Prettier&lt;/a&gt; is good. So good, it’s easy to get used to it, and subsequently want to retrofit it onto existing projects. Here’s a step-by-step guide and example: configuring and documenting Prettier and reformatting existing code, all the while making sure not to break other people’s work.&lt;/p&gt;
+<p>To chat to the accessibility team directly, reach out to us <a href="https://github.com/wagtail/wagtail/wiki/Slack">on Slack in #accessibility</a>.</p>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Wagtail" /><category term="Community" /><summary type="html"><![CDATA[After 6 months of operations, we reflect on the progress our accessibility team has made, and go on the lookout for new contributors.]]></summary></entry><entry><title type="html">Adding Prettier onto an existing project</title><link href="https://thib.me/adding-prettier-existing-project" rel="alternate" type="text/html" title="Adding Prettier onto an existing project" /><published>2022-02-04T21:18:03+00:00</published><updated>2022-02-04T21:18:03+00:00</updated><id>https://thib.me/adding-prettier-existing-project</id><content type="html" xml:base="https://thib.me/adding-prettier-existing-project"><![CDATA[<p><a href="https://prettier.io/">Prettier</a> is good. So good, it’s easy to get used to it, and subsequently want to retrofit it onto existing projects. Here’s a step-by-step guide and example: configuring and documenting Prettier and reformatting existing code, all the while making sure not to break other people’s work.</p>
 
-&lt;!-- more --&gt;
+<!-- more -->
 
-&lt;h2 id=&quot;the-example&quot;&gt;The example&lt;/h2&gt;
+<h2 id="the-example">The example</h2>
 
-&lt;p&gt;All the steps described below are demonstrated publicly in a real-world project: Wagtail, via issue &lt;a href=&quot;https://github.com/wagtail/wagtail/issues/6059&quot;&gt;#6059 Automatic code formatting with Prettier&lt;/a&gt;. The implementation was split into two PRs: &lt;a href=&quot;https://github.com/wagtail/wagtail/pull/7908&quot;&gt;#7908 Add Prettier configuration &amp;amp; documentation&lt;/a&gt;, &lt;a href=&quot;https://github.com/wagtail/wagtail/pull/7912&quot;&gt;#7912 Prettier reformatting&lt;/a&gt;, and finally one extra commit, &lt;a href=&quot;https://github.com/wagtail/wagtail/commit/7eb8730d7372dc6b4752308a7e3354b36810f32e&quot;&gt;7eb8730d7372dc6b4752308a7e3354b36810f32e&lt;/a&gt;.&lt;/p&gt;
+<p>All the steps described below are demonstrated publicly in a real-world project: Wagtail, via issue <a href="https://github.com/wagtail/wagtail/issues/6059">#6059 Automatic code formatting with Prettier</a>. The implementation was split into two PRs: <a href="https://github.com/wagtail/wagtail/pull/7908">#7908 Add Prettier configuration &amp; documentation</a>, <a href="https://github.com/wagtail/wagtail/pull/7912">#7912 Prettier reformatting</a>, and finally one extra commit, <a href="https://github.com/wagtail/wagtail/commit/7eb8730d7372dc6b4752308a7e3354b36810f32e">7eb8730d7372dc6b4752308a7e3354b36810f32e</a>.</p>
 
-&lt;p&gt;Finally, here are &lt;a href=&quot;https://github.com/wagtail/wagtail/issues/6059#issuecomment-1029941428&quot;&gt;instructions on resolving conflicts&lt;/a&gt; that weren’t directly stored in the repository (as this is a one-off task).&lt;/p&gt;
+<p>Finally, here are <a href="https://github.com/wagtail/wagtail/issues/6059#issuecomment-1029941428">instructions on resolving conflicts</a> that weren’t directly stored in the repository (as this is a one-off task).</p>
 
-&lt;h2 id=&quot;why-two-prs-and-a-commit&quot;&gt;Why two PRs and a commit&lt;/h2&gt;
+<h2 id="why-two-prs-and-a-commit">Why two PRs and a commit</h2>
 
-&lt;p&gt;I recommend always splitting the addition of any formatting tool into at least two PRs and the extra commit:&lt;/p&gt;
+<p>I recommend always splitting the addition of any formatting tool into at least two PRs and the extra commit:</p>
 
-&lt;ol&gt;
-  &lt;li&gt;The first PR takes care of anything that requires careful review – configuration, integrations, documentation.&lt;/li&gt;
-  &lt;li&gt;The second PR takes care of the actual reformatting.&lt;/li&gt;
-  &lt;li&gt;Finally, the final commit is just there to finish setting up the &lt;a href=&quot;https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git-blame-ignore-revs&lt;/code&gt; file for git’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ignoreRevsFile&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>The first PR takes care of anything that requires careful review – configuration, integrations, documentation.</li>
+  <li>The second PR takes care of the actual reformatting.</li>
+  <li>Finally, the final commit is just there to finish setting up the <a href="https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt"><code class="language-plaintext highlighter-rouge">.git-blame-ignore-revs</code> file for git’s <code class="language-plaintext highlighter-rouge">ignoreRevsFile</code></a>.</li>
+</ol>
 
-&lt;h2 id=&quot;configuration&quot;&gt;Configuration&lt;/h2&gt;
+<h2 id="configuration">Configuration</h2>
 
-&lt;p&gt;This is actually the simplest step.&lt;/p&gt;
+<p>This is actually the simplest step.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Update the project’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.editorconfig&lt;/code&gt; first, as Prettier reads it (&lt;a href=&quot;https://github.com/thibaudcolas/cookbook/blob/main/.editorconfig&quot;&gt;here’s an example&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prettier.config.js&lt;/code&gt; with any desired options.&lt;/li&gt;
-  &lt;li&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.prettierignore&lt;/code&gt;. I’d recommend to add large folders in here to speed up Prettier looking for files when using very broad glob patterns.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Update the project’s <code class="language-plaintext highlighter-rouge">.editorconfig</code> first, as Prettier reads it (<a href="https://github.com/thibaudcolas/cookbook/blob/main/.editorconfig">here’s an example</a>).</li>
+  <li>Create a <code class="language-plaintext highlighter-rouge">prettier.config.js</code> with any desired options.</li>
+  <li>Create a <code class="language-plaintext highlighter-rouge">.prettierignore</code>. I’d recommend to add large folders in here to speed up Prettier looking for files when using very broad glob patterns.</li>
+</ul>
 
-&lt;p&gt;Personally I’ll always prefer to set all configuration options, even when using defaults. This saves having to remember what options are available that might not be set on the particular project when re-reviewing the configuration. I also always prefer using JavaScript for configuration – syntax highlighting and auto-formatting are dependable.&lt;/p&gt;
+<p>Personally I’ll always prefer to set all configuration options, even when using defaults. This saves having to remember what options are available that might not be set on the particular project when re-reviewing the configuration. I also always prefer using JavaScript for configuration – syntax highlighting and auto-formatting are dependable.</p>
 
-&lt;h3 id=&quot;which-languages-should-i-use-prettier-for&quot;&gt;Which languages should I use Prettier for?&lt;/h3&gt;
+<h3 id="which-languages-should-i-use-prettier-for">Which languages should I use Prettier for?</h3>
 
-&lt;p&gt;I’d recommend all languages that Prettier supports, potentially with the exception of Markdown. Although the reformatting is excellent, enforcing a single format for documentation often feels cumbersome – particularly if the project’s documentation might often be updated by contributors with little knowledge of the project’s tooling.&lt;/p&gt;
+<p>I’d recommend all languages that Prettier supports, potentially with the exception of Markdown. Although the reformatting is excellent, enforcing a single format for documentation often feels cumbersome – particularly if the project’s documentation might often be updated by contributors with little knowledge of the project’s tooling.</p>
 
-&lt;p&gt;If a supported language isn’t used, make sure to add its extension to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.prettierignore&lt;/code&gt; so the files are consistently skipped. Here’s an example:&lt;/p&gt;
+<p>If a supported language isn’t used, make sure to add its extension to the <code class="language-plaintext highlighter-rouge">.prettierignore</code> so the files are consistently skipped. Here’s an example:</p>
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Irrelevant files ignored for performance reasons.&lt;/span&gt;
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Irrelevant files ignored for performance reasons.</span>
 node_modules
 public/
 coverage/
 vendor/
 static
 _build
-&lt;span class=&quot;c&quot;&gt;# File types which Prettier supports but we don’t want auto-formatting.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.md
-&lt;span class=&quot;c&quot;&gt;# Files which contain incompatible syntax.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.html
+<span class="c"># File types which Prettier supports but we don’t want auto-formatting.</span>
+<span class="k">*</span>.md
+<span class="c"># Files which contain incompatible syntax.</span>
+<span class="k">*</span>.html
 wagtail/admin/templates/wagtailadmin/edit_handlers/inline_panel.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h2 id=&quot;integrations&quot;&gt;Integrations&lt;/h2&gt;
+<h2 id="integrations">Integrations</h2>
 
-&lt;p&gt;I’ll always start with the same two commands:&lt;/p&gt;
+<p>I’ll always start with the same two commands:</p>
 
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;format&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prettier --write &apos;**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml}&apos;&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;lint:format&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prettier --check &apos;**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml}&apos;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prettier --write '**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml}'"</span><span class="err">,</span><span class="w">
+  </span><span class="nl">"lint:format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prettier --check '**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml}'"</span><span class="w">
+</span></code></pre></div></div>
 
-&lt;p&gt;The glob pattern might seem complicated – it’s wrapped in single quotes to prevent shell globbing (thus making it consistent cross-platform). It uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;**/?(.)*&lt;/code&gt; so files are checked at all directory levels in the current folder, and regardless of whether file names start with a dot or not.&lt;/p&gt;
+<p>The glob pattern might seem complicated – it’s wrapped in single quotes to prevent shell globbing (thus making it consistent cross-platform). It uses <code class="language-plaintext highlighter-rouge">**/?(.)*</code> so files are checked at all directory levels in the current folder, and regardless of whether file names start with a dot or not.</p>
 
-&lt;p&gt;As to where those commands should run – generally in continuous integration, potentially in Git pre-commit hooks.&lt;/p&gt;
+<p>As to where those commands should run – generally in continuous integration, potentially in Git pre-commit hooks.</p>
 
-&lt;h3 id=&quot;pre-commit&quot;&gt;pre-commit&lt;/h3&gt;
+<h3 id="pre-commit">pre-commit</h3>
 
-&lt;p&gt;With the confusingly-named &lt;a href=&quot;https://pre-commit.com/&quot;&gt;pre-commit framework&lt;/a&gt;, it looks like:&lt;/p&gt;
+<p>With the confusingly-named <a href="https://pre-commit.com/">pre-commit framework</a>, it looks like:</p>
 
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://github.com/pre-commit/mirrors-prettier&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;rev&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;v2.5.1&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;hooks&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;prettier&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;types_or&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;scss&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;javascript&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tsx&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;yaml&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">repo</span><span class="pi">:</span> <span class="s">https://github.com/pre-commit/mirrors-prettier</span>
+  <span class="na">rev</span><span class="pi">:</span> <span class="s">v2.5.1</span>
+  <span class="na">hooks</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">prettier</span>
+      <span class="na">types_or</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">css</span><span class="pi">,</span> <span class="nv">scss</span><span class="pi">,</span> <span class="nv">javascript</span><span class="pi">,</span> <span class="nv">ts</span><span class="pi">,</span> <span class="nv">tsx</span><span class="pi">,</span> <span class="nv">json</span><span class="pi">,</span> <span class="nv">yaml</span><span class="pi">]</span>
+</code></pre></div></div>
 
-&lt;p&gt;Note &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;types_or&lt;/code&gt; aren’t always file extensions, they’re &lt;a href=&quot;https://github.com/pre-commit/identify/blob/master/identify/extensions.py&quot;&gt;arbitrary identifiers&lt;/a&gt; for some languages.&lt;/p&gt;
+<p>Note <code class="language-plaintext highlighter-rouge">types_or</code> aren’t always file extensions, they’re <a href="https://github.com/pre-commit/identify/blob/master/identify/extensions.py">arbitrary identifiers</a> for some languages.</p>
 
-&lt;p&gt;Here’s what I personally prefer – just bash:&lt;/p&gt;
+<p>Here’s what I personally prefer – just bash:</p>
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env bash&lt;/span&gt;
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
 
-&lt;span class=&quot;c&quot;&gt;# Fail on first line that fails.&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;
+<span class="c"># Fail on first line that fails.</span>
+<span class="nb">set</span> <span class="nt">-e</span>
 
-&lt;span class=&quot;c&quot;&gt;# Only keep staged files that are added (A), copied (C) or modified (M).&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;STAGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;git &lt;span class=&quot;nt&quot;&gt;--no-pager&lt;/span&gt; diff &lt;span class=&quot;nt&quot;&gt;--name-only&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--cached&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--diff-filter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ACM&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Files which are only partly staged (eg. git add --patch).&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;PATCH_STAGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;git &lt;span class=&quot;nt&quot;&gt;--no-pager&lt;/span&gt; diff &lt;span class=&quot;nt&quot;&gt;--name-only&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--diff-filter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ACM &lt;span class=&quot;nv&quot;&gt;$STAGED&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Files which are fully staged.&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;FULLY_STAGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;comm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-23&lt;/span&gt; &amp;lt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &amp;lt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATCH_STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+<span class="c"># Only keep staged files that are added (A), copied (C) or modified (M).</span>
+<span class="nv">STAGED</span><span class="o">=</span><span class="si">$(</span>git <span class="nt">--no-pager</span> diff <span class="nt">--name-only</span> <span class="nt">--cached</span> <span class="nt">--diff-filter</span><span class="o">=</span>ACM<span class="si">)</span>
+<span class="c"># Files which are only partly staged (eg. git add --patch).</span>
+<span class="nv">PATCH_STAGED</span><span class="o">=</span><span class="si">$(</span>git <span class="nt">--no-pager</span> diff <span class="nt">--name-only</span> <span class="nt">--diff-filter</span><span class="o">=</span>ACM <span class="nv">$STAGED</span><span class="si">)</span>
+<span class="c"># Files which are fully staged.</span>
+<span class="nv">FULLY_STAGED</span><span class="o">=</span><span class="si">$(</span><span class="nb">comm</span> <span class="nt">-23</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$STAGED</span><span class="s2">"</span><span class="o">)</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$PATCH_STAGED</span><span class="s2">"</span><span class="o">)</span><span class="si">)</span>
 
-&lt;span class=&quot;nv&quot;&gt;PRETTIER_STAGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-E&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;.(css|scss|js|ts|tsx|json|yaml|yml)$&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;PRETTIER_FULLY_STAGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-E&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;.(css|scss|js|ts|tsx|json|yaml|yml)$&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$FULLY_STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+<span class="nv">PRETTIER_STAGED</span><span class="o">=</span><span class="si">$(</span><span class="nb">grep</span> <span class="nt">-E</span> <span class="s1">'.(css|scss|js|ts|tsx|json|yaml|yml)$'</span> <span class="o">&lt;&lt;&lt;</span> <span class="s2">"</span><span class="nv">$STAGED</span><span class="s2">"</span> <span class="o">||</span> <span class="nb">true</span><span class="si">)</span>
+<span class="nv">PRETTIER_FULLY_STAGED</span><span class="o">=</span><span class="si">$(</span><span class="nb">grep</span> <span class="nt">-E</span> <span class="s1">'.(css|scss|js|ts|tsx|json|yaml|yml)$'</span> <span class="o">&lt;&lt;&lt;</span> <span class="s2">"</span><span class="nv">$FULLY_STAGED</span><span class="s2">"</span> <span class="o">||</span> <span class="nb">true</span><span class="si">)</span>
 
-&lt;span class=&quot;c&quot;&gt;# Format and re-stage fully staged files only.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PRETTIER_FULLY_STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;then
-  &lt;/span&gt;npx prettier &lt;span class=&quot;nt&quot;&gt;--write&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PRETTIER_FULLY_STAGED&lt;/span&gt;
-  git add &lt;span class=&quot;nv&quot;&gt;$PRETTIER_FULLY_STAGED&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+<span class="c"># Format and re-stage fully staged files only.</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-n</span> <span class="s2">"</span><span class="nv">$PRETTIER_FULLY_STAGED</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span>
+<span class="k">then
+  </span>npx prettier <span class="nt">--write</span> <span class="nv">$PRETTIER_FULLY_STAGED</span>
+  git add <span class="nv">$PRETTIER_FULLY_STAGED</span>
+<span class="k">fi</span>
 
-&lt;span class=&quot;c&quot;&gt;# Lint all staged files.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PRETTIER_STAGED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;then
-  &lt;/span&gt;npx prettier &lt;span class=&quot;nt&quot;&gt;--check&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PRETTIER_STAGED&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="c"># Lint all staged files.</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-n</span> <span class="s2">"</span><span class="nv">$PRETTIER_STAGED</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span>
+<span class="k">then
+  </span>npx prettier <span class="nt">--check</span> <span class="nv">$PRETTIER_STAGED</span>
+<span class="k">fi</span>
+</code></pre></div></div>
 
-&lt;h3 id=&quot;ides&quot;&gt;IDEs&lt;/h3&gt;
+<h3 id="ides">IDEs</h3>
 
-&lt;p&gt;VS Code has excellent Prettier support. Use it. I personally prefer to default to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;editor.formatOnSave&lt;/code&gt; turned on, and only disable it per project that doesn’t have Prettier.&lt;/p&gt;
+<p>VS Code has excellent Prettier support. Use it. I personally prefer to default to <code class="language-plaintext highlighter-rouge">editor.formatOnSave</code> turned on, and only disable it per project that doesn’t have Prettier.</p>
 
-&lt;h3 id=&quot;continuous-integration&quot;&gt;Continuous integration&lt;/h3&gt;
+<h3 id="continuous-integration">Continuous integration</h3>
 
-&lt;p&gt;We want to make sure we run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm run lint:format&lt;/code&gt; on CI. Simple as that. Worth mentioning &lt;a href=&quot;https://pre-commit.ci/&quot;&gt;pre-commit.ci&lt;/a&gt;, compatible with the same pre-commit framework as above, which runs formatting on your behalf and commits the changes to PRs. I personally don’t use it, but it works.&lt;/p&gt;
+<p>We want to make sure we run <code class="language-plaintext highlighter-rouge">npm run lint:format</code> on CI. Simple as that. Worth mentioning <a href="https://pre-commit.ci/">pre-commit.ci</a>, compatible with the same pre-commit framework as above, which runs formatting on your behalf and commits the changes to PRs. I personally don’t use it, but it works.</p>
 
-&lt;p&gt;A common gotcha when setting up Prettier in CI is if your builds are optimised to only run when specific folders are changed – by definition, the Prettier checks will have to run whenever any file supported by Prettier changes.&lt;/p&gt;
+<p>A common gotcha when setting up Prettier in CI is if your builds are optimised to only run when specific folders are changed – by definition, the Prettier checks will have to run whenever any file supported by Prettier changes.</p>
 
-&lt;h2 id=&quot;documentation&quot;&gt;Documentation&lt;/h2&gt;
+<h2 id="documentation">Documentation</h2>
 
-&lt;p&gt;Make sure your contributors are aware Prettier is in use, and that there is a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm run format&lt;/code&gt; command available for cases where Prettier formatting doesn’t get automatically applied in an editor.&lt;/p&gt;
+<p>Make sure your contributors are aware Prettier is in use, and that there is a <code class="language-plaintext highlighter-rouge">npm run format</code> command available for cases where Prettier formatting doesn’t get automatically applied in an editor.</p>
 
-&lt;h2 id=&quot;git-blame-compatibility&quot;&gt;Git blame compatibility&lt;/h2&gt;
+<h2 id="git-blame-compatibility">Git blame compatibility</h2>
 
-&lt;p&gt;GitHub makes it easy to skip a commit in the blame view. For git itself, we can use a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git-blame-ignore-revs&lt;/code&gt; file. &lt;a href=&quot;https://github.com/prettier/prettier/blob/main/.git-blame-ignore-revs&quot;&gt;Prettier itself&lt;/a&gt; has an excellent example, which is self-documenting:&lt;/p&gt;
+<p>GitHub makes it easy to skip a commit in the blame view. For git itself, we can use a <code class="language-plaintext highlighter-rouge">.git-blame-ignore-revs</code> file. <a href="https://github.com/prettier/prettier/blob/main/.git-blame-ignore-revs">Prettier itself</a> has an excellent example, which is self-documenting:</p>
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# git-blame ignored revisions&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# To configure, run&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#   git config blame.ignoreRevsFile .git-blame-ignore-revs&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Requires Git &amp;gt; 2.23&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# See https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt&lt;/span&gt;
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># git-blame ignored revisions</span>
+<span class="c"># To configure, run</span>
+<span class="c">#   git config blame.ignoreRevsFile .git-blame-ignore-revs</span>
+<span class="c"># Requires Git &gt; 2.23</span>
+<span class="c"># See https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt</span>
 
-&lt;span class=&quot;c&quot;&gt;# Prettier bump after release&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 2.5.1&lt;/span&gt;
+<span class="c"># Prettier bump after release</span>
+<span class="c"># 2.5.1</span>
 4683a6284d53b913f129694a5be666fc55b06982
-&lt;span class=&quot;c&quot;&gt;# 2.5.0&lt;/span&gt;
+<span class="c"># 2.5.0</span>
 846dbdd7e8c9deb315b3e663b3103c559e798a89
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;…]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="o">[</span>…]
+</code></pre></div></div>
 
-&lt;h2 id=&quot;the-initial-reformatting&quot;&gt;The initial reformatting&lt;/h2&gt;
+<h2 id="the-initial-reformatting">The initial reformatting</h2>
 
-&lt;p&gt;All of the above steps should be done in the first PR, so they can easily be code reviewed. In the second PR, we can make the actual formatting changes. Run your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm run format&lt;/code&gt; now, and commit the results.&lt;/p&gt;
+<p>All of the above steps should be done in the first PR, so they can easily be code reviewed. In the second PR, we can make the actual formatting changes. Run your <code class="language-plaintext highlighter-rouge">npm run format</code> now, and commit the results.</p>
 
-&lt;p&gt;If your auto-formatting creates a lot of changes and you’ll want to review them manually – you could consider starting from a Prettier configuration that does fewer changes, commit the formatting, and add more changes gradually. This makes it easier to review different formatting changes overall.&lt;/p&gt;
+<p>If your auto-formatting creates a lot of changes and you’ll want to review them manually – you could consider starting from a Prettier configuration that does fewer changes, commit the formatting, and add more changes gradually. This makes it easier to review different formatting changes overall.</p>
 
-&lt;h3 id=&quot;manual-issues-to-fix&quot;&gt;Manual issues to fix&lt;/h3&gt;
+<h3 id="manual-issues-to-fix">Manual issues to fix</h3>
 
-&lt;p&gt;If your project uses per-line linting disable comments, make sure the comments still target the correct lines after the reformatting. ESLint has an excellent &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--report-unused-disable-directives&lt;/code&gt; which helps a lot. Here’s an example where this happened:&lt;/p&gt;
+<p>If your project uses per-line linting disable comments, make sure the comments still target the correct lines after the reformatting. ESLint has an excellent <code class="language-plaintext highlighter-rouge">--report-unused-disable-directives</code> which helps a lot. Here’s an example where this happened:</p>
 
-&lt;div class=&quot;language-diff highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gd&quot;&gt;-  // eslint-disable-next-line func-names
-&lt;/span&gt;  $(
-    &apos;#new a.task-type-choice, #new a.choose-different-task-type&apos;,
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">-  // eslint-disable-next-line func-names
+</span>  $(
+    '#new a.task-type-choice, #new a.choose-different-task-type',
     modal.body,
-&lt;span class=&quot;gd&quot;&gt;-  ).on(&apos;click&apos;, function () {
-&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+  ).on(&apos;click&apos;, function onClickNew() {
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="gd">-  ).on('click', function () {
+</span><span class="gi">+  ).on('click', function onClickNew() {
+</span></code></pre></div></div>
 
-&lt;p&gt;There can be other compatibility issues with other static analysis tools, although that’s very rare. For example, I had to disable Prettier for a line where a Stylelint plugin wasn’t producing the expected output anymore – I’d suspect it’s the plugin’s analysis that’s causing the actual issue:&lt;/p&gt;
+<p>There can be other compatibility issues with other static analysis tools, although that’s very rare. For example, I had to disable Prettier for a line where a Stylelint plugin wasn’t producing the expected output anymore – I’d suspect it’s the plugin’s analysis that’s causing the actual issue:</p>
 
-&lt;div class=&quot;language-diff highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gd&quot;&gt;-  --#{$name}: hsl(
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">-  --#{$name}: hsl(
 -    #{var(--#{$name}-hue),
 -    var(--#{$name}-saturation),
 -    var(--#{$name}-lightness)}
 -  );
-&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+  // Prettier causes a linting issue when reformatting this.
+</span><span class="gi">+  // Prettier causes a linting issue when reformatting this.
 +  /* prettier-ignore */
 +  --#{$name}: hsl(#{ var(--#{$name}-hue), var(--#{$name}-saturation), var(--#{$name}-lightness) });
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</span></code></pre></div></div>
 
-&lt;p&gt;I’ve never encountered a case where Prettier changed the semantics of the code at runtime, except perhaps for &lt;a href=&quot;https://prettier.io/docs/en/options.html#trailing-commas&quot;&gt;trailing commas in function parameters&lt;/a&gt;, which should be watched out for on projects that support legacy browsers.&lt;/p&gt;
+<p>I’ve never encountered a case where Prettier changed the semantics of the code at runtime, except perhaps for <a href="https://prettier.io/docs/en/options.html#trailing-commas">trailing commas in function parameters</a>, which should be watched out for on projects that support legacy browsers.</p>
 
-&lt;h2 id=&quot;after-the-reformatting&quot;&gt;After the reformatting&lt;/h2&gt;
+<h2 id="after-the-reformatting">After the reformatting</h2>
 
-&lt;p&gt;Merge it all, making sure CI is linting for Prettier formatting, and passes. Then edit your project’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git-blame-ignore-revs&lt;/code&gt; with the correct reformatting commit, and that’s it.&lt;/p&gt;
+<p>Merge it all, making sure CI is linting for Prettier formatting, and passes. Then edit your project’s <code class="language-plaintext highlighter-rouge">.git-blame-ignore-revs</code> with the correct reformatting commit, and that’s it.</p>
 
-&lt;p&gt;For projects with other contributors – make sure to let them know there will be conflicts, and how to resolve them. Here are instructions I made for Wagtail:&lt;/p&gt;
+<p>For projects with other contributors – make sure to let them know there will be conflicts, and how to resolve them. Here are instructions I made for Wagtail:</p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;h2 id=&quot;instructions-to-rebase-in-progress-prs&quot;&gt;Instructions to rebase in-progress PRs&lt;/h2&gt;
+<h2 id="instructions-to-rebase-in-progress-prs">Instructions to rebase in-progress PRs</h2>
 
-&lt;p&gt;Here are the high-level steps:&lt;/p&gt;
+<p>Here are the high-level steps:</p>
 
-&lt;ol&gt;
-  &lt;li&gt;Rebase onto the commit before the reformatting (11ccf30f0044a326abef2a5c5568f373ffe46188, or can also be defined as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;af942a27e41b47e257b6cd46c01a13cd381fed04^1&lt;/code&gt;, note the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;^1&lt;/code&gt; suffix), with your usual rebasing methodology.&lt;/li&gt;
-  &lt;li&gt;Rebase onto the reformatting commit (af942a27e41b47e257b6cd46c01a13cd381fed04 / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;af942a27e41b47e257b6cd46c01a13cd381fed04&lt;/code&gt;), always favouring your branch’s changes, and auto-applying Prettier reformatting.&lt;/li&gt;
-  &lt;li&gt;Rebase onto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; with your usual rebasing methodology.&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>Rebase onto the commit before the reformatting (11ccf30f0044a326abef2a5c5568f373ffe46188, or can also be defined as <code class="language-plaintext highlighter-rouge">af942a27e41b47e257b6cd46c01a13cd381fed04^1</code>, note the <code class="language-plaintext highlighter-rouge">^1</code> suffix), with your usual rebasing methodology.</li>
+  <li>Rebase onto the reformatting commit (af942a27e41b47e257b6cd46c01a13cd381fed04 / <code class="language-plaintext highlighter-rouge">af942a27e41b47e257b6cd46c01a13cd381fed04</code>), always favouring your branch’s changes, and auto-applying Prettier reformatting.</li>
+  <li>Rebase onto <code class="language-plaintext highlighter-rouge">main</code> with your usual rebasing methodology.</li>
+</ol>
 
-&lt;p&gt;Here are step-by-step commands, tested on macOS with zsh:&lt;/p&gt;
+<p>Here are step-by-step commands, tested on macOS with zsh:</p>
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Make a copy of your branch&lt;/span&gt;
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Make a copy of your branch</span>
 git branch save/my-existing-branch my-existing-branch
-&lt;span class=&quot;c&quot;&gt;# Make sure you have the latest `main` from Wagtail&lt;/span&gt;
+<span class="c"># Make sure you have the latest `main` from Wagtail</span>
 git remote add upstream git@github.com:wagtail/wagtail.git
 git checkout main
 git pull upstream main
-&lt;span class=&quot;c&quot;&gt;# Rebase onto the commit preceding the reformatting to resolve conflicts that would have been present anyway.&lt;/span&gt;
+<span class="c"># Rebase onto the commit preceding the reformatting to resolve conflicts that would have been present anyway.</span>
 git checkout my-existing-branch
 git rebase af942a27e41b47e257b6cd46c01a13cd381fed04^1
-&lt;span class=&quot;c&quot;&gt;# Install Prettier and other Wagtail development dependencies&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Make sure you use Node v16 and npm v8&lt;/span&gt;
-node &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
-npm &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
-npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Test-run Prettier – this should show formatting errors.&lt;/span&gt;
+<span class="c"># Install Prettier and other Wagtail development dependencies</span>
+<span class="c"># Make sure you use Node v16 and npm v8</span>
+node <span class="nt">--version</span>
+npm <span class="nt">--version</span>
+npm <span class="nb">install</span>
+<span class="c"># Test-run Prettier – this should show formatting errors.</span>
 npm run lint:format
-&lt;span class=&quot;c&quot;&gt;# Rebase again, this time with the reformatting as the base,&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# always preserving your changes in case of conflicts, and automatically reformatting with Prettier.&lt;/span&gt;
-git rebase &lt;span class=&quot;nt&quot;&gt;--strategy-option&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;theirs &lt;span class=&quot;nt&quot;&gt;--exec&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;(npm run format || true) &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit --amend --no-edit --no-verify&apos;&lt;/span&gt; af942a27e41b47e257b6cd46c01a13cd381fed04
-&lt;span class=&quot;c&quot;&gt;# Test-run Prettier – this should show no formatting errors.&lt;/span&gt;
+<span class="c"># Rebase again, this time with the reformatting as the base,</span>
+<span class="c"># always preserving your changes in case of conflicts, and automatically reformatting with Prettier.</span>
+git rebase <span class="nt">--strategy-option</span><span class="o">=</span>theirs <span class="nt">--exec</span> <span class="s1">'(npm run format || true) &amp;&amp; git add . &amp;&amp; git commit --amend --no-edit --no-verify'</span> af942a27e41b47e257b6cd46c01a13cd381fed04
+<span class="c"># Test-run Prettier – this should show no formatting errors.</span>
 npm run lint:format
-&lt;span class=&quot;c&quot;&gt;# Finally rebase onto the latest version from Wagtail main, as per usual.&lt;/span&gt;
+<span class="c"># Finally rebase onto the latest version from Wagtail main, as per usual.</span>
 git rebase main
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;That’s it! There’s a small chance (see below) there may be conflicts with our linters, requiring further manual intervention. Run a final &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm run lint&lt;/code&gt; if you want to be sure.&lt;/p&gt;
+<p>That’s it! There’s a small chance (see below) there may be conflicts with our linters, requiring further manual intervention. Run a final <code class="language-plaintext highlighter-rouge">npm run lint</code> if you want to be sure.</p>
 
-&lt;p&gt;There are a few things worth noting:&lt;/p&gt;
+<p>There are a few things worth noting:</p>
 
-&lt;h3 id=&quot;its-a-bit-slow&quot;&gt;It’s a bit slow&lt;/h3&gt;
+<h3 id="its-a-bit-slow">It’s a bit slow</h3>
 
-&lt;p&gt;This will reformat the whole project for every commit to be rebased, so it’s slow for PRs with lots of commits. It’d have been possible for us to only reformat the files changed by a given commit, but I was having trouble doing this in a cross-shell-compatible way.&lt;/p&gt;
+<p>This will reformat the whole project for every commit to be rebased, so it’s slow for PRs with lots of commits. It’d have been possible for us to only reformat the files changed by a given commit, but I was having trouble doing this in a cross-shell-compatible way.</p>
 
-&lt;h3 id=&quot;cases-where-manual-changes-will-be-needed&quot;&gt;Cases where manual changes will be needed&lt;/h3&gt;
+<h3 id="cases-where-manual-changes-will-be-needed">Cases where manual changes will be needed</h3>
 
-&lt;p&gt;Once this is applied, there is still a risk there’ll be code that clashes with Prettier reformatting, which will need manual intervention. See for example &lt;a href=&quot;https://github.com/wagtail/wagtail/commit/37026d521f818bab3724c74df93e9e690e93a9d5&quot;&gt;37026d521f818bab3724c74df93e9e690e93a9d5&lt;/a&gt;. I would expect this to be rare. As part of our main refactoring, there were two kinds of issues:&lt;/p&gt;
+<p>Once this is applied, there is still a risk there’ll be code that clashes with Prettier reformatting, which will need manual intervention. See for example <a href="https://github.com/wagtail/wagtail/commit/37026d521f818bab3724c74df93e9e690e93a9d5">37026d521f818bab3724c74df93e9e690e93a9d5</a>. I would expect this to be rare. As part of our main refactoring, there were two kinds of issues:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;1 conflict with Stylelint, where Prettier splitting a long expression into multiple lines changes how the expression is interpreted by our linting.&lt;/li&gt;
-  &lt;li&gt;8 conflicts with ESLint, where Prettier moved &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eslint-disable&lt;/code&gt; comments in places where they no longer applied to the correct line.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>1 conflict with Stylelint, where Prettier splitting a long expression into multiple lines changes how the expression is interpreted by our linting.</li>
+  <li>8 conflicts with ESLint, where Prettier moved <code class="language-plaintext highlighter-rouge">eslint-disable</code> comments in places where they no longer applied to the correct line.</li>
+</ul>
 
-&lt;p&gt;If in doubt, run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm run lint&lt;/code&gt; to check for any issues of this nature.&lt;/p&gt;
+<p>If in doubt, run <code class="language-plaintext highlighter-rouge">npm run lint</code> to check for any issues of this nature.</p>
 
-&lt;h2 id=&quot;git-blame&quot;&gt;git blame&lt;/h2&gt;
+<h2 id="git-blame">git blame</h2>
 
-&lt;p&gt;For people who use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git blame&lt;/code&gt;, we have introduced a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git-blame-ignore-revs&lt;/code&gt; which allows you to ignore the reformatting. See &lt;a href=&quot;https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt&quot;&gt;the official documentation&lt;/a&gt; and the file in question for further information.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Prettier is good. So good, it’s easy to get used to it, and subsequently want to retrofit it onto existing projects. Here’s a step-by-step guide and example: configuring and documenting Prettier and reformatting existing code, all the while making sure not to break other people’s work.</summary></entry><entry><title type="html">Wagtail developer jobs: where to look</title><link href="https://thib.me/wagtail-developer-jobs-where-to-look" rel="alternate" type="text/html" title="Wagtail developer jobs: where to look" /><published>2022-01-13T06:21:09+00:00</published><updated>2022-01-13T06:21:09+00:00</updated><id>https://thib.me/wagtail-developer-jobs-where-to-look</id><content type="html" xml:base="https://thib.me/wagtail-developer-jobs-where-to-look">&lt;p&gt;Looking for a Wagtail job? Or to hire a developer? Here are good places to check.&lt;/p&gt;
+<p>For people who use <code class="language-plaintext highlighter-rouge">git blame</code>, we have introduced a <code class="language-plaintext highlighter-rouge">.git-blame-ignore-revs</code> which allows you to ignore the reformatting. See <a href="https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt">the official documentation</a> and the file in question for further information.</p>]]></content><author><name>Thibaud Colas</name></author><category term="JavaScript" /><category term="Code" /><category term="Tools" /><summary type="html"><![CDATA[Prettier is good. So good, it’s easy to get used to it, and subsequently want to retrofit it onto existing projects. Here’s a step-by-step guide and example: configuring and documenting Prettier and reformatting existing code, all the while making sure not to break other people’s work.]]></summary></entry><entry><title type="html">Wagtail developer jobs: where to look</title><link href="https://thib.me/wagtail-developer-jobs-where-to-look" rel="alternate" type="text/html" title="Wagtail developer jobs: where to look" /><published>2022-01-13T06:21:09+00:00</published><updated>2022-01-13T06:21:09+00:00</updated><id>https://thib.me/wagtail-developer-jobs-where-to-look</id><content type="html" xml:base="https://thib.me/wagtail-developer-jobs-where-to-look"><![CDATA[<p>Looking for a Wagtail job? Or to hire a developer? Here are good places to check.</p>
 
-&lt;!-- more --&gt;
+<!-- more -->
 
-&lt;p&gt;There are more options than you might think! Wagtail being based on Django, anyone with a Django skillset will be productive with Wagtail. As such, this list is equally relevant when searching for or advertising Django developer jobs.&lt;/p&gt;
+<p>There are more options than you might think! Wagtail being based on Django, anyone with a Django skillset will be productive with Wagtail. As such, this list is equally relevant when searching for or advertising Django developer jobs.</p>
 
-&lt;h2 id=&quot;chat&quot;&gt;Chat&lt;/h2&gt;
+<h2 id="chat">Chat</h2>
 
-&lt;p&gt;This is my favourite option by far, with the #jobs channel in the &lt;a href=&quot;https://github.com/wagtail/wagtail/wiki/Slack&quot;&gt;Wagtail Slack&lt;/a&gt;. Our Slack workspace is very active, with #jobs being one of the most viewed channels. Using chat also makes it much simpler for people to have a conversation about a given job offer.&lt;/p&gt;
+<p>This is my favourite option by far, with the #jobs channel in the <a href="https://github.com/wagtail/wagtail/wiki/Slack">Wagtail Slack</a>. Our Slack workspace is very active, with #jobs being one of the most viewed channels. Using chat also makes it much simpler for people to have a conversation about a given job offer.</p>
 
-&lt;p&gt;Here is a screenshot of the workspace’s statistics, showing 250 weekly active users:&lt;/p&gt;
+<p>Here is a screenshot of the workspace’s statistics, showing 250 weekly active users:</p>
 
-&lt;p&gt;&lt;a href=&quot;/images/blog/wagtail-developer-jobs-where-to-look/wagtailcms-stats-slack.png&quot;&gt;&lt;img src=&quot;/images/blog/wagtail-developer-jobs-where-to-look/wagtailcms-stats-slack.png&quot; alt=&quot;Line chart of Weekly active members and messages posted, over December 2021 and January 2022. For Monday 10/01, there were 247 active members and 55 who posted messages&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<p><a href="/images/blog/wagtail-developer-jobs-where-to-look/wagtailcms-stats-slack.png"><img src="/images/blog/wagtail-developer-jobs-where-to-look/wagtailcms-stats-slack.png" alt="Line chart of Weekly active members and messages posted, over December 2021 and January 2022. For Monday 10/01, there were 247 active members and 55 who posted messages" /></a></p>
 
-&lt;h2 id=&quot;newsletters&quot;&gt;Newsletters&lt;/h2&gt;
+<h2 id="newsletters">Newsletters</h2>
 
-&lt;p&gt;This is a good option but the lead time is high, as there are only a few ad placements available per week.&lt;/p&gt;
+<p>This is a good option but the lead time is high, as there are only a few ad placements available per week.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://django-news.com/&quot;&gt;Django News&lt;/a&gt; – regularly includes Wagtail content.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pycoders.com/&quot;&gt;PyCoder’s Weekly&lt;/a&gt; – occasional mentions of Wagtail.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://django-news.com/">Django News</a> – regularly includes Wagtail content.</li>
+  <li><a href="https://pycoders.com/">PyCoder’s Weekly</a> – occasional mentions of Wagtail.</li>
+</ul>
 
-&lt;h2 id=&quot;conferences&quot;&gt;Conferences&lt;/h2&gt;
+<h2 id="conferences">Conferences</h2>
 
-&lt;p&gt;There are a lot of great options here, with a good number of events recurring every year.&lt;/p&gt;
+<p>There are a lot of great options here, with a good number of events recurring every year.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.wagtail.space/&quot;&gt;Wagtail Space&lt;/a&gt;, and &lt;a href=&quot;https://us.wagtail.space/&quot;&gt;Wagtail Space US&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://2021.djangocon.eu/&quot;&gt;DjangoCon Europe&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://djangocon.us/&quot;&gt;DjangoCon US&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://2022.pythonwebconf.com/&quot;&gt;Python Web Conference&lt;/a&gt; (coming up soon!)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://djangoday.dk/&quot;&gt;Django Day Copenhagen&lt;/a&gt; (also coming up soon)&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://www.wagtail.space/">Wagtail Space</a>, and <a href="https://us.wagtail.space/">Wagtail Space US</a></li>
+  <li><a href="https://2021.djangocon.eu/">DjangoCon Europe</a></li>
+  <li><a href="https://djangocon.us/">DjangoCon US</a></li>
+  <li><a href="https://2022.pythonwebconf.com/">Python Web Conference</a> (coming up soon!)</li>
+  <li><a href="https://djangoday.dk/">Django Day Copenhagen</a> (also coming up soon)</li>
+</ul>
 
-&lt;h2 id=&quot;job-listings&quot;&gt;Job listings&lt;/h2&gt;
+<h2 id="job-listings">Job listings</h2>
 
-&lt;p&gt;General-purpose job sites are always worth looking at for job offers matching “Wagtail” or “Django”. There are also a few specialised job boards:&lt;/p&gt;
+<p>General-purpose job sites are always worth looking at for job offers matching “Wagtail” or “Django”. There are also a few specialised job boards:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.djangoproject.com/community/jobs/&quot;&gt;Django jobs RSS&lt;/a&gt;, aggregating other job boards.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://djangojobs.net/&quot;&gt;https://djangojobs.net/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://djangogigs.com/&quot;&gt;https://djangogigs.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://www.djangoproject.com/community/jobs/">Django jobs RSS</a>, aggregating other job boards.</li>
+  <li><a href="https://djangojobs.net/">https://djangojobs.net/</a></li>
+  <li><a href="https://djangogigs.com/">https://djangogigs.com/</a></li>
+</ul>
 
-&lt;h2 id=&quot;wagtail-developers&quot;&gt;Wagtail developers&lt;/h2&gt;
+<h2 id="wagtail-developers">Wagtail developers</h2>
 
-&lt;p&gt;Last but not least, &lt;a href=&quot;https://madewithwagtail.org/developers/&quot;&gt;Made with Wagtail developer profiles&lt;/a&gt; list 200+ organisations that create Wagtail sites, some of which likely will be hiring. The profiles are ordered by number of Wagtail sites published, which helps getting a sense of the size of an organisation’s Wagtail practice.&lt;/p&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Looking for a Wagtail job? Or to hire a developer? Here are good places to check.</summary></entry><entry><title type="html">aria-invalid=”true” with aria-describedby</title><link href="https://thib.me/aria-invalid-true-with-aria-describedby" rel="alternate" type="text/html" title="aria-invalid=&quot;true&quot; with aria-describedby" /><published>2022-01-12T22:42:03+00:00</published><updated>2022-01-12T22:42:03+00:00</updated><id>https://thib.me/aria-invalid-true-with-aria-describedby</id><content type="html" xml:base="https://thib.me/aria-invalid-true-with-aria-describedby">&lt;p&gt;As part of Django’s &lt;a href=&quot;https://github.com/django/deps/blob/main/accepted/0011-accessibility-team.rst&quot;&gt;accessibility team&lt;/a&gt;, I’ve been doing a lot of research into specific patterns. Today – &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-required=&quot;true&quot;&lt;/code&gt; combined with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; for error messages! Is it good? Is it redundant? What do authorative sources say?&lt;/p&gt;
+<p>Last but not least, <a href="https://madewithwagtail.org/developers/">Made with Wagtail developer profiles</a> list 200+ organisations that create Wagtail sites, some of which likely will be hiring. The profiles are ordered by number of Wagtail sites published, which helps getting a sense of the size of an organisation’s Wagtail practice.</p>]]></content><author><name>Thibaud Colas</name></author><category term="Careers" /><category term="Community" /><category term="Wagtail" /><category term="Django" /><summary type="html"><![CDATA[Looking for a Wagtail job? Or to hire a developer? Here are good places to check.]]></summary></entry><entry><title type="html">aria-invalid=”true” with aria-describedby</title><link href="https://thib.me/aria-invalid-true-with-aria-describedby" rel="alternate" type="text/html" title="aria-invalid=”true” with aria-describedby" /><published>2022-01-12T22:42:03+00:00</published><updated>2022-01-12T22:42:03+00:00</updated><id>https://thib.me/aria-invalid-true-with-aria-describedby</id><content type="html" xml:base="https://thib.me/aria-invalid-true-with-aria-describedby"><![CDATA[<p>As part of Django’s <a href="https://github.com/django/deps/blob/main/accepted/0011-accessibility-team.rst">accessibility team</a>, I’ve been doing a lot of research into specific patterns. Today – <code class="language-plaintext highlighter-rouge">aria-required="true"</code> combined with <code class="language-plaintext highlighter-rouge">aria-describedby</code> for error messages! Is it good? Is it redundant? What do authorative sources say?</p>
 
-&lt;!-- more --&gt;
+<!-- more -->
 
-&lt;p&gt;&lt;em&gt;This is a copy of my &lt;a href=&quot;https://github.com/django/django/pull/15036#issuecomment-1008738687&quot;&gt;GitHub comment on django/django#15036&lt;/a&gt; to keep for future reference&lt;/em&gt;.&lt;/p&gt;
+<p><em>This is a copy of my <a href="https://github.com/django/django/pull/15036#issuecomment-1008738687">GitHub comment on django/django#15036</a> to keep for future reference</em>.</p>
 
-&lt;h2 id=&quot;tldr&quot;&gt;TL;DR;&lt;/h2&gt;
+<h2 id="tldr">TL;DR;</h2>
 
-&lt;p&gt;TL;DR; “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid =&quot;true&quot;&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; pointing at error message” seems to me like it would be the best for Django. It’s recommended in the non-normative &lt;a href=&quot;https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21&quot;&gt;ARIA21&lt;/a&gt; technique, and by a renowned expert in the field. I found one pattern that seems better than it in some cases, but I don’t think it’s as good of a fit for Django.&lt;/p&gt;
+<p>TL;DR; “<code class="language-plaintext highlighter-rouge">aria-invalid ="true"</code> + <code class="language-plaintext highlighter-rouge">aria-describedby</code> pointing at error message” seems to me like it would be the best for Django. It’s recommended in the non-normative <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21">ARIA21</a> technique, and by a renowned expert in the field. I found one pattern that seems better than it in some cases, but I don’t think it’s as good of a fit for Django.</p>
 
-&lt;h2 id=&quot;recommendations-for-the-pattern&quot;&gt;Recommendations for the pattern&lt;/h2&gt;
+<h2 id="recommendations-for-the-pattern">Recommendations for the pattern</h2>
 
-&lt;p&gt;I could find the following sources recommending &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt; usage alongside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt;:&lt;/p&gt;
+<p>I could find the following sources recommending <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> usage alongside <code class="language-plaintext highlighter-rouge">aria-describedby</code>:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;The official (non-normative) &lt;a href=&quot;https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21&quot;&gt;ARIA21 Using Aria-Invalid to Indicate An Error Field&lt;/a&gt; technique from WCAG:&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>The official (non-normative) <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21">ARIA21 Using Aria-Invalid to Indicate An Error Field</a> technique from WCAG:</li>
+</ul>
 
-&lt;blockquote&gt;
-  &lt;p&gt;When visible text is used to programmatically identify a failed field and / or convey how the error can be corrected, setting aria-invalid to “true” is not required from a strict compliance standpoint but may still provide helpful information for users.&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>When visible text is used to programmatically identify a failed field and / or convey how the error can be corrected, setting aria-invalid to “true” is not required from a strict compliance standpoint but may still provide helpful information for users.</p>
+</blockquote>
 
-&lt;ul&gt;
-  &lt;li&gt;A &lt;a href=&quot;https://web-a11y.slack.com/archives/C042TSFGN/p1557348802029700&quot;&gt;post from Léonie Watson on the web-a11y Slack&lt;/a&gt;:&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>A <a href="https://web-a11y.slack.com/archives/C042TSFGN/p1557348802029700">post from Léonie Watson on the web-a11y Slack</a>:</li>
+</ul>
 
-&lt;blockquote&gt;
-  &lt;p&gt;[…]
+<blockquote>
+  <p>[…]
 Or you can use aria-describedby to make the association, like this:
-[…] &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;input type=&quot;text&quot; id=&quot;this&quot; aria-describedby=&quot;error&quot; ...&amp;gt;&lt;/code&gt; &amp;gt; […] &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;p id=&quot;error&quot;&amp;gt;Don&apos;t forget to enter your first name!&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+[…] &gt; <code class="language-plaintext highlighter-rouge">&lt;input type="text" id="this" aria-describedby="error" ...&gt;</code> &gt; […] &gt; <code class="language-plaintext highlighter-rouge">&lt;p id="error"&gt;Don't forget to enter your first name!&lt;/p&gt;</code></p>
 
-  &lt;p&gt;You can also use aria-invalid=”true” on the input, as you have done, for belt and braces information.&lt;/p&gt;
-&lt;/blockquote&gt;
+  <p>You can also use aria-invalid=”true” on the input, as you have done, for belt and braces information.</p>
+</blockquote>
 
-&lt;p&gt;Those two sources indicate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; pointing at the error message could be sufficient. Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt; basically just helps unambiguously identifying fields that are in error, rather than relying on the wording of the error messages conveyed via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; only.&lt;/p&gt;
+<p>Those two sources indicate <code class="language-plaintext highlighter-rouge">aria-describedby</code> pointing at the error message could be sufficient. Using <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> basically just helps unambiguously identifying fields that are in error, rather than relying on the wording of the error messages conveyed via <code class="language-plaintext highlighter-rouge">aria-describedby</code> only.</p>
 
-&lt;h2 id=&quot;alternative&quot;&gt;Alternative&lt;/h2&gt;
+<h2 id="alternative">Alternative</h2>
 
-&lt;p&gt;I couldn’t find anyone actively recommending against this combination, however the GOV.UK design system &lt;a href=&quot;https://github.com/alphagov/govuk-frontend/issues/1168&quot;&gt;decided not to use it&lt;/a&gt;. They instead added an &lt;a href=&quot;https://design-system.service.gov.uk/components/error-message/#label&quot;&gt;“Error:” prefix for all error messages&lt;/a&gt;, as visually hidden / screen-reader-only text:&lt;/p&gt;
+<p>I couldn’t find anyone actively recommending against this combination, however the GOV.UK design system <a href="https://github.com/alphagov/govuk-frontend/issues/1168">decided not to use it</a>. They instead added an <a href="https://design-system.service.gov.uk/components/error-message/#label">“Error:” prefix for all error messages</a>, as visually hidden / screen-reader-only text:</p>
 
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[…]
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;national-insurance-number-error&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;govuk-error-message&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;govuk-visually-hidden&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Error:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; Enter a National Insurance
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[…]
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"national-insurance-number-error"</span> <span class="na">class=</span><span class="s">"govuk-error-message"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"govuk-visually-hidden"</span><span class="nt">&gt;</span>Error:<span class="nt">&lt;/span&gt;</span> Enter a National Insurance
   number in the correct format
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;govuk-input govuk-input--error&quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;national-insurance-number&quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;national-insurance-number&quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;aria-describedby=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;national-insurance-number-hint national-insurance-number-error&quot;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;input</span>
+  <span class="na">class=</span><span class="s">"govuk-input govuk-input--error"</span>
+  <span class="na">id=</span><span class="s">"national-insurance-number"</span>
+  <span class="na">name=</span><span class="s">"national-insurance-number"</span>
+  <span class="na">type=</span><span class="s">"text"</span>
+  <span class="na">aria-describedby=</span><span class="s">"national-insurance-number-hint national-insurance-number-error"</span>
+<span class="nt">/&gt;</span>
+</code></pre></div></div>
 
-&lt;p&gt;I can see some clear advantages to this:&lt;/p&gt;
+<p>I can see some clear advantages to this:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;It’s equally as unambiguous for screen reader users that the fields are in error (compare Django’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;This field is required.&lt;/code&gt; message or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enter a whole number.&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Error: This field is required.&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Error: Enter a whole number.&lt;/code&gt;).&lt;/li&gt;
-  &lt;li&gt;“Error:” is more plain language than “Invalid entry”&lt;/li&gt;
-  &lt;li&gt;Since this doesn’t rely on ARIA, screen reader support for this is better than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>It’s equally as unambiguous for screen reader users that the fields are in error (compare Django’s <code class="language-plaintext highlighter-rouge">This field is required.</code> message or <code class="language-plaintext highlighter-rouge">Enter a whole number.</code> with <code class="language-plaintext highlighter-rouge">Error: This field is required.</code> or <code class="language-plaintext highlighter-rouge">Error: Enter a whole number.</code>).</li>
+  <li>“Error:” is more plain language than “Invalid entry”</li>
+  <li>Since this doesn’t rely on ARIA, screen reader support for this is better than <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code></li>
+</ul>
 
-&lt;p&gt;I can also see some issues:&lt;/p&gt;
+<p>I can also see some issues:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;It’s more opinionated markup to maintain / less “by-the-book semantic HTML”&lt;/li&gt;
-  &lt;li&gt;Django’s error messages are meant to be customized with no oversight on how implementers will ultimately word them, so adding a prefix wouldn’t always be appropriate.&lt;/li&gt;
-  &lt;li&gt;It’s one more string that will need translations (not necessarily a big deal for such a generic word but does constraint the languages with which Django’s forms rendering could be used).&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>It’s more opinionated markup to maintain / less “by-the-book semantic HTML”</li>
+  <li>Django’s error messages are meant to be customized with no oversight on how implementers will ultimately word them, so adding a prefix wouldn’t always be appropriate.</li>
+  <li>It’s one more string that will need translations (not necessarily a big deal for such a generic word but does constraint the languages with which Django’s forms rendering could be used).</li>
+</ul>
 
-&lt;h2 id=&quot;recommendation-for-django&quot;&gt;Recommendation for Django&lt;/h2&gt;
+<h2 id="recommendation-for-django">Recommendation for Django</h2>
 
-&lt;p&gt;Based on this, for Django, I’d still recommend &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt; wherever possible, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt; for the error message wherever possible. So both together, wherever possible. It’s a more established pattern than bespoke error message prefixes, and lower maintenance. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt; support isn’t as good, but good enough for something that’s used &lt;em&gt;in addition to&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt;.&lt;/p&gt;
+<p>Based on this, for Django, I’d still recommend <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> wherever possible, and <code class="language-plaintext highlighter-rouge">aria-describedby</code> for the error message wherever possible. So both together, wherever possible. It’s a more established pattern than bespoke error message prefixes, and lower maintenance. <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code> support isn’t as good, but good enough for something that’s used <em>in addition to</em> <code class="language-plaintext highlighter-rouge">aria-describedby</code>.</p>
 
-&lt;h2 id=&quot;caveats&quot;&gt;Caveats&lt;/h2&gt;
+<h2 id="caveats">Caveats</h2>
 
-&lt;ul&gt;
-  &lt;li&gt;This is based on &lt;a href=&quot;https://a11ysupport.io/&quot;&gt;a11ysupport.io&lt;/a&gt; data, which only tested support on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;input type=&quot;text&quot;&amp;gt;&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;select&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;I only looked at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid=&quot;true&quot;&lt;/code&gt;. There are other &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria-invalid&lt;/code&gt; values, which are harder to use and I wouldn’t recommend at this time.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>This is based on <a href="https://a11ysupport.io/">a11ysupport.io</a> data, which only tested support on <code class="language-plaintext highlighter-rouge">&lt;input type="text"&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;select&gt;</code>.</li>
+  <li>I only looked at <code class="language-plaintext highlighter-rouge">aria-invalid="true"</code>. There are other <code class="language-plaintext highlighter-rouge">aria-invalid</code> values, which are harder to use and I wouldn’t recommend at this time.</li>
+</ul>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Further references:&lt;/p&gt;
+<p>Further references:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://a11ysupport.io/tech/aria/aria-invalid_attribute&quot;&gt;a11ysupport.io support data for aria-invalid&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://a11ysupport.io/tech/aria/aria-describedby_attribute&quot;&gt;a11ysupport.io support data for aria-describedby&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.powermapper.com/tests/screen-readers/aria/&quot;&gt;PowerMapper support data for aria-describedby&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">As part of Django’s accessibility team, I’ve been doing a lot of research into specific patterns. Today – aria-required=&quot;true&quot; combined with aria-describedby for error messages! Is it good? Is it redundant? What do authorative sources say?</summary></entry><entry><title type="html">2022 web conferences</title><link href="https://thib.me/2022-web-conferences" rel="alternate" type="text/html" title="2022 web conferences" /><published>2022-01-08T17:42:03+00:00</published><updated>2022-01-08T17:42:03+00:00</updated><id>https://thib.me/2022-web-conferences</id><content type="html" xml:base="https://thib.me/2022-web-conferences">&lt;p&gt;Here is a small list of conferences I put together for 2022, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!&lt;/p&gt;
+<ul>
+  <li><a href="https://a11ysupport.io/tech/aria/aria-invalid_attribute">a11ysupport.io support data for aria-invalid</a></li>
+  <li><a href="https://a11ysupport.io/tech/aria/aria-describedby_attribute">a11ysupport.io support data for aria-describedby</a></li>
+  <li><a href="https://www.powermapper.com/tests/screen-readers/aria/">PowerMapper support data for aria-describedby</a></li>
+</ul>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Django" /><summary type="html"><![CDATA[As part of Django’s accessibility team, I’ve been doing a lot of research into specific patterns. Today – aria-required="true" combined with aria-describedby for error messages! Is it good? Is it redundant? What do authorative sources say?]]></summary></entry><entry><title type="html">2022 web conferences</title><link href="https://thib.me/2022-web-conferences" rel="alternate" type="text/html" title="2022 web conferences" /><published>2022-01-08T17:42:03+00:00</published><updated>2022-01-08T17:42:03+00:00</updated><id>https://thib.me/2022-web-conferences</id><content type="html" xml:base="https://thib.me/2022-web-conferences"><![CDATA[<p>Here is a small list of conferences I put together for 2022, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!</p>
 
-&lt;!-- more --&gt;
+<!-- more -->
 
-&lt;h2 id=&quot;uk-govcamp-2022&quot;&gt;UK GovCamp 2022&lt;/h2&gt;
+<h2 id="uk-govcamp-2022">UK GovCamp 2022</h2>
 
-&lt;p&gt;20th-22nd January 2022. Unconference, CFP on the day.&lt;/p&gt;
+<p>20th-22nd January 2022. Unconference, CFP on the day.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://www.ukgovcamp.com/2021/11/13/announcing-ukgovcamp-2022/&quot;&gt;https://www.ukgovcamp.com/2021/11/13/announcing-ukgovcamp-2022/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://www.ukgovcamp.com/2021/11/13/announcing-ukgovcamp-2022/">https://www.ukgovcamp.com/2021/11/13/announcing-ukgovcamp-2022/</a></p>
 
-&lt;h2 id=&quot;djangoday-cph-2021-2022&quot;&gt;DjangoDay CPH 2021 2022&lt;/h2&gt;
+<h2 id="djangoday-cph-2021-2022">DjangoDay CPH 2021 2022</h2>
 
-&lt;p&gt;April/May 2022. No CFP currently.&lt;/p&gt;
+<p>April/May 2022. No CFP currently.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://2021.djangoday.dk/&quot;&gt;https://2021.djangoday.dk/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://2021.djangoday.dk/">https://2021.djangoday.dk/</a></p>
 
-&lt;h2 id=&quot;pycon-us-2022&quot;&gt;PyCon US 2022&lt;/h2&gt;
+<h2 id="pycon-us-2022">PyCon US 2022</h2>
 
-&lt;p&gt;April 27, 2022 - May 3, 2022. Salt Lake City. CFP already closed.&lt;/p&gt;
+<p>April 27, 2022 - May 3, 2022. Salt Lake City. CFP already closed.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://us.pycon.org/2022/&quot;&gt;https://us.pycon.org/2022/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://us.pycon.org/2022/">https://us.pycon.org/2022/</a></p>
 
-&lt;h2 id=&quot;wagtail-space-us-2022&quot;&gt;Wagtail Space US 2022&lt;/h2&gt;
+<h2 id="wagtail-space-us-2022">Wagtail Space US 2022</h2>
 
-&lt;p&gt;March 24-26 2022. Cleveland. CFP online, no end date stated.&lt;/p&gt;
+<p>March 24-26 2022. Cleveland. CFP online, no end date stated.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://us.wagtail.space/&quot;&gt;https://us.wagtail.space/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://us.wagtail.space/">https://us.wagtail.space/</a></p>
 
-&lt;h2 id=&quot;cityjs-london&quot;&gt;CityJS London&lt;/h2&gt;
+<h2 id="cityjs-london">CityJS London</h2>
 
-&lt;p&gt;March 23-25th 2022. London. CFP online, ending 15/01/2022&lt;/p&gt;
+<p>March 23-25th 2022. London. CFP online, ending 15/01/2022</p>
 
-&lt;p&gt;&lt;a href=&quot;https://cityjsconf.org/speakers&quot;&gt;https://cityjsconf.org/speakers&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://cityjsconf.org/speakers">https://cityjsconf.org/speakers</a></p>
 
-&lt;h2 id=&quot;python-web-conf&quot;&gt;Python Web Conf&lt;/h2&gt;
+<h2 id="python-web-conf">Python Web Conf</h2>
 
-&lt;p&gt;March 21 - 25 2022. Online. No CFP.&lt;/p&gt;
+<p>March 21 - 25 2022. Online. No CFP.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://2022.pythonwebconf.com/&quot;&gt;https://2022.pythonwebconf.com/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://2022.pythonwebconf.com/">https://2022.pythonwebconf.com/</a></p>
 
-&lt;h2 id=&quot;web-directions-hover&quot;&gt;Web Directions Hover&lt;/h2&gt;
+<h2 id="web-directions-hover">Web Directions Hover</h2>
 
-&lt;p&gt;April 1 &amp;amp; 8. Focussed on CSS, in March 2022, CFP closes Dec 31 2021&lt;/p&gt;
+<p>April 1 &amp; 8. Focussed on CSS, in March 2022, CFP closes Dec 31 2021</p>
 
-&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://webdirections.org/speaking/">https://webdirections.org/speaking/</a></p>
 
-&lt;h2 id=&quot;mixit-2022&quot;&gt;MiXiT 2022&lt;/h2&gt;
+<h2 id="mixit-2022">MiXiT 2022</h2>
 
-&lt;p&gt;May 24th 25th, 2022, Lyon, France. CFP deadline: 02/02/2022 &lt;a href=&quot;https://www.papercall.io/mixit2022&quot;&gt;https://www.papercall.io/mixit2022&lt;/a&gt;&lt;/p&gt;
+<p>May 24th 25th, 2022, Lyon, France. CFP deadline: 02/02/2022 <a href="https://www.papercall.io/mixit2022">https://www.papercall.io/mixit2022</a></p>
 
-&lt;p&gt;&lt;a href=&quot;https://mixitconf.org/en/&quot;&gt;https://mixitconf.org/en/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://mixitconf.org/en/">https://mixitconf.org/en/</a></p>
 
-&lt;h2 id=&quot;web-directions-lazy-load&quot;&gt;Web Directions Lazy Load&lt;/h2&gt;
+<h2 id="web-directions-lazy-load">Web Directions Lazy Load</h2>
 
-&lt;p&gt;May 20 &amp;amp; 27. Focussed on front end performance in May 2022, CFP closes Jan 31 2022&lt;/p&gt;
+<p>May 20 &amp; 27. Focussed on front end performance in May 2022, CFP closes Jan 31 2022</p>
 
-&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://webdirections.org/speaking/">https://webdirections.org/speaking/</a></p>
 
-&lt;h2 id=&quot;pycon-italy-2022&quot;&gt;PyCon Italy 2022&lt;/h2&gt;
+<h2 id="pycon-italy-2022">PyCon Italy 2022</h2>
 
-&lt;p&gt;2-5 June 2022. Florence. CFP deadline: 09/01/2022&lt;/p&gt;
+<p>2-5 June 2022. Florence. CFP deadline: 09/01/2022</p>
 
-&lt;p&gt;&lt;a href=&quot;https://pycon.it/en&quot;&gt;https://pycon.it/en&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://pycon.it/en">https://pycon.it/en</a></p>
 
-&lt;h2 id=&quot;jsconf-budapest-2021-2022&quot;&gt;JSConf Budapest 2021 2022&lt;/h2&gt;
+<h2 id="jsconf-budapest-2021-2022">JSConf Budapest 2021 2022</h2>
 
-&lt;p&gt;2-3 June 2022, Budapest. No CFP currently.&lt;/p&gt;
+<p>2-3 June 2022, Budapest. No CFP currently.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://jsconfbp.com/&quot;&gt;https://jsconfbp.com/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://jsconfbp.com/">https://jsconfbp.com/</a></p>
 
-&lt;h2 id=&quot;pixel-pioneers-2020-2022&quot;&gt;Pixel Pioneers 2020 2022&lt;/h2&gt;
+<h2 id="pixel-pioneers-2020-2022">Pixel Pioneers 2020 2022</h2>
 
-&lt;p&gt;10 June 2022, Bristol. No CFP.&lt;/p&gt;
+<p>10 June 2022, Bristol. No CFP.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://pixelpioneers.co/&quot;&gt;https://pixelpioneers.co/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://pixelpioneers.co/">https://pixelpioneers.co/</a></p>
 
-&lt;h2 id=&quot;halfstack-newquay-2022&quot;&gt;HalfStack Newquay 2022&lt;/h2&gt;
+<h2 id="halfstack-newquay-2022">HalfStack Newquay 2022</h2>
 
-&lt;p&gt;Friday 1st July 2022, Newquay (/ˈnjuːki/) (UK). CFP under way, no deadline.&lt;/p&gt;
+<p>Friday 1st July 2022, Newquay (/ˈnjuːki/) (UK). CFP under way, no deadline.</p>
 
-&lt;p&gt;Creative JavaScript and web development.&lt;/p&gt;
+<p>Creative JavaScript and web development.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://halfstackconf.com/newquay/&quot;&gt;https://halfstackconf.com/newquay/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://halfstackconf.com/newquay/">https://halfstackconf.com/newquay/</a></p>
 
-&lt;h2 id=&quot;web-directions-global-scope&quot;&gt;Web Directions Global Scope&lt;/h2&gt;
+<h2 id="web-directions-global-scope">Web Directions Global Scope</h2>
 
-&lt;p&gt;July 1 &amp;amp; 8. Focused exclusively on JavaScript, in June 2022, CFP closes March 31st 2022&lt;/p&gt;
+<p>July 1 &amp; 8. Focused exclusively on JavaScript, in June 2022, CFP closes March 31st 2022</p>
 
-&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://webdirections.org/speaking/">https://webdirections.org/speaking/</a></p>
 
-&lt;h2 id=&quot;halfstack-new-york-2022&quot;&gt;HalfStack New York 2022&lt;/h2&gt;
+<h2 id="halfstack-new-york-2022">HalfStack New York 2022</h2>
 
-&lt;p&gt;August 2022, New York. CFP under way, no deadline.&lt;/p&gt;
+<p>August 2022, New York. CFP under way, no deadline.</p>
 
-&lt;p&gt;Creative JavaScript and web development.&lt;/p&gt;
+<p>Creative JavaScript and web development.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://halfstackconf.com/newyork/&quot;&gt;https://halfstackconf.com/newyork/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://halfstackconf.com/newyork/">https://halfstackconf.com/newyork/</a></p>
 
-&lt;h2 id=&quot;web-directions-code&quot;&gt;Web Directions Code&lt;/h2&gt;
+<h2 id="web-directions-code">Web Directions Code</h2>
 
-&lt;p&gt;September 2 &amp;amp; 9 Focussed on the Web Platform and PWAs in September 2022, CFP closes May 30 2022&lt;/p&gt;
+<p>September 2 &amp; 9 Focussed on the Web Platform and PWAs in September 2022, CFP closes May 30 2022</p>
 
-&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://webdirections.org/speaking/">https://webdirections.org/speaking/</a></p>
 
-&lt;h2 id=&quot;halfstack-london-2021-2022&quot;&gt;HalfStack London 2021 2022&lt;/h2&gt;
+<h2 id="halfstack-london-2021-2022">HalfStack London 2021 2022</h2>
 
-&lt;p&gt;Friday 23rd September 2022, London. CFP under way, no deadline.&lt;/p&gt;
+<p>Friday 23rd September 2022, London. CFP under way, no deadline.</p>
 
-&lt;p&gt;Creative JavaScript and web development.&lt;/p&gt;
+<p>Creative JavaScript and web development.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://halfstackconf.com/london/&quot;&gt;https://halfstackconf.com/london/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://halfstackconf.com/london/">https://halfstackconf.com/london/</a></p>
 
-&lt;h2 id=&quot;nordic-js-2022&quot;&gt;Nordic JS 2022&lt;/h2&gt;
+<h2 id="nordic-js-2022">Nordic JS 2022</h2>
 
-&lt;p&gt;6-7 October 2022, Stockholm. CFP under way (ish?), no deadline.&lt;/p&gt;
+<p>6-7 October 2022, Stockholm. CFP under way (ish?), no deadline.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://nordicjs.com/call-for-speakers&quot;&gt;https://nordicjs.com/call-for-speakers&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://nordicjs.com/call-for-speakers">https://nordicjs.com/call-for-speakers</a></p>
 
-&lt;h2 id=&quot;web-directions-aaa&quot;&gt;Web Directions AAA&lt;/h2&gt;
+<h2 id="web-directions-aaa">Web Directions AAA</h2>
 
-&lt;p&gt;October 21 &amp;amp; 28. Focussed on accessibility for front end developers in October 2022, CFP closes June 30 2022&lt;/p&gt;
+<p>October 21 &amp; 28. Focussed on accessibility for front end developers in October 2022, CFP closes June 30 2022</p>
 
-&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://webdirections.org/speaking/">https://webdirections.org/speaking/</a></p>
 
-&lt;h2 id=&quot;canux-2022&quot;&gt;CanUX 2022&lt;/h2&gt;
+<h2 id="canux-2022">CanUX 2022</h2>
 
-&lt;p&gt;3-6 Nov 2022, Ottawa, Canada. No CFP announced yet&lt;/p&gt;
+<p>3-6 Nov 2022, Ottawa, Canada. No CFP announced yet</p>
 
-&lt;p&gt;&lt;a href=&quot;https://canux.io/&quot;&gt;https://canux.io/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://canux.io/">https://canux.io/</a></p>
 
-&lt;h2 id=&quot;ffconf-2022&quot;&gt;ffconf 2022&lt;/h2&gt;
+<h2 id="ffconf-2022">ffconf 2022</h2>
 
-&lt;p&gt;Friday 11 Nov 2022. Brighton. No CFP announced yet&lt;/p&gt;
+<p>Friday 11 Nov 2022. Brighton. No CFP announced yet</p>
 
-&lt;p&gt;&lt;a href=&quot;https://ffconf.org/&quot;&gt;https://ffconf.org/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://ffconf.org/">https://ffconf.org/</a></p>
 
-&lt;h2 id=&quot;web-directions-code-leaders&quot;&gt;Web Directions Code Leaders&lt;/h2&gt;
+<h2 id="web-directions-code-leaders">Web Directions Code Leaders</h2>
 
-&lt;p&gt;November 30 2022 Code Leaders is a one day focussed engineering leadership conference taking place the day before our Summit. CFPs close July 31.&lt;/p&gt;
+<p>November 30 2022 Code Leaders is a one day focussed engineering leadership conference taking place the day before our Summit. CFPs close July 31.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://webdirections.org/speaking/">https://webdirections.org/speaking/</a></p>
 
-&lt;h2 id=&quot;web-directions-summit&quot;&gt;Web Directions Summit&lt;/h2&gt;
+<h2 id="web-directions-summit">Web Directions Summit</h2>
 
-&lt;p&gt;December 1 &amp;amp; 2. Web Directions Summit takes place in early December in Sydney, and features several tracks–front end engineering, design and product management. CFPs close June 30 2022&lt;/p&gt;
+<p>December 1 &amp; 2. Web Directions Summit takes place in early December in Sydney, and features several tracks–front end engineering, design and product management. CFPs close June 30 2022</p>
 
-&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://webdirections.org/speaking/">https://webdirections.org/speaking/</a></p>
 
-&lt;h2 id=&quot;web-directions-safe&quot;&gt;Web Directions Safe&lt;/h2&gt;
+<h2 id="web-directions-safe">Web Directions Safe</h2>
 
-&lt;p&gt;Dec. 9 &amp;amp; 16 2022. Focussed on privacy, security and identity for front end developers in December 2022, CFP closes July 31 2022&lt;/p&gt;
+<p>Dec. 9 &amp; 16 2022. Focussed on privacy, security and identity for front end developers in December 2022, CFP closes July 31 2022</p>
 
-&lt;p&gt;&lt;a href=&quot;https://webdirections.org/speaking/&quot;&gt;https://webdirections.org/speaking/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://webdirections.org/speaking/">https://webdirections.org/speaking/</a></p>
 
-&lt;h2 id=&quot;halfstack-phoenix-2022---2023&quot;&gt;HalfStack Phoenix 2022 - 2023&lt;/h2&gt;
+<h2 id="halfstack-phoenix-2022---2023">HalfStack Phoenix 2022 - 2023</h2>
 
-&lt;p&gt;2022 - 2023, Phoenix. CFP under way, ending 15/09/2021.&lt;/p&gt;
+<p>2022 - 2023, Phoenix. CFP under way, ending 15/09/2021.</p>
 
-&lt;p&gt;Creative JavaScript and web development.&lt;/p&gt;
+<p>Creative JavaScript and web development.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://halfstackconf.com/phoenix/&quot;&gt;https://halfstackconf.com/phoenix/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://halfstackconf.com/phoenix/">https://halfstackconf.com/phoenix/</a></p>
 
-&lt;h2 id=&quot;halfstack-vienna-2022&quot;&gt;HalfStack Vienna 2022&lt;/h2&gt;
+<h2 id="halfstack-vienna-2022">HalfStack Vienna 2022</h2>
 
-&lt;p&gt;2022 - 2023, Vienna. CFP under way, no deadline.&lt;/p&gt;
+<p>2022 - 2023, Vienna. CFP under way, no deadline.</p>
 
-&lt;p&gt;Creative JavaScript and web development.&lt;/p&gt;
+<p>Creative JavaScript and web development.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://halfstackconf.com/vienna/&quot;&gt;https://halfstackconf.com/vienna/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://halfstackconf.com/vienna/">https://halfstackconf.com/vienna/</a></p>
 
-&lt;h2 id=&quot;djangocon-us-2022&quot;&gt;DjangoCon US 2022&lt;/h2&gt;
+<h2 id="djangocon-us-2022">DjangoCon US 2022</h2>
 
-&lt;p&gt;No announcement yet. Expected: San Diego fall 2022.&lt;/p&gt;
+<p>No announcement yet. Expected: San Diego fall 2022.</p>
 
-&lt;h2 id=&quot;pycon-uk-2020-2021-2022&quot;&gt;PyCon UK 2020 2021 2022?&lt;/h2&gt;
+<h2 id="pycon-uk-2020-2021-2022">PyCon UK 2020 2021 2022?</h2>
 
-&lt;p&gt;No date announced except for “2021”. Cardiff. No CFP announced yet.&lt;/p&gt;
+<p>No date announced except for “2021”. Cardiff. No CFP announced yet.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://2020.pyconuk.org/&quot;&gt;https://2020.pyconuk.org/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://2020.pyconuk.org/">https://2020.pyconuk.org/</a></p>
 
-&lt;h2 id=&quot;djangocon-eu-2022&quot;&gt;DjangoCon EU 2022&lt;/h2&gt;
+<h2 id="djangocon-eu-2022">DjangoCon EU 2022</h2>
 
-&lt;p&gt;No plans as of yet&lt;/p&gt;
+<p>No plans as of yet</p>
 
-&lt;h2 id=&quot;jamstack-2022&quot;&gt;Jamstack 2022&lt;/h2&gt;
+<h2 id="jamstack-2022">Jamstack 2022</h2>
 
-&lt;p&gt;No plans as of yet&lt;/p&gt;
+<p>No plans as of yet</p>
 
-&lt;p&gt;&lt;a href=&quot;https://jamstackconf.com/&quot;&gt;https://jamstackconf.com/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://jamstackconf.com/">https://jamstackconf.com/</a></p>
 
-&lt;h2 id=&quot;pycon-lithuania-2022&quot;&gt;PyCon Lithuania 2022&lt;/h2&gt;
+<h2 id="pycon-lithuania-2022">PyCon Lithuania 2022</h2>
 
-&lt;p&gt;No plans as of yet&lt;/p&gt;
+<p>No plans as of yet</p>
 
-&lt;p&gt;&lt;a href=&quot;https://www.pycon.lt/&quot;&gt;https://www.pycon.lt/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://www.pycon.lt/">https://www.pycon.lt/</a></p>
 
-&lt;h2 id=&quot;webrebels-2020-2021-2022&quot;&gt;WebRebels 2020 2021 2022&lt;/h2&gt;
+<h2 id="webrebels-2020-2021-2022">WebRebels 2020 2021 2022</h2>
 
-&lt;p&gt;No plans as of yet&lt;/p&gt;
+<p>No plans as of yet</p>
 
-&lt;p&gt;&lt;a href=&quot;https://www.webrebels.org/&quot;&gt;https://www.webrebels.org/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://www.webrebels.org/">https://www.webrebels.org/</a></p>
 
-&lt;h2 id=&quot;europython-2022&quot;&gt;EuroPython 2022&lt;/h2&gt;
+<h2 id="europython-2022">EuroPython 2022</h2>
 
-&lt;p&gt;No plans as of yet&lt;/p&gt;
+<p>No plans as of yet</p>
 
-&lt;p&gt;&lt;a href=&quot;https://ep2021.europython.eu/&quot;&gt;https://ep2021.europython.eu/&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://ep2021.europython.eu/">https://ep2021.europython.eu/</a></p>
 
-&lt;h2 id=&quot;other-lists&quot;&gt;Other lists&lt;/h2&gt;
+<h2 id="other-lists">Other lists</h2>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://confs.tech/&quot;&gt;https://confs.tech/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://frontendfront.com/conferences/&quot;&gt;https://frontendfront.com/conferences/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Here is a small list of conferences I put together for 2022, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!</summary></entry><entry><title type="html">DjangoCon US 2021: Kontrasto – improving accessibility with Python</title><link href="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python" rel="alternate" type="text/html" title="DjangoCon US 2021: Kontrasto – improving accessibility with Python" /><published>2021-10-22T09:01:32+00:00</published><updated>2021-10-22T09:01:32+00:00</updated><id>https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python</id><content type="html" xml:base="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python">&lt;p&gt;Slides for my &lt;a href=&quot;https://2021.djangocon.us/talks/kontrasto-improving-accessibility-with/&quot;&gt;DjangoCon US 2021 talk&lt;/a&gt; on &lt;a href=&quot;https://kontrasto.netlify.app/&quot;&gt;Kontrasto&lt;/a&gt;.&lt;/p&gt;
+<ul>
+  <li><a href="https://confs.tech/">https://confs.tech/</a></li>
+  <li><a href="https://frontendfront.com/conferences/">https://frontendfront.com/conferences/</a></li>
+</ul>]]></content><author><name>Thibaud Colas</name></author><category term="Talks" /><category term="Python" /><category term="JavaScript" /><category term="Community" /><summary type="html"><![CDATA[Here is a small list of conferences I put together for 2022, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!]]></summary></entry><entry><title type="html">DjangoCon US 2021: Kontrasto – improving accessibility with Python</title><link href="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python" rel="alternate" type="text/html" title="DjangoCon US 2021: Kontrasto – improving accessibility with Python" /><published>2021-10-22T09:01:32+00:00</published><updated>2021-10-22T09:01:32+00:00</updated><id>https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python</id><content type="html" xml:base="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python"><![CDATA[<p>Slides for my <a href="https://2021.djangocon.us/talks/kontrasto-improving-accessibility-with/">DjangoCon US 2021 talk</a> on <a href="https://kontrasto.netlify.app/">Kontrasto</a>.</p>
 
-&lt;!-- more --&gt;
+<!-- more -->
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/10718N6sEdx37JqMrBaS4prVOs-kH9ad61lsRTzdNPmI/edit&quot;&gt;Google Slides: DjangoCon US 2021 - Kontrasto: improving accessibility with Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1L6UZbN8VdTX_i6yTKghwB-5FalCA05s8/view?usp=sharing&quot;&gt;PDF export&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1cwVsGcikJxG_K0Sy98WY5J6ajZXENoIP/view?usp=sharing&quot;&gt;Plain-text transcript&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Thibaud Colas</name></author><summary type="html">Slides for my DjangoCon US 2021 talk on Kontrasto.</summary></entry></feed>
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/10718N6sEdx37JqMrBaS4prVOs-kH9ad61lsRTzdNPmI/edit">Google Slides: DjangoCon US 2021 - Kontrasto: improving accessibility with Python</a></li>
+  <li><a href="https://drive.google.com/file/d/1L6UZbN8VdTX_i6yTKghwB-5FalCA05s8/view?usp=sharing">PDF export</a></li>
+  <li><a href="https://drive.google.com/file/d/1cwVsGcikJxG_K0Sy98WY5J6ajZXENoIP/view?usp=sharing">Plain-text transcript</a></li>
+</ul>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Talks" /><category term="Kontrasto" /><summary type="html"><![CDATA[Slides for my DjangoCon US 2021 talk on Kontrasto.]]></summary></entry></feed>

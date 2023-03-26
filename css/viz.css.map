@@ -3,8 +3,8 @@
 	"file": "viz.css",
 	"sources": [
 		"viz.scss",
-		"src/_sass/viz/_base.scss",
-		"src/_sass/viz/_layout.scss"
+		"_sass/viz/_base.scss",
+		"_sass/viz/_layout.scss"
 	],
 	"sourcesContent": [
 		"@charset \"utf-8\";\n\n// Our variables\n$base-font-family: Helvetica, Arial, sans-serif;\n$base-font-size: 16px;\n$small-font-size: $base-font-size * 0.875;\n$base-line-height: 1.5;\n\n$spacing-unit: 30px;\n\n$text-color: #111;\n$background-color: #fdfdfd;\n$brand-color: #2a7ae2;\n\n$grey-color: #828282;\n$grey-color-light: lighten($grey-color, 40%);\n$grey-color-dark: darken($grey-color, 25%);\n\n// Width of the content area\n$content-width: 800px;\n\n$on-palm: 600px;\n$on-laptop: 800px;\n\n// Using media queries with like this:\n// @include media-query($on-palm) {\n//     .wrapper {\n//         padding-right: $spacing-unit / 2;\n//         padding-left: $spacing-unit / 2;\n//     }\n// }\n@mixin media-query($device) {\n  @media screen and (max-width: $device) {\n    @content;\n  }\n}\n\n// Import partials from `sass_dir` (defaults to `_sass`)\n@import \"viz/base\";\n@import \"viz/layout\";\n",
