@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Measuring dark mode’s energy savings - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="I’ve heard lots over the year that “dark themes for sites use up less energy”. Last week we bought a new OLED TV, which is the first OLED device I’ve ever ow...">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/measuring-dark-mode-energy-savings">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://thib.me/measuring-dark-mode-energy-savings">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Measuring dark mode’s energy savings">
+  <meta property="og:description" content="I’ve heard lots over the year that “dark themes for sites use up less energy”. Last week we bought a new OLED TV, which is the first OLED device I’ve ever ow...">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2022-11-23-measuring-dark-mode-energy-savings.md">Edit</a>
+      <h1 class="entry-title">Measuring dark mode’s energy savings</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2022-11-23T21:18:03+00:00" pubdate data-updated="true">2022-11-23 21:18</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>I’ve heard lots over the year that “dark themes for sites use up less energy”. Last week we bought a new OLED TV, which is the first OLED device I’ve ever owned, so I finally got a chance to experience whether / how much that was true.</p>
+
+<!-- more -->
+
+<p>So I tested <a href="https://guide.wagtail.org/en-latest/">guide.wagtail.org</a>, on which we recently added a dark theme, displaying the homepage with the TV plugged into a watt meter.</p>
+
+<ul>
+  <li>With the light theme, the TV uses 63W.</li>
+  <li>With the dark theme, it uses 34W.</li>
+</ul>
+
+<p>That’s a stark difference but it gets worse: this TV has lots of onboard processing, so turning off the panel itself with everything else on, the TV still consumes 31W. Which means the TV panel consumes 3W to display in the dark theme, and 33W, 10x more, to display the light theme.</p>
+
+<p>This reduction in power consumption only applies to OLED devices, which have a limited market share but are getting more common.</p>
+
+<h2 id="testing-a-real-world-website">Testing a real-world website</h2>
+
+<p>The Wagtail user guide is a real production site but doesn’t necessarly represent a typical site: it’s text-heavy, even on its homepage. Let’s now try out <a href="https://www.rnib.org.uk/">rnib.org.uk</a>, for which my company recently implemented a dark theme.</p>
+
+<p>Here’s the results on my TV:</p>
+
+<p><img src="/images/blog/measuring-dark-mode-energy-savings/rnib-oled-energy.jpg" alt="Side-by-side shots of the RNIB website with a power meter in front. On the left is a light theme where the power meter says 59.1. On the right dark theme and the power meter says 35.8" /></p>
+
+<ul>
+  <li>With the light theme, the TV uses 59.1W.</li>
+  <li>With the dark theme, the TV uses 35.8W.</li>
+</ul>
+
+<p>Assuming the  same 31W for TV components other than the panel, this means a panel consumption of 28W for the light theme, and 4.8W for the dark theme. That’s a 83% reduction in power consumption.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2022-11-23T21:18:03+00:00" pubdate data-updated="true">2022-11-23 21:18</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/climate/">Climate</a>,
+    
+      <a class="category" href="/categories/sustainability/">Sustainability</a>,
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/outreachy-welcoming-new-contributors-to-open-source" title="Previous Post: Outreachy: welcoming new contributors to open source">&laquo; Outreachy: welcoming new contributors to open source</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/measuring-dark-mode-energy-savings">Measuring dark mode’s energy savings</a>
+      </li>
+    
+      <li class="post">
+        <a href="/outreachy-welcoming-new-contributors-to-open-source">Outreachy: welcoming new contributors to open source</a>
+      </li>
+    
+      <li class="post">
+        <a href="/google-summer-of-code-2022-for-wagtail">Google Summer of Code 2022 for Wagtail</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-97-4-percent-north-star">MiXiT 2022: The 97.4% North Star</a>
+      </li>
+    
+      <li class="post">
+        <a href="/state-of-wagtail-wagtail-space-us-2022">The State of Wagtail - Wagtail Space US 2022</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>

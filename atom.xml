@@ -4,13 +4,50 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2023-04-01T10:50:23+00:00</updated>
+  <updated>2023-04-17T00:34:42+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Measuring dark mode’s energy savings]]></title>
+    <link href="https://thib.me/measuring-dark-mode-energy-savings"/>
+    <updated>2022-11-23T21:18:03+00:00</updated>
+    <id>https://thib.me/measuring-dark-mode-energy-savings</id>
+    <content type="html"><![CDATA[<p>I’ve heard lots over the year that “dark themes for sites use up less energy”. Last week we bought a new OLED TV, which is the first OLED device I’ve ever owned, so I finally got a chance to experience whether / how much that was true.</p>
+
+<!-- more -->
+
+<p>So I tested <a href="https://guide.wagtail.org/en-latest/">guide.wagtail.org</a>, on which we recently added a dark theme, displaying the homepage with the TV plugged into a watt meter.</p>
+
+<ul>
+  <li>With the light theme, the TV uses 63W.</li>
+  <li>With the dark theme, it uses 34W.</li>
+</ul>
+
+<p>That’s a stark difference but it gets worse: this TV has lots of onboard processing, so turning off the panel itself with everything else on, the TV still consumes 31W. Which means the TV panel consumes 3W to display in the dark theme, and 33W, 10x more, to display the light theme.</p>
+
+<p>This reduction in power consumption only applies to OLED devices, which have a limited market share but are getting more common.</p>
+
+<h2 id="testing-a-real-world-website">Testing a real-world website</h2>
+
+<p>The Wagtail user guide is a real production site but doesn’t necessarly represent a typical site: it’s text-heavy, even on its homepage. Let’s now try out <a href="https://www.rnib.org.uk/">rnib.org.uk</a>, for which my company recently implemented a dark theme.</p>
+
+<p>Here’s the results on my TV:</p>
+
+<p><img src="/images/blog/measuring-dark-mode-energy-savings/rnib-oled-energy.jpg" alt="Side-by-side shots of the RNIB website with a power meter in front. On the left is a light theme where the power meter says 59.1. On the right dark theme and the power meter says 35.8" /></p>
+
+<ul>
+  <li>With the light theme, the TV uses 59.1W.</li>
+  <li>With the dark theme, the TV uses 35.8W.</li>
+</ul>
+
+<p>Assuming the  same 31W for TV components other than the panel, this means a panel consumption of 28W for the light theme, and 4.8W for the dark theme. That’s a 83% reduction in power consumption.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Outreachy: welcoming new contributors to open source]]></title>
@@ -1571,64 +1608,6 @@ parsy = "1.1.0"</span>
 <h2 id="halfstack-vienna-2022">HalfStack Vienna 2022</h2>
 
 <p>September 2022, Vienna. <a href="https://halfstackconf.com/vienna/">CFP under way</a>, ending 31/05/2022.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Accessibility team reloaded]]></title>
-    <link href="https://thib.me/wagtail-accessibility-team-reloaded"/>
-    <updated>2021-02-24T07:42:03+00:00</updated>
-    <id>https://thib.me/wagtail-accessibility-team-reloaded</id>
-    <content type="html"><![CDATA[<p>After <a href="https://wagtail.org/blog/announcing-wagtail-sub-teams/">6 months of operations</a>, we reflect on the progress our <a href="https://github.com/wagtail/wagtail/wiki/Wagtail-sub-teams#accessibility">accessibility team</a> has made, and go on the lookout for new contributors.</p>
-
-<!-- more -->
-
-<h2 id="progress-to-date">Progress to date</h2>
-
-<p>Early on, <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team#2020-07-17">we chose</a> to give priority to improvements we could make to sites built with Wagtail, rather than the Wagtail admin. Practically, this meant:</p>
-
-<ul>
-  <li>Putting together <a href="https://docs.wagtail.org/en/latest/advanced_topics/accessibility_considerations.html">Wagtail’s accessibility considerations documentation</a>, as most of the accessibility issues we identified were either dependent on how Wagtail is used, or could be worked around by implementers.</li>
-  <li>From this list, we also created a <a href="https://github.com/wagtail/wagtail/projects/10">backlog of known accessibility issues</a>, which we would then proceed to fixing.</li>
-</ul>
-
-<p>Along the way, we also kept working on the <a href="https://github.com/wagtail/wagtail/issues/6107">SVG icons</a> refactoring for the admin, bit by bit.</p>
-
-<h2 id="team-operations">Team operations</h2>
-
-<p>We ran a short <a href="https://github.com/wagtail/wagtail/wiki/Accessibility-team#2021-01-22----team-retrospective">retrospective</a> to reflect on the team’s way of working over the last 6 months.</p>
-
-<ul>
-  <li>There were a total of 5 people involved at some point over the 6 months (Scott, Andreas, Nick, Helen, and Thibaud), but only 2 people attended each meeting on average. Not as much as we’d ideally want to.</li>
-  <li>We met 9 times, for 30min each, scheduled once every two weeks.</li>
-  <li>Overall we’re happy with what we’ve achieved and how the team works.</li>
-  <li>We were keen to do more automated tests and manual auditing but didn’t get around to it.</li>
-</ul>
-
-<h2 id="the-future">The future</h2>
-
-<p>There are a few changes we will want to see over the next 6-month tenure of the team.</p>
-
-<p><strong>We’ll want to do a new, comprehensive accessibility audit of Wagtail</strong>, either for WCAG 2.2 AA or ATAG 2.0. We want to have a clear, public record of how we’re doing.</p>
-
-<p>We’ll review our contribution guidelines <strong>so accessibility is part and parcel of making changes to Wagtail</strong>.</p>
-
-<p>And we’ll also investigate having <strong>automated accessibility tests built into Wagtail</strong>. <a href="https://github.com/neon-jungle/wagtail-accessibility">wagtail-accessibility</a> is one of the most popular third-party packages out there, and we want to double down on having this be one of Wagtail’s strengths.</p>
-
-<hr />
-
-<h3 id="we-also-want-to-involve-more-people">We also want to involve more people</h3>
-
-<p>There’s only so much we can do with two to three of us actively involved – ideally we’d want a team twice that size! All are welcome regardless of skill level or background, and the time commitment is very reasonable. We’re particularly keen to work with people who:</p>
-
-<ul>
-  <li>Have personal experience of access and functional needs, or who are regular users of assistive technologies.</li>
-  <li>Work on User Experience, design, or content – and can help us understand the needs of our users.</li>
-</ul>
-
-<p>And of course web developers who want to have a practical impact on making the web more accessible!</p>
-
-<p>Does this sound like your kind of jam? If you’re keen to learn more, <a href="https://github.com/wagtail/wagtail/wiki/Slack">reach out to us on Slack</a> in #accessibility.</p>
 ]]></content>
   </entry>
   
