@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Making Wagtail accessible"
+title: "Making Wagtail accessible - Wagtail Space US 2019"
 date: 2019-07-25 19:15:08 +0100
 comments: true
 categories: [Wagtail, Accessibility, Tools, Talks]

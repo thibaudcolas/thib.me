@@ -3,7 +3,7 @@ layout: post
 title: "The State of Wagtail - Wagtail Space US 2022"
 date: 2022-03-24 16:20:00 +0000
 comments: true
-categories: [Accessibility, Wagtail, Community]
+categories: [Accessibility, Wagtail, Community, Talks]
 ---
 
 Here are the slides and my notes for my [Wagtail Space US 2022](https://us.wagtail.space/) talk [State of Wagtail](https://youtu.be/tttOiW_bSYM).

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Reusable UI components – A journey from React to Wagtail"
+title: "Reusable UI components – A journey from React to Wagtail - Wagtail Space US 2020"
 date: 2020-07-31 02:15:22 +0100
 comments: true
-categories: [Accessibility, Wagtail, Tools]
+categories: [Accessibility, Wagtail, Talks]
 ---
 
 This is Ben Dickinson and I’s joint [Wagtail Space US 2020](https://us.wagtail.space/) talk about pattern libraries at Torchbox, introducing [django-pattern-library](https://github.com/torchbox/django-pattern-library).

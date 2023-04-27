@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Accessibility wins for Wagtail projects"
+title: "Accessibility wins for Wagtail projects - Wagtail Space US 2020"
 date: 2020-07-30 02:15:22 +0100
 comments: true
-categories: [Accessibility, Wagtail, Tools]
+categories: [Accessibility, Wagtail, Tools, Talks]
 redirect_from:
   - /wagtail-wins
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "2022 web conferences"
 date: 2022-01-08 17:42:03 +0000
 comments: true
-categories: [Talks, Python, JavaScript, Community]
+categories: [Conference, Python, JavaScript, Community]
 ---
 
 Here is a small list of conferences I put together for 2022, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!
