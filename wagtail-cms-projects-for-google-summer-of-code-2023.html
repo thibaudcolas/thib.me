@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Wagtail CMS projects for Google Summer of Code 2023 - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="For the third time, Wagtail is joining Google’s open source internships program.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://wagtail.org/blog/wagtail-cms-projects-for-google-summer-of-code-2023/">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://wagtail.org/blog/wagtail-cms-projects-for-google-summer-of-code-2023/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Wagtail CMS projects for Google Summer of Code 2023">
+  <meta property="og:description" content="For the third time, Wagtail is joining Google’s open source internships program.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2023-02-22-wagtail-cms-projects-for-google-summer-of-code-2023.md">Edit</a>
+      <h1 class="entry-title">Wagtail CMS projects for Google Summer of Code 2023</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2023-02-22T18:50:00+00:00" pubdate data-updated="true">2023-02-22 18:50</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>For the third time, Wagtail is joining Google’s open source internships program.</p>
+
+<!-- more -->
+
+<p><img src="/images/blog/wagtail-cms-projects-for-google-summer-of-code-2023/wagtail-gsoc-social-preview.png" alt="" /></p>
+
+<p>It’s official! Following our <a href="https://wagtail.org/blog/outreachy-welcoming-new-contributors-to-open-source/">participation to Outreachy</a> in the December 2022 cohort, Wagtail is taking part in <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a>.</p>
+
+<h2 id="what-is-google-summer-of-code">What is Google Summer of Code</h2>
+
+<p>Also known as GSoC, Google Summer of Code is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors.</p>
+
+<h2 id="project-ideas">Project ideas</h2>
+
+<p>We’ve earmarked three project ideas this year.</p>
+
+<h3 id="dark-theme-for-wagtail-admin">Dark theme for Wagtail admin</h3>
+
+<p><em>🚧 Update: we have discontinued this idea, as the work involved isn’t substantial enough to represent a GSoC project.</em></p>
+
+<p>This is a continuation of past projects to make Wagtail’s color theme configurable, and accessibility improvements for Windows High Contrast mode users.</p>
+
+<p>Here is the latest prototype of our dark theme, in a high contrast variant:</p>
+
+<p><img src="/images/blog/wagtail-cms-projects-for-google-summer-of-code-2023/dark-high-contrast.png" alt="Wagtail dark theme prototype, in high contrast mode" /></p>
+
+<p>For more information, see <a href="https://github.com/wagtail/wagtail/issues/10056">Dark theme for the admin interface #10056</a>.</p>
+
+<h3 id="rfc-72-background-workers">RFC 72: Background workers</h3>
+
+<p>Wagtail currently doesn’t have a first-party solution for long-running tasks. Other CMSs in the ecosystem such as WordPress and Drupal have background workers, allowing them to push tasks into the background to be processed at a later date, without requiring the end user to wait for them to occur.</p>
+
+<p>One of the key goals for this project is removing the requirement for the user to wait for tasks they don’t need to.</p>
+
+<p>For more information, see <a href="https://github.com/wagtail/rfcs/pull/72">RFC 72: Background workers</a>.</p>
+
+<h3 id="greener-coding-wagtails-climate-impact">Greener coding: Wagtail’s climate impact</h3>
+
+<p>We’re starting to have a better understanding of the<a href="https://github.com/wagtail/wagtail/discussions/8843">climate impact of Wagtail</a> as a CMS, and how we can reduce it. We want to integrate our findings into Wagtail’s direction, and make concrete improvements to the project to reduce related carbon emissions.</p>
+
+<p>This project is part of a partnership with the <a href="https://www.thegreenwebfoundation.org/">Green Web Foundation</a>, with mentors from both organisations.</p>
+
+<h2 id="how-to-participate">How to participate</h2>
+
+<p>Head over to our <a href="https://wagtail.org/gsoc">GSoC documentation</a> and <a href="https://github.com/wagtail/gsoc/discussions">GSoC Discussions</a>. Review our contributor guide, and come say hi!</p>
+
+<h2 id="whats-next">What’s next</h2>
+
+<p>We hope to hear from a lot of newcomers through the <a href="https://developers.google.com/open-source/gsoc/timeline">application period</a>, where candidates get to know different communities and apply to projects. We’ll make sure to share more information about projects that are going ahead and their respective contributors once details are confirmed, closer to the summer.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2023-02-22T18:50:00+00:00" pubdate data-updated="true">2023-02-22 18:50</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>,
+    
+      <a class="category" href="/categories/outreach/">Outreach</a>,
+    
+      <a class="category" href="/categories/community/">Community</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2023-web-conferences" title="Previous Post: 2023 web conferences">&laquo; 2023 web conferences</a>
+      
+      
+        <a class="basic-alignment right" href="/wagtails-new-developer-relations-team" title="Next Post: Wagtail’s new Developer Relations team">Wagtail’s new Developer Relations team &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/google-season-of-docs-creating-wagtail-developer-onboarding-tutorials">Google Season of Docs: Creating Wagtail Developer Onboarding Tutorials</a>
+      </li>
+    
+      <li class="post">
+        <a href="/evaluating-carbon-footprint-django-wagtail">Evaluating the carbon footprint of Django and Wagtail - Django London</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wagtails-new-developer-relations-team">Wagtail’s new Developer Relations team</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wagtail-cms-projects-for-google-summer-of-code-2023">Wagtail CMS projects for Google Summer of Code 2023</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2023-web-conferences">2023 web conferences</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>
