@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Estimating Wagtail websites’ emissions"
-date: 2023-05-18 19:39:03 +0100
+date: 2023-05-18 00:13:03 +0100
 comments: true
 categories: [Accessibility, Report, Wagtail]
 canonical: https://wagtail.org/blog/wagtail-accessibility-statistics-for-gaad-2023/
