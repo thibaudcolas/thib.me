@@ -4,13 +4,99 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2023-05-17T22:39:05+00:00</updated>
+  <updated>2023-05-17T23:24:11+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Estimating Wagtail websites’ emissions]]></title>
+    <link href="https://thib.me/estimating-wagtail-websites-emissions"/>
+    <updated>2023-05-10T18:39:03+00:00</updated>
+    <id>https://thib.me/estimating-wagtail-websites-emissions</id>
+    <content type="html"><![CDATA[<p>Wagtail’s approach to quantifying the carbon footprint of Wagtail websites, so we can reduce it.</p>
+
+<!-- more -->
+
+<p>As Wagtail took off as a project, it became crystal clear it would be popular. Not necessarily as popular as the most established CMS options (yet!), but still powering serious websites on the web. This popularity comes with a responsibility: for us to acknowledge Wagtail websites do have a clear carbon footprint in their operations. Those digital emissions contribute to the climate change impact of the digital world. This acknowledgement is the foundation of <a href="https://wagtail.org/sustainability/">our commitment to sustainability</a>.</p>
+
+<p>Based on <a href="https://www.cell.com/patterns/pdfExtended/S2666-3899(21)00188-4">current research</a>, emissions from Information and Communication Technologies represent on the order of 2 to 4% of global emissions (similar to major countries or transportation industries). And they’re projected significantly in the future. Let’s do our best to estimate Wagtail’s footprint within those numbers – so we can reduce it.</p>
+
+<h2 id="our-preferred-methodology">Our preferred methodology</h2>
+
+<p>Due to how carbon emissions originate at all points in the value chain of software, it can be very hard to estimate them accurately. We chose a methodology which makes up for its lack of precision by being very established and simple to apply: the <a href="https://sustainablewebdesign.org/calculating-digital-emissions/">Sustainable Web Design model</a>. This is the model used by a lot of online calculators, such as <a href="https://www.websitecarbon.com/">Website Carbon</a>.</p>
+
+<p>This methodology clearly specifies two fundamentals decisions when estimating emissions:</p>
+
+<ul>
+  <li><strong>What to measure</strong> – often referred to as “system boundaries” or segments. This can be <a href="https://www.wholegraindigital.com/blog/website-energy-consumption/">very complex on the web</a>, where the fundamental website visitor experience involves a lot of infrastructure and devices, with different ownership structures.</li>
+  <li><strong>How to measure it</strong> – practically, how to compute emissions once the system boundaries are agreed.</li>
+</ul>
+
+<h3 id="system-boundaries">System boundaries</h3>
+
+<p>Here are the system boundaries as defined by this methodology:</p>
+
+<p><img src="/images/blog/estimating-wagtail-websites-emissions/swd-energy-usage.png" alt="How the Sustainable Web Design model allocates energy usage" /></p>
+
+<p><em>Image credit:</em> <a href="https://developers.thegreenwebfoundation.org/co2js/explainer/methodologies-for-calculating-website-carbon/"><em>Green Web Foundation, CO2.js</em></a></p>
+
+<ul>
+  <li><strong>Consumer device use</strong>: end users interacting with a product or service. This accounts for an estimated 52% of the system.</li>
+  <li><strong>Network use</strong>: data transferred across the network. This accounts for an estimated 14% of the system.</li>
+  <li><strong>Data center use</strong>: energy required to house and serve data. This accounts for an estimated 15% of the system.</li>
+  <li><strong>Hardware production</strong>: embodied energy used in the creation of embedded chips, use of data centers, use of networks, and the use of consumer communication devices. This accounts for an estimated 19% of the system. </li>
+</ul>
+
+<h3 id="estimation-approach">Estimation approach</h3>
+
+<p>With system boundaries now defined, the model then defines how to measure energy usage (and therefore emissions) with one key metric: data transferred, in kWh/GB. The more data is stored, manipulated, transferred over the network, displayed on a page – the more emissions.</p>
+
+<p>There are <a href="https://www.fershad.com/writing/is-data-the-best-proxy-for-website-carbon-emissions/">clear flaws with this approach</a>: different types of data will be more or less taxing on different parts of the system. It’s nonetheless a good starting approximation because of how simple it is to measure the size of website pages.</p>
+
+<h3 id="more-precise-measurements">More precise measurements</h3>
+
+<p>With the help of the Green Coding Berlin group and the Green Web Foundation, we’ve also been exploring much more precise measurements as part of the <a href="https://github.com/wagtail/wagtail/discussions/8843">Green coding</a> project. With their technology, we can measure detailed power consumption of specific components as a simulated user interacts with the site:</p>
+
+<p><img src="/images/blog/estimating-wagtail-websites-emissions/green-coding-chart.png" alt="Green coding chart" /></p>
+
+<p>Here, we see how different parts of a website’s infrastructure consume more or less energy as part of specific aspects of serving pages.</p>
+
+<hr />
+
+<p>Those measurements have the potential to allow us to quantify specific improvements to the CMS, therefore improving our ability to influence Wagtail websites’ footprint in the real world.</p>
+
+<h2 id="measuring-the-wagtail-web">Measuring the Wagtail web</h2>
+
+<p>To apply our chosen methodology to Wagtail websites, out there, we can use publicly-available data: the Chrome UX Report (CrUX), HTTP Archive, and Wappalyzer. This is the same methodology as devised for the HTTP Archive’s yearly Web Almanac report, which had a <a href="https://almanac.httparchive.org/en/2022/sustainability">Sustainability chapter</a> for the first time in 2022.</p>
+
+<p>With those datasets of websites’ homepages, as of April 2023, we get:</p>
+
+<ul>
+  <li><strong>4349 websites reported as using Wagtail</strong></li>
+  <li>For those websites, a <strong>median page weight of 1.9 MB</strong>. This is higher than we’d like but <a href="https://almanac.httparchive.org/en/2022/page-weight#request-bytes">in line with industry averages</a>.</li>
+  <li>Emissions per page visit on the order of 0.5 to 1.5 grams of CO2 equivalent per page view (gCO2e/pageview)</li>
+  <li><strong>Average emissions per site around 1.9 tCO2e/year</strong></li>
+</ul>
+
+<p>All in all – <strong>a total of 8240 tons of CO2e/year for all 4349 Wagtail sites</strong>. Though also in line with <a href="https://almanac.httparchive.org/en/2022/sustainability#carbon-emissions">industry average carbon emissions data</a>, this is an uncomfortable figure nonetheless. Which we now have to work to reduce.</p>
+
+<p>Here is what those emissions look like as a tree map, with specific sites or countries sized according to their emissions:</p>
+
+<p><img src="/images/blog/estimating-wagtail-websites-emissions/total_carbon_footprint_of_Wagtail_sites_as_a_treemap.png" alt="Total carbon footprint of Wagtail sites as a treemap - 8240 tCO2e per year" /></p>
+
+<hr />
+
+<p><em>For further reference, access our full report and data:</em> <a href="https://docs.google.com/spreadsheets/d/18TuJvN-SHDZAFXFFQgVwt5S5kQO-eYiGCHJGQmwed4Q/edit"><em>Wagtail sites emissions dashboard</em></a></p>
+
+<h2 id="whats-next">What’s next</h2>
+
+<p>Based on this research, we’re hoping to inform future work. We’re soon starting <a href="https://wagtail.org/blog/going-green-with-google-summer-of-code/">Google Summer of Code internships with a green focus</a>, and also hoping to place sustainability improvements <a href="https://wagtail.org/roadmap/">on our roadmap</a> with the view to secure sponsorships from organisations who want to reduce their carbon emissions.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Google Season of Docs: Creating Wagtail Developer Onboarding Tutorials]]></title>
@@ -1659,180 +1745,6 @@ Or you can use aria-describedby to make the association, like this:
   <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=1900s">31:40</a> Looping animations</li>
   <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=1960s">32:40</a> Testing with VoiceOver in Safari</li>
   <li><a href="https://www.youtube.com/watch?v=NH4VWUguxUw&amp;t=2160s">36:00</a> Performance issues with banner animation</li>
-</ul>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics]]></title>
-    <link href="https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics"/>
-    <updated>2021-06-05T21:07:49+00:00</updated>
-    <id>https://thib.me/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics</id>
-    <content type="html"><![CDATA[<p>Here are the results of an accessibility audit I did for <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/issues/57">Django Postgres Metrics</a>, as part of the DjangoCon Europe 2021 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: <a href="https://youtu.be/8pegTdRaUDg">DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics</a>.</p>
-
-<!-- more -->
-
-<iframe title="DjangoCon Europe 2021 sprints – Accessibility review of Django Postgres Metrics" width="560" height="315" src="https://www.youtube-nocookie.com/embed/8pegTdRaUDg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<h2 id="tldr-011515">TL;DR; <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=4515s">01:15:15</a></h2>
-
-<p>TL;DR; in video form: <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=4515s">01:15:15</a></p>
-
-<ul>
-  <li>Most issues come from Django for the UI, and the RTD theme for the documentation</li>
-  <li>Great effort on translations and RTL support! It’s wonderful to see this being done as a baseline</li>
-  <li>Very semantic tables markup, which definitely matters for the metrics’ display</li>
-  <li>Some issues from this package with dark mode support, which make the library potentially unusable for dark mode users. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/59">#59</a>.</li>
-  <li>There are a few improvements for screen reader users to be done here and there</li>
-  <li>Table sorting was particularly hard to follow with a screen reader, although I suspect this is the Django implementation</li>
-</ul>
-
-<h2 id="about-the-audit-000105">About the audit <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=65s">00:01:05</a></h2>
-
-<p>Scope:</p>
-
-<ul>
-  <li>HTML templates in GitHub</li>
-  <li>UI in the Django admin (minimal customisations)</li>
-  <li>Documentation in README</li>
-  <li>Documentation in Read the Docs (default sphinx-rtd theme)</li>
-</ul>
-
-<p>Methodology:</p>
-
-<ul>
-  <li>Automated tests with Accessibility Insights with Chrome</li>
-  <li>Keyboard navigation (tab stops)</li>
-  <li>Color contrast</li>
-  <li>Dark mode support</li>
-  <li>RTL support</li>
-  <li>Mobile support</li>
-  <li>Screen reader navigation (VoiceOver in Safari)</li>
-  <li>Other things picked up along the way</li>
-</ul>
-
-<h2 id="html-templates-000222">HTML templates <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=142s">00:02:22</a></h2>
-
-<p><code class="language-plaintext highlighter-rouge">index.html</code>:</p>
-
-<ul>
-  <li>There are a lot of links with the <code class="language-plaintext highlighter-rouge">title</code> attribute being used in. This can be announced multiple times by some screen readers, so I would suggest not using <code class="language-plaintext highlighter-rouge">title</code> wherever it matches the visible label of the link</li>
-  <li>Table markup for the navigation in <code class="language-plaintext highlighter-rouge">index.html</code> looks great, however this would be much quicker to navigate with a screen reader by using simpler markup, for example <code class="language-plaintext highlighter-rouge">ul</code> with a list item for each link.</li>
-</ul>
-
-<p><code class="language-plaintext highlighter-rouge">table.html</code>:</p>
-
-<ul>
-  <li>Place the breadcrumb in a <code class="language-plaintext highlighter-rouge">&lt;nav aria-label="Breadcrumbs"&gt;&lt;/nav&gt;</code> landmark, so screen reader users can bypass it or reach it more easily</li>
-  <li>Add <code class="language-plaintext highlighter-rouge">aria-current="page"</code> to the current page so it’s announced as such. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
-</ul>
-
-<h2 id="ui-000738">UI <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=458s">00:07:38</a></h2>
-
-<h3 id="automated-tests-with-accessibility-insights-with-chrome">Automated tests with Accessibility Insights with Chrome</h3>
-
-<ul>
-  <li>A lot of color contrast issues, but I believe they all come from Django itself</li>
-</ul>
-
-<h3 id="keyboard-navigation-001235">Keyboard navigation <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=755s">00:12:35</a></h3>
-
-<ul>
-  <li>Missing a skip link on all pages – Django issue</li>
-  <li>On metric pages, I found it a bit odd how the tab focus moves from the breadcrumb, to the package’s nav to the right, and then back to the metrics on the left. It’d be better to go straight from breadcrumb to the metrics’ tables.</li>
-  <li>Likely a Django issue – the tab order for sorting is unexpected (right-to-left)</li>
-</ul>
-
-<h3 id="color-contrast">Color contrast</h3>
-
-<ul>
-  <li>In the package’s views in the “POSTGRESQL METRICS” nav, there isn’t enough contrast between the “active” menu item and the other ones, so people won’t be able to tell which menu item is active. This is both for the text, and the “selected” indicator”. I would suggest adding an underline to the text. <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=1584s">00:26:24</a></li>
-</ul>
-
-<h3 id="dark-mode-001603">Dark mode <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=963s">00:16:03</a></h3>
-
-<ul>
-  <li>None of the package’s <code class="language-plaintext highlighter-rouge">ok</code>, <code class="language-plaintext highlighter-rouge">warning</code>, <code class="language-plaintext highlighter-rouge">critical</code>, <code class="language-plaintext highlighter-rouge">info</code> states work in dark mode. They make the table’s contents completely unreadable. A solution would be to use <code class="language-plaintext highlighter-rouge">@media (prefers-color-scheme: dark)</code> styles like Django does, however I would recommend another approach that doesn’t rely on background color as the color also won’t be picked up by blind users – it’d be better to represent those 4 states with an icon, that could then have a text alternative, or just a label. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/59">#59</a>.</li>
-</ul>
-
-<p>Illustration:</p>
-
-<p><a href="/images/blog/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics/django-postgres-metrics-dark-mode.png"><img src="/images/blog/djangocon-europe-2021-sprints-accessibility-review-django-postgres-metrics/django-postgres-metrics-dark-mode.png" alt="Screenshot of four highlighted rows in Django Postgres Metrics in dark mode. The rows aren’t readable" /></a></p>
-
-<h3 id="rtl-support-001920">RTL support <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=1160s">00:19:20</a></h3>
-
-<p>😐 I did all of my testing without having configured the language in Django settings, forgetting Django uses this to set <code class="language-plaintext highlighter-rouge">LANGUAGE_BIDI</code> and load the correct stylesheet. As far as I can tell there are no issues here!</p>
-
-<h3 id="mobile-support-002415">Mobile support <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=1455s">00:24:15</a></h3>
-
-<p>(this is more “small browser” support really, I didn’t do any touch navigation testing)</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">urlize</code>d links cause the page to overflow and scroll in 2 directions at once. That’s bad. For this, and for screen readers, I’d recommend using proper link labels.</li>
-  <li>Tables also cause the page to overflow and scroll in 2 directions. It would be better if they overflowed the page but the overflow was scrollable for the table separately (wrap the table in a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> with <code class="language-plaintext highlighter-rouge">overflow: scroll</code>).</li>
-  <li>With the way tables resize currently, they cause some of the cells with long values to reflow, which makes big numbers harder to read in my opinion. Scroll would be better in this instance.</li>
-</ul>
-
-<h3 id="screen-reader-navigation-voiceover-with-safari-003000">Screen reader navigation (VoiceOver with Safari) <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=1800s">00:30:00</a></h3>
-
-<p>Dashboard:</p>
-
-<ul>
-  <li>Django issue – the views should be using ARIA landmarks to facilitate navigation.</li>
-  <li>Prefer displaying “POSTGRESQL METRICS” in TitleCase or lowercase as much as possible, rather than uppercase, as TTS is prone to mispronounce PostgreSQL if it’s all uppercase.</li>
-  <li>The “show” link need a more descriptive label for screen reader users (with <code class="language-plaintext highlighter-rouge">aria-label</code>) so they can be understood without the visual context the links are in on the page. Alternatively, remove those links, as they do the same thing as the link next to them that has a better label already. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
-  <li>Django issue – duplicate h1 heading</li>
-</ul>
-
-<p>Metrics views:</p>
-
-<ul>
-  <li>All of the custom views are missing a <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> matching the <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=915s">00:15:15</a>. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
-  <li>Prefer to use links with human-friendly labels over <code class="language-plaintext highlighter-rouge">urlize</code> URLs. These don’t announce very well with screen reader text-to-speech unless the user knows how to navigate word-by-word or character-by-character <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=678s">00:11:18</a></li>
-  <li>Django issue (?) I found the table ordering to be very confusing</li>
-  <li>Consider adding spaces around <code class="language-plaintext highlighter-rouge">=</code> signs in table captions so screen readers TTS have a better chance of pronouncing the text correctly</li>
-  <li>Currently the warning/info/ok/critical status are invisible for screen reader users. I’d suggesting adding a screen-reader only label, or an icon + label</li>
-  <li>Some of the larger numbers in the tables are pronounced as identifiers (“one three five”) rather than numbers (“one hundred thirty five”). Consider adding numeric separators to make numbers more readable for humans and text-to-speech.</li>
-</ul>
-
-<h3 id="other-things-picked-up-along-the-way">Other things picked up along the way</h3>
-
-<ul>
-  <li>The bigger values in tables are picked up by my browser as telephone numbers. This might warrant a <code class="language-plaintext highlighter-rouge">&lt;meta name="format-detection" content="telephone=no"/&gt;</code>.</li>
-</ul>
-
-<h2 id="docs-in-readme-005315">Docs in README <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=3195s">00:53:15</a></h2>
-
-<ul>
-  <li>The project’s name <code class="language-plaintext highlighter-rouge">django-postgres-metrics</code> is being read letter-by-letter by VoiceOver, unless I manually switch to word-by-word navigation. In the main heading, I would suggest switching to <code class="language-plaintext highlighter-rouge">Django Postgres Metrics</code> to make it more likely for people to understand what the project is.</li>
-  <li>The badges’ alt text should match the text on the images. This is likely impossible, but I’d suggest changing alt text to match the visible text more closely. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
-  <li>Python and Django versions badges should link to some place those versions are available in text format (or add the versions hard-coded in the alt text). Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
-  <li>It would be nice to use more descriptive alt text for the screenshot. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
-  <li>The “AT” and “DOT” in the email address are read as acronyms. Would be nice to replace with lowercase variants so they are read as words. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
-</ul>
-
-<h2 id="documentation-in-read-the-docs-default-sphinx-rtd-theme-010045">Documentation in Read the Docs (default sphinx-rtd theme) <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=3645s">01:00:45</a></h2>
-
-<h3 id="automated-tests-with-accessibility-insights-with-chrome-1">Automated tests with Accessibility Insights with Chrome</h3>
-
-<ul>
-  <li>Too many issues for me to count, all with the theme itself I expect</li>
-</ul>
-
-<h3 id="keyboard-navigation-tab-stops">Keyboard navigation (tab stops)</h3>
-
-<ul>
-  <li>Missing a skip link</li>
-  <li>The RTD version picker is impossible to reach</li>
-</ul>
-
-<h3 id="screen-reader-navigation-voiceover-with-safari-010545">Screen reader navigation (VoiceOver with Safari) <a href="https://www.youtube.com/watch?v=8pegTdRaUDg&amp;t=3945s">01:05:45</a></h3>
-
-<ul>
-  <li>A lot of RTD issues at the theme level</li>
-  <li>RTD ads are particularly poorly done</li>
-  <li>There are two <code class="language-plaintext highlighter-rouge">h1</code> in the index page. Fixed in <a href="https://github.com/django-postgres-metrics/django-postgres-metrics/pull/58">#58</a>.</li>
-  <li>The RTD version picker is reachable, but impossible to open</li>
 </ul>
 ]]></content>
   </entry>

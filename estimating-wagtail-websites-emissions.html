@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Estimating Wagtail websites’ emissions - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="Wagtail’s approach to quantifying the carbon footprint of Wagtail websites, so we can reduce it.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://wagtail.org/blog/estimating-wagtail-websites-emissions/">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://wagtail.org/blog/estimating-wagtail-websites-emissions/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Estimating Wagtail websites’ emissions">
+  <meta property="og:description" content="Wagtail’s approach to quantifying the carbon footprint of Wagtail websites, so we can reduce it.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2023-05-10-estimating-wagtail-websites-emissions.md">Edit</a>
+      <h1 class="entry-title">Estimating Wagtail websites’ emissions</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2023-05-10T18:39:03+00:00" pubdate data-updated="true">2023-05-10 18:39</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Wagtail’s approach to quantifying the carbon footprint of Wagtail websites, so we can reduce it.</p>
+
+<!-- more -->
+
+<p>As Wagtail took off as a project, it became crystal clear it would be popular. Not necessarily as popular as the most established CMS options (yet!), but still powering serious websites on the web. This popularity comes with a responsibility: for us to acknowledge Wagtail websites do have a clear carbon footprint in their operations. Those digital emissions contribute to the climate change impact of the digital world. This acknowledgement is the foundation of <a href="https://wagtail.org/sustainability/">our commitment to sustainability</a>.</p>
+
+<p>Based on <a href="https://www.cell.com/patterns/pdfExtended/S2666-3899(21)00188-4">current research</a>, emissions from Information and Communication Technologies represent on the order of 2 to 4% of global emissions (similar to major countries or transportation industries). And they’re projected significantly in the future. Let’s do our best to estimate Wagtail’s footprint within those numbers – so we can reduce it.</p>
+
+<h2 id="our-preferred-methodology">Our preferred methodology</h2>
+
+<p>Due to how carbon emissions originate at all points in the value chain of software, it can be very hard to estimate them accurately. We chose a methodology which makes up for its lack of precision by being very established and simple to apply: the <a href="https://sustainablewebdesign.org/calculating-digital-emissions/">Sustainable Web Design model</a>. This is the model used by a lot of online calculators, such as <a href="https://www.websitecarbon.com/">Website Carbon</a>.</p>
+
+<p>This methodology clearly specifies two fundamentals decisions when estimating emissions:</p>
+
+<ul>
+  <li><strong>What to measure</strong> – often referred to as “system boundaries” or segments. This can be <a href="https://www.wholegraindigital.com/blog/website-energy-consumption/">very complex on the web</a>, where the fundamental website visitor experience involves a lot of infrastructure and devices, with different ownership structures.</li>
+  <li><strong>How to measure it</strong> – practically, how to compute emissions once the system boundaries are agreed.</li>
+</ul>
+
+<h3 id="system-boundaries">System boundaries</h3>
+
+<p>Here are the system boundaries as defined by this methodology:</p>
+
+<p><img src="/images/blog/estimating-wagtail-websites-emissions/swd-energy-usage.png" alt="How the Sustainable Web Design model allocates energy usage" /></p>
+
+<p><em>Image credit:</em> <a href="https://developers.thegreenwebfoundation.org/co2js/explainer/methodologies-for-calculating-website-carbon/"><em>Green Web Foundation, CO2.js</em></a></p>
+
+<ul>
+  <li><strong>Consumer device use</strong>: end users interacting with a product or service. This accounts for an estimated 52% of the system.</li>
+  <li><strong>Network use</strong>: data transferred across the network. This accounts for an estimated 14% of the system.</li>
+  <li><strong>Data center use</strong>: energy required to house and serve data. This accounts for an estimated 15% of the system.</li>
+  <li><strong>Hardware production</strong>: embodied energy used in the creation of embedded chips, use of data centers, use of networks, and the use of consumer communication devices. This accounts for an estimated 19% of the system. </li>
+</ul>
+
+<h3 id="estimation-approach">Estimation approach</h3>
+
+<p>With system boundaries now defined, the model then defines how to measure energy usage (and therefore emissions) with one key metric: data transferred, in kWh/GB. The more data is stored, manipulated, transferred over the network, displayed on a page – the more emissions.</p>
+
+<p>There are <a href="https://www.fershad.com/writing/is-data-the-best-proxy-for-website-carbon-emissions/">clear flaws with this approach</a>: different types of data will be more or less taxing on different parts of the system. It’s nonetheless a good starting approximation because of how simple it is to measure the size of website pages.</p>
+
+<h3 id="more-precise-measurements">More precise measurements</h3>
+
+<p>With the help of the Green Coding Berlin group and the Green Web Foundation, we’ve also been exploring much more precise measurements as part of the <a href="https://github.com/wagtail/wagtail/discussions/8843">Green coding</a> project. With their technology, we can measure detailed power consumption of specific components as a simulated user interacts with the site:</p>
+
+<p><img src="/images/blog/estimating-wagtail-websites-emissions/green-coding-chart.png" alt="Green coding chart" /></p>
+
+<p>Here, we see how different parts of a website’s infrastructure consume more or less energy as part of specific aspects of serving pages.</p>
+
+<hr />
+
+<p>Those measurements have the potential to allow us to quantify specific improvements to the CMS, therefore improving our ability to influence Wagtail websites’ footprint in the real world.</p>
+
+<h2 id="measuring-the-wagtail-web">Measuring the Wagtail web</h2>
+
+<p>To apply our chosen methodology to Wagtail websites, out there, we can use publicly-available data: the Chrome UX Report (CrUX), HTTP Archive, and Wappalyzer. This is the same methodology as devised for the HTTP Archive’s yearly Web Almanac report, which had a <a href="https://almanac.httparchive.org/en/2022/sustainability">Sustainability chapter</a> for the first time in 2022.</p>
+
+<p>With those datasets of websites’ homepages, as of April 2023, we get:</p>
+
+<ul>
+  <li><strong>4349 websites reported as using Wagtail</strong></li>
+  <li>For those websites, a <strong>median page weight of 1.9 MB</strong>. This is higher than we’d like but <a href="https://almanac.httparchive.org/en/2022/page-weight#request-bytes">in line with industry averages</a>.</li>
+  <li>Emissions per page visit on the order of 0.5 to 1.5 grams of CO2 equivalent per page view (gCO2e/pageview)</li>
+  <li><strong>Average emissions per site around 1.9 tCO2e/year</strong></li>
+</ul>
+
+<p>All in all – <strong>a total of 8240 tons of CO2e/year for all 4349 Wagtail sites</strong>. Though also in line with <a href="https://almanac.httparchive.org/en/2022/sustainability#carbon-emissions">industry average carbon emissions data</a>, this is an uncomfortable figure nonetheless. Which we now have to work to reduce.</p>
+
+<p>Here is what those emissions look like as a tree map, with specific sites or countries sized according to their emissions:</p>
+
+<p><img src="/images/blog/estimating-wagtail-websites-emissions/total_carbon_footprint_of_Wagtail_sites_as_a_treemap.png" alt="Total carbon footprint of Wagtail sites as a treemap - 8240 tCO2e per year" /></p>
+
+<hr />
+
+<p><em>For further reference, access our full report and data:</em> <a href="https://docs.google.com/spreadsheets/d/18TuJvN-SHDZAFXFFQgVwt5S5kQO-eYiGCHJGQmwed4Q/edit"><em>Wagtail sites emissions dashboard</em></a></p>
+
+<h2 id="whats-next">What’s next</h2>
+
+<p>Based on this research, we’re hoping to inform future work. We’re soon starting <a href="https://wagtail.org/blog/going-green-with-google-summer-of-code/">Google Summer of Code internships with a green focus</a>, and also hoping to place sustainability improvements <a href="https://wagtail.org/roadmap/">on our roadmap</a> with the view to secure sponsorships from organisations who want to reduce their carbon emissions.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2023-05-10T18:39:03+00:00" pubdate data-updated="true">2023-05-10 18:39</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/sustainability/">Sustainability</a>,
+    
+      <a class="category" href="/categories/climate/">Climate</a>,
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/google-season-of-docs-creating-wagtail-developer-onboarding-tutorials" title="Previous Post: Google Season of Docs: Creating Wagtail Developer Onboarding Tutorials">&laquo; Google Season of Docs: Creating Wagtail Developer Onboarding Tutorials</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/estimating-wagtail-websites-emissions">Estimating Wagtail websites’ emissions</a>
+      </li>
+    
+      <li class="post">
+        <a href="/google-season-of-docs-creating-wagtail-developer-onboarding-tutorials">Google Season of Docs: Creating Wagtail Developer Onboarding Tutorials</a>
+      </li>
+    
+      <li class="post">
+        <a href="/evaluating-carbon-footprint-django-wagtail">Evaluating the carbon footprint of Django and Wagtail - Django London</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wagtails-new-developer-relations-team">Wagtail’s new Developer Relations team</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wagtail-cms-projects-for-google-summer-of-code-2023">Wagtail CMS projects for Google Summer of Code 2023</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>
