@@ -1,3 +1,3 @@
 👋  hi there! Here are things I wrote recently:
 
-**[Building accessibility into open-source projects](https://thib.me/pycon-us-2021-building-accessibility-into-open-source-projects)**  |  **[Web Accessibility ♥ Python](https://thib.me/pycon-us-2021-python-accessibility-ftw)**  |  **[ATAG 2.0 getting started resources](https://thib.me/atag-getting-started-resources)**
+**[Estimating Wagtail websites’ emissions](https://thib.me/estimating-wagtail-websites-emissions/)**  |  **[2022 HTTP Archive Web Almanac: Accessibility](https://almanac.httparchive.org/en/2022/accessibility)**  |  **[Measuring dark mode’s energy savings](https://thib.me/measuring-dark-mode-energy-savings)**
