@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-05-17T23:24:11+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Estimating Wagtail websites’ emissions</title><link href="https://thib.me/estimating-wagtail-websites-emissions" rel="alternate" type="text/html" title="Estimating Wagtail websites’ emissions" /><published>2023-05-10T18:39:03+00:00</published><updated>2023-05-10T18:39:03+00:00</updated><id>https://thib.me/estimating-wagtail-websites-emissions</id><content type="html" xml:base="https://thib.me/estimating-wagtail-websites-emissions"><![CDATA[<p>Wagtail’s approach to quantifying the carbon footprint of Wagtail websites, so we can reduce it.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-05-17T23:40:22+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Estimating Wagtail websites’ emissions</title><link href="https://thib.me/wagtail-accessibility-statistics-for-gaad-2023" rel="alternate" type="text/html" title="Estimating Wagtail websites’ emissions" /><published>2023-05-17T23:13:03+00:00</published><updated>2023-05-17T23:13:03+00:00</updated><id>https://thib.me/wagtail-accessibility-statistics-for-gaad-2023</id><content type="html" xml:base="https://thib.me/wagtail-accessibility-statistics-for-gaad-2023"><![CDATA[<p>As part of #GAAD, this week we’re sharing accessibility stats &amp; tips from Wagtail sites.</p>
+
+<!-- more -->
+
+<h2 id="accessibility-checks-on-wagtail-sites">Accessibility checks on Wagtail sites</h2>
+
+<p>Here are 4 common issues detectable with our built-in checker:</p>
+
+<p><img src="/images/blog/wagtail-accessibility-statistics-for-gaad-2023/accessibility_checks_on_wagtail_sites.png" alt="Accessibility checks on Wagtail sites - HTTP Archive Wagtail sites in 2023 - GAAD 2023" /></p>
+
+<ul>
+  <li><strong>button-name</strong>: A button element on the page is lacking a label. This is entirely detectable with automated tests such as those featured in our <a href="https://wagtail.org/blog/introducing-wagtails-new-accessibility-checker/">built-in accessibility checker</a>, built on Axe.</li>
+  <li><strong>frame-title</strong>: A frame (such as an embedded video) is missing its title. Again entirely detectable with automated tests – and very simple to fix once identified!</li>
+  <li><strong>heading-order</strong>: Some heading levels are getting skipped on the page – always have a main heading (h1) followed by subheadings (h2, h3, etc.).</li>
+  <li><strong>link-name</strong>: Just like button-name, one of the page’s links is missing its title.</li>
+</ul>
+
+<p>All of those issues are <a href="https://almanac.httparchive.org/en/2022/accessibility#heading-hierarchy">common on the web</a>, but with the right tests in place, there is no reason for that to remain the case.</p>
+
+<hr />
+
+<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=316824519">Lighthouse checks, 2023-04</a></em>.</p>
+
+<h2 id="mean-accessibility-scores-of-wagtail-sites">Mean accessibility scores of Wagtail sites</h2>
+
+<p>We see clear improvements over time on accessibility scores of Wagtail sites, but they’re too slow-moving:</p>
+
+<p><img src="/images/blog/wagtail-accessibility-statistics-for-gaad-2023/mean_accessibility_scores_of_wagtail_sites.png" alt="Mean accessibility scores of Wagtail sites - HTTP Archive sites in 2023 - GAAD 2023" /></p>
+
+<p>This shows the mean accessibility score of Wagtail sites over time, compared to <a href="https://almanac.httparchive.org/en/2022/accessibility#introduction">industry-average figures</a>. Wagtail sites are consistently doing better – but only just.</p>
+
+<p>With appropriate targets and ongoing testing, there is no reason all sites couldn’t score a perfect “100” (no issues detected) on those tests.</p>
+
+<hr />
+
+<p><em>Data for this chart is from the <a href="https://discuss.httparchive.org/t/new-dashboard-the-core-web-vitals-technology-report/2178">Core Web Vitals Technology Report</a></em>.</p>
+
+<h2 id="high-contrast-mode-support-in-wagtail-sites">High contrast mode support in Wagtail sites</h2>
+
+<p>#GAAD tip #3: Support High contrast mode on your websites! Also known as Contrast themes, it allows users to adjust the color palette of the site to better suit their vision. Very few websites make adjustments to support it:</p>
+
+<p><img src="/images/blog/wagtail-accessibility-statistics-for-gaad-2023/high_contrast_mode_support_in_Wagtail_sites.png" alt="High contrast mode support in Wagtail sites - HTTP Archive Wagtail sites in 2022-07 - GAAD 2023" /></p>
+
+<ul>
+  <li>“forced-colors” indicates a website making adjustments for users with custom color palettes – for example adding extra borders</li>
+  <li>“prefers-contrast” indicates a website adjusting its styles based on whether users request more or <em>less</em> contrast, which is an option in iOS and Android</li>
+</ul>
+
+<p>We’ve made a lot of adjustments in recent versions of Wagtail to better support Contrast Themes / High contrast mode. Here’s an example in the default dark theme:</p>
+
+<p><img src="/images/blog/wagtail-accessibility-statistics-for-gaad-2023/whcm-wagtail-5.png" alt="Wagtail's page editing UI in high contrast mode, with completely custom colors" /></p>
+
+<hr />
+
+<p><em>The data for this graph is from July 2022 – to access it, have a look at <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=1613420195">Wagtail CSS media queries 2022-07</a></em>.</p>
+
+<h2 id="wagtail-sites-with-no-detected-issues">Wagtail sites with no detected issues</h2>
+
+<p>Aim higher with all things accessibility. Wagtail sites are doing better year over year, but there’s still lots to do:</p>
+
+<p><img src="/images/blog/wagtail-accessibility-statistics-for-gaad-2023/wagtail_sites_with_no_detected_issues.png" alt="Wagtail sites with no detected issues - HTTP Archive Wagtail sites in 2023 vs 2022 - GAAD 2023" /></p>
+
+<p>We found 4.44% of Wagtail sites had no issues detected in 2023, compared to 3.83% in 2022. Those numbers are <a href="https://webaim.org/projects/million/">above industry averages</a> but nowhere near our ambitions. All sites can score a perfect “0 errors” detected - and then further spend time on manual tests which can also uncover fundamental issues.</p>
+
+<p>We hope our commitment to the <a href="https://www.w3.org/TR/ATAG20/">ATAG 2.0 standard</a> will help all Wagtail sites get there, with tools like our accessibility checker paving the way.</p>
+
+<hr />
+
+<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=684166254">Lighthouse scores, 2023-04</a></em>.</p>
+
+<h2 id="data-and-methodology">Data and methodology</h2>
+
+<p>The data we use comes from a dataset of the world’s top 8M website homepages: <a href="https://httparchive.org/">HTTP Archive</a>. 4,000+ websites in this dataset are identified as using Wagtail, thanks to <a href="https://www.wappalyzer.com/">Wappalyzer</a>.</p>
+
+<p>From this dataset, we then extract specific statistics following the methodology of the <a href="https://almanac.httparchive.org/en/2022/accessibility">2022 HTTP Archive Web Almanac’s accessibility chapter</a> – but filtering to only assess Wagtail projects.</p>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Report" /><category term="Wagtail" /><summary type="html"><![CDATA[As part of #GAAD, this week we’re sharing accessibility stats &amp; tips from Wagtail sites.]]></summary></entry><entry><title type="html">Estimating Wagtail websites’ emissions</title><link href="https://thib.me/estimating-wagtail-websites-emissions" rel="alternate" type="text/html" title="Estimating Wagtail websites’ emissions" /><published>2023-05-10T18:39:03+00:00</published><updated>2023-05-10T18:39:03+00:00</updated><id>https://thib.me/estimating-wagtail-websites-emissions</id><content type="html" xml:base="https://thib.me/estimating-wagtail-websites-emissions"><![CDATA[<p>Wagtail’s approach to quantifying the carbon footprint of Wagtail websites, so we can reduce it.</p>
 
 <!-- more -->
 
@@ -394,14 +468,4 @@
   <li><a href="https://github.com/wagtail/wagtail/discussions/8156">Toolkit for StreamField data migrations in Wagtail by Sandil Ranasinghe</a></li>
 </ul>
 
-<p>And we have a fourth project independently sponsored by Torchbox: <a href="https://github.com/wagtail/wagtail/discussions/8158">UX Unification by Paarth Agarwal</a>.</p>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Wagtail" /><category term="Community" /><summary type="html"><![CDATA[This year, Wagtail gets to take part in Google Summer of Code independently!]]></summary></entry><entry><title type="html">MiXiT 2022: The 97.4% North Star</title><link href="https://thib.me/the-97-4-percent-north-star" rel="alternate" type="text/html" title="MiXiT 2022: The 97.4% North Star" /><published>2022-05-25T08:50:00+00:00</published><updated>2022-05-25T08:50:00+00:00</updated><id>https://thib.me/the-97-4-percent-north-star</id><content type="html" xml:base="https://thib.me/the-97-4-percent-north-star"><![CDATA[<p>Slides for my <a href="https://mixitconf.org/fr/2022/the-97-4-north-star">MiXiT 2022 talk</a>.</p>
-
-<!-- more -->
-
-<iframe src="https://player.vimeo.com/video/726166919?h=c0d26f9453&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
-
-<ul>
-  <li><a href="https://docs.google.com/presentation/d/1SdXC4eiPqhK3gvdV9pMsarEHqSzooPoUxRVoJrBT3iQ/edit?usp=sharing">Google Slides; The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
-  <li><a href="https://drive.google.com/file/d/1TjCmQdEKC3pQ12N_ifRgGnReAnzvAGv_/view?usp=sharing">PDF export (4MB); The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
-  <li><a href="https://docs.google.com/document/d/1nGrmreQjwP3be5Y0LNW-WPU4lLv1Qsv5nozlBvEZQkw/edit?usp=sharing">Plain-text export; The 97.4% North Star - Thibaud Colas - MiXiT 2022</a></li>
-</ul>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Talks" /><category term="Wagtail" /><summary type="html"><![CDATA[Slides for my MiXiT 2022 talk.]]></summary></entry></feed>
+<p>And we have a fourth project independently sponsored by Torchbox: <a href="https://github.com/wagtail/wagtail/discussions/8158">UX Unification by Paarth Agarwal</a>.</p>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Wagtail" /><category term="Community" /><summary type="html"><![CDATA[This year, Wagtail gets to take part in Google Summer of Code independently!]]></summary></entry></feed>

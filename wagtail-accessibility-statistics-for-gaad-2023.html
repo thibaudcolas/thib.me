@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Estimating Wagtail websites’ emissions - Thibaud’s blog</title>
+
+  <link rel="stylesheet" href="/css/screen.css">
+
+  
+  <meta name="description" content="As part of #GAAD, this week we’re sharing accessibility stats &amp; tips from Wagtail sites.">
+  <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://wagtail.org/blog/wagtail-accessibility-statistics-for-gaad-2023/">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://wagtail.org/blog/wagtail-accessibility-statistics-for-gaad-2023/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Thibaud’s blog">
+  <meta name="twitter:site" content="@thibaud_colas">
+  <meta name="twitter:creator" content="@thibaud_colas">
+  <meta property="og:title" content="Estimating Wagtail websites’ emissions">
+  <meta property="og:description" content="As part of #GAAD, this week we’re sharing accessibility stats &amp; tips from Wagtail sites.">
+  
+  <meta name="twitter:label1" value="Reading time">
+  <meta name="twitter:data1" value="Not too long">
+
+  <link rel="meta" title="FOAF" type="application/rdf+xml" href="/foaf.rdf">
+
+  
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-34692999-4','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</head>
+
+<body   >
+  <header><hgroup>
+  <h1><a href="/">Thibaud’s blog</a></h1>
+  
+    <h2>Notes, thoughts, and open-source software</h2>
+  
+</hgroup>
+
+</header>
+  <nav>  
+<ul class="main-navigation">
+  <li><a href="https://twitter.com/thibaud_colas">Twitter</a></li>
+  <li><a href="https://github.com/thibaudcolas">GitHub</a></li>
+  <li><a href="/resume" data-no-instant>Resume</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+</nav>
+  <div role="main" id="main">
+    <div id="content">
+      <div class="blog-index">
+<article class="hentry">
+  
+  <header>
+    
+      <a class="edit-link" aria-label="Edit this page on GitHub" href="https://github.com/thibaudcolas/thibaudcolas/edit/main/src/_posts/2023-05-18-wagtail-accessibility-statistics-for-gaad-2023.md">Edit</a>
+      <h1 class="entry-title">Estimating Wagtail websites’ emissions</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2023-05-17T23:13:03+00:00" pubdate data-updated="true">2023-05-17 23:13</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>As part of #GAAD, this week we’re sharing accessibility stats &amp; tips from Wagtail sites.</p>
+
+<!-- more -->
+
+<h2 id="accessibility-checks-on-wagtail-sites">Accessibility checks on Wagtail sites</h2>
+
+<p>Here are 4 common issues detectable with our built-in checker:</p>
+
+<p><img src="/images/blog/wagtail-accessibility-statistics-for-gaad-2023/accessibility_checks_on_wagtail_sites.png" alt="Accessibility checks on Wagtail sites - HTTP Archive Wagtail sites in 2023 - GAAD 2023" /></p>
+
+<ul>
+  <li><strong>button-name</strong>: A button element on the page is lacking a label. This is entirely detectable with automated tests such as those featured in our <a href="https://wagtail.org/blog/introducing-wagtails-new-accessibility-checker/">built-in accessibility checker</a>, built on Axe.</li>
+  <li><strong>frame-title</strong>: A frame (such as an embedded video) is missing its title. Again entirely detectable with automated tests – and very simple to fix once identified!</li>
+  <li><strong>heading-order</strong>: Some heading levels are getting skipped on the page – always have a main heading (h1) followed by subheadings (h2, h3, etc.).</li>
+  <li><strong>link-name</strong>: Just like button-name, one of the page’s links is missing its title.</li>
+</ul>
+
+<p>All of those issues are <a href="https://almanac.httparchive.org/en/2022/accessibility#heading-hierarchy">common on the web</a>, but with the right tests in place, there is no reason for that to remain the case.</p>
+
+<hr />
+
+<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=316824519">Lighthouse checks, 2023-04</a></em>.</p>
+
+<h2 id="mean-accessibility-scores-of-wagtail-sites">Mean accessibility scores of Wagtail sites</h2>
+
+<p>We see clear improvements over time on accessibility scores of Wagtail sites, but they’re too slow-moving:</p>
+
+<p><img src="/images/blog/wagtail-accessibility-statistics-for-gaad-2023/mean_accessibility_scores_of_wagtail_sites.png" alt="Mean accessibility scores of Wagtail sites - HTTP Archive sites in 2023 - GAAD 2023" /></p>
+
+<p>This shows the mean accessibility score of Wagtail sites over time, compared to <a href="https://almanac.httparchive.org/en/2022/accessibility#introduction">industry-average figures</a>. Wagtail sites are consistently doing better – but only just.</p>
+
+<p>With appropriate targets and ongoing testing, there is no reason all sites couldn’t score a perfect “100” (no issues detected) on those tests.</p>
+
+<hr />
+
+<p><em>Data for this chart is from the <a href="https://discuss.httparchive.org/t/new-dashboard-the-core-web-vitals-technology-report/2178">Core Web Vitals Technology Report</a></em>.</p>
+
+<h2 id="high-contrast-mode-support-in-wagtail-sites">High contrast mode support in Wagtail sites</h2>
+
+<p>#GAAD tip #3: Support High contrast mode on your websites! Also known as Contrast themes, it allows users to adjust the color palette of the site to better suit their vision. Very few websites make adjustments to support it:</p>
+
+<p><img src="/images/blog/wagtail-accessibility-statistics-for-gaad-2023/high_contrast_mode_support_in_Wagtail_sites.png" alt="High contrast mode support in Wagtail sites - HTTP Archive Wagtail sites in 2022-07 - GAAD 2023" /></p>
+
+<ul>
+  <li>“forced-colors” indicates a website making adjustments for users with custom color palettes – for example adding extra borders</li>
+  <li>“prefers-contrast” indicates a website adjusting its styles based on whether users request more or <em>less</em> contrast, which is an option in iOS and Android</li>
+</ul>
+
+<p>We’ve made a lot of adjustments in recent versions of Wagtail to better support Contrast Themes / High contrast mode. Here’s an example in the default dark theme:</p>
+
+<p><img src="/images/blog/wagtail-accessibility-statistics-for-gaad-2023/whcm-wagtail-5.png" alt="Wagtail's page editing UI in high contrast mode, with completely custom colors" /></p>
+
+<hr />
+
+<p><em>The data for this graph is from July 2022 – to access it, have a look at <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=1613420195">Wagtail CSS media queries 2022-07</a></em>.</p>
+
+<h2 id="wagtail-sites-with-no-detected-issues">Wagtail sites with no detected issues</h2>
+
+<p>Aim higher with all things accessibility. Wagtail sites are doing better year over year, but there’s still lots to do:</p>
+
+<p><img src="/images/blog/wagtail-accessibility-statistics-for-gaad-2023/wagtail_sites_with_no_detected_issues.png" alt="Wagtail sites with no detected issues - HTTP Archive Wagtail sites in 2023 vs 2022 - GAAD 2023" /></p>
+
+<p>We found 4.44% of Wagtail sites had no issues detected in 2023, compared to 3.83% in 2022. Those numbers are <a href="https://webaim.org/projects/million/">above industry averages</a> but nowhere near our ambitions. All sites can score a perfect “0 errors” detected - and then further spend time on manual tests which can also uncover fundamental issues.</p>
+
+<p>We hope our commitment to the <a href="https://www.w3.org/TR/ATAG20/">ATAG 2.0 standard</a> will help all Wagtail sites get there, with tools like our accessibility checker paving the way.</p>
+
+<hr />
+
+<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=684166254">Lighthouse scores, 2023-04</a></em>.</p>
+
+<h2 id="data-and-methodology">Data and methodology</h2>
+
+<p>The data we use comes from a dataset of the world’s top 8M website homepages: <a href="https://httparchive.org/">HTTP Archive</a>. 4,000+ websites in this dataset are identified as using Wagtail, thanks to <a href="https://www.wappalyzer.com/">Wappalyzer</a>.</p>
+
+<p>From this dataset, we then extract specific statistics following the methodology of the <a href="https://almanac.httparchive.org/en/2022/accessibility">2022 HTTP Archive Web Almanac’s accessibility chapter</a> – but filtering to only assess Wagtail projects.</p>
+</div>
+
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">By <span class="fn">Thibaud Colas</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2023-05-17T23:13:03+00:00" pubdate data-updated="true">2023-05-17 23:13</time>
+      
+
+<span class="categories">
+  
+    
+      <a class="category" href="/categories/accessibility/">Accessibility</a>,
+    
+      <a class="category" href="/categories/report/">Report</a>,
+    
+      <a class="category" href="/categories/wagtail/">Wagtail</a>
+    
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/estimating-wagtail-websites-emissions" title="Previous Post: Estimating Wagtail websites’ emissions">&laquo; Estimating Wagtail websites’ emissions</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/wagtail-accessibility-statistics-for-gaad-2023">Estimating Wagtail websites’ emissions</a>
+      </li>
+    
+      <li class="post">
+        <a href="/estimating-wagtail-websites-emissions">Estimating Wagtail websites’ emissions</a>
+      </li>
+    
+      <li class="post">
+        <a href="/google-season-of-docs-creating-wagtail-developer-onboarding-tutorials">Google Season of Docs: Creating Wagtail Developer Onboarding Tutorials</a>
+      </li>
+    
+      <li class="post">
+        <a href="/evaluating-carbon-footprint-django-wagtail">Evaluating the carbon footprint of Django and Wagtail - Django London</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wagtails-new-developer-relations-team">Wagtail’s new Developer Relations team</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos" data-user="thibaudcolas" data-count="5">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/thibaudcolas">@thibaudcolas</a> on GitHub
+  
+  <script src="/javascripts/github.js"></script>
+</section>
+
+
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  By <a href="" rel="author">Thibaud Colas</a> -
+  Content available under <a class="license" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> -
+  <span class="credit">Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> -
+  <a class="fork-link" href="https://github.com/thibaudcolas/thibaudcolas">View source</a>
+</p>
+
+</footer>
+  
+
+<script src="/javascripts/libs/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init(50);</script>
+
+
+</body>
+</html>
