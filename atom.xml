@@ -4,7 +4,7 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2023-05-17T23:40:22+00:00</updated>
+  <updated>2023-05-20T10:29:56+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
@@ -13,7 +13,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Estimating Wagtail websites’ emissions]]></title>
+    <title type="html"><![CDATA[Wagtail accessibility statistics for GAAD 2023]]></title>
     <link href="https://thib.me/wagtail-accessibility-statistics-for-gaad-2023"/>
     <updated>2023-05-17T23:13:03+00:00</updated>
     <id>https://thib.me/wagtail-accessibility-statistics-for-gaad-2023</id>
@@ -38,7 +38,7 @@
 
 <hr />
 
-<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=316824519">Lighthouse checks, 2023-04</a></em>.</p>
+<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1dLpW6fbcl-AsVQNVhihzi1p-fY5gByZK_EQWt-EtCoM/edit#gid=316824519">Lighthouse checks, 2023-04</a></em>.</p>
 
 <h2 id="mean-accessibility-scores-of-wagtail-sites">Mean accessibility scores of Wagtail sites</h2>
 
@@ -71,7 +71,7 @@
 
 <hr />
 
-<p><em>The data for this graph is from July 2022 – to access it, have a look at <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=1613420195">Wagtail CSS media queries 2022-07</a></em>.</p>
+<p><em>The data for this graph is from July 2022 – to access it, have a look at <a href="https://docs.google.com/spreadsheets/d/1dLpW6fbcl-AsVQNVhihzi1p-fY5gByZK_EQWt-EtCoM/edit#gid=1613420195">Wagtail CSS media queries 2022-07</a></em>.</p>
 
 <h2 id="wagtail-sites-with-no-detected-issues">Wagtail sites with no detected issues</h2>
 
@@ -85,7 +85,7 @@
 
 <hr />
 
-<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=684166254">Lighthouse scores, 2023-04</a></em>.</p>
+<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1dLpW6fbcl-AsVQNVhihzi1p-fY5gByZK_EQWt-EtCoM/edit#gid=684166254">Lighthouse scores, 2023-04</a></em>.</p>
 
 <h2 id="data-and-methodology">Data and methodology</h2>
 

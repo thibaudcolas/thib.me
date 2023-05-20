@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-05-17T23:40:22+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Estimating Wagtail websites’ emissions</title><link href="https://thib.me/wagtail-accessibility-statistics-for-gaad-2023" rel="alternate" type="text/html" title="Estimating Wagtail websites’ emissions" /><published>2023-05-17T23:13:03+00:00</published><updated>2023-05-17T23:13:03+00:00</updated><id>https://thib.me/wagtail-accessibility-statistics-for-gaad-2023</id><content type="html" xml:base="https://thib.me/wagtail-accessibility-statistics-for-gaad-2023"><![CDATA[<p>As part of #GAAD, this week we’re sharing accessibility stats &amp; tips from Wagtail sites.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-05-20T10:29:56+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Wagtail accessibility statistics for GAAD 2023</title><link href="https://thib.me/wagtail-accessibility-statistics-for-gaad-2023" rel="alternate" type="text/html" title="Wagtail accessibility statistics for GAAD 2023" /><published>2023-05-17T23:13:03+00:00</published><updated>2023-05-17T23:13:03+00:00</updated><id>https://thib.me/wagtail-accessibility-statistics-for-gaad-2023</id><content type="html" xml:base="https://thib.me/wagtail-accessibility-statistics-for-gaad-2023"><![CDATA[<p>As part of #GAAD, this week we’re sharing accessibility stats &amp; tips from Wagtail sites.</p>
 
 <!-- more -->
 
@@ -19,7 +19,7 @@
 
 <hr />
 
-<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=316824519">Lighthouse checks, 2023-04</a></em>.</p>
+<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1dLpW6fbcl-AsVQNVhihzi1p-fY5gByZK_EQWt-EtCoM/edit#gid=316824519">Lighthouse checks, 2023-04</a></em>.</p>
 
 <h2 id="mean-accessibility-scores-of-wagtail-sites">Mean accessibility scores of Wagtail sites</h2>
 
@@ -52,7 +52,7 @@
 
 <hr />
 
-<p><em>The data for this graph is from July 2022 – to access it, have a look at <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=1613420195">Wagtail CSS media queries 2022-07</a></em>.</p>
+<p><em>The data for this graph is from July 2022 – to access it, have a look at <a href="https://docs.google.com/spreadsheets/d/1dLpW6fbcl-AsVQNVhihzi1p-fY5gByZK_EQWt-EtCoM/edit#gid=1613420195">Wagtail CSS media queries 2022-07</a></em>.</p>
 
 <h2 id="wagtail-sites-with-no-detected-issues">Wagtail sites with no detected issues</h2>
 
@@ -66,7 +66,7 @@
 
 <hr />
 
-<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=684166254">Lighthouse scores, 2023-04</a></em>.</p>
+<p><em>Here is the data for this graph: <a href="https://docs.google.com/spreadsheets/d/1dLpW6fbcl-AsVQNVhihzi1p-fY5gByZK_EQWt-EtCoM/edit#gid=684166254">Lighthouse scores, 2023-04</a></em>.</p>
 
 <h2 id="data-and-methodology">Data and methodology</h2>
 
