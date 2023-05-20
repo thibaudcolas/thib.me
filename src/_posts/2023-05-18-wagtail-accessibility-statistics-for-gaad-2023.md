@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Estimating Wagtail websites’ emissions"
+title: "Wagtail accessibility statistics for GAAD 2023"
 date: 2023-05-18 00:13:03 +0100
 comments: true
 categories: [Accessibility, Report, Wagtail]
@@ -26,7 +26,7 @@ All of those issues are [common on the web](https://almanac.httparchive.org/en/
 
 ---
 
-*Here is the data for this graph: [Lighthouse checks, 2023-04](https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=316824519)*.
+*Here is the data for this graph: [Lighthouse checks, 2023-04](https://docs.google.com/spreadsheets/d/1dLpW6fbcl-AsVQNVhihzi1p-fY5gByZK_EQWt-EtCoM/edit#gid=316824519)*.
 
 ## Mean accessibility scores of Wagtail sites
 
@@ -57,7 +57,7 @@ We've made a lot of adjustments in recent versions of Wagtail to better support 
 
 ---
 
-*The data for this graph is from July 2022 -- to access it, have a look at [Wagtail CSS media queries 2022-07](https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=1613420195)*.
+*The data for this graph is from July 2022 -- to access it, have a look at [Wagtail CSS media queries 2022-07](https://docs.google.com/spreadsheets/d/1dLpW6fbcl-AsVQNVhihzi1p-fY5gByZK_EQWt-EtCoM/edit#gid=1613420195)*.
 
 ## Wagtail sites with no detected issues
 
@@ -71,7 +71,7 @@ We hope our commitment to the [ATAG 2.0 standard](https://www.w3.org/TR/ATAG20/
 
 ---
 
-*Here is the data for this graph: [Lighthouse scores, 2023-04](https://docs.google.com/spreadsheets/d/1k29atSkzGsQDg8ljpJ4tI-ZGxAg-TNQofvrxjibf_Yc/edit#gid=684166254)*.
+*Here is the data for this graph: [Lighthouse scores, 2023-04](https://docs.google.com/spreadsheets/d/1dLpW6fbcl-AsVQNVhihzi1p-fY5gByZK_EQWt-EtCoM/edit#gid=684166254)*.
 
 ## Data and methodology
 
