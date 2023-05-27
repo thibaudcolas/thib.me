@@ -31,3 +31,10 @@ Here’s the results on my TV:
 - With the dark theme, the TV uses 35.8W.
 
 Assuming the  same 31W for TV components other than the panel, this means a panel consumption of 28W for the light theme, and 4.8W for the dark theme. That’s a 83% reduction in power consumption.
+
+And another example with Wagtail’s dark mode:
+
+![Side-by-side shots of Wagtail in light and dark mode](/images/blog/measuring-dark-mode-energy-savings/energy-usage-dark-mode-wagtail.jpg)
+
+- With the light theme, the TV uses 57.0W.
+- With the dark theme, the TV uses 33.4W.
