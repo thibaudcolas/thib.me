@@ -4,13 +4,22 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2023-05-27T14:48:08+00:00</updated>
+  <updated>2023-05-31T06:51:17+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Next.js ❤️ Wagtail]]></title>
+    <link href="https://thib.me/nextjs-loves-wagtail"/>
+    <updated>2023-05-31T04:13:03+00:00</updated>
+    <id>https://thib.me/nextjs-loves-wagtail</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Wagtail accessibility statistics for GAAD 2023]]></title>
@@ -1734,71 +1743,6 @@ Or you can use aria-describedby to make the association, like this:
   <li><a href="https://drive.google.com/file/d/1L6UZbN8VdTX_i6yTKghwB-5FalCA05s8/view?usp=sharing">PDF export</a></li>
   <li><a href="https://drive.google.com/file/d/1cwVsGcikJxG_K0Sy98WY5J6ajZXENoIP/view?usp=sharing">Plain-text transcript</a></li>
 </ul>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[WCAG 2.2: new accessibility guidelines on the way]]></title>
-    <link href="https://thib.me/wcag-22-accessibility-guidelines"/>
-    <updated>2021-08-13T16:52:22+00:00</updated>
-    <id>https://thib.me/wcag-22-accessibility-guidelines</id>
-    <content type="html"><![CDATA[<p>In web accessibility testing, WCAG 2.1 is the gold standard. But talk to experts – and they’ll be quick to tell you it’s a very low baseline. WCAG 2.2’s latest draft introduces new criteria, relevant for all websites.</p>
-
-<!-- more -->
-
-<h2 id="whats-new-in-wcag-22">What’s new in WCAG 2.2</h2>
-
-<p>Plenty of good things – there are 9 new success criteria:</p>
-
-<ul>
-  <li>Guideline 2.4 Navigable
-    <ul>
-      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2411-focus-appearance-minimum-aa">2.4.11 Focus Appearance (Minimum) (AA)</a></li>
-      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2412-focus-appearance-enhanced-aaa">2.4.12 Focus Appearance (Enhanced) (AAA)</a></li>
-      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#2413-page-break-navigation-a">2.4.13 Page Break Navigation (A)</a></li>
-    </ul>
-  </li>
-  <li>Guideline 2.5 Input Modalities
-    <ul>
-      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#257-dragging-movements-aa">2.5.7 Dragging Movements (AA)</a></li>
-      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#258-target-size-minimum-aa">2.5.8 Target Size (Minimum) (AA)</a></li>
-    </ul>
-  </li>
-  <li>Guideline 3.2 Predictable
-    <ul>
-      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#326-consistent-help-a">3.2.6 Consistent Help (A)</a></li>
-      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#327-visible-controls-aa">3.2.7 Visible Controls (AA)</a></li>
-    </ul>
-  </li>
-  <li>Guideline 3.3 Input Assistance
-    <ul>
-      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#337-accessible-authentication-a">3.3.7 Accessible Authentication (A)</a></li>
-      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#338-redundant-entry-a">3.3.8 Redundant Entry (A)</a></li>
-    </ul>
-  </li>
-</ul>
-
-<p>As well as the normative guidelines, all criteria also use <a href="https://www.w3.org/WAI/people-use-web/user-stories/">stories of web users</a> to better convey what problems we are trying to prevent with those guidelines – and what “success” looks like.</p>
-
-<p>There are a lot of good resources covering the new criteria in much better detail than we ever could – we’d highly recommend taking a look at Alastair Campbell’s talk <a href="https://www.youtube.com/watch?v=EZlqSwgKuZE">WCAG 2.2: What’s new and what to do with it</a> at the Virtua11y conference.</p>
-
-<h2 id="applying-wcag-22-to-sites">Applying WCAG 2.2 to sites</h2>
-
-<p>There won’t be any legal requirements to follow this new draft version for quite a while. That said, the new guidelines are so good they are well worth implementing and testing for right away.</p>
-
-<p>WCAG 2.1 is a good baseline, but there are a lot of areas where it falls short and we should aim beyond. To illustrate – here is a color contrast fail, generated with <a href="https://whocanuse.com/">Who Can Use</a>. According to WCAG 2.1 rules, the black text would be higher-contrast over this shade of blue than white text:</p>
-
-<p><img src="/images/blog/wcag-22-accessibility-guidelines/whocanuse-blue.png" alt="Comparison of lorem copy in white and black, over a blue background (hex code #2E7CD6). White has a contrast ratio of 4.23:1, non-compliant, black has 4.97:1, passing level AA." /></p>
-
-<blockquote>
-  <p>Comparison of lorem copy in white and black, over a blue background (hex code #2E7CD6). White has a contrast ratio of 4.23:1, non-compliant, black has 4.97:1, passing level AA</p>
-</blockquote>
-
-<p>This is due to how basic the contrast calculations are in WCAG 2.1. This specific issue will – hopefully – be addressed in the upcoming <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3.0</a>. It’s still a very early draft, but is well worth being aware of as well if you’re critically thinking of where else WCAG 2.1 might be falling short.</p>
-
-<h2 id="we-can-help">We can help</h2>
-
-<p>Torchbox offers standalone <a href="https://torchbox.com/digital-products/accessibility-testing/">accessibility consulting services</a>, with the goal of helping organisations aim beyond compliance. Don’t hesitate to get in touch if you want your site to get ahead of the curve.</p>
 ]]></content>
   </entry>
   
