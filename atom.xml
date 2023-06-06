@@ -4,7 +4,7 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2023-05-31T06:51:17+00:00</updated>
+  <updated>2023-06-06T09:14:14+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
@@ -18,6 +18,172 @@
     <updated>2023-05-31T04:13:03+00:00</updated>
     <id>https://thib.me/nextjs-loves-wagtail</id>
     <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Why 96.3% of the Web Fails at Accessibility - GAAD 2023]]></title>
+    <link href="https://thib.me/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023"/>
+    <updated>2023-05-18T15:13:03+00:00</updated>
+    <id>https://thib.me/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023</id>
+    <content type="html"><![CDATA[<p>As part of Global Accessibility Awareness Day 2023, here is an overview of the state of accessibility on the Web, and specifically how technology like Wagtail has an impact.</p>
+
+<!-- more -->
+
+<p>Slides (Google Slides): <a href="https://docs.google.com/presentation/d/15KUwbaVI_bKO1xJwRvWw5gSGXaufVryAE4xXxde6-tA/edit">Why 96.3% of the Web Fails at Accessibility - GAAD 2023</a></p>
+
+<p>Recording:</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Htybs50VpfU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="highlights">Highlights</h2>
+
+<p>Here are high-level highlights / graphs from the presentation.</p>
+
+<h3 id="963">96.3%</h3>
+
+<p>96.3% of the top 1’000’000 sites have basic* accessibility issues. Source: <a href="https://webaim.org/projects/million/">WebAIM Million</a>.</p>
+
+<p>*basic = WCAG AA failure</p>
+
+<h3 id="why-we-care-about-accessibility">Why we care about accessibility</h3>
+
+<ul>
+  <li>We want all users to have a great experience, no matter how they use the web.</li>
+  <li>Accessibility improvements lead to usability improvements for all.</li>
+</ul>
+
+<blockquote>
+  <p>Search: “Curb Cut Effect”</p>
+</blockquote>
+
+<h4 id="legally-everywhere-wcag-21-aa-level">Legally (everywhere): <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a>, AA level</h4>
+
+<ul>
+  <li><strong>UK</strong>: PSBAR 2018, Equality Act</li>
+  <li><strong>EU</strong>: Web Accessibility Act, European Accessibility Act</li>
+  <li><strong>US</strong>: ADA, Section 508</li>
+</ul>
+
+<p>Soon – WCAG 2.2</p>
+
+<h3 id="the-extent-of-the-problem">The extent of the problem</h3>
+
+<p><img src="/images/blog/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023/percentage-homepage-failures.png" alt="Percentage of home pages with detected WCAG conformance failures over time" /></p>
+
+<blockquote>
+  <p>Percentage of home pages with detected WCAG conformance failures over time</p>
+</blockquote>
+
+<p>Source: <a href="https://webaim.org/projects/million/">WebAIM Million</a></p>
+
+<p>Projecting this:</p>
+
+<p><img src="/images/blog/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023/analyse-tres-poussee.gif" alt="Screencap of Excel sheet projection of how errors over time will reduce" /></p>
+
+<h4 id="deque--axe-the-automated-accessibility-coverage-report">Deque / Axe: The Automated Accessibility Coverage Report</h4>
+
+<p><img src="/images/blog/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023/deque-axe-coverage-automation.png" alt="57.38% of total issues were detected using automated tests" /></p>
+
+<p>Source: Deque, 2021 – <a href="https://deque.com/coverage-report/">deque.com / coverage-report (PDF)</a></p>
+
+<h3 id="the-impact-of-technology">The impact of technology</h3>
+
+<p><img src="/images/blog/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023/webaim-million-errors-by-cms.png" alt="57.38% of total issues were detected using automated tests" /></p>
+
+<p>Source: <a href="https://webaim.org/projects/million/#technologies">WebAIM Million technologies</a></p>
+
+<h3 id="how-can-we-do-better">How can we do better?</h3>
+
+<p>Design. Technology. And Wagtail</p>
+
+<ol>
+  <li>Provide <a href="https://hiddedevries.nl/en/blog/2020-03-01-more-accessible-defaults-please"><strong>accessible defaults</strong></a>.</li>
+  <li>Follow accessibility best practices.</li>
+</ol>
+
+<h4 id="methodology-shift-left">Methodology: Shift-Left</h4>
+
+<p><img src="/images/blog/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023/deque-shift-left.png" alt="57.38% of total issues were detected using automated tests" /></p>
+
+<p>Ref: <a href="https://www.deque.com/shift-left/">deque.com / shift-left</a></p>
+
+<p>Shift-Left in practice</p>
+
+<ul>
+  <li>Clear strategy defined from the get-go</li>
+  <li>Accessibility considerations at every stage</li>
+  <li>Automated and manual QA</li>
+  <li><strong>Audits as a last resort!</strong></li>
+</ul>
+
+<h4 id="good-resources">Good resources</h4>
+
+<ul>
+  <li>Guides for all roles: <a href="https://accessibility.digital.gov/">Accessibility for Teams</a> (GSA)</li>
+  <li>Acceptance criteria<strong>:</strong> <a href="https://www.deque.com/blog/collaborative-planning-the-forgotten-step-of-accessible-development/">a11y BID</a>, <a href="https://www.magentaa11y.com/">MagentaA11y</a></li>
+</ul>
+
+<h3 id="accessible-defaults">Accessible defaults</h3>
+
+<p>Accessible defaults means…</p>
+
+<ul>
+  <li>Doing the right thing should be the path of least resistance.</li>
+  <li>The default behavior should lead to accessible experiences <em>without extra work</em>.</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;button&gt;Submit&lt;/button&gt;</code> over <code class="language-plaintext highlighter-rouge">&lt;div role="button"&gt;Submit&lt;/div&gt;</code></li>
+</ul>
+
+<h4 id="existing-standard-atag-20">Existing standard: <a href="https://www.w3.org/TR/ATAG20/">ATAG 2.0</a></h4>
+
+<p>ATAG: Authoring Tool Accessibility Guidelines</p>
+
+<ul>
+  <li><a href="https://www.w3.org/TR/ATAG20/#part_a">A. Make the authoring tool user interface accessible</a></li>
+  <li><a href="https://www.w3.org/TR/ATAG20/#part_b">B. Support the production of accessible content</a></li>
+</ul>
+
+<h4 id="authoring-tools">Authoring tools?</h4>
+
+<ul>
+  <li>web page authoring tools (e.g. <a href="https://www.w3.org/TR/ATAG20/#def-WYSIWYG">WYSIWYG</a> HTML editors)</li>
+  <li>software for directly editing source code</li>
+  <li>software for converting to <a href="https://www.w3.org/TR/ATAG20/#def-Web-Content-Technology">web content technologies</a> (e.g. “Save as HTML” features in office document applications)</li>
+  <li>integrated development environments (e.g. for web application development)</li>
+  <li>software that generates web content on the basis of <a href="https://www.w3.org/TR/ATAG20/#def-Template">templates</a>, scripts, command-line input or “wizard”-type processes</li>
+  <li>software for rapidly updating portions of web pages (e.g. blogging, wikis, online forums)</li>
+  <li>software for generating/managing entire websites (e.g. <strong>content management systems</strong>, courseware tools, content aggregators)</li>
+  <li>email clients that send messages using web content technologies</li>
+  <li>multimedia authoring tools</li>
+  <li>software for creating mobile web applications</li>
+</ul>
+
+<p>Examples:</p>
+
+<ul>
+  <li>Rails, Django, CKEditor, TinyMCE, Wagtail, Drupal</li>
+  <li>Zoom, <strong>Slack</strong>, Gmail, Excel, Notion</li>
+  <li>Instagram, YouTube, TikTok, LinkedIn Live</li>
+  <li>VS Code, GitHub. Tailwind, HTMX, React.</li>
+</ul>
+
+<h4 id="demand-more-from-your-tools">Demand more from your tools</h4>
+
+<p>Back to ATAG:</p>
+
+<ul>
+  <li>B.1. Fully automatic processes produce accessible content</li>
+  <li>B.2. Authors are supported in producing accessible content</li>
+  <li>B.3. Authors are supported in improving the accessibility of existing content</li>
+  <li>B.4. Authoring tools promote and integrate their accessibility features</li>
+</ul>
+
+<h5 id="qa-quick-wins-demo">QA quick wins: demo</h5>
+
+<ul>
+  <li><a href="https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/">forced-colors / Windows High Contrast mode / Contrast themes</a></li>
+  <li>Reader mode / reading mode / immersive reader</li>
+</ul>
 ]]></content>
   </entry>
   
@@ -1725,23 +1891,6 @@ Or you can use aria-describedby to make the association, like this:
 <ul>
   <li><a href="https://confs.tech/">https://confs.tech/</a></li>
   <li><a href="https://frontendfront.com/conferences/">https://frontendfront.com/conferences/</a></li>
-</ul>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[DjangoCon US 2021: Kontrasto – improving accessibility with Python]]></title>
-    <link href="https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python"/>
-    <updated>2021-10-22T09:01:32+00:00</updated>
-    <id>https://thib.me/djangocon-us-2021-kontrasto-improving-accessibility-with-python</id>
-    <content type="html"><![CDATA[<p>Slides for my <a href="https://2021.djangocon.us/talks/kontrasto-improving-accessibility-with/">DjangoCon US 2021 talk</a> on <a href="https://kontrasto.netlify.app/">Kontrasto</a>.</p>
-
-<!-- more -->
-
-<ul>
-  <li><a href="https://docs.google.com/presentation/d/10718N6sEdx37JqMrBaS4prVOs-kH9ad61lsRTzdNPmI/edit">Google Slides: DjangoCon US 2021 - Kontrasto: improving accessibility with Python</a></li>
-  <li><a href="https://drive.google.com/file/d/1L6UZbN8VdTX_i6yTKghwB-5FalCA05s8/view?usp=sharing">PDF export</a></li>
-  <li><a href="https://drive.google.com/file/d/1cwVsGcikJxG_K0Sy98WY5J6ajZXENoIP/view?usp=sharing">Plain-text transcript</a></li>
 </ul>
 ]]></content>
   </entry>
