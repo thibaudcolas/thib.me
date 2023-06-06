@@ -4,7 +4,7 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2023-06-06T09:14:14+00:00</updated>
+  <updated>2023-06-06T10:48:23+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
@@ -17,7 +17,21 @@
     <link href="https://thib.me/nextjs-loves-wagtail"/>
     <updated>2023-05-31T04:13:03+00:00</updated>
     <id>https://thib.me/nextjs-loves-wagtail</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>Our DjangoCon 2023 workshop on headless Wagtail with Next.js.</p>
+
+<!-- more -->
+
+<p>👋 welcome to a self-paced headless CMS workshop! This workshop covers:</p>
+
+<ul>
+  <li>Initial project setup: what Wagtail and Next.js are, and how to set them up</li>
+  <li>Connecting Next.js with the backend</li>
+  <li>Deployment!</li>
+</ul>
+
+<p>The workshop was created for DjangoCon Europe 2023 by <a href="https://github.com/laymonage">@laymonage</a> and <a href="https://github.com/thibaudcolas">@thibaudcolas</a> – but we expect it can all be done on your own anytime.</p>
+
+<p><a href="https://github.com/thibaudcolas/nextjs-loves-wagtail">View the workshop materials on GitHub</a></p>
 ]]></content>
   </entry>
   
