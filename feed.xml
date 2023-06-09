@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-06-06T10:48:23+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Next.js ❤️ Wagtail</title><link href="https://thib.me/nextjs-loves-wagtail" rel="alternate" type="text/html" title="Next.js ❤️ Wagtail" /><published>2023-05-31T04:13:03+00:00</published><updated>2023-05-31T04:13:03+00:00</updated><id>https://thib.me/nextjs-loves-wagtail</id><content type="html" xml:base="https://thib.me/nextjs-loves-wagtail"><![CDATA[<p>Our DjangoCon 2023 workshop on headless Wagtail with Next.js.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-06-09T13:46:20+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Next.js ❤️ Wagtail</title><link href="https://thib.me/nextjs-loves-wagtail" rel="alternate" type="text/html" title="Next.js ❤️ Wagtail" /><published>2023-05-31T04:13:03+00:00</published><updated>2023-05-31T04:13:03+00:00</updated><id>https://thib.me/nextjs-loves-wagtail</id><content type="html" xml:base="https://thib.me/nextjs-loves-wagtail"><![CDATA[<p>Our DjangoCon 2023 workshop on headless Wagtail with Next.js.</p>
 
 <!-- more -->
 
@@ -12,7 +12,13 @@
 
 <p>The workshop was created for DjangoCon Europe 2023 by <a href="https://github.com/laymonage">@laymonage</a> and <a href="https://github.com/thibaudcolas">@thibaudcolas</a> – but we expect it can all be done on your own anytime.</p>
 
-<p><a href="https://github.com/thibaudcolas/nextjs-loves-wagtail">View the workshop materials on GitHub</a></p>]]></content><author><name>Thibaud Colas</name></author><category term="Conference" /><category term="Wagtail" /><category term="React" /><summary type="html"><![CDATA[Our DjangoCon 2023 workshop on headless Wagtail with Next.js.]]></summary></entry><entry><title type="html">Why 96.3% of the Web Fails at Accessibility - GAAD 2023</title><link href="https://thib.me/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023" rel="alternate" type="text/html" title="Why 96.3% of the Web Fails at Accessibility - GAAD 2023" /><published>2023-05-18T15:13:03+00:00</published><updated>2023-05-18T15:13:03+00:00</updated><id>https://thib.me/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023</id><content type="html" xml:base="https://thib.me/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023"><![CDATA[<p>As part of Global Accessibility Awareness Day 2023, here is an overview of the state of accessibility on the Web, and specifically how technology like Wagtail has an impact.</p>
+<p><a href="https://github.com/thibaudcolas/nextjs-loves-wagtail">View the workshop materials on GitHub</a></p>]]></content><author><name>Thibaud Colas</name></author><category term="Conference" /><category term="Wagtail" /><category term="React" /><summary type="html"><![CDATA[Our DjangoCon 2023 workshop on headless Wagtail with Next.js.]]></summary></entry><entry><title type="html">Django Software Foundation pins</title><link href="https://thib.me/django-software-foundation-pins" rel="alternate" type="text/html" title="Django Software Foundation pins" /><published>2023-05-29T16:13:03+00:00</published><updated>2023-05-29T16:13:03+00:00</updated><id>https://thib.me/django-software-foundation-pins</id><content type="html" xml:base="https://thib.me/django-software-foundation-pins"><![CDATA[<p>During DjangoCon Europe 2023 on the first day, we made a bunch of DSF designs for use as pins or stickers.</p>
+
+<!-- more -->
+
+<h2 id="the-pins">The pins</h2>
+
+<p><a href="https://github.com/thibaudcolas/dsf-pins">https://github.com/thibaudcolas/dsf-pins</a></p>]]></content><author><name>Thibaud Colas</name></author><category term="Django" /><category term="Design" /><category term="Conference" /><summary type="html"><![CDATA[During DjangoCon Europe 2023 on the first day, we made a bunch of DSF designs for use as pins or stickers.]]></summary></entry><entry><title type="html">Why 96.3% of the Web Fails at Accessibility - GAAD 2023</title><link href="https://thib.me/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023" rel="alternate" type="text/html" title="Why 96.3% of the Web Fails at Accessibility - GAAD 2023" /><published>2023-05-18T15:13:03+00:00</published><updated>2023-05-18T15:13:03+00:00</updated><id>https://thib.me/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023</id><content type="html" xml:base="https://thib.me/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023"><![CDATA[<p>As part of Global Accessibility Awareness Day 2023, here is an overview of the state of accessibility on the Web, and specifically how technology like Wagtail has an impact.</p>
 
 <!-- more -->
 
@@ -547,41 +553,4 @@
 <ul>
   <li><a href="https://confs.tech/">https://confs.tech/</a></li>
   <li><a href="https://frontendfront.com/conferences/">https://frontendfront.com/conferences/</a></li>
-</ul>]]></content><author><name>Thibaud Colas</name></author><category term="Conference" /><category term="Python" /><category term="JavaScript" /><category term="Community" /><summary type="html"><![CDATA[Here is a small list of conferences I put together for 2023, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!]]></summary></entry><entry><title type="html">Measuring dark mode’s energy savings</title><link href="https://thib.me/measuring-dark-mode-energy-savings" rel="alternate" type="text/html" title="Measuring dark mode’s energy savings" /><published>2022-11-23T21:18:03+00:00</published><updated>2022-11-23T21:18:03+00:00</updated><id>https://thib.me/measuring-dark-mode-energy-savings</id><content type="html" xml:base="https://thib.me/measuring-dark-mode-energy-savings"><![CDATA[<p>I’ve heard lots over the year that “dark themes for sites use up less energy”. Last week we bought a new OLED TV, which is the first OLED device I’ve ever owned, so I finally got a chance to experience whether / how much that was true.</p>
-
-<!-- more -->
-
-<p>So I tested <a href="https://guide.wagtail.org/en-latest/">guide.wagtail.org</a>, on which we recently added a dark theme, displaying the homepage with the TV plugged into a watt meter.</p>
-
-<ul>
-  <li>With the light theme, the TV uses 63W.</li>
-  <li>With the dark theme, it uses 34W.</li>
-</ul>
-
-<p>That’s a stark difference but it gets worse: this TV has lots of onboard processing, so turning off the panel itself with everything else on, the TV still consumes 31W. Which means the TV panel consumes 3W to display in the dark theme, and 33W, 10x more, to display the light theme.</p>
-
-<p>This reduction in power consumption only applies to OLED devices, which have a limited market share but are getting more common.</p>
-
-<h2 id="testing-a-real-world-website">Testing a real-world website</h2>
-
-<p>The Wagtail user guide is a real production site but doesn’t necessarly represent a typical site: it’s text-heavy, even on its homepage. Let’s now try out <a href="https://www.rnib.org.uk/">rnib.org.uk</a>, for which my company recently implemented a dark theme.</p>
-
-<p>Here’s the results on my TV:</p>
-
-<p><img src="/images/blog/measuring-dark-mode-energy-savings/rnib-oled-energy.jpg" alt="Side-by-side shots of the RNIB website with a power meter in front. On the left is a light theme where the power meter says 59.1. On the right dark theme and the power meter says 35.8" /></p>
-
-<ul>
-  <li>With the light theme, the TV uses 59.1W.</li>
-  <li>With the dark theme, the TV uses 35.8W.</li>
-</ul>
-
-<p>Assuming the  same 31W for TV components other than the panel, this means a panel consumption of 28W for the light theme, and 4.8W for the dark theme. That’s a 83% reduction in power consumption.</p>
-
-<p>And another example with Wagtail’s dark mode:</p>
-
-<p><img src="/images/blog/measuring-dark-mode-energy-savings/energy-usage-dark-mode-wagtail.jpg" alt="Side-by-side shots of Wagtail in light and dark mode" /></p>
-
-<ul>
-  <li>With the light theme, the TV uses 57.0W.</li>
-  <li>With the dark theme, the TV uses 33.4W.</li>
-</ul>]]></content><author><name>Thibaud Colas</name></author><category term="Climate" /><category term="Sustainability" /><category term="Accessibility" /><summary type="html"><![CDATA[I’ve heard lots over the year that “dark themes for sites use up less energy”. Last week we bought a new OLED TV, which is the first OLED device I’ve ever owned, so I finally got a chance to experience whether / how much that was true.]]></summary></entry></feed>
+</ul>]]></content><author><name>Thibaud Colas</name></author><category term="Conference" /><category term="Python" /><category term="JavaScript" /><category term="Community" /><summary type="html"><![CDATA[Here is a small list of conferences I put together for 2023, as I was looking for speaking opportunities, with a particular focus on Europe and America. Hope this helps!]]></summary></entry></feed>
