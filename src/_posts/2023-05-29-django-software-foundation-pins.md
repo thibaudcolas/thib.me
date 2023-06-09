@@ -15,3 +15,5 @@ During DjangoCon Europe 2023 on the first day, we made a bunch of DSF designs fo
 ## The pins
 
 <https://github.com/thibaudcolas/dsf-pins>
+
+See source designs [in Figma](https://www.figma.com/file/v1WfquYwTNSkfKZp5Ny51Z/DjangoCon-Europe-2023-Edinburgh-website-design?type=design&node-id=605-180).
