@@ -8,9 +8,11 @@ categories: [Accessibility, Audits, Community, Test]
 
 
 
-Here are the results of a quick accessibility audit I did for the [Django project website](https://www.djangoproject.com/), as part of the DjangoCon Europe 2023 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: [djangoproject.com accessibility testing - DjangoCon Europe 2023](https://www.youtube.com/watch?v=dAiMPTOMh1U).
+Here are the results of a quick accessibility audit I did for the [Django project website](https://www.djangoproject.com/), as part of the DjangoCon Europe 2023 sprints.
 
 <!-- more -->
+
+I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: [djangoproject.com accessibility testing - DjangoCon Europe 2023](https://www.youtube.com/watch?v=dAiMPTOMh1U). I’ve also reported the issues in the project’s GitHub repository: [Accessibility issues with site design and implementation #1381](https://github.com/django/djangoproject.com/issues/1381).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dAiMPTOMh1U" title="YouTube video player: djangoproject.com accessibility testing | DjangoCon Europe 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -24,18 +26,24 @@ TL;DW; There are pretty fundamental issues, that aren’t always blockers but wo
 
 ## Issues
 
-Here is a detailed list of issues I spotted, split into the categories I normally use, with links to video timestamps where appropriate, and links to relevant WCAG success criteria.
+Here is a detailed list of issues I spotted, split into the categories I normally use, with links to my testing video’s timestamps, WCAG success criteria, and existing GitHub issues where appropriate.
 
 ### Blockers
+
+> Blocker: Critical issue. Certain users cannot perceive or operate this, with no workaround available.
 
 - The "hamburger" menu toggle is impossible to use with a keyboard. This makes it impossible for keyboard and screen reader users to access menu items and navigate the site in this way. ([Menu button is not a button #1234](https://github.com/django/djangoproject.com/issues/1234), [18:18](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1098s), [SC 2.1.1 Keyboard](https://www.w3.org/TR/WCAG22/#keyboard)).
 - The page’s second column content is hidden in print stylesheets. This makes it impossible for users of magnifiers to access this content ([22:00](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1320s)).
 
 ### Major
 
+> Major: Certain users are very likely to have difficulty perceiving or operating this.
+
 - Heading level 1 should be used for the title of the page / visually most prominent heading, ideally not for invisible content ("Django" on homepage). Ideally each page would only have a single h1. ([07:04](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=424s), [SC 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships)).
 
 ### Confusing
+
+> Confusing: Understanding or operating this may be difficult for some users.
 
 - Focus style almost invisible on "Get started with Django" CTA ([02:30](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=150s), [SC 1.4.11 Non-Text Contrast](https://www.w3.org/TR/WCAG22/#non-text-contrast)).
 - Links should be identifiable with other means than color ([05:30](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=330s), [SC 1.4.1 Use of Color](https://www.w3.org/TR/WCAG22/#use-of-color)).
@@ -46,10 +54,10 @@ Here is a detailed list of issues I spotted, split into the categories I normall
 
 ### Minor
 
+> Minor: Degraded user experience for some users. This slows down use of the application.
+
+- Missing skip link ([00:42](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=42s), [SC 2.4.1 Bypass Blocks](https://www.w3.org/TR/WCAG22/#bypass-blocks)).
 - Custom "dotted outline" focus styles: not visible enough and broken in main navigation ([01:02](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=62s), [SC 2.4.13 Focus Appearance](https://www.w3.org/TR/WCAG22/#focus-appearance)).
-
-### UX issues
-
 - The two-column layout as implemented means reaching the second column content with the keyboard requires going through the entire first column ([02:58](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=178s), see also [#494](https://github.com/django/djangoproject.com/issues/494)).
 - The sidebar heading hierarchy makes it hard to understand the content structure ([07:04](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=424s)).
 - Keep uppercase text to a minimum. Can be problematic to read for some people, shouty, leads to pronounciation issues with screen readers ([15:40](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=940s)).
@@ -60,9 +68,10 @@ Here is a detailed list of issues I spotted, split into the categories I normall
 
 ### Best practices
 
-- Missing skip link ([00:42](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=42s)).
+> Best practices: These are not accessibility issues, but are recommended for ensuring the best user experience.
+
 - The theme toggle’s icon should resize according to browser font size changes ([15:20](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=920s)).
-- Images of text (footer logos) should also ideally resize according to browser font size changes ([15:20](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=920s)).
+- Footer logos should also ideally resize according to browser font size changes ([15:20](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=920s)).
 - Hide the theme toggle in print styles ([21:05](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1265s)).
 - Have link URLs visible in print styles ([21:05](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1265s)).
 - Hide footer content in print styles ([21:05](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1265s)).
