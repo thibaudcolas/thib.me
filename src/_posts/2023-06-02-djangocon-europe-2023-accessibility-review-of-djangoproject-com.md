@@ -8,7 +8,7 @@ categories: [Accessibility, Audits, Community, Test]
 
 
 
-Here are the results of a quick accessibility audit I did for the [Django project website](https://www.djangoproject.com/), as part of the DjangoCon Europe 2023 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: [djangoproject.com accessibility testing | DjangoCon Europe 2023](https://www.youtube.com/watch?v=dAiMPTOMh1U).
+Here are the results of a quick accessibility audit I did for the [Django project website](https://www.djangoproject.com/), as part of the DjangoCon Europe 2023 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: [djangoproject.com accessibility testing - DjangoCon Europe 2023](https://www.youtube.com/watch?v=dAiMPTOMh1U).
 
 <!-- more -->
 
@@ -22,6 +22,51 @@ TL;DW; There are pretty fundamental issues, that aren’t always blockers but wo
 2. Changes to the main content layout for easier navigation to important links.
 3. A new color palette with more legible text.
 
+## Issues
+
+Here is a detailed list of issues I spotted, split into the categories I normally use, with links to video timestamps where appropriate, and links to relevant WCAG success criteria.
+
+### Blockers
+
+- The "hamburger" menu toggle is impossible to use with a keyboard. This makes it impossible for keyboard and screen reader users to access menu items and navigate the site in this way. ([Menu button is not a button #1234](https://github.com/django/djangoproject.com/issues/1234), [18:18](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1098s), [SC 2.1.1 Keyboard](https://www.w3.org/TR/WCAG22/#keyboard)).
+- The page’s second column content is hidden in print stylesheets. This makes it impossible for users of magnifiers to access this content ([22:00](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1320s)).
+
+### Major
+
+- Heading level 1 should be used for the title of the page / visually most prominent heading, ideally not for invisible content ("Django" on homepage). Ideally each page would only have a single h1. ([07:04](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=424s), [SC 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships)).
+
+### Confusing
+
+- Focus style almost invisible on "Get started with Django" CTA ([02:30](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=150s), [SC 1.4.11 Non-Text Contrast](https://www.w3.org/TR/WCAG22/#non-text-contrast)).
+- Links should be identifiable with other means than color ([05:30](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=330s), [SC 1.4.1 Use of Color](https://www.w3.org/TR/WCAG22/#use-of-color)).
+- All page content should be in a landmark ([09:39](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=579s), [SC 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships)).
+- A lot of text has color contrast issues making it hard to read ([#974](https://github.com/django/djangoproject.com/issues/974), [13:08](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=788s), [SC 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum)).
+- Scrolling should remain vertical only (no overflows) when using 400% page zoom ([16:48](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1008s), [SC 1.4.10 Reflow](https://www.w3.org/TR/WCAG22/#reflow)).
+- Website logo disappears in forced colors mode with a light theme (white on white) ([19:14](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1154s), [SC 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum)).
+
+### Minor
+
+- Custom "dotted outline" focus styles: not visible enough and broken in main navigation ([01:02](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=62s), [SC 2.4.13 Focus Appearance](https://www.w3.org/TR/WCAG22/#focus-appearance)).
+
+### UX issues
+
+- The two-column layout as implemented means reaching the second column content with the keyboard requires going through the entire first column ([02:58](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=178s), see also [#494](https://github.com/django/djangoproject.com/issues/494)).
+- The sidebar heading hierarchy makes it hard to understand the content structure ([07:04](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=424s)).
+- Keep uppercase text to a minimum. Can be problematic to read for some people, shouty, leads to pronounciation issues with screen readers ([15:40](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=940s)).
+- Avoid interactive elements going right up to the edge of the screen on smaller viewports ("Get started with Django" button), as it makes it hard for touch users to touch-scroll past those elements ([17:30](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1050s)).
+- For forced colors mode compatibility, show the regions of the page with borders since backgrounds are removed ([19:40](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1180s)).
+- For forced colors mode compatibility, show the outline of buttons with borders since backgrounds are removed ([19:40](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1180s)).
+- Form fields should remain visible in print stylesheets so the page content is understandable ([22:20](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1340s)).
+
+### Best practices
+
+- Missing skip link ([00:42](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=42s)).
+- The theme toggle’s icon should resize according to browser font size changes ([15:20](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=920s)).
+- Images of text (footer logos) should also ideally resize according to browser font size changes ([15:20](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=920s)).
+- Hide the theme toggle in print styles ([21:05](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1265s)).
+- Have link URLs visible in print styles ([21:05](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1265s)).
+- Hide footer content in print styles ([21:05](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1265s)).
+
 ## Methodology
 
 In the interest of time, I only reviewed the site with a suite of automated and semi-automated checks available in Google Chrome:
@@ -33,51 +78,6 @@ In the interest of time, I only reviewed the site with a suite of automated and 
 - Keyboard navigation
 
 Though those tests will find a lot of common issues, normally accessibility testing would include navigating the site with assistive technologies (screen readers, speech recognition, screen magnification, etc).
-
-## Issues
-
-Here is a detailed list of issues I spotted, split into the categories I normally use, with links to video timestamps where appropriate, and links to relevant WCAG success criteria.
-
-### Blockers
-
-- The "hamburger" menu toggle is impossible to use with a keyboard. This makes it impossible for keyboard and screen reader users to access menu items and navigate the site in this way ([18:18](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1098s), [SC 2.1.1 Keyboard](https://www.w3.org/TR/WCAG22/#keyboard)).
-- The page’s second column content is hidden in print stylesheets. This makes it impossible for users of magnifiers to access this content ([22:00](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1320s)).
-
-### Major
-
-- Missing skip link. This is a [known issue (#62)](https://github.com/djangocon/2023.djangocon.eu/issues/62) ([00:42](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=42s)).
-- Heading level 1 should be used for the title of the page / visually most prominent heading, ideally not for invisible content ("Django" on homepage). Ideally each page would only have a single h1. ([07:04](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=424s), [SC 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships)).
-
-### Confusing
-
-- Focus style almost invisible on "Get started with Django" CTA ([02:30](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=150s), [SC 1.4.11 Non-Text Contrast](https://www.w3.org/TR/WCAG22/#non-text-contrast)).
-- Links should be identifiable with other means than color ([05:30](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=330s), [SC 1.4.1 Use of Color](https://www.w3.org/TR/WCAG22/#use-of-color)).
-- All page content should be in a landmark ([09:39](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=579s), [SC 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships)).
-- A lot of text has color contrast issues making it hard to read ([13:08](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=788s), [SC 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum)).
-- Scrolling should remain vertical only (no overflows) when using 400% page zoom ([16:48](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1008s), [SC 1.4.10 Reflow](https://www.w3.org/TR/WCAG22/#reflow)).
-- Website logo disappears in forced colors mode with a light theme (white on white) ([19:14](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1154s), [SC 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum)).
-
-### Minor
-
-- Custom "dotted outline" focus styles: not visible enough and broken in main navigation ([01:02](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=62s), [SC 2.4.13 Focus Appearance](https://www.w3.org/TR/WCAG22/#focus-appearance)).
-
-### UX issues
-
-- The two-column layout as implemented means reaching the second column content with the keyboard requires going through the entire first column ([02:58](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=178s)).
-- The sidebar heading hierarchy makes it hard to understand the content structure ([07:04](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=424s)).
-- Keep uppercase text to a minimum. Can be problematic to read for some people, shouty, leads to pronounciation issues with screen readers ([15:40](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=940s)).
-- Avoid interactive elements going right up to the edge of the screen on smaller viewports ("Get started with Django" button), as it makes it hard for touch users to touch-scroll past those elements ([17:30](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1050s)).
-- For forced colors mode compatibility, show the regions of the page with borders since backgrounds are removed ([19:40](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1180s)).
-- For forced colors mode compatibility, show the outline of buttons with borders since backgrounds are removed ([19:40](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1180s)).
-- Form fields should remain visible in print stylesheets so the page content is understandable ([22:20](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1340s)).
-
-### Best practices
-
-- The theme toggle’s icon should resize according to browser font size changes ([15:20](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=920s)).
-- Images of text (footer logos) should also ideally resize according to browser font size changes ([15:20](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=920s)).
-- Hide the theme toggle in print styles ([21:05](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1265s)).
-- Have link URLs visible in print styles ([21:05](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1265s)).
-- Hide footer content in print styles ([21:05](https://www.youtube.com/watch?v=dAiMPTOMh1U&t=1265s)).
 
 ## Video timestamps
 
