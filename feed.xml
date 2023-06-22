@@ -1,11 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-06-22T05:44:36+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">DjangoCon Europe 2023 – Accessibility review of djangoproject.com</title><link href="https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com" rel="alternate" type="text/html" title="DjangoCon Europe 2023 – Accessibility review of djangoproject.com" /><published>2023-06-02T21:13:03+00:00</published><updated>2023-06-02T21:13:03+00:00</updated><id>https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com</id><content type="html" xml:base="https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com"><![CDATA[<table>
-  <tbody>
-    <tr>
-      <td>Here are the results of a quick accessibility audit I did for the <a href="https://www.djangoproject.com/">Django project website</a>, as part of the DjangoCon Europe 2023 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: [djangoproject.com accessibility testing</td>
-      <td>DjangoCon Europe 2023](https://www.youtube.com/watch?v=dAiMPTOMh1U).</td>
-    </tr>
-  </tbody>
-</table>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-06-22T06:06:57+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">DjangoCon Europe 2023 – Accessibility review of djangoproject.com</title><link href="https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com" rel="alternate" type="text/html" title="DjangoCon Europe 2023 – Accessibility review of djangoproject.com" /><published>2023-06-02T21:13:03+00:00</published><updated>2023-06-02T21:13:03+00:00</updated><id>https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com</id><content type="html" xml:base="https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com"><![CDATA[<p>Here are the results of a quick accessibility audit I did for the <a href="https://www.djangoproject.com/">Django project website</a>, as part of the DjangoCon Europe 2023 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: <a href="https://www.youtube.com/watch?v=dAiMPTOMh1U">djangoproject.com accessibility testing - DjangoCon Europe 2023</a>.</p>
 
 <!-- more -->
 
@@ -21,20 +14,6 @@
   <li>A new color palette with more legible text.</li>
 </ol>
 
-<h2 id="methodology">Methodology</h2>
-
-<p>In the interest of time, I only reviewed the site with a suite of automated and semi-automated checks available in Google Chrome:</p>
-
-<ul>
-  <li>Axe automated checks bundled in the <a href="https://accessibilityinsights.io/">Accessibility Insights extension</a>.</li>
-  <li>Other tools from Accessibility Insights: Landmarks, Color, Tab stops, Headings, Accessible names</li>
-  <li>Simulated <a href="https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/">forced colors mode</a></li>
-  <li>Font resizing and page zoom</li>
-  <li>Keyboard navigation</li>
-</ul>
-
-<p>Though those tests will find a lot of common issues, normally accessibility testing would include navigating the site with assistive technologies (screen readers, speech recognition, screen magnification, etc).</p>
-
 <h2 id="issues">Issues</h2>
 
 <p>Here is a detailed list of issues I spotted, split into the categories I normally use, with links to video timestamps where appropriate, and links to relevant WCAG success criteria.</p>
@@ -42,14 +21,13 @@
 <h3 id="blockers">Blockers</h3>
 
 <ul>
-  <li>The “hamburger” menu toggle is impossible to use with a keyboard. This makes it impossible for keyboard and screen reader users to access menu items and navigate the site in this way (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1098s">18:18</a>, <a href="https://www.w3.org/TR/WCAG22/#keyboard">SC 2.1.1 Keyboard</a>).</li>
+  <li>The “hamburger” menu toggle is impossible to use with a keyboard. This makes it impossible for keyboard and screen reader users to access menu items and navigate the site in this way. (<a href="https://github.com/django/djangoproject.com/issues/1234">Menu button is not a button #1234</a>, <a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1098s">18:18</a>, <a href="https://www.w3.org/TR/WCAG22/#keyboard">SC 2.1.1 Keyboard</a>).</li>
   <li>The page’s second column content is hidden in print stylesheets. This makes it impossible for users of magnifiers to access this content (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1320s">22:00</a>).</li>
 </ul>
 
 <h3 id="major">Major</h3>
 
 <ul>
-  <li>Missing skip link. This is a <a href="https://github.com/djangocon/2023.djangocon.eu/issues/62">known issue (#62)</a> (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=42s">00:42</a>).</li>
   <li>Heading level 1 should be used for the title of the page / visually most prominent heading, ideally not for invisible content (“Django” on homepage). Ideally each page would only have a single h1. (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=424s">07:04</a>, <a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">SC 1.3.1 Info and Relationships</a>).</li>
 </ul>
 
@@ -59,7 +37,7 @@
   <li>Focus style almost invisible on “Get started with Django” CTA (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=150s">02:30</a>, <a href="https://www.w3.org/TR/WCAG22/#non-text-contrast">SC 1.4.11 Non-Text Contrast</a>).</li>
   <li>Links should be identifiable with other means than color (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=330s">05:30</a>, <a href="https://www.w3.org/TR/WCAG22/#use-of-color">SC 1.4.1 Use of Color</a>).</li>
   <li>All page content should be in a landmark (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=579s">09:39</a>, <a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">SC 1.3.1 Info and Relationships</a>).</li>
-  <li>A lot of text has color contrast issues making it hard to read (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=788s">13:08</a>, <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">SC 1.4.3 Contrast (Minimum)</a>).</li>
+  <li>A lot of text has color contrast issues making it hard to read (<a href="https://github.com/django/djangoproject.com/issues/974">#974</a>, <a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=788s">13:08</a>, <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">SC 1.4.3 Contrast (Minimum)</a>).</li>
   <li>Scrolling should remain vertical only (no overflows) when using 400% page zoom (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1008s">16:48</a>, <a href="https://www.w3.org/TR/WCAG22/#reflow">SC 1.4.10 Reflow</a>).</li>
   <li>Website logo disappears in forced colors mode with a light theme (white on white) (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1154s">19:14</a>, <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">SC 1.4.3 Contrast (Minimum)</a>).</li>
 </ul>
@@ -73,7 +51,7 @@
 <h3 id="ux-issues">UX issues</h3>
 
 <ul>
-  <li>The two-column layout as implemented means reaching the second column content with the keyboard requires going through the entire first column (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=178s">02:58</a>).</li>
+  <li>The two-column layout as implemented means reaching the second column content with the keyboard requires going through the entire first column (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=178s">02:58</a>, see also <a href="https://github.com/django/djangoproject.com/issues/494">#494</a>).</li>
   <li>The sidebar heading hierarchy makes it hard to understand the content structure (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=424s">07:04</a>).</li>
   <li>Keep uppercase text to a minimum. Can be problematic to read for some people, shouty, leads to pronounciation issues with screen readers (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=940s">15:40</a>).</li>
   <li>Avoid interactive elements going right up to the edge of the screen on smaller viewports (“Get started with Django” button), as it makes it hard for touch users to touch-scroll past those elements (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1050s">17:30</a>).</li>
@@ -85,12 +63,27 @@
 <h3 id="best-practices">Best practices</h3>
 
 <ul>
+  <li>Missing skip link (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=42s">00:42</a>).</li>
   <li>The theme toggle’s icon should resize according to browser font size changes (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=920s">15:20</a>).</li>
   <li>Images of text (footer logos) should also ideally resize according to browser font size changes (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=920s">15:20</a>).</li>
   <li>Hide the theme toggle in print styles (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1265s">21:05</a>).</li>
   <li>Have link URLs visible in print styles (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1265s">21:05</a>).</li>
   <li>Hide footer content in print styles (<a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1265s">21:05</a>).</li>
 </ul>
+
+<h2 id="methodology">Methodology</h2>
+
+<p>In the interest of time, I only reviewed the site with a suite of automated and semi-automated checks available in Google Chrome:</p>
+
+<ul>
+  <li>Axe automated checks bundled in the <a href="https://accessibilityinsights.io/">Accessibility Insights extension</a>.</li>
+  <li>Other tools from Accessibility Insights: Landmarks, Color, Tab stops, Headings, Accessible names</li>
+  <li>Simulated <a href="https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/">forced colors mode</a></li>
+  <li>Font resizing and page zoom</li>
+  <li>Keyboard navigation</li>
+</ul>
+
+<p>Though those tests will find a lot of common issues, normally accessibility testing would include navigating the site with assistive technologies (screen readers, speech recognition, screen magnification, etc).</p>
 
 <h2 id="video-timestamps">Video timestamps</h2>
 
@@ -132,7 +125,7 @@
   <li><a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1320s">22:00 - Missing sidebar in print styles</a></li>
   <li><a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1340s">22:20 - Missing form fields</a></li>
   <li><a href="https://www.youtube.com/watch?v=dAiMPTOMh1U&amp;t=1375s">22:55 - Recap</a></li>
-</ul>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Audits" /><category term="Community" /><category term="Test" /><summary type="html"><![CDATA[Here are the results of a quick accessibility audit I did for the Django project website, as part of the DjangoCon Europe 2023 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: [djangoproject.com accessibility testing DjangoCon Europe 2023](https://www.youtube.com/watch?v=dAiMPTOMh1U).]]></summary></entry><entry><title type="html">Next.js ❤️ Wagtail</title><link href="https://thib.me/nextjs-loves-wagtail" rel="alternate" type="text/html" title="Next.js ❤️ Wagtail" /><published>2023-05-31T04:13:03+00:00</published><updated>2023-05-31T04:13:03+00:00</updated><id>https://thib.me/nextjs-loves-wagtail</id><content type="html" xml:base="https://thib.me/nextjs-loves-wagtail"><![CDATA[<p>Our DjangoCon 2023 workshop on headless Wagtail with Next.js.</p>
+</ul>]]></content><author><name>Thibaud Colas</name></author><category term="Accessibility" /><category term="Audits" /><category term="Community" /><category term="Test" /><summary type="html"><![CDATA[Here are the results of a quick accessibility audit I did for the Django project website, as part of the DjangoCon Europe 2023 sprints. I recorded myself going through this and put it up on YouTube, so we have a demo for each of the issues: djangoproject.com accessibility testing - DjangoCon Europe 2023.]]></summary></entry><entry><title type="html">Next.js ❤️ Wagtail</title><link href="https://thib.me/nextjs-loves-wagtail" rel="alternate" type="text/html" title="Next.js ❤️ Wagtail" /><published>2023-05-31T04:13:03+00:00</published><updated>2023-05-31T04:13:03+00:00</updated><id>https://thib.me/nextjs-loves-wagtail</id><content type="html" xml:base="https://thib.me/nextjs-loves-wagtail"><![CDATA[<p>Our DjangoCon 2023 workshop on headless Wagtail with Next.js.</p>
 
 <!-- more -->
 
