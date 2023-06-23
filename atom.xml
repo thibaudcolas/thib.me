@@ -4,13 +4,62 @@
   <title><![CDATA[Thibaud’s blog]]></title>
   <link href="https://thib.me/atom.xml" rel="self"/>
   <link href="https://thib.me/"/>
-  <updated>2023-06-22T06:16:02+00:00</updated>
+  <updated>2023-06-23T20:09:19+00:00</updated>
   <id>https://thib.me/</id>
   <author>
     <name><![CDATA[Thibaud Colas]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Maintaining the pre-commit-stylelint mirror]]></title>
+    <link href="https://thib.me/maintaining-the-pre-commit-stylelint-mirror"/>
+    <updated>2023-06-23T00:47:03+00:00</updated>
+    <id>https://thib.me/maintaining-the-pre-commit-stylelint-mirror</id>
+    <content type="html"><![CDATA[<p>About a year and a half <a href="https://github.com/pre-commit/pre-commit/issues/1768">after set up pre-commit-stylelint</a>, I thought I’d quickly look into how well this mirror has been running.</p>
+
+<!-- more -->
+
+<p>TL;DR; from my perspective as a maintainer and user of this mirror, it’s working great and is better by all my personal measures than an equivalent install from the main project.</p>
+
+<h2 id="maintenance">Maintenance</h2>
+
+<ul>
+  <li>It’s taken me about 1h of maintenance since initial setup. The main thing I did is writing this report, and adjusting the frequency of the mirroring script a couple times due to concerns with its energy usage.</li>
+  <li>No one has opened any issues in the mirror repository. As far as I can tell no one has reported problems with the mirror elsewhere either.</li>
+</ul>
+
+<h2 id="infrastructure">Infrastructure</h2>
+
+<ul>
+  <li>The script takes on average 20s to run, and did so 3 times per week for the last 12+ months. So over that year and a bit that’s somewhere around 1h of run time.</li>
+  <li>Since initial setup, the mirror has published 38 versions of Stylelint.</li>
+</ul>
+
+<p>Here is a graph from GitHub which shows commits – i.e. when versions were published over the last few months:</p>
+
+<p><img src="/images/blog/maintaining-the-pre-commit-stylelint-mirror/pre-commit-stylelint-mirror-publish.png" alt="pre-commit-stylelint mirror publish" /></p>
+
+<h2 id="usage">Usage</h2>
+
+<ul>
+  <li>According to GitHub statistics, on average 42 people or CI builds use this mirror (clone the repository) per day</li>
+  <li>On average there are 133 clones of the repository per day.</li>
+  <li>According to the same stats, less than 1 person looks at the project in GitHub per day.</li>
+</ul>
+
+<p>Here are the full statistics I have access to as of today:</p>
+
+<p><img src="/images/blog/maintaining-the-pre-commit-stylelint-mirror/pre-commit-stylelint-mirror-usage.png" alt="pre-commit-stylelint mirror statistics" /></p>
+
+<h2 id="takeaway">Takeaway</h2>
+
+<p>Last year I compared the <a href="https://github.com/pre-commit/pre-commit/issues/1768#issuecomment-1032701216">performance of installing ESLint via a mirror vs. the base repository</a>. For that package, the mirror was about 8x faster (7s vs. a minute). If we used those numbers to assess how much processing the mirror has saved – that’d be a lower bound of <code class="language-plaintext highlighter-rouge">7s per use * 42 users per day * 365 days</code> per year: 30 hours, vs.  255 hours if the same amount of usage had happened via installs of the repository directly.</p>
+
+<p>Again this is mixing <em>ESLint</em> installation times with Stylelint usage figures, so not really correct by any means, but is a good indication the 1h the mirror runs per year is well worth the time and energy saved for everyone. If I calculate this again in the future I’ll also look at memory usage.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[DjangoCon Europe 2023 – Accessibility review of djangoproject.com]]></title>
@@ -1700,62 +1749,6 @@ git rebase main
 <h2 id="git-blame">git blame</h2>
 
 <p>For people who use <code class="language-plaintext highlighter-rouge">git blame</code>, we have introduced a <code class="language-plaintext highlighter-rouge">.git-blame-ignore-revs</code> which allows you to ignore the reformatting. See <a href="https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt">the official documentation</a> and the file in question for further information.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Wagtail developer jobs: where to look]]></title>
-    <link href="https://thib.me/wagtail-developer-jobs-where-to-look"/>
-    <updated>2022-01-13T06:21:09+00:00</updated>
-    <id>https://thib.me/wagtail-developer-jobs-where-to-look</id>
-    <content type="html"><![CDATA[<p>Looking for a Wagtail job? Or to hire a developer? Here are good places to check.</p>
-
-<!-- more -->
-
-<p>There are more options than you might think! Wagtail being based on Django, anyone with a Django skillset will be productive with Wagtail. As such, this list is equally relevant when searching for or advertising Django developer jobs.</p>
-
-<h2 id="chat">Chat</h2>
-
-<p>This is my favourite option by far, with the #jobs channel in the <a href="https://github.com/wagtail/wagtail/wiki/Slack">Wagtail Slack</a>. Our Slack workspace is very active, with #jobs being one of the most viewed channels. Using chat also makes it much simpler for people to have a conversation about a given job offer.</p>
-
-<p>Here is a screenshot of the workspace’s statistics, showing 250 weekly active users:</p>
-
-<p><a href="/images/blog/wagtail-developer-jobs-where-to-look/wagtailcms-stats-slack.png"><img src="/images/blog/wagtail-developer-jobs-where-to-look/wagtailcms-stats-slack.png" alt="Line chart of Weekly active members and messages posted, over December 2021 and January 2022. For Monday 10/01, there were 247 active members and 55 who posted messages" /></a></p>
-
-<h2 id="newsletters">Newsletters</h2>
-
-<p>This is a good option but the lead time is high, as there are only a few ad placements available per week.</p>
-
-<ul>
-  <li><a href="https://django-news.com/">Django News</a> – regularly includes Wagtail content.</li>
-  <li><a href="https://pycoders.com/">PyCoder’s Weekly</a> – occasional mentions of Wagtail.</li>
-</ul>
-
-<h2 id="conferences">Conferences</h2>
-
-<p>There are a lot of great options here, with a good number of events recurring every year.</p>
-
-<ul>
-  <li><a href="https://www.wagtail.space/">Wagtail Space</a>, and <a href="https://us.wagtail.space/">Wagtail Space US</a></li>
-  <li><a href="https://2021.djangocon.eu/">DjangoCon Europe</a></li>
-  <li><a href="https://djangocon.us/">DjangoCon US</a></li>
-  <li><a href="https://2022.pythonwebconf.com/">Python Web Conference</a> (coming up soon!)</li>
-  <li><a href="https://djangoday.dk/">Django Day Copenhagen</a> (also coming up soon)</li>
-</ul>
-
-<h2 id="job-listings">Job listings</h2>
-
-<p>General-purpose job sites are always worth looking at for job offers matching “Wagtail” or “Django”. There are also a few specialised job boards:</p>
-
-<ul>
-  <li><a href="https://www.djangoproject.com/community/jobs/">Django jobs RSS</a>, aggregating other job boards.</li>
-  <li><a href="https://djangojobs.net/">https://djangojobs.net/</a></li>
-  <li><a href="https://djangogigs.com/">https://djangogigs.com/</a></li>
-</ul>
-
-<h2 id="wagtail-developers">Wagtail developers</h2>
-
-<p>Last but not least, <a href="https://madewithwagtail.org/developers/">Made with Wagtail developer profiles</a> list 200+ organisations that create Wagtail sites, some of which likely will be hiring. The profiles are ordered by number of Wagtail sites published, which helps getting a sense of the size of an organisation’s Wagtail practice.</p>
 ]]></content>
   </entry>
   

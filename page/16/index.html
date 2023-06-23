@@ -18,7 +18,7 @@
       
   
     
-      First draft – Data quality checklist for dataviz projects
+      Python memory profiling and speed benchmarks for the Draft.js exporter
     
     
       
@@ -32,8 +32,7 @@
 
 
 
-2017-08-27 08:35
- ...">
+2017-...">
   <meta name="author" content="Thibaud Colas"><link rel="canonical" href="https://thib.me/page/16/">
   <link href="/favicon.ico" rel="shortcut icon">
   <link href="/atom.xml" rel="alternate" title="Thibaud’s blog" type="application/atom+xml">
@@ -53,7 +52,7 @@
       
   
     
-      First draft – Data quality checklist for dataviz projects
+      Python memory profiling and speed benchmarks for the Draft.js exporter
     
     
       
@@ -67,8 +66,7 @@
 
 
 
-2017-08-27 08:35
- ...">
+2017-...">
   
   <meta name="twitter:label1" value="Reading time">
   <meta name="twitter:data1" value="Not too long">
@@ -107,6 +105,46 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/python-memory-profiling-for-the-draft-js-exporter">Python memory profiling and speed benchmarks for the Draft.js exporter</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2017-11-15T13:24:38+00:00" pubdate data-updated="true">2017-11-15 13:24</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" data-no-instant><p>Ever heard of <a href="https://draftjs.org/">Draft.js</a>? We are rebuilding <a href="https://github.com/wagtail/wagtail">Wagtail</a>’s rich text content management using this rich text editor framework from Facebook. Apart from a new editor, <a href="https://github.com/springload/draftail">Draftail</a>, we also needed an exporter to convert Draft.js content to HTML: the aptly-named <a href="https://github.com/springload/draftjs_exporter">draftjs_exporter</a>.</p>
+
+<p>In this post I’ll focus on this critical piece of the puzzle, which needs to operate as fast as possible regardless of how much content it has to handle. Memory profiling and benchmarks in a Python ecosystem were new to me, so here is what I learned along the way.</p>
+
+</div>
+
+
+<footer>
+  <a rel="full-article" href="/python-memory-profiling-for-the-draft-js-exporter" aria-hidden="true">Read on &rarr;</a>
+</footer>
+
+
+    </article>
   
   
     <article>
@@ -264,44 +302,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/bringing-our-mad-skillz-wagtail">Bringing our mad skillz to Wagtail</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-
-<time datetime="2017-05-03T08:35:03+00:00" pubdate data-updated="true">2017-05-03 08:35</time>
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content" data-no-instant><p>Springload often attends development sprints of Wagtail. They’re a great occasion to meet with other core contributors, and drive the project together towards the needs of its users, aka our clients. In the past our work has taken us to <a href="/awesome-wagtail">Ede, Netherlands</a>, and Cape Town but this time we headed North to <a href="https://www.google.co.nz/maps?q=Reykjav%C3%ADk">Reykjavík, Iceland</a> thanks to our friends at <a href="https://www.overcast.io/">Overcast Software</a>.</p>
-
-</div>
-
-
-<footer>
-  <a rel="full-article" href="/bringing-our-mad-skillz-wagtail" aria-hidden="true">Read on &rarr;</a>
-</footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/17/">&larr; Older</a>
@@ -318,6 +318,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/maintaining-the-pre-commit-stylelint-mirror">Maintaining the pre-commit-stylelint mirror</a>
+      </li>
+    
+      <li class="post">
         <a href="/djangocon-europe-2023-accessibility-review-of-djangoproject-com">DjangoCon Europe 2023 – Accessibility review of djangoproject.com</a>
       </li>
     
@@ -331,10 +335,6 @@
     
       <li class="post">
         <a href="/why-96-3-percent-of-the-web-fails-at-accessibility-gaad-2023">Why 96.3% of the Web Fails at Accessibility - GAAD 2023</a>
-      </li>
-    
-      <li class="post">
-        <a href="/wagtail-accessibility-statistics-for-gaad-2023">Wagtail accessibility statistics for GAAD 2023</a>
       </li>
     
   </ul>

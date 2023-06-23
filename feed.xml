@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-06-22T06:16:02+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">DjangoCon Europe 2023 – Accessibility review of djangoproject.com</title><link href="https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com" rel="alternate" type="text/html" title="DjangoCon Europe 2023 – Accessibility review of djangoproject.com" /><published>2023-06-02T21:13:03+00:00</published><updated>2023-06-02T21:13:03+00:00</updated><id>https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com</id><content type="html" xml:base="https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com"><![CDATA[<p>Here are the results of a quick accessibility audit I did for the <a href="https://www.djangoproject.com/">Django project website</a>, as part of the DjangoCon Europe 2023 sprints.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://thib.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thib.me/" rel="alternate" type="text/html" /><updated>2023-06-23T20:09:19+00:00</updated><id>https://thib.me/feed.xml</id><title type="html">Thibaud’s blog</title><subtitle>Logbook of a software engineer navigating web development</subtitle><author><name>Thibaud Colas</name></author><entry><title type="html">Maintaining the pre-commit-stylelint mirror</title><link href="https://thib.me/maintaining-the-pre-commit-stylelint-mirror" rel="alternate" type="text/html" title="Maintaining the pre-commit-stylelint mirror" /><published>2023-06-23T00:47:03+00:00</published><updated>2023-06-23T00:47:03+00:00</updated><id>https://thib.me/maintaining-the-pre-commit-stylelint-mirror</id><content type="html" xml:base="https://thib.me/maintaining-the-pre-commit-stylelint-mirror"><![CDATA[<p>About a year and a half <a href="https://github.com/pre-commit/pre-commit/issues/1768">after set up pre-commit-stylelint</a>, I thought I’d quickly look into how well this mirror has been running.</p>
+
+<!-- more -->
+
+<p>TL;DR; from my perspective as a maintainer and user of this mirror, it’s working great and is better by all my personal measures than an equivalent install from the main project.</p>
+
+<h2 id="maintenance">Maintenance</h2>
+
+<ul>
+  <li>It’s taken me about 1h of maintenance since initial setup. The main thing I did is writing this report, and adjusting the frequency of the mirroring script a couple times due to concerns with its energy usage.</li>
+  <li>No one has opened any issues in the mirror repository. As far as I can tell no one has reported problems with the mirror elsewhere either.</li>
+</ul>
+
+<h2 id="infrastructure">Infrastructure</h2>
+
+<ul>
+  <li>The script takes on average 20s to run, and did so 3 times per week for the last 12+ months. So over that year and a bit that’s somewhere around 1h of run time.</li>
+  <li>Since initial setup, the mirror has published 38 versions of Stylelint.</li>
+</ul>
+
+<p>Here is a graph from GitHub which shows commits – i.e. when versions were published over the last few months:</p>
+
+<p><img src="/images/blog/maintaining-the-pre-commit-stylelint-mirror/pre-commit-stylelint-mirror-publish.png" alt="pre-commit-stylelint mirror publish" /></p>
+
+<h2 id="usage">Usage</h2>
+
+<ul>
+  <li>According to GitHub statistics, on average 42 people or CI builds use this mirror (clone the repository) per day</li>
+  <li>On average there are 133 clones of the repository per day.</li>
+  <li>According to the same stats, less than 1 person looks at the project in GitHub per day.</li>
+</ul>
+
+<p>Here are the full statistics I have access to as of today:</p>
+
+<p><img src="/images/blog/maintaining-the-pre-commit-stylelint-mirror/pre-commit-stylelint-mirror-usage.png" alt="pre-commit-stylelint mirror statistics" /></p>
+
+<h2 id="takeaway">Takeaway</h2>
+
+<p>Last year I compared the <a href="https://github.com/pre-commit/pre-commit/issues/1768#issuecomment-1032701216">performance of installing ESLint via a mirror vs. the base repository</a>. For that package, the mirror was about 8x faster (7s vs. a minute). If we used those numbers to assess how much processing the mirror has saved – that’d be a lower bound of <code class="language-plaintext highlighter-rouge">7s per use * 42 users per day * 365 days</code> per year: 30 hours, vs.  255 hours if the same amount of usage had happened via installs of the repository directly.</p>
+
+<p>Again this is mixing <em>ESLint</em> installation times with Stylelint usage figures, so not really correct by any means, but is a good indication the 1h the mirror runs per year is well worth the time and energy saved for everyone. If I calculate this again in the future I’ll also look at memory usage.</p>]]></content><author><name>Thibaud Colas</name></author><category term="Open Source" /><category term="Report" /><category term="Tools" /><summary type="html"><![CDATA[About a year and a half after set up pre-commit-stylelint, I thought I’d quickly look into how well this mirror has been running.]]></summary></entry><entry><title type="html">DjangoCon Europe 2023 – Accessibility review of djangoproject.com</title><link href="https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com" rel="alternate" type="text/html" title="DjangoCon Europe 2023 – Accessibility review of djangoproject.com" /><published>2023-06-02T21:13:03+00:00</published><updated>2023-06-02T21:13:03+00:00</updated><id>https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com</id><content type="html" xml:base="https://thib.me/djangocon-europe-2023-accessibility-review-of-djangoproject-com"><![CDATA[<p>Here are the results of a quick accessibility audit I did for the <a href="https://www.djangoproject.com/">Django project website</a>, as part of the DjangoCon Europe 2023 sprints.</p>
 
 <!-- more -->
 
@@ -550,52 +590,4 @@
 
 <p>If you want to help shape Wagtail’s future, consider joining for the initial 6-month membership! All backgrounds and levels of expertise welcome. In particular, we hope this team will work well for people who don’t code and still want to contribute to open source.</p>
 
-<p>To join, come say hi in #developer-relations on the <a href="https://github.com/wagtail/wagtail/wiki/slack">Wagtail Slack</a>.</p>]]></content><author><name>Thibaud Colas</name></author><category term="Wagtail" /><category term="Outreach" /><category term="Community" /><summary type="html"><![CDATA[We’re setting up a new contributors team for people interested in developer relations.]]></summary></entry><entry><title type="html">Wagtail CMS projects for Google Summer of Code 2023</title><link href="https://thib.me/wagtail-cms-projects-for-google-summer-of-code-2023" rel="alternate" type="text/html" title="Wagtail CMS projects for Google Summer of Code 2023" /><published>2023-02-22T18:50:00+00:00</published><updated>2023-02-22T18:50:00+00:00</updated><id>https://thib.me/wagtail-cms-projects-for-google-summer-of-code-2023</id><content type="html" xml:base="https://thib.me/wagtail-cms-projects-for-google-summer-of-code-2023"><![CDATA[<p>For the third time, Wagtail is joining Google’s open source internships program.</p>
-
-<!-- more -->
-
-<p><img src="/images/blog/wagtail-cms-projects-for-google-summer-of-code-2023/wagtail-gsoc-social-preview.png" alt="" /></p>
-
-<p>It’s official! Following our <a href="https://wagtail.org/blog/outreachy-welcoming-new-contributors-to-open-source/">participation to Outreachy</a> in the December 2022 cohort, Wagtail is taking part in <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a>.</p>
-
-<h2 id="what-is-google-summer-of-code">What is Google Summer of Code</h2>
-
-<p>Also known as GSoC, Google Summer of Code is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors.</p>
-
-<h2 id="project-ideas">Project ideas</h2>
-
-<p>We’ve earmarked three project ideas this year.</p>
-
-<h3 id="dark-theme-for-wagtail-admin">Dark theme for Wagtail admin</h3>
-
-<p><em>🚧 Update: we have discontinued this idea, as the work involved isn’t substantial enough to represent a GSoC project.</em></p>
-
-<p>This is a continuation of past projects to make Wagtail’s color theme configurable, and accessibility improvements for Windows High Contrast mode users.</p>
-
-<p>Here is the latest prototype of our dark theme, in a high contrast variant:</p>
-
-<p><img src="/images/blog/wagtail-cms-projects-for-google-summer-of-code-2023/dark-high-contrast.png" alt="Wagtail dark theme prototype, in high contrast mode" /></p>
-
-<p>For more information, see <a href="https://github.com/wagtail/wagtail/issues/10056">Dark theme for the admin interface #10056</a>.</p>
-
-<h3 id="rfc-72-background-workers">RFC 72: Background workers</h3>
-
-<p>Wagtail currently doesn’t have a first-party solution for long-running tasks. Other CMSs in the ecosystem such as WordPress and Drupal have background workers, allowing them to push tasks into the background to be processed at a later date, without requiring the end user to wait for them to occur.</p>
-
-<p>One of the key goals for this project is removing the requirement for the user to wait for tasks they don’t need to.</p>
-
-<p>For more information, see <a href="https://github.com/wagtail/rfcs/pull/72">RFC 72: Background workers</a>.</p>
-
-<h3 id="greener-coding-wagtails-climate-impact">Greener coding: Wagtail’s climate impact</h3>
-
-<p>We’re starting to have a better understanding of the<a href="https://github.com/wagtail/wagtail/discussions/8843">climate impact of Wagtail</a> as a CMS, and how we can reduce it. We want to integrate our findings into Wagtail’s direction, and make concrete improvements to the project to reduce related carbon emissions.</p>
-
-<p>This project is part of a partnership with the <a href="https://www.thegreenwebfoundation.org/">Green Web Foundation</a>, with mentors from both organisations.</p>
-
-<h2 id="how-to-participate">How to participate</h2>
-
-<p>Head over to our <a href="https://wagtail.org/gsoc">GSoC documentation</a> and <a href="https://github.com/wagtail/gsoc/discussions">GSoC Discussions</a>. Review our contributor guide, and come say hi!</p>
-
-<h2 id="whats-next">What’s next</h2>
-
-<p>We hope to hear from a lot of newcomers through the <a href="https://developers.google.com/open-source/gsoc/timeline">application period</a>, where candidates get to know different communities and apply to projects. We’ll make sure to share more information about projects that are going ahead and their respective contributors once details are confirmed, closer to the summer.</p>]]></content><author><name>Thibaud Colas</name></author><category term="Wagtail" /><category term="Outreach" /><category term="Community" /><summary type="html"><![CDATA[For the third time, Wagtail is joining Google’s open source internships program.]]></summary></entry></feed>
+<p>To join, come say hi in #developer-relations on the <a href="https://github.com/wagtail/wagtail/wiki/slack">Wagtail Slack</a>.</p>]]></content><author><name>Thibaud Colas</name></author><category term="Wagtail" /><category term="Outreach" /><category term="Community" /><summary type="html"><![CDATA[We’re setting up a new contributors team for people interested in developer relations.]]></summary></entry></feed>
