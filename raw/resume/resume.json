@@ -4,16 +4,9 @@
     "label": "Technical Lead",
     "picture": "",
     "email": "thibaudcolas@gmail.com",
-    "phone": "+358 44 914 6944",
+    "phone": "",
     "website": "https://thib.me",
     "summary": "I’m Thibaud, a Technical Lead specialized in Web technologies.\n\n I’m interested in impactful work that makes a difference, open-source software, and sharing my learnings with others. If you care about diverse communities and fighting the good fight, we’ll do great things together.",
-    "location": {
-      "address": "Uusikatu 23",
-      "postalCode": "90100",
-      "city": "Oulu",
-      "region": "",
-      "countryCode": "FI"
-    },
     "profiles": [
       {
         "network": "GitHub",
@@ -33,6 +26,28 @@
     ]
   },
   "work": [
+    {
+      "company": "Torchbox",
+      "position": "Senior Developer and Wagtail consultant",
+      "website": "https://torchbox.com/",
+      "startDate": "2019-02-19",
+      "endDate": "",
+      "summary": "UI architecture & Wagtail consultant. Open source governance, Senior Management Team for Wagtail proposition, accessibility, digital sustainability.",
+      "highlights": []
+    },
+    {
+      "company": "Codemate",
+      "position": "Software Architect",
+      "website": "https://codemate.com/",
+      "startDate": "2018-03-01",
+      "endDate": "2018-12-31",
+      "summary": "Technical architecture, project management, and front-end development for a variety of projects, with a focus on full-stack JavaScript with React and Node backends.",
+      "highlights": [
+        "Single-page apps, React, Redux, react-router, TypeScript",
+        "Node, Express, Knex.js, Hapi, MongoDB, PostgreSQL",
+        "PHP, WordPress, MySQL, SQL"
+      ]
+    },
     {
       "company": "Springload",
       "position": "Technical Director - Front-end Development",
@@ -136,8 +151,62 @@
   ],
   "volunteer": [
     {
+      "organization": "W3C Sustainable Web Design Community Group",
+      "position": "Participant",
+      "website": "https://www.w3.org/community/sustyweb/",
+      "startDate": "2023-08-15",
+      "endDate": "",
+      "summary": "Community group participant supporting the creation of the Web Sustainability Guidelines (1.0)",
+      "highlights": []
+    },
+    {
+      "organization": "Google Summer of Code 2023",
+      "position": "Organizer and mentor for Wagtail",
+      "website": "https://wagtail.org/blog/wagtail-cms-projects-for-google-summer-of-code-2023/",
+      "startDate": "2023-05-26",
+      "endDate": "2023-10-01",
+      "summary": "Organization admin and mentor for two Wagtail projects through the Google Summer of Code program, with a focus on climate impact",
+      "highlights": []
+    },
+    {
+      "organization": "Django Girls PyCon UK 2023",
+      "position": "Mentor",
+      "website": "https://djangogirls.org/en/pyconuk/",
+      "startDate": "2023-09-23",
+      "endDate": "2023-09-23",
+      "summary": "A free programming workshop for women, held at PyCon UK 2023 in Cardiff",
+      "highlights": []
+    },
+    {
+      "organization": "Google Summer of Code 2022",
+      "position": "Organizer and mentor for Wagtail",
+      "website": "https://wagtail.org/blog/wagtail-cms-projects-for-google-summer-of-code-2022/",
+      "startDate": "2022-05-26",
+      "endDate": "2022-10-01",
+      "summary": "Organization admin and mentor for three Wagtail proposals through the Google Summer of Code program for 2022: Contrast Themes, Editor's Guide, UX Unification",
+      "highlights": []
+    },
+    {
+      "organization": "Django",
+      "position": "Accessibility team",
+      "website": "https://github.com/django/django",
+      "startDate": "2020-07-14",
+      "endDate": "",
+      "summary": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.",
+      "highlights": []
+    },
+    {
+      "organization": "Django Girls Bristol",
+      "position": "Mentor",
+      "website": "https://djangogirls.org/en/bristol1/",
+      "startDate": "2019-10-18",
+      "endDate": "2019-10-19",
+      "summary": "A free programming workshop for women, held at Torchbox offices in Bristol",
+      "highlights": []
+    },
+    {
       "organization": "Wagtail",
-      "position": "Core Developer",
+      "position": "Core team",
       "website": "https://github.com/wagtail/wagtail",
       "startDate": "2015-04-01",
       "endDate": "",
@@ -385,6 +454,11 @@
   ],
   "awards": [
     {
+      "title": "Torchbox J-P Memorial Prize 2023",
+      "date": "2023-02-24",
+      "summary": "A commemorative prize by Torchbox to remember J-P and his values: Be the change you want to see in the world - Do the right thing; not the easy thing - Help others to shine more brightly."
+    },
+    {
       "title": "Startup Weekend Wellington Health 2015 – Second place",
       "date": "2015-07-04",
       "summary": "Arrived second with our \"Paper Preen\" project. An automated quality control / linting and reviewing tool for research papers, prototype built with React and a Node.js backend"
@@ -455,12 +529,12 @@
     {
         "name": "Web Development: Front-end",
         "level": "",
-        "keywords": ["HTML5", "CSS3", "SVG", "JavaScript", "ES2015+", "React", "Redux", "D3", "Angular", "Knockout", "jQuery", "Sass", "Draft.js", "Electron", "Lodash", "Flow"]
+        "keywords": ["HTML", "CSS", "SVG", "JavaScript", "TypeScript", "React", "Redux", "Next.js", "Stimulus", "Vue", "D3", "Angular", "Knockout", "jQuery", "Sass", "Draft.js", "Electron"]
     },
     {
         "name": "Web Development: Back-end",
         "level": "",
-        "keywords": ["Node", "Express", "Python", "Django", "Wagtail", "Ruby", "Firebase", "PHP"]
+        "keywords": ["Python", "Django", "Wagtail", "DRF", "Node", "Express", "Ruby", "Firebase", "PHP"]
     },
     {
         "name": "Web Development: Architecture",
@@ -525,22 +599,22 @@
     {
         "name": "Project Management Tools",
         "level": "",
-        "keywords": ["Git", "GitHub", "GitLab", "Trello", "Redmine", "JIRA", "Google Docs"]
+        "keywords": ["Git", "GitHub", "GitLab", "Trello", "Redmine", "JIRA", "Monday", "Google Workspace"]
     },
     {
         "name": "Design Tools",
         "level": "",
-        "keywords": ["Sketch", "Zeplin", "InVision"]
+        "keywords": ["Figma", "Design tokens", "Sketch", "Zeplin", "InVision"]
     },
     {
         "name": "Sysadmin & Ops",
         "level": "",
-        "keywords": ["CI", "CD", "Vagrant", "Docker", "Build pipelines", "Jenkins", "Travis", "CircleCI", "CodeShip", "DangerJS"]
+        "keywords": ["CI", "CD", "Vagrant", "Docker", "Build pipelines", "Jenkins", "GitHub Actions", "CircleCI", "CodeShip", "DangerJS"]
     },
     {
         "name": "Databases",
         "level": "",
-        "keywords": ["PostgreSQL", "MariaDB", "MySQL", "MongoDB"]
+        "keywords": ["PostgreSQL", "SQLite", "MySQL", "MongoDB"]
     }
   ],
   "languages": [
@@ -550,15 +624,15 @@
     },
     {
       "language": "English",
-      "fluency": "Fluent — TOEIC: 985/990"
+      "fluency": "Bilingual"
+    },
+    {
+      "language": "Finnish",
+      "fluency": "En oikein hyvin"
     },
     {
       "language": "French Sign Language",
       "fluency": "Elementary proficiency"
-    },
-    {
-      "language": "Finnish",
-      "fluency": "Actively learning"
     }
   ],
   "interests": [
@@ -593,7 +667,11 @@
         "India",
         "New Zealand",
         "Japan",
-        "Finland"
+        "Finland",
+        "United Kingdom",
+        "Canada",
+        "Belarus",
+        "Iceland"
       ]
     }
   ],
@@ -615,5 +693,4 @@
       "reference": "Thibaud was an excellent intern and collaborator.\n Motivated and passionate, always on the lookout for new tools or processes to improve quality and productivity. Thibaud is also an excellent speaker able to animate interesting presentations and Lightning Talks, especially around JavaScript, Web Performance and Open-Source Solutions."
     }
   ],
-  "google_analytics_id": "UA-34692999-4"
 }
