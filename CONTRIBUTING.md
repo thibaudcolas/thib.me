@@ -9,6 +9,7 @@ rbenv version
 gem install bundler
 bundle install
 npm install
+npm install -g resume-cli
 ```
 
 ### Favicons
