@@ -22,7 +22,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v2
         with:
           path: dist
-  deploy_site:
+  deploy:
     needs: test
     runs-on: ubuntu-latest
     permissions:
@@ -33,4 +33,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
+      - uses: actions/download-artifact@v3
+      - uses: actions/configure-pages@v3
       - uses: actions/deploy-pages@v2
