@@ -19,16 +19,16 @@
         "url": "https://twitter.com/thibaud_colas"
       },
       {
-        "network": "SoundCloud",
+        "network": "LinkedIn",
         "username": "Thibaud Colas",
-        "url": "https://soundcloud.com/thibaudcolas"
+        "url": "https://www.linkedin.com/in/thibaudcolas/"
       }
     ]
   },
   "work": [
     {
       "company": "Torchbox",
-      "position": "Senior Developer and Wagtail consultant",
+      "position": "Senior developer and Wagtail consultant",
       "website": "https://torchbox.com/",
       "startDate": "2019-02-19",
       "endDate": "",
@@ -56,10 +56,10 @@
       "endDate": "2017-11-01",
       "summary": "Front-end leadership for a team of 10 developers. Front-end Direction for a 40-person agency. Oversight of web development projects, either CMS-driven or data-driven single-page apps. Strategic direction, technical architecture, training plans, sales and recruiting.",
       "highlights": [
-        "Oversight on 10+ API-driven web app projects, with React, API backends, and client-side routing",
-        "Oversight on 10+ content-driven site projects, with a CMS, front-end component library",
+        "Direction on 10+ API-driven web app projects, with React, API backends, and client-side routing",
+        "Direction on 10+ content-driven site projects, with a CMS, front-end component library",
         "Technical architecture and project planning for long-term build and maintenance projects",
-        "HR management, career progression (OKR), training oversight, hiring, and public relations",
+        "HR management, career progression (OKR), training direction, hiring, and public relations",
         "Front-end lead for a large-scale CMS redevelopment, built with a pattern library and headless CMS",
         "Team standards definition - open-source contributions, code reviews rollout, performance targets",
         "JavaScript (ES2015+), React, D3, REST APIs, BEM, Express, Django, Wagtail, GitHub, CodeShip, Travis"
@@ -160,6 +160,24 @@
       "highlights": []
     },
     {
+      "organization": "Outreachy 2023",
+      "position": "Organizer and mentor for Wagtail",
+      "website": "https://wagtail.org/blog/our-outreachy-projects-in-2023/",
+      "startDate": "2023-10-01",
+      "endDate": "2024-03-01",
+      "summary": "Organization admin and mentor for Wagtail projects through the Outreachy program, with a focus on accessibility",
+      "highlights": []
+    },
+    {
+      "organization": "DjangoCon Europe 2023",
+      "position": "Volunteer & organizer",
+      "website": "https://2023.djangocon.eu/conduct/",
+      "startDate": "2023-05-29",
+      "endDate": "2022-06-02",
+      "summary": "Code of Conduct team volunteer, opportunity grants for DjangoCon Europe 2023",
+      "highlights": []
+    },
+    {
       "organization": "Google Summer of Code 2023",
       "position": "Organizer and mentor for Wagtail",
       "website": "https://wagtail.org/blog/wagtail-cms-projects-for-google-summer-of-code-2023/",
@@ -178,6 +196,15 @@
       "highlights": []
     },
     {
+      "organization": "DjangoCon Europe 2022",
+      "position": "Volunteer",
+      "website": "https://2022.djangocon.eu/conduct/code_of_conduct/",
+      "startDate": "2022-09-21",
+      "endDate": "2022-09-25",
+      "summary": "Code of Conduct team volunteer for DjangoCon Europe 2022",
+      "highlights": []
+    },
+    {
       "organization": "Google Summer of Code 2022",
       "position": "Organizer and mentor for Wagtail",
       "website": "https://wagtail.org/blog/wagtail-cms-projects-for-google-summer-of-code-2022/",
@@ -187,12 +214,30 @@
       "highlights": []
     },
     {
+      "organization": "DjangoCon Europe 2021",
+      "position": "Volunteer",
+      "website": "https://2021.djangocon.eu/conduct/code_of_conduct/",
+      "startDate": "2021-06-02",
+      "endDate": "2021-06-06",
+      "summary": "Code of Conduct team volunteer for DjangoCon Europe 2021",
+      "highlights": []
+    },
+    {
       "organization": "Django",
       "position": "Accessibility team",
       "website": "https://github.com/django/django",
       "startDate": "2020-07-14",
       "endDate": "",
       "summary": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.",
+      "highlights": []
+    },
+    {
+      "organization": "Coders of Colour",
+      "position": "Mentor",
+      "website": "https://codersofcolour.org/posts/introduction-to-wagtail-and-dev-ops-programme/",
+      "startDate": "2020-06-03",
+      "endDate": "2020-06-05",
+      "summary": "In June 2020, 15 young people have been learning Git, Python and Wagtail to make a website for a charity in need of an online presence.",
       "highlights": []
     },
     {
@@ -459,7 +504,7 @@
       "summary": "A commemorative prize by Torchbox to remember J-P and his values: Be the change you want to see in the world - Do the right thing; not the easy thing - Help others to shine more brightly."
     },
     {
-      "title": "Startup Weekend Wellington Health 2015 – Second place",
+      "title": "Startup Weekend Wellington Health 2015 - Second place",
       "date": "2015-07-04",
       "summary": "Arrived second with our \"Paper Preen\" project. An automated quality control / linting and reviewing tool for research papers, prototype built with React and a Node.js backend"
     },
@@ -481,6 +526,13 @@
       "releaseDate": "2013-12-06",
       "website": "https://thib.me",
       "summary": "Notes, Thoughts and Open-source software."
+    },
+    {
+      "name": "2022 Web Almanac - Accessibility",
+      "publisher": "HTTP Archive",
+      "releaseDate": "2022-09-26",
+      "website": "https://almanac.httparchive.org/en/2022/accessibility",
+      "summary": "Writing & data analysis for the Accessibility chapter of HTTP Archive’s annual state of the web report"
     },
     {
       "name": "How Springload scores on the Joel Test and why it matters",
