@@ -23,7 +23,7 @@ Python packaging is very messy. I’ve recently started using the [Poetry](https
 [[package]]
 name = "curlylint"
 version = "0.12.2"
-description = "{{ 🎀}} Experimental HTML templates linting for Jinja, Nunjucks, Django templates, Twig, Liquid"
+description = "\{\{ 🎀\}\} Experimental HTML templates linting for Jinja, Nunjucks, Django templates, Twig, Liquid"
 category = "main"
 optional = false
 python-versions = ">=3.6"

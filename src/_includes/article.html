@@ -1,7 +1,7 @@
 {% unless page.no_header %}
   <header>
     {% if index %}
-      <h1 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+      <h2 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h2>
     {% else %}
       <a class="edit-link" aria-label="Edit this page on GitHub" href="{{ site.repository }}/edit/{{ site.branch }}/{{ site.source }}/{{ page.path }}">Edit</a>
       <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
@@ -19,9 +19,3 @@
 {% endunless %}
 
 <div class="entry-content" data-no-instant>{{ content }}</div>
-
-{% if index %}
-<footer>
-  <a rel="full-article" href="{{ site.baseurl }}{{ post.url }}" aria-hidden="true">{{ site.excerpt_link }}</a>
-</footer>
-{% endif %}

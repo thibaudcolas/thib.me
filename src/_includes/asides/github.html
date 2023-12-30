@@ -1,12 +1,16 @@
 {% if site.github_user %}
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos" data-user="{{site.github_user}}" data-count="{{site.github_repo_count}}">
-    <li class="loading">Status updating...</li>
+<nav class="sidebar-section" aria-labelledby="gh_repos_heading">
+  <h2 id="gh_repos_heading">Projects</h2>
+  <ul id="gh_repos">
+    {% for repository in site.data.repositories %}
+      <li>
+        <a href="{{ repository.url }}">{{ repository.name }}</a>
+        <p>{{ repository.description }}</p>
+      </li>
+    {% endfor %}
   </ul>
   {% if site.github_show_profile_link %}
   <a href="https://github.com/{{site.github_user}}">@{{site.github_user}}</a> on GitHub
   {% endif %}
-  <script src="{{ site.baseurl }}/javascripts/github.js"></script>
 </section>
 {% endif %}

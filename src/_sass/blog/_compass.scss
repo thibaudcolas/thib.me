@@ -97,8 +97,11 @@ ul {
 }
 
 table {
+  --border-color: color-mix(in lch, transparent, currentColor);
   border-collapse: collapse;
   border-spacing: 0;
+  border: 1px solid;
+  border-color: var(--border-color);
 }
 
 caption,
@@ -107,6 +110,13 @@ td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
+}
+
+th,
+td {
+  padding: 0.25em;
+  border: 1px solid;
+  border-color: var(--border-color);
 }
 
 q,

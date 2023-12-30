@@ -1,5 +1,5 @@
-<section>
-  <h1>Recent Posts</h1>
+<nav class="sidebar-section" aria-labelledby="recent_posts_heading">
+  <h2 id="recent_posts_heading">Recent Posts</h2>
   <ul id="recent_posts">
     {% for post in site.posts limit: site.recent_posts %}
       <li class="post">
@@ -7,4 +7,4 @@
       </li>
     {% endfor %}
   </ul>
-</section>
+</nav>

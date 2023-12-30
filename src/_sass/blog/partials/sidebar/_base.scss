@@ -8,19 +8,19 @@ aside.sidebar {
   a {
     @extend .force-wrap;
   }
-  section {
+  .sidebar-section {
     @extend .sans;
     font-size: 0.8em;
     line-height: 1.4em;
     margin-bottom: 1.5em;
-    h1 {
-      margin: 1.5em 0 0;
-      padding-bottom: 0.2em;
-      border-bottom: 1px solid $sidebar-border;
-      @extend .side-shadow-border;
-      + p {
-        padding-top: 0.4em;
-      }
+  }
+  h2 {
+    margin: 1.5em 0 0;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid $sidebar-border;
+    @extend .side-shadow-border;
+    + p {
+      padding-top: 0.4em;
     }
   }
   img {

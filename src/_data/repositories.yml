@@ -1,0 +1,19 @@
+- name: wagtail
+  full_name: wagtail/wagtail
+  url: https://github.com/wagtail/wagtail
+  description: A Django content management system focused on flexibility and user experience
+- name: django
+  full_name: django/django
+  description: The Web framework for perfectionists with deadlines.
+- name: draftail
+  full_name: springload/draftail
+  description: 📝🍸 A configurable rich text editor built with Draft.js
+- name: curlylint
+  full_name: thibaudcolas/curlylint
+  description: Experimental HTML templates linting for Jinja, Nunjucks, Django templates, Twig, Liquid
+- name: draftjs-filters
+  full_name: thibaudcolas/draftjs-filters
+  description: Filter Draft.js content to preserve only the formatting you allow
+- name: draftjs_exporter
+  full_name: springload/draftjs_exporter
+  description: Library to convert Draft.js ContentState to HTML
