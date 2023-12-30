@@ -101,8 +101,6 @@ I didn’t assess our differences here in much detail. At a high level:
 
 This is my full review of the SCs, with the audit types I found for each.
 
-## Audit types by success criterion table
-
 | Audit type           | Success Criterion                                                                 |
 | -------------------- | --------------------------------------------------------------------------------- |
 |                      | **2. User-Experience Design**                                                     |
