@@ -3,7 +3,7 @@ layout: post
 title: "Next.js ❤️ Wagtail"
 date: 2023-05-31 05:13:03 +0100
 comments: true
-categories: [Conference, Wagtail, React]
+categories: [Conference, Wagtail, React, Talks]
 redirect_from:
   - /nextjs
 ---

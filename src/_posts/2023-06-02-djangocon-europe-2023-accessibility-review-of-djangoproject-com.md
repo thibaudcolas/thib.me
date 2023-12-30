@@ -3,10 +3,8 @@ layout: post
 title: "DjangoCon Europe 2023 – Accessibility review of djangoproject.com"
 date: 2023-06-02 22:13:03 +0100
 comments: true
-categories: [Accessibility, Audits, Community, Test]
+categories: [Accessibility, Audits, Community, Test, Django]
 ---
-
-
 
 Here are the results of a quick accessibility audit I did for the [Django project website](https://www.djangoproject.com/), as part of the DjangoCon Europe 2023 sprints.
 
