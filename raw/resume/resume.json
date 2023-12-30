@@ -162,7 +162,7 @@
     {
       "organization": "Outreachy 2023",
       "position": "Organizer and mentor for Wagtail",
-      "website": "https://wagtail.org/blog/our-outreachy-projects-in-2023/",
+      "website": "https://wagtail.org/blog/outreachy-2023/",
       "startDate": "2023-10-01",
       "endDate": "2024-03-01",
       "summary": "Organization admin and mentor for Wagtail projects through the Outreachy program, with a focus on accessibility",
@@ -196,6 +196,15 @@
       "highlights": []
     },
     {
+      "organization": "Outreachy 2022",
+      "position": "Organizer and mentor for Wagtail",
+      "website": "https://wagtail.org/blog/outreachy-welcoming-new-contributors-to-open-source/",
+      "startDate": "2022-09-01",
+      "endDate": "2023-03-01",
+      "summary": "Organization admin and mentor for Wagtail projects through the Outreachy program, with a focus on accessibility",
+      "highlights": []
+    },
+    {
       "organization": "DjangoCon Europe 2022",
       "position": "Volunteer",
       "website": "https://2022.djangocon.eu/conduct/code_of_conduct/",
@@ -210,7 +219,7 @@
       "website": "https://wagtail.org/blog/wagtail-cms-projects-for-google-summer-of-code-2022/",
       "startDate": "2022-05-26",
       "endDate": "2022-10-01",
-      "summary": "Organization admin and mentor for three Wagtail proposals through the Google Summer of Code program for 2022: Contrast Themes, Editor's Guide, UX Unification",
+      "summary": "Organization admin and mentor for three Wagtail projects through the Google Summer of Code program for 2022: Contrast Themes, Editor's Guide, UX Unification",
       "highlights": []
     },
     {
