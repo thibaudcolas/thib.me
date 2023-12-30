@@ -151,6 +151,15 @@
   ],
   "volunteer": [
     {
+      "organization": "Django Software Foundation",
+      "position": "Board member",
+      "website": "https://www.djangoproject.com/",
+      "startDate": "2023-12-14",
+      "endDate": "",
+      "summary": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.",
+      "highlights": []
+    },
+    {
       "organization": "W3C Sustainable Web Design Community Group",
       "position": "Participant",
       "website": "https://www.w3.org/community/sustyweb/",
