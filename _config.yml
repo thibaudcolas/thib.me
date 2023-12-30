@@ -103,9 +103,6 @@ delicious_count: 3
 disqus_short_name:
 disqus_show_comment_count: false
 
-# Google Analytics
-google_analytics_tracking_id: UA-34692999-4
-
 # Facebook Like
 facebook_like: false
 
