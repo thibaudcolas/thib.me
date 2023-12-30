@@ -3,7 +3,7 @@ layout: post
 title: "My personal statement for the DSF Board nominations"
 date: 2023-11-09 04:47:03 +0100
 comments: true
-categories: [Open Source, Django, Governance]
+categories: [Django Software Foundation, Django, Governance]
 ---
 
 Today I sent my application for the elections to the 2024 Django Software Foundation Board 😌
