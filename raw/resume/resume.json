@@ -551,48 +551,6 @@
       "releaseDate": "2022-09-26",
       "website": "https://almanac.httparchive.org/en/2022/accessibility",
       "summary": "Writing & data analysis for the Accessibility chapter of HTTP Archive’s annual state of the web report"
-    },
-    {
-      "name": "How Springload scores on the Joel Test and why it matters",
-      "publisher": "Springload",
-      "releaseDate": "2017-08-01",
-      "website": "https://www.springload.co.nz/blog/how-springload-scores-joel-test-and-why-it-matters/",
-      "summary": "Ever heard of the Joel Test? It’s a simple 12 question measure of the quality of a software team, introduced by Joel Spolsky of Stack Overflow and Trello fame. The test is famous in the software development community as a no-BS calculation of the maturity of a development team. So, how’d we do?"
-    },
-    {
-      "name": "Exploring uncharted datasets",
-      "publisher": "Springload",
-      "releaseDate": "2017-05-15",
-      "website": "https://www.springload.co.nz/blog/exploring-uncharted-datasets/",
-      "summary": "I’m a self-diagnosed data nerd. For me, there’s nothing like trying to make sense of a phenomenon by looking at data, exploring an uncharted dataset to uncover insights. Sure, I don’t expect everyone to be as excited as I am about the release of the latest seasonally adjusted chain-volume GDP – but I do think that basic data literacy is becoming a vital part of running a successful business, or being an informed citizen."
-    },
-    {
-      "name": "Bringing our mad skillz to Wagtail",
-      "publisher": "Springload",
-      "releaseDate": "2017-05-03",
-      "website": "https://www.springload.co.nz/blog/bringing-our-mad-skillz-wagtail/",
-      "summary": "Springload regularly attends development sprints of Wagtail. They’re a great occasion to meet with other core contributors, and drive the project together towards the needs of its users, aka our clients. In the past our work has taken us to Ede, Netherlands, and Cape Town, South Africa but this time we headed North to Reykjavík, Iceland thanks to our friends at Overcast Software."
-    },
-    {
-      "name": "Awesome Wagtail",
-      "publisher": "Springload",
-      "releaseDate": "2017-02-02",
-      "website": "https://www.springload.co.nz/blog/awesome-wagtail/",
-      "summary": "Disclaimer: this blog post contains a high amount of unreserved enthusiasm about Wagtail and its community."
-    },
-    {
-      "name": "Blurring the line between web and desktop apps",
-      "publisher": "Springload",
-      "releaseDate": "2016-05-30",
-      "website": "https://www.springload.co.nz/blog/blurring-line-between-web-and-desktop-apps/",
-      "summary": "Two years ago, the folks at GitHub released a new text editor called Atom. They built it with web technologies: HTML, CSS and JavaScript. As part of this project they released Electron, a framework to write cross-platform desktop applications with web technologies."
-    },
-    {
-      "name": "A stable front-end stack for 2016",
-      "publisher": "Springload",
-      "releaseDate": "2016-02-22",
-      "website": "https://www.springload.co.nz/blog/a-stable-front-end-stack-for-2016/",
-      "summary": "We’ve been trialing new front-end tools and libraries over 2015 but our main stack has remained very stable. Starting a new project? Here are Springload’s picks, all available in our front-end starter kit."
     }
   ],
   "skills": [

@@ -6,7 +6,6 @@ comments: true
 categories: [JavaScript, Wagtail, React]
 redirect_from:
   - /blog-posts-and-front-end-development
-canonical: https://www.springload.co.nz/blog/a-stable-front-end-stack-for-2016/
 ---
 
 We’ve been trialing new front-end tools and libraries over 2015 but our main stack has remained very stable. Starting a new project? Here are Springload’s picks, all available in our [front-end starter kit](https://github.com/springload/frontend-starter-kit).

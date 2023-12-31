@@ -4,7 +4,6 @@ title: Bringing our mad skillz to Wagtail
 date: 2017-05-03 11:35:03 +0300
 comments: true
 categories: [React, Springload, Wagtail, Draftjs]
-canonical: https://www.springload.co.nz/blog/bringing-our-mad-skillz-wagtail/
 redirect_from:
   - /writing-about-wagtail
 ---

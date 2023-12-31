@@ -4,7 +4,6 @@ title: Awesome Wagtail
 date: 2017-02-02 11:35:03 +0300
 comments: true
 categories: [Resources, Community, Wagtail]
-canonical: https://www.springload.co.nz/blog/awesome-wagtail/
 ---
 
 > Disclaimer: this blog post contains a high amount of unreserved enthusiasm about Wagtail and its community.

@@ -4,7 +4,6 @@ title: How Springload scores on the Joel Test and why it matters
 date: 2017-08-01 11:35:03 +0300
 comments: true
 categories: [Springload, Resources, Code]
-canonical: https://www.springload.co.nz/blog/how-springload-scores-joel-test-and-why-it-matters/
 ---
 
 Ever heard of the [Joel Test](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/)? It’s a simple 12 question measure of the quality of a software team, introduced by Joel Spolsky of [Stack Overflow](https://stackoverflow.com/) and Trello fame. The test is famous in the software development community as a no-BS calculation of the maturity of a development team. So, how’d we do?

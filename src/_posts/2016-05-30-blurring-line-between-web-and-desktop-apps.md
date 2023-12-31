@@ -4,7 +4,6 @@ title: Blurring the line between web and desktop apps
 date: 2016-05-30 11:33:37 +0300
 comments: true
 categories: [JavaScript, Community, Tools]
-canonical: https://www.springload.co.nz/blog/blurring-line-between-web-and-desktop-apps/
 redirect_from:
   - /electron-javascript-for-desktop-apps
 ---

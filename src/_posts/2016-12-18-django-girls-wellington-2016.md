@@ -3,7 +3,7 @@ layout: post
 title: "Django Girls Wellington 2016"
 date: 2016-12-18 14:38:31 +1300
 comments: true
-categories: [Events, Community, Diversity]
+categories: [Events, Django, Community, Diversity]
 ---
 
 Wuh! We did it! [Django Girls Wellington](https://djangogirls.org/wellington/) is a thing! I'm so glad we were able to pull this off.
