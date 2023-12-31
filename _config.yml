@@ -23,7 +23,7 @@ keywords: thibaud colas thibaudcolas blog software engineer web developer javasc
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://thib.me" # the base hostname & protocol for your site, e.g. https://example.com
 
-date_format: "%F %R"
+date_format: "%F"
 
 twitter_username: thibaud_colas
 github_username: thibaudcolas
