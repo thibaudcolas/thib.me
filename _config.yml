@@ -106,6 +106,14 @@ disqus_show_comment_count: false
 # Facebook Like
 facebook_like: false
 
+feed:
+  categories:
+    - Accessibility
+    - Django
+    - Sustainability
+    - Talks
+    - Wagtail
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
