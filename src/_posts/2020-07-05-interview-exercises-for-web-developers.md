@@ -3,7 +3,7 @@ layout: post
 title: "Interview exercises for web developers"
 date: 2020-07-05 23:05:21 +0100
 comments: true
-categories: [Interview, React, Methodology]
+categories: [Interview, React, Methodology, Springload, Torchbox]
 ---
 
 Here are a couple of interview exercises I like to give, which are relatively open to varied approaches.

@@ -3,7 +3,7 @@ layout: post
 title: "WCAG 2.2: new accessibility guidelines on the way"
 date: 2021-08-13 16:52:22 +0000
 comments: true
-categories: [WCAG, Accessibility, Methodology]
+categories: [WCAG, Accessibility, Methodology, Torchbox]
 canonical: https://torchbox.com/blog/wcag-22-accessibility-guidelines/
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Pattern Lab goes Django"
 date: 2020-12-11 12:52:22 +0000
 comments: true
-categories: [Django, Wagtail, Project]
+categories: [Django, Wagtail, Project, Torchbox]
 canonical: https://torchbox.com/blog/reusable-ui-components-pattern-lab-goes-django/
 ---
 

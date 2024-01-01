@@ -3,7 +3,7 @@ layout: post
 title: "Accessibility audits: getting started"
 date: 2020-05-01 19:15:08 +0100
 comments: true
-categories: [Accessibility, Tools, Automation, Methodology]
+categories: [Accessibility, Tools, Automation, Methodology, Torchbox]
 canonical: https://torchbox.com/blog/accessibility-audits/
 ---
 

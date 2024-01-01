@@ -3,7 +3,7 @@ layout: post
 title: React training goals for front-end developers
 date: 2020-04-17 19:21:48 +0100
 comments: true
-categories: [React, JavaScript, Careers]
+categories: [React, JavaScript, Careers, Torchbox]
 ---
 
 Here are my thoughts on what front-end developers should focus on when learning React. There are a lot of resources on there – this is more about identifying what exactly you should spend time on, and in what order, for people who are already well versed in building UIs with HTML, CSS, and a sprinkle of JavaScript.
