@@ -1,0 +1,307 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Future CSS Today</title>
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>"
+    />
+    <meta
+      name="description"
+      content="Modern CSS techniques we could use today."
+    />
+    <meta name="twitter:label1" value="Reading time" />
+    <meta name="twitter:data1" value="Not too long" />
+  </head>
+  <body>
+    <main>
+      <section id="slide-0" class="slide" aria-labelledby="slide-0">
+        <hgroup>
+          <h1 id="slide-0">
+            <i>Future</i>
+            CSS Today ⚡
+          </h1>
+          <p>
+            Modern CSS techniques we could<sup>[1]</sup> use today. <br />
+            <a href="https://thib.me/">Thibaud Colas</a>
+            , <time>2023-10-18</time>
+          </p>
+        </hgroup>
+        <div class="slide-content">
+          <h2>Goals</h2>
+          <ol>
+            <li>No tooling 🔥</li>
+            <li>More with less</li>
+            <li>Great browser support</li>
+          </ol>
+        </div>
+        <div class="slide-footer">
+          <p>
+            Slides:
+            <a href="https://thib.me/tbx-css/">thib.me/tbx-css/</a>
+          </p>
+          <a href="">0</a>
+        </div>
+      </section>
+      <section id="slide-1" class="slide" aria-labelledby="slide-1-heading">
+        <hgroup>
+          <h2 id="slide-1-heading">No tooling?</h2>
+          <p>Tooling <em>where it makes sense</em>.</p>
+        </hgroup>
+        <div class="slide-content">
+          <ol>
+            <li>
+              Still using linting: <a href="https://prettier.io/">Prettier</a>,
+              <a href="https://stylelint.io/">Stylelint</a>.
+            </li>
+            <li>
+              Also still using compatibility & performance tools:
+              <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a
+              >, <a href="https://cssnano.co/">cssnano</a>.
+            </li>
+            <li>
+              Writing modern syntax thanks to
+              <a href="https://preset-env.cssdb.org/">postcss-preset-env</a>.
+            </li>
+          </ol>
+        </div>
+        <div class="slide-footer">
+          <p>
+            Slides:
+            <a href="https://thib.me/tbx-css/">thib.me/tbx-css/</a>
+          </p>
+          <a href="#slide-1">1</a>
+        </div>
+      </section>
+      <section id="slide-2" class="slide" aria-labelledby="slide-2-heading">
+        <hgroup>
+          <h2 id="slide-2-heading">More with less?</h2>
+          <p>Vanilla CSS without compromising on expressiveness</p>
+        </hgroup>
+        <div class="slide-content">
+          <ol>
+            <li>Co-location of related code</li>
+            <li>Not a thousand lines of code</li>
+            <li>No overrides</li>
+          </ol>
+        </div>
+        <div class="slide-footer">
+          <div></div>
+          <a href="#slide-2">2</a>
+        </div>
+      </section>
+      <section id="slide-3" class="slide" aria-labelledby="slide-3-heading">
+        <hgroup>
+          <h2 id="slide-3-heading">Great browser support?</h2>
+          <p>
+            Support older browsers so users don’t have to upgrade their devices.
+          </p>
+        </hgroup>
+        <div class="slide-content">
+          <ul>
+            <li>Opera Mini (1%)</li>
+            <li>IE11 (0.5%)</li>
+            <li>Safari 12-14 (0.5%)</li>
+            <li>Android Browser 4.4.4 (0.3%)</li>
+            <li>Chrome 69-89 (1.2%)</li>
+            <li>Firefox 3.6</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <p>
+            <a
+              href="https://caniuse.com/?compare=firefox+3.6,ie+11,op_mini+all,android+4.4.3-4.4.4&compareCats=all"
+              >caniuse.com/ciu/comparison</a
+            >
+          </p>
+          <a href="#slide-3">3</a>
+        </div>
+      </section>
+      <section id="slide-4" class="slide" aria-labelledby="slide-4-heading">
+        <hgroup>
+          <h2 id="slide-4-heading">More with less, continued</h2>
+          <p>Things in CSS that take lots of lines for no reason</p>
+        </hgroup>
+        <div class="slide-content">
+          <ul>
+            <li><strong>Responsive design</strong> - avoid media queries</li>
+            <li>
+              <strong>Interaction styles</strong> (hover, focus, touch, etc.)
+            </li>
+            <li><strong>Right-to-left</strong> support</li>
+            <li><strong>Light and dark</strong> themes</li>
+            <li>
+              <strong>Contrast themes</strong> / Windows High Contrast Mode
+            </li>
+            <li><strong>Print stylesheets</strong></li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div></div>
+          <a href="#slide-4">4</a>
+        </div>
+      </section>
+      <section id="slide-5" class="slide" aria-labelledby="slide-5-heading">
+        <hgroup>
+          <h2 id="slide-5-heading">CSS patterns: layout</h2>
+        </hgroup>
+        <div class="slide-content">
+          <ul>
+            <li>Flexbox and Grid 🐸</li>
+            <li>Logical properties and values</li>
+          </ul>
+          <pre>
+            <code>
+  .slide-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-inline-start: 5rem;
+  }
+            </code>
+          </pre>
+        </div>
+        <div class="slide-footer">
+          <p>
+            <a href="https://flexboxfroggy.com/">flexboxfroggy.com</a>
+          </p>
+          <a href="#slide-5">5</a>
+        </div>
+      </section>
+      <section id="slide-6" class="slide" aria-labelledby="slide-6-heading">
+        <hgroup>
+          <h2 id="slide-6-heading">Typography</h2>
+        </hgroup>
+        <div class="slide-content">
+          <ul>
+            <li>System font stack</li>
+            <li>Dynamic viewport units</li>
+            <li><code>clamp()</code></li>
+          </ul>
+          <pre><code>
+  body {
+    font-family: "Segoe UI","system-ui","Roboto","Helvetica Neue","Arial",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: clamp(1rem, calc(2dvmax + 1rem), 5dvmin);
+  }
+          </code></pre>
+        </div>
+        <div class="slide-footer">
+          <p>
+            <a href="https://web.dev/articles/viewport-units"
+              >web.dev/articles/viewport-units</a
+            >
+          </p>
+          <a href="#slide-6">6</a>
+        </div>
+      </section>
+      <section id="slide-7" class="slide" aria-labelledby="slide-7-heading">
+        <hgroup>
+          <h2 id="slide-7-heading">Colors</h2>
+          <p>All of them!</p>
+        </hgroup>
+        <div class="slide-content">
+          <ul>
+            <li>CSS variables</li>
+            <li><code>oklch()</code></li>
+            <li><code>color-mix()</code></li>
+            <li>System colors</li>
+          </ul>
+          <pre>
+            <code>
+  --light-dark: color-mix(in oklch, CanvasText 10%, Canvas 50%);
+  --dark-light: color-mix(in oklch, Canvas 10%, CanvasText 50%);
+  color: color-mix(in oklch, var(--light-dark) 20%, CanvasText);
+            </code>
+          </pre>
+        </div>
+        <div class="slide-footer">
+          <p>
+            <a href="https://www.w3.org/TR/css-color-4/#css-system-colors"
+              >w3.org/TR/css-color-4</a
+            >
+          </p>
+          <a href="#slide-7">7</a>
+        </div>
+      </section>
+      <section id="slide-8" class="slide" aria-labelledby="slide-8-heading">
+        <hgroup>
+          <h2 id="slide-8-heading">Demo!</h2>
+          <p>View source</p>
+        </hgroup>
+        <div class="slide-content"></div>
+        <div class="slide-footer">
+          <p>
+            <a href="view-source:">view-source:</a>
+          </p>
+          <a href="#slide-8">8</a>
+        </div>
+      </section>
+      <section id="slide-9" class="slide" aria-labelledby="slide-9-heading">
+        <hgroup>
+          <h2 id="slide-9-heading">Does it work?</h2>
+          <p>Yes and no</p>
+        </hgroup>
+        <div class="slide-content">
+          <ul>
+            <li>This shows promise but there are still a lot of hurdles.</li>
+            <li>
+              Likely practical for small projects within the next 2 years.
+            </li>
+            <li>Early adopters can use this now with little compromises.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div></div>
+          <a href="#slide-9">9</a>
+        </div>
+      </section>
+      <section id="slide-10" class="slide" aria-labelledby="slide-10-heading">
+        <hgroup>
+          <h2 id="slide-10-heading">Takeways for pro™ projects</h2>
+          <p>Great things you should definitely use on projects</p>
+        </hgroup>
+        <div class="slide-content">
+          <ol>
+            <li>Media queries 💯</li>
+            <li>CSS variables 💅</li>
+            <li>
+              <a href="https://sass-lang.com/">Sass</a> and
+              <a href="https://postcss.org/">PostCSS</a> tooling
+            </li>
+          </ol>
+        </div>
+        <div class="slide-footer">
+          <p>
+            Slides:
+            <a href="https://thib.me/tbx-css/">thib.me/tbx-css/</a>
+          </p>
+          <a href="#slide-10">10</a>
+        </div>
+      </section>
+      <section id="slide-11" class="slide" aria-labelledby="slide-11-heading">
+        <hgroup>
+          <h2 id="slide-11-heading">Thanks!</h2>
+          <p>
+            <a href="https://preset-env.cssdb.org/features/"
+              >preset-env.cssdb.org/features</a
+            >
+          </p>
+        </hgroup>
+        <div class="slide-content"></div>
+        <div class="slide-footer">
+          <p>
+            Slides:
+            <a href="https://thib.me/tbx-css/">thib.me/tbx-css/</a>
+          </p>
+          <a href="#slide-11">11</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

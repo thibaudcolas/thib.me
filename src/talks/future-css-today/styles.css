@@ -1,0 +1,80 @@
+body {
+  font-family: "system-ui", "Arial", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: clamp(1rem, calc(2dvmax + 1rem), 5dvmin);
+  --light-dark: color-mix(in oklch, CanvasText 10%, Canvas 50%);
+  --dark-light: color-mix(in oklch, Canvas 10%, CanvasText 50%);
+  color: color-mix(in oklch, var(--light-dark) 20%, CanvasText);
+}
+
+body,
+pre {
+  margin: 0;
+}
+
+pre {
+  font-size: 1.5rem;
+  text-wrap: pretty;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: currentcolor;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  &,
+  & > * {
+    inline-size: 100dvi;
+    block-size: 100dvb;
+    scroll-snap-align: start;
+  }
+}
+
+.slide {
+  --angle-factor: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 2vmin;
+  padding-inline-end: 4vmin;
+  --hue: oklch(70% 0.25 calc(230 + calc(5 * var(--angle-factor))));
+  --bg: color-mix(in oklch, var(--light-dark) 5%, var(--hue) 10%);
+  --bg2: color-mix(in oklch, var(--bg) 30%, var(--light-dark));
+  background: radial-gradient(
+    100% 300.28% at 100% 0%,
+    var(--bg) 0%,
+    var(--bg) 32.94%,
+    var(--bg) 49.9%,
+    var(--bg) 50.2%,
+    var(--bg2) 100%
+  );
+  color: color-mix(in oklch, var(--hue) 70%, var(--dark-light));
+  > .slide-content {
+    flex: 1 0 auto;
+  }
+
+  > .slide-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-inline-start: 5rem;
+  }
+
+  &:nth-child(2n) {
+    --angle-factor: 34;
+  }
+
+  &:nth-child(3n) {
+    --angle-factor: 10;
+  }
+}
