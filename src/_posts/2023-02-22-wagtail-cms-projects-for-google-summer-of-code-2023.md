@@ -3,7 +3,7 @@ layout: post
 title: "Wagtail CMS projects for Google Summer of Code 2023"
 date: 2023-02-22 19:50:00 +0100
 comments: true
-categories: [Wagtail, Outreach, Community]
+categories: [Wagtail, Outreach, Community, GSoC]
 canonical: https://wagtail.org/blog/wagtail-cms-projects-for-google-summer-of-code-2023/
 ---
 
@@ -25,7 +25,7 @@ We've earmarked three project ideas this year.
 
 ### Dark theme for Wagtail admin
 
-*🚧 Update: we have discontinued this idea, as the work involved isn't substantial enough to represent a GSoC project.*
+_🚧 Update: we have discontinued this idea, as the work involved isn't substantial enough to represent a GSoC project._
 
 This is a continuation of past projects to make Wagtail's color theme configurable, and accessibility improvements for Windows High Contrast mode users.
 

@@ -3,7 +3,7 @@ layout: post
 title: "Google Summer of Code 2022 for Wagtail"
 date: 2022-07-14 19:50:00 +0100
 comments: true
-categories: [Accessibility, Wagtail, Community]
+categories: [Accessibility, Wagtail, Community, GSoC]
 ---
 
 This year, Wagtail gets to take part in Google Summer of Code independently!

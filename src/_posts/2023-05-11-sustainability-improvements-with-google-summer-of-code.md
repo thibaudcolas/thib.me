@@ -3,7 +3,7 @@ layout: post
 title: "Sustainability improvements with Google Summer of Code"
 date: 2023-05-11 19:50:00 +0100
 comments: true
-categories: [Wagtail, Outreach, Sustainability]
+categories: [Wagtail, Outreach, Sustainability, GSoC]
 ---
 
 For the second time, I’m joining Google’s open source internships program with Wagtail as a mentor and organization administrator.
