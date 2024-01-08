@@ -24,6 +24,8 @@ And here’s a supercut version of the talk as a blog post.
 
 ## Why I’m here
 
+Timeline: [01:40](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=100s)
+
 - Open source is rad
 - Accessibility is rad
 - There are a lot of rad people here who could help with this
@@ -34,6 +36,8 @@ The decisions we make in our code can significantly impact the lives of many, an
 
 ### A wake-up call
 
+Timeline: [02:10](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=130s)
+
 [![musharraf Wagtail comment](/images/blog/djangocon-us-2023-django-accessibility-track-record/musharraf-wagtail-comment.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/musharraf-wagtail-comment.png)
 
 > Hello everyone,
@@ -43,6 +47,8 @@ The decisions we make in our code can significantly impact the lives of many, an
 > Since I'm blind, I've discovered that my experience on editing content would be rather unpleasant, because the admin interface of Wagtail has some accessibility problems.
 
 ## 96.3%
+
+Timeline: [03:00](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=180s)
 
 A staggering 96.3% of the top 1,000,000 homepages have basic\* accessibility issues. Source: [WebAIM Million 2023](https://webaim.org/projects/million/)
 
@@ -66,6 +72,8 @@ It begs the question: What can we do better? How can we have Django lead by exam
 
 ### For Django: 95%
 
+Timeline: [04:38](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=278s)
+
 95% (ish) 🎉 of a sample of 25,000 Django homepages have basic\* accessibility issues.
 
 Source: [me (HTTP Archive dataset)](https://docs.google.com/spreadsheets/d/13E3YSVXXCJtN036OKPvBS29k_2XCA-S6mmfEk055ifs/edit#gid=478397185)
@@ -74,11 +82,15 @@ Source: [me (HTTP Archive dataset)](https://docs.google.com/spreadsheets/d/13E3Y
 
 ## Diving deeper: lighthouse scores, http archive
 
+Timeline: [05:00](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=300s)
+
 To grasp the state of Django's accessibility, we delve into Lighthouse scores and HTTP Archive data. Analyzing over 8 million websites reveals a telling story.
 How does Django stack up against other frameworks? Where do we excel, and where do we fall short?
 This data-driven approach helps us pinpoint specific areas needing attention.
 
 ### Median Lighthouse Accessibility scores, 2020-2023
+
+Timeline: [05:50](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=350s)
 
 [![Median Lighthouse Accessibility scores, 2020-2023, cwtech.report](/images/blog/djangocon-us-2023-django-accessibility-track-record/cwvtech-report-2023-10.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/cwvtech-report-2023-10.png)
 
@@ -90,6 +102,8 @@ Over the years, the scores for each technology fluctuate slightly but generally 
 Source: [**cwvtech.report**](https://cwvtech.report/)
 
 ### Zoomed – October 2023, Median Lighthouse Accessibility scores
+
+Timeline: [06:40](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=400s)
 
 [![Zoomed – October 2023, Median Lighthouse Accessibility scores, 2020-2023, cwtech.report](/images/blog/djangocon-us-2023-django-accessibility-track-record/zoom-cwvtech-report-2023-10.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/zoom-cwvtech-report-2023-10.png)
 
@@ -106,6 +120,8 @@ Source: [**cwvtech.report**](https://cwvtech.report/)
 
 ### Median Lighthouse accessibility score by framework
 
+Timeline: [07:48](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=468s)
+
 [![Median Lighthouse accessibility score by framework](/images/blog/djangocon-us-2023-django-accessibility-track-record/median-lighthouse-accessibility-score-by-framework.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/median-lighthouse-accessibility-score-by-framework.png)
 
 This bar chart compares the median Lighthouse accessibility scores across sites built with various web frameworks.
@@ -117,6 +133,8 @@ Source: [**cwvtech.report**](https://cwvtech.report/)
 
 ### Deque/Axe: The Automated Accessibility Coverage Report
 
+Timeline: [08:17](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=497s)
+
 [![Deque Axe coverage automation](/images/blog/djangocon-us-2023-django-accessibility-track-record/deque-axe-coverage-automation.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/deque-axe-coverage-automation.png)
 
 57.38% of Total issues were detected using automated tests.
@@ -126,6 +144,8 @@ And – 97.51% of keyboard navigation barriers can only be detected with manual
 Source: Deque, 2021 – [(PDF) deque.com / coverage-report](https://deque.com/coverage-report/)
 
 ### Limitations of automated checks
+
+Timeline: [08:32](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=512s)
 
 Here is a table of how many accessibility issues different automated tools can detect.
 
@@ -141,10 +161,14 @@ Source: GOV.UK GDS, 2019 – [alphagov.github.io / accessibility-tool-audit](htt
 
 ## Diving deeper: specific lighthouse checks
 
+Timeline: [08:40](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=520s)
+
 Taking a closer look at Lighthouse checks, we identify common issues affecting Django sites.
 And more broadly, we see how different technologies are correlated with the prevalence of different accessibility issues.
 
 ### Percentage of sites with accessibility issues, by Lighthouse check
+
+Timeline: [08:50](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=530s)
 
 [![Percentage of sites with accessibility issues, by Lighthouse check](/images/blog/djangocon-us-2023-django-accessibility-track-record/percentage-of-sites-with-accessibility-issues-by-lighthouse-check.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/percentage-of-sites-with-accessibility-issues-by-lighthouse-check.png)
 
@@ -157,17 +181,25 @@ Source: [me (HTTP Archive dataset)](https://docs.google.com/spreadsheets/d/13E3Y
 
 ### Sites built with Django vs. average site
 
+Timeline: [09:55](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=595s)
+
 [![Difference in Lighthouse audit success rate for sites built with Django vs. average site](/images/blog/djangocon-us-2023-django-accessibility-track-record/difference-in-lighthouse-audit-success-rate-for-sites-built-with-django-vs-average-site.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/difference-in-lighthouse-audit-success-rate-for-sites-built-with-django-vs-average-site.png)
 
 ### Sites built with Wagtail vs. average site
+
+Timeline: [10:40](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=640s)
 
 [![Difference in Lighthouse audit success rate for sites built with Wagtail vs. average site](/images/blog/djangocon-us-2023-django-accessibility-track-record/difference-in-lighthouse-audit-success-rate-for-sites-built-with-wagtail-vs-average-site.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/difference-in-lighthouse-audit-success-rate-for-sites-built-with-wagtail-vs-average-site.png)
 
 ### Sites built with Drupal vs. average site
 
+Timeline: [11:00](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=660s)
+
 [![Difference in Lighthouse audit success rate for sites built with Drupal vs. average site](/images/blog/djangocon-us-2023-django-accessibility-track-record/difference-in-lighthouse-audit-success-rate-for-sites-built-with-drupal-vs-average-site.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/difference-in-lighthouse-audit-success-rate-for-sites-built-with-drupal-vs-average-site.png)
 
 ### Sites built by Torchbox vs. average site
+
+Timeline: [11:28](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=688s)
 
 [![Difference in Lighthouse audit success rate for sites built by Torchbox vs. average site](/images/blog/djangocon-us-2023-django-accessibility-track-record/difference-in-lighthouse-audit-success-rate-for-sites-built-by-torchbox-vs-average-site.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/difference-in-lighthouse-audit-success-rate-for-sites-built-by-torchbox-vs-average-site.png)
 
@@ -177,6 +209,8 @@ These charts offer a data-driven glimpse into how each framework performs in acc
 
 ### Technology has an impact on accessibility
 
+Timeline: [11:42](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=702s)
+
 - Overall architecture, and implementation details
 - Build methodology
 - QA / testing
@@ -184,7 +218,11 @@ These charts offer a data-driven glimpse into how each framework performs in acc
 
 ## Demo time
 
+Timeline: [12:10](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=730s)
+
 ### A fun exercise: djangoproject.com
+
+Timeline: [12:35](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=755s)
 
 Speedrun! Go to [djangoproject.com](https://www.djangoproject.com/) and time:
 
@@ -208,6 +246,8 @@ Solution: [issue #1381](https://github.com/django/djangoproject.com/issues/1381)
 
 ### More fun! Django forms
 
+Timeline: [18:35](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1115s)
+
 [static-django-demo.netlify.app/django_admin_tests/v5.0/english/forms/example_form/table/](https://static-django-demo.netlify.app/django_admin_tests/v5.0/english/forms/example_form/table/)
 
 Can you spot…
@@ -219,6 +259,8 @@ Can you spot…
 Solution: tickets [#32339](https://code.djangoproject.com/ticket/32339), [#32338](https://code.djangoproject.com/ticket/32338)
 
 ### More fun! The Django admin
+
+Timeline: [20:45](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1245s)
 
 We need to talk about the Django admin. Seriously.
 
@@ -239,11 +281,15 @@ Source: [2022 Django Developers survey](https://lp.jetbrains.com/django-develope
 
 ## What to do, where to go
 
+Timeline: [23:34](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1414s)
+
 Improving accessibility isn't just a technical challenge; it's a community effort.
 I shared resources and best practices that can guide us in making our Django projects more inclusive.
 As well as practical ways to organize our community to catch up on 10 years of accessibility debt.
 
 ### An accessible future for Django?
+
+Timeline: [23:40](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1420s)
 
 Here were our plans from 2020:
 
@@ -255,6 +301,8 @@ Here were our plans from 2020:
 - Review of major third-party project templates
 
 ### An accessible future for Django? … now
+
+Timeline: [24:02](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1442s)
 
 - 10% ⌛ WCAG 2.1 AA compliant Django admin
 - 10% ⌛ WCAG 2.1 AA compliant [djangoproject.com](https://www.djangoproject.com/)
@@ -269,6 +317,8 @@ What do you think?
 
 ### An accessible future for Django? … 2024?
 
+Timeline: [24:20](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1460s)
+
 Our hopes for 2024:
 
 - 20% ⌛ WCAG 2.1 AA compliant Django admin
@@ -282,11 +332,15 @@ What do you think?
 
 ### For Django core: Shift-Left accessibility methodology
 
+Timeline: [25:25](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1525s)
+
 [![Deque Shift Left](/images/blog/djangocon-us-2023-django-accessibility-track-record/deque-shift-left.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/deque-shift-left.png)
 
 Ref: [deque.com / shift-left](https://www.deque.com/shift-left/) (not specific to Deque, just a nice graphic)
 
 ### What Shift-Left would look like for Django core
+
+Timeline: [25:54](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1554s)
 
 1. Clear standards for all contributors
 2. Feature design with accessibility in mind
@@ -296,6 +350,8 @@ Ref: [deque.com / shift-left](https://www.deque.com/shift-left/) (not specific t
 
 ### ATAG 2.0
 
+Timeline: [26:20](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1580s)
+
 [ATAG](https://www.w3.org/TR/ATAG20/): Authoring Tool Accessibility Guidelines
 
 - [A. Make the authoring tool user interface accessible](https://www.w3.org/TR/ATAG20/#part_a)
@@ -303,14 +359,20 @@ Ref: [deque.com / shift-left](https://www.deque.com/shift-left/) (not specific t
 
 #### A wake-up call
 
+Timeline: [26:40](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1600s)
+
 [![Musharraf tweet](/images/blog/djangocon-us-2023-django-accessibility-track-record/musharraf-tweet.png)](/images/blog/djangocon-us-2023-django-accessibility-track-record/musharraf-tweet.png)
 
 ## Let’s join forces
+
+Timeline: [27:35](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1655s)
 
 This is a call to action for all of us in the Django community.
 This requires our collective effort.
 
 ### What our community is already doing
+
+Timeline: [27:44](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1664s)
 
 - DjangoCon
   - Accessibility of the physical space
@@ -327,6 +389,8 @@ This requires our collective effort.
 
 ### Let’s join forces! Lots of opportunities
 
+Timeline: [28:25](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1705s)
+
 - Big changes via mentoring programs like Djangonaut Space, Outreachy, GSoC, GSoD
 - Gradual fixes via sprints
 - An ATAG audit?
@@ -337,6 +401,8 @@ This requires our collective effort.
 - Standardised review of all Jazzband packages?
 
 ### Let’s join forces! There are lots of ways to contribute
+
+Timeline: [28:47](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1727s)
 
 - Chat in the #accessibility Discord channel
   - Ask questions about Django and related projects
@@ -355,8 +421,12 @@ This requires our collective effort.
 
 ## Thank you!
 
+Timeline: [30:28](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1828s)
+
 Let’s work on this together some time?
 
 ## Questions and answers
+
+Timeline: [30:45](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1845s)
 
 The session concluded with insightful questions and engaging discussions.
