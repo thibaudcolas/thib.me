@@ -430,3 +430,5 @@ Let’s work on this together some time?
 Timeline: [30:45](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1845s)
 
 The session concluded with ten minutes of insightful questions from the audience.
+
+Any follow-up questions? Please [ask on Twitter](https://twitter.com/thibaud_colas/status/1744150046055043117).
