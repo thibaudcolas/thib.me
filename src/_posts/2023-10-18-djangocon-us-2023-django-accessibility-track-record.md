@@ -429,4 +429,4 @@ Let’s work on this together some time?
 
 Timeline: [30:45](https://www.youtube.com/watch?v=mfl3cbpGVSY&t=1845s)
 
-The session concluded with insightful questions and engaging discussions.
+The session concluded with ten minutes of insightful questions from the audience.
