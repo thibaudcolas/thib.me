@@ -18,7 +18,7 @@ View the presentation:
 - [Google Slides: Django’s accessibility track record \| Thibaud Colas \| DjangoCon US 2023](https://docs.google.com/presentation/d/1Sq1U3yNLzNUn8mPQZhw0fBwat3kcXOPpnt2N69qkEGU/edit)
 - [PDF: Django’s accessibility track record \| Thibaud Colas \| DjangoCon US 2023](https://drive.google.com/file/d/1FXrCO1i0fstZxFUgQxX1XNb7ktv-2C5y/view?usp=sharing)
 
-View the _data_ the presentation is based on: [Django accessibility data | DjangoCon US 2023](https://docs.google.com/spreadsheets/d/13E3YSVXXCJtN036OKPvBS29k_2XCA-S6mmfEk055ifs/edit)
+View the _data_ the presentation is based on: [Django accessibility data \| DjangoCon US 2023](https://docs.google.com/spreadsheets/d/13E3YSVXXCJtN036OKPvBS29k_2XCA-S6mmfEk055ifs/edit)
 
 And here’s a supercut version of the talk as a blog post.
 
