@@ -140,7 +140,6 @@ article + article {
     margin-right: 0.5em;
     text-decoration: none;
     color: mix($text-color, $text-color-light);
-    font-family: $serif;
     transition: background-color 0.5s;
     &:hover {
       background: $link-color-hover;
