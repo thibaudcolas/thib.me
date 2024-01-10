@@ -66,7 +66,7 @@ excerpt_separator: <!-- more -->
 
 titlecase: false # Converts page and post titles to titlecase
 
-repository: https://github.com/thibaudcolas/thibaudcolas
+repository: https://github.com/thibaudcolas/thib.me
 branch: main
 
 # ----------------------- #

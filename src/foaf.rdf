@@ -146,7 +146,7 @@
         <foaf:currentProject>
             <foaf:Project rdf:about="https://thib.me/foaf.rdf#thibaudcolas">
                 <foaf:name>Personal Website</foaf:name>
-                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/thibaudcolas"/>
+                <foaf:homepage rdf:resource="https://github.com/thibaudcolas/thib.me"/>
                 <dc:description xml:lang="en">Personal website</dc:description>
                 <dc:description xml:lang="fr">Site personnel</dc:description>
             </foaf:Project>
