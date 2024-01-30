@@ -4,7 +4,7 @@ title: DSF Board Secretary role
 ---
 
 This page provides an overview of what the Secretary role entails, and documents specific aspects of performing the role.
-For very specific tasks, see [DSF Board Secretary todos](/django-docs/dsf-board-member-todos.html).
+For very specific tasks, see [DSF Board Member todos](/django-docs/dsf-board-member-todos.html).
 
 ## Role
 

@@ -36,44 +36,44 @@ This will be a weekly series of _blog posts_, not week notes. I might write and 
 
 Here is a non-exhaustive list of specific posts I’m planning to write:
 
-- [ ] Onboarding as a DSF board member
-- [ ] How the DSF board operates
-- [ ] KPIs for the Django Software Foundation
-- [ ] Thoughts on DSF working groups
-- [ ] Django 2023 annual report
-- [ ] Django timeline: 20 years of Django
-- [ ] The future of Django: my roadmap for 2024
-- [ ] Organizing a community-wide roadmap workshop
-- [ ] Organizing a community-wide retrospective
-- [ ] We need to talk about Jazzband
-- [ ] Django Developers 2023 survey results
-- [ ] Talks I’d like to see at DjangoCon Europe 2024
-- [ ] Djangonaut Space as a navigator
-- [ ] Django: a decade behind in front-end development (and what to do about it)
-- [ ] Why the Django admin needs rebuilding
-- [ ] State of Django accessibility
-- [ ] Licensing, trademarks, and AI in Django
-- [ ] Django’s carbon footprint
-- [ ] Running Google Summer of Code 2024 for Django
-- [ ] Google Season of Docs 2024 for Django
-- [ ] Outreachy 2024: project ideas for Django
-- [ ] Ten years of Django Girls
-- [ ] Django 6.0: what can we do
-- [ ] Diversity in the Django community
-- [ ] Growing Django contributors 10x
-- [ ] Please don’t say Django is boring
-- [ ] We need more Django accessibility teammates
-- [ ] A developer relations team for Django
-- [ ] Awesome Django contributors
-- [ ] A data-driven review of Django websites
-- [ ] Popular topics in Django developers discussions
-- [ ] Django finances, and how to spend them
-- [ ] djangoproject.com needs a CMS
-- [ ] How the DSF social media working group operates
+- Onboarding as a DSF board member
+- How the DSF board operates
+- KPIs for the Django Software Foundation
+- Thoughts on DSF working groups
+- Django 2023 annual report
+- Django timeline: 20 years of Django
+- The future of Django: my roadmap for 2024
+- Organizing a community-wide roadmap workshop
+- Organizing a community-wide retrospective
+- We need to talk about Jazzband
+- Django Developers 2023 survey results
+- Talks I’d like to see at DjangoCon Europe 2024
+- Djangonaut Space as a navigator
+- Django: a decade behind in front-end development (and what to do about it)
+- Why the Django admin needs rebuilding
+- State of Django accessibility
+- Licensing, trademarks, and AI in Django
+- Django’s carbon footprint
+- Running Google Summer of Code 2024 for Django
+- Google Season of Docs 2024 for Django
+- Outreachy 2024: project ideas for Django
+- Ten years of Django Girls
+- Django 6.0: what can we do
+- Diversity in the Django community
+- Growing Django contributors 10x
+- Please don’t say Django is boring
+- We need more Django accessibility teammates
+- A developer relations team for Django
+- Awesome Django contributors
+- A data-driven review of Django websites
+- Popular topics in Django developers discussions
+- Django finances, and how to spend them
+- djangoproject.com needs a CMS
+- How the DSF social media working group operates
 
 ## Thank you
 
-It feels appropriate to end this first post and start this year of contributions with thanks to the people who helped in getting this started.
+It feels appropriate to end this introduction to the series and start this year of contributions with thanks to the people who helped in getting this started.
 
 Thank you [Tom Carrick](https://github.com/knyghty) for getting me more formally involved with Django development as part of the [accessibility team](https://github.com/django/deps/pull/69). Thank you Tom, [Sarah](https://twitter.com/sabderemane_), and [Sage](https://twitter.com/laymonage) for helping me navigate the Django contributor universe.
 

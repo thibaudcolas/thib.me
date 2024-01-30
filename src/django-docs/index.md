@@ -4,7 +4,11 @@ footer: false
 title: Django documentation
 ---
 
+Documentation relevant to contributing to Django. In particular relating to the Django Software Foundation and my experience as a [DSF board member](/dsf-board-2024-elections-new-board-members).
+
 ## External resources
+
+TBC
 
 ## Django Software Foundation
 
@@ -17,3 +21,4 @@ title: Django documentation
 ### DSF documents
 
 - [DSF Board Secretary role](/django-docs/dsf-board-secretary-role.html)
+- [DSF Board member TODOs](/django-docs/dsf-board-member-todos.html)
