@@ -3,6 +3,7 @@ layout: post
 title: "DSF Board 2024 Elections – New board members 👋"
 date: 2024-01-08 22:29:58 +0100
 comments: true
+comments_discussion: 69
 categories: [Django Software Foundation, Django, Governance]
 canonical: https://www.djangoproject.com/weblog/2024/jan/08/dsf-board-2024-elections-new-board-members/
 ---
