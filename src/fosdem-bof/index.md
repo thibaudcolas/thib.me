@@ -5,6 +5,10 @@ title: FOSDEM 2024: Web Accessibility and ATAG
 
 Notes for [Web Accessibility and ATAG](https://fosdem.org/2024/schedule/event/fosdem-2024-3757-web-accessibility-and-atag/)
 
+---
+
+[web-a11y Slack join link (7 days)](https://join.slack.com/t/web-a11y/shared_invite/zt-2bwlatyna-PNlSW~5K_DW5jfhTy7htgw)
+
 ## Introductions
 
 - Saptak
@@ -92,10 +96,14 @@ Accessibility lab
 
 Talk to Rashi and us
 
-[web-a11y Slack join link (7 days)](https://join.slack.com/t/web-a11y/shared_invite/zt-2bwlatyna-PNlSW~5K_DW5jfhTy7htgw)
-
 sample language to apply
 
 ## Accessibility in grants programs
 
 Red team accessibility audit
+
+---
+
+Accessibility testing at the end
+
+Accessibility Blueprints
