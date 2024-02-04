@@ -14,7 +14,7 @@
     "jsonresume-theme-eloquent": "5.0.0"
   },
   "devDependencies": {
-    "prettier": "3.2.4"
+    "prettier": "3.2.5"
   },
   "scripts": {
     "start": "bundle exec jekyll serve",
