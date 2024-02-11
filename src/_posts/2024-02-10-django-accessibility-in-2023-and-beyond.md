@@ -4,6 +4,7 @@ title: "Django accessibility in 2023 and beyond"
 date: 2024-02-10 22:29:58 +0100
 comments: true
 categories: [Django, Accessibility, Community]
+canonical: https://www.djangoproject.com/weblog/2024/feb/10/django-accessibility-in-2023-and-beyond/
 ---
 
 Happy birthday, Django accessibility team! 🌈
@@ -53,7 +54,7 @@ Some of those improvements will reflect for everyone, and some will only be bene
 
 > Screenshot of the admin interface in a "Change redirect" form, in Windows high contrast mode with the "Black" theme.
 
-Though Contrast Themes isn’t well known, it’s a built-in feature of Windows which is essential for people with low vision. There is a lot of room for improvement to better support it in Django – can you spot the five issues in this screenshot?
+**Can you spot the five issues in this screenshot?** Though Contrast Themes isn’t well known, it’s a built-in feature of Windows which is essential for people with low vision. There is a lot of room for improvement to better support it in Django.
 
 ---
 
@@ -76,7 +77,7 @@ In 2023, the website saw its first ever [accessibility audit](https://github.com
 - [Improve accessibility on warning admonitions - #1360](https://github.com/django/djangoproject.com/pull/1360)
 - [Accessibility review of djangoproject.com at DjangoCon Europe 2023](https://github.com/django/djangoproject.com/issues/1381)
 
-### Thank you to our website contributors Sarah Abderemane, Thibaud Colas, ontowhee, Sanyam Khurana, Hana Burtin, Paolo Melchiorre, and Tom Carrick ❤️
+Thank you to our website contributors Sarah Abderemane, Thibaud Colas, ontowhee, Sanyam Khurana, Hana Burtin, Paolo Melchiorre, and Tom Carrick ❤️
 
 ### Accessibility in our community
 
@@ -100,7 +101,7 @@ This year, we were able to produce statistics on the accessibility of Django pro
 
 [![Median accessibility score of websites by framework, cwvtech.report, December 2023](/images/blog/django-accessibility-in-2023-and-beyond/median-accessibility-dec-2023.png)](/images/blog/django-accessibility-in-2023-and-beyond/median-accessibility-dec-2023.png)
 
-> Median Lighthouse website accessibility score of websites by framework. Source: cwvtech.report, December 2023. Next.js: 85/100, Rails: 83, “All”: 82.5, Django: 80.5, ASP.NET: 79, Laravel: 78.5.
+> Median Lighthouse website accessibility score of websites by framework. Source: [HTTP Archive cwvtech.report](https://httparchive.org/reports), December 2023. Next.js: 85/100, Rails: 83, “All”: 82.5, Django: 80.5, ASP.NET: 79, Laravel: 78.5.
 
 There is also clear data to establish exactly which accessibility issues are common on Django websites:
 
@@ -108,7 +109,7 @@ There is also clear data to establish exactly which accessibility issues are com
 
 > Difference in Lighthouse audit success rate for sites built with Django vs. average site, HTTP Archive 2023-04-01 data, Django vs. “All”.
 
-We see those numbers as a good challenge for the Django community to explore ways in which the framework could be improved.
+We see those numbers as a good challenge for the Django community to explore ways in which the framework could be improved. There is clear room for improvement, and we have a lot of ideas on how to go about it.
 
 ## Accessibility plans for 2024
 
@@ -124,8 +125,60 @@ There are a lot of ways in which the accessibility of Django could be improved i
 
 ### New members
 
-With this roadmap of improvements in mind, our accessibility team is looking for six new members in 2024. If this sounds like the type of valuable, high-purpose work you want to contribute to – reach out on the [Django Discord](https://discord.gg/xcRH6mN4fa) in #accessibility.
+With this roadmap of improvements in mind, **our accessibility team is looking for six new members in 2024**. If this sounds like the type of valuable, high-purpose work you want to contribute to – reach out on the [Django Discord](https://discord.gg/xcRH6mN4fa) in #accessibility, or [on the forum](https://forum.djangoproject.com/t/django-accessibility-in-2023-and-beyond-looking-for-new-members/27954).</p>
 
 ## Thank you
 
 Thank you to everyone who took part in making Django more accessible in 2023 and early 2024. You rock!
+
+<!-- prettier-ignore -->
+<div style="display: grid; text-align: center; gap: 1rem; row-gap: 5vw; margin-top: 5vw; grid-template-columns: repeat(auto-fit, minmax(max-content, 180px));">
+  <div><a href="http://marijkeluttekes.dev/"><img src="https://avatars.githubusercontent.com/u/2210890?s=88&v=4" width="88" height="88" alt=""/><br />Marijke Luttekes</a><br /><a href="https://github.com/django/django/pulls/MHLut">code</a>, <a href="https://code.djangoproject.com/query?reporter=~MHLut">tickets</a></div>
+  <div><a href="https://github.com/denisiko"><img src="https://avatars.githubusercontent.com/u/21336548?s=88&v=4" width="88" height="88" alt=""/><br />Denis Anuschewski</a><br /><a href="https://code.djangoproject.com/query?reporter=~denisiko">tickets</a></div>
+  <div><a href="https://github.com/e11bits"><img src="https://avatars.githubusercontent.com/u/1659148?s=88&v=4" width="88" height="88" alt=""/><br />Alexander Lazarević</a><br /><a href="https://github.com/django/django/pulls/e11bits">code</a>, <a href="https://code.djangoproject.com/query?reporter=~e11bits">tickets</a></div>
+  <div><a href="https://github.com/bmispelon"><img src="https://avatars.githubusercontent.com/u/6345?s=88&v=4" width="88" height="88" alt=""/><br />Baptiste Mispelon</a><br /><a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Abmispelon">reviews</a></div>
+  <div><a href="http://schempc.com/"><img src="https://avatars.githubusercontent.com/u/2836129?s=88&v=4" width="88" height="88" alt=""/><br />Mike Schem</a><br /><a href="https://github.com/django/django/pulls/michaelschem">code</a></div>
+  <div><a href="https://github.com/janelle-caktus"><img src="https://avatars.githubusercontent.com/u/100801989?s=88&v=4" width="88" height="88" alt=""/><br />janelle-caktus</a><br /><a href="https://www.pyohio.org/2023/talks/making-our-python-code-more-accessible/">talk</a></div>
+  <div><a href="https://github.com/dchukhin"><img src="https://avatars.githubusercontent.com/u/6025153?s=88&v=4" width="88" height="88" alt=""/><br />Dmitriy Chukhin</a><br /><a href="https://code.djangoproject.com/query?reporter=~dchukhin">tickets</a>, <a href="https://www.pyohio.org/2023/talks/making-our-python-code-more-accessible/">talk</a></div>
+  <div><a href="https://github.com/jsuchan-reef"><img src="https://avatars.githubusercontent.com/u/135112713?s=88&v=4" width="88" height="88" alt=""/><br />jsuchan-reef</a><br /><a href="https://github.com/django/django/pulls/jsuchan-reef">code</a></div>
+  <div><a href="https://github.com/hrushikeshrv"><img src="https://avatars.githubusercontent.com/u/64729027?s=88&v=4" width="88" height="88" alt=""/><br />Hrushikesh Vaidya</a><br /><a href="https://github.com/django/django/pulls/hrushikeshrv">code</a></div>
+  <div><a href="http://www.aeracode.org/"><img src="https://avatars.githubusercontent.com/u/36182?s=88&v=4" width="88" height="88" alt=""/><br />Andrew Godwin</a><br /><a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Aandrewgodwin">reviews</a></div>
+  <div><a href="https://github.com/lparsons396"><img src="https://avatars.githubusercontent.com/u/68611528?s=88&v=4" width="88" height="88" alt=""/><br />lparsons396</a><br /><a href="https://pretalx.com/djangocon-europe-2023/talk/GYAPXW/">talk</a></div>
+  <div><a href="https://github.com/michjnich"><img src="https://avatars.githubusercontent.com/u/29822151?s=88&v=4" width="88" height="88" alt=""/><br />Michael J. Nicholson</a><br /><a href="https://youtu.be/acQdzpt68Fk?si=pE2cCnK0x9kaBb60&t=836">talk</a></div>
+  <div><a href="https://github.com/duranbe"><img src="https://avatars.githubusercontent.com/u/26261086?s=88&v=4" width="88" height="88" alt=""/><br />Benoît Durand</a><br /><a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Aduranbe">reviews</a></div>
+  <div><a href="https://www.paulox.net/"><img src="https://avatars.githubusercontent.com/u/521097?s=88&v=4" width="88" height="88" alt=""/><br />Paolo Melchiorre</a><br /><a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Apauloxnet">reviews</a></div>
+  <div><a href="https://www.linkedin.com/in/durvalcsouza/"><img src="https://avatars.githubusercontent.com/u/31013187?s=88&v=4" width="88" height="88" alt=""/><br />Durval Carvalho</a><br /><a href="https://github.com/django/django/pulls/durvalcarvalho">code</a></div>
+  <div><a href="https://github.com/scotchester"><img src="https://avatars.githubusercontent.com/u/1064670?s=88&v=4" width="88" height="88" alt=""/><br />Scott Cranfill</a><br /><a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3AScotchester">reviews</a>, <a href="https://github.com/Scotchester/djangocon-wagtail-accessibility">talk</a></div>
+  <div><a href="https://github.com/yushanfans2233"><img src="https://avatars.githubusercontent.com/u/111219127?s=88&v=4" width="88" height="88" alt=""/><br />yushanfans2233</a><br /><a href="https://github.com/django/django/pulls/yushanfans2233">code</a></div>
+  <div><a href="https://github.com/jed212"><img src="https://avatars.githubusercontent.com/u/114908979?s=88&v=4" width="88" height="88" alt=""/><br />jed212</a><br /><a href="https://github.com/django/django/pulls/jed212">code</a></div>
+  <div><a href="https://github.com/Louis-Cloud"><img src="https://avatars.githubusercontent.com/u/58861655?s=88&v=4" width="88" height="88" alt=""/><br />Louis-Cloud</a><br /><a href="https://code.djangoproject.com/query?reporter=~Louis-Cloud">tickets</a></div>
+  <div><a href="http://www.specialorange.org/"><img src="https://avatars.githubusercontent.com/u/1307941?s=88&v=4" width="88" height="88" alt=""/><br />Chris Frisina</a><br /><a href="https://github.com/django/django/pulls/specialorange">code</a></div>
+  <div><a href="https://github.com/laserhyena"><img src="https://avatars.githubusercontent.com/u/60266347?s=88&v=4" width="88" height="88" alt=""/><br />laserhyena</a><br /><a href="https://github.com/django/django/pulls/laserhyena">code</a></div>
+  <div><a href="https://github.com/DaraSilvera-Oct"><img src="https://avatars.githubusercontent.com/u/85626614?s=88&v=4" width="88" height="88" alt=""/><br />DaraSilvera-Oct</a><br /><a href="https://github.com/django/django/pulls/DaraSilvera-Oct">code</a>, <a href="https://code.djangoproject.com/query?reporter=~DaraSilvera-Oct">tickets</a></div>
+  <div><a href="https://github.com/erosselli"><img src="https://avatars.githubusercontent.com/u/67162025?s=88&v=4" width="88" height="88" alt=""/><br />erosselli</a><br /><a href="https://github.com/django/django/pulls/erosselli">code</a>, <a href="https://code.djangoproject.com/query?reporter=~erosselli">tickets</a></div>
+  <div><a href="https://github.com/ontowhee"><img src="https://avatars.githubusercontent.com/u/82607723?s=88&v=4" width="88" height="88" alt=""/><br />ontowhee</a><br /><a href="https://github.com/django/django/pulls/ontowhee">code</a></div>
+  <div><a href="https://github.com/fsbraun"><img src="https://avatars.githubusercontent.com/u/16906477?s=88&v=4" width="88" height="88" alt=""/><br />Fabian Braun</a><br /><a href="https://github.com/django/django/pulls/fsbraun">code</a>, <a href="https://code.djangoproject.com/query?reporter=~fsbraun">tickets</a></div>
+  <div><a href="https://github.com/shangxiao"><img src="https://avatars.githubusercontent.com/u/1845938?s=88&v=4" width="88" height="88" alt=""/><br />David Sanders</a><br /><a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Ashangxiao">reviews</a></div>
+  <div><a href="https://github.com/lstaana"><img src="https://avatars.githubusercontent.com/u/33534298?s=88&v=4" width="88" height="88" alt=""/><br />Lemuel Sta Ana</a><br /><a href="https://github.com/django/django/pulls/lstaana">code</a></div>
+  <div><a href="https://github.com/allcaps"><img src="https://avatars.githubusercontent.com/u/1969342?s=88&v=4" width="88" height="88" alt=""/><br />Coen van der Kamp</a><br /><a href="https://github.com/django/django/pulls/allcaps">code</a>, <a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Aallcaps">reviews</a></div>
+  <div><a href="https://github.com/devanubis"><img src="https://avatars.githubusercontent.com/u/1054630?s=88&v=4" width="88" height="88" alt=""/><br />Howard Cox</a><br /><a href="https://github.com/django/django/pulls/devanubis">code</a></div>
+  <div><a href="https://github.com/DevilsAutumn"><img src="https://avatars.githubusercontent.com/u/83907321?s=88&v=4" width="88" height="88" alt=""/><br />Bhuvnesh</a><br /><a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3ADevilsAutumn">reviews</a></div>
+  <div><a href="https://github.com/nmenezes0"><img src="https://avatars.githubusercontent.com/u/77671865?s=88&v=4" width="88" height="88" alt=""/><br />Nina Menezes</a><br /><a href="https://github.com/django/django/pulls/nmenezes0">code</a></div>
+  <div><a href="https://github.com/Cheukting"><img src="https://avatars.githubusercontent.com/u/28761465?s=88&v=4" width="88" height="88" alt=""/><br />Cheuk Ting Ho</a><br /><a href="https://code.djangoproject.com/query?reporter=~Cheukting">tickets</a>, <a href="https://github.com/django/django/pulls/Cheukting">code</a></div>
+  <div><a href="https://github.com/marianaasilva"><img src="https://avatars.githubusercontent.com/u/7084246?s=88&v=4" width="88" height="88" alt=""/><br />Mariana</a><br /><a href="https://github.com/django/django/pulls/marianaasilva">code</a></div>
+  <div><a href="https://github.com/AlexanderFL"><img src="https://avatars.githubusercontent.com/u/24865043?s=88&v=4" width="88" height="88" alt=""/><br />Alexander Freyr Lúðvíksson</a><br /><a href="https://github.com/django/django/pulls/AlexanderFL">code</a></div>
+  <div><a href="https://noumenal.es/"><img src="https://avatars.githubusercontent.com/u/64686?s=88&v=4" width="88" height="88" alt=""/><br />Carlton Gibson</a><br /><a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Acarltongibson">reviews</a></div>
+  <div><a href="https://github.com/nimra200"><img src="https://avatars.githubusercontent.com/u/56455642?s=88&v=4" width="88" height="88" alt=""/><br />Nimra </a><br /><a href="https://github.com/django/django/pulls/nimra200">code</a></div>
+  <div><a href="https://github.com/sarahboyce"><img src="https://avatars.githubusercontent.com/u/42296566?s=88&v=4" width="88" height="88" alt=""/><br />Sarah Boyce</a><br /><a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Asarahboyce">reviews</a></div>
+  <div><a href="https://linktr.ee/tushar_5526"><img src="https://avatars.githubusercontent.com/u/30565750?s=88&v=4" width="88" height="88" alt=""/><br />Tushar</a><br /><a href="https://github.com/django/django/pulls/tushar5526">code</a></div>
+  <div><a href="https://github.com/demestav"><img src="https://avatars.githubusercontent.com/u/1180929?s=88&v=4" width="88" height="88" alt=""/><br />Demetris Stavrou</a><br /><a href="https://github.com/django/django/pulls/demestav">code</a></div>
+  <div><a href="http://stackoverflow.com/users/3465428/hasan-ramezani"><img src="https://avatars.githubusercontent.com/u/3122642?s=88&v=4" width="88" height="88" alt=""/><br />Hasan Ramezani</a><br /><a href="https://github.com/django/django/pulls/hramezani">code</a></div>
+  <div><a href="https://github.com/nessita"><img src="https://avatars.githubusercontent.com/u/124304?s=88&v=4" width="88" height="88" alt=""/><br />nessita</a><br /> <a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Anessita">reviews</a></div>
+  <div><a href="https://www.mariuszfelisiak.org/"><img src="https://avatars.githubusercontent.com/u/2865885?s=88&v=4" width="88" height="88" alt=""/><br />Mariusz Felisiak</a><br /> <a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Afelixxm">reviews</a></div>
+  <div><a href="https://github.com/gregorjerse"><img src="https://avatars.githubusercontent.com/u/6426582?s=88&v=4" width="88" height="88" alt=""/><br />Gregor Jerše</a><br /><a href="https://github.com/django/django/pulls/gregorjerse">code</a></div>
+  <div><a href="https://github.com/smithdc1"><img src="https://avatars.githubusercontent.com/u/39645562?s=88&v=4" width="88" height="88" alt=""/><br />David Smith</a><br /><a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Asmithdc1">reviews</a>, <a href="https://github.com/django/django/pulls/smithdc1">code</a></div>
+  <div><a href="https://sarahabd.com/"><img src="https://avatars.githubusercontent.com/u/17890338?s=88&v=4" width="88" height="88" alt=""/><br />Sarah Abderemane</a><br /><a href="https://github.com/django/django/pulls/sabderemane">code</a>, <a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Asabderemane">reviews</a>, <a href="https://djangochat.com/episodes/accessibility-sarah-abderemane">talk</a>, <a href="https://code.djangoproject.com/query?reporter=~sabderemane">tickets</a></div>
+  <div><a href="https://github.com/thibaudcolas"><img src="https://avatars.githubusercontent.com/u/877585?s=88&v=4" width="88" height="88" alt=""/><br />Thibaud Colas</a><br /><a href="https://code.djangoproject.com/query?reporter=~thibaudcolas">tickets</a>, <a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Athibaudcolas">reviews</a></div>
+  <div><a href="https://github.com/knyghty"><img src="https://avatars.githubusercontent.com/u/3871354?s=88&v=4" width="88" height="88" alt=""/><br />Tom Carrick</a><br /> <a href="https://github.com/django/django/pulls?q=is%3Apr+is%3Aopen+commenter%3Aknyghty">reviews</a>, <a href="https://github.com/django/django/pulls/knyghty">code</a>, <a href="https://code.djangoproject.com/query?reporter=~knyghty">tickets</a></div>
+  <div><a href="https://forum.djangoproject.com/t/django-accessibility-in-2023-and-beyond-looking-for-new-members/27954"><img alt="Django heart" src="/images/blog/django-accessibility-in-2023-and-beyond/django-heart.svg" width="88" height="88"/><br />You?</a><br /> Come say hi <a href="https://forum.djangoproject.com/t/django-accessibility-in-2023-and-beyond-looking-for-new-members/27954">on the forum</a></div>
+</div>
