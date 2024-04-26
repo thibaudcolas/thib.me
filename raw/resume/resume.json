@@ -151,12 +151,30 @@
   ],
   "volunteer": [
     {
+      "organization": "Boavizta",
+      "position": "Member",
+      "website": "https://boavizta.org/en",
+      "startDate": "2024-03-19",
+      "endDate": "",
+      "summary": "Community participant sharing knowledge and resources to help tech professionals take climate action",
+      "highlights": []
+    },
+    {
       "organization": "Django Software Foundation",
       "position": "Board member",
       "website": "https://www.djangoproject.com/",
       "startDate": "2023-12-14",
       "endDate": "",
       "summary": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.",
+      "highlights": []
+    },
+    {
+      "organization": "DjangoCon Europe 2024",
+      "position": "Volunteer",
+      "website": "https://2024.djangocon.eu/conduct/",
+      "startDate": "2023-11-20",
+      "endDate": "",
+      "summary": "Volunteer for the 2024 conference; on Code of Conduct, Django Girls, Programme",
       "highlights": []
     },
     {
@@ -229,6 +247,15 @@
       "startDate": "2022-05-26",
       "endDate": "2022-10-01",
       "summary": "Organization admin and mentor for three Wagtail projects through the Google Summer of Code program for 2022: Contrast Themes, Editor's Guide, UX Unification",
+      "highlights": []
+    },
+    {
+      "organization": "ClimateAction.Tech",
+      "position": "Participant",
+      "website": "https://climateaction.tech/",
+      "startDate": "2021-06-21",
+      "endDate": "",
+      "summary": "Community participant sharing knowledge and resources to help tech professionals take climate action",
       "highlights": []
     },
     {
