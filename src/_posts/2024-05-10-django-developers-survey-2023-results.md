@@ -9,6 +9,8 @@ canonical: https://www.djangoproject.com/weblog/2024/may/10/django-developers-su
 
 In October-November 2023, the Django Software Foundation, in partnership with PyCharm, carried out a survey to capture the preferences and contributions of Django developers worldwide. Today, we’re excited to share the results through detailed infographics highlighting how our community influences the future of web development.
 
+<!-- more -->
+
 [**View the Django Developers Survey 2023 report**](https://jb.gg/r5r4ij)
 
 Why should you check out the infographics?

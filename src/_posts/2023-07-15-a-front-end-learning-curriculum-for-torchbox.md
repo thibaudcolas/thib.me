@@ -8,7 +8,7 @@ categories: [Torchbox, JavaScript, CSS, HTML]
 
 We created a new front-end learning curriculum for Torchbox developers. This is meant to simplify understanding one’s progress through the various competencies relating to front-end development. The focus is on junior and intermediate skills.
 
-<!--more-->
+<!-- more-->
 
 ## High-level overview
 
