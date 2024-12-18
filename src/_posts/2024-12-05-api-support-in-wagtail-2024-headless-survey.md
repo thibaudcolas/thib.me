@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Django 6.x Steering Council Candidates"
+title: "API support in Wagtail: 2024 headless survey"
 date: 2024-12-05 21:18:03 +0000
 comments: true
 categories: [Django, Wagtail, React]
