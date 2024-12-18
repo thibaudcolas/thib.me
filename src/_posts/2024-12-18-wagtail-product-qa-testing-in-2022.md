@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wagtail’s product quality assurance overview - 2022"
-date: 2024-12-18 21:18:03 +0000
+date: 2024-12-18 12:18:03 +0000
 comments: true
 categories: [Django, Wagtail, Test]
 ---
