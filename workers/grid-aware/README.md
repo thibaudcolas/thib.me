@@ -30,24 +30,10 @@ For example – we could set a goal of reaching an "A+" [digital carbon rating](
 - Seasonal patterns in renewables?
 - Energy usage of different website patterns?
 
-### Mental model
-
-Beyond the code, what’s been the hardest for me is having a good mental model of the "grid-aware" mindset, and deciding based on what criteria to switch between the "regular" and "low-footprint" versions of a page. I wanted to ask if anyone’s already thought about this / written on the topic? I’m wondering about things like:
-
-How to communicate this with stakeholders who might or might not be aware of the grid energy mix or carbon intensity.
-Whether / how much to try to align this with any website goals (say a KPI on carbon intensity per page view, or overall Net Zero goals)
-How much to grapple with any social equity considerations. There are a lot of configuration options where the "grid aware" mode would kick in 100% of the time for people in countries with carbon-intensive energy grids. I’m not sure if that’s a good thing or not.
-
-I’ve arrived at those questions when trying to choose between the different ways to switch between the "vanilla" and "low footprint" versions of the site – specifically choosing between he "power breakdown" and "grid intensity" methods derived from Electricity Maps, and within those two, choosing between "low-carbon" and "renewable" electricity mix, and "average" or "limit" grid intensity. I feel like there’ll be lots of people asking themselves which of those to choose from based on their needs.
-
-### Terminology for the methodology
-
-One other thing I’ve struggled with a bit is terminology, whether we’re using "grid-aware" to refer to the behavior of a website that adapts based on the grid, or whether "grid-aware" is the state of a website only when it is being adapted for a high-intensity grid. Semantics… Not sure this is super crucial but through all of this I’m trying to think hard of how I would pitch this to stakeholders and CMS site implementers, so the clearer the better. And for site users, how we would communicate what version of the site they’re looking at (Branch Magazine uses the term "Grid intensity view" which can be "Live", "Low", "Moderate", "High").
-
-### Design philosophy
-
-I think the last conceptual element I grappled with was when comparing the two modes on the site, which one to consider as the "default", if any. For example in Responsive Web Design, there was a switch towards a Mobile First design and coding approach. In front-end dev, there’s the progressive enhancement and the graceful degradation philosophies.
-
 ## Work in progress
 
 https://workers.thibaudcolas.workers.dev/
+
+## Possible improvements
+
+- Investigate if it’s possible to use more granular [Electricity Maps zones](https://api.electricitymap.org/v3/zones) than countries
