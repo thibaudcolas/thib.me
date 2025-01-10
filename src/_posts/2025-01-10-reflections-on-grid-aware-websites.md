@@ -16,9 +16,15 @@ For context – read [Introducing our grid-aware websites project](https://www.t
 
 ![A visual spider diagram with the faces and names of the members of the Green Web Foundation grid-aware websites advisory board](/images/blog/reflections-on-grid-aware-websites/grid-aware-websites-advisory-board-members.jpg)
 
-## In practice
+> A visual representation of the grid-aware websites advisory group. Credit: Green Web Foundation
 
-If you want a quick real-world example, see the [Branch Magazine website](https://branch.climateaction.tech/).
+---
+
+In practice - if you want a quick real-world example, see the [Branch Magazine website](https://branch.climateaction.tech/).
+
+## My TL;DR; take on the grid awareness concept
+
+Lots of site users and stakeholders appreciate having a lower-footprint website. Grid awareness makes that possible, since there is so much data available now, live, on how carbon-intense the electricity grid is. The Green Web Foundation’s approach also has the potential to be simple to retrofit onto existing sites and web apps, Wagtail or no. Rolling this out on a site will also increase users’ and stakeholders’ awareness of sustainability, which is a win for all of us.
 
 ## Project framing
 
