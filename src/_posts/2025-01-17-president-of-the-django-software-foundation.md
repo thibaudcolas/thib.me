@@ -18,7 +18,7 @@ More than anything, it’s an honor to be in such a role, and a mandate for me t
 
 ## My statement for the officer elections
 
-While members of the Board of Directors are elected by the DSF membership, the officers are elected by the Board. I’ve been pretty critical of Django and its governance in the past, like in my [personal statement for the 2024 Board elections](/my-personal-statement-for-dsf-board)). I kept that theme going in my statement for the officer elections, here is how I put it:
+While members of the Board of Directors are elected by the DSF membership, the officers are elected by the Board. I’ve been pretty critical of Django and its governance in the past, like in my [personal statement for the 2024 Board elections](/my-personal-statement-for-dsf-board). I kept that theme going in my statement for the officer elections. Here is how I put it:
 
 > Operationally, the Django community as a whole isn’t functioning as well as it could be. We have motivated individuals, excellent ideas, but lacklustre coordination. In the Foundation in particular, our brilliant volunteers need a better baseline of organization to do their best work. And we need this too when partnering with others, or when hiring.
 >
