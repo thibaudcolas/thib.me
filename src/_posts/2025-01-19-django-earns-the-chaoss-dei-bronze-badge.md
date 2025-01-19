@@ -9,18 +9,14 @@ seo_image: /images/blog/django-earns-the-chaoss-dei-bronze-badge/django-chaoss-g
 seo_image_alt: Trophy with confetti, CHAOSS DEI Bronze badge, Django logo
 ---
 
-We’re excited to announce that Django has been awarded the [CHAOSS Diversity, Equity, and Inclusion (DEI) Bronze Badge](https://badging.chaoss.community/project-badging/dei-badge)!
+We’re excited to announce that Django has been awarded the [CHAOSS Diversity, Equity, and Inclusion Bronze Badge](https://badging.chaoss.community/project-badging/dei-badge)!
 
 <!-- more -->
 
-This badge reflects our ongoing commitment to fostering a diverse, equitable, and inclusive community for all Djangonauts.
-
 ![Trophy with confetti, CHAOSS DEI Bronze badge, Django logo](/images/blog/django-earns-the-chaoss-dei-bronze-badge/django-chaoss-graphics.webp)
 
-Our new [Diversity, Equity, and Inclusion Project Statement](https://github.com/django/.github/blob/main/DEI.md) details all the ways in which we want to create an environment where everyone can participate and thrive. From inclusive leadership structures to Django events, we strive to ensure our community is welcoming, transparent, and supportive.
+This badge reflects our ongoing commitment to fostering a diverse, equitable, and inclusive community for all Djangonauts.
 
-At the time of writing, the Bronze badge is the only level offered by the CHAOSS DEI Project Badging program. While this recognition is a meaningful milestone, we view it as part of a continuous journey to improve and evolve our DEI efforts.
+Our new [Diversity, Equity, and Inclusion Project Statement](https://github.com/django/.github/blob/main/DEI.md) details all the ways in which we want to create an environment where everyone can participate and thrive, and complements our pre-existing [Django Community Diversity Statement](https://www.djangoproject.com/diversity/). From inclusive leadership structures to Django events, we strive to ensure our community is welcoming, transparent, and supportive.
 
-Thank you to everyone in the Django community who contributes to making our project inclusive, accessible, and welcoming 🫶. Thank you to Sarah Boyce, who led the effort for us to be awarded this badge. We look forward to building an even more vibrant and supportive community together.
-
-To learn more about our efforts, [read our DEI.md](https://github.com/django/code-of-conduct/blob/main/DEI.md), and the [Django Community Diversity Statement](https://www.djangoproject.com/diversity/).
+Thank you to everyone in the Django community who contributes to making our project inclusive, accessible, and welcoming 🫶. Thank you to Sarah Boyce, who led the work for us to be awarded this badge. We view this milestone as part of a continuous journey for our project and community to improve, and look forward to building an even more vibrant and supportive community together.
