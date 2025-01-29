@@ -16,11 +16,9 @@ By Vince Salvino - CodeRed, and Thibaud Colas - Torchbox – both representing W
 
 ![Vince, Scott, and Meagen in front of the poster at the conference](/images/blog/pycon-us-2024-poster-accessible-websites/vince_scott_meagen_in_front_of_the_poster.webp)
 
-All of the data for the charts is available here: [PyCon US 2024 \| Wagtail accessibility statistics](https://docs.google.com/spreadsheets/d/1RajyVWKlCFlcZg_kYSLNhE8I26hE7ZWRfhga_QvZC4Y/edit?usp=sharing)
+All of the data for the charts is available here: [PyCon US 2024 - Wagtail accessibility statistics](https://docs.google.com/spreadsheets/d/1RajyVWKlCFlcZg_kYSLNhE8I26hE7ZWRfhga_QvZC4Y/edit?usp=sharing)
 
 ### Try Wagtail
-
-<wagtail.org>
 
 ```bash
 pip install wagtail
@@ -36,7 +34,7 @@ python manage.py runserver
 
 ### Accessibility laws (USA & world)
 
-Source: [W3C Web Accessibility Laws & Policies](https://www.w3.org/WAI/policies/). Refined data: [PyCon US 2024 \| Poster - Accessibility policy](https://docs.google.com/spreadsheets/d/1RajyVWKlCFlcZg_kYSLNhE8I26hE7ZWRfhga_QvZC4Y/edit?gid=1304246423#gid=1304246423)
+Source: [W3C Web Accessibility Laws & Policies](https://www.w3.org/WAI/policies/). Refined data: [PyCon US 2024 - Poster - Accessibility policy](https://docs.google.com/spreadsheets/d/1RajyVWKlCFlcZg_kYSLNhE8I26hE7ZWRfhga_QvZC4Y/edit?gid=1304246423#gid=1304246423)
 
 #### USA states with accessibility laws
 
