@@ -69,7 +69,7 @@ This shows the mean accessibility score of Wagtail sites over time, compared to 
 
 See the [built-in accessibility checker](https://docs.wagtail.org/en/stable/advanced_topics/accessibility_considerations.html#built-in-accessibility-checker) documentation.
 
-![Accessibility checks built into Wagtail](/images/blog/pycon-us-2024-poster-accessible-websites/Accessibility%20checks%20built%20into%20Wagtail.png)
+![Accessibility checks built into Wagtail](/images/blog/pycon-us-2024-poster-accessible-websites/accessibility-checker-demo.png)
 
 - **button-name**: 70% of Wagtail sites pass this, compared to 65% in 2023. A button element on the page is lacking a label. This is entirely detectable with automated tests such as those featured in our [built-in accessibility checker](https://wagtail.org/blog/introducing-wagtails-new-accessibility-checker/), built on Axe.
 - **link-name**: 42% passing (38% in 2023). Just like button-name, one of the page’s links is missing its title.
