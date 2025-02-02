@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ATAG audits: worth your while</title>
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <meta name="description" content="Real-world examples, practical tips, getting started with the ATAG accessibility standard">
+    <meta name="fediverse:creator" content="@thibaudcolas@fosstodon.org">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:url" content="https://thib.me/talks/atag/">
+    <meta property="og:type" content="article">
+    <meta name="twitter:site" content="@thibaud_colas">
+    <meta name="twitter:creator" content="@thibaud_colas">
+    <meta property="og:image" content="https://thib.me/talks/atag/assets/atag-audits-worth-your-while.webp">
+    <meta name="twitter:image:alt" content="ATAG audits: worth your while 🔎 - Practical tips and examples to get started - Thibaud Colas @ FOSDEM 2025">
+    <meta property="og:image:width" content="1220" />
+    <meta property="og:image:height" content="720" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔍</text></svg>"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="slide" id="slide-0" aria-labelledby="slide-0">
+        <div class="slide-content">
+          <hgroup>
+            <h1 id="slide-0-heading">
+              <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr>
+              audits:<br />worth your while 🔎
+            </h1>
+            <p class="bg-[Canvas]">
+              Practical tips and examples to get started <br />
+              <small><a href="https://thib.me/">Thibaud Colas</a>
+              @
+              <a
+                href="https://fosdem.org/2025/schedule/event/fosdem-2025-5806-atag-accessibility-audits-worth-your-while/"
+                ><abbr
+                  title="Free and Open source Software Developers' European Meeting"
+                  >FOSDEM</abbr
+                >
+                2025</a
+              ></small>
+            </p>
+          </hgroup>
+        </div>
+        <div class="slide-footer">
+          <p>
+            Slides:
+            <a class="me-4" href="https://thib.me/talks/atag/">thib.me/talks/atag/</a> (<a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1">CC0 public domain</a>)
+          </p>
+          <a href="https://fosstodon.org/@thibaudcolas"><img
+            src="assets/tails-128x128.webp"
+            alt="Thibaud avatar on social media - Mastodon"
+            class="-mb-4"
+          /></a>
+          <a href="">0</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-1" aria-labelledby="slide-1-heading">
+        <div class="slide-content">
+          <hgroup>
+            <h2 id="slide-1-heading">Why we’re here</h2>
+            <p>Standards, authoring tools, accessibility by default</p>
+          </hgroup>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-1">1</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-1" aria-labelledby="slide-1-heading">
+        <hgroup>
+          <h3 id="slide-1-heading"><strong><mark>95.9%</mark></strong> of home pages have accessibility issues</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img width="995" height="409" src="assets/WCAGNonconformance2024.webp" alt="Line chart of WCAG non-conformance percentage from 2019 to 2024. The line goes starts slightly below 100% non-conformance in 2019, and barely goes down year to year.">
+          <figcaption>
+          Percentage of home pages with detected WCAG conformance failures over time. <a href="https://webaim.org/projects/million/">2024 WebAIM Million</a>
+          </figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-1">1</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-2" aria-labelledby="slide-2-heading">
+        <hgroup>
+          <h3 id="slide-2-heading">We need accessibility standards</h3>
+        </hgroup>
+        <div class="slide-content">
+          <ul>
+            <li><strong>WCAG</strong>: <small>Web Content Accessibility Guidelines</small></li>
+            <li><strong>ATAG</strong>: <small>Authoring Tool Accessibility Guidelines</small><ul><li>☝️ Our focus today</li></ul></li>
+            <li><strong>UAAG</strong>: <small>User Agent Accessibility Guidelines</small></li>
+            <li><strong>WAI-ARIA</strong>: <small>Web Accessibility Initiative – Accessible Rich Internet Applications</small></li>
+            <li><strong>EN 301 549</strong>: <small>Accessibility requirements for ICT products and services</small></li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-2">2</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-3" aria-labelledby="slide-3-heading">
+        <hgroup>
+          <h3 id="slide-3-heading">We need authoring tools</h3>
+        </hgroup>
+        <div class="slide-content">
+        <p>We need support for social media posts. Blogging. Apps. Videos. Slides. Livestreams. Chat. Crafting HTML by hand is possible but error-prone.</p>
+        <p>Authors need:</p>
+          <ul>
+          <li>Assistance</li>
+          <li>Documentation</li>
+          <li>Templates</li>
+          <li>Quality control</li>
+          <li><strong>Accessible defaults</strong></li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-3">3</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-4" aria-labelledby="slide-4-heading">
+        <hgroup>
+          <h3 id="slide-4-heading"><a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a></h3>
+          <p>Version 2.0 in 2015</p>
+        </hgroup>
+        <div class="slide-content">
+        <ul>
+<li><p><a href="https://www.w3.org/TR/ATAG20/#part_a">A. Make the authoring tool user interface accessible</a></p>
+<details>
+<summary>All Part A guidelines</summary>
+<ul>
+<li><p><a href="https://www.w3.org/TR/ATAG20/#principle_a1">A.1. Authoring tool user interfaces follow applicable accessibility guidelines</a></p>
+<ul>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a11">A.1.1. (For the authoring tool user interface) Ensure that web-based functionality is accessible</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a12">A.1.2. (For the authoring tool user interface) Ensure that non-web-based functionality is accessible</a></li>
+</ul>
+</li>
+<li><p><a href="https://www.w3.org/TR/ATAG20/#principle_a2">A.2. Editing-views are perceivable</a></p>
+<ul>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a21">A.2.1. (For the authoring tool user interface) Make alternative content available to authors</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a22">A.2.2. (For the authoring tool user interface) Ensure that editing-view presentation can be programmatically determined</a></li>
+</ul>
+</li>
+<li><p><a href="https://www.w3.org/TR/ATAG20/#principle_a3">A.3. Editing-views are operable</a></p>
+<ul>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a31">A.3.1. (For the authoring tool user interface) Provide keyboard access to authoring features</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a32">A.3.2. (For the authoring tool user interface) Provide authors with enough time</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a33">A.3.3. (For the authoring tool user interface) Help authors avoid flashing that could cause seizures</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a34">A.3.4. (For the authoring tool user interface) Enhance navigation and editing via content structure</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a35">A.3.5. (For the authoring tool user interface) Provide text search of the content</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a36">A.3.6. (For the authoring tool user interface) Manage preference settings</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a37">A.3.7. (For the authoring tool user interface) Ensure that previews are at least as accessible as in-market user agents</a></li>
+</ul>
+</li>
+<li><p><a href="https://www.w3.org/TR/ATAG20/#principle_a4">A.4. Editing-views are understandable</a></p>
+<ul>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a41">A.4.1. (For the authoring tool user interface) Help authors avoid and correct mistakes</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_a42">A.4.2. (For the authoring tool user interface) Document the user interface, including all accessibility features</a></li>
+</ul>
+</li>
+</ul>
+</details>
+</li>
+<li><p><a href="https://www.w3.org/TR/ATAG20/#part_b">B. Support the production of accessible content</a></p>
+<details>
+<summary>All Part B guidelines</summary>
+<ul>
+<li><p><a href="https://www.w3.org/TR/ATAG20/#principle_b1">B.1. Fully automatic processes produce accessible content</a></p>
+<ul>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_b11">B.1.1. Ensure that automatically-specified content is accessible</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_b12">B.1.2. Ensure that accessibility information is preserved</a></li>
+</ul>
+</li>
+<li><p><a href="https://www.w3.org/TR/ATAG20/#principle_b2">B.2. Authors are supported in producing accessible content</a></p>
+<ul>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_b21">B.2.1. Ensure that accessible content production is possible</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_b22">B.2.2. Guide authors to produce accessible content</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_b23">B.2.3. Assist authors with managing alternative content for non-text content</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_b24">B.2.4. Assist authors with accessible templates</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_b25">B.2.5. Assist authors with accessible pre-authored content</a></li>
+</ul>
+</li>
+<li><p><a href="https://www.w3.org/TR/ATAG20/#principle_b3">B.3. Authors are supported in improving the accessibility of existing content</a></p>
+<ul>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_b31">B.3.1. Assist authors in checking for accessibility problems</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_b32">B.3.2. Assist authors in repairing accessibility problems</a></li>
+</ul>
+</li>
+<li><p><a href="https://www.w3.org/TR/ATAG20/#principle_b4">B.4. Authoring tools promote and integrate their accessibility features</a></p>
+<ul>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_b41">B.4.1. Ensure the availability of features that support the production of accessible content</a></li>
+<li><a href="https://www.w3.org/TR/ATAG20/#gl_b42">B.4.2. Ensure that documentation promotes the production of accessible content</a></li>
+</ul>
+</li>
+</ul>
+</details>
+</li>
+</ul>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-4">4</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-5" aria-labelledby="slide-5-heading">
+        <hgroup>
+          <h3 id="slide-5-heading"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> example: in a Content Management System (CMS)</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img width="1440" height="810" src="assets/wagtail_admin_pages_edit.webp" alt="Screenshot of the Wagtail 6.3 page editor, with a sidebar to the left, an editing form, and to the right a preview panel with a dark theme web page">
+          <figcaption><a href="https://wagtail.org/">Wagtail</a> v6.3 <a href="https://static-wagtail-v6-3.netlify.app/admin/pages/62/edit/">page editor</a>, with page preview opened</figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-5">5</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-6" aria-labelledby="slide-6-heading">
+        <div class="slide-content">
+          <hgroup>
+            <h2 id="slide-6-heading"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> in practice: Part A</h2>
+            <p>My highlights – things that go far beyond <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 🚀</p>
+          </hgroup>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-6">6</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-7" aria-labelledby="slide-7-heading">
+        <hgroup>
+          <h3 id="slide-7-heading">Part A: Make the authoring tool user interface accessible</h3>
+
+        </hgroup>
+        <div class="slide-content">
+          <ul>
+          <li><a href="http://www.w3.org/TR/2015/NOTE-IMPLEMENTING-ATAG20-20150924/#gl_a21">A.2.1. Make alternative content available to authors</a><ul><li>Alt text for all images, decorative or no!</li></ul></li>
+          <li><a href="https://www.w3.org/TR/2015/NOTE-IMPLEMENTING-ATAG20-20150924/#sc_a321">A.3.2.1 Auto-Save</a><ul><li>Either no session time limit, or auto-saving</li></ul></li>
+          <li><a href="https://www.w3.org/TR/2015/NOTE-IMPLEMENTING-ATAG20-20150924/#gl_a35">A.3.5. Provide text search of the content</a><ul><li><a href="https://hidde.blog/atag-a351-browser-built-in-search/">Browser built-in search</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden#the_hidden_until_found_state"><code>hidden="until-found"</code></a> to the rescue?</li></ul></li>
+          <li><a href="https://www.w3.org/TR/2015/NOTE-IMPLEMENTING-ATAG20-20150924/#gl_a42">A.4.2. Document the user interface, including all accessibility features</a><ul><li>💅🎉👏</li></ul></li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-7">7</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-8" aria-labelledby="slide-8-heading">
+        <hgroup>
+          <h3 id="slide-8-heading">Documenting features: for developers <em>and</em> for users</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img width="995" height="409" src="assets/guide.wagtail.org.webp" alt="Screenshot of the Wagtail user guide website homepage. Features a navigation sidebar to the left, and page content listing sections to the right: getting started, how-to, concepts">
+          <figcaption>
+          <a href="https://guide.wagtail.org/en-latest/">Wagtail user guide</a> homepage
+          </figcaption>
+          </figure>
+          <p>Docs coverage for devs: 80%. For editors: <a href="https://wagtail.org/accessibility/atag-audit/#a422-document-all-features">52 of 145 features</a> (35%)</p>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-8">8</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-9" aria-labelledby="slide-9-heading">
+        <div class="slide-content">
+          <hgroup>
+            <h2 id="slide-9-heading"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> in practice: Part B</h2>
+            <p>To infinity… and beyond <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>! 🌈</p>
+          </hgroup>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-9">9</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-10" aria-labelledby="slide-10-heading">
+        <hgroup>
+          <h3 id="slide-10-heading">B.1. Fully automatic processes produce accessible content</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img width="1024" height="576" src="assets/dsf-membership-nomination.webp" alt="Screenshot of the DSF membership nomination form, with a number of fields, including email and Your name">
+          <figcaption>
+          Google Forms, with no <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">autocomplete attribute</a> support
+          </figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-10">10</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-11" aria-labelledby="slide-11-heading">
+        <hgroup>
+          <h3 id="slide-11-heading">B.2.3. Assist authors with managing alternative content for non-text content</h3>
+          <p>(as in – help people creating alt text (and captions))</p>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img width="995" height="409" src="assets/mastodon-alt-text-ui.webp" alt="Screenshot collage of Mastodon. To the left the post editor, with in-progress content including an image. There is a warning triangle with the word 'Alt' in yellow. To the right, the interface to edit images, with a multiline text field: 'Describe for people who are blind or low-vision'. There is also a 'Detect text from picture' button below">
+          <figcaption>
+          Mastodon <a href="https://docs.joinmastodon.org/user/posting/#edit">alt text UI</a>
+          </figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-11">11</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-12" aria-labelledby="slide-12-heading">
+        <hgroup>
+          <h3 id="slide-12-heading">B.2.4. Assist authors with accessible templates</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img width="1440" height="810" src="assets/wordpress-accessibility-ready-themes.webp" alt="Screenshot of the WordPress theme, accessibility ready tag in the tag filter">
+          <figcaption>
+          WordPress <a href="https://wordpress.org/themes/tags/accessibility-ready/">“Accessibility Ready” themes</a>.
+          </figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-12">12</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-13" aria-labelledby="slide-13-heading">
+        <hgroup>
+          <h3 id="slide-13-heading">B.3.1. Assist authors in checking for accessibility problems</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img width="1440" height="810" src="assets/sa11y-tracking-wild-yeast.webp" alt="Sa11y accessibility checker widget, over a blog page. The widget spotted a heading error, and displays alt text for manual review">
+          <figcaption>
+          <a href="https://sa11y.netlify.app/">Sa11y</a> accessibility checker widget
+          </figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
+
+          <a href="#slide-13">13</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-14" aria-labelledby="slide-14-heading">
+        <hgroup>
+          <h3 id="slide-14-heading">B.3.2. Assist authors in repairing accessibility problems</h3>
+          <p>Example: alt text</p>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img class="aspect-auto!" width="1626" height="1006" src="assets/ai-vs-existing-alt-text-quality.webp" alt="Bar chart comparing Wagtail AI vs. existing alt text quality, based on 441 homepages, scored by the accessibility team. Real-world alt text scores low. AI alt text scores higher, with 49% of AI alt texts scored 5/5 compared to 8% for real-world">
+          </figure>
+        </div>
+        <div class="slide-footer">
+          <p><a href="https://wagtail.org/blog/wagtail-accessibility-statistics-for-gaad-2024/">Review for Global Accessibility Awareness Day 2024</a></p>
+          <a href="#slide-14">14</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-15" aria-labelledby="slide-15-heading">
+        <hgroup>
+          <h3 id="slide-15-heading">B.3.2. example implementation</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img class="aspect-auto!" width="995" height="409" src="assets/alt-text-suggestions-ui.webp" alt="Screenshot of the Wagtail Upload images interface. It says 3 images were uploaded successfully, and offers three different options to fill the description field">
+          <figcaption>
+          Image upload with <abbr title="Artificial Intelligence">AI</abbr>-generated descriptions
+          </figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
+          <p>See <a href="https://www.funka.com/en/projekt/cluster-feature-testing/feature-4-of-10-text-alternative-alt-text/">We 4 Authors Cluster - alt text</a></p>
+          <a href="#slide-15">15</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-16" aria-labelledby="slide-16-heading">
+        <div class="slide-content">
+          <hgroup>
+            <h2 id="slide-16-heading">Get started</h2>
+          </hgroup>
+        </div>
+        <div class="slide-footer">
+
+          <a href="#slide-16">16</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-17" aria-labelledby="slide-17-heading">
+        <hgroup>
+          <h3 id="slide-17-heading">Prerequisites</h3>
+          <p>(which you can arrive at iteratively)</p>
+        </hgroup>
+        <div class="slide-content">
+          <ol>
+            <li>Good documentation of project features</li>
+            <li>Good demo setup to test said features</li>
+            <li>(Some) knowledge of <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr></li>
+            <li>Report format</li>
+          </ol>
+          <br>
+          <p>And that’s it! 🎊 👀</p>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-17">17</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-18" aria-labelledby="slide-18-heading">
+        <hgroup>
+          <h3 id="slide-18-heading">Report templates</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img width="1280" height="720" src="assets/github-projects-wcag-atag.webp" alt="Screenshot of the GitHub Projects interface, for 'WCAG 2.2 & ATAG 2.0', with a number of items tagged by WCAG SC, ATAG SC status">
+          <figcaption>
+          <a href="https://github.com/users/thibaudcolas/projects/2/views/1">GitHub Projects template</a>
+          </figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
+          <p>Markdown: <a href="https://github.com/thibaudcolas/atag-getting-started/blob/main/atag_wagtail_template.md">atag_wagtail_template.md</a></p>
+          <a href="#slide-18">18</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-19" aria-labelledby="slide-19-heading">
+        <hgroup>
+          <h3 id="slide-19-heading"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> Report Tool</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img width="1280" height="720" src="assets/wai-atag-report-tool.webp" alt="Screenshot of the WAI ATAG Report Tool interface, Overview page, with existing report under way in sidebar">
+          <figcaption>
+            W3C Web Accessibility Initiative (WAI) <a href="https://www.w3.org/WAI/atag/report-tool/">report tool</a>
+          </figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-19">19</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-20" aria-labelledby="slide-20-heading">
+        <hgroup>
+          <h3 id="slide-20-heading">Authoring Tools List</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img width="1280" height="720" src="assets/wai-authoring-tools-list.webp" alt="Screenshot of the WAI Authoring Tools list">
+          <figcaption>
+            W3C Web Accessibility Initiative (WAI) <a href="https://www.w3.org/WAI/tools-list/authoring/">authoring tools list</a>
+          </figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-20">20</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-21" aria-labelledby="slide-21-heading">
+        <hgroup>
+          <h3 id="slide-21-heading">Beyond <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> and <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr></h3>
+        </hgroup>
+        <div class="slide-content">
+          <ul>
+            <li><a href="https://w3c.github.io/sustainableweb-wsg/">Web Sustainability Guidelines (WSG)</a></li>
+            <li><a href="https://www.w3.org/TR/maturity-model/">Accessibility Maturity Model</a></li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <a href="#slide-21">21</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-22" aria-labelledby="slide-22-heading">
+        <div class="slide-content">
+          <hgroup>
+            <h2 id="slide-22-heading">Thank you! ❤️</h2>
+            <p>Come say hi and ask questions?</p>
+          </hgroup>
+          <ul class="text-start mt-8">
+            <li>Mastodon: <a href="https://fosstodon.org/@thibaudcolas">@thibaudcolas@fosstodon.org</a></li>
+            <li>Bluesky: <a href="https://bsky.app/profile/thibaudcolas.bsky.social">@thibaudcolas.bsky.social</a></li>
+            <li>X: <a href="https://x.com/thibaud_colas">@thibaud_colas</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/thibaudcolas/">Thibaud Colas</a></li>
+            <li>GitHub: <a href="https://github.com/thibaud_colas">@thibaud_colas</a></li>
+            </ul>
+        </div>
+        <div class="slide-footer">
+          <p>
+            Slides:
+            <a href="https://thib.me/talks/atag/">thib.me/talks/atag/</a>
+          </p>
+          <a href="https://fosstodon.org/@thibaudcolas"><img
+            src="assets/tails-128x128.webp"
+            alt="Thibaud avatar on social media - Mastodon"
+            class="-mb-4"
+          /></a>
+          <a href="#slide-22">22</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-23" aria-labelledby="slide-23-heading">
+        <hgroup>
+          <h3 id="slide-23-heading">Progress for Wagtail</h3>
+        </hgroup>
+        <div class="slide-content">
+          <table>
+<thead>
+<tr>
+<th scope="col">Conformance Level</th>
+<th scope="col"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr></th>
+<th scope="col">Part A</th>
+<th scope="col">Part B</th>
+</tr>
+</thead>
+<tbody><tr>
+<th scope="row">Pass</th>
+<td>28 (+6 🎉)</td>
+<td>14 (+2 🤘)</td>
+<td>14 (+4 🚀)</td>
+</tr>
+<tr>
+<th scope="row">Fail</th>
+<td>24 (-6)</td>
+<td>15 (-2)</td>
+<td>9 (-4)</td>
+</tr>
+<tr>
+<th scope="row">Not applicable</th>
+<td>13</td>
+<td>4</td>
+<td>9</td>
+</tr>
+</tbody>
+<caption>Wagtail 6.3 audit findings at the success criteria level</caption>
+</table>
+        </div>
+        <div class="slide-footer">
+          <p>Per <a href="https://www.w3.org/WAI/atag/report-tool/"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> report tool</a></p>
+          <a href="#slide-23">23</a>
+        </div>
+      </section>
+    </main>
+    <template id="content-slide-template">
+      <section class="slide" id="slide-N" aria-labelledby="slide-N-heading">
+        <hgroup>
+          <h3 id="slide-N-heading">Slide heading</h3>
+          <p>Slide subheading</p>
+        </hgroup>
+        <div class="slide-content">
+          <p>Slide content</p>
+        </div>
+        <div class="slide-footer">
+          <p>Optional footer notes</p>
+          <a href="#slide-N">N</a>
+        </div>
+      </section>
+    </template>
+    <template id="section-slide-template">
+      <section class="slide" id="slide-N" aria-labelledby="slide-N-heading">
+        <div class="slide-content">
+          <hgroup>
+            <h2 id="slide-N-heading">Slide heading</h2>
+            <p>Slide subheading</p>
+          </hgroup>
+        </div>
+        <div class="slide-footer">
+          <p>Optional footer notes</p>
+          <a href="#slide-N">N</a>
+        </div>
+      </section>
+    </template>
+  </body>
+</html>
