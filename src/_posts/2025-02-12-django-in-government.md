@@ -12,7 +12,7 @@ I have this list of 50k Django projects I put together, and thought it might be 
 
 <!-- more -->
 
-Here’s an overview of all countries using Django. That’s 88 countries according to my dataset.
+Here’s an overview of all countries using Django in their government websites. That’s 88 countries according to my dataset.
 
 ![Map of world countries, with the ones using Django in blue](/images/blog/django-in-government/django-governments-world-map.webp)
 
@@ -158,7 +158,7 @@ where regexp_matches(
 
 The original dataset I collected by crawling about 20M websites from the [Chrome UX Report](https://developer.chrome.com/docs/crux) dataset, running common checks to detect Django (see my [Detect Wagtail](https://github.com/thibaudcolas/detect-wagtail) project for common techniques).
 
-Cross-referencing those 50k websites with other sources, it’s likely to be an order of magnitude below the actual number of Django projects out there, if we included the ones that
+Cross-referencing those 50k websites with other sources, we’re likely to be an order of magnitude below the actual number of Django projects out there, accounting for public sites that aren’t detectable, internal sites, and mobile apps or other projects that aren’t publicly visible in any way.
 
 ## Missing countries
 
