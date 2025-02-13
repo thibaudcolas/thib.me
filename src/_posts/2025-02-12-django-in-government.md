@@ -152,11 +152,11 @@ select origin, rank, dj_version, last_modified
 from w_dj
 where regexp_matches(
   origin,
-  '\.((gov|government|gob|gouv|gv)\.?[a-z]{0,2}$|gc\.ca|gouv\.fr|govt\.nz|go\.kr|overheid\.nl|admin\.ch|europa\.eu)'
+  '\.((gov|government|gob|gouv|gv)\.?[a-z]{0,2}$|gc\.ca|gouv\.fr|govt\.nz|go\.kr|overheid\.nl|admin\.ch|europa\.eu|bund\.de)'
 );
 ```
 
-The original dataset I collected by crawling about 20M websites from the [Chrome UX Report](https://developer.chrome.com/docs/crux) dataset, running common checks to detect Django (see my [Detect Wagtail](https://github.com/thibaudcolas/detect-wagtail) project for common techniques).
+The original dataset I collected by crawling about 20M websites from the [Chrome UX Report](https://developer.chrome.com/docs/crux) dataset, running common checks to detect Django: Static files URL patterns, `sessionid` cookie, `csrfmiddlewaretoken`, etc. See [Detecting Wagtail in the wild](/detecting-wagtail-in-the-wild) and my [Detect Wagtail](https://github.com/thibaudcolas/detect-wagtail) project for more information about how this type of detection works.
 
 Cross-referencing those 50k websites with other sources, we’re likely to be an order of magnitude below the actual number of Django projects out there, accounting for public sites that aren’t detectable, internal sites, and mobile apps or other projects that aren’t publicly visible in any way.
 

@@ -55,8 +55,8 @@ The regex could be more complex and precise but this wouldn’t actually change 
 
 - An online website, [detect-wagtail.netlify.app](https://detect-wagtail.netlify.app/).
 - A bookmarket, also available from [detect-wagtail.netlify.app](https://detect-wagtail.netlify.app/).
-- A browser extension thanks to [Wappalyzer](https://github.com/AliasIO/wappalyzer).
-- A Node CLI, also thanks to [Wappalyzer](https://github.com/AliasIO/wappalyzer).
+- A browser extension thanks to [Wappalyzer](https://github.com/httparchive/wappalyzer).
+- A Node CLI, also thanks to [Wappalyzer](https://github.com/httparchive/wappalyzer).
 - As an npm package for more custom needs, [detect-wagtail](https://www.npmjs.com/package/detect-wagtail)
 
 With Wappalyzer in particular, they also offer additional services based on anonymous data reporting from their detection tools. Here is their page that aggregates Wagtail usage data: [Websites using Wagtail](https://www.wappalyzer.com/technologies/cms/wagtail/).
