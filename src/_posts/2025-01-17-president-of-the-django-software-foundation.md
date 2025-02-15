@@ -28,6 +28,6 @@ I believe Django and the Foundation need that kind of (constructive) criticism t
 
 ## My plans
 
-I’ll strive to find the right balance between working on the issues I care about (accessibility, Django’s carbon footprint, diversity, social equity) – and working on the fundamentals of organizational maturity and governance. And the business as usual of a non-profit like ours. I’m sure I will drop the ball on some of those, and hope to be able to count on my Foundation colleagues to call that out and help me make it work. We have an outstanding team so I know it well.
+I’ll strive to find the right balance between working on the issues I care about (accessibility, Django’s carbon footprint, diversity, social equity) – and working on the fundamentals of organizational maturity and governance. And the business as usual of a non-profit like ours. I’m sure I will drop the ball on some of those, and hope to be able to count on my Foundation colleagues to call that out and help me make it work. We have an outstanding team so I know it will.
 
 I don’t see myself sustaining this kind of sustained levels of volunteer involvement with the non-profit open source world beyond 2025, so we’ll also need to work on creating more opportunities for high-impact contributions so others step in. I’m sure we’ll get there. Onwards! 🌈
