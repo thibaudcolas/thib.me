@@ -61,7 +61,7 @@ This is only packages that already explicitly declare support for specific versi
 
 ---
 
-I love how my Django colleague [Baptiste Mispelon] put it when trying out Django 5.2 alpha 1 on [djangoproject.com](https://www.djangoproject.com/):
+I love how fellow Djangonaut Baptiste Mispelon put it when trying out Django 5.2 alpha 1 on [djangoproject.com](https://www.djangoproject.com/):
 
 > We just updated the dependency file and everything worked.
 > – [Baptiste Mispelon](https://fosstodon.org/@bmispelon@mastodon.social)
@@ -77,6 +77,6 @@ Try out the pre-releases on your projects or packages! And if you find any issue
 - Configure your packages’ continuous integration to run with Django 5.2 pre-releases already
 - Spend time to adopt specific features listed in the [Django 5.2 release notes](https://docs.djangoproject.com/en/dev/releases/5.2/), to further stress test any additions.
 
-And if you maintain packages – consider running your tests against Django’s main? Watch Sage’s talk at Django London:
+And if you maintain packages – consider running your tests against Django’s main? My colleague Sage recently talked about how it helps catching issues and contributing to Django with pretty concrete bug reports:
 
 <div><a href="https://www.youtube.com/watch?v=X3fR1HOYcl0"><figure><img src="https://i.ytimg.com/vi_webp/X3fR1HOYcl0/maxresdefault.webp" width="320" height="180" alt=""><figcaption>Run your tests against Django's main! – Django London Meetup, 13 February 2025</figcaption></figure></a></div>
