@@ -12,7 +12,7 @@ I have this list of 50k Django projects I put together, and thought it might be 
 
 <!-- more -->
 
-Here’s an overview of all countries using Django in their government websites. That’s 88 countries according to my dataset.
+Here’s an overview of all countries using Django in their government websites. That’s 89 countries according to my dataset.
 
 ![Map of world countries, with the ones using Django in blue](/images/blog/django-in-government/django-governments-world-map.webp)
 
