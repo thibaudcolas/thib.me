@@ -79,9 +79,11 @@ Try out the pre-releases on your projects or packages! And if you find any issue
 
 And if you maintain packages – consider running your tests against Django’s main? Watch Sage’s talk at Django London:
 
-<a href="https://www.youtube.com/watch?v=X3fR1HOYcl0">
-    <figure>
-        <img src="https://i.ytimg.com/vi_webp/X3fR1HOYcl0/maxresdefault.webp" width="320" height="180" alt="">
-        <figcaption>Run your tests against Django's main! – Django London Meetup, 13 February 2025</figcaption>
-    </figure>
-</a>
+<div>
+  <a href="https://www.youtube.com/watch?v=X3fR1HOYcl0">
+      <figure>
+          <img src="https://i.ytimg.com/vi_webp/X3fR1HOYcl0/maxresdefault.webp" width="320" height="180" alt="">
+          <figcaption>Run your tests against Django's main! – Django London Meetup, 13 February 2025</figcaption>
+      </figure>
+  </a>
+</div>

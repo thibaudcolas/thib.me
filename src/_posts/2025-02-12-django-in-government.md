@@ -137,6 +137,20 @@ In Türkiye / Turkey, the [Ministry of Education website](https://abdigm.meb.gov
 
 The [Uzbekistan parliament website](https://parliament.gov.uz/) is also built with Django!
 
+### Canada
+
+![Screenshot of the Government of Canada’s Open Government Portal](/images/blog/django-in-government/search.open.canada.ca_data.webp)
+
+Another pretty cool open data portal, this time from Canada: [Open Government Portal](https://search.open.canada.ca/data/). And part of it is open source – [Open Canada Solr Search (OCS)](https://github.com/open-data/oc_search), a Django + Solr search application.
+
+Thanks [Gavin Anderegg for the suggestion](https://fosstodon.org/@gavinanderegg@mastodon.social/113996606265834389)!
+
+### Romania
+
+![Screenshot of the Romanian National Institute for Research & Development in Informatics](/images/blog/django-in-government/www.ici.ro.webp)
+
+The [Romanian National Institute for Research & Development in Informatics](https://www.ici.ro/) is built with Django (and [Wagtail](https://wagtail.org/)).
+
 ### India
 
 ![Screenshot of the National Test House website](/images/blog/django-in-government/mis.nth.gov.in_.webp)
@@ -145,14 +159,16 @@ Last but not least, in India, we have the [National Test House website](https://
 
 ## Methodology and data
 
-That’s a lot of sites, but really just the tip of the iceberg. My [Django in government dataset](https://docs.google.com/spreadsheets/d/1JvMumg29VAbzKyJhc6MkN97-2RQfTpWgtDRlABVbAhQ/edit?usp=sharing) is just shy of 1000 websites, and that’s only based on the most predictable domain name patterns:
+That’s a lot of sites, but really just the tip of the iceberg. My [Django in government dataset](
+
+) is just shy of 1000 websites, and that’s only based on the most predictable domain name patterns:
 
 ```sql
 select origin, rank, dj_version, last_modified
 from w_dj
 where regexp_matches(
   origin,
-  '\.((gov|government|gob|gouv|gv)\.?[a-z]{0,2}$|gc\.ca|gouv\.fr|govt\.nz|go\.kr|overheid\.nl|admin\.ch|europa\.eu|bund\.de)'
+  '\.((gov|government|gob|gouv|gv)\.?[a-z]{0,2}$|gc\.ca|gouv\.fr|govt\.nz|go\.kr|overheid\.nl|admin\.ch|europa\.eu|bund\.de|(gop|gos|gkp|gob|gog|gok)\.pk|canada\.ca|bund\.de)'
 );
 ```
 
@@ -162,4 +178,4 @@ Cross-referencing those 50k websites with other sources, we’re likely to be an
 
 ## Missing countries
 
-There are lots of gaps on the map I’m surprised about! In particular Canada, Germany, Iceland, China, Japan. If you’re aware of government websites in those countries that are built with Django, please let me know!
+There are lots of gaps on the map I’m surprised about! In particular Germany, Iceland, China, Japan. If you’re aware of government websites in those countries that are built with Django, please let me know!
