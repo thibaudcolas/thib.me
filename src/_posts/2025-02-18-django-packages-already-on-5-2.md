@@ -64,6 +64,7 @@ This is only packages that already explicitly declare support for specific versi
 I love how fellow Djangonaut Baptiste Mispelon put it when trying out Django 5.2 alpha 1 on [djangoproject.com](https://www.djangoproject.com/):
 
 > We just updated the dependency file and everything worked.
+>
 > – [Baptiste Mispelon](https://fosstodon.org/@bmispelon@mastodon.social)
 
 ---
