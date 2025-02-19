@@ -159,9 +159,7 @@ Last but not least, in India, we have the [National Test House website](https://
 
 ## Methodology and data
 
-That’s a lot of sites, but really just the tip of the iceberg. My [Django in government dataset](
-
-) is just shy of 1000 websites, and that’s only based on the most predictable domain name patterns:
+That’s a lot of sites, but really just the tip of the iceberg. My [Django in government dataset](https://docs.google.com/spreadsheets/d/1JvMumg29VAbzKyJhc6MkN97-2RQfTpWgtDRlABVbAhQ/edit?gid=1144334719#gid=1144334719) is just shy of 1000 websites, and that’s only based on the most predictable domain name patterns:
 
 ```sql
 select origin, rank, dj_version, last_modified
