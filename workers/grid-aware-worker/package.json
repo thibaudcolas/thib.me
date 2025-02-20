@@ -1,0 +1,23 @@
+{
+	"name": "grid-aware-worker",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.6.4",
+		"@cloudflare/workers-types": "^4.20250214.0",
+		"typescript": "^5.5.2",
+		"vitest": "~2.1.9",
+		"wrangler": "^3.109.2"
+	},
+	"dependencies": {
+		"@greenweb/gaw-plugin-cloudflare-workers": "^0.2.1",
+		"@greenweb/grid-aware-websites": "^0.3.0"
+	}
+}
