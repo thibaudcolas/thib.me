@@ -4,7 +4,7 @@ title: "ATAG 2.0 getting started resources"
 date: 2021-01-06 21:42:03 +0000
 comments: true
 draft: true
-categories: [Accessibility, Resources, List]
+categories: [Accessibility, Resources, ATAG]
 ---
 
 There aren’t many resources out there about [ATAG](https://www.w3.org/TR/ATAG20/). Here are the ones I have found and occasionally come back to.
