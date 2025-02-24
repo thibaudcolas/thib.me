@@ -7,9 +7,9 @@
   Twitter: @thibaud_colas
 
 /* SITE */
-  Last update 2017-11-22
+  Last update 2025-02-24
   Standards: HTML5, Sass
-  Components: Octopress, GitHub Pages, Travis
+  Components: Octopress, GitHub Pages
   Software: macOS, Visual Studio Code, Git
 
 
