@@ -23,7 +23,7 @@ You can also watch it on YouTube if you prefer:
 
 We’re here because Standards, Authoring tools, Accessibility by default, and the _[Authoring Tool Accessibility Guidelines](https://www.w3.org/TR/ATAG20/)_ in particular can help us create better, more accessible web experiences.
 
-### *95.9%* of home pages have accessibility issues
+### <mark>95.9%</mark> of home pages have accessibility issues
 
 ![Line chart of WCAG non-conformance percentage from 2019 to 2024. The line goes starts slightly below 100% non-conformance in 2019, and barely goes down year to year.](/talks/atag/assets/WCAGNonconformance2024.webp)
 
