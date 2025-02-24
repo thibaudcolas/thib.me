@@ -17,6 +17,7 @@ jobs:
           node-version-file: ".nvmrc"
       - run: bundle install
       - run: npm install --no-optional --no-audit --no-fund --progress=false
+      - run: npm run dist:repositories
       - run: npm run dist
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
