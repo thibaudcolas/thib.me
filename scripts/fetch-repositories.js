@@ -18,6 +18,8 @@ async function fetchRepositories() {
       "wagtail-tooling",
       "thib.me",
       "pre-commit-stylelint",
+      "thibaudcolas",
+      "bakerydemo",
     ];
 
     // Filter out forks and the skip list repositories
