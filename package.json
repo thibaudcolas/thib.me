@@ -18,7 +18,8 @@
   },
   "scripts": {
     "start": "bundle exec jekyll serve",
-    "dist": "bundle exec jekyll build && npm run dist:resume -s",
+    "dist": "bundle exec jekyll build && npm run dist:resume -s && npm run dist:repositories",
+    "dist:repositories": "node scripts/fetch-repositories.js",
     "dist:resume": "node raw/resume/export.js > dist/resume.html",
     "lint": "prettier --check '**/?(.)*.{md,css,scss,js,json,json5,yaml,yml}'",
     "format": "prettier --write '**/?(.)*.{md,css,scss,js,json,json5,yaml,yml}'",

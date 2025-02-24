@@ -4,7 +4,7 @@
   <ul id="gh_repos">
     {% for repository in site.data.repositories %}
       <li>
-        <a href="{{ repository.url }}">{{ repository.name }}</a>
+        <a href="{{ repository.url }}">{{ repository.name }}</a> –{%- if forloop.first -%} ⭐️{%- endif -%} {{ repository.stargazers_count }}
         <p>{{ repository.description }}</p>
       </li>
     {% endfor %}
