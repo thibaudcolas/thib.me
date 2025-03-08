@@ -35,7 +35,7 @@ That’s without counting Russia, some of which is very much in Europe, but I’
 
 For me personally, it’s interesting because 10 years ago I was delighted to land a Python gig compared to the PHP and Java jobs that were the norm in my local sphere. Now it feels like Python (or at least Django) gigs are all over the place in Europe. Just look at the latest 10 offers on [Django News Jobs](https://jobs.django-news.com/), majority are there.
 
-For projects like Python / Wagtail / Django, I hope it also means a renewed focus on multilingual capabilities, and localization. It’s almost comical how bad [gettext](https://en.wikipedia.org/wiki/Gettext) is, there’s a big need for a better baseline ([MessageFormat 2](https://messageformat.dev/), [Fluent](https://projectfluent.org/), I’m not sure).
+For projects like Python / Wagtail / Django, I hope it also means a renewed focus on multilingual capabilities, and localization. It’s almost comical how bad [gettext](https://en.wikipedia.org/wiki/Gettext) is, there’s a big need for a better baseline ([MessageFormat 2](https://messageformat.dev/), [Fluent](https://projectfluent.org/), I’m not sure). And then building beyond that baseline, more focus on support for other languages than English – translated docs, multilingual online content, etc.
 
 ---
 
