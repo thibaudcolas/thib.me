@@ -39,4 +39,4 @@ For projects like Python / Wagtail / Django, I hope it also means a renewed focu
 
 ---
 
-In the short term – I guess that means we’ll see you all Europeans at [DjangoCon Europe 2025](https://2025.djangocon.eu/) in April and [EuroPython 2025](https://ep2025.europython.eu/) in July? And for Wagtailers… [Wagtail Space](https://www.wagtail.space/) 2025 plans TBA soon 🤫
+In the short term – I guess that means we’ll see you all Europeans at [DjangoCon Europe 2025](https://2025.djangocon.eu/) in April and [EuroPython 2025](https://ep2025.europython.eu/) in July? And for Wagtailers… [Wagtail Space](https://www.wagtail.space/) 2025 plans TBA soon 🤫 Cue Eurodance music!
