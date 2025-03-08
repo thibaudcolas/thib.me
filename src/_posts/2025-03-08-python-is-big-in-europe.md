@@ -29,7 +29,7 @@ It’s interesting how much that country-level binning is misleading, and accord
 7. 🇳🇱 Netherlands, 74.4k
 8. 🇺🇦 Ukraine, 66.5k
 
-That’s without counting Russia, some of which is very much in Europe, but I’m not sure how much. The top 7 countries are in the European Union, and we arrive at 974k visitor. The addition of Ukraine takes us over the 1M mark.
+That’s without counting Russia, some of which is very much in Europe, but I’m not sure how much. The top 7 countries are in the European Union 🇪🇺, and we arrive at 974k visitor. The addition of Ukraine takes us over the 1M mark.
 
 ## What it means
 
