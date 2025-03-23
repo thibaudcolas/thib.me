@@ -4,6 +4,7 @@ title: "Results of the 2024 Wagtail headless survey"
 date: 2025-01-20 08:18:03 +0000
 comments: true
 categories: [Wagtail, React, JavaScript]
+canonical: https://wagtail.org/blog/2024-headless-survey/
 seo_image: /images/blog/2024-headless-survey/How%20often%20developers%20work%20on%20headless%20Wagtail%20-%202024%20Wagtail%20headless%20survey.png
 seo_image_alt: How often developers work on headless Wagtail - 2024 Wagtail headless survey
 ---
