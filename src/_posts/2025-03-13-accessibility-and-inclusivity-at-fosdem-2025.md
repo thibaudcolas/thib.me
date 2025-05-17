@@ -5,7 +5,7 @@ date: 2025-03-13 09:00:00 +0000
 comments: true
 categories: [Django, Accessibility, Conference, Diversity]
 canonical: https://www.djangoproject.com/weblog/2025/mar/13/accessibility-and-inclusivity-at-fosdem-2025/
-seo_image: /images/blog/accessibility-and-inclusivity-at-fosdem-2025/
+seo_image: /images/blog/accessibility-and-inclusivity-at-fosdem-2025/inclusive-web-devroom-panorama.jpg
 seo_image_alt: Panorama of the room during a talk, taken from the back. It’s a classroom with multiple rows of tables and seats. Some people are standing on the side. The speaker is in front of their slides at the front of the room.
 ---
 
