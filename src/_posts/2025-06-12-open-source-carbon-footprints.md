@@ -3,7 +3,7 @@ layout: post
 title: "Open Source Carbon Footprints"
 date: 2025-06-12 09:31:08 +0100
 comments: true
-categories: [Django, Python, Open Source, Sustainability, Podcast]
+categories: [Django, Python, Open Source, Sustainability, Climate, Podcast]
 seo_image: /images/blog/open-source-carbon-footprints/EV_111_Thibaud_Colas.jpg
 seo_image_alt: Open Source Carbon Footprints - Environment Variables Ep. 111, hosted by Chris Adams, Guest Thibaud Colas
 ---
@@ -30,39 +30,44 @@ A good illustration of this is the total carbon footprint of Wagtail sites mappe
 
 ![Total carbon footprint of Wagtail sites as a treemap - 8240 tCO2e per year](/images/blog/estimating-wagtail-websites-emissions/total_carbon_footprint_of_Wagtail_sites_as_a_treemap.png)
 
-Most of those sites with I’ve never heard of. That’s just how our relationship with users tends to be in open source software.
+Most of those sites, I’ve never heard of. That’s just how our relationship with users tends to be in open source software.
 
 ## Extended show notes
 
 ### Why and how to measure digital carbon footprints
 
-We started by discussing the necessity of measuring digital carbon footprints and how methodologies play a pivotal role. For me this started at Torchbox, quantifying emissions for about 50-100 client websites. Recognizing the scale and complexity involved, we expanded this effort to estimate emissions across the entire Wagtail ecosystem, encompassing thousands of websites.
+We started by discussing the necessity of measuring digital carbon footprints and my history getting up to speed on this topic.
+
+- I looked into [dark mode’s energy savings in 2022](https://thib.me/measuring-dark-mode-energy-savings) (and [went further just a few months ago](https://wagtail.org/blog/oled-and-dark-websites-lower-footprint/)).
+- At Torchbox, we spent a lot of time on this for our [2022 impact report](https://torchbox.com/about/impact-report-2022/), reviewing the emissions of 50-100 websites we built or worked on.
+- Recognizing the scale and complexity involved, we expanded this effort to estimate emissions across the entire Wagtail ecosystem, encompassing thousands of websites.
 
 For Wagtail, we’re talking on the order of 10-20,000 websites, each with a footprint on the order of 0.5 to 1.5 tons of CO2 per year. So 5000 to 15000 tons of greenhouse gas emissions per year. For Django, best case scenario is about 20x that.
 
 #### Choosing methodologies
 
-For websites, here’s our go-to options at Torchbox:
+For websites, here’s our four go-to methodologies at Torchbox, and their suitability for different types of initiatives:
 
-| Initiative                                      | SWD                   | Hosting infrastructure | GreenFrame            | Display power cons.   |
-| ----------------------------------------------- | --------------------- | ---------------------- | --------------------- | --------------------- |
-| Infrastructure reduction or relocation          | Avoid                 | Recommended            | Inapplicable          | Inapplicable          |
-| Back-end / database / server code optimisations | Avoid                 | Consider case-by-case  | Recommended           | Inapplicable          |
-| Front-end code optimisations                    | Recommended           | Inapplicable           | Consider case-by-case | Inapplicable          |
-| Dark theme                                      | Inapplicable          | Inapplicable           | Inapplicable          | Recommended           |
-| Design / product changes                        | Recommended           | Inapplicable           | Consider case-by-case | Inapplicable          |
-| Carbon reduction KPIs                           | Consider case-by-case | Consider case-by-case  | Consider case-by-case | Consider case-by-case |
+| **Initiative**                                      | **SWD**               | **Hosting infrastructure** | **GreenFrame**        | **Display power consumption** |
+| --------------------------------------------------- | --------------------- | -------------------------- | --------------------- | ----------------------------- |
+| **Infrastructure reduction or relocation**          | Avoid                 | ✅ Recommended             | Inapplicable          | Inapplicable                  |
+| **Back-end / database / server code optimisations** | Avoid                 | Consider case-by-case      | ✅ Recommended        | Inapplicable                  |
+| **Front-end code optimisations**                    | ✅ Recommended        | Inapplicable               | Consider case-by-case | Inapplicable                  |
+| **Dark theme**                                      | Inapplicable          | Inapplicable               | Inapplicable          | ✅ Recommended                |
+| **Design / product changes**                        | ✅ Recommended        | Inapplicable               | Consider case-by-case | Inapplicable                  |
+| **Carbon reduction KPIs**                           | Consider case-by-case | Consider case-by-case      | Consider case-by-case | Consider case-by-case         |
 
-This is from our our 2023 work on methodologies to quantify site emissions, still very relevant in 2025: [Announcing our Digital Emissions Methodologies](https://torchbox.com/news/announcing-our-digital-emissions-methodologies/)
+This is from our 2022 work on methodologies to quantify site emissions, still very relevant in 2025: [Announcing our Digital Emissions Methodologies](https://torchbox.com/news/announcing-our-digital-emissions-methodologies/)
 
 #### Wagtail’s footprint
 
 Wagtail’s 2023 [Estimating Wagtail websites’ emissions](https://wagtail.org/blog/estimating-wagtail-websites-emissions/) was our first attempt at this. We’ve since further refined our approach but haven’t shared the updated 2023 / 2024 / early 2025 numbers yet, because the numbers are changing due to a lot of factors that are hard to reason about:
 
-- The main model we use has switched from [Sustainable Web Design](https://sustainablewebdesign.org/) v3 to v4, which reports generally lower emissions.
-- The Ember electricity grid carbon intensity data has generally gone down, which means sites might still use the same amount of energy but pollute less (which is good!).
-- Our estimations of Wagtail sites’ page views have gone down, which means lower emissions.
-- But the number of sites has gone way up, so the total emissions are still increasing.
+- The main model we use has switched from [Sustainable Web Design](https://sustainablewebdesign.org/) v3 to v4, which reports generally lower emissions 🔽.
+- It’s based on sites’ page weight, which has gone up, which is bad 🔼.
+- It’s also based on the [Ember electricity grid carbon intensity data](https://ember-energy.org/data/), which has generally gone down, which means sites might still use the same amount of energy but pollute less (which is good!) 🔽.
+- But the number of sites has gone way up, so the total emissions are still increasing 🔼.
+- And our estimations of Wagtail sites’ page views have gone down, which means lower emissions 🔽.
 
 So this is pretty confusing! But hey if you want to explore,
 
@@ -74,16 +79,25 @@ Current goal is to release this data with a representation as [Digital Carbon Ra
 
 ![Digital Carbon Ratings: how Wagtail sites score. April 2024 HTTP Archive data, SWDM v4, 2023-2024 Ember grid carbon intensity, 4889 websites](/images/blog/open-source-carbon-footprints/digital-carbon-ratings-Wagtail-websites-2024.png)
 
-Tentative 2025 figures go up from 4889 to 6431 sites in our dataset.
+That’s a neat representation of overall performance of Wagtail sites, but even understanding that requires a lot of context. For example, the way the ratings are designed, the number of sites falling in each category isn’t meant to be proportional! More on that in a future post.
 
-And there’s also experiments with other ways to quantify a site’s emissions:
+Anyway, the tentative number of sites for 2025 goes up from 4889 to 6431 sites in the dataset. With a footprint still on the order of 5000 - 10000 tons of CO2 per year.
 
-- [benchmark-wagtail-demo](https://github.com/thibaudcolas/benchmark-wagtail-demo)
-- [bakerydemo-gold-benchmark](https://github.com/thibaudcolas/bakerydemo-gold-benchmark)
+##### Using other models
+
+All of the above is with [Sustainable Web Design](https://sustainablewebdesign.org/). We’re also experimenting with other ways to estimate or even measure a site’s emissions:
+
+- With [GreenFrame](https://greenframe.io/) and [Green Metrics Tool](https://www.green-coding.io/products/green-metrics-tool/), on a traditional site setup: [bakerydemo-gold-benchmark](https://github.com/thibaudcolas/bakerydemo-gold-benchmark)
+- Comparing different site setups (headless vs. static vs. traditional), with just GreenFrame: [benchmark-wagtail-demo](https://github.com/thibaudcolas/benchmark-wagtail-demo)
+- With the [Firefox profiler](https://www.thegreenwebfoundation.org/news/carbon-emissions-in-browser-devtools-firefox-profiler-and-co2-js/): [How much power do web assets use?](https://torchbox.com/wagtail-cms-services/blog/how-much-power-do-web-assets-use/)
+
+Here’s a sample from that last article, showing the power consumption of different animation techniques in CSS and SVG according to this profiler:
+
+![CSS and SVG animations: 100mW to 500mW, with bar charts for Chrome, Safari, Firefox](/images/blog/open-source-carbon-footprints/css-and-svg-animations.webp)
 
 ## Practical steps towards greener websites
 
-I detailed how Wagtail actively works on reducing websites’ footprint through initiatives like [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/). Over three years, our GSoC projects have tackled sustainability head-on:
+On the podcast, we reflected on how Wagtail actively works on reducing websites’ footprint through initiatives like [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/). Over three years, our GSoC projects have tackled different sustainability improvements:
 
 1. [Leaner images, lower footprint, at scale](https://wagtail.org/blog/leaner-images-lower-footprint-at-scale/) showcases adoption of modern image formats and responsive image techniques to significantly reduce image weights.
 2. The (still work in progress) [low-carbon template](https://github.com/wagtail/low-carbon-template) is our attempt at reducing the footprint of newly-built sites. The designs are finalized and heavily optimized (see below), but the implementation still needs work.
