@@ -115,7 +115,9 @@ There are lots of other steps that projects can take. See for example [my assess
 
 Unlike corporate structures with reporting and accounting standards defined by frameworks like the [GHG Protocol](https://ghgprotocol.org/), we don’t have such clear definitions of how to track direct and indirect emissions in open source. My go-to is [GHG Protocol Scope 3 Category 11: Use of Sold Products (PDF)](https://ghgprotocol.org/sites/default/files/standards_supporting/Chapter11.pdf), which is optional to report on in most accounting frameworks, but definitely important in my opinion. However it fits much better to appliances, than open source libraries to build sites and apps with.
 
-I’ve learned a lot from Mozilla’s pioneering work on including Firefox usage emissions in their reporting (2020: [Release: Mozilla’s Greenhouse Gas emissions baseline](https://blog.mozilla.org/en/mozilla/release-mozillas-greenhouse-gas-emissions-baseline/), latest: [Mozilla’s Emissions Data](https://www.mozilla.org/en-US/sustainability/emissions-data/)).
+I’ve learned a lot from Mozilla’s pioneering work on including Firefox usage emissions in their reporting (2020: [Release: Mozilla’s Greenhouse Gas emissions baseline](https://blog.mozilla.org/en/mozilla/release-mozillas-greenhouse-gas-emissions-baseline/), latest: [Mozilla’s Emissions Data](https://www.mozilla.org/en-US/sustainability/emissions-data/)). This chart specifically:
+
+![Emissions distribution pie chart, 2% business, 98% product use](/images/blog/open-source-carbon-footprints/moz_blog_sustainability_emissions-pie-chart.webp)
 
 Quoting their work, emphasis mine:
 
