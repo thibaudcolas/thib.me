@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "Evaluating the carbon footprint of
-Django and Wagtail - Django London"
+title: "Evaluating the carbon footprint of Django and Wagtail - Django London"
 date: 2023-04-12 19:39:03 +0100
 comments: true
 categories: [Sustainability, Climate, Tools, Talks]
