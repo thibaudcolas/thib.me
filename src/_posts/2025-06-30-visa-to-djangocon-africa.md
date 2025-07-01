@@ -185,10 +185,8 @@ After a few days it switched to this different status.
 
 ### Approved
 
-After 11 days, I received an email confirmation the visa was approved! With instructions on documents to print and bring to Tanzania.
-
-![Visa Status “Application Approved” screen showing Application ID](/images/blog/visa-to-djangocon-africa/u_status_approved-60.avif)
+After 11 days, I received an email confirmation the visa was approved! With instructions on documents to print and bring to Tanzania 🎉
 
 ---
 
-So, not the most straightforward, but definitely not too hard either! Get your visa sorted and join us in Tanzania for DjangoCon Africa 2025! 🇹🇿
+So, not the most straightforward, but definitely not too hard either! Get your visa sorted and join us in Tanzania for [DjangoCon Africa 2025](https://2025.djangocon.africa/)! 🇹🇿
