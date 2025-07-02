@@ -22,15 +22,9 @@ A lot of people! For a conference in Prague, right in the middle of Europe every
 
 ![Isochrone map of train travel to Prague, with green areas based on 8 hour journey time](/images/blog/train-to-europython-2025/isochrone-prague-8-hours-80.jpg)
 
-Vienna, Warsaw, Budapest, Berlin, Bratislava are in there. Large swaths of Poland and Germany. Outside this map, avoiding flights is definitely still possible – with overnight trains! Check out the [European Sleeper](https://www.europeansleeper.eu/), which has services to Prague from Brussels and Amsterdam, or [NightJet](https://www.nightjet.com/). This makes Prague reachable by train from Belgium, the Netherlands, the UK, France, Switzerland, Italy, and more!
+Vienna, Warsaw, Budapest, Berlin, Bratislava are in there. Large swaths of Poland and Germany. Outside this map, avoiding flights is definitely still possible – with overnight trains! Check out the [European Sleeper](https://www.europeansleeper.eu/), which has services to Prague from Brussels and Amsterdam, or [NightJet](https://www.nightjet.com/), or [PolRail](https://www.polrail.com/en/warsawprague-train-travel). This makes Prague easily reachable by train from Belgium, the Netherlands, the UK, France, Switzerland, Italy, Poland, and more!
 
 It’s a much longer journey than flying, and occasionally more expensive too. But also much lower-carbon, more relaxing. And more adventurous!
-
-
-https://www.seat61.com/trains-and-routes/european-sleeper.htm
-https://docs.google.com/spreadsheets/d/1zkTxOV26-hxJGjDoQBGMj6g8yBjCTtE_BfxJQS8Blzg/edit?gid=1993028400#gid=1993028400
-https://www.polrail.com/en/warsawprague-train-travel
-https://ecopassenger.org/bin/query.exe/en?ld=uic-fat&L=vs_uic&protocol=https:&OK#focus
 
 ---
 
@@ -40,40 +34,36 @@ Here’s the results of my calculations, comparing the footprint of flights vs. 
 
 | Starting from | Flight (kgCO2e) | Train + ferry (kgCO2e) |
 | ------------- | --------------- | ---------------------- |
-| Berlin        | 64              | 16 (-75%)              |
-| Amsterdam     | 79              | 20 (-75%)              |
-| Paris         | 104             | 18 (-82%)              |
-| Brussels      | 80              | 19 (-76%)              |
-| Cologne       | 151             | 23 (-85%)              |
+| London        | 94              | 26 (-72%)              |
+| Amsterdam     | 83              | 14 (-82%)              |
+| Brussels      | 83              | 24 (-71%)              |
+| Paris         | 116             | 25 (-78%)              |
 
-On average that’s about 80% lower carbon footprints! Numbers will vary a bit for actual journeys but the math here is pretty solid.
+On average that’s about 76% lower carbon footprints! Numbers will vary a bit for actual journeys but the math here is pretty solid.
 
-Note: Ferry figures come from. [Stena Line ferry carbon footprint calculator](https://stenaline.com/sustainability/carbon-footprint-calculator/). Train travel from the UK government [train travel emissions figures](https://www.gov.uk/government/publications/environmental-reporting-guidelines-including-mandatory-greenhouse-gas-emissions-reporting-guidance), and [Eurostar sustainability figures](https://www.eurostar.com/uk-en/sustainability). Flight figures come from Google Flights, cross-referenced with [Green Events Tool](https://greeneventstool.com/).
+Note: train travel figures come from [Eurostar sustainability figures](https://www.eurostar.com/uk-en/sustainability), and [those of European Sleeper](https://www.europeansleeper.eu/sustainability), and [Datawrapper for Berlin - Prague](https://www.datawrapper.de/blog/trains-versus-planes). Flight figures come from Google Flights, cross-referenced with [Green Events Tool](https://greeneventstool.com/).
 
-If you want the details, here’s the spreadsheet: [Travel emissions to Dublin - DjangoCon Europe 2025](https://docs.google.com/spreadsheets/d/1Dz2oXE9F5shdXhUHLtXB71ongxhHrLuymRjmwc4zptM/edit?usp=sharing).
+If you want the details, here’s the spreadsheet: [Travel emissions to Prague - EuroPython 2025](https://docs.google.com/spreadsheets/d/1zkTxOV26-hxJGjDoQBGMj6g8yBjCTtE_BfxJQS8Blzg/edit).
 
 ## The journey
 
-If you’re interested, [The Man in Seat 61](https://www.seat61.com/train-and-ferry-to-dublin.htm) is the best resource to prepare trips like this. But here’s the rough route plan:
+For travel within that 8h isochrone map, you’ll have no problem putting it together with Trainline or Omio or the local train companies! For night trains, check out the [Man in Seat 61 on the European Sleeper](https://www.seat61.com/trains-and-routes/european-sleeper.htm).
 
-![Train travel routes shown on a satellite imagery map, with points for Cologne, Brussels, Paris, Amsterdam, Prague, Dublin](/images/blog/train-to-djangocon-europe-2025-in-dublin/eurostar-to-dublin.jpg).
+Here’s a good graphic describing the European Sleeper routes, which is relevant for people in Belgium, the Netherlands, France, and the UK:
 
-The TL;DR; is you should get yourself a [SailRail tickets by Transport for Wales](https://tfw.wales/ways-to-travel/rail/ticket-types/sailrail), which is about 120 euros for a return trip, and includes train travel in the UK and the ferry crossing. Then get a Eurostar ticket to reach Prague. Trains depart from Prague in the early morning and early afternoon. Roughly-speaking, if you can make it to Brussels or Paris by 1pm, you’ll be in Dublin by the end of the day.
+[![Map of the main European Sleeper route: Brussels, Antwerpen, Rotterdam, Amsterdam, Berlin, Dresden, Bad Schandau, Děčín, Ústí nad Labem](/images/blog/train-to-europython-2025/european-sleeper-routes.jpg)](https://www.europeansleeper.eu/)
 
 ## If we all did this
 
-If you spend some time projecting those emissions reductions as if everyone attending from those places took the train and ferry, you arrive at:
+If you spend some time projecting those emissions reductions as if everyone attending from those places took the train instead of the plane, you arrive at:
 
-- Emissions from UK attendees going from 7 to 1.6 tons of CO2
-- Netherlands travel emissions going from 8.5 to 1.5 tons
-- Germany (Frankfurt) from 8.5 to 1.2 tons
-- France (Paris) from 3 tons to 0.5 tons
-- Belgium (Brussels) from 1.5 to 0.25 tons
+- Emissions from UK attendees going from 57 to 10 tons of CO2
+- Netherlands travel emissions going from 34 to 5 tons
+- France (Paris) from 14 tons to 3 tons
+- Belgium (Brussels) from 6 to 1 tons
 
-All in all, if everyone within this isochrone "day trip" map made the trip via the ferry and train, it would take the conference’s total travel footprint from well above 100 tons of CO2, to well under it.
+All in all, if everyone within this isochrone "day trip" map made the trip via train, it would take the conference’s total travel footprint from about 450 tons of CO2, to 300 tons.
 
 ## Do it!
 
-I got my tickets today! If you can make it with the ferry and train, great. If not, whether due to travel times or cost, definitely come anyway! See you at [DjangoCon Europe 2025](https://2025.djangocon.eu/).
-
-![Close-up photo of UK SailRail train tickets, including one from Cambridge to Dublin via a Holyhead Stena Ship ferry crossing](/images/blog/train-to-djangocon-europe-2025-in-dublin/train-tickets-to-djangocon.jpg).
+The [EuroPython 2025](https://ep2025.europython.eu/) schedule is looking epic already, give it a go with train travel!
