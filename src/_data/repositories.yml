@@ -2,6 +2,7 @@
   full_name: django/django
   description: The Web framework for perfectionists with deadlines.
   stargazers_count: 80k
+  url: https://github.com/django/django
 - name: wagtail
   full_name: wagtail/wagtail
   url: https://github.com/wagtail/wagtail
@@ -9,5 +10,6 @@
   stargazers_count: 19k
 - name: draftail
   full_name: springload/draftail
+  url: https://github.com/springload/draftail
   description: 📝🍸 A configurable rich text editor built with Draft.js
   stargazers_count: 0.6k
