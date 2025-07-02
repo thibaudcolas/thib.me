@@ -28,8 +28,9 @@ It’s a much longer journey than flying, and occasionally more expensive too. B
 
 
 https://www.seat61.com/trains-and-routes/european-sleeper.htm
-https://www.nightjet.com/en/reiseziele
 https://docs.google.com/spreadsheets/d/1zkTxOV26-hxJGjDoQBGMj6g8yBjCTtE_BfxJQS8Blzg/edit?gid=1993028400#gid=1993028400
+https://www.polrail.com/en/warsawprague-train-travel
+https://ecopassenger.org/bin/query.exe/en?ld=uic-fat&L=vs_uic&protocol=https:&OK#focus
 
 ---
 
@@ -39,9 +40,9 @@ Here’s the results of my calculations, comparing the footprint of flights vs. 
 
 | Starting from | Flight (kgCO2e) | Train + ferry (kgCO2e) |
 | ------------- | --------------- | ---------------------- |
-| Prague        | 64              | 16 (-75%)              |
-| Paris         | 104             | 18 (-82%)              |
+| Berlin        | 64              | 16 (-75%)              |
 | Amsterdam     | 79              | 20 (-75%)              |
+| Paris         | 104             | 18 (-82%)              |
 | Brussels      | 80              | 19 (-76%)              |
 | Cologne       | 151             | 23 (-85%)              |
 
