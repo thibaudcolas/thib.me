@@ -30,7 +30,7 @@ It’s a much longer journey than flying, and occasionally more expensive too. B
 
 ## How the carbon footprint compares
 
-Here’s the results of my calculations, comparing the footprint of flights vs. train routes starting in European cities that allow travel to Dublin within this "one-day trip":
+Here’s the results of my calculations, comparing the footprint of flights vs. train routes starting in European cities that allow travel to Prague within this extended "night train one-day trip":
 
 | Starting from | Flight (kgCO2e) | Train + ferry (kgCO2e) |
 | ------------- | --------------- | ---------------------- |
