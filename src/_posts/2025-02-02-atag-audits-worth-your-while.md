@@ -4,7 +4,7 @@ title: "ATAG audits: worth your while 🔎"
 date: 2025-02-02 12:42:03 +0100
 comments: true
 draft: true
-categories: [Accessibility, Resources, ATAG]
+categories: [Talks, Accessibility, Resources, ATAG]
 seo_image: /talks/atag/assets/atag-audits-worth-your-while.webp
 seo_image_alt: "ATAG audits: worth your while 🔎 - Practical tips and examples to get started - Thibaud Colas @ FOSDEM 2025"
 ---

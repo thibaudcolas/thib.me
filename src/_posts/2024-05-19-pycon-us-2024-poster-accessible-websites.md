@@ -3,7 +3,7 @@ layout: post
 title: "PyCon US 2024 poster: Building accessible websites with Wagtail and Django"
 date: 2024-05-19 18:21:47 +0100
 comments: true
-categories: [Wagtail, Accessibility, Django]
+categories: [Talks, Wagtail, Accessibility, Django]
 ---
 
 With Vince Salvino, we ran a poster session at PyCon US 2024.

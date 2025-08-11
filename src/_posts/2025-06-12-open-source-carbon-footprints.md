@@ -3,7 +3,7 @@ layout: post
 title: "Open Source Carbon Footprints"
 date: 2025-06-12 09:31:08 +0100
 comments: true
-categories: [Django, Python, Open Source, Sustainability, Climate, Podcast]
+categories: [Talks, Django, Python, Open Source, Sustainability, Climate, Podcast]
 seo_image: /images/blog/open-source-carbon-footprints/EV_111_Thibaud_Colas.jpg
 seo_image_alt: Open Source Carbon Footprints - Environment Variables Ep. 111, hosted by Chris Adams, Guest Thibaud Colas
 ---

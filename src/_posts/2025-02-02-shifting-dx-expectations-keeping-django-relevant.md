@@ -3,7 +3,7 @@ layout: post
 title: "Shifting DX expectations: keeping Django relevant 🫣"
 date: 2025-02-02 05:18:03 +0100
 comments: true
-categories: [Django, Django Software Foundation, Governance]
+categories: [Talks, Django, Django Software Foundation, Governance]
 redirect_from:
   - /shifting-dx/
 ---

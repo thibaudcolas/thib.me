@@ -4,7 +4,7 @@ title: "The future of Django: at Django Meetup Cologne"
 date: 2024-01-23 21:29:58 +0100
 comments: true
 comments_discussion:
-categories: [Django Software Foundation, Django, Governance]
+categories: [Talks, Django Software Foundation, Django, Governance]
 ---
 
 We discussed the future of Django with the Django Meetup Cologne community. Here are the results and my notes.

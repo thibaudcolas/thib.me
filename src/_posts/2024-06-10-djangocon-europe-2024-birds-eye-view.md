@@ -3,7 +3,7 @@ layout: post
 title: "DjangoCon Europe 2024 bird’s-eye view 🐦️"
 date: 2024-06-10 21:18:03 +0000
 comments: true
-categories: [Community, Django, Wagtail]
+categories: [Talks, Community, Django, Wagtail]
 canonical: https://wagtail.org/blog/djangocon-europe-2024-birds-eye-view/
 ---
 
