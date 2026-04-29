@@ -17,8 +17,8 @@
     "prettier": "3.4.2"
   },
   "scripts": {
-    "start": "bundle exec jekyll serve",
-    "dist": "bundle exec jekyll build && npm run dist:resume -s",
+    "start": "rv run jekyll serve",
+    "dist": "rv run jekyll build && npm run dist:resume -s",
     "dist:repositories": "node scripts/fetch-repositories.js",
     "dist:resume": "node raw/resume/export.js > dist/resume.html",
     "lint": "prettier --check '**/?(.)*.{md,css,scss,js,json,json5,yaml,yml}'",

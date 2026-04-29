@@ -2,15 +2,19 @@
 
 ## Tooling
 
+This project uses [`rv`](https://github.com/spinel-coop/rv) to manage Ruby versions and project gems. The Ruby version is pinned in [`.ruby-version`](.ruby-version), and the npm scripts run Ruby commands through `rv run`.
+
 ```sh
-git clone git@github.com:thibaudcolas/thibaudcolas.git
-cd thibaudcolas
-rbenv version
-gem install bundler
-bundle install
+git clone git@github.com:thibaudcolas/thib.me.git
+cd thib.me
+rv clean-install
 npm install
 npm install -g resume-cli
 ```
+
+For shell-level Ruby version switching, run `rv shell zsh` once and follow the instructions for your shell. This makes `ruby`, `gem`, and related commands use the project Ruby when you are in this directory.
+
+Use `npm start` for local development and `npm run dist` for production builds. Both commands call Jekyll through `rv run`, so they use the pinned Ruby and installed gems.
 
 ### Favicons
 

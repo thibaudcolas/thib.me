@@ -8,14 +8,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           persist-credentials: false
-      - uses: ruby/setup-ruby@v1
-      - uses: actions/setup-node@v4
+      - uses: appraisal-rb/setup-ruby-flash@c74718bcd1715d7aed6eae97b2fe41a4797952f7 # v1.6
+      - uses: actions/setup-node@v6
         with:
-          node-version-file: ".nvmrc"
-      - run: bundle install
+          node-version-file: ".node-version"
+      - run: rv clean-install
       - run: npm install --no-optional --no-audit --no-fund --progress=false
       - run: npm run dist:repositories
       - run: npm run dist
